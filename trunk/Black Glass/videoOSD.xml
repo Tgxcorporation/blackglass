@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>2901</id>
+	<defaultcontrol>220</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<define>#play.progressbar.percentage:#percentage</define>
+	<define>#play.progressbar.currentplaytime:#currentplaytime</define>
+	<define>#play.progressbar.currentremaining:#currentremaining</define>
+	<controls>
+		<control>
+			<description>background</description>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>325</posY>
+			<width>1280</width>
+			<height>360</height>
+			<texture>bg_dialog.png</texture>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>257</posX>
+			<posY>364</posY>
+			<width>993</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>102</id>
+			<posX>76</posX>
+			<posY>383</posY>
+			<width>177</width>
+			<height>251</height>
+			<texture>#Play.Current.Thumb</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Thumb</description>
+			<type>image</type>
+			<posX>53</posX>
+			<posY>379</posY>
+			<width>204</width>
+			<height>260</height>
+			<texture>DVDCase.png</texture>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>		
+		<control>
+			<description>Movie Name</description>
+			<id>36</id>
+			<type>fadelabel</type>
+			<width>620</width>
+			<height>37</height>
+			<posX>280</posX>
+			<posY>365</posY>
+			<font>font24</font>
+			<label>#Play.Current.Title</label>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Plot</description>
+			<type>textboxscrollup</type>
+			<posX>280</posX>
+			<posY>428</posY>
+			<width>810</width>
+			<height>200</height>
+			<label>#Play.Current.Plot</label>
+			<font>font16</font>
+			<seperator>: : :</seperator>
+			<textcolor>ccFFFFFF</textcolor>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Time</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1190</posX>
+			<posY>373</posY>
+			<label>#time</label>
+			<align>right</align>
+			<font>font16</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>time logo</description>
+			<type>image</type>
+			<posX>1200</posX>
+			<posY>376</posY>
+			<width>25</width>
+			<height>25</height>
+			<texture>time.png</texture>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>AAC</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsAAC</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP3</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsMP3</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>AC3</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsAC3</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>DTS</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsDTS</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP2A</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsMP2A</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>WMA</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsWMA</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>PCM</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsPCM</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>DivX</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsDIVX</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>XVID</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsXVID</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>H264</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsH264</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Generic MPEG4</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsMP4V</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP1V</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsMP1V</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP2V</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsMP2V</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>WMV</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.IsWMV</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Subtitles</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>580</posY>
+			<width>102</width>
+			<height>70</height>
+			<texture>#Play.Current.HasSubtitles</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+
+		<!-- Mediaportal 1.1 Hack -->
+
+		<control>
+			<description>AAC</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, AAC)+Control.IsVisible(989)</visible>
+			<texture>Logos\AAC.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>AAC</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, AAC)+!Control.IsVisible(989)</visible>
+			<texture>Logos\AAC.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP3</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, MPEG-1 AUDIO LAYER 3)+Control.IsVisible(989)</visible>
+			<texture>Logos\MP3.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP3</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, MPEG-1 AUDIO LAYER 3)+!Control.IsVisible(989)</visible>
+			<texture>Logos\MP3.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>AC3</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>[string.contains(#Play.Current.AudioCodec, AC3)|string.contains(#Play.Current.AudioCodec, AC-3)]+Control.IsVisible(989)</visible>
+			<texture>Logos\AC3.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>AC3</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>[string.contains(#Play.Current.AudioCodec, AC3)|string.contains(#Play.Current.AudioCodec, AC-3)]+!Control.IsVisible(989)</visible>
+			<texture>Logos\AC3.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>DTS</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, DTS)+Control.IsVisible(989)</visible>
+			<texture>Logos\DTS.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>DTS</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, DTS)+!Control.IsVisible(989)</visible>
+			<texture>Logos\DTS.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP2A</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>[string.contains(#Play.Current.AudioCodec, MP2A)|string.contains(#Play.Current.AudioCodec, MPEG-1 AUDIO LAYER 2)]+Control.IsVisible(989)</visible>
+			<texture>Logos\MP2A.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP2A</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>[string.contains(#Play.Current.AudioCodec, MP2A)|string.contains(#Play.Current.AudioCodec, MPEG-1 AUDIO LAYER 2)]+!Control.IsVisible(989)</visible>
+			<texture>Logos\MP2A.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>WMA</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, WMA)+Control.IsVisible(989)</visible>
+			<texture>Logos\wma.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>WMA</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, WMA)+!Control.IsVisible(989)</visible>
+			<texture>Logos\wma.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>PCM</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, PCM)+Control.IsVisible(989)</visible>
+			<texture>Logos\PCM.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>PCM</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, PCM)+!Control.IsVisible(989)</visible>
+			<texture>Logos\PCM.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>OGG</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, OGG)+Control.IsVisible(989)</visible>
+			<texture>Logos\OGG.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>OGG</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, OGG)+!Control.IsVisible(989)</visible>
+			<texture>Logos\OGG.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>FLAC</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, FLAC)+Control.IsVisible(989)</visible>
+			<texture>Logos\FLAC.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>FLAC</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>430</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.AudioCodec, FLAC)+!Control.IsVisible(989)</visible>
+			<texture>Logos\FLAC.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>DivX</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>[string.contains(#Play.Current.VideoCodec, DX50)|string.contains(#Play.Current.VideoCodec, DIV3)]+Control.IsVisible(989)</visible>
+			<texture>Logos\DIVX.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>DivX</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>[string.contains(#Play.Current.VideoCodec, DX50)|string.contains(#Play.Current.VideoCodec, DIV3)]+!Control.IsVisible(989)</visible>
+			<texture>Logos\DIVX.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>XVID</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, XVID)+Control.IsVisible(989)</visible>
+			<texture>Logos\XVID.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>XVID</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, XVID)+!Control.IsVisible(989)</visible>
+			<texture>Logos\XVID.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>H264</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, AVC)+control.isvisible(989)</visible>
+			<texture>Logos\H264.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>H264</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, AVC)+Control.IsVisible(989)</visible>
+			<texture>Logos\H264.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Generic MPEG4</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>[string.contains(#Play.Current.VideoCodec, FMP4)|string.contains(#Play.Current.VideoCodec, MPEG-4V)]+Control.IsVisible(989)</visible>
+			<texture>Logos\MP4V.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Generic MPEG4</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>[string.contains(#Play.Current.VideoCodec, FMP4)|string.contains(#Play.Current.VideoCodec, MPEG-4V)]+!Control.IsVisible(989)</visible>
+			<texture>Logos\MP4V.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP1V</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, MPEG-1V)+Control.IsVisible(989)</visible>
+			<texture>Logos\MP1V.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP1V</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, MPEG-1V)+!Control.IsVisible(989)</visible>
+			<texture>Logos\MP1V.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP2V</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, MPEG-2V)+Control.IsVisible(989)</visible>
+			<texture>Logos\MP2V.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>MP2V</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, MPEG-2V)+!Control.IsVisible(989)</visible>
+			<texture>Logos\MP2V.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>WMV</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, WMV)+Control.IsVisible(989)</visible>
+			<texture>Logos\wmv.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>WMV</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, WMV)+!Control.IsVisible(989)</visible>
+			<texture>Logos\wmv.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Vc-1</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, VC-1)+Control.IsVisible(989)</visible>
+			<texture>Logos\wvc1.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Vc-1</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>505</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.contains(#Play.Current.VideoCodec, VC-1)+!Control.IsVisible(989)</visible>
+			<texture>Logos\wvc1.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Subtitles</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>580</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.equals(#Play.Current.HasSubtitles, True)+Control.IsVisible(989)</visible>
+			<texture>Logos\Subtitles.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Subtitles</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1125</posX>
+			<posY>580</posY>
+			<width>102</width>
+			<height>70</height>
+			<visible>string.equals(#Play.Current.HasSubtitles, True)+!Control.IsVisible(989)</visible>
+			<texture>Logos\Subtitles.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<import>common.play.osd.xml</import>
+	</controls>
+</window>

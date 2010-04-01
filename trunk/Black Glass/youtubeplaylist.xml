@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>29051</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#header.label:136</define>
+	<define>#useSelectedFanart:Yes</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.music.fanart.xml</import>
+		<import>common.time.xml</import>
+
+		<import>common.facade.background.xml</import>
+		<import>common.facade.music.xml</import>
+		<control>
+			<id>500</id>
+			<type>image</type>
+			<posX>40</posX>
+			<posY>100</posY>
+			<width>342</width>
+			<height>255</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>90</posY>
+			<width>360</width>
+			<height>273</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>395</posY>
+			<width>360</width>
+			<font>font22</font>
+			<label>#selecteditem</label>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>title2</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>437</posY>
+			<width>350</width>
+			<label>#selecteditem2</label>
+			<textcolor>ffffffff</textcolor>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" time="50">WindowClose</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
+			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<control>
+
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(50)</visible>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="fade" time="450" reversible="true">visible</animation>
+				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<posX>0</posX>
+				<posY>100</posY>
+				<visible>!control.hasfocus(50)</visible>
+				<layout>StackLayout</layout>
+				<control>
+					<description>View-As button</description>
+					<type>button</type>
+					<id>2</id>
+					<label>100</label>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>20</ondown>
+				</control>
+				<control>
+					<description>Shuffle button</description>
+					<type>button</type>
+					<id>20</id>
+					<label>191</label>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>30</ondown>
+				</control>
+				<control>
+					<description>Repeat on/off button</description>
+					<type>togglebutton</type>
+					<id>30</id>
+					<label>486</label>
+					<onright>50</onright>
+					<onup>20</onup>
+					<ondown>10</ondown>
+				</control>
+				<control>
+					<description>My Playlists</description>
+					<type>button</type>
+					<id>10</id>
+					<label>983</label>
+					<onright>50</onright>
+					<onup>30</onup>
+					<ondown>21</ondown>
+				</control>
+				<control>
+					<description>Save button</description>
+					<type>button</type>
+					<id>21</id>
+					<label>190</label>
+					<onright>50</onright>
+					<onup>10</onup>
+					<ondown>22</ondown>
+				</control>
+				<control>
+					<description>Clear button</description>
+					<type>button</type>
+					<id>22</id>
+					<label>192</label>
+					<onright>50</onright>
+					<onup>21</onup>
+					<ondown>26</ondown>
+				</control>
+				<!--       <control>
+        <description>Play button</description>
+        <type>button</type>
+        <id>23</id>
+        <label>208</label>
+        <onright>50</onright>
+        <visible>false</visible>
+      </control> -->
+				<control>
+					<description>Now playing</description>
+					<type>button</type>
+					<id>26</id>
+					<label>4540</label>
+					<onright>50</onright>
+					<onup>22</onup>
+					<ondown>28</ondown>
+					<!-- <ondown>99</ondown> -->
+				</control>
+				<control>
+					<description>scrobble mode button</description>
+					<type>button</type>
+					<id>28</id>
+					<label>33001</label>
+					<onright>50</onright>
+					<onup>26</onup>
+					<ondown>27</ondown>
+					<visible>plugin.isenabled(Audioscrobbler)</visible>
+				</control>
+				<control>
+					<description>scrobble on/off button</description>
+					<type>togglebutton</type>
+					<id>27</id>
+					<label>33000</label>
+					<onright>50</onright>
+					<onup>28</onup>
+					<ondown>29</ondown>
+					<visible>plugin.isenabled(Audioscrobbler)</visible>
+				</control>
+				<control>
+					<description>scrobble user button</description>
+					<type>button</type>
+					<id>29</id>
+					<label>Scrobbler: </label>
+					<onright>50</onright>
+					<onup>27</onup>
+					<ondown>99</ondown>
+					<visible>plugin.isenabled(Audioscrobbler)</visible>
+				</control>
+
+			</control>
+		</control>
+
+	</controls>
+</window>

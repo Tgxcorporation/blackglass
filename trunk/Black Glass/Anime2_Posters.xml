@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>6004</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<disabletopbar>yes</disabletopbar>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<define>#header.label:Posters</define>
+	<define>#title.color:ffffffff</define>
+	<!-- Titles Color     Default: ffdedede-->
+	<define>#smalltitle.color:ffffffff</define>
+	<!-- Small Titles Color     Default: ff999999 -->
+	<define>#text.color:ffffffff</define>
+	<!-- Text Color     Default: ffffffff-->
+	<define>#default.color:ffffffff</define>
+	<!-- Normal List Color     Default: ffffffff-->
+	<define>#watched.color:ffffffff</define>
+	<!-- Watched List Color     Default: ff666666 -->
+	<define>#notpresent.color:ffffffff</define>
+	<!-- File Not Present in List Color     Default: ffef6d16 -->
+	<controls>
+		<!-- :::::::::::::: BACKGROUNDS :::::::::::::: -->
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>1</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>bg.jpg</texture>    
+		</control>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>10</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+		</control>
+		<!-- :::::::::::::: INFO LABELS :::::::::::::: -->
+
+		<control>
+			<description>WideBanners Source Label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>380</posX>
+			<posY>35</posY>
+			<width>700</width>
+			<font>font12</font>
+			<label>Source:</label>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Poster Source</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>450</posX>
+			<posY>31</posY>
+			<width>700</width>
+			<font>font14</font>
+			<label>#Anime2.Posters.SelectedSource</label>
+		</control>
+
+		<control>
+			<description>IsDisabled Label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>650</posX>
+			<posY>35</posY>
+			<width>700</width>
+			<font>font12</font>
+			<label>Is Disabled:</label>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>IsDisabled</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>755</posX>
+			<posY>31</posY>
+			<width>700</width>
+			<font>font14</font>
+			<label>#Anime2.Posters.SelectedPosterIsDisabled</label>
+		</control>
+
+		<control>
+			<description>Is Default Label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>855</posX>
+			<posY>35</posY>
+			<width>700</width>
+			<font>font12</font>
+			<label>Is Default:</label>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Is Default:</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>945</posX>
+			<posY>31</posY>
+			<width>700</width>
+			<font>font14</font>
+			<label>#Anime2.Posters.SelectedPosterIsDefault</label>
+		</control>
+
+
+
+
+		<!--  ************** HIDDEN MENU *****************  -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
+			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>				
+			<control>
+
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(50)</visible>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="fade" time="450" reversible="true">visible</animation>
+				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<posX>0</posX>
+				<posY>100</posY>
+				<visible>!control.hasfocus(50)</visible>
+				<layout>StackLayout</layout>
+				<control>
+					<description>Change Layout</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Change Layout</label>
+					<onup>141</onup>
+					<ondown>13</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+				</control>
+
+				<control>
+					<description>Random Posters</description>
+					<type>togglebutton</type>
+					<id>13</id>
+					<label>Random Posters</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>140</ondown>
+				</control>
+
+				<control>
+					<description>Fanart</description>
+					<type>button</type>
+					<id>140</id>
+					<label>Fanart</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>13</onup>
+					<ondown>141</ondown>
+				</control>
+
+				<control>
+					<description>Wide Banners</description>
+					<type>button</type>
+					<id>141</id>
+					<label>Wide Banners</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>140</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+
+
+		<!-- :::::::::::::: THUMBNAILPANEL :::::::::::::: -->
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-200</posX>
+			<posY>550</posY>
+			<width>1680</width>
+			<height>180</height>
+			<texture>gradient.png</texture>
+			<visible>facadeview.filmstrip</visible>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>composite control consisting of a thumbnail panel and filmstrip</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>Graphical Thumbpanel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<posX>10</posX>
+					<posY>80</posY>
+					<width>1289</width>
+					<height>640</height>
+					<scrollOffset>1</scrollOffset>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<itemWidth>159</itemWidth>
+					<itemHeight>210</itemHeight>
+					<textureWidth>147</textureWidth>
+					<textureHeight>187</textureHeight>
+					<thumbWidth>128</thumbWidth>
+					<thumbHeight>181</thumbHeight>
+					<thumbPosX>17</thumbPosX>
+					<thumbPosY>3</thumbPosY>
+					<itemWidthBig>258</itemWidthBig>
+					<itemHeightBig>313</itemHeightBig>
+					<thumbWidthBig>195</thumbWidthBig>
+					<thumbHeightBig>276</thumbHeightBig>
+					<textureWidthBig>225</textureWidthBig>
+					<textureHeightBig>285</textureHeightBig>
+					<thumbPosXBig>25</thumbPosXBig>
+					<thumbPosYBig>5</thumbPosYBig>
+					<thumbZoom>no</thumbZoom>
+					<enableFocusZoom>no</enableFocusZoom>
+					<hideUnfocusTexture>no</hideUnfocusTexture>
+					<renderFocusText>yes</renderFocusText>
+					<renderUnfocusText>yes</renderUnfocusText>
+					<imageFolder>DVDCase.png</imageFolder>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<textXOff>2</textXOff>
+					<textYOff>2</textYOff>
+					<spinCanFocus>no</spinCanFocus>
+					<spinPosX>3185</spinPosX>
+					<unfocusedAlpha>120</unfocusedAlpha>
+					<showFrame>true</showFrame>
+					<frameNoFocus>DVDCase.png</frameNoFocus> 
+					<frameFocus>DVDCase.png</frameFocus> 	
+				</control>
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<dimColor>90ffffff</dimColor>
+					<scrollOffset>2</scrollOffset>
+					<onup>2</onup>
+					<onleft>2</onleft>
+					<posX>20</posX>
+					<posY>410</posY>
+					<width>1350</width>
+					<spinCanFocus>no</spinCanFocus>
+					<thumbWidth>150</thumbWidth>
+					<thumbHeight>215</thumbHeight>
+					<thumbPosX>21</thumbPosX>
+					<thumbPosY>4</thumbPosY>
+					<itemWidth>180</itemWidth>
+					<itemHeight>280</itemHeight>
+					<textureWidth>175</textureWidth>
+					<textureHeight>223</textureHeight>
+					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<frame>DVDCase.png</frame>
+					<frameFocus>DVDCase.png</frameFocus>
+					<background>emtpy.png</background>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png">
+					</thumbs>
+					<InfoImage flipY="true" diffuse="Thumb_Mask.png">
+					</InfoImage>
+					<showFrame>yes</showFrame>
+					<showFolder>yes</showFolder>
+					<showBackGround>no</showBackGround>
+					<showInfoImage>no</showInfoImage>
+					<visible>facadeview.filmstrip</visible>
+					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+					<scrollOffset>3</scrollOffset>
+				</control>
+			</control>
+		</control>
+		<import>common.time.xml</import>
+	</controls>
+</window>

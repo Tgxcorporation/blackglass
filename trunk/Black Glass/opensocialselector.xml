@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>30052</id>
+	<defaultcontrol>101</defaultcontrol>
+	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<define>#header.label:Social</define>
+	<controls>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>bg.jpg</texture>    
+		</control>
+		<!-- <import>common.picback.xml</import>-->
+		<import>common.time.xml</import>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>418</width>
+			<height>720</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>!control.hasfocus(50)</visible>
+		</control>
+
+		<control>
+			<type>label</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>35</posY>
+			<label>#header.label</label>
+			<font>font24</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control> 
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>47</posY>
+			<width>385</width>
+			<height>53</height>
+			<texture>bg_button_nofocus.png</texture>
+		</control>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<posX>0</posX>
+			<posY>100</posY>
+			<layout>StackLayout</layout>
+			<control>
+				<description>Photos1</description>
+				<type>button</type>
+				<id>101</id>
+				<label>Photos</label>
+				<onup>104</onup>
+				<ondown>102</ondown>
+			</control>
+			<control>
+				<description>Photos2</description>
+				<type>button</type>
+				<id>102</id>
+				<label>Photos</label>
+				<onup>101</onup>
+				<ondown>103</ondown>
+			</control>
+			<control>
+				<description>Photos3</description>
+				<type>button</type>
+				<id>103</id>
+				<label>Photos</label>
+				<onup>102</onup>
+				<ondown>104</ondown>
+			</control>
+			<control>
+				<description>Photos4</description>
+				<type>button</type>
+				<id>104</id>
+				<label>Photos</label>
+				<onup>103</onup>
+				<ondown>101</ondown>
+			</control>	  
+		</control>
+	</controls>
+</window>
