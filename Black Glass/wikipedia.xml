@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>4711</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#header.label:2516</define>
+	<define>#header.hover:-</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.time.xml</import>
+		<import>common.window.xml</import>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" delay="250" time="250">WindowOpen</animation>
+			<animation effect="fade" time="50">WindowClose</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
+			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">WindowOpen</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(20)</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="fade" time="450" reversible="true">visible</animation>
+				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<posX>0</posX>
+				<posY>100</posY>
+				<visible>!control.hasfocus(20)</visible>
+				<layout>StackLayout</layout>
+				<control>
+					<description>Search Button</description>
+					<type>button</type>
+					<id>10</id>
+					<onup>17</onup>
+					<label>137</label>
+				</control>
+				<control>
+					<description>Select local Wikipedia Button</description>
+					<type>button</type>
+					<id>11</id>
+					<label>200025</label>
+				</control>
+				<control>
+					<description>Links Button</description>
+					<type>button</type>
+					<id>12</id>
+					<label>2511</label>
+				</control>
+				<control>
+					<description>Images Button</description>
+					<type>button</type>
+					<id>13</id>
+					<ondown>99</ondown>
+					<label>2515</label>
+				</control>
+				<control>
+					<description>Back to the text (when viewing an image)</description>
+					<type>button</type>
+					<id>14</id>
+					<label>2514</label>
+					<visible>no</visible>
+				</control>
+			</control>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>458</posX>
+			<posY>48</posY>
+			<width>948</width>
+			<height>766</height>
+			<texture>bg_facade.png</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>490</posX>
+			<posY>97</posY>
+			<width>790</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>490</posX>
+			<posY>610</posY>
+			<width>790</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>!control.isvisible(14)</visible>
+		</control>
+		<control>
+			<description>Article title/searchterm</description>
+			<type>label</type>
+			<id>4</id>
+			<posX>520</posX>
+			<posY>93</posY>
+			<visible>no</visible>
+			<label>Article title/searchterm</label>
+			<font>font24</font>
+			<align>left</align>
+			<width>750</width>
+		</control>
+		<control>
+			<description>Image description</description>
+			<type>label</type>
+			<id>5</id>
+			<posX>520</posX>
+			<posY>93</posY>
+			<visible>no</visible>
+			<label>Image description</label>
+			<font>font24</font>
+			<align>left</align>
+			<width>750</width>
+		</control>
+		<control>
+			<description>Here is the article text displayed</description>
+			<type>textbox</type>
+			<id>20</id>
+			<posX>520</posX>
+			<posY>160</posY>
+			<visible>no</visible>
+			<width>675</width>
+			<height>550</height>
+			<spinPosX>1130</spinPosX>
+			<spinPosY>672</spinPosY>
+			<onleft>10</onleft>
+			<onright>10</onright>
+		</control>
+		<control>
+			<description>Article Image</description>
+			<type>image</type>
+			<id>25</id>
+			<posX>520</posX>
+			<posY>160</posY>
+			<visible>no</visible>
+			<width>550</width>
+			<height>550</height>
+			<texture />
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<centered>no</centered>
+			<keepaspectratio>yes</keepaspectratio>
+		</control>
+	</controls>
+</window>

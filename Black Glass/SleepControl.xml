@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>7969</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#header.label:Sleep Control</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.time.xml</import>
+		<!-- *** Button *** -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" delay="250" time="250">WindowOpen</animation>
+			<animation effect="fade" time="50">WindowClose</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
+			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">WindowOpen</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(50)</visible>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="fade" time="450" reversible="true">visible</animation>
+				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<posX>0</posX>
+				<posY>100</posY>
+				<visible>!control.hasfocus(50)</visible>
+				<layout>StackLayout</layout>
+				<control>
+					<description>Sleep Method</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Sleep Method</label>
+					<onup>5</onup>
+					<ondown>3</ondown>
+				</control>
+				<control>
+					<description>Set Timer</description>
+					<type>button</type>
+					<id>3</id>
+					<label>Set Timer</label>
+					<onup>2</onup>
+					<ondown>4</ondown>
+				</control>
+				<control>
+					<description>Start Timer</description>
+					<type>button</type>
+					<id>4</id>
+					<label>Start Timer</label>
+					<onup>3</onup>
+					<ondown>5</ondown>
+				</control>
+				<control>
+					<description>Wait until TV Recording finished</description>
+					<type>togglebutton</type>
+					<id>5</id>
+					<label>Wait until rec. finished</label>
+					<onup>4</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+		<!-- *** Sleep Activity *** -->
+		<control>
+			<description>Sleep Activity</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>240</posX>
+			<posY>265</posY>
+			<width>800</width>
+			<label>#SleepControl.Activity</label>
+			<align>center</align>
+			<font>font48</font>
+			<textcolor>ffffffff</textcolor>
+		</control>
+
+		<!-- *** Sleep Method *** -->
+		<control>
+			<description>Sleep Method</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>240</posX>
+			<posY>315</posY>
+			<width>800</width>
+			<label>#SleepControl.Method</label>
+			<align>center</align>
+			<font>font16</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+
+		<!-- *** Sleep Counter *** -->
+		<control>
+			<description>Sleep Counter</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>240</posX>
+			<posY>385</posY>
+			<width>800</width>
+			<label>#SleepControl.Counter</label>
+			<align>center</align>
+			<font>font48</font>
+			<textcolor>ffffffff</textcolor>
+		</control>
+
+		<!-- *** Sleep Start/End *** -->
+		<control>
+			<description>Sleep Method</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>240</posX>
+			<posY>435</posY>
+			<width>800</width>
+			<label>#SleepControl.Start #SleepControl.End</label>
+			<align>center</align>
+			<font>font16</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+
+		<!-- *** Sleep Status *** -->
+		<control>
+			<description>Sleep Status</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>240</posX>
+			<posY>475</posY>
+			<width>800</width>
+			<label>#SleepControl.Status</label>
+			<align>center</align>
+			<font>font16</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+
+		<control>
+			<description>Dummy Button</description>
+			<type>button</type>
+			<id>50</id>
+			<label>-</label>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+	</controls>
+</window>

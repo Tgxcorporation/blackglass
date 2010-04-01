@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>35</id>
+	<defaultcontrol>107</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<disabletopbar>yes</disabletopbar>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<rememberLastFocusedControl>yes</rememberLastFocusedControl>
+	<controls>
+
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<texture>basichome_bg.jpg</texture>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<texture>basichome_side.png</texture>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control>
+			<description>Date</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>134</posY>
+			<label>#date</label>
+			<align>center</align>
+			<font>font12</font>
+			<textcolor>aaffffff</textcolor>
+			<visible>!plugin.isenabled(InfoService)</visible>
+		</control>
+		<control>
+			<description>Date</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>134</posY>
+			<label>#infoservice.weather.today.temp  .  #date</label>
+			<align>center</align>
+			<font>font12</font>
+			<textcolor>aaffffff</textcolor>
+			<visible>plugin.isenabled(InfoService)</visible>
+		</control>
+		<control>
+			<description>Time</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>100</posY>
+			<label>#time</label>
+			<align>center</align>
+			<font>font22</font>
+			<textcolor>ffffffff</textcolor>
+		</control>
+
+		<!-- UPPER BUTTONS -->
+
+		<control>
+			<description>shutdown button</description>
+			<type>button</type>
+			<animation effect="zoom" start="100,100" end="110,110" time="300">focus</animation>
+			<animation effect="zoom" start="110,110" end="100,100" time="300">unfocus</animation>
+			<id>17</id>
+			<posX>540</posX>
+			<posY>20</posY>
+			<width>40</width>
+			<height>40</height>
+			<textureFocus>button_shutdown_focus.png</textureFocus>
+			<textureNoFocus>button_shutdown_nofocus.png</textureNoFocus>
+			<label>1030</label>
+			<textXOff>3000</textXOff>
+			<action>99</action>
+			<onleft>19</onleft>
+			<onright>18</onright>
+			<onup>1111</onup>
+			<ondown>111</ondown>
+		</control>
+		<control>
+			<description>shutdown hover label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>623</posY>
+			<label>1030</label>
+			<font>font48</font>
+			<align>center</align>
+			<visible>control.hasfocus(17)</visible>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control>
+			<description>home button</description>
+			<type>button</type>
+			<animation effect="zoom" start="100,100" end="110,110" time="300">focus</animation>
+			<animation effect="zoom" start="110,110" end="100,100" time="300">unfocus</animation>
+			<id>18</id>
+			<posX>620</posX>
+			<posY>20</posY>
+			<width>40</width>
+			<height>40</height>
+			<textureFocus>Basic_focus.png</textureFocus>
+			<textureNoFocus>Basic_nofocus.png</textureNoFocus>
+			<label>2143</label>
+			<textXOff>3000</textXOff>
+			<action>115</action>
+			<onleft>17</onleft>
+			<onright>19</onright>
+			<onup>1111</onup>
+			<ondown>112</ondown>
+		</control>
+		<control>
+			<description>home hover label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>623</posY>
+			<label>2143</label>
+			<font>font48</font>
+			<align>center</align>
+			<visible>control.hasfocus(18)</visible>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control>
+			<description>exit button</description>
+			<type>button</type>
+			<animation effect="zoom" start="100,100" end="110,110" time="300">focus</animation>
+			<animation effect="zoom" start="110,110" end="100,100" time="300">unfocus</animation>
+			<id>19</id>
+			<posX>700</posX>
+			<posY>20</posY>
+			<width>40</width>
+			<height>40</height>
+			<textureFocus>button_close_focus.png</textureFocus>
+			<textureNoFocus>button_close_nofocus.png</textureNoFocus>
+			<label>4517</label>
+			<textXOff>3000</textXOff>
+			<action>97</action>
+			<onleft>18</onleft>
+			<onright>17</onright>
+			<onup>1111</onup>
+			<ondown>113</ondown>
+		</control>
+		<control>
+			<description>exit hover label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>623</posY>
+			<label>4517</label>
+			<font>font48</font>
+			<align>center</align>
+			<visible>control.hasfocus(19)</visible>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+
+		<!-- INFOSERVICE RSS FEED -->
+		<import>BasicHome_Infoservice.xml</import>
+
+		<!-- MAIN BUTTONS -->
+		<import>BasicHome_Buttons.xml</import>
+
+		<!-- OVERLAY -->
+		<import>minioverlay.xml</import>	
+	</controls>
+</window>

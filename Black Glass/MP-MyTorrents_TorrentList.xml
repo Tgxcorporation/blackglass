@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>5679</id>
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#header.label:All Torrents</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.time.xml</import>
+		<!-- <import>mp-mytorrents.common.overlay.xml</import> --> 
+		<import>common.facade.background.basic.xml</import>
+		<control>
+			<description>Spin control Label</description>
+			<type>fadelabel</type>
+			<label>#MyTorrents.Count Items</label>
+			<id>0</id>
+			<posX>520</posX>
+			<posY>661</posY>
+			<font>font16</font>
+			<textcolor>60ffffff</textcolor>
+			<width>360</width>
+		</control>       
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>5</id>
+				<textXOff>-40</textXOff>
+				<onup>4</onup>
+				<ondown>4</ondown>
+				<onleft>4</onleft>
+				<onright>4</onright>
+			</control>    
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" time="50">WindowClose</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>4</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
+			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<control>
+
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(5)</visible>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="fade" time="450" reversible="true">visible</animation>
+				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<posX>0</posX>
+				<posY>100</posY>
+				<visible>!control.hasfocus(5)</visible>
+				<layout>StackLayout</layout>
+				<control>
+					<description>Try Me</description>
+					<type>button</type>
+					<id>4</id>
+					<posX>60</posX>
+					<posY>637</posY>
+					<label>Back</label>
+					<onup>5</onup>
+					<ondown>5</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

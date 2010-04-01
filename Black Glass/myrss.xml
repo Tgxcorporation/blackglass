@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<window>
+	<id>2700</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#header.label:9</define>
+	<autohidetopbar>yes</autohidetopbar> 
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.time.xml</import>
+
+		<control>
+			<type>textboxscrollup</type>
+			<description>Chosen Story description</description>
+			<id>506</id>
+			<posX>30</posX>
+			<posY>130</posY>
+			<width>350</width>
+			<height>430</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>control.hasfocus(50)</visible>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Site Logo</description>
+			<type>image</type>
+			<id>101</id>
+			<posX>30</posX>
+			<posY>1270</posY>
+			<width>320</width>
+			<height>320</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">thumbs\ars_article.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<visible>control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<import>common.facade.background.basic.xml</import>
+		<control>
+			<description>Channel name label</description>
+			<type>fadelabel</type>
+			<id>12</id>
+			<posX>30</posX>
+			<posY>80</posY>
+			<label>-</label>
+			<font>font22</font>
+			<align>left</align>
+			<width>380</width>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>50</id>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<textYOff>8</textYOff>
+				<textXOff>-40</textXOff>
+			</control>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" time="50">WindowClose</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
+			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(50)</visible>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="fade" time="450" reversible="true">visible</animation>
+				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<posX>0</posX>
+				<posY>100</posY>
+				<visible>!control.hasfocus(50)</visible>
+				<layout>StackLayout</layout>
+				<control>
+					<description>RSS feed select</description>
+					<type>button</type>
+					<id>4</id>
+					<label>706</label>
+					<onleft>4</onleft>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>2</ondown>
+				</control>
+				<control>
+					<description>Refresh Button</description>
+					<type>button</type>
+					<id>2</id>
+					<label>184</label>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>4</ondown>
+				</control>	  
+			</control>
+		</control>
+
+	</controls>
+</window>
