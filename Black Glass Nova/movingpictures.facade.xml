@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file should contain the facade view
+-->
+<window>
+	<controls>
+		<control>
+			<description>gradient</description>
+			<id>0</id>
+			<type>image</type>
+			<posX>-200</posX>
+			<posY>550</posY>
+			<width>1680</width>
+			<height>180</height>
+			<texture>gradient.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>facadeview.filmstrip+[control.isvisible(50)|control.isvisible(51)]</visible>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>      
+				<type>facadeview</type>
+				<id>51</id>
+				<control>
+					<description>Categories List</description>
+					<type>listcontrol</type>
+					<id>51</id>
+					<onleft>51</onleft>
+					<onright>51</onright>
+					<posX>897</posX>
+					<width>383</width>
+					<posY>430</posY>
+					<height>300</height>
+					<textureHeight>35</textureHeight>
+					<font>font14</font>	
+					<spinWidth>30</spinWidth>
+					<spinHeight>30</spinHeight>
+					<spinPosX>1205</spinPosX>
+					<spinPosY>683</spinPosY>
+					<IconXOff>2010</IconXOff>
+					<IconYOff>7</IconYOff>
+					<textXOff>-50</textXOff>
+					<textYOff>2</textYOff>
+					<animation effect="fade" time="250">visiblechange</animation>
+				</control>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<visible>control.isvisible(50)</visible>
+					<description>Movie List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<posX>897</posX>
+					<width>383</width>
+					<posY>430</posY>
+					<height>300</height>
+					<textureHeight>35</textureHeight>
+					<font>font14</font>	
+					<spinWidth>30</spinWidth>
+					<spinHeight>30</spinHeight>
+					<spinPosX>1205</spinPosX>
+					<spinPosY>683</spinPosY>
+					<IconXOff>2010</IconXOff>
+					<IconYOff>7</IconYOff>
+					<textXOff>-50</textXOff>
+					<textYOff>2</textYOff>
+					<!-- group headers -->
+					<textcolor3>ff3E99D7</textcolor3>
+					<animation effect="fade" time="250">visiblechange</animation>
+				</control>
+				<control>
+					<visible>control.isvisible(50)</visible>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<onup>3</onup>
+					<posX>20</posX>
+					<posY>380</posY>
+					<width>1350</width>
+					<thumbWidth>150</thumbWidth>
+					<thumbHeight>215</thumbHeight>
+					<thumbPosX>21</thumbPosX>
+					<thumbPosY>4</thumbPosY>
+					<itemWidth>180</itemWidth>
+					<itemHeight>280</itemHeight>
+					<textureWidth>175</textureWidth>
+					<textureHeight>223</textureHeight>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<frame>DVDCase.png</frame>
+					<frameFocus>DVDCase.png</frameFocus>
+					<background>emtpy.png</background>
+					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png">
+					</thumbs>
+					<InfoImage flipY="true" diffuse="Thumb_Mask.png">
+					</InfoImage>
+					<showFrame>yes</showFrame>
+					<showFolder>yes</showFolder>
+					<showBackGround>no</showBackGround>
+					<showInfoImage>no</showInfoImage>
+					<visible>facadeview.filmstrip</visible>
+					<unfocusedAlpha>255</unfocusedAlpha>
+					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+					<scrollOffset>3</scrollOffset>
+					<animation effect="fade" time="250">visiblechange</animation>				
+				</control>
+				<control>
+					<description>Thumbnail Panel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<posX>21</posX>
+					<posY>300</posY>
+					<width>1300</width>
+					<height>320</height>
+					<scrollOffset>0</scrollOffset>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<itemWidth>114</itemWidth>
+					<itemHeight>145</itemHeight>
+					<textureWidth>110</textureWidth>
+					<textureHeight>140</textureHeight>
+					<thumbWidth>95</thumbWidth>
+					<thumbHeight>135</thumbHeight>
+					<thumbPosX>13</thumbPosX>
+					<thumbPosY>2</thumbPosY>
+					<itemWidthBig>254</itemWidthBig>
+					<itemHeightBig>313</itemHeightBig>
+					<thumbWidthBig>195</thumbWidthBig>
+					<thumbHeightBig>276</thumbHeightBig>
+					<textureWidthBig>225</textureWidthBig>
+					<textureHeightBig>285</textureHeightBig>
+					<thumbPosXBig>25</thumbPosXBig>
+					<thumbPosYBig>5</thumbPosYBig>
+					<thumbZoom>no</thumbZoom>
+					<enableFocusZoom>no</enableFocusZoom>
+					<hideUnfocusTexture>no</hideUnfocusTexture>
+					<renderFocusText>no</renderFocusText>
+					<renderUnfocusText>no</renderUnfocusText>
+					<imageFolder>DVDCase.png</imageFolder>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<textXOff>2</textXOff>
+					<textYOff>2</textYOff>
+					<spinCanFocus>no</spinCanFocus>
+					<unfocusedAlpha>120</unfocusedAlpha>
+					<showFrame>true</showFrame>
+					<frameNoFocus>DVDCase.png</frameNoFocus> 
+					<frameFocus>DVDCase.png</frameFocus>
+					<font>font16</font>
+					<spinPosX>3185</spinPosX>
+					<spinPosY>595</spinPosY>				
+					<animation effect="fade" time="250">visiblechange</animation>
+				</control>
+			</control>
+		</control>
+
+
+
+		<!-- Selected Category Facade Item -->	
+		<control>
+			<description>Default Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>10</posX>
+			<posY>90</posY>
+			<width>360</width>
+			<height>360</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">Categories\Movies.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">visiblechange</animation>		
+			<visible>control.isvisible(51)+!control.HasThumb(100)</visible>
+		</control>
+		<control>
+			<description>Default Image</description>
+			<type>image</type>
+			<id>100</id>
+			<posX>10</posX>
+			<posY>90</posY>
+			<width>360</width>
+			<height>360</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">Categories\#MovingPictures.SelectedNode.name.png</texture>	
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">visiblechange</animation>	
+			<visible>control.isvisible(51)</visible>
+		</control>
+
+	</controls>
+</window>

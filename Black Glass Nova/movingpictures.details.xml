@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file should contain the details view
+-->
+<window>
+	<controls>
+
+
+		<control>
+			<description>PLAY Button</description>
+			<type>button</type>
+			<id>6</id>
+			<label>-</label>
+			<onup>6</onup>
+			<ondown>6</ondown>
+			<onleft>6</onleft>
+			<onright>6</onright>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control>
+
+
+		<!-- Details Box -->
+
+		<control>
+			<description>Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-100</posX>
+			<posY>377</posY>
+			<width>1572</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<description>Cover Art</description>
+			<type>image</type>
+			<id>60</id>
+			<keepaspectratio>no</keepaspectratio>
+			<posX>46</posX> 
+			<posY>425</posY> 
+			<width>198</width> 
+			<height>280</height> 
+			<texture flipY="true" diffuse="Thumb_Mask.png">#MovingPictures.Coverart</texture>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<description>Cover Art Glass Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>20</posX>
+			<posY>420</posY>
+			<width>228</width>
+			<height>290</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<description>Watched Icon Background</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>205</posX>
+			<posY>435</posY>
+			<width>40</width>
+			<height>50</height>
+			<texture>overlaywubg.png</texture>
+			<colordiffuse>b0ffffff</colordiffuse>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+
+		</control>
+		<control>
+			<description>Watched Icon</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>211</posX>
+			<posY>439</posY>
+			<width>30</width>
+			<height>30</height>
+			<texture>overlaywatched.png</texture>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+control.isvisible(9)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Un-Watched Icon</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>211</posX>
+			<posY>439</posY>
+			<width>30</width>
+			<height>30</height>
+			<texture>overlayunwatched.png</texture>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+!control.isvisible(9)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>1</id>
+			<posX>265</posX>
+			<posY>419</posY>
+			<width>995</width>
+			<font>font22</font>
+			<label>#selecteditem</label>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>249</posX>
+			<posY>430</posY>
+			<width>1035</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Year value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>627</posX>
+			<posY>470</posY>
+			<width>630</width>
+			<label>#MovingPictures.SelectedMovie.year  .  #MovingPictures.SelectedMovie.certification  .  #MovingPictures.SelectedMovie.genres</label>
+			<textcolor>ffFFFFFF</textcolor>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Runtime value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>265</posX>
+			<posY>470</posY>
+			<width>350</width>
+			<align>left</align>
+			<label>#MovingPictures.SelectedMovie.runtime.localized.long</label>
+			<textcolor>90FFFFFF</textcolor>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>249</posX>
+			<posY>469</posY>
+			<width>1035</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>imagelist</type>
+			<id>1</id>
+			<posX>265</posX>
+			<posY>513</posY>
+			<width>302</width>
+			<height>40</height>
+			<textureWidth>22</textureWidth>
+			<textureHeight>22</textureHeight>
+			<subitems>
+				<subitem>UserRatingStarOff.png</subitem>
+				<subitem>stargood.png</subitem>
+			</subitems>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<imagesToDraw>10</imagesToDraw>
+			<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<description>Directors value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>627</posX>
+			<posY>509</posY>
+			<width>630</width>
+			<label>Directed by #MovingPictures.SelectedMovie.directors</label>
+			<textcolor>90FFFFFF</textcolor>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>249</posX>
+			<posY>508</posY>
+			<width>1035</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+
+		<control>
+			<description>Actors value</description>
+			<type>textboxscrollup</type>
+			<id>1</id>
+			<posX>265</posX>
+			<posY>551</posY>
+			<width>350</width>
+			<label>#MovingPictures.SelectedMovie.actors</label>
+			<textcolor>90FFFFFF</textcolor>
+			<font>font14</font>
+			<height>90</height>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<description>Summary</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>627</posX>
+			<posY>551</posY>
+			<width>640</width>
+			<height>90</height>
+			<textcolor>ffFFFFFF</textcolor>
+			<font>font14</font>
+			<label>#MovingPictures.SelectedMovie.summary</label>
+			<seperator>: : :</seperator>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>249</posX>
+			<posY>615</posY>
+			<width>1035</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>!Control.isVisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+	</controls>
+</window>
