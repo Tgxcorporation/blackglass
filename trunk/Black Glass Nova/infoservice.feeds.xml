@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>16001</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#header.label:InfoService Feeds</define>
+	<define>#header.background:hover_infoservice.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.time.xml</import>
+		<control>
+			<description>LISTVIEW LEFT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-730</posX>
+			<posY>377</posY>
+			<width>1372</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		<control>
+			<description>LISTVIEW RIGHT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>614</posX>
+			<posY>377</posY>
+			<width>1372</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>395</posY>
+			<width>640</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control> 
+		<control>
+			<type>label</type>
+			<description>Number of Files Label</description>
+			<posX>650</posX>
+			<posY>688</posY>
+			<label>#infoservice.feed.itemcount</label>
+			<font>font12</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+		</control>
+
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>50</id>
+				<onleft>2</onleft>
+				<scrollOffset>2</scrollOffset>
+				<posX>640</posX>
+				<width>640</width>
+				<posY>430</posY>
+				<height>300</height>
+				<textureHeight>49</textureHeight>
+				<itemWidth>40</itemWidth>
+				<itemHeight>30</itemHeight>
+				<IconXOff>10</IconXOff>
+				<IconYOff>8</IconYOff>
+				<textXOff2>630</textXOff2>
+				<textYOff2>26</textYOff2>
+				<textXOff3>630</textXOff3>
+				<textYOff3>26</textYOff3>
+				<font>font14</font>	
+				<font2>font10</font2>	
+				<font3>font10</font3>	
+				<textYOff>1</textYOff>
+				<spinWidth>30</spinWidth>
+				<spinHeight>30</spinHeight>
+				<spinPosX>1210</spinPosX>
+				<spinPosY>685</spinPosY>
+				<PinIconXOff>627</PinIconXOff> 
+				<PinIconYOff>4</PinIconYOff>
+			</control>
+		</control>
+		<control>
+			<description>Last Updated</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>56</posY>
+			<font>font11</font>
+			<width>380</width>
+			<label>#infoservice.feed.lastupdated.message</label>
+		</control>
+
+
+		<control>
+			<description>Selected item Label</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>418</posY>
+			<width>560</width>
+			<font>font22</font>
+			<label>#infoservice.feed.selected.title</label>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>430</posY>
+			<width>609</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>Site Logo</description>
+			<type>image</type>
+			<id>101</id>
+			<posX>37</posX>
+			<posY>485</posY>
+			<width>181</width>
+			<height>139</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#infoservice.feed.selected.itemimg</texture>
+			<centered>yes</centered>
+			<keepaspectratio>yes</keepaspectratio>
+			<zoom>no</zoom>
+		</control>
+		<control>
+			<description>Site Logo</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>480</posY>
+			<width>195</width>
+			<height>150</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">OverlayCase.png</texture>
+		</control>
+		<control>
+			<description>Channel name label</description>
+			<type>fadelabel</type>
+			<id>12</id>
+			<posX>240</posX>
+			<posY>468</posY>
+			<label>#infoservice.feed.selected.feed</label>
+			<font>font16</font>
+			<align>left</align>
+			<width>354</width>
+			<textcolor>90ffffff</textcolor>
+		</control>
+
+		<control>
+			<type>image</type>
+			<posX>225</posX>
+			<posY>465</posY>
+			<width>384</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>Chosen Story description</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>240</posX>
+			<posY>505</posY>
+			<width>354</width>
+			<height>195</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>#infoservice.feed.selected.description</label>
+			<seperator>: : :</seperator>
+		</control>
+
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" time="50">WindowClose</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
+			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(50)</visible>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="fade" time="450" reversible="true">visible</animation>
+				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<posX>0</posX>
+				<posY>100</posY>
+				<visible>!control.hasfocus(50)</visible>
+				<layout>StackLayout</layout>
+				<control>
+					<description>Refresh Button</description>
+					<type>button</type>
+					<id>2</id>
+					<label>184</label>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>4</ondown>
+				</control>
+				<control>
+					<description>RSS feed select</description>
+					<type>button</type>
+					<id>4</id>
+					<label>706</label>
+					<onleft>4</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>5</ondown>
+				</control>
+				<control>
+					<description>All feeds</description>
+					<type>button</type>
+					<id>5</id>
+					<label>Show all feeds on home</label>
+					<onleft>5</onleft>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>5656</ondown>
+				</control>
+				<control>
+					<description>Twitter feeds</description>
+					<type>button</type>
+					<id>5656</id>
+					<label>Twitter</label>
+					<hyperlink>16003</hyperlink>
+					<onleft>5656</onleft>
+					<onright>50</onright>
+					<onup>5</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

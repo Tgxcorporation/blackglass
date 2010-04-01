@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>6008</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<define>#header.label:Calendar</define>
+	<define>#header.background:hover_my anime.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<define>#title.color:ffffffff</define>
+	<!-- Titles Color     Default: ffdedede-->
+	<define>#smalltitle.color:ffffffff</define>
+	<!-- Small Titles Color     Default: ff999999 -->
+	<define>#text.color:ffffffff</define>
+	<!-- Text Color     Default: ffffffff-->
+	<define>#default.color:ffffffff</define>
+	<!-- Normal List Color     Default: ffffffff-->
+	<define>#watched.color:ffffffff</define>
+	<!-- Watched List Color     Default: ff666666 -->
+	<define>#notpresent.color:ffffffff</define>
+	<!-- File Not Present in List Color     Default: ffef6d16 -->
+
+	<controls>
+
+		<!-- ********************** DUMMY controlS FOR VISIBILITY ************************************** -->
+
+		<control>
+			<type>label</type>
+			<description>Do any anime exist for the current month</description>
+			<id>1401</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>5</width>
+			<label></label>
+			<visible>false</visible>
+		</control>
+
+		<!-- ********************** BACKGROUNDS************************************** -->
+
+		<import>common.window.xml</import>
+
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-200</posX>
+			<posY>360</posY>
+			<width>1680</width>
+			<height>180</height>
+			<texture>gradient.png</texture>
+		</control>
+
+		<control>
+			<description>composite control</description>
+			<type>facadeview</type>
+			<id>50</id>
+
+			<control>
+				<description>Filmstrip view</description>
+				<type>filmstrip</type>
+				<id>50</id>
+				<onup>84</onup>
+				<onleft>902</onleft>
+				<onright>902</onright>
+				<posX>20</posX>
+				<posY>310</posY>
+				<width>1350</width>
+				<spinCanFocus>no</spinCanFocus>
+				<thumbWidth>150</thumbWidth>
+				<thumbHeight>215</thumbHeight>
+				<thumbPosX>21</thumbPosX>
+				<thumbPosY>4</thumbPosY>
+				<itemWidth>180</itemWidth>
+				<itemHeight>280</itemHeight>
+				<textureWidth>175</textureWidth>
+				<textureHeight>223</textureHeight>
+				<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
+				<imageFolderFocus>DVDCase.png</imageFolderFocus>
+				<frame>DVDCase.png</frame>
+				<frameFocus>DVDCase.png</frameFocus>
+				<background>emtpy.png</background>
+				<thumbs flipY="true" diffuse="Thumb_Mask.png">
+				</thumbs>
+				<InfoImage flipY="true" diffuse="Thumb_Mask.png">
+				</InfoImage>
+				<showFrame>yes</showFrame>
+				<showFolder>yes</showFolder>
+				<showBackGround>no</showBackGround>
+				<showInfoImage>no</showInfoImage>
+				<visible>facadeview.filmstrip</visible>
+				<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
+				<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+				<scrollOffset>3</scrollOffset>
+			</control>
+
+		</control>
+
+
+
+
+		<!--  ************** BUTTONS TOOLBAR *****************  -->
+
+
+		<control>
+			<description>Middle</description>
+			<type>button</type>
+			<id>81</id>
+			<label>#Anime2.Calendar.MinusThreeMonth #Anime2.Calendar.MinusThreeYear</label>
+			<width>140</width>
+			<posX>90</posX>
+			<posY>64</posY>
+			<onleft>902</onleft>
+			<onright>82</onright>
+			<ondown>50</ondown>
+			<font>font12</font>
+			<onup>93</onup>
+			<textalign>center</textalign>
+			<textureFocus>bg_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<textXOff>0</textXOff>
+			<textYOff>1</textYOff>
+		</control>
+
+		<control>
+			<description>Middle</description>
+			<type>button</type>
+			<id>82</id>
+			<label>#Anime2.Calendar.MinusTwoMonth #Anime2.Calendar.MinusTwoYear</label>
+			<width>140</width>
+			<posX>240</posX>
+			<posY>64</posY>
+			<onleft>81</onleft>
+			<onright>83</onright>
+			<ondown>50</ondown>
+			<font>font12</font>
+			<onup>93</onup>
+			<textalign>center</textalign>
+			<textureFocus>bg_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<textXOff>0</textXOff>
+			<textYOff>1</textYOff>
+		</control>
+
+		<control>
+			<description>Middle</description>
+			<type>button</type>
+			<id>83</id>
+			<label>#Anime2.Calendar.MinusOneMonth #Anime2.Calendar.MinusOneYear</label>
+			<width>140</width>
+			<posX>390</posX>
+			<posY>64</posY>
+			<onleft>82</onleft>
+			<onright>84</onright>
+			<ondown>50</ondown>
+			<font>font12</font>
+			<onup>93</onup>
+			<textalign>center</textalign>
+			<textureFocus>bg_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<textXOff>0</textXOff>
+			<textYOff>1</textYOff>
+		</control>
+
+		<control>
+			<description>Current Month</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>550</posX>
+			<width>150</width>
+			<posY>90</posY>
+			<font>font14</font>
+			<textcolor>ffffffff</textcolor>
+			<label>#Anime2.Calendar.CurrentMonth #Anime2.Calendar.CurrentYear</label>
+			<align>center</align>
+		</control>
+
+		<control>
+			<description>Current Month</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>400</posX>
+			<width>450</width>
+			<posY>250</posY>
+			<font>font14</font>
+			<textcolor>ffffffff</textcolor>
+			<label>Nothing found for #Anime2.Calendar.CurrentMonth #Anime2.Calendar.CurrentYear</label>
+			<align>center</align>
+			<visible>!control.isvisible(1401)</visible>
+		</control>
+
+		<control>
+			<description>Middle</description>
+			<type>button</type>
+			<id>84</id>
+			<label>#Anime2.Calendar.PlusOneMonth #Anime2.Calendar.PlusOneYear</label>
+			<width>140</width>
+			<posX>740</posX>
+			<posY>64</posY>
+			<onleft>83</onleft>
+			<onright>85</onright>
+			<ondown>50</ondown>
+			<onup>93</onup>
+			<font>font12</font>
+			<textalign>center</textalign>
+			<textureFocus>bg_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<textXOff>0</textXOff>
+			<textYOff>1</textYOff>
+		</control>
+
+		<control>
+			<description>Middle</description>
+			<type>button</type>
+			<id>85</id>
+			<label>#Anime2.Calendar.PlusTwoMonth #Anime2.Calendar.PlusTwoYear</label>
+			<width>140</width>
+			<posX>890</posX>
+			<posY>64</posY>
+			<onleft>84</onleft>
+			<onright>86</onright>
+			<ondown>50</ondown>
+			<onup>93</onup>
+			<font>font12</font>
+			<textalign>center</textalign>
+			<textureFocus>bg_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<textXOff>0</textXOff>
+			<textYOff>1</textYOff>
+		</control>
+
+		<control>
+			<description>Middle</description>
+			<type>button</type>
+			<id>86</id>
+			<label>#Anime2.Calendar.PlusThreeMonth #Anime2.Calendar.PlusThreeYear</label>
+			<width>140</width>
+			<posX>1040</posX>
+			<posY>64</posY>
+			<onleft>85</onleft>
+			<onright>902</onright>
+			<ondown>50</ondown>
+			<onup>93</onup>
+			<font>font12</font>
+			<textalign>center</textalign>
+			<textureFocus>bg_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<textXOff>0</textXOff>
+			<textYOff>1</textYOff>
+		</control>
+
+		<!--  ************** SELECTED SERIES *****************  -->
+		<control>
+			<description>Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-100</posX>
+			<posY>525</posY>
+			<width>1572</width>
+			<height>320</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		<control>
+			<description>Series Title</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>25</posX>
+			<posY>553</posY>
+			<width>1230</width>
+			<font>font20</font>
+			<height>38</height>
+			<textcolor>ffffffff</textcolor>
+			<label>#Anime2.Calendar.Title</label>
+			<textalign>center</textalign>
+			<visible>control.isvisible(1401)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>560</posY>
+			<width>1280</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>588</posY>
+			<width>1280</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>622</posY>
+			<width>1280</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>Summary</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>25</posX>
+			<posY>660</posY>
+			<width>1230</width>
+			<height>55</height>
+			<textcolor>ffFFFFFF</textcolor>
+			<font>font13</font>
+			<visible>control.isvisible(1401)</visible>
+			<seperator>: : :</seperator>
+			<label>#Anime2.Calendar.Description</label>
+			<textalign>center</textalign>
+		</control>
+
+		<control>
+			<type>fadelabel</type>
+			<label>#Anime2.Calendar.AirDate</label>
+			<posX>25</posX>
+			<posY>560</posY>
+			<width>1230</width>
+			<font>font14</font>
+			<align>center</align>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(1401)</visible>
+		</control>
+
+
+		<control>
+			<type>textboxscrollup</type>
+			<label>#Anime2.Calendar.Genre</label>
+			<posX>25</posX>
+			<posY>625</posY>
+			<width>1230</width>
+			<height>28</height>
+			<font>font14</font>
+			<textalign>center</textalign>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(1401)</visible>
+		</control>
+
+
+
+		<!-- 		<control>
+			<description>Refresh</description>
+			<type>button</type>
+			<id>93</id>
+			<label>Update Calendar</label>
+			<width>300</width>
+			<height>60</height>
+			<posX>490</posX>
+			<posY>475</posY>
+			<textalign>center</textalign>
+			<textureFocus>bg_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<textXOff>0</textXOff>
+			<textYOff>2</textYOff>
+			<onleft>86</onleft>
+			<onright>82</onright>
+			<ondown>84</ondown>
+			<onup>93</onup>
+		</control> -->
+
+		<control>
+			<description>ANIDB Status</description>
+			<type>label</type>
+			<id>114</id>
+			<posX>190</posX>
+			<posY>40</posY>
+			<width>900</width>
+			<label>#Anime2.Calendar.Status</label>
+			<font>font12</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" time="50">WindowClose</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>902</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
+			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>	
+			<control>
+
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(50)</visible>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="fade" time="450" reversible="true">visible</animation>
+				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<posX>0</posX>
+				<posY>100</posY>
+				<visible>!control.hasfocus(50)</visible>
+				<layout>StackLayout</layout>
+
+				<control>
+					<description>Downloads</description>
+					<type>button</type>
+					<id>902</id>
+					<label>Downloads</label>
+					<onright>50</onright>
+					<onup>902</onup>
+					<ondown>902</ondown>
+				</control>
+			</control>
+		</control>
+		<import>common.time.xml</import>
+
+	</controls>
+</window>

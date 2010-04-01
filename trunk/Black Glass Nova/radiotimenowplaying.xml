@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>25652</id>
+	<defaultcontrol>155</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<define>#header.label:Radio Time</define>
+	<define>#usePlayFanart:Yes</define>
+	<define>#header.background:hover_radiotime.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.music.play.fanart.xml</import>
+		<import>common.time.xml</import>
+
+
+		<control>
+			<description>LEFT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-519</posX>
+			<posY>377</posY>
+			<width>1372</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+
+		<control>
+			<id>112</id>
+			<description>album art image</description>
+			<type>image</type>
+			<posX>33</posX>
+			<posY>437</posY>
+			<width>273</width>
+			<height>224</height>
+			<texture>#RadioTime.Play.Image</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>25</posX>
+			<posY>430</posY>
+			<width>290</width>
+			<height>239</height>
+			<texture>PictureCase.png</texture>
+		</control>
+
+
+
+		<control>
+			<id>0</id>
+			<description>Station label</description>
+			<type>fadelabel</type>
+			<posX>332</posX>
+			<posY>420</posY>
+			<width>470</width>
+			<font>font24</font>
+			<label>#RadioTime.Play.Station</label>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>317</posX>
+			<posY>420</posY>
+			<width>502</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<id>0</id>
+			<description>Slogan label</description>
+			<type>fadelabel</type>
+			<posX>332</posX>
+			<posY>480</posY>
+			<width>470</width>
+			<font>font16</font>
+			<textcolor>90ffffff</textcolor>
+			<label>#RadioTime.Play.Slogan</label>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>317</posX>
+			<posY>463</posY>
+			<width>502</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>player.hasmedia</visible>
+		</control> 
+		<control>
+			<id>0</id>
+			<description>Description label</description>
+			<type>fadelabel</type>
+			<posX>332</posX>
+			<posY>520</posY>
+			<width>470</width>
+			<font>font18</font>
+			<label>#RadioTime.Play.Description</label>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>317</posX>
+			<posY>505</posY>
+			<width>502</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>player.hasmedia</visible>
+		</control>	
+		<control>
+			<type>imagelist</type>
+			<id>1337</id>
+			<posX>332</posX>
+			<posY>568</posY>
+			<width>177</width>
+			<height>40</height>
+			<textureWidth>22</textureWidth>
+			<textureHeight>22</textureHeight>
+			<subitems>
+				<subitem>UserRatingStarOff.png</subitem>
+				<subitem>stargood.png</subitem>
+			</subitems>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<imagesToDraw>5</imagesToDraw>
+			<percentage>#RadioTime.Selected.Reliability</percentage>
+			<visible>player.hasmedia</visible>
+		</control>
+
+
+
+		<control>
+			<id>0</id>
+			<description>Location label</description>
+			<type>fadelabel</type>
+			<posX>460</posX>
+			<posY>567</posY>
+			<width>345</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<label>#RadioTime.Play.Location</label>
+		</control>
+		<!-- <control>
+			<id>0</id>
+			<description>Language label</description>
+			<type>fadelabel</type>
+			<posX>805</posX>
+			<posY>567</posY>
+			<width>150</width>
+			<font>font14</font>
+			<align>right</align>
+			<textcolor>60ffffff</textcolor>
+			<label>#RadioTime.Play.Language</label>
+		</control> -->
+
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>317</posX>
+			<posY>548</posY>
+			<width>502</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>player.hasmedia</visible>
+
+		</control> 
+
+		<control>
+			<id>0</id>
+			<description>Artist label</description>
+			<type>fadelabel</type>
+			<posX>332</posX>
+			<posY>608</posY>
+			<width>600</width>
+			<font>font18</font>
+			<textcolor>ffffffff</textcolor>
+			<label>#Play.Current.Artist</label>
+		</control>
+		<control>
+			<id>0</id>
+			<description>Title label</description>
+			<type>fadelabel</type>
+			<posX>332</posX>
+			<posY>645</posY>
+			<width>600</width>
+			<font>font16</font>
+			<textcolor>90ffffff</textcolor>
+			<label>#Play.Current.Title</label>
+		</control>
+
+
+		
+
+		
+		<!-- RIGHT PANEL -->
+
+		<control>
+			<description>RIGHT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>824</posX>
+			<posY>377</posY>
+			<width>1372</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+			<animation effect="fade" time="250">Visible</animation>
+		</control>
+		<control>
+			<id>29</id>
+			<description>Genres</description>
+			<type>fadelabel</type>
+			<posX>5720</posX>
+			<posY>94</posY>
+			<width>530</width>
+			<label>#RadioTime.Translation.Genres.Label</label>
+			<font>font22</font>
+		</control>
+		<control>
+			<id>28</id>
+			<description>similar stations</description>
+			<type>fadelabel</type>
+			<posX>865</posX>
+			<posY>426</posY>
+			<width>395</width>
+			<label>#RadioTime.Translation.SimilarStations.Label</label>
+			<font>font18</font>
+		</control>
+	<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>850</posX>
+			<posY>420</posY>
+			<width>430</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control> 
+		
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<type>listcontrol</type>
+				<description>list of best album tracks</description>
+				<id>166</id>
+				<onright>166</onright>
+				<onleft>166</onleft>
+				<onup>155</onup>
+				<ondown>155</ondown>
+				<posX>5700</posX>
+				<posY>145</posY>
+				<width>580</width>
+				<height>240</height>
+				<textYOff>8</textYOff>
+				<textXOff>-40</textXOff>
+				<IconXOff>1</IconXOff>
+				<spinColor>-</spinColor>
+				<image>-</image>
+				<textureUp>-</textureUp>
+				<textureDown>-</textureDown>
+				<textureUpFocus>-</textureUpFocus>
+				<textureDownFocus>-</textureDownFocus>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<type>listcontrol</type>
+				<description>list of best tag tracks</description>
+				<id>155</id>
+				<onright>155</onright>
+				<onleft>155</onleft>
+				<onup>166</onup>
+				<ondown>166</ondown>
+				<posX>850</posX>
+				<posY>472</posY>
+				<width>470</width>
+				<height>240</height>
+				<textYOff>8</textYOff>
+				<textXOff>-40</textXOff>
+				<IconXOff>1</IconXOff>
+				<spinColor>-</spinColor>
+				<image>-</image>
+				<textureUp>-</textureUp>
+				<textureDown>-</textureDown>
+				<textureUpFocus>-</textureUpFocus>
+				<textureDownFocus>-</textureDownFocus>
+				<textureHeight>43</textureHeight>
+				<textXOff>-40</textXOff>
+				<textXOff2>310</textXOff2>
+				<textYOff2>9</textYOff2>
+				<textXOff3>310</textXOff3>
+				<textYOff3>9</textYOff3>
+				<font>font12</font>	
+				<font2>font12</font2>	
+				<font3>font12</font3>	
+				<textYOff>9</textYOff>
+			</control>
+		</control>
+
+		<control>
+			<type>fadelabel</type>
+			<posX>531</posX>
+			<posY>35</posY>
+			<width>711</width>
+		</control>
+		
+		
+		<!-- PROGRESS -->
+
+		<control>
+			<description>Progress background</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-10</posX>
+			<posY>685</posY>
+			<width>1300</width>
+			<height>36</height>
+			<texture>black.png</texture>
+			<visible>player.hasmedia</visible>
+		</control>
+		<control>
+			<id>117</id>
+			<description>Progress background</description>
+			<type>image</type>
+			<posX>-10</posX>
+			<posY>684</posY>
+			<width>1300</width>
+			<height>36</height>
+			<texture>osd_progress_background.png</texture>
+			<visible>player.hasmedia</visible>
+		</control>
+		<control>
+			<id>118</id>
+			<description>track progress</description>
+			<type>progress</type>
+			<posX>-10</posX>
+			<posY>1684</posY>
+			<width>1300</width>
+			<height>36</height>
+			<visible>player.hasmedia</visible>
+			<label>#percentage</label>
+		</control>
+		<control>
+			<description>pause image</description>
+			<id>0</id>
+			<type>image</type>
+			<posX>565</posX>
+			<posY>685</posY>
+			<width>149</width>
+			<height>35</height>
+			<visible>player.paused</visible>
+			<texture>video_paused.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<description>track progress label</description>
+			<type>label</type>
+			<posX>30</posX>
+			<posY>687</posY>
+			<label>#currentplaytime</label>
+			<align>left</align>
+			<font>font16</font>
+			<textcolor>white</textcolor>
+			<visible>player.hasmedia</visible>
+		</control>
+		<control>
+			<id>0</id>
+			<description>track duration label</description>
+			<type>label</type>
+			<posX>1270</posX>
+			<posY>687</posY>
+			<align>right</align>
+			<font>font16</font>
+			<textcolor>white</textcolor>
+			<visible>player.hasmedia</visible>
+			<label>#duration</label>
+		</control>
+	</controls>
+</window>

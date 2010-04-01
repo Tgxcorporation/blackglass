@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>510</id>
+	<defaultcontrol>11</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<define>#header.label:Global Search</define>
+	<define>#useSelectedFanart:Yes</define>
+	<define>#header.background:hover_search music.png</define>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.music.fanart.xml</import>
+		<import>common.time.xml</import>
+
+<control>
+			<description>Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-100</posX>
+			<posY>377</posY>
+			<width>1572</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		
+
+		
+
+
+		<!-- 	<control>
+			<type>label</type>
+			<id>31</id>
+			<posX>908</posX>
+			<posY>312</posY>
+			<label>Rating</label>
+			<textcolor>90ffffff</textcolor>
+			<font>font12</font>
+		</control> -->
+
+
+
+
+
+		<control>
+			<type>image</type>
+			<description>album art image</description>
+			<id>7</id>
+			<posX>60</posX>
+			<posY>428</posY>
+			<width>274</width>
+			<height>274</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<texture>-</texture>
+		</control>
+		<control>
+			<description>Cd Case</description>
+			<id>0</id>
+			<type>image</type>
+			<posX>25</posX>
+			<posY>420</posY>
+			<width>315</width>
+			<height>287</height>
+			<texture>CDCase.png</texture>
+		</control>
+		
+		
+		
+		
+		<control>
+			<description>Rating Value</description>
+			<type>imagelist</type>
+			<id>1337</id>
+			<posX>1000</posX>
+			<posY>431</posY>
+			<width>115</width>
+			<height>13</height>
+			<textureWidth>24</textureWidth>
+			<textureHeight>24</textureHeight>
+			<subitems>
+				<subitem>UserRatingStarOff.png</subitem>
+				<subitem>stargood.png</subitem>
+			</subitems>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<imagesToDraw>10</imagesToDraw>
+			<percentage>#Play.Current.Rating</percentage>
+		</control>	
+
+		
+		<control>
+			<type>label</type>
+			<id>27</id>
+			<posX>3908</posX>
+			<posY>250</posY>
+			<label>Songname</label>
+			<textcolor>90ffffff</textcolor>
+			<font>font12</font>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>3</id>
+			<posX>360</posX>
+			<posY>427</posY>
+			<width>900</width>
+			<label>#songname</label>
+			<textcolor>ffffffff</textcolor>
+			<font>font18</font>
+		</control>
+		
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>340</posX>
+			<posY>420</posY>
+			<width>940</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>25</id>
+			<posX>3360</posX>
+			<posY>420</posY>
+			<width>900</width>
+			<label>Artist</label>
+			<font>font22</font>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>360</posX>
+			<posY>480</posY>
+			<width>900</width>
+			<label>#artist</label>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>340</posX>
+			<posY>463</posY>
+			<width>940</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control> 
+		<control>
+			<type>label</type>
+			<id>26</id>
+			<posX>3908</posX>
+			<posY>200</posY>
+			<label>Album</label>
+			<textcolor>90ffffff</textcolor>
+			<font>font12</font>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>2</id>
+			<posX>360</posX>
+			<posY>522</posY>
+			<width>900</width>
+			<label>#album</label>
+			<textcolor>ffffffff</textcolor>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>340</posX>
+			<posY>505</posY>
+			<width>940</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<id>0</id>
+			<type>label</type>
+			<posX>3908</posX>
+			<posY>450</posY>
+			<label>Duration</label>
+			<textcolor>90ffffff</textcolor>
+			<font>font12</font>
+		</control>
+
+
+		<control>
+			<type>fadelabel</type>
+			<id>9</id>
+			<posX>360</posX>
+			<posY>565</posY>
+			<label>#duration</label>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		
+		<control>
+			<type>label</type>
+			<id>28</id>
+			<posX>3908</posX>
+			<posY>300</posY>
+			<label>Genre</label>
+			<textcolor>90ffffff</textcolor>
+			<font>font12</font>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>4</id>
+			<posX>660</posX>
+			<posY>565</posY>
+			<label>#genre</label>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<type>label</type>
+			<id>29</id>
+			<posX>3908</posX>
+			<posY>350</posY>
+			<label>Year</label>
+			<textcolor>90ffffff</textcolor>
+			<font>font12</font>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>5</id>
+			<posX>1050</posX>
+			<posY>565</posY>
+			<label>#year</label>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>340</posX>
+			<posY>548</posY>
+			<width>940</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control> 
+		<control>
+			<type>label</type>
+			<id>30</id>
+			<posX>3360</posX>
+			<posY>400</posY>
+			<label>Filename</label>
+			<textcolor>90ffffff</textcolor>
+			<font>font12</font>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>6</id>
+			<posX>360</posX>
+			<posY>608</posY>
+			<label>#filename</label>
+			<textcolor>ffffffff</textcolor>
+			<font>font14</font>
+			<width>340</width>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>340</posX>
+			<posY>593</posY>
+			<width>940</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control> 
+		<control>
+			<type>label</type>
+			<id>35</id>
+			<posX>360</posX>
+			<posY>655</posY>
+			<label>Playcount</label>
+			<textcolor>90ffffff</textcolor>
+			<font>font12</font>
+
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>8</id>
+			<posX>360</posX>
+			<posY>680</posY>
+			<label>#tp</label>
+			<textcolor>ffffffff</textcolor>
+			<font>font12</font>
+		</control>
+		<control>
+			<type>label</type>
+			<id>37</id>
+			<posX>800</posX>
+			<posY>655</posY>
+			<label>Last played</label>
+			<textcolor>90ffffff</textcolor>
+			<font>font12</font>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>10</id>
+			<posX>800</posX>
+			<posY>680</posY>
+			<label>#last_played</label>
+			<textcolor>ffffffff</textcolor>
+			<font>font12</font>
+		</control>
+		
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" delay="250" time="250">WindowOpen</animation>
+			<animation effect="fade" time="0">WindowClose</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>11</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
+			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">WindowOpen</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>				
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(99)</visible>
+			</control>
+			<control>
+				<id>1</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout</layout>
+				<visible>!control.hasfocus(99)</visible>
+				<animation effect="fade" time="450" reversible="true">visible</animation>
+				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<posX>0</posX>
+				<posY>100</posY>
+
+				<control>
+					<type>button</type>
+					<description>Play now</description>
+					<id>11</id>
+					<onup>12</onup>
+					<ondown>15</ondown>
+					<label>4552</label>
+					<onright>50</onright>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Add to favorites</description>
+					<id>15</id>
+					<onup>11</onup>
+					<ondown>14</ondown>
+					<label>930</label>
+					<onright>50</onright>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Add album to playlist</description>
+					<id>14</id>
+					<onup>15</onup>
+					<ondown>13</ondown>
+					<label>33041</label>
+					<onright>50</onright>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Add to playlist</description>
+					<id>13</id>
+					<onup>14</onup>
+					<ondown>12</ondown>
+					<label>926</label>
+					<onright>50</onright>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Play next</description>
+					<id>12</id>
+					<onup>13</onup>
+					<ondown>11</ondown>
+					<label>4551</label>
+					<onright>50</onright>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>480</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>11</onright>
+			<onleft>11</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+	</controls>
+</window>
