@@ -4,11 +4,140 @@
 	<defaultcontrol>2</defaultcontrol>
 	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
 	<define>#header.label:724</define>
+	<define>#header.background:hover_my radio.png</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
+		<import>common.facade.background.basic.xml</import>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<id>0</id>
+			<posX>455</posX>
+			<posY>116</posY>
+			<width>778</width>
+			<height>583</height>
+			<mpe>
+				<layout>Grid</layout>
+				<spring>no</spring>
+				<spacing>0</spacing>
+				<padding>
+					<top>0</top>
+					<right>0</right>
+					<bottom>0</bottom>
+					<left>0</left>
+				</padding>
+			</mpe>
+			<control>
+				<description>search results listcontrol</description>
+				<type>listcontrol</type>
+				<id>10</id>
+				<onleft>2</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<posX>640</posX>
+				<width>640</width>
+				<posY>430</posY>
+				<height>300</height>
+				<textureHeight>35</textureHeight>
+				<itemWidth>40</itemWidth>
+				<itemHeight>30</itemHeight>
+				<IconXOff>10</IconXOff>
+				<IconYOff>2</IconYOff>
+				<textXOff2>630</textXOff2>
+				<textYOff2>2</textYOff2>
+				<textXOff3>630</textXOff3>
+				<textYOff3>2</textYOff3>
+				<font>font14</font>	
+				<font2>font14</font2>	
+				<font3>font14</font3>	
+				<textYOff>2</textYOff>
+				<spinWidth>30</spinWidth>
+				<spinHeight>30</spinHeight>
+				<spinPosX>1210</spinPosX>
+				<spinPosY>685</spinPosY>
+				<PinIconXOff>627</PinIconXOff> 
+				<PinIconYOff>4</PinIconYOff>
+			</control>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>13</id>
+			<posX>30</posX>
+			<posY>420</posY>
+			<width>565</width>
+			<font>font20</font>
+			<label>#Radio.Search.Title</label>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>430</posY>
+			<width>609</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Current program time</description>
+			<id>14</id>
+			<posX>30</posX>
+			<posY>468</posY>
+			<width>565</width>
+			<textcolor>90ffffff</textcolor>
+			<label>#Radio.Search.Time</label>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>465</posY>
+			<width>609</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>label</type>
+			<description>genre</description>
+			<id>17</id>
+			<posX>30</posX>
+			<posY>503</posY>
+			<width>565</width>
+			<label>#Radio.Search.Genre</label>
+			<textcolor>ffffffff</textcolor>
+		</control> 
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>500</posY>
+			<width>609</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Description1</description>
+			<id>15</id>
+			<posX>30</posX>
+			<posY>538</posY>
+			<width>565</width>
+			<height>161</height>
+			<label>#Radio.Search.Description</label>
+			<font>font16</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<seperator>: : :</seperator>
+		</control>
+
+
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -105,101 +234,6 @@
 					<label>620</label>
 				</control>
 			</control>
-
-		</control>
-		<import>common.facade.background.xml</import>
-		<control>
-			<type>group</type>
-			<description>group element</description>
-			<id>0</id>
-			<posX>455</posX>
-			<posY>116</posY>
-			<width>778</width>
-			<height>583</height>
-			<mpe>
-				<layout>Grid</layout>
-				<spring>no</spring>
-				<spacing>0</spacing>
-				<padding>
-					<top>0</top>
-					<right>0</right>
-					<bottom>0</bottom>
-					<left>0</left>
-				</padding>
-			</mpe>
-			<control>
-				<description>search results listcontrol</description>
-				<type>listcontrol</type>
-				<id>10</id>
-				<onleft>2</onleft>
-				<onright>2</onright>
-				<onup>2</onup>
-				<ondown>2</ondown>
-				<textXOff2>746</textXOff2>
-				<textYOff2>65</textYOff2>
-				<textYOff3>65</textYOff3>
-				<textXOff2>746</textXOff2>
-				<textXOff3>140</textXOff3>
-				<font>font20</font>
-				<PinIconXOff>776</PinIconXOff> 
-				<PinIconYOff>39</PinIconYOff>
-				<itemWidth>120</itemWidth>
-				<itemHeight>90</itemHeight>
-				<textureHeight>106</textureHeight>
-				<textureFocus>bg_facade2_line_focus.png</textureFocus>
-				<textureNoFocus>bg_facade2_line_nofocus.png</textureNoFocus>
-				<keepaspectratio>yes</keepaspectratio>
-			</control>
-			<control>
-				<type>fadelabel</type>
-				<description>Current program title</description>
-				<id>13</id>
-				<posX>30</posX>
-				<posY>100</posY>
-				<width>380</width>
-				<font>font20</font>
-				<label>#Radio.Search.Title</label>
-				<visible>control.hasfocus(10)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<type>label</type>
-				<description>Current program time</description>
-				<id>14</id>
-				<posX>30</posX>
-				<posY>140</posY>
-				<label>#Radio.Search.Time</label>
-				<textcolor>90FFFFFF</textcolor>
-				<visible>control.hasfocus(10)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<type>textboxscrollup</type>
-				<description>Description1</description>
-				<id>15</id>
-				<posX>30</posX>
-				<posY>215</posY>
-				<width>370</width>
-				<height>330</height>
-				<label>#Radio.Search.Description</label>
-				<font>font16</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<visible>control.hasfocus(10)</visible>
-				<seperator>: : :</seperator>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<type>label</type>
-				<description>genre</description>
-				<id>17</id>
-				<posX>30</posX>
-				<posY>175</posY>
-				<width>370</width>
-				<label>#Radio.Search.Genre</label>
-				<textcolor>ffffff</textcolor>
-				<visible>control.hasfocus(10)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control> 
 		</control>
 	</controls>
 </window>
