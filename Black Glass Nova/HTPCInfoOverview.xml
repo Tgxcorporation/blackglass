@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+
+		<!-- *** HTPC Machine Info *** -->
+		<control>
+			<description>Machine</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>450</posX>
+			<posY>25</posY>
+			<width>32</width>
+			<height>32</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>HTPCInfo/htpcinfo_computer.png</texture>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Machine</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>30</posY>
+			<label>Machine</label>
+			<font>font14</font>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Machine Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>55</posY>
+			<label>Machine Name:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Machine Name Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>55</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.MachineName</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>Model</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>75</posY>
+			<label>Model:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Model Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>75</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Model (#HTPCInfo.MotherboardManufacturer), #HTPCInfo.SystemType</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>BIOS</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>95</posY>
+			<label>BIOS:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>BIOS Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>95</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.BIOSManufacturer, #HTPCInfo.BIOSDescription</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>Processor</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>115</posY>
+			<label>Processor:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Processor Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>115</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.ProcessorCount Processor(s) (#HTPCInfo.ProcessorManufacturer), #HTPCInfo.ProcessorDescription</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>User Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>135</posY>
+			<label>User Name:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>User Name Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>135</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.UserName (#HTPCInfo.UserDomainName)</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+
+		<!-- *** OS Information *** -->
+		<control>
+			<description>OS</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>450</posX>
+			<posY>172</posY>
+			<width>32</width>
+			<height>32</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>HTPCInfo/#HTPCInfo.OSVersionImage</texture>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>OS</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>175</posY>
+			<label>Operating System</label>
+			<font>font14</font>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>OS Version</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>200</posY>
+			<label>Version:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>OS Version Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>200</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.OSDescription (#HTPCInfo.OSVersionName)</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+
+		<!-- *** System Information *** -->
+		<control>
+			<description>OS</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>450</posX>
+			<posY>238</posY>
+			<width>32</width>
+			<height>32</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>HTPCInfo/htpcinfo_system.png</texture>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>System</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>240</posY>
+			<label>System Information</label>
+			<font>font14</font>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Uptime</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>265</posY>
+			<label>Uptime:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Uptime Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>265</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Uptime</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>CPU Usage</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>285</posY>
+			<label>CPU Usage:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>CPU Usage Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>285</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.ProcessorUsage%</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>Memory Usage</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>305</posY>
+			<label>Memory Usage:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Memory Usage Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>305</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.MemoryAvailable / #HTPCInfo.MemoryPhysical (#HTPCInfo.PagefileUsed Pagefile Usage)</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>Disk Usage</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>325</posY>
+			<label>Disk Usage:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Disk Usage Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>325</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Drive1Name #HTPCInfo.Drive1Size - #HTPCInfo.Drive1PercentUsedSpace%  /  #HTPCInfo.Drive2Name #HTPCInfo.Drive2Size - #HTPCInfo.Drive2PercentUsedSpace%</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>Disk Usage Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>345</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Drive3Name #HTPCInfo.Drive3Size - #HTPCInfo.Drive3PercentUsedSpace%  /  #HTPCInfo.Drive4Name #HTPCInfo.Drive4Size - #HTPCInfo.Drive4PercentUsedSpace%</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>Disk Usage Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>365</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.DiskRead read / #HTPCInfo.DiskWrite write</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+
+		<!-- *** Sensor Informations *** -->
+		<control>
+			<description>Sensor</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>450</posX>
+			<posY>402</posY>
+			<width>32</width>
+			<height>32</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>HTPCInfo/htpcinfo_sensor.png</texture>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Sensor</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>405</posY>
+			<label>Sensor Informations</label>
+			<font>font14</font>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Temperature Sensors</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>430</posY>
+			<label>Temperature:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Temperature Sensors Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>430</posY>
+			<font>font12</font>
+			<!-- <label>#HTPCInfo.SensorTemperatureSystem (Mainboard), #HTPCInfo.SensorTemperatureCPU (CPU), #HTPCInfo.SensorTemperatureCore0 (Core 0), #HTPCInfo.SensorTemperatureCore1 (Core 1), #HTPCInfo.SensorTemperatureAUX (AUX)</label> -->
+			<label>#HTPCInfo.SensorTemperature0, #HTPCInfo.SensorTemperature1, #HTPCInfo.SensorTemperature2, #HTPCInfo.SensorTemperature3, #HTPCInfo.SensorTemperature4, #HTPCInfo.SensorTemperature5</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>Fan Sensors</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>450</posY>
+			<label>Fan:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Fan Sensors Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>450</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.SensorFan0, #HTPCInfo.SensorFan1, #HTPCInfo.SensorFan2</label>
+			<!-- <label>#HTPCInfo.SensorFanChassis (Chassis), #HTPCInfo.SensorFanCPU0 (CPU), #HTPCInfo.SensorFanAUX0 (AUX)</label> -->
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>Voltage Sensors</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>470</posY>
+			<label>Voltage:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Voltage Sensors Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>470</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.SensorVoltage0, #HTPCInfo.SensorVoltage1, #HTPCInfo.SensorVoltage2</label>
+			<!-- <label>#HTPCInfo.SensorVoltageMainboard (Mainboard), #HTPCInfo.SensorVoltageCPU (CPU), #HTPCInfo.SensorVoltageAVcc (AVcc +3,3V)</label> -->
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+
+		<!-- *** Network Information *** -->
+		<control>
+			<description>Network</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>450</posX>
+			<posY>506</posY>
+			<width>32</width>
+			<height>32</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>HTPCInfo/htpcinfo_networkcard.png</texture>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Network</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>510</posY>
+			<label>Network</label>
+			<font>font14</font>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Network</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>535</posY>
+			<label>Domain/Workgroup:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Network Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>535</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.NetworkWorkgroup, Server Mode #HTPCInfo.NetworkServerModeIsEnabled</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>Internal/External IP</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>555</posY>
+			<label>Internal/External IP:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Internal/External Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>555</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.NetworkIPv4Address1 / #HTPCInfo.NetworkExternalIPAddress (IPv6 support #HTPCInfo.NetworkIPv6Enabled)</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>Network Traffic</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>575</posY>
+			<label>Traffic:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>Network Traffic Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>575</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.NetworkSent sent / #HTPCInfo.NetworkReceived received</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+
+		<!-- *** TV Card Information *** -->
+		<control>
+			<description>TV</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>450</posX>
+			<posY>612</posY>
+			<width>32</width>
+			<height>32</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>HTPCInfo/htpcinfo_tvcard.png</texture>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>TV</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>615</posY>
+			<label>TV Card</label>
+			<font>font14</font>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>TVCard</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>640</posY>
+			<label>Type:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>TVCard Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>640</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.TVDevice1Name (#HTPCInfo.TVDevice1Type), #HTPCInfo.TVDevice1Enabled on #HTPCInfo.TVServerIPAddress</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>TVCard Signal Quality</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>660</posY>
+			<label>Signal Quality:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>TVCard Signal Quality Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>660</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.TVDevice1SignalQuality</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+		<control>
+			<description>TVCard Signal Level</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>680</posY>
+			<label>Signal Level:</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(50)</visible>
+		</control>
+		<control>
+			<description>TVCard Signal Level Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>650</posX>
+			<posY>680</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.TVDevice1SignalLevel</label>
+			<visible>control.isvisible(50)</visible>
+			<width>620</width>
+		</control>
+	</controls>
+</window>
