@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+
+		<!-- *** Graphic Devices *** -->
+		<control>
+			<description>Devices Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>450</posX>
+			<posY>30</posY>
+			<width>32</width>
+			<height>32</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>HTPCInfo/htpcinfo_device.png</texture>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Devices</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>30</posY>
+			<label>Devices</label>
+			<font>font14</font>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Graphic Device Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>55</posY>
+			<label>Graphic (#HTPCInfo.DisplayDeviceCount):</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Graphic Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>55</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.DisplayDevice1Description (Driver version #HTPCInfo.DisplayDevice1DriverVersion)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+
+		<!-- *** TV Devices *** -->
+		<control>
+			<description>TV Device Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>75</posY>
+			<label>TV (#HTPCInfo.TVDeviceCount):</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>TV device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>75</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.TVDevice1Name (#HTPCInfo.TVDevice1Type), #HTPCInfo.TVDevice1Enabled on TVServer #HTPCInfo.TVServerIPAddress</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>TV device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>95</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.TVDevice2Name (#HTPCInfo.TVDevice2Type), #HTPCInfo.TVDevice2Enabled</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>TV device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>115</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.TVDevice3Name (#HTPCInfo.TVDevice3Type), #HTPCInfo.TVDevice3Enabled</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+
+		<!-- *** Keyboard Devices *** -->
+		<control>
+			<description>Keyboard Device Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>135</posY>
+			<label>Keyboard (#HTPCInfo.KeyboardDeviceCount):</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Keyboard Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>135</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.KeyboardDevice1Name</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+
+		<!-- *** Pointing Devices *** -->
+		<control>
+			<description>Pointing Device Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>155</posY>
+			<label>Pointing (#HTPCInfo.PointingDeviceCount):</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Pointing Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>155</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.PointingDevice1Name (#HTPCInfo.PointingDevice1Manufacturer)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		
+		<!-- *** Sound Devices *** -->
+		<control>
+			<description>Sound Device Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>175</posY>
+			<label>Sound (#HTPCInfo.SoundDeviceCount):</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Sound Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>175</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.SoundDevice1Name (#HTPCInfo.SoundDevice1Manufacturer)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>Sound Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>195</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.SoundDevice2Name (#HTPCInfo.SoundDevice2Manufacturer)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		
+
+		<!-- *** Network Devices *** -->
+		<control>
+			<description>Network Device Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>215</posY>
+			<label>Network (#HTPCInfo.NetworkDeviceCount):</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Network Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>215</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.NetworkDevice1Description (#HTPCInfo.NetworkDevice1Manufacturer) #HTPCInfo.NetworkDevice1Type</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>Network Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>235</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.NetworkDevice2Description (#HTPCInfo.NetworkDevice2Manufacturer) #HTPCInfo.NetworkDevice2Type</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+
+		<!-- *** Drive Devices *** -->
+		<control>
+			<description>Drive Device Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>255</posY>
+			<label>Disk Drives (#HTPCInfo.DriveCount):</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Drive Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>255</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Drive1Model, Interface #HTPCInfo.Drive1InterfaceType, #HTPCInfo.Drive1PartitionCount partition(s)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>Drive Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>275</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Drive2Model, Interface #HTPCInfo.Drive2InterfaceType, #HTPCInfo.Drive2PartitionCount partition(s)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>Drive Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>295</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Drive3Model, Interface #HTPCInfo.Drive3InterfaceType, #HTPCInfo.Drive3PartitionCount partition(s)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>Drive Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>315</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Drive4Model, Interface #HTPCInfo.Drive4InterfaceType, #HTPCInfo.Drive4PartitionCount partition(s)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+
+		<!-- *** Optical Drive *** -->
+		<control>
+			<description>Optical Drive Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>335</posY>
+			<label>Optical Drives (#HTPCInfo.OpticalDriveCount):</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Optical Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>335</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.OpticalDrive1Description (#HTPCInfo.OpticalDrive1Type)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>Optical Device Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>355</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.OpticalDrive2Description (#HTPCInfo.OpticalDrive2Type)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+
+		<!-- *** Clients *** -->
+		<control>
+			<description>Clients Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>450</posX>
+			<posY>395</posY>
+			<width>32</width>
+			<height>32</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>HTPCInfo/htpcinfo_client.png</texture>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Clients</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>395</posY>
+			<label>Clients</label>
+			<font>font14</font>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Client Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>420</posY>
+			<label>Clients (#HTPCInfo.TVClientCount):</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Client Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>420</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.TVClient1Name (#HTPCInfo.TVClient1IPAddress), #HTPCInfo.TVClient1Stream (active #HTPCInfo.TVClient1Active)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>Client Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>440</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.TVClient2Name (#HTPCInfo.TVClient2IPAddress), #HTPCInfo.TVClient2Stream (active #HTPCInfo.TVClient2Active)</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+
+		<!-- *** Codecs *** -->
+		<control>
+			<description>Codecs Image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>450</posX>
+			<posY>480</posY>
+			<width>32</width>
+			<height>32</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>HTPCInfo/htpcinfo_codec.png</texture>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Codecs</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>480</posY>
+			<label>Codecs</label>
+			<font>font14</font>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Codec Name</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>490</posX>
+			<posY>505</posY>
+			<label>Codecs (#HTPCInfo.CodecCount):</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Codec Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>505</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Codec1Description (#HTPCInfo.Codec1Manufacturer) Version #HTPCInfo.Codec1Version</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>Codec Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>525</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Codec2Description (#HTPCInfo.Codec2Manufacturer) Version #HTPCInfo.Codec2Version</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>Codec Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>545</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Codec3Description (#HTPCInfo.Codec3Manufacturer) Version #HTPCInfo.Codec3Version</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+		<control>
+			<description>Codec Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>620</posX>
+			<posY>565</posY>
+			<font>font12</font>
+			<label>#HTPCInfo.Codec4Description (#HTPCInfo.Codec4Manufacturer) Version #HTPCInfo.Codec4Version</label>
+			<visible>control.isvisible(51)</visible>
+			<width>650</width>
+		</control>
+
+	</controls>
+</window>
