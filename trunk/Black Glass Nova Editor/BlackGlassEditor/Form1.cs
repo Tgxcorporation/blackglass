@@ -27,18 +27,18 @@ namespace BlackGlassEditor
             InitializeComponent();
 
             plugins.Add(new MPplugin(6001, "Anime", "hover_my anime"));
-            //  plugins.Add(new MPplugin(760, "Burner"));
+            plugins.Add(new MPplugin(760, "Burner", "hover_my burner"));
             //  plugins.Add(new MPplugin(1987, "Clipta Video Search"));
             //   plugins.Add(new MPplugin(63453335, "EarthTV"));
-            //   plugins.Add(new MPplugin(330099, "Email Manager"));
+            plugins.Add(new MPplugin(330099, "Email Manager", "hover_email"));
             plugins.Add(new MPplugin(2497, "Emulators", "hover_myEmulators"));
             // plugins.Add(new MPplugin(800, "Extensions"));
-            //   plugins.Add(new MPplugin(1666, "FANatic Monitor"));
+            plugins.Add(new MPplugin(1666, "FANatic Monitor", "hover_FANatic Monitor"));
             plugins.Add(new MPplugin(7986, "Films", "hover_Films"));
-            // plugins.Add(new MPplugin(557311, "File Explorer"));
+            plugins.Add(new MPplugin(557311, "File Explorer", "hover_file explorer"));
             //  plugins.Add(new MPplugin(464554871, "FritzManager"));
             plugins.Add(new MPplugin(30885, "Global Search", "hover_search music"));
-            //   plugins.Add(new MPplugin(7972, "HTPCInfo"));
+            plugins.Add(new MPplugin(7972, "HTPCInfo", "hover_htpcinfo"));
             plugins.Add(new MPplugin(16001, "Infoservice RSS", "hover_infoservice"));
             plugins.Add(new MPplugin(16003, "Infoservice Twitter", "hover_twitter"));
             // plugins.Add(new MPplugin(6912, "Justin.tv"));
@@ -46,7 +46,7 @@ namespace BlackGlassEditor
             plugins.Add(new MPplugin(90478, "Lyrics", "hover_my lyrics"));
             plugins.Add(new MPplugin(8765, "Media Slayer", "hover_mediaslayer"));
             plugins.Add(new MPplugin(96742, "Moving Pictures", "hover_moving pictures"));
-            //  plugins.Add(new MPplugin(3847, "MpNZB"));
+            plugins.Add(new MPplugin(3847, "MpNZB", "hover_mpnzb"));
             //plugins.Add(new MPplugin(0, "Multishortcut"));
             plugins.Add(new MPplugin(501, "Music", "hover_my music"));
             plugins.Add(new MPplugin(504, "Music Genres", "hover_my music"));
@@ -65,7 +65,7 @@ namespace BlackGlassEditor
             plugins.Add(new MPplugin(2345, "Shoutcast", "hover_shoutcast"));
             plugins.Add(new MPplugin(7111992, "Showtimes", "hover_showtimes"));
             // plugins.Add(new MPplugin(1911, "Skype"));
-            // plugins.Add(new MPplugin(7969, "Sleep Control"));
+            plugins.Add(new MPplugin(7969, "Sleep Control", "hover_sleepcontrol"));
             //plugins.Add(new MPplugin(45678, "Smart Playlists"));
             plugins.Add(new MPplugin(15634330, "Stream Radio", "hover_my streamradio"));
             plugins.Add(new MPplugin(7777, "Sudoku", "hover_mynumberplace"));
@@ -79,10 +79,10 @@ namespace BlackGlassEditor
             plugins.Add(new MPplugin(6, "Videos", "hover_my videos"));
             plugins.Add(new MPplugin(25, "Video Titles", "hover_my videos"));
             plugins.Add(new MPplugin(2959, "Video Editor", "hover_videoeditor"));
-            //plugins.Add(new MPplugin(7971, "Volume Control"));
+            plugins.Add(new MPplugin(7971, "Volume Control", "hover_volumecontrol"));
             plugins.Add(new MPplugin(2600, "Weather", "hover_my weather"));
             plugins.Add(new MPplugin(4711, "Wikipedia", "hover_wikipedia"));
-            //plugins.Add(new MPplugin(7978, "World Clock"));
+            plugins.Add(new MPplugin(7978, "World Clock", "hover_worldclock"));
             plugins.Add(new MPplugin(10234, "WorldMap", "hover_myworldmap"));
             plugins.Add(new MPplugin(29050, "Youtube.fm", "hover_youtubefm"));
 
