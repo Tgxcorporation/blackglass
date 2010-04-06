@@ -44,6 +44,7 @@
 		<control>
 			<id>101</id>
 			<type>button</type>
+			<onleft>2</onleft>
 			<onright>106</onright>
 			<ondown>102</ondown>
 			<posX>440</posX>
@@ -54,6 +55,7 @@
 		<control>
 			<id>102</id>
 			<type>button</type>
+			<onleft>2</onleft>
 			<onright>107</onright>
 			<onup>101</onup>
 			<ondown>103</ondown>
@@ -65,6 +67,7 @@
 		<control>
 			<id>103</id>
 			<type>button</type>
+			<onleft>2</onleft>
 			<onright>108</onright>
 			<onup>102</onup>
 			<ondown>104</ondown>
@@ -76,6 +79,7 @@
 		<control>
 			<id>104</id>
 			<type>button</type>
+			<onleft>2</onleft>
 			<onright>109</onright>
 			<onup>103</onup>
 			<ondown>105</ondown>
@@ -87,6 +91,7 @@
 		<control>
 			<id>105</id>
 			<type>button</type>
+			<onleft>2</onleft>
 			<onright>110</onright>
 			<onup>104</onup>
 			<ondown>106</ondown>
@@ -179,24 +184,7 @@
 
 		<!-- NOT USED -->
 
-		<control>
-			<id>2</id>
-			<type>button</type>
-			<onup>110</onup>
-			<ondown>3</ondown>
-			<posX>21005</posX>
-			<posY>589</posY>
-			<label>#RadioTime.Translation.Home.Label</label>
-		</control>
-		<control>
-			<id>3</id>
-			<type>button</type>
-			<onup>2</onup>
-			<ondown>101</ondown>
-			<posX>2005</posX>
-			<posY>652</posY>
-			<label>#RadioTime.Translation.Folders.Label</label>
-		</control>
+
 		<control>
 			<type>fadelabel</type>
 			<posX>2658</posX>
@@ -204,6 +192,94 @@
 			<width>485</width>
 			<align>CENTER</align>
 			<label>#RadioTime.Presets.Folder.Name</label>
+		</control>
+
+		<!-- HIDDEN MENU -->
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" time="50">WindowClose</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>50</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
+			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>![control.hasfocus(101)|control.hasfocus(102)|control.hasfocus(103)|control.hasfocus(104)|control.hasfocus(105)]</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="slide" time="250" start="-300,0" reversible="false">visible</animation>
+				<animation effect="slide" time="250" end="-300,0" reversible="false">hidden</animation>
+				<posX>0</posX>
+				<posY>100</posY>
+				<visible>![control.hasfocus(101)|control.hasfocus(102)|control.hasfocus(103)|control.hasfocus(104)|control.hasfocus(105)]</visible>
+				<layout>StackLayout</layout>
+				<control>
+					<id>2</id>
+					<type>button</type>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					<onright>101</onright>
+					<label>#RadioTime.Translation.Home.Label</label>
+				</control>
+				<control>
+					<id>3</id>
+					<type>button</type>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onright>101</onright>
+					<label>#RadioTime.Translation.Folders.Label</label>
+				</control>
+			</control>
 		</control>
 	</controls>
 </window>
