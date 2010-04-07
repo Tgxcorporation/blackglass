@@ -298,16 +298,15 @@
 
 
 		<control>
-			<id>500</id>
+			<id>46</id>
 			<type>image</type>
 			<posX>33</posX>
-			<posY>455</posY>
-			<!-- <posY>487</posY> -->
+			<posY>487</posY>
 			<width>264</width>
-			<heigh>197</heigh>
+			<height>197</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+			<texture>#selectedthumb</texture>
 			<visible>facadeview.list|facadeview.album</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
@@ -359,15 +358,63 @@
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
+			<type>label</type>
+			<description>Genre</description>
+			<id>42</id>
+			<posX>315</posX>
+			<posY>503</posY>
+			<width>560</width>
+			<font>font14</font>
+			<visible>[facadeview.list|facadeview.album]+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>305</posX>
+			<posY>500</posY>
+			<width>305</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>facadeview.list|facadeview.album|facadeview.playlist</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Year</description>
+			<id>41</id>
+			<posX>315</posX>
+			<posY>538</posY>
+			<width>560</width>
+			<font>font14</font>
+			 <label>#Year</label>
+			 <textcolor>90ffffff</textcolor>
+			<visible>[facadeview.list|facadeview.album]+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>305</posX>
+			<posY>535</posY>
+			<width>305</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>facadeview.list|facadeview.album|facadeview.playlist</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
 			<description>Description</description>
 			<type>textboxscrollup</type>
 			<id>40</id>
 			<posX>315</posX>
-			<posY>505</posY>
+			<posY>573</posY>
 			<width>280</width>
-			<height>205</height>
+			<height>137</height>
 			<colordiffuse>ffffffff</colordiffuse>
-			<font>font14</font>
+			<font>font13</font>
 			<textcolor>White</textcolor>
 			<visible>[facadeview.list|facadeview.album]</visible>
 			<seperator>: : :</seperator>
