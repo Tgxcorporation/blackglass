@@ -22,7 +22,7 @@
 				<type>listcontrol</type>
 				<id>50</id>
 				<scrollOffset>2</scrollOffset>
-				<onleft>502</onleft>
+				<onleft>505</onleft>
 				<textYOff>9</textYOff>
 				<textXOff>10</textXOff>
 				<textXOff2>475</textXOff2>
@@ -64,7 +64,7 @@
 			<width>360</width>
 			<font>font22</font>
 			<label>#selecteditem</label>
-			<wrapString> : : : </wrapString>
+
 		</control>
 		<control>
 			<description>Owner Label</description>
@@ -92,11 +92,6 @@
 		</control> 
 
 
-
-
-
-
-
 		<!-- *** HIDDEN MENU *** -->
 		<control>
 			<type>image</type>
@@ -112,7 +107,7 @@
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
-			<defaultcontrol>502</defaultcontrol>
+			<defaultcontrol>505</defaultcontrol>
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
@@ -136,7 +131,6 @@
 				<colorDiffuse>ffffffff</colorDiffuse>
 				<visible>!control.hasfocus(50)</visible>
 			</control>
-
 			<control>
 				<type>label</type>
 				<id>1</id>
@@ -166,41 +160,64 @@
 				<layout>StackLayout</layout>
 				<control>
 					<type>button</type>
-					<description>refresh button</description>
-					<id>502</id>
+					<description>full update button</description>
+					<id>505</id>
 					<onright>50</onright>
 					<onup>17</onup>          
-					<label>#OnlineVideos.Translation.Refresh.Label</label>
+					<ondown>504</ondown>
+					<label>#OnlineVideos.Translation.FullUpdate.Label</label>
 					<visible allowhiddenfocus="true">!Control.HasFocus(50)</visible>
-				</control>             
-				<control>
-					<type>selectbutton</type>          
-					<description>filter button</description>
-					<id>503</id>
-					<onright>50</onright>
-					<onup>502</onup>
-					<label>#OnlineVideos.Translation.Filter.Label</label>
-					<visible>!Control.HasFocus(50)</visible>
 				</control>         
 				<control>
 					<type>selectbutton</type>
 					<description>Order By</description>
 					<id>504</id>
 					<onright>50</onright>
-					<onup>503</onup>
-					<ondown>505</ondown>
+					<onup>505</onup>
+					<ondown>503</ondown>
 					<label>#OnlineVideos.Translation.SortOptions.Label</label>
 					<visible>!Control.HasFocus(50)</visible>
 				</control>   
 				<control>
-					<type>button</type>
-					<description>full update button</description>
-					<id>505</id>
+					<type>selectbutton</type>          
+					<description>filter button</description>
+					<id>503</id>
 					<onright>50</onright>
-					<onup>504</onup>          
-					<ondown>502</ondown>
-					<label>#OnlineVideos.Translation.FullUpdate.Label</label>
+					<onup>504</onup>
+					<ondown>506</ondown>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.State.Label</label>
+					<visible>!Control.HasFocus(50)</visible>
 				</control>         
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button for Creator</description>
+					<id>506</id>
+					<onright>50</onright>
+					<onup>503</onup>
+					<ondown>507</ondown>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Creator.Label</label>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>         
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button for Language</description>
+					<id>507</id>
+					<onright>50</onright>
+					<onup>506</onup>
+					<ondown>502</ondown>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Language.Label</label>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>         
+				<control>
+					<type>button</type>
+					<description>refresh button</description>
+					<id>502</id>
+					<onright>50</onright>
+					<onup>507</onup>          
+					<ondown>505</ondown>
+					<label>#OnlineVideos.Translation.Refresh.Label</label>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>             
 			</control>    
 		</control>    
 	</controls>
