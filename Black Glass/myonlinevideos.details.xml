@@ -72,7 +72,7 @@
 				<ondown>51</ondown>
 				<onright>51</onright>
 				<onleft>51</onleft>
-				<visible>no</visible>
+				<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 				<spinCanFocus>no</spinCanFocus>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
@@ -86,9 +86,9 @@
 			<posY>165</posY>
 			<width>200</width>
 			<height>282</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#OnlineVideos.movieposter</texture>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#OnlineVideos.Details.Poster</texture>
 			<keepaspectratio>no</keepaspectratio>
-			<visible>no</visible>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -100,7 +100,7 @@
 			<width>230</width>
 			<height>292</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-			<visible>no</visible>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -128,6 +128,20 @@
 			<visible>no</visible>
 			<textcolor>90ffffff</textcolor>
 		</control> -->
+		<control>
+			<description>Genre value</description>
+			<type>fadelabel</type>
+			<id>57</id>
+			<posX>780</posX>
+			<posY>170</posY>
+			<width>470</width>
+			<visible>no</visible>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
+			<label>#OnlineVideos.Details.Genres</label>
+			<font>font18</font>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
+		</control>
 
 		<control>
 			<Description>Date Value</Description>
@@ -135,9 +149,9 @@
 			<id>55</id>
 			<posX>780</posX>
 			<posY>220</posY>
-			<label>#OnlineVideos.Translation.DateOfRelease.Label #OnlineVideos.releasedate</label>
-			<visible>no</visible>
-			<textcolor>FFFFFFFF</textcolor>
+			<label>#OnlineVideos.Translation.DateOfRelease.Label: #OnlineVideos.Details.ReleaseDate</label>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
+			<textcolor>90FFFFFF</textcolor>
 			<font>font18</font>
 			<width>480</width>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -153,47 +167,34 @@
 			<visible>no</visible>
 			<textcolor>90ffffff</textcolor>
 		</control> -->
+
+
+
 		<control>
-			<description>Genre value</description>
-			<type>fadelabel</type>
-			<id>57</id>
-			<posX>780</posX>
-			<posY>170</posY>
-			<width>470</width>
-			<visible>no</visible>
-			<label>#OnlineVideos.genre</label>
-			<textcolor>90FFFFFF</textcolor>
-			<font>font18</font>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-
-
-		<!-- <control>
 			<Description>Director Value</Description>
 			<type>fadelabel</type>
-			<id>56</id>
+			<id>58</id>
 			<posX>780</posX>
-			<posY>325</posY>
-			<label>Directed by #OnlineVideos.director</label>
-			<textcolor>90FFFFFF</textcolor>
+			<posY>270</posY>
+			<label>#OnlineVideos.Translation.Directors.Label: #OnlineVideos.Details.Directors</label>
+			<textcolor>ffFFFFFF</textcolor>
 			<font>font18</font>
 			<width>480</width>
-			<visible>no</visible>
-		</control> -->
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
+		</control>
 		<control>
 			<Description>Actors value</Description>
 			<type>textboxscrollup</type>
 			<id>53</id>
 			<posX>780</posX>
-			<posY>270</posY>
+			<posY>320</posY>
 			<width>480</width>
-			<label>#OnlineVideos.cast</label>
-			<visible>no</visible>
+			<label>#OnlineVideos.Details.Actors #OnlineVideos.Details.Actors</label>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<font>font16</font>
 			<textcolor>90FFFFFF</textcolor>
 			<seperator>: : :</seperator>
-			<height>165</height>
+			<height>135</height>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
@@ -216,7 +217,7 @@
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-			<visible>no</visible>	
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
@@ -230,9 +231,9 @@
 			<width>750</width>
 			<height>190</height>
 			<font>font18</font>
-			<label>#OnlineVideos.trailerdesc</label>
+			<label>#OnlineVideos.Details.Synopsis</label>
 			<seperator>: : :</seperator>
-			<visible>no</visible>	  
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 	</controls>
