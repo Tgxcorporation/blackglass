@@ -28,13 +28,28 @@
 		</control>
 
 		<control>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>10</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<width>900</width>
+			<textcolor>60ffffff</textcolor>
+			<visible>control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
+		</control> 
+
+		<control>
 			<type>label</type>
 			<id>0</id>
 			<posX>910</posX>
-			<posY>419</posY>
+			<posY>421</posY>
 			<label>5906</label>
 			<width>350</width>
-			<font>font22</font>
+			<font>font20</font>
 			<align>left</align>
 			<textcolor>ffffffff</textcolor>
 			<visible>control.isvisible(24)</visible>
@@ -73,7 +88,7 @@
 				<ondown>51</ondown>
 				<onright>51</onright>
 				<onleft>51</onleft>
-				<visible>no</visible>
+				<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 				<spinCanFocus>yes</spinCanFocus>
 				<textYOff>1</textYOff>
 				<animation effect="fade" time="250">visiblechange</animation>
@@ -103,9 +118,9 @@
 			<posY>425</posY> 
 			<width>198</width> 
 			<height>280</height> 
-			<texture flipY="true" diffuse="Thumb_Mask.png">#OnlineVideos.movieposter</texture>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#OnlineVideos.Details.Poster</texture>
 			<keepaspectratio>no</keepaspectratio>
-			<visible>no</visible>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -117,7 +132,7 @@
 			<width>228</width>
 			<height>290</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-			<visible>no</visible>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -133,6 +148,7 @@
 			<textcolor>ffffffff</textcolor>
 			<visible>control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<type>image</type>
@@ -153,7 +169,7 @@
 			<posX>780</posX>
 			<posY>170</posY>
 			<label>172</label>
-			<visible>no</visible>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<textcolor>90ffffff</textcolor>
 		</control> -->
 
@@ -165,7 +181,7 @@
 			<posX>780</posX>
 			<posY>240</posY>
 			<label>174</label>
-			<visible>no</visible>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<textcolor>90ffffff</textcolor>
 		</control> -->
 		<control>
@@ -175,10 +191,11 @@
 			<posX>265</posX>
 			<posY>467</posY>
 			<width>570</width>
-			<visible>no</visible>
-			<label>#OnlineVideos.genre</label>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
+			<label>#OnlineVideos.Details.Genres</label>
 			<textcolor>90FFFFFF</textcolor>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<type>image</type>
@@ -198,25 +215,14 @@
 			<id>55</id>
 			<posX>265</posX>
 			<posY>502</posY>
-			<label>#OnlineVideos.Translation.DateOfRelease.Label #OnlineVideos.releasedate</label>
-			<visible>no</visible>
+			<label>#OnlineVideos.Translation.DateOfRelease.Label: #OnlineVideos.Details.ReleaseDate</label>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<textcolor>FFFFFFFF</textcolor>
 			<width>570</width>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
 		</control>
-		<!-- <control>
-			<Description>Director Value</Description>
-			<type>fadelabel</type>
-			<id>56</id>
-			<posX>780</posX>
-			<posY>325</posY>
-			<label>Directed by #OnlineVideos.director</label>
-			<textcolor>90FFFFFF</textcolor>
-			<font>font18</font>
-			<width>480</width>
-			<visible>no</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control> -->
+
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -236,11 +242,12 @@
 			<posX>265</posX>
 			<posY>537</posY>
 			<width>570</width>
-			<label>#OnlineVideos.cast</label>
-			<visible>no</visible>
+			<label>#OnlineVideos.Details.Actors</label>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<font>font16</font>
 			<textcolor>90FFFFFF</textcolor>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<type>image</type>
@@ -254,13 +261,39 @@
 			<visible>control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
+		<control>
+			<Description>Director value</Description>
+			<type>fadelabel</type>
+			<id>53</id>
+			<posX>265</posX>
+			<posY>572</posY>
+			<width>570</width>
+			<label>#OnlineVideos.Translation.Directors.Label: #OnlineVideos.Details.Directors</label>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
+			<font>font16</font>
+			<textcolor>ffFFFFFF</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>249</posX>
+			<posY>570</posY>
+			<width>600</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
 		<!-- 		<control>
 			<type>label</type>
 			<description>Plot txt</description>
 			<id>58</id>
 			<posX>780</posX>
 			<posY>380</posY>
-			<visible>no</visible>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<label>203</label>
 			<textcolor>90ffffff</textcolor>
 		</control> -->
@@ -271,13 +304,13 @@
 			<type>textboxscrollup</type>
 			<id>59</id>
 			<posX>265</posX>
-			<posY>572</posY>
+			<posY>609</posY>
 			<width>570</width>
-			<height>130</height>
+			<height>98</height>
 			<font>font16</font>
-			<label>#OnlineVideos.trailerdesc</label>
+			<label>#OnlineVideos.Details.Synopsis</label>
 			<seperator>: : :</seperator>
-			<visible>no</visible>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 	</controls>

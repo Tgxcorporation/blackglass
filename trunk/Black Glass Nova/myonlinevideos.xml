@@ -107,7 +107,19 @@
 			<visible>!control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-
+		<control>
+			<description>Filter</description>
+			<type>fadelabel</type>
+			<id>1</id>      
+			<posX>30</posX>
+			<posY>56</posY>
+			<width>750</width>
+			<label>#OnlineVideos.filter</label>
+			<font>font11</font>
+			<visible>!control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
+		</control>
 		<import>common.time.xml</import>
 		<import>myonlinevideos.details.xml</import>
 		<import>myonlinevideos.facade.xml</import>
@@ -161,6 +173,7 @@
 			<label>#selecteditem</label>
 			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<type>image</type>
@@ -185,6 +198,7 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<type>image</type>
@@ -331,7 +345,7 @@
 					<id>6</id>
 					<onright>50</onright>
 					<onup>5</onup>
-					<label>#OnlineVideos.Translation.MaxResults.Label</label>
+					<label>#OnlineVideos.Translation.SortOptions.Label</label>
 					<visible>!control.hasfocus(50)</visible>
 					<height>49</height>
 					<textYOff>7</textYOff>
