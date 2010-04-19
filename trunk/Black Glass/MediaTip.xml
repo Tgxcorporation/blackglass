@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>7980</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<define>#header.label:MediaTip</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>1</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>bg.jpg</texture>    
+		</control>
+		<import>common.time.xml</import>
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>418</width>
+			<height>720</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+		</control>
+
+		<control>
+			<type>label</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>35</posY>
+			<label>#header.label</label>
+			<font>font24</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control> 
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>0</posX>
+			<posY>47</posY>
+			<width>385</width>
+			<height>53</height>
+			<texture>bg_button_nofocus.png</texture>
+		</control>
+		<!-- *** Button *** -->
+
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<layout>StackLayout</layout>
+			<posX>0</posX>
+			<posY>100</posY>
+			<control>
+				<description>Refresh Overview</description>
+				<type>button</type>
+				<id>2</id>
+				<label>Refresh Overview</label>
+				<onup>5</onup>
+				<ondown>3</ondown>
+			</control>
+			<control>
+				<description>Music Button</description>
+				<type>button</type>
+				<id>3</id>
+				<onup>2</onup>
+				<ondown>4</ondown>
+			</control>
+			<control>
+				<description>Movie Button</description>
+				<type>button</type>
+				<id>4</id>
+				<onup>3</onup>
+				<ondown>5</ondown>
+			</control>
+			<control>
+				<description>Pictures Button</description>
+				<type>button</type>
+				<id>5</id>
+				<onup>4</onup>
+				<ondown>2</ondown>
+			</control>
+		</control>
+
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>458</posX>
+			<posY>48</posY>
+			<width>948</width>
+			<height>766</height>
+			<texture>bg_facade.png</texture>
+		</control>
+
+		<!-- *** Music Overview *** -->
+		<control>
+			<description>Music</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>510</posX>
+			<posY>100</posY>
+			<width>49</width>
+			<height>49</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>defaultAudio.png</texture>
+		</control>
+		<control>
+			<description>Music</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>95</posY>
+			<label>#MediaTip.MusicHeadline</label>
+			<font>font18</font>
+		</control>
+		<control>
+			<description>Music Directory Name/Size Label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>130</posY>
+			<label>Directory:</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Music Directory Name/Size Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>675</posX>
+			<posY>130</posY>
+			<font>font12</font>
+			<width>580</width>
+			<wrapString> : : : </wrapString>
+			<label>#MediaTip.MusicDirectoryName (#MediaTip.MusicDirectorySize)</label>
+		</control>
+		<control>
+			<description>Music File Count Label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>155</posY>
+			<label>Files:</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Music File Count Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>675</posX>
+			<posY>155</posY>
+			<font>font12</font>
+			<width>580</width>
+			<wrapString> : : : </wrapString>
+			<label>#MediaTip.MusicDirectoryFileCount</label>
+		</control>
+
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>490</posX>
+			<posY>135</posY>
+			<width>790</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+
+		<!-- *** Video Overview *** -->
+		<control>
+			<description>Video</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>510</posX>
+			<posY>205</posY>
+			<width>49</width>
+			<height>49</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>defaultVideo.png</texture>
+		</control>
+		<control>
+			<description>Videos</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>200</posY>
+			<label>#MediaTip.VideoHeadline</label>
+			<font>font18</font>
+		</control>
+		<control>
+			<description>Video Directory Name/Size Label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>235</posY>
+			<label>Directory:</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Video Directory Name/Size Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>675</posX>
+			<posY>235</posY>
+			<font>font12</font>
+			<width>580</width>
+			<wrapString> : : : </wrapString>
+			<label>#MediaTip.VideoDirectoryName (#MediaTip.VideoDirectorySize)</label>
+		</control>
+		<control>
+			<description>Video File Count Label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>260</posY>
+			<label>Files:</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Video File Count Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>675</posX>
+			<posY>260</posY>
+			<font>font12</font>
+			<width>580</width>
+			<wrapString> : : : </wrapString>
+			<label>#MediaTip.VideoDirectoryFileCount</label>
+		</control>
+
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>490</posX>
+			<posY>240</posY>
+			<width>790</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+
+		<!-- *** Picture Overview *** -->
+		<control>
+			<description>Picture</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>510</posX>
+			<posY>310</posY>
+			<width>49</width>
+			<height>49</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>defaultPicture.png</texture>
+		</control>
+		<control>
+			<description>Picture</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>305</posY>
+			<label>#MediaTip.PictureHeadline</label>
+			<font>font18</font>
+		</control>
+		<control>
+			<description>Picture Directory Name/Size Label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>340</posY>
+			<label>Directory:</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Picture Directory Name/Size Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>675</posX>
+			<posY>340</posY>
+			<font>font12</font>
+			<width>580</width>
+			<wrapString> : : : </wrapString>
+			<label>#MediaTip.PictureDirectoryName (#MediaTip.PictureDirectorySize)</label>
+		</control>
+		<control>
+			<description>Picture File Count Label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>365</posY>
+			<label>Files:</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Picture File Count Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>675</posX>
+			<posY>365</posY>
+			<font>font12</font>
+			<width>580</width>
+			<wrapString> : : : </wrapString>
+			<label>#MediaTip.PictureDirectoryFileCount</label>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>490</posX>
+			<posY>345</posY>
+			<width>790</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<!-- *** Additional Overview *** -->
+		<control>
+			<description>Additional</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>510</posX>
+			<posY>415</posY>
+			<width>49</width>
+			<height>49</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>defaultFolder.png</texture>
+		</control>
+		<control>
+			<description>Additional</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>410</posY>
+			<label>#MediaTip.AdditionalHeadline</label>
+			<font>font18</font>
+		</control>
+		<control>
+			<description>Additional Directory Name/Size Label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>445</posY>
+			<label>Directory:</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Additional Directory Name/Size Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>675</posX>
+			<posY>445</posY>
+			<font>font12</font>
+			<width>580</width>
+			<wrapString> : : : </wrapString>
+			<label>#MediaTip.AdditionalDirectoryName (#MediaTip.AdditionalDirectorySize)</label>
+		</control>
+		<control>
+			<description>Additional File Count Label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>575</posX>
+			<posY>470</posY>
+			<label>Files:</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Additional File Count Value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>675</posX>
+			<posY>470</posY>
+			<font>font12</font>
+			<width>580</width>
+			<wrapString> : : : </wrapString>
+			<label>#MediaTip.AdditionalDirectoryFileCount</label>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>490</posX>
+			<posY>450</posY>
+			<width>790</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+	</controls>
+</window>
