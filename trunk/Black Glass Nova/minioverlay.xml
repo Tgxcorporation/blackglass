@@ -138,10 +138,11 @@
 			<posX>106</posX>
 			<posY>73</posY>
 			<font>font13</font>
-			<label>#Play.Current.Title\r#Play.Current.Artist</label>
+			<label>#Play.Current.Title : : : #Play.Current.Artist</label>
 			<textcolor>BBFFFFFF</textcolor>
 			<visible>player.hasmedia+control.isvisible(3337)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<description>play time label</description>
@@ -311,10 +312,11 @@
 			<posX>161</posX>
 			<posY>73</posY>
 			<font>font13</font>
-			<label>#Play.Current.Title\r#Play.Current.Artist</label>
+			<label>#Play.Current.Title</label>
 			<textcolor>BBFFFFFF</textcolor>
 			<visible>player.hasmedia+!control.isvisible(3337)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<description>play time label</description>
@@ -380,6 +382,6 @@
 			<animation effect="fade" time="250">visiblechange</animation>
 			<visible>player.hasmedia+plugin.isenabled(Volume Control)+![player.rewinding|player.forwarding|player.paused]+!control.isvisible(3337)</visible>
 		</control> 
-	
+
 	</controls>
 </window>
