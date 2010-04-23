@@ -12,11 +12,11 @@
 		<control>
 			<type>image</type>
 			<id>0</id>
-			<posX>291</posX>
-			<posY>50</posY>
-			<width>698</width>
-			<height>640</height>
-			<texture>bg_dialog_conflict.png</texture>
+			<posX>140</posX>
+			<posY>60</posY>
+			<width>1000</width>
+			<height>600</height>
+			<texture>bg_dialog_big.png</texture>
 		</control>
 
 		<!--Dummy Labels for conditional visibility-->
@@ -54,18 +54,20 @@
 			<type>button</type>
 			<id>3</id>
 			<label>#MyAlarm.SelectedAlarm.Name</label>
-			<posX>40</posX>
-			<posY>97</posY>
+			<posX>180</posX>
+			<posY>109</posY>
 			<onleft>3</onleft>
 			<onright>31</onright>
 			<onup>3</onup>
 			<ondown>21</ondown>
-			<textXOff>0</textXOff>
-			<textYOff>3</textYOff>
+			<textXOff>15</textXOff>
+			<textYOff>8</textYOff>
 			<font>font20</font>
-			<textalign>center</textalign>
-			<textureFocus>bg_button2_focus.png</textureFocus>
-			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<textalign>left</textalign>
+			<height>50</height>
+			<width>500</width>
+			<textureFocus>bg_button_text_focus.png</textureFocus>
+			<textureNoFocus>bg_button_text_nofocus.png</textureNoFocus>
 		</control>
 
 		<control>
@@ -76,10 +78,10 @@
 			<!--
       <label>#MyAlarm.Translation.Enabled.Label</label>
       -->
-			<posX>60</posX>
-			<posY>137</posY>
+			<posX>190</posX>
+			<posY>190</posY>
 			<onleft>21</onleft>
-			<!--<onright>21</onright>-->
+			<onright>31</onright>
 			<onup>3</onup>
 			<ondown>22</ondown>
 		</control>
@@ -92,8 +94,8 @@
 			<!--
       <label>#MyAlarm.Translation.Recurring.Label</label>
       -->
-			<posX>60</posX>
-			<posY>177</posY>
+			<posX>190</posX>
+			<posY>250</posY>
 			<onleft>22</onleft>
 			<!--<onright>21</onright>-->
 			<onup>21</onup>
@@ -107,10 +109,10 @@
 			<!--
       <label>#MyAlarm.Translation.FadeInVolume.Label</label>
       -->
-			<posX>60</posX>
-			<posY>217</posY>
+			<posX>190</posX>
+			<posY>360</posY>
 			<onleft>24</onleft>
-			<!--<onright>21</onright>-->
+			<onright>24</onright>
 			<onup>22</onup>
 			<ondown>23</ondown>
 		</control>
@@ -122,10 +124,10 @@
 			<!--
       <label>#MyAlarm.Translation.FadeInVolume.Label</label>
       -->
-			<posX>60</posX>
-			<posY>257</posY>
+			<posX>190</posX>
+			<posY>420</posY>
 			<onleft>23</onleft>
-			<!--<onright>21</onright>-->
+			<onright>23</onright>
 			<onup>24</onup>
 			<ondown>25</ondown>
 		</control>
@@ -135,45 +137,56 @@
 			<type>button</type>
 			<id>25</id>
 			<label>#MyAlarm.SelectedAlarm.MediaType.localized</label>
-			<posX>40</posX>
-			<posY>297</posY>
+			<posX>180</posX>
+			<posY>490</posY>
 			<onleft>25</onleft>
-			<!--<onright>21</onright>-->
+			<onright>25</onright>
 			<onup>23</onup>
 			<ondown>5</ondown>
 			<textXOff>0</textXOff>
-			<textYOff>3</textYOff>
-			<font>font20</font>
+			<textYOff>2</textYOff>
+			<font>font16</font>
 			<textalign>center</textalign>
+			<width>250</width>
+			<height>60</height>
 			<textureFocus>bg_button2_focus.png</textureFocus>
 			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
 		</control>
 		<control>
 			<description>Media Type</description>
-			<type>label</type>
+			<type>fadelabel</type>
 			<id>0</id>
 			<label>#MyAlarm.SelectedAlarm.Sound</label>
-			<posX>270</posX>
-			<posY>297</posY>
+			<posX>440</posX>
+			<posY>505</posY>
+			<width>600</width>
+			<wrapString> : : : </wrapString>
 			<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,File)</visible>
+			<textcolor>90ffffff</textcolor>
 		</control>
 		<control>
 			<description>Media Type</description>
-			<type>label</type>
+			<type>fadelabel</type>
 			<id>0</id>
 			<label>#MyAlarm.SelectedAlarm.Playlist</label>
-			<posX>270</posX>
-			<posY>297</posY>
+			<posX>440</posX>
+			<posY>505</posY>
+			<width>600</width>
+			<wrapString> : : : </wrapString>
 			<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Playlist)</visible>
+			<textcolor>90ffffff</textcolor>
 		</control>
 		<control>
 			<description>Media Type</description>
-			<type>label</type>
+			<type>fadelabel</type>
 			<id>0</id>
 			<label>#MyAlarm.SelectedAlarm.Message</label>
-			<posX>270</posX>
-			<posY>297</posY>
+			<posX>440</posX>
+			<posY>505</posY>
+			<width>600</width>
+			<wrapString> : : : </wrapString>
 			<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Message)</visible>
+			<textcolor>90ffffff</textcolor>
 		</control>
 
 
@@ -181,9 +194,11 @@
 		<control>
 			<description>Time</description>
 			<type>label</type>
-			<posX>270</posX>
-			<posY>137</posY>
-			<label>#MyAlarm.Translation.AlarmTime.Label</label>
+			<posX>810</posX>
+			<posY>190</posY>
+			<label>#MyAlarm.Translation.AlarmTime.Label:</label>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
 		</control>
 		<control>
 			<description>alarm time hours</description>
@@ -192,9 +207,9 @@
 			<orientation>vertical</orientation>
 			<digits>2</digits>
 			<id>31</id>
-			<posX>400</posX>
-			<posY>140</posY>
-			<onleft>3</onleft>
+			<posX>830</posX>
+			<posY>196</posY>
+			<onleft>21</onleft>
 			<onright>32</onright>
 			<onup>31</onup>
 			<!--<ondown>8</ondown>-->
@@ -211,8 +226,8 @@
 			<orientation>vertical</orientation>
 			<digits>2</digits>
 			<id>32</id>
-			<posX>450</posX>
-			<posY>140</posY>
+			<posX>910</posX>
+			<posY>196</posY>
 			<onleft>31</onleft>
 			<onright>32</onright>
 			<onup>32</onup>
@@ -229,10 +244,12 @@
 		<control>
 			<description>Date</description>
 			<type>label</type>
-			<posX>270</posX>
-			<posY>177</posY>
-			<label>#MyAlarm.Translation.AlarmDate.Label</label>
+			<posX>810</posX>
+			<posY>250</posY>
+			<label>#MyAlarm.Translation.AlarmDate.Label:</label>
 			<visible>!Control.IsVisible(62)</visible>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
 		</control>
 		<control>
 			<description>DD</description>
@@ -241,9 +258,9 @@
 			<orientation>vertical</orientation>
 			<digits>2</digits>
 			<id>33</id>
-			<posX>400</posX>
-			<posY>180</posY>
-			<onleft>3</onleft>
+			<posX>830</posX>
+			<posY>256</posY>
+			<onleft>22</onleft>
 			<onright>34</onright>
 			<onup>31</onup>
 			<ondown>20</ondown>
@@ -261,8 +278,8 @@
 			<orientation>vertical</orientation>
 			<digits>2</digits>
 			<id>34</id>
-			<posX>450</posX>
-			<posY>180</posY>
+			<posX>910</posX>
+			<posY>256</posY>
 			<onleft>33</onleft>
 			<onright>35</onright>
 			<onup>31</onup>
@@ -281,8 +298,8 @@
 			<orientation>vertical</orientation>
 			<digits>4</digits>
 			<id>35</id>
-			<posX>500</posX>
-			<posY>180</posY>
+			<posX>990</posX>
+			<posY>256</posY>
 			<onleft>34</onleft>
 			<onright>35</onright>
 			<onup>31</onup>
@@ -292,7 +309,7 @@
 			<textureDown>arrow_round_down_nofocus.png</textureDown>
 			<textureUpFocus>arrow_round_up_focus.png</textureUpFocus>
 			<textureDownFocus>arrow_round_down_focus.png</textureDownFocus>
-			<visible>!Control.IsVisible(62)</visible>
+			<visible>!Control.IsVisible(62)</visible>e
 		</control>
 
 
@@ -300,136 +317,138 @@
 		<control>
 			<description>Enabled Days</description>
 			<type>label</type>
-			<posX>270</posX>
-			<posY>180</posY>
-			<label>#MyAlarm.Translation.EnabledOnTheseDays.Label</label>
+			<posX>370</posX>
+			<posY>250</posY>
+			<label>#MyAlarm.Translation.EnabledOnTheseDays.Label:</label>
 			<visible>Control.IsVisible(62)</visible>
+			<textcolor>90ffffff</textcolor>
 		</control>
 		<control>
 			<description>Monday checkbox</description>
 			<type>checkmark</type>
 			<id>10</id>
-			<posX>270</posX>
-			<posY>210</posY>
+			<posX>370</posX>
+			<posY>295</posY>
 			<width>50</width>
 			<height>20</height>
 			<label>657</label>
-			<onleft>3</onleft>
+			<onleft>22</onleft>
 			<onright>11</onright>
-			<onup>31</onup>
-			<ondown>20</ondown>
+			<onup>22</onup>
+			<ondown>24</ondown>
 			<visible>Control.IsVisible(62)</visible>
 		</control>
 		<control>
 			<description>Tuesday checkbox</description>
 			<type>checkmark</type>
 			<id>11</id>
-			<posX>335</posX>
-			<posY>210</posY>
+			<posX>470</posX>
+			<posY>295</posY>
 			<width>50</width>
 			<height>20</height>
 			<label>658</label>
 			<onleft>10</onleft>
 			<onright>12</onright>
-			<onup>31</onup>
-			<ondown>20</ondown>
+			<onup>22</onup>
+			<ondown>24</ondown>
 			<visible>Control.IsVisible(62)</visible>
 		</control>
 		<control>
 			<description>Wednesday checkbox</description>
 			<type>checkmark</type>
 			<id>12</id>
-			<posX>400</posX>
-			<posY>210</posY>
+			<posX>570</posX>
+			<posY>295</posY>
 			<width>50</width>
 			<height>20</height>
 			<label>659</label>
 			<onleft>11</onleft>
 			<onright>13</onright>
-			<onup>31</onup>
-			<ondown>20</ondown>
+			<onup>22</onup>
+			<ondown>24</ondown>
 			<visible>Control.IsVisible(62)</visible>
 		</control>
 		<control>
 			<description>Thursday checkbox</description>
 			<type>checkmark</type>
 			<id>13</id>
-			<posX>465</posX>
-			<posY>210</posY>
+			<posX>670</posX>
+			<posY>295</posY>
 			<width>50</width>
 			<height>20</height>
 			<label>660</label>
 			<onleft>12</onleft>
 			<onright>14</onright>
-			<onup>31</onup>
-			<ondown>20</ondown>
+			<onup>22</onup>
+			<ondown>24</ondown>
 			<visible>Control.IsVisible(62)</visible>
 		</control>
 		<control>
 			<description>Friday checkbox</description>
 			<type>checkmark</type>
 			<id>14</id>
-			<posX>530</posX>
-			<posY>210</posY>
+			<posX>770</posX>
+			<posY>295</posY>
 			<width>50</width>
 			<height>20</height>
 			<label>661</label>
 			<onleft>13</onleft>
 			<onright>15</onright>
-			<onup>31</onup>
-			<ondown>20</ondown>
+			<onup>22</onup>
+			<ondown>24</ondown>
 			<visible>Control.IsVisible(62)</visible>
 		</control>
 		<control>
 			<description>Saturday checkbox</description>
 			<type>checkmark</type>
 			<id>15</id>
-			<posX>585</posX>
-			<posY>210</posY>
+			<posX>870</posX>
+			<posY>295</posY>
 			<width>50</width>
 			<height>20</height>
 			<label>662</label>
 			<onleft>14</onleft>
 			<onright>16</onright>
-			<onup>31</onup>
-			<ondown>20</ondown>
+			<onup>22</onup>
+			<ondown>24</ondown>
 			<visible>Control.IsVisible(62)</visible>
 		</control>
 		<control>
 			<description>Sunday checkbox</description>
 			<type>checkmark</type>
 			<id>16</id>
-			<posX>645</posX>
-			<posY>210</posY>
+			<posX>970</posX>
+			<posY>295</posY>
 			<width>50</width>
 			<height>20</height>
 			<label>663</label>
 			<onleft>15</onleft>
 			<onright>16</onright>
-			<onup>31</onup>
-			<ondown>20</ondown>
+			<onup>22</onup>
+			<ondown>24</ondown>
 			<visible>Control.IsVisible(62)</visible>
 		</control>
 
 		<control>
 			<type>image</type>
 			<id>0</id>
-			<posX>325</posX>
-			<posY>540</posY>
-			<width>630</width>
+			<posX>164</posX>
+			<posY>520</posY>
+			<width>953</width>
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 		</control>
-		
+
 		<control>
 			<description>Save Button</description>
 			<type>button</type>
 			<id>5</id>
 			<label>#MyAlarm.Translation.SaveAlarm.Label</label>
-			<posX>330</posX>
-			<posY>600</posY>
+			<posX>300</posX>
+			<posY>575</posY>
 			<width>200</width>
+			<height>60</height>
 			<onleft>4</onleft>
 			<onright>6</onright>
 			<onup>25</onup>
@@ -447,8 +466,9 @@
 			<id>6</id>
 			<label>#MyAlarm.Translation.CancelAlarm.Label</label>
 			<posX>540</posX>
-			<posY>600</posY>
+			<posY>575</posY>
 			<width>200</width>
+			<height>60</height>
 			<onleft>5</onleft>
 			<onright>4</onright>
 			<onup>25</onup>
@@ -465,9 +485,10 @@
 			<type>button</type>
 			<id>4</id>
 			<label>#MyAlarm.Translation.DeleteAlarm.Label</label>
-			<posX>750</posX>
-			<posY>600</posY>
+			<posX>780</posX>
+			<posY>575</posY>
 			<width>200</width>
+			<height>60</height>
 			<onleft>6</onleft>
 			<onright>5</onright>
 			<onup>25</onup>
