@@ -10,7 +10,6 @@
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
 
-
 		<control>
 			<type>image</type>
 			<posX>458</posX>
@@ -61,16 +60,31 @@
 			<label>#infoservice.feed.lastupdated.message</label>
 			<wrapString> : : : </wrapString>
 		</control>
+
+		<control>
+			<description>Channel name Logo</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>92</posY>
+			<width>30</width>
+			<height>30</height>
+			<texture>#infoservice.feed.img</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<visible>control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
 		<control>
 			<description>Channel name label</description>
 			<type>fadelabel</type>
 			<id>12</id>
-			<posX>30</posX>
+			<posX>65</posX>
 			<posY>93</posY>
 			<label>#infoservice.feed.selected.feed</label>
 			<font>font16</font>
 			<align>left</align>
-			<width>380</width>
+			<width>345</width>
 			<textcolor>90ffffff</textcolor>
 			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -90,6 +104,7 @@
 			<animation effect="fade" time="250">visiblechange</animation>
 			<wrapString> : : : </wrapString>
 		</control>
+
 		<control>
 			<description>Site Logo</description>
 			<type>image</type>
@@ -117,13 +132,14 @@
 			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
+
 		<control>
 			<description>Chosen Story description</description>
 			<type>textboxscrollup</type>
-			<id>0</id>
+			<id>1</id>
 			<posX>30</posX>
 			<posY>330</posY>
-			<width>350</width>
+			<width>380</width>
 			<height>230</height>
 			<colordiffuse>ffffffff</colordiffuse>
 			<font>font16</font>
@@ -182,7 +198,6 @@
 				<colorDiffuse>ffffffff</colorDiffuse>
 				<visible>!control.hasfocus(50)</visible>
 			</control>
-
 			<control>
 				<type>label</type>
 				<id>1</id>
