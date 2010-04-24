@@ -1,0 +1,255 @@
+<window>
+	<id>7676</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<define>#my.header.label:</define>
+	<define>#header.label:#MyDailyComics.Title</define>
+	<define>#header.background:hover_my daily comics.png</define>
+	<define>#itemcount:</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.time.xml</import>
+
+		<!-- <control>
+			<description>Title</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>56</posY>
+			<font>font11</font>
+			<width>340</width>
+			<label>#MyDailyComics.Selected.Title, #MyDailyComics.Selected.Date</label>
+			<wrapString> : : : </wrapString>
+		</control> -->
+
+		<!-- BG and menu init -->
+		<!--
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>418</width>
+			<height>720</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+		</control>
+		<control>
+			<type>label</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>35</posY>
+			<label>#my.header.label</label>
+			<font>font24</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control> 
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>47</posY>
+			<width>385</width>
+			<height>53</height>
+			<texture>bg_button_nofocus.png</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>593</posY>
+			<width>385</width>
+			<height>53</height>
+			<texture>bg_button_nofocus.png</texture>
+		</control>
+		-->
+
+		
+
+		<!-- Facade BG -->
+		<control>
+			<type>image</type>
+			<posX>408</posX>
+			<posY>48</posY>
+			<width>948</width>
+			<height>766</height>
+			<texture>bg_facade.png</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>440</posX>
+			<posY>97</posY>
+			<width>840</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		
+		
+		
+		<!-- Header label -->
+		<control>
+			<description>Label top</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>470</posX>
+			<posY>96</posY>
+			<label>#MyDailyComics.Selected.Title</label>
+			<font>font22</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>730</width>
+			<wrapString> : : : </wrapString>
+		</control>
+		
+		<!-- Comic images -->
+		<control>
+			<description>Comic Image</description>
+			<type>image</type>
+			<id>100</id>
+			<posX>470</posX>
+			<posY>170</posY>
+			<width>780</width>
+			<height>530</height>
+			<visible>no</visible>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>true</centered>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+ 		<control>
+			<description>Comic Banner</description>
+			<type>image</type>
+			<id>101</id>
+			<posX>470</posX>
+			<posY>97</posY>
+			<width>340</width>
+			<width>385</width>
+			<height>100</height>
+			<centered>yes</centered>
+			<keepaspectratio>yes</keepaspectratio>
+			<zoom>no</zoom>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Language Flag</description>
+			<type>image</type>
+			<id>102</id>
+			<posX>1212</posX>
+			<posY>95</posY>
+			<width>48</width>
+			<height>48</height>
+			<centered>no</centered>
+			<texture>#MyDailyComics.Selected.LanguageIcon</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		
+		<!-- Menu -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" time="50">WindowClose</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
+			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(50)</visible>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<animation effect="fade" time="450" reversible="true">visible</animation>
+				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<posX>0</posX>
+				<posY>100</posY>
+				<visible>!control.hasfocus(50)</visible>
+				<layout>StackLayout</layout>
+				
+		<control>
+					<description>Comic</description>
+					<type>selectbutton</type>
+					<id>2</id>
+					<label>Comic</label>
+					<onright>50</onright>
+					<onup>50</onup>
+				</control>
+				<control>
+					<description>Date</description>
+					<type>selectbutton</type>
+					<id>3</id>
+					<label>Date</label>
+					<onright>50</onright>
+					<ondown>50</ondown>
+				</control>
+				
+				
+			</control>
+		</control>
+		
+		
+		<control>
+			<description>Dummy button for hidden menu</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>400</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+	</controls>
+</window>
