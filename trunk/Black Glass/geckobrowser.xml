@@ -8,14 +8,65 @@
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<animation effect="fade" time="1">WindowClose</animation>			
+		</control>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>10</posY>
+			<label>#header.label</label>
+			<font>font24</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+		</control>
+		<control>
+			<description>Date</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1258</posX>
+			<posY>37</posY>
+			<label>#date</label>
+			<align>right</align>
+			<font>font10</font>
+			<visible>!plugin.isenabled(InfoService)</visible>
+			<textcolor>aaffffff</textcolor>
+		</control>
+		<control>
+			<description>Date</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1258</posX>
+			<posY>37</posY>
+			<label>#infoservice.weather.today.temp  .  #date</label>
+			<align>right</align>
+			<font>font10</font>
+			<visible>plugin.isenabled(InfoService)</visible>
+			<textcolor>aaffffff</textcolor>
+		</control>
+		<control>
+			<description>Time</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1258</posX>
+			<posY>10</posY>
+			<label>#time</label>
+			<align>right</align>
+			<font>font14</font>
+			<textcolor>ffffffff</textcolor>
+		</control>	
 		<control>
 			<description>Back button</description>
 			<type>button</type>
 			<id>2</id>
 			<posX>30</posX>
-			<posY>61</posY>
+			<posY>54</posY>
 			<width>30</width>
 			<height>44</height>
 			<label>-</label>
@@ -31,7 +82,7 @@
 			<type>button</type>
 			<id>3</id>
 			<posX>79</posX>
-			<posY>61</posY>
+			<posY>54</posY>
 			<label>-</label>
 			<width>30</width>
 			<height>44</height>
@@ -47,7 +98,7 @@
 			<type>button</type>
 			<id>4</id>
 			<posX>128</posX>
-			<posY>65</posY>
+			<posY>58</posY>
 			<width>35</width>
 			<height>35</height>
 			<label>-</label>
@@ -63,7 +114,7 @@
 			<type>button</type>
 			<id>5</id>
 			<posX>184</posX>
-			<posY>72</posY>
+			<posY>65</posY>
 			<width>22</width>
 			<height>22</height>
 			<label>-</label>
@@ -79,7 +130,7 @@
 			<type>button</type>
 			<id>6</id>
 			<posX>227</posX>
-			<posY>64</posY>
+			<posY>57</posY>
 			<width>35</width>
 			<height>35</height>
 			<label>-</label>
@@ -95,7 +146,7 @@
 			<type>button</type>
 			<id>7</id>
 			<posX>275</posX>
-			<posY>64</posY>
+			<posY>57</posY>
 			<width>35</width>
 			<height>35</height>
 			<label>-</label>
@@ -111,7 +162,7 @@
 			<type>button</type>
 			<id>8</id>
 			<posX>760</posX>
-			<posY>66</posY>
+			<posY>59</posY>
 			<label>-</label>
 			<textureFocus>bg_button_text_long_focus.png</textureFocus>
 			<textureNoFocus>bg_button_text_long_nofocus.png</textureNoFocus>
@@ -180,7 +231,7 @@
 			<type>fadelabel</type>
 			<id>11</id>
 			<posX>775</posX>
-			<posY>75</posY>
+			<posY>67</posY>
 			<width>525</width>
 			<label>#geckobrowser.link.shorturl</label>
 			<font>font11</font>
