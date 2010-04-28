@@ -26,10 +26,12 @@ namespace BlackGlassEditor
         {
             InitializeComponent();
 
+            plugins.Add(new MPplugin(5000, "Alarm", "hover_my alarm")); 
             plugins.Add(new MPplugin(6001, "Anime", "hover_my anime"));
             plugins.Add(new MPplugin(760, "Burner", "hover_my burner"));
             //  plugins.Add(new MPplugin(1987, "Clipta Video Search"));
             //   plugins.Add(new MPplugin(63453335, "EarthTV"));
+            plugins.Add(new MPplugin(7676, "Daily Comics", "hover_my daily comics"));
             plugins.Add(new MPplugin(330099, "Email Manager", "hover_email"));
             plugins.Add(new MPplugin(2497, "Emulators", "hover_myEmulators"));
             // plugins.Add(new MPplugin(800, "Extensions"));
@@ -37,6 +39,7 @@ namespace BlackGlassEditor
             plugins.Add(new MPplugin(7986, "Films", "hover_Films"));
             plugins.Add(new MPplugin(557311, "File Explorer", "hover_file explorer"));
             //  plugins.Add(new MPplugin(464554871, "FritzManager"));
+            plugins.Add(new MPplugin(16004, "GeckoBrowser", "hover_geckobrowser"));
             plugins.Add(new MPplugin(30885, "Global Search", "hover_search music"));
             plugins.Add(new MPplugin(7972, "HTPCInfo", "hover_htpcinfo"));
             plugins.Add(new MPplugin(16001, "Infoservice RSS", "hover_infoservice"));
@@ -45,7 +48,10 @@ namespace BlackGlassEditor
             plugins.Add(new MPplugin(7890, "Last.fm", "hover_LastFmRadio"));
             plugins.Add(new MPplugin(90478, "Lyrics", "hover_my lyrics"));
             plugins.Add(new MPplugin(8765, "Media Slayer", "hover_mediaslayer"));
+            plugins.Add(new MPplugin(7980, "MediaTip", "hover_mediatip"));
+            plugins.Add(new MPplugin(16581, "Meteo.hr", "hover_meteo"));
             plugins.Add(new MPplugin(96742, "Moving Pictures", "hover_moving pictures"));
+            plugins.Add(new MPplugin(801, "MpeInstaller", "hover_mpei")); 
             plugins.Add(new MPplugin(3847, "MpNZB", "hover_mpnzb"));
             //plugins.Add(new MPplugin(0, "Multishortcut"));
             plugins.Add(new MPplugin(501, "Music", "hover_my music"));
@@ -57,7 +63,7 @@ namespace BlackGlassEditor
             plugins.Add(new MPplugin(4755, "Online Videos", "hover_OnlineVideos"));
             plugins.Add(new MPplugin(2, "Pictures", "hover_my pictures"));
             plugins.Add(new MPplugin(34, "Plugins", "hover_my plugins"));
-            //plugins.Add(new MPplugin(3, "Programs"));
+            plugins.Add(new MPplugin(3, "Programs", "hover_my programs"));
             plugins.Add(new MPplugin(30, "Radio", "hover_my radio"));
             plugins.Add(new MPplugin(25650, "RadioTime", "hover_radiotime"));
             plugins.Add(new MPplugin(42000, "Score Center", "hover_score center"));
@@ -1589,7 +1595,7 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#infoservice.weather.today.temp  .  #infoservice.weather.today.humidity  .  #infoservice.weather.today.condition  .  #infoservice.weather.location</label>
+			<label>#infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location</label>
 			<align>center</align>
 			<font>font11</font>
 			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + weather_button + @")</visible>
@@ -1608,8 +1614,7 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>Latest episode added: #infoservice.recentlyAdded.series[1].title  .  Season #infoservice.recentlyAdded.series[1].season  .  Episode #infoservice.recentlyAdded.series[1].episodenumber  .  #infoservice.recentlyAdded.series[1].episodetitle</label>
-			<align>center</align>
+			<label>Recently added:     #infoservice.recentlyAdded.series1.title     Season #infoservice.recentlyAdded.series1.season     Episode #infoservice.recentlyAdded.series1.episodenumber     #infoservice.recentlyAdded.series1.episodetitle</label>			<align>center</align>
 			<font>font11</font>
 			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + tvseries_button + @")+plugin.isenabled(MP-TV Series)</visible>
 			<textcolor>90ffffff</textcolor>
@@ -1625,7 +1630,7 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>Latest movie added: #infoservice.recentlyAdded.movie[1].title</label>
+			<label>Recently added:     #infoservice.recentlyAdded.movie1.title</label>
 			<align>center</align>
 			<font>font11</font>
 			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Moving Pictures)</visible>
