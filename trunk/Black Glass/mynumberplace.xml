@@ -2,7 +2,7 @@
 <window>
 	<id>7777</id>
 	<defaultcontrol>2</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	<allowoverlay>yes</allowoverlay>
 	<define>#header.label:19101</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
@@ -10,15 +10,7 @@
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
-		<control>
-			<type>image</type>
-			<posX>510</posX>
-			<posY>160</posY>
-			<width>720</width>
-			<height>511</height>
-			<texture>white.png</texture>
-			<colordiffuse>6677ccff</colordiffuse>
-		</control>
+
 		<control>
 			<type>image</type>
 			<posX>458</posX>
@@ -26,15 +18,6 @@
 			<width>948</width>
 			<height>766</height>
 			<texture>bg_facade.png</texture>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>490</posX>
-			<posY>80</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
 		</control>
 		<control>
 			<type>image</type>
@@ -74,7 +57,7 @@
 				<height>720</height>
 				<texture>bg_left.png</texture>
 				<colorDiffuse>ffffffff</colorDiffuse>
-				<visible>!control.hasfocus(10)</visible>
+				<visible>![control.hasfocus(1000)|control.hasfocus(2000)|control.hasfocus(3000)|control.hasfocus(4000)|control.hasfocus(5000)|control.hasfocus(6000)|control.hasfocus(7000)|control.hasfocus(8000)|control.hasfocus(9000)]</visible>
 			</control>
 
 			<control>
@@ -102,7 +85,7 @@
 				<animation effect="fade" time="450" reversible="true">hidden</animation>
 				<posX>0</posX>
 				<posY>100</posY>
-				<visible>!control.hasfocus(10)</visible>
+				<visible>![control.hasfocus(1000)|control.hasfocus(2000)|control.hasfocus(3000)|control.hasfocus(4000)|control.hasfocus(5000)|control.hasfocus(6000)|control.hasfocus(7000)|control.hasfocus(8000)|control.hasfocus(9000)]</visible>
 				<layout>StackLayout</layout>
 				<control>
 					<description>New Game</description>
@@ -155,99 +138,85 @@
 				</control>
 			</control>
 		</control>
+
 		<control>
-			<description>info group</description>
-			<type>group</type>
-			<control>
-				<description>Scoreboard background</description>
-				<type>image</type>
-				<id>20</id>
-				<posX>30</posX>
-				<posY>463</posY>
-				<width>334</width>
-				<height>172</height>
-				<texture>tetris\scoreboard.png</texture>
-				<colordiffuse>60ffffff</colordiffuse>
-			</control>
-			<control>
-				<description>Highscore: label</description>
-				<type>label</type>
-				<id>21</id>
-				<posX>55</posX>
-				<posY>475</posY>
-				<label>19008</label>
-			</control>
-			<control>
-				<description>Time</description>
-				<type>label</type>
-				<id>22</id>
-				<posX>343</posX>
-				<posY>475</posY>
-				<width>288</width>
-				<align>right</align>
-				<label>#numberplace.time</label>
-			</control>
-			<control>
-				<description>Rank1: label</description>
-				<type>label</type>
-				<id>24</id>
-				<posX>55</posX>
-				<posY>512</posY>
-				<label>#numberplace.name1</label>
-			</control>
-			<control>
-				<description>Rank1 Score: label</description>
-				<type>label</type>
-				<id>25</id>
-				<posX>343</posX>
-				<posY>512</posY>
-				<width>288</width>
-				<align>right</align>
-				<label>#numberplace.score1</label>
-			</control>
-			<control>
-				<description>Rank2 Name: label</description>
-				<type>label</type>
-				<id>26</id>
-				<posX>55</posX>
-				<posY>555</posY>
-				<label>#numberplace.name2</label>
-			</control>
-			<control>
-				<description>Rank2 Score: label</description>
-				<type>label</type>
-				<id>27</id>
-				<posX>343</posX>
-				<posY>555</posY>
-				<width>288</width>
-				<align>right</align>
-				<label>#numberplace.score2</label>
-			</control>
-			<control>
-				<description>Rank3 Name: label</description>
-				<type>label</type>
-				<id>28</id>
-				<posX>55</posX>
-				<posY>597</posY>
-				<label>#numberplace.name3</label>
-			</control>
-			<control>
-				<description>Rank3 Score: label</description>
-				<type>label</type>
-				<id>29</id>
-				<posX>343</posX>
-				<posY>597</posY>
-				<width>288</width>
-				<align>right</align>
-				<label>#numberplace.score3</label>
-			</control>
+			<description>Highscore: label</description>
+			<type>label</type>
+			<id>21</id>
+			<posX>30</posX>
+			<posY>200</posY>
+			<label>19008</label>
+		</control>
+		<control>
+			<description>Time</description>
+			<type>label</type>
+			<id>22</id>
+			<posX>343</posX>
+			<posY>200</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#numberplace.time</label>
+		</control>
+		<control>
+			<description>Rank1: label</description>
+			<type>label</type>
+			<id>24</id>
+			<posX>30</posX>
+			<posY>240</posY>
+			<label>#numberplace.name1</label>
+		</control>
+		<control>
+			<description>Rank1 Score: label</description>
+			<type>label</type>
+			<id>25</id>
+			<posX>343</posX>
+			<posY>240</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#numberplace.score1</label>
+		</control>
+		<control>
+			<description>Rank2 Name: label</description>
+			<type>label</type>
+			<id>26</id>
+			<posX>30</posX>
+			<posY>280</posY>
+			<label>#numberplace.name2</label>
+		</control>
+		<control>
+			<description>Rank2 Score: label</description>
+			<type>label</type>
+			<id>27</id>
+			<posX>343</posX>
+			<posY>280</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#numberplace.score2</label>
+		</control>
+		<control>
+			<description>Rank3 Name: label</description>
+			<type>label</type>
+			<id>28</id>
+			<posX>30</posX>
+			<posY>320</posY>
+			<label>#numberplace.name3</label>
+		</control>
+		<control>
+			<description>Rank3 Score: label</description>
+			<type>label</type>
+			<id>29</id>
+			<posX>343</posX>
+			<posY>320</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#numberplace.score3</label>
 		</control>
 		<control>
 			<description>current playtime Label</description>
 			<type>fadelabel</type>
 			<id>1</id>
-			<posX>520</posX>
-			<posY>87</posY>
+			<posX>30</posX>
+			<posY>100</posY>
 			<width>711</width>
 			<label>#numberplace.time</label>
 			<font>font22</font>
@@ -255,89 +224,61 @@
 			<textcolor>White</textcolor>
 		</control>
 		<control>
-			<description>BarVerGroup</description>
-			<type>group</type>
-			<id>700</id>
-			<posX>515</posX>
-			<posY>168</posY>
-			<width>711</width>
-			<height>500</height>
-			<mpe>
-				<layout>Grid</layout>
-				<spring>no</spring>
-				<spacing>0</spacing>
-				<padding>
-					<top>0</top>
-					<right>0</right>
-					<bottom>0</bottom>
-					<left>0</left>
-				</padding>
-			</mpe>
-			<control>
-				<type>image</type>
-				<id>901</id>
-				<posX>746</posX>
-				<posY>167</posY>
-				<width>8</width>
-				<height>500</height>
-				<texture>black.png</texture>
-			</control>
-			<control>
-				<type>image</type>
-				<id>902</id>
-				<posX>986</posX>
-				<posY>167</posY>
-				<width>8</width>
-				<height>500</height>
-				<texture>black.png</texture>
-			</control>
+			<type>image</type>
+			<posX>510</posX>
+			<posY>103</posY>
+			<width>748</width>
+			<height>602</height>
+			<texture>white.png</texture>
+			<colordiffuse>56ffffff</colordiffuse>
 		</control>
 		<control>
-			<description>BarHorGroup</description>
-			<type>group</type>
-			<id>705</id>
-			<posX>515</posX>
-			<posY>165</posY>
-			<width>711</width>
-			<height>500</height>
-			<control>
-				<type>image</type>
-				<id>976</id>
-				<posX>515</posX>
-				<posY>328</posY>
-				<width>711</width>
-				<height>6</height>
-				<texture>black.png</texture>
-			</control>
-			<control>
-				<type>image</type>
-				<id>977</id>
-				<posX>515</posX>
-				<posY>499</posY>
-				<width>711</width>
-				<height>6</height>
-				<texture>black.png</texture>
-			</control>
+			<type>image</type>
+			<id>901</id>
+			<posX>758</posX>
+			<posY>103</posY>
+			<width>4</width>
+			<height>602</height>
+			<texture>black.png</texture>
 		</control>
+		<control>
+			<type>image</type>
+			<id>902</id>
+			<posX>1005</posX>
+			<posY>103</posY>
+			<width>4</width>
+			<height>602</height>
+			<texture>black.png</texture>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>976</id>
+			<posX>510</posX>
+			<posY>302</posY>
+			<width>748</width>
+			<height>4</height>
+			<texture>black.png</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<id>977</id>
+			<posX>510</posX>
+			<posY>501</posY>
+			<width>748</width>
+			<height>4</height>
+			<texture>black.png</texture>
+		</control>
+
 		<control>
 			<description>TheButton</description>
 			<type>group</type>
 			<id>10</id>
 			<posX>515</posX>
-			<posY>168</posY>
-			<width>711</width>
-			<height>500</height>
-			<mpe>
-				<layout>Grid</layout>
-				<spring>no</spring>
-				<spacing>0</spacing>
-				<padding>
-					<top>0</top>
-					<right>0</right>
-					<bottom>0</bottom>
-					<left>0</left>
-				</padding>
-			</mpe>
+			<posY>108</posY>
+			<width>750</width>
+			<height>600</height>
+			<layout>GridLayout(9,9,5,5)</layout>
 			<!-- row 1 -->
 			<control>
 				<type>cell</type>
@@ -348,8 +289,8 @@
 				<onup>9000</onup>
 				<ondown>2000</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -366,8 +307,8 @@
 				<onup>9001</onup>
 				<ondown>2001</ondown>
 				<label>-</label>
-				<width>74</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -383,8 +324,8 @@
 				<onup>9002</onup>
 				<ondown>2002</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -400,8 +341,8 @@
 				<onup>9003</onup>
 				<ondown>2003</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -418,7 +359,7 @@
 				<ondown>2004</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -434,8 +375,8 @@
 				<onup>9005</onup>
 				<ondown>2005</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -451,8 +392,8 @@
 				<onup>9006</onup>
 				<ondown>2006</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -469,7 +410,7 @@
 				<ondown>2007</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -485,8 +426,8 @@
 				<onup>9008</onup>
 				<ondown>2008</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -502,7 +443,7 @@
 				<onup>1000</onup>
 				<ondown>3000</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -536,7 +477,7 @@
 				<onup>1002</onup>
 				<ondown>3002</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -553,7 +494,7 @@
 				<onup>1003</onup>
 				<ondown>3003</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -587,7 +528,7 @@
 				<onup>1005</onup>
 				<ondown>3005</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -604,7 +545,7 @@
 				<onup>1006</onup>
 				<ondown>3006</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -638,7 +579,7 @@
 				<onup>1008</onup>
 				<ondown>3008</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -655,8 +596,8 @@
 				<onup>2000</onup>
 				<ondown>4000</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -673,7 +614,7 @@
 				<ondown>4001</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -689,8 +630,8 @@
 				<onup>2002</onup>
 				<ondown>4002</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -706,8 +647,8 @@
 				<onup>2003</onup>
 				<ondown>4003</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -724,7 +665,7 @@
 				<ondown>4004</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -740,8 +681,8 @@
 				<onup>2005</onup>
 				<ondown>4005</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -757,8 +698,8 @@
 				<onup>2006</onup>
 				<ondown>4006</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -775,7 +716,7 @@
 				<ondown>4007</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -791,8 +732,8 @@
 				<onup>2008</onup>
 				<ondown>4008</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -808,8 +749,8 @@
 				<onup>3000</onup>
 				<ondown>5000</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -826,7 +767,7 @@
 				<ondown>5001</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -842,8 +783,8 @@
 				<onup>3002</onup>
 				<ondown>5002</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -859,8 +800,8 @@
 				<onup>3003</onup>
 				<ondown>5003</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -877,7 +818,7 @@
 				<ondown>5004</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -893,8 +834,8 @@
 				<onup>3005</onup>
 				<ondown>5005</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -910,8 +851,8 @@
 				<onup>3006</onup>
 				<ondown>5006</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -928,7 +869,7 @@
 				<ondown>5007</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -944,8 +885,8 @@
 				<onup>3008</onup>
 				<ondown>5008</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -961,7 +902,7 @@
 				<onup>4000</onup>
 				<ondown>6000</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -995,7 +936,7 @@
 				<onup>4002</onup>
 				<ondown>6002</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -1012,7 +953,7 @@
 				<onup>4003</onup>
 				<ondown>6003</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -1046,7 +987,7 @@
 				<onup>4005</onup>
 				<ondown>6005</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -1063,7 +1004,7 @@
 				<onup>4006</onup>
 				<ondown>6006</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -1097,7 +1038,7 @@
 				<onup>4008</onup>
 				<ondown>6008</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -1114,8 +1055,8 @@
 				<onup>5000</onup>
 				<ondown>7000</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1132,7 +1073,7 @@
 				<ondown>7001</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1148,8 +1089,8 @@
 				<onup>5002</onup>
 				<ondown>7002</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1165,8 +1106,8 @@
 				<onup>5003</onup>
 				<ondown>7003</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1183,7 +1124,7 @@
 				<ondown>7004</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1199,8 +1140,8 @@
 				<onup>5005</onup>
 				<ondown>7005</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1216,8 +1157,8 @@
 				<onup>5006</onup>
 				<ondown>7006</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1234,7 +1175,7 @@
 				<ondown>7007</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1250,8 +1191,8 @@
 				<onup>5008</onup>
 				<ondown>7008</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1267,8 +1208,8 @@
 				<onup>6000</onup>
 				<ondown>8000</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1285,7 +1226,7 @@
 				<ondown>8001</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1301,8 +1242,8 @@
 				<onup>6002</onup>
 				<ondown>8002</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1318,8 +1259,8 @@
 				<onup>6003</onup>
 				<ondown>8003</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1336,7 +1277,7 @@
 				<ondown>8004</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1352,8 +1293,8 @@
 				<onup>6005</onup>
 				<ondown>8005</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1369,8 +1310,8 @@
 				<onup>6006</onup>
 				<ondown>8006</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1387,7 +1328,7 @@
 				<ondown>8007</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1403,8 +1344,8 @@
 				<onup>6008</onup>
 				<ondown>8008</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1420,7 +1361,7 @@
 				<onup>7000</onup>
 				<ondown>9000</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -1454,7 +1395,7 @@
 				<onup>7002</onup>
 				<ondown>9002</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -1471,7 +1412,7 @@
 				<onup>7003</onup>
 				<ondown>9003</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -1505,7 +1446,7 @@
 				<onup>7005</onup>
 				<ondown>9005</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -1522,7 +1463,7 @@
 				<onup>7006</onup>
 				<ondown>9006</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -1556,7 +1497,7 @@
 				<onup>7008</onup>
 				<ondown>9008</ondown>
 				<label>-</label>
-				<width>72</width>
+				<width>77</width>
 				<height>52</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
@@ -1573,8 +1514,8 @@
 				<onup>8000</onup>
 				<ondown>1000</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1591,7 +1532,7 @@
 				<ondown>1001</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1607,8 +1548,8 @@
 				<onup>8002</onup>
 				<ondown>1002</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1624,8 +1565,8 @@
 				<onup>8003</onup>
 				<ondown>1003</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1642,7 +1583,7 @@
 				<ondown>1004</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1658,8 +1599,8 @@
 				<onup>8005</onup>
 				<ondown>1005</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1675,8 +1616,8 @@
 				<onup>8006</onup>
 				<ondown>1006</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1693,7 +1634,7 @@
 				<ondown>1007</ondown>
 				<label>-</label>
 				<width>74</width>
-				<height>51</height>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
@@ -1709,8 +1650,8 @@
 				<onup>8008</onup>
 				<ondown>1008</ondown>
 				<label>-</label>
-				<width>72</width>
-				<height>51</height>
+				<width>77</width>
+				<height>61</height>
 				<font>font16</font>
 				<textcolor>White</textcolor>
 				<textureFocus>icon_empty_focus.png</textureFocus>
