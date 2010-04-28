@@ -2,7 +2,7 @@
 <window>
 	<id>7776</id>
 	<defaultcontrol>10</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	<allowoverlay>[facadeview.filmstrip|facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
 	<define>#header.label:Tetris</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
@@ -16,27 +16,6 @@
 			<width>948</width>
 			<height>766</height>
 			<texture>bg_facade.png</texture>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>490</posX>
-			<posY>80</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
-		<control>
-			<description>Heading</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>520</posX>
-			<posY>87</posY>
-			<width>711</width>
-			<label>#header.label</label>
-			<font>font22</font>
-			<align>left</align>
-			<textcolor>White</textcolor>
 		</control>
 		<control>
 			<type>image</type>
@@ -122,118 +101,100 @@
 			</control>
 		</control>
 		<control>
-			<description>info group</description>
-			<type>group</type>
-			<control>
-				<description>Scoreboard background</description>
-				<type>image</type>
-				<id>200</id>
-				<posX>30</posX>
-				<posY>402</posY>
-				<width>337</width>
-				<height>281</height>
-				<texture>tetris\scoreboard.png</texture>
-				<colordiffuse>60ffffff</colordiffuse>
-			</control>
-			<control>
-				<description>Score: label</description>
-				<type>label</type>
-				<id>201</id>
-				<posX>55</posX>
-				<posY>512</posY>
-				<label>19005</label>
-			</control>
-			<control>
-				<description>Score</description>
-				<type>label</type>
-				<id>202</id>
-				<posX>343</posX>
-				<posY>512</posY>
-				<width>288</width>
-				<align>right</align>
-				<label>#tetris_score</label>
-			</control>
-			<control>
-				<description>Level: label</description>
-				<type>label</type>
-				<id>203</id>
-				<posX>55</posX>
-				<posY>555</posY>
-				<label>19006</label>
-			</control>
-			<control>
-				<description>Level</description>
-				<type>label</type>
-				<id>204</id>
-				<posX>343</posX>
-				<posY>555</posY>
-				<width>288</width>
-				<align>right</align>
-				<label>#tetris_level</label>
-			</control>
-			<control>
-				<description>Lines: label</description>
-				<type>label</type>
-				<id>205</id>
-				<posX>55</posX>
-				<posY>597</posY>
-				<label>19007</label>
-			</control>
-			<control>
-				<description>Lines</description>
-				<type>label</type>
-				<id>206</id>
-				<posX>343</posX>
-				<posY>597</posY>
-				<width>288</width>
-				<align>right</align>
-				<label>#tetris_lines</label>
-			</control>
-			<control>
-				<description>Highscore: label</description>
-				<type>label</type>
-				<id>205</id>
-				<posX>55</posX>
-				<posY>640</posY>
-				<label>19008</label>
-			</control>
-			<control>
-				<description>Highscore</description>
-				<type>label</type>
-				<id>206</id>
-				<posX>343</posX>
-				<posY>640</posY>
-				<width>288</width>
-				<align>right</align>
-				<label>#tetris_highscore</label>
-			</control>
+			<description>Score: label</description>
+			<type>label</type>
+			<id>201</id>
+			<posX>30</posX>
+			<posY>100</posY>
+			<label>19005</label>
 		</control>
 		<control>
-			<description>group element</description>
-			<type>group</type>
-			<control>
-				<description>Tetris control</description>
-				<type>tetris</type>
-				<id>10</id>
-				<posX>515</posX>
-				<posY>143</posY>
-				<width>702</width>
-				<height>562</height>
-				<font>font16</font>
-				<textcolor>ffffffff</textcolor>
-				<onback>2</onback>
-				<onleft>2</onleft>
-				<onright>10</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
-				<colordiffuse>30ffffff</colordiffuse>
-				<texture>tetris\background.png</texture>
-				<texturefocus>tetris\background_focus.png</texturefocus>
-				<textureLeft>tetris\guide.png</textureLeft>
-				<textureRight>tetris\guide.png</textureRight>
-				<nextblockx>580</nextblockx>
-				<nextblocky>208</nextblocky>
-			</control>
+			<description>Score</description>
+			<type>label</type>
+			<id>202</id>
+			<posX>343</posX>
+			<posY>100</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#tetris_score</label>
+		</control>
+		<control>
+			<description>Level: label</description>
+			<type>label</type>
+			<id>203</id>
+			<posX>30</posX>
+			<posY>140</posY>
+			<label>19006</label>
+		</control>
+		<control>
+			<description>Level</description>
+			<type>label</type>
+			<id>204</id>
+			<posX>343</posX>
+			<posY>140</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#tetris_level</label>
+		</control>
+		<control>
+			<description>Lines: label</description>
+			<type>label</type>
+			<id>205</id>
+			<posX>30</posX>
+			<posY>180</posY>
+			<label>19007</label>
+		</control>
+		<control>
+			<description>Lines</description>
+			<type>label</type>
+			<id>206</id>
+			<posX>343</posX>
+			<posY>180</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#tetris_lines</label>
+		</control>
+		<control>
+			<description>Highscore: label</description>
+			<type>label</type>
+			<id>205</id>
+			<posX>30</posX>
+			<posY>220</posY>
+			<label>19008</label>
+		</control>
+		<control>
+			<description>Highscore</description>
+			<type>label</type>
+			<id>206</id>
+			<posX>343</posX>
+			<posY>220</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#tetris_highscore</label>
+		</control>
+
+		<control>
+			<description>Tetris control</description>
+			<type>tetris</type>
+			<id>10</id>
+			<posX>510</posX>
+			<posY>103</posY>
+			<width>750</width>
+			<height>600</height>
+			<font>font16</font>
+			<textcolor>ffffffff</textcolor>
+			<onback>2</onback>
+			<onleft>2</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<colordiffuse>30ffffff</colordiffuse>
+			<texture>tetris\background.png</texture>
+			<texturefocus>tetris\background_focus.png</texturefocus>
+			<textureLeft>tetris\guide.png</textureLeft>
+			<textureRight>tetris\guide.png</textureRight>
+			<nextblockx>580</nextblockx>
+			<nextblocky>208</nextblocky>
 		</control>
 	</controls>
 </window>
