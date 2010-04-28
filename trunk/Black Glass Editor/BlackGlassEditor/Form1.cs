@@ -26,9 +26,11 @@ namespace BlackGlassEditor
         {
             InitializeComponent();
 
+            plugins.Add(new MPplugin(5000, "Alarm")); 
             plugins.Add(new MPplugin(6001, "Anime"));
             plugins.Add(new MPplugin(760, "Burner"));
             plugins.Add(new MPplugin(1987, "Clipta Video Search"));
+            plugins.Add(new MPplugin(7676, "Daily Comics"));
             plugins.Add(new MPplugin(63453335, "EarthTV"));
             plugins.Add(new MPplugin(330099, "Email Manager"));
             plugins.Add(new MPplugin(2497, "Emulators"));
@@ -37,15 +39,19 @@ namespace BlackGlassEditor
             plugins.Add(new MPplugin(7986, "Films"));
             plugins.Add(new MPplugin(557311, "File Explorer"));
             plugins.Add(new MPplugin(464554871, "FritzManager"));
+            plugins.Add(new MPplugin(16004, "GeckoBrowser"));
             plugins.Add(new MPplugin(30885, "Global Search"));
             plugins.Add(new MPplugin(7972, "HTPCInfo"));
             plugins.Add(new MPplugin(16001, "Infoservice RSS"));
             plugins.Add(new MPplugin(16003, "Infoservice Twitter"));
             plugins.Add(new MPplugin(6912, "Justin.tv"));
             plugins.Add(new MPplugin(7890, "Last.fm"));
-            plugins.Add(new MPplugin(90478, "Lyrics"));
+            plugins.Add(new MPplugin(90478, "Lyrics")); 
+            plugins.Add(new MPplugin(7980, "MediaTip"));
             plugins.Add(new MPplugin(8765, "Media Slayer"));
+            plugins.Add(new MPplugin(16581, "Meteo.hr"));
             plugins.Add(new MPplugin(96742, "Moving Pictures"));
+            plugins.Add(new MPplugin(801, "MpeInstaller"));
             plugins.Add(new MPplugin(3847, "MpNZB"));
             plugins.Add(new MPplugin(0, "Multishortcut"));
             plugins.Add(new MPplugin(501, "Music"));
@@ -2899,7 +2905,7 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#infoservice.weather.today.temp  .  #infoservice.weather.today.humidity  .  #infoservice.weather.today.condition  .  #infoservice.weather.location</label>
+			<label>#infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location</label>
 			<align>center</align>
 			<font>font11</font>
 			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + weather_button + @")</visible>
@@ -2913,8 +2919,7 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>Latest episode added: #infoservice.recentlyAdded.series[1].title  .  Season #infoservice.recentlyAdded.series[1].season  .  Episode #infoservice.recentlyAdded.series[1].episodenumber  .  #infoservice.recentlyAdded.series[1].episodetitle</label>
-			<align>center</align>
+			<label>Recently added:     #infoservice.recentlyAdded.series1.title     Season #infoservice.recentlyAdded.series1.season     Episode #infoservice.recentlyAdded.series1.episodenumber     #infoservice.recentlyAdded.series1.episodetitle</label>			<align>center</align>
 			<font>font11</font>
 			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + tvseries_button + @")+plugin.isenabled(MP-TV Series)</visible>
 			<textcolor>90ffffff</textcolor>
@@ -2927,7 +2932,7 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>Latest movie added: #infoservice.recentlyAdded.movie[1].title</label>
+			<label>Recently added:     #infoservice.recentlyAdded.movie1.title</label>
 			<align>center</align>
 			<font>font11</font>
 			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Moving Pictures)</visible>
