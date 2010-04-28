@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
-	<id>15634330</id>
+	<id>15634331</id>
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-	<define>#header.label:StreamRadio</define>
+	<define>#header.label:StreamRadio Recordings</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
+		<import>common.facade.background.xml</import>
+		<import>common.facade.pictures.xml</import>
+
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -92,36 +95,9 @@
 					<onup>2</onup>
 					<ondown>9</ondown>
 				</control>
-				<control>
-					<description>Record</description>
-					<type>togglebutton</type>
-					<id>9</id>
-					<label>601</label>
-					<onright>50</onright>
-					<onup>3</onup>
-					<ondown>11</ondown>
-				</control>  
-				<control>
-					<description>Recordings</description>
-					<type>button</type>
-					<id>11</id>
-					<label>914</label>
-					<onright>50</onright>
-					<onup>9</onup>
-					<ondown>902</ondown>
-				</control>
-				<control>
-					<description>Favorites</description>
-					<type>button</type>
-					<id>902</id>
-					<label>Favorites</label>
-					<action>106</action>
-					<onright>50</onright>
-					<onup>11</onup>
-					<ondown>2</ondown>
-				</control>  		
 			</control>   
 		</control>
+
 		<control>
 			<type>image</type>
 			<posX>40</posX>
@@ -170,8 +146,5 @@
 			<animation effect="fade" time="250">visiblechange</animation>
 			<wrapString> : : : </wrapString>
 		</control>
-
-		<import>common.facade.background.xml</import>
-		<import>common.facade.pictures.xml</import>
 	</controls>
 </window>
