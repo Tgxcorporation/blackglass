@@ -1,14 +1,15 @@
 <window>
-	<id>5555</id>
+	<id>04071975</id>
 	<defaultcontrol>2</defaultcontrol>
 	<allowoverlay>[facadeview.filmstrip|facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-	<define>#header.label:ClickMania</define>
+	<define>#header.label:Simon Says</define>
 	<define>#header.background:bg.jpg</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
+		
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -18,67 +19,8 @@
 			<height>766</height>
 			<texture>bg_facade.png</texture>
 		</control>
-		<control>
-			<type>label</type>
-			<description>Score: label</description>
-			<id>201</id>
-			<posX>30</posX>
-			<posY>100</posY>
-			<label>19005</label>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Score</description>
-			<id>202</id>
-			<posX>343</posX>
-			<posY>100</posY>
-			<label>#cm_score</label>
-			<align>right</align>
-		</control> 
-		<control>
-			<type>label</type>
-			<description>Highscore: label</description>
-			<id>203</id>
-			<posX>30</posX>
-			<posY>140</posY>
-			<label>19008</label>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Highscore</description>
-			<id>204</id>
-			<posX>343</posX>
-			<posY>140</posY>
-			<label>#cm_highscore</label>
-			<align>right</align>
-		</control>
-
-		<control>
-			<type>clickmania</type>
-			<description>ClickMania control</description>
-			<id>10</id>
-			<posX>621</posX>
-			<posY>103</posY>
-			<width>528</width>
-			<height>600</height>
-			<colordiffuse>60ffffff</colordiffuse>
-			<onleft>2</onleft>
-			<onright>2</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
-			<nextblocky>100</nextblocky>
-			<texturefocus>panel_focus.png</texturefocus>
-			<texture>panel_focus.png</texture>
-			<font>font18</font>
-			<textcolor>ff000000</textcolor>
-			<onback>2</onback>
-		</control>
-
-
-
 
 		<!-- MENU -->
-
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -117,7 +59,7 @@
 				<height>720</height>
 				<texture>bg_left.png</texture>
 				<colorDiffuse>ffffffff</colorDiffuse>
-				<visible>!control.hasfocus(10)</visible>
+				<visible>!control.hasfocus(50)</visible>
 			</control>
 			<control>
 				<type>label</type>
@@ -144,23 +86,23 @@
 				<animation effect="fade" time="450" reversible="true">hidden</animation>
 				<posX>0</posX>
 				<posY>100</posY>
-				<visible>!control.hasfocus(10)</visible>
+				<visible>!control.hasfocus(50)</visible>
 				<layout>StackLayout</layout>
 				<control>
 					<description>New Game</description>
 					<type>button</type>
 					<id>2</id>
-					<label>19002</label>
-					<onright>10</onright>
+					<onleft>2</onleft>
+					<onright>50</onright>
 					<onup>17</onup>
-					<ondown>8</ondown>
+					<ondown>3</ondown>
 				</control>
 				<control>
 					<type>button</type>
-					<description>Take back last move</description>
-					<id>8</id>
-					<label>Take back</label>
-					<onright>10</onright>
+					<description>Level</description>
+					<id>3</id>
+					<onleft>3</onleft>
+					<onright>50</onright>
 					<onup>2</onup>
 					<ondown>4</ondown>
 				</control>
@@ -168,21 +110,100 @@
 					<type>togglebutton</type>
 					<description>Sounds</description>
 					<id>4</id>
-					<label>19004</label>
-					<onright>10</onright>
-					<onup>8</onup>
+					<onleft>4</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
 					<ondown>6</ondown>
 				</control> 
 				<control>
-					<type>togglebutton</type>
-					<description>Keyboard</description>
+					<description>What is this?</description>
+					<type>button</type>
 					<id>6</id>
-					<label>Keyboard</label>
-					<onright>10</onright>
+					<onleft>6</onleft>
+					<onright>50</onright>
 					<onup>4</onup>
 					<ondown>2</ondown>
 				</control>
 			</control>
 		</control>
-	</controls>
+
+		<control>
+			<description>Round</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>100</posY>
+			<width>380</width>
+			<label>#Round</label>
+		</control>
+		<control>
+			<description>Player: / GameOver</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>140</posY>
+			<width>380</width>
+			<label>#Player</label>
+		</control>
+		
+		<control>
+			<description>Dummy button for hidden menu</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>400</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+
+		<!-- *********************** Game *********************** -->
+		
+		<control>
+			<type>button</type>
+			<id>101</id>
+			<posX>590</posX>
+			<posY>110</posY>
+			<width>290</width>
+			<height>290</height>
+			<textureFocus>#Senso1</textureFocus>
+			<textureNoFocus>#Senso1</textureNoFocus>
+		</control>
+		<control>
+			<type>button</type>
+			<id>102</id>
+			<posX>880</posX>
+			<posY>110</posY>
+			<width>290</width>
+			<height>290</height>
+			<textureFocus>#Senso2</textureFocus>
+			<textureNoFocus>#Senso2</textureNoFocus>
+		</control>
+		<control>
+			<type>button</type>
+			<id>103</id>
+			<posX>590</posX>
+			<posY>400</posY>
+			<width>290</width>
+			<height>290</height>
+			<textureFocus>#Senso3</textureFocus>
+			<textureNoFocus>#Senso3</textureNoFocus>
+		</control>
+		<control>
+			<type>button</type>
+			<id>104</id>
+			<posX>880</posX>
+			<posY>400</posY>
+			<width>290</width>
+			<height>290</height>
+			<textureFocus>#Senso4</textureFocus>
+			<textureNoFocus>#Senso4</textureNoFocus>
+		</control>
+  </controls>
 </window>
