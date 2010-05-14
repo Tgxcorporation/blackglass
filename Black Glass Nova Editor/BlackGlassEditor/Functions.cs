@@ -8,6 +8,48 @@ using System.Drawing.Imaging;
 
 namespace BlackGlassEditor
 {
+    static class BlackGlassDirClass
+    {
+        private static string m_globalVar = "";
+
+        public static string Path
+        {
+            get { return m_globalVar; }
+            set { m_globalVar = value; }
+        }
+    }
+
+    public class MPplugin
+    {
+        private int _hyperlink;
+        private string _name;
+        private string _hover;
+
+        public int Hyperlink
+        {
+            get { return _hyperlink; }
+            set { _hyperlink = value; }
+        }
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public string Hover
+        {
+            get { return _hover; }
+            set { _hover = value; }
+        }
+
+        public MPplugin() { }
+        public MPplugin(int hyperlink, string name, string hover)
+        {
+            this._hyperlink = hyperlink;
+            this._name = name;
+            this._hover = hover;
+        }
+    }
+    
     class Functions
     {
 
@@ -160,7 +202,41 @@ namespace BlackGlassEditor
             return null;
         }
 
-       
+        public static Image MakeGrayscale(Image original)
+        {
+            //create a blank bitmap the same size as original
+            Bitmap newBitmap = new Bitmap(original.Width, original.Height);
+
+            //get a graphics object from the new image
+            Graphics g = Graphics.FromImage(newBitmap);
+
+            //create the grayscale ColorMatrix
+            ColorMatrix colorMatrix = new ColorMatrix(
+               new float[][] 
+      {
+         new float[] {.3f, .3f, .3f, 0, 0},
+         new float[] {.59f, .59f, .59f, 0, 0},
+         new float[] {.11f, .11f, .11f, 0, 0},
+         new float[] {0, 0, 0, 1, 0},
+         new float[] {0, 0, 0, 0, 1}
+      });
+
+            //create some image attributes
+            ImageAttributes attributes = new ImageAttributes();
+
+            //set the color matrix attribute
+            attributes.SetColorMatrix(colorMatrix);
+
+            //draw the original image on the new image
+            //using the grayscale color matrix
+            g.DrawImage(original, new Rectangle(0, 0, original.Width, original.Height),
+               0, 0, original.Width, original.Height, GraphicsUnit.Pixel, attributes);
+
+            //dispose the Graphics object
+            g.Dispose();
+            return newBitmap;
+        }
+
     }
 
 
