@@ -18,9 +18,12 @@
 			<width>418</width>
 			<height>714</height>
 			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
+			<colordiffuse>a0ffffff</colordiffuse>
 			<animation effect="fade" delay="250" time="250">WindowOpen</animation>
-			<animation effect="fade" time="0">WindowClose</animation>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50" reversible="false">visible</animation>
+			<animation effect="fade" time="150" reversible="false">hidden</animation>
+			<visible>control.hasfocus(99)</visible>
 		</control>
 		<control>
 			<type>actiongroup</type>
@@ -36,10 +39,11 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>00ffffff</dimColor>
-			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
-			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
-			<animation effect="slide" time="250" start="-400,0" reversible="true">WindowOpen</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>				
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-400,0" reversible="false">visible</animation>
+			<animation effect="fade" time="300" start="40" reversible="false">visible</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-400,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="300" start="40" reversible="false">WindowOpen</animation>			
 			<control>
 				<type>image</type>
 				<id>1</id>
@@ -73,66 +77,66 @@
 			<control>
 				<type>group</type>
 				<layout>StackLayout</layout>
-				<visible>!control.hasfocus(99)</visible>
-				<animation effect="fade" time="450" reversible="true">visible</animation>
-				<animation effect="fade" time="450" reversible="true">hidden</animation>
 				<posX>0</posX>
 				<posY>100</posY>
-			<control>
-				<description>Quick Record</description>
-				<type>button</type>
-				<id>2</id>
-				<label>781</label>
-				<onup>17</onup>
-				<ondown>3</ondown>
-				<onright>99</onright>
+				<visible>!control.hasfocus(99)</visible>
+				<animation effect="fade" time="300" reversible="false">visible</animation>
+				<animation effect="fade" time="300" reversible="false">hidden</animation>
+				<control>
+					<description>Quick Record</description>
+					<type>button</type>
+					<id>2</id>
+					<label>781</label>
+					<onup>17</onup>
+					<ondown>3</ondown>
+					<onright>99</onright>
+				</control>
+				<control>
+					<description>Advanced record</description>
+					<type>button</type>
+					<id>3</id>
+					<label>782</label>
+					<onup>2</onup>
+					<ondown>6</ondown>
+					<onright>99</onright>
+				</control>
+				<control>
+					<description>TvGuide</description>
+					<type>button</type>
+					<id>6</id>
+					<label>4</label>
+					<onup>3</onup>
+					<ondown>7</ondown>
+					<onright>99</onright>
+				</control>
+				<control>
+					<description>Search by title</description>
+					<type>button</type>
+					<id>7</id>
+					<label>6032</label>
+					<onup>6</onup>
+					<ondown>8</ondown>
+					<onright>99</onright>
+				</control>
+				<control>
+					<description>Search by keyword</description>
+					<type>button</type>
+					<id>8</id>
+					<label>6033</label>
+					<onup>7</onup>
+					<ondown>9</ondown>
+					<onright>99</onright>
+				</control>
+				<control>
+					<description>Search by genre</description>
+					<type>button</type>
+					<id>9</id>
+					<label>6034</label>
+					<onup>8</onup>
+					<ondown>10</ondown>
+					<onright>99</onright>
+				</control>
 			</control>
-			<control>
-				<description>Advanced record</description>
-				<type>button</type>
-				<id>3</id>
-				<label>782</label>
-				<onup>2</onup>
-				<ondown>6</ondown>
-				<onright>99</onright>
-			</control>
-			<control>
-				<description>TvGuide</description>
-				<type>button</type>
-				<id>6</id>
-				<label>4</label>
-				<onup>3</onup>
-				<ondown>7</ondown>
-				<onright>99</onright>
-			</control>
-			<control>
-				<description>Search by title</description>
-				<type>button</type>
-				<id>7</id>
-				<label>6032</label>
-				<onup>6</onup>
-				<ondown>8</ondown>
-				<onright>99</onright>
-			</control>
-			<control>
-				<description>Search by keyword</description>
-				<type>button</type>
-				<id>8</id>
-				<label>6033</label>
-				<onup>7</onup>
-				<ondown>9</ondown>
-				<onright>99</onright>
-			</control>
-			<control>
-				<description>Search by genre</description>
-				<type>button</type>
-				<id>9</id>
-				<label>6034</label>
-				<onup>8</onup>
-				<ondown>10</ondown>
-				<onright>99</onright>
-			</control>
-		</control>
 		</control>
 	</controls>
 </window>

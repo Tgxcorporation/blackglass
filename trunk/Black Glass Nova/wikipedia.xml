@@ -11,109 +11,7 @@
 	<controls>
 		<import>common.time.xml</import>
 		<import>common.window.xml</import>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-386</posX>
-			<posY>3</posY>
-			<width>418</width>
-			<height>714</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<animation effect="fade" delay="250" time="250">WindowOpen</animation>
-			<animation effect="fade" time="50">WindowClose</animation>
-		</control>
-		<control>
-			<type>actiongroup</type>
-			<description>action menu</description>
-			<defaultcontrol>2</defaultcontrol>
-			<onexit>0</onexit>
-			<buttonX>0</buttonX>
-			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
-			<buttonheight>720</buttonheight>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<width>425</width>
-			<height>720</height>
-			<dimColor>00ffffff</dimColor>
-			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
-			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
-			<animation effect="slide" time="250" start="-400,0" reversible="true">WindowOpen</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>418</width>
-				<height>720</height>
-				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
-				<visible>!control.hasfocus(20)</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<id>1</id>
-				<posX>30</posX>
-				<posY>35</posY>
-				<label>924</label>
-				<font>font24</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-			</control> 
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>47</posY>
-				<width>385</width>
-				<height>53</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
-
-			<control>
-				<description>group element</description>
-				<type>group</type>
-				<animation effect="fade" time="450" reversible="true">visible</animation>
-				<animation effect="fade" time="450" reversible="true">hidden</animation>
-				<posX>0</posX>
-				<posY>100</posY>
-				<visible>!control.hasfocus(20)</visible>
-				<layout>StackLayout</layout>
-				<control>
-					<description>Search Button</description>
-					<type>button</type>
-					<id>10</id>
-					<onup>17</onup>
-					<label>137</label>
-				</control>
-				<control>
-					<description>Select local Wikipedia Button</description>
-					<type>button</type>
-					<id>11</id>
-					<label>200025</label>
-				</control>
-				<control>
-					<description>Links Button</description>
-					<type>button</type>
-					<id>12</id>
-					<label>2511</label>
-				</control>
-				<control>
-					<description>Images Button</description>
-					<type>button</type>
-					<id>13</id>
-					<ondown>99</ondown>
-					<label>2515</label>
-				</control>
-				<control>
-					<description>Back to the text (when viewing an image)</description>
-					<type>button</type>
-					<id>14</id>
-					<label>2514</label>
-					<visible>no</visible>
-				</control>
-			</control>
-		</control>
+		
 		<control>
 			<type>image</type>
 			<posX>458</posX>
@@ -193,6 +91,114 @@
 			<colordiffuse>White</colordiffuse>
 			<centered>no</centered>
 			<keepaspectratio>yes</keepaspectratio>
+		</control>
+		
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colordiffuse>a0ffffff</colordiffuse>
+			<animation effect="fade" delay="250" time="250">WindowOpen</animation>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50" reversible="false">visible</animation>
+			<animation effect="fade" time="150" reversible="false">hidden</animation>
+			<visible>control.hasfocus(20)</visible>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>00ffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-400,0" reversible="false">visible</animation>
+			<animation effect="fade" time="300" start="40" reversible="false">visible</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-400,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="300" start="40" reversible="false">WindowOpen</animation>			
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(20)</visible>
+			</control>
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>100</posY>
+				<layout>StackLayout</layout>
+				<visible>!control.hasfocus(20)</visible>
+				<animation effect="fade" time="300" reversible="false">visible</animation>
+				<animation effect="fade" time="300" reversible="false">hidden</animation>
+				<control>
+					<description>Search Button</description>
+					<type>button</type>
+					<id>10</id>
+					<onup>17</onup>
+					<label>137</label>
+				</control>
+				<control>
+					<description>Select local Wikipedia Button</description>
+					<type>button</type>
+					<id>11</id>
+					<label>200025</label>
+				</control>
+				<control>
+					<description>Links Button</description>
+					<type>button</type>
+					<id>12</id>
+					<label>2511</label>
+				</control>
+				<control>
+					<description>Images Button</description>
+					<type>button</type>
+					<id>13</id>
+					<ondown>99</ondown>
+					<label>2515</label>
+				</control>
+				<control>
+					<description>Back to the text (when viewing an image)</description>
+					<type>button</type>
+					<id>14</id>
+					<label>2514</label>
+					<visible>no</visible>
+				</control>
+			</control>
 		</control>
 	</controls>
 </window>

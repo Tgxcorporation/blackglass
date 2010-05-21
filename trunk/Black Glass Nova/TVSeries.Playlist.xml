@@ -210,8 +210,11 @@
 			<width>418</width>
 			<height>714</height>
 			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
+			<colordiffuse>a0ffffff</colordiffuse>
 			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50" reversible="false">visible</animation>
+			<animation effect="fade" time="150" reversible="false">hidden</animation>
+			<visible>control.hasfocus(50)</visible>
 		</control>
 		<control>
 			<type>actiongroup</type>
@@ -227,9 +230,9 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>00ffffff</dimColor>
-			<animation effect="slide" time="450" start="-400,0" reversible="true">visible</animation>
-			<animation effect="slide" time="450" end="-400,0" reversible="true">hidden</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-400,0" reversible="false">visible</animation>
+			<animation effect="fade" time="300" start="40" reversible="false">visible</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
 			<control>
 				<type>image</type>
 				<posX>0</posX>
@@ -261,106 +264,101 @@
 			<control>
 				<description>group element</description>
 				<type>group</type>
-
+				<posX>0</posX>
+				<posY>100</posY>
+				<layout>StackLayout</layout>
+				<visible>!control.hasfocus(50)</visible>
+				<animation effect="fade" time="300" reversible="false">visible</animation>
+				<animation effect="fade" time="300" reversible="false">hidden</animation>
 				<control>
-					<description>group element</description>
-					<type>group</type>
-					<animation effect="slide" time="450" start="-300,0" reversible="false">visible</animation>
-					<animation effect="slide" time="450" end="-300,0" reversible="false">hidden</animation>
-					<posX>0</posX>
-					<posY>100</posY>
-					<visible>!control.hasfocus(50)</visible>
-					<layout>StackLayout</layout>
-					<control>
-						<description>View-As button</description>
-						<type>button</type>
-						<id>2</id>
-						<label>100</label>
-						<onright>50</onright>
-						<onup>9</onup>
-						<ondown>20</ondown>
-					</control>
-					<control>
-						<description>Shuffle button</description>
-						<type>button</type>
-						<id>20</id>
-						<label>191</label>
-						<onright>50</onright>
-						<onup>2</onup>
-						<ondown>30</ondown>
-					</control>
-					<control>
-						<description>Repeat on/off button</description>
-						<type>togglebutton</type>
-						<id>30</id>
-						<label>486</label>
-						<onright>50</onright>
-						<onup>20</onup>
-						<ondown>40</ondown>
-					</control>
-					<control>
-						<description>Autoplay on/off button</description>
-						<type>togglebutton</type>
-						<id>40</id>
-						<label>713</label>
-						<onright>50</onright>
-						<onup>30</onup>
-						<ondown>21</ondown>
-					</control>
-					<control>
-						<description>Save button</description>
-						<type>button</type>
-						<id>21</id>
-						<label>190</label>
-						<onright>50</onright>
-						<onup>40</onup>
-						<ondown>22</ondown>
-					</control>
-					<control>
-						<description>Clear button</description>
-						<type>button</type>
-						<id>22</id>
-						<label>192</label>
-						<onright>50</onright>
-						<onup>21</onup>
-						<ondown>23</ondown>
-					</control>
-					<control>
-						<description>Play button</description>
-						<type>button</type>
-						<id>23</id>
-						<label>208</label>
-						<onright>50</onright>
-						<onup>22</onup>
-						<ondown>24</ondown>
-					</control>
-					<control>
-						<description>Next button</description>
-						<type>button</type>
-						<id>24</id>
-						<label>209</label>
-						<onright>50</onright>
-						<onup>23</onup>
-						<ondown>25</ondown>
-					</control>
-					<control>
-						<description>Previous button</description>
-						<type>button</type>
-						<id>25</id>
-						<label>210</label>
-						<onright>50</onright>
-						<onup>24</onup>
-						<ondown>9</ondown>
-					</control>
-					<control>
-						<description>My Playlists</description>
-						<type>button</type>
-						<id>9</id>
-						<label>983</label>
-						<onright>50</onright>
-						<ondown>2</ondown>
-						<onup>25</onup>
-					</control>
+					<description>View-As button</description>
+					<type>button</type>
+					<id>2</id>
+					<label>100</label>
+					<onright>50</onright>
+					<onup>9</onup>
+					<ondown>20</ondown>
+				</control>
+				<control>
+					<description>Shuffle button</description>
+					<type>button</type>
+					<id>20</id>
+					<label>191</label>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>30</ondown>
+				</control>
+				<control>
+					<description>Repeat on/off button</description>
+					<type>togglebutton</type>
+					<id>30</id>
+					<label>486</label>
+					<onright>50</onright>
+					<onup>20</onup>
+					<ondown>40</ondown>
+				</control>
+				<control>
+					<description>Autoplay on/off button</description>
+					<type>togglebutton</type>
+					<id>40</id>
+					<label>713</label>
+					<onright>50</onright>
+					<onup>30</onup>
+					<ondown>21</ondown>
+				</control>
+				<control>
+					<description>Save button</description>
+					<type>button</type>
+					<id>21</id>
+					<label>190</label>
+					<onright>50</onright>
+					<onup>40</onup>
+					<ondown>22</ondown>
+				</control>
+				<control>
+					<description>Clear button</description>
+					<type>button</type>
+					<id>22</id>
+					<label>192</label>
+					<onright>50</onright>
+					<onup>21</onup>
+					<ondown>23</ondown>
+				</control>
+				<control>
+					<description>Play button</description>
+					<type>button</type>
+					<id>23</id>
+					<label>208</label>
+					<onright>50</onright>
+					<onup>22</onup>
+					<ondown>24</ondown>
+				</control>
+				<control>
+					<description>Next button</description>
+					<type>button</type>
+					<id>24</id>
+					<label>209</label>
+					<onright>50</onright>
+					<onup>23</onup>
+					<ondown>25</ondown>
+				</control>
+				<control>
+					<description>Previous button</description>
+					<type>button</type>
+					<id>25</id>
+					<label>210</label>
+					<onright>50</onright>
+					<onup>24</onup>
+					<ondown>9</ondown>
+				</control>
+				<control>
+					<description>My Playlists</description>
+					<type>button</type>
+					<id>9</id>
+					<label>983</label>
+					<onright>50</onright>
+					<ondown>2</ondown>
+					<onup>25</onup>
 				</control>
 			</control>
 		</control>

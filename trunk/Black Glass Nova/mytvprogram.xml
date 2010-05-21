@@ -181,9 +181,12 @@
 			<width>418</width>
 			<height>714</height>
 			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
+			<colordiffuse>a0ffffff</colordiffuse>
 			<animation effect="fade" delay="250" time="250">WindowOpen</animation>
 			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50" reversible="false">visible</animation>
+			<animation effect="fade" time="150" reversible="false">hidden</animation>
+			<visible>control.hasfocus(10)</visible>
 		</control>
 		<control>
 			<type>actiongroup</type>
@@ -199,10 +202,11 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>00ffffff</dimColor>
-			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
-			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
-			<animation effect="slide" time="250" start="-400,0" reversible="true">WindowOpen</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-400,0" reversible="false">visible</animation>
+			<animation effect="fade" time="300" start="40" reversible="false">visible</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-400,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="300" start="40" reversible="false">WindowOpen</animation>			
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -236,12 +240,12 @@
 			<control>
 				<description>group element</description>
 				<type>group</type>
-				<animation effect="fade" time="450" reversible="true">visible</animation>
-				<animation effect="fade" time="450" reversible="true">hidden</animation>
 				<posX>0</posX>
 				<posY>100</posY>
-				<visible>!control.hasfocus(10)</visible>
 				<layout>StackLayout</layout>
+				<visible>!control.hasfocus(10)</visible>
+				<animation effect="fade" time="300" reversible="false">visible</animation>
+				<animation effect="fade" time="300" reversible="false">hidden</animation>
 				<control>
 					<description>Record</description>
 					<type>button</type>
