@@ -34,7 +34,6 @@
 			<texture>bg_tvguide.png</texture>
 			<visible>![control.isvisible(1200)|control.isvisible(1000)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
-
 		</control>
 
 		<control>
@@ -71,7 +70,6 @@
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>![control.isvisible(1200)|control.isvisible(1000)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
-
 		</control>
 
 		<control>
@@ -359,7 +357,7 @@
 				<type>label</type>
 				<id>34</id>
 				<posX>507</posX>
-				<posY>700</posY>
+				<posY>900</posY>
 				<label>-</label>
 				<font>font14</font>
 				<textcolor>White</textcolor>
@@ -422,7 +420,7 @@
 				<type>label</type>
 				<id>44</id>
 				<posX>669</posX>
-				<posY>700</posY>
+				<posY>900</posY>
 				<label>-</label>
 				<font>font14</font>
 				<textcolor>White</textcolor>
@@ -487,7 +485,7 @@
 				<type>label</type>
 				<id>54</id>
 				<posX>835</posX>
-				<posY>700</posY>
+				<posY>900</posY>
 				<label>-</label>
 				<font>font14</font>
 				<textcolor>White</textcolor>
@@ -552,7 +550,7 @@
 				<type>label</type>
 				<id>64</id>
 				<posX>1000</posX>
-				<posY>700</posY>
+				<posY>900</posY>
 				<label>-</label>
 				<font>font14</font>
 				<textcolor>White</textcolor>
@@ -616,7 +614,7 @@
 				<type>label</type>
 				<id>74</id>
 				<posX>1166</posX>
-				<posY>700</posY>
+				<posY>900</posY>
 				<label>-</label>
 				<font>font14</font>
 				<textcolor>White</textcolor>
@@ -742,20 +740,6 @@
 		<!-- HIDDEN MENU -->
 
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-386</posX>
-			<posY>3</posY>
-			<width>418</width>
-			<height>714</height>
-			<texture>bg_left.png</texture>
-			<colordiffuse>a0ffffff</colordiffuse>
-			<animation effect="fade" time="50">WindowClose</animation>
-			<animation effect="fade" time="50" reversible="false">visible</animation>
-			<animation effect="fade" time="150" reversible="false">hidden</animation>
-			<visible>control.hasfocus(50)</visible>
-		</control>
-		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
@@ -768,12 +752,25 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
-			<dimColor>00ffffff</dimColor>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-400,0" reversible="false">visible</animation>
-			<animation effect="fade" time="300" start="40" reversible="false">visible</animation>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-400,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
 			<control>
-
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)</visible>
+			</control>
+			<control>
 				<type>image</type>
 				<id>0</id>
 				<posX>0</posX>
@@ -782,19 +779,17 @@
 				<height>720</height>
 				<texture>bg_left.png</texture>
 				<colorDiffuse>ffffffff</colorDiffuse>
-				<visible>!control.hasfocus(50)</visible>
 			</control>
-
 			<control>
+				<id>0</id>
 				<type>label</type>
-				<id>1</id>
 				<posX>30</posX>
 				<posY>35</posY>
 				<label>924</label>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
-			</control> 
+			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -805,14 +800,10 @@
 				<texture>bg_button_nofocus.png</texture>
 			</control>
 			<control>
-				<description>group element</description>
 				<type>group</type>
+				<layout>StackLayout</layout>
 				<posX>0</posX>
 				<posY>100</posY>
-				<layout>StackLayout</layout>
-				<visible>!control.hasfocus(50)</visible>
-				<animation effect="fade" time="300" reversible="false">visible</animation>
-				<animation effect="fade" time="300" reversible="false">hidden</animation>
 				<control>
 					<description>Switch Button</description>
 					<type>button</type>
