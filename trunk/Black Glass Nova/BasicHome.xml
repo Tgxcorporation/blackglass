@@ -95,16 +95,6 @@
 
 		<!-- UPPER BUTTONS -->
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>535</posX>
-			<posY>-188</posY>
-			<width>210</width>
-			<height>210</height>
-			<texture>bg_basichome_slide.png</texture>
-			<colordiffuse>ffffffff</colordiffuse>
-		</control>
-		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>18</defaultcontrol>
@@ -117,9 +107,21 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>200</width>
 			<height>60</height>
-			<dimColor>00ffffff</dimColor>
-			<animation effect="slide" time="250" start="0,-200" reversible="false">visible</animation>
-			<animation effect="slide" time="250" end="0,-200" reversible="false">hidden</animation>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,-25" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="0,-25" reversible="false">hidden</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>[control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)]</visible>
+			</control>	
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -129,14 +131,10 @@
 				<height>210</height>
 				<texture>bg_basichome_slide.png</texture>
 				<colorDiffuse>ffffffff</colorDiffuse>
-				<visible>![control.hasfocus(100)|control.hasfocus(101)|control.hasfocus(102)|control.hasfocus(103)|control.hasfocus(104)|control.hasfocus(105)|control.hasfocus(106)|control.hasfocus(107)|control.hasfocus(108)|control.hasfocus(109)|control.hasfocus(110)|control.hasfocus(111)|control.hasfocus(112)|control.hasfocus(113)|control.hasfocus(114)]</visible>
 			</control>
 			<control>
 				<description>group element</description>
 				<type>group</type>
-				<animation effect="fade" time="450" reversible="false">visible</animation>
-				<animation effect="fade" time="450" reversible="false">hidden</animation>
-				<visible>![control.hasfocus(100)|control.hasfocus(101)|control.hasfocus(102)|control.hasfocus(103)|control.hasfocus(104)|control.hasfocus(105)|control.hasfocus(106)|control.hasfocus(107)|control.hasfocus(108)|control.hasfocus(109)|control.hasfocus(110)|control.hasfocus(111)|control.hasfocus(112)|control.hasfocus(113)|control.hasfocus(114)]</visible>
 				<control>
 					<description>shutdown button</description>
 					<type>button</type>
