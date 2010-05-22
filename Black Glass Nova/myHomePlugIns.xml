@@ -112,15 +112,6 @@
 
 		<!-- LEFT BUTTONS -->
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-190</posX>
-			<posY>255</posY>
-			<width>210</width>
-			<height>210</height>
-			<texture>bg_basichome_slide.png</texture>
-		</control>
-		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>18</defaultcontrol>
@@ -133,9 +124,21 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>60</width>
 			<height>200</height>
-			<dimColor>00ffffff</dimColor>
-			<animation effect="slide" time="250" start="-200,0" reversible="false">visible</animation>
-			<animation effect="slide" time="250" end="-200,0" reversible="false">hidden</animation>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-25,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-25,0" reversible="false">hidden</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>[control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)]</visible>
+			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -144,14 +147,10 @@
 				<width>210</width>
 				<height>210</height>
 				<texture>bg_basichome_slide.png</texture>
-				<visible>![control.hasfocus(50)]</visible>
 			</control>
 			<control>
 				<description>group element</description>
 				<type>group</type>
-				<animation effect="fade" time="450" reversible="false">visible</animation>
-				<animation effect="fade" time="450" reversible="false">hidden</animation>
-				<visible>![control.hasfocus(50)]</visible>
 				<control>
 					<description>shutdown button</description>
 					<type>button</type>
