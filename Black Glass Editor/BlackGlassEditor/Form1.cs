@@ -1743,23 +1743,23 @@ namespace BlackGlassEditor
 
 
 
-                try
-                {
-                    ImageCodecInfo jgpEncoder = Functions.GetEncoder(ImageFormat.Jpeg);
+                //try
+                //{
+                //    ImageCodecInfo jgpEncoder = Functions.GetEncoder(ImageFormat.Jpeg);
 
-                    System.Drawing.Imaging.Encoder myEncoder = System.Drawing.Imaging.Encoder.Quality;
-                    EncoderParameters myEncoderParameters = new EncoderParameters(1);
+                //    System.Drawing.Imaging.Encoder myEncoder = System.Drawing.Imaging.Encoder.Quality;
+                //    EncoderParameters myEncoderParameters = new EncoderParameters(1);
 
-                    EncoderParameter myEncoderParameter = new EncoderParameter(myEncoder, 100L);
-                    myEncoderParameters.Param[0] = myEncoderParameter;
+                //    EncoderParameter myEncoderParameter = new EncoderParameter(myEncoder, 100L);
+                //    myEncoderParameters.Param[0] = myEncoderParameter;
 
-                    finalImage.Save(BlackGlassDirClass.Path + "\\Media\\bg_homefull.jpg", jgpEncoder, myEncoderParameters);
-                    toolStripStatusLabel1.Text = "Theme Files Saved Succesfully";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: Could not save bg_homefull.jpg to disk. Original error: " + ex.Message);
-                }
+                //    finalImage.Save(BlackGlassDirClass.Path + "\\Media\\bg_homefull.jpg", jgpEncoder, myEncoderParameters);
+                //    toolStripStatusLabel1.Text = "Theme Files Saved Succesfully";
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show("Error: Could not save bg_homefull.jpg to disk. Original error: " + ex.Message);
+                //}
 
 
                 //CREA preview.png
