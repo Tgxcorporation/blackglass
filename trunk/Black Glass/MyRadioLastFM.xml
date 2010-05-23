@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
 	<id>7890</id>
-	<defaultcontrol>123</defaultcontrol>
+	<defaultcontrol>10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<define>#header.label:34000</define>
 	<define>#selecteditem:#Play.Current.Lastfm.CurrentStream</define>
@@ -238,17 +238,6 @@
 
 
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-386</posX>
-			<posY>3</posY>
-			<width>418</width>
-			<height>714</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<animation effect="fade" time="50">WindowClose</animation>
-		</control>
-		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>10</defaultcontrol>
@@ -261,32 +250,47 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
-			<dimColor>00ffffff</dimColor>
-			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
-			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
 			<control>
 				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
 				<posX>0</posX>
 				<posY>0</posY>
 				<width>418</width>
 				<height>720</height>
 				<texture>bg_left.png</texture>
 				<colorDiffuse>ffffffff</colorDiffuse>
-				<visible>!control.hasfocus(123)</visible>
 			</control>
 			<control>
+				<id>0</id>
 				<type>label</type>
-				<id>1</id>
 				<posX>30</posX>
 				<posY>35</posY>
 				<label>924</label>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
-			</control> 
+			</control>
 			<control>
 				<type>image</type>
+				<id>0</id>
 				<posX>0</posX>
 				<posY>47</posY>
 				<width>385</width>
@@ -294,20 +298,14 @@
 				<texture>bg_button_nofocus.png</texture>
 			</control>
 			<control>
-				<description>group element</description>
 				<type>group</type>
-				<animation effect="fade" time="450" reversible="true">visible</animation>
-				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<layout>StackLayout</layout>
 				<posX>0</posX>
 				<posY>100</posY>
-				<visible>!control.hasfocus(123)</visible>
-				<layout>StackLayout</layout>
 				<control>
 					<description>start a stream</description>
 					<type>button</type>
 					<id>10</id>
-					<posX>106</posX>
-					<posY>137</posY>
 					<label>34001</label>
 					<onleft>10</onleft>
 					<onright>123</onright>

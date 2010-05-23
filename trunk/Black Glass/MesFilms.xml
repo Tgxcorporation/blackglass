@@ -517,17 +517,6 @@
 			</control>
 		</control>
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-386</posX>
-			<posY>3</posY>
-			<width>418</width>
-			<height>714</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<animation effect="fade" time="50">WindowClose</animation>
-		</control>
-		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>6</defaultcontrol>
@@ -540,51 +529,58 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
-			<dimColor>00ffffff</dimColor>
-			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
-			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
 			<control>
-
 				<type>image</type>
-				<id>1</id>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(6)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
 				<posX>0</posX>
 				<posY>0</posY>
 				<width>418</width>
 				<height>720</height>
 				<texture>bg_left.png</texture>
 				<colorDiffuse>ffffffff</colorDiffuse>
-				<visible>!control.hasfocus(1026)</visible>
 			</control>
-
 			<control>
+				<id>0</id>
 				<type>label</type>
-				<id>1</id>
 				<posX>30</posX>
 				<posY>35</posY>
 				<label>924</label>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
-			</control> 
+			</control>
 			<control>
 				<type>image</type>
-				<id>1</id>
+				<id>0</id>
 				<posX>0</posX>
 				<posY>47</posY>
 				<width>385</width>
 				<height>53</height>
 				<texture>bg_button_nofocus.png</texture>
-			</control> 
+			</control>
 			<control>
-				<description>group element</description>
 				<type>group</type>
-				<animation effect="fade" time="450" reversible="true">visible</animation>
-				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				<layout>StackLayout</layout>
 				<posX>0</posX>
 				<posY>100</posY>
-				<visible>!control.hasfocus(1026)</visible>
-				<layout>StackLayout</layout>
 				<control>
 					<type>button</type>
 					<description>Layout</description>
