@@ -2,7 +2,7 @@
 <window>
 	<id>0</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist|facadeview.filmstrip]</allowoverlay>
 	<disabletopbar>yes</disabletopbar>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
@@ -14,166 +14,231 @@
 			<id>1</id>
 			<width>1280</width>
 			<height>720</height>
-			<texture>bg_homefull.jpg</texture>
+			<texture>bg.jpg</texture>
+			<animation effect="fade" time="1">WindowClose</animation>
+			<animation effect="fade" time="750">WindowOpen</animation>			
+		</control>
+
+
+		<control>
+			<description>Menu</description>
+			<type>menu</type>
+			<id>50</id>
+			<posX>944</posX>
+			<posY>138</posY>
+			<width>338</width>
+			<textcolor>ffffffff</textcolor>
+			<textColorNoFocus>60ffffff</textColorNoFocus>
+			<dimColor>ffffffff</dimColor>
+			<buttonTextXOff>20</buttonTextXOff>
+			<buttonTextYOff>7</buttonTextYOff>
+			<buttonOffset>0</buttonOffset>
+			<buttonFont>font18</buttonFont>
+			<buttonHeight>51</buttonHeight>
+			<spaceBetweenButtons>0</spaceBetweenButtons>
+			<numberOfButtons>9</numberOfButtons>
+			<textureButtonFocus>bg_button_focus.png</textureButtonFocus>
+			<textureButtonNoFocus>bg_button_nofocus.png</textureButtonNoFocus>
+			<hoverX>0</hoverX>
+			<hoverY>0</hoverY>
+			<hoverWidth>1280</hoverWidth>
+			<hoverHeight>720</hoverHeight>
+			<hoverKeepAspectratio>no</hoverKeepAspectratio>
+			<scrollTime>90</scrollTime>
+			<scrollTimeMin>45</scrollTimeMin>
+			<textureBackground>-</textureBackground>
+			<onright>18</onright>
+			<onleft>18</onleft>
+			<scrollOffset>0</scrollOffset>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>944</posX>
+			<posY>84</posY>
+			<width>340</width>
+			<height>51</height>
+			<texture>bg_button_nofocus.png</texture>
+			<colordiffuse>90999999</colordiffuse>
+		</control>
+		<control>
+			<description>Rss image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<texture>hover_infoservice.png</texture>
+			<visible>control.hasfocus(1111)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Twitter image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<texture>hover_twitter.png</texture>
+			<visible>control.hasfocus(1112)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Extras image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<texture>bg.jpg</texture>
+			<visible>control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)</visible>
+			<animation effect="fade" time="250">visible</animation>
 		</control>
 		<control>
 			<description>Nav image</description>
 			<type>image</type>
 			<id>1</id>
-			<posX>465</posX>
-			<posY>170</posY>
-			<width>350</width>
-			<height>480</height>
+			<posX>913</posX>
+			<posY>74</posY>
+			<width>430</width>
+			<height>578</height>
 			<texture>bg_home2.png</texture>
 		</control>
+
+
+		<!-- LEFT BUTTONS -->
 		<control>
-			<type>image</type>
-			<posX>491</posX>
-			<posY>171</posY>
-			<width>300</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
-		<control>
-			<description>Menu</description>
-			<type>menu</type>
-			<id>50</id>
-			<posX>491</posX>
-			<posY>228</posY>
-			<width>300</width>
-			<textcolor>ffffffff</textcolor>
-			<textColorNoFocus>60ffffff</textColorNoFocus>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>18</defaultcontrol>
+			<onexit>103</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>260</buttonY>
+			<buttonwidth>60</buttonwidth>
+			<buttonheight>200</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>60</width>
+			<height>200</height>
 			<dimColor>ffffffff</dimColor>
-			<buttonTextXOff>10</buttonTextXOff>
-			<buttonTextYOff>8</buttonTextYOff>
-			<buttonOffset>0</buttonOffset>
-			<buttonFont>font18</buttonFont>
-			<buttonHeight>53</buttonHeight>
-			<spaceBetweenButtons>0</spaceBetweenButtons>
-			<numberOfButtons>7</numberOfButtons>
-			<textureButtonFocus>bg_button_focus.png</textureButtonFocus>
-			<textureButtonNoFocus>bg_button_nofocus.png</textureButtonNoFocus>
-			<hoverX>-10</hoverX>
-			<hoverY>-10</hoverY>
-			<hoverWidth>1</hoverWidth>
-			<hoverHeight>1</hoverHeight>
-			<hoverKeepAspectratio>no</hoverKeepAspectratio>
-			<scrollTime>90</scrollTime>
-			<scrollTimeMin>45</scrollTimeMin>
-			<textureBackground>-</textureBackground>
-			<onright>19</onright>
-			<onleft>17</onleft>
-			<scrollOffset>0</scrollOffset>
-			<animation effect="fade" time="500">VisibleChange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-25,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-25,0" reversible="false">hidden</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>[control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)]</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-141</posX>
+				<posY>255</posY>
+				<width>210</width>
+				<height>210</height>
+				<texture>bg_basichome_slide.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<description>shutdown button</description>
+					<type>button</type>
+					<animation effect="zoom" start="100,100" end="110,110" time="300">focus</animation>
+					<animation effect="zoom" start="110,110" end="100,100" time="300">unfocus</animation>
+					<id>17</id>
+					<posX>9</posX>
+					<posY>294</posY>
+					<width>32</width>
+					<height>32</height>
+					<textureFocus>button_shutdown_focus.png</textureFocus>
+					<textureNoFocus>button_shutdown_nofocus.png</textureNoFocus>
+					<label>1030</label>
+					<textXOff>3000</textXOff>
+					<action>99</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>1111</onup>
+					<ondown>18</ondown>
+				</control>
+				<control>
+					<description>home button</description>
+					<type>button</type>
+					<animation effect="zoom" start="100,100" end="110,110" time="300">focus</animation>
+					<animation effect="zoom" start="110,110" end="100,100" time="300">unfocus</animation>
+					<id>18</id>
+					<posX>10</posX>
+					<posY>345</posY>
+					<width>30</width>
+					<height>30</height>
+					<textureFocus>button_home_focus.png</textureFocus>
+					<textureNoFocus>button_home_nofocus.png</textureNoFocus>
+					<label>2143</label>
+					<textXOff>3000</textXOff>
+					<action>115</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>19</ondown>
+				</control>
+				<control>
+					<description>exit button</description>
+					<type>button</type>
+					<animation effect="zoom" start="100,100" end="110,110" time="300">focus</animation>
+					<animation effect="zoom" start="110,110" end="100,100" time="300">unfocus</animation>
+					<id>19</id>
+					<posX>10</posX>
+					<posY>395</posY>
+					<width>30</width>
+					<height>30</height>
+					<textureFocus>button_close_focus.png</textureFocus>
+					<textureNoFocus>button_close_nofocus.png</textureNoFocus>
+					<label>4517</label>
+					<textXOff>3000</textXOff>
+					<action>97</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>18</onup>
+					<ondown>1111</ondown>
+				</control>
+			</control>
 		</control>
-		
-		<!-- Date and Time -->
-		<control>
-			<description>Date</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>640</posX>
-			<posY>134</posY>
-			<label>#date</label>
-			<align>center</align>
-			<font>font12</font>
-			<textcolor>aaffffff</textcolor>
-			<visible>!plugin.isenabled(InfoService)</visible>
-		</control>
-		<control>
-			<description>Date</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>640</posX>
-			<posY>134</posY>
-			<label>#infoservice.weather.today.temp     #date</label>
-			<align>center</align>
-			<font>font12</font>
-			<textcolor>aaffffff</textcolor>
-			<visible>plugin.isenabled(InfoService)</visible>
-		</control>
-		<control>
-			<description>Time</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>640</posX>
-			<posY>100</posY>
-			<label>#time</label>
-			<align>center</align>
-			<font>font22</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<!-- Action Buttons -->
-		<control>
-			<description>shutdown button</description>
-			<type>button</type>
-			<animation effect="zoom" start="100,100" end="110,110" time="300">focus</animation>
-			<animation effect="zoom" start="110,110" end="100,100" time="300">unfocus</animation>
-			<id>17</id>
-			<posX>540</posX>
-			<posY>20</posY>
-			<width>40</width>
-			<height>40</height>
-			<textureFocus>button_shutdown_focus.png</textureFocus>
-			<textureNoFocus>button_shutdown_nofocus.png</textureNoFocus>
-			<label>1030</label>
-			<textXOff>3000</textXOff>
-			<action>99</action>
-			<onleft>1111</onleft>
-			<onright>18</onright>
-			<onup>1111</onup>
-			<ondown>50</ondown>
-		</control>
-		<control>
-			<description>home button button</description>
-			<type>button</type>
-			<animation effect="zoom" start="100,100" end="110,110" time="300">focus</animation>
-			<animation effect="zoom" start="110,110" end="100,100" time="300">unfocus</animation>
-			<id>18</id>
-			<posX>620</posX>
-			<posY>20</posY>
-			<width>40</width>
-			<height>40</height>
-			<textureFocus>button_home_focus.png</textureFocus>
-			<textureNoFocus>button_home_nofocus.png</textureNoFocus>
-			<label>2143</label>
-			<textXOff>3000</textXOff>
-			<action>115</action>
-			<onleft>17</onleft>
-			<onright>19</onright>
-			<onup>1111</onup>
-			<ondown>50</ondown>
-		</control>
-		<control>
-			<description>exit button</description>
-			<type>button</type>
-			<animation effect="zoom" start="100,100" end="110,110" time="300">focus</animation>
-			<animation effect="zoom" start="110,110" end="100,100" time="300">unfocus</animation>
-			<id>19</id>
-			<posX>700</posX>
-			<posY>20</posY>
-			<width>40</width>
-			<height>40</height>
-			<textureFocus>button_close_focus.png</textureFocus>
-			<textureNoFocus>button_close_nofocus.png</textureNoFocus>
-			<label>4517</label>
-			<textXOff>3000</textXOff>
-			<action>97</action>
-			<onleft>18</onleft>
-			<onright>1112</onright>
-			<onup>1111</onup>
-			<ondown>50</ondown>
-		</control>
-	
-	
+
+
 		<!-- INFOSERVICE RSS FEED -->
 		<import>myHome_Infoservice.xml</import>
+
+		
+		<!-- TIME -->
+		<import>common.time.xml</import>	
+
 		
 		<!-- FANART SCRAPER -->
 		<import>myHome_Fanart_Scraper.xml</import>	
+
 		
-		<!-- OVERLAY -->
-		<import>minioverlay.xml</import>	
+		<control>
+			<description>New logo</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>26</posX>
+			<posY>15</posY>
+			<width>57</width>
+			<height>43</height>
+			<texture>newlogo.png</texture>
+		</control>
+		
+		
+		
 	</controls>
 </window>
