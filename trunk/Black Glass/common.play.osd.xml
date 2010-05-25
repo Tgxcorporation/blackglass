@@ -104,9 +104,11 @@
 			<description>Menu Title Label</description>
 			<type>label</type>
 			<id>0</id>
-			<posX>160</posX>
-			<posY>365</posY>
+			<posX>40</posX>
+			<posY>388</posY>
 			<font>font24</font>
+			<align>center</align>
+			<width>1204</width>
 			<label>Subtitles Settings</label>
 			<textcolor>FFFFFFFF</textcolor>
 			<visible>control.isvisible(800)</visible>
@@ -115,32 +117,32 @@
 			<description>SubTitle Delay label</description>
 			<type>label</type>
 			<id>850</id>
-			<posX>384</posX>
-			<posY>165</posY>
+			<posX>290</posX>
+			<posY>460</posY>
 			<label>303</label>
-			<font>font12</font>
+			<font>font13</font>
 			<textcolor>60ffffff</textcolor>
 			<visible>no</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">windowopen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
 		<control>
 			<description>SubTitle Delay label</description>
 			<type>label</type>
 			<id>0</id>
-			<posX>384</posX>
-			<posY>165</posY>
+			<posX>290</posX>
+			<posY>460</posY>
 			<label>303</label>
 			<visible>control.hasfocus(800)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 			<textcolor>ffffffff</textcolor>
-			<font>font12</font>
+			<font>font13</font>
 		</control>
 		<control>
 			<description>SubTitle Delay Slider</description>
 			<type>slider</type>
 			<id>800</id>
-			<posX>384</posX>
-			<posY>190</posY>
+			<posX>290</posX>
+			<posY>489</posY>
 			<spintype>float</spintype>
 			<showrange>no</showrange>
 			<textureSliderBar>osd_slider_bg.png</textureSliderBar>
@@ -151,67 +153,41 @@
 			<onleft>800</onleft>
 			<onright>800</onright>
 			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
 		<control>
 			<description>SubTitles On/Off Checkbox</description>
 			<type>checkmark</type>
 			<id>801</id>
-			<posX>384</posX>
-			<posY>240</posY>
+			<posX>285</posX>
+			<posY>570</posY>
 			<MarkWidth>25</MarkWidth>
 			<MarkHeight>25</MarkHeight>
-			<font>font12</font>
+			<font>font14</font>
 			<label>305</label>
 			<onup>800</onup>
 			<ondown>802</ondown>
 			<onleft>801</onleft>
 			<onright>801</onright>
 			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
+			<align>right</align>
 		</control>
+
+
 		<control>
 			<id>0</id>
 			<type>image</type>
-			<posX>633</posX>
-			<posY>173</posY>
-			<width>2</width>
-			<height>121</height>
-			<texture>bg_button_vertical.png</texture>
+			<posX>613</posX>
+			<posY>417</posY>
+			<width>53</width>
+			<height>237</height>
+			<texture>bg_osd_subtitles.png</texture>
 			<visible>control.isvisible(800)</visible>
-			<colordiffuse>77ffffff</colordiffuse> 
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
-		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>634</posX>
-			<posY>120</posY>
-			<width>278</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<visible>control.isvisible(800)</visible>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
-		<control>
-			<description>Subtitles label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>654</posX>
-			<posY>142</posY>
-			<label>1029</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-			<visible>control.isvisible(800)</visible>
-		</control>
-		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>634</posX>
-			<posY>254</posY>
-			<width>278</width>
-			<height>40</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<visible>control.isvisible(800)</visible>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
+
+
 		<control>
 			<type>group</type>
 			<description>group element</description>
@@ -219,21 +195,22 @@
 				<description>Sub Titles List control</description>
 				<type>listcontrol</type>
 				<id>802</id>
-				<posX>634</posX>
-				<posY>173</posY>
-				<width>278</width>
-				<height>170</height>
-				<font>font12</font>
-				<textureHeight>40</textureHeight>
+				<posX>666</posX>
+				<posY>417</posY>
+				<width>583</width>
+				<height>233</height>
 				<textXOff>-40</textXOff>
-				<textYOff>6</textYOff>
 				<onright>500</onright>
-				<onleft>802</onleft>
-				<onright>802</onright>
-				<onup>801</onup>
+				<onup>500</onup>
+				<ondown>501</ondown>
+				<onleft>501</onleft>
+				<onright>501</onright>
+				<visible>no</visible>
 				<spinPosX>2600</spinPosX>
 				<spinPosY>315</spinPosY>
-				<visible>no</visible>
+				<textureHeight>53</textureHeight>
+				<spinCanFocus>no</spinCanFocus>
+				<animation effect="fade" time="250">visiblechange</animation>	  	
 			</control>
 		</control>
 
@@ -245,9 +222,11 @@
 			<description>Menu Title Label</description>
 			<type>label</type>
 			<id>0</id>
-			<posX>160</posX>
-			<posY>365</posY>
+			<posX>40</posX>
+			<posY>388</posY>
 			<font>font24</font>
+			<align>center</align>
+			<width>1204</width>
 			<label>Audio Settings</label>
 			<textcolor>FFFFFFFF</textcolor>
 			<visible>control.isvisible(500)</visible>
@@ -256,30 +235,32 @@
 			<description>A/v Delay label</description>
 			<type>label</type>
 			<id>550</id>
-			<posX>384</posX>
-			<posY>165</posY>
+			<posX>290</posX>
+			<posY>460</posY>
 			<label>297</label>
-			<font>font12</font>
+			<font>font13</font>
 			<textcolor>60ffffff</textcolor>
 			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
 		<control>
 			<description>A/v Delay label</description>
 			<type>label</type>
 			<id>0</id>
-			<posX>384</posX>
-			<posY>165</posY>
+			<posX>290</posX>
+			<posY>460</posY>
 			<label>297</label>
 			<visible>control.hasfocus(500)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 			<textcolor>ffffffff</textcolor>
-			<font>font12</font>
+			<font>font13</font>
 		</control>
 		<control>
 			<description>A/V Delay Slider</description>
 			<type>slider</type>
 			<id>500</id>
-			<posX>384</posX>
-			<posY>190</posY>
+			<posX>290</posX>
+			<posY>489</posY>
 			<spintype>float</spintype>
 			<textureSliderBar>osd_slider_bg.png</textureSliderBar>
 			<textureSliderNib>osd_slider_nibNF.png</textureSliderNib>
@@ -290,35 +271,38 @@
 			<onright>500</onright>
 			<visible>no</visible>
 			<showrange>no</showrange>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
 		<control>
 			<description>Volume label</description>
 			<type>label</type>
 			<id>550</id>
-			<posX>384</posX>
-			<posY>240</posY>
+			<posX>290</posX>
+			<posY>550</posY>
 			<label>Volume Level</label>
-			<font>font12</font>
+			<font>font13</font>
 			<textcolor>60ffffff</textcolor>
 			<visible>control.isvisible(500)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
 		<control>
 			<description>Volume label</description>
 			<type>label</type>
 			<id>0</id>
-			<posX>384</posX>
-			<posY>240</posY>
+			<posX>290</posX>
+			<posY>550</posY>
 			<label>Volume Level</label>
-			<font>font12</font>
+			<font>font13</font>
 			<textcolor>ffffffff</textcolor>
 			<visible>control.hasfocus(400)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
 		<control>
 			<description>Volume Slider</description>
 			<type>slider</type>
 			<id>400</id>
-			<posX>384</posX>
-			<posY>265</posY>
+			<posX>290</posX>
+			<posY>579</posY>
 			<textureSliderBar>osd_slider_bg.png</textureSliderBar>
 			<textureSliderNib>osd_slider_nibNF.png</textureSliderNib>
 			<textureSliderNibFocus>osd_slider_nibFO.png</textureSliderNibFocus>
@@ -328,50 +312,25 @@
 			<onright>400</onright>
 			<showrange>no</showrange>
 			<visible>control.isvisible(500)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
+
+
+
 		<control>
 			<id>0</id>
 			<type>image</type>
-			<posX>633</posX>
-			<posY>173</posY>
-			<width>2</width>
-			<height>121</height>
-			<texture>bg_button_vertical.png</texture>
+			<posX>613</posX>
+			<posY>417</posY>
+			<width>53</width>
+			<height>237</height>
+			<texture>bg_osd_languages.png</texture>
 			<visible>control.isvisible(500)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
-		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>634</posX>
-			<posY>120</posY>
-			<width>278</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<visible>control.isvisible(500)</visible>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
-		<control>
-			<description>Volume label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>654</posX>
-			<posY>142</posY>
-			<label>492</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-			<visible>control.isvisible(500)</visible>
-		</control>
-		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>634</posX>
-			<posY>254</posY>
-			<width>278</width>
-			<height>40</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<visible>control.isvisible(500)</visible>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
+
+
+
 		<control>
 			<type>group</type>
 			<description>group element</description>
@@ -379,12 +338,11 @@
 				<description>Audio Stream List control</description>
 				<type>listcontrol</type>
 				<id>501</id>
-				<posX>634</posX>
-				<posY>173</posY>
-				<width>278</width>
-				<height>170</height>
+				<posX>666</posX>
+				<posY>417</posY>
+				<width>583</width>
+				<height>233</height>
 				<textXOff>-40</textXOff>
-				<textYOff>6</textYOff>
 				<onright>500</onright>
 				<onup>500</onup>
 				<ondown>501</ondown>
@@ -393,8 +351,9 @@
 				<visible>no</visible>
 				<spinPosX>2600</spinPosX>
 				<spinPosY>315</spinPosY>
-				<font>font12</font>
-				<textureHeight>40</textureHeight>
+				<textureHeight>53</textureHeight>
+				<spinCanFocus>no</spinCanFocus>
+				<animation effect="fade" time="250">visiblechange</animation>	  	
 			</control>
 		</control>
 
@@ -404,216 +363,238 @@
 			<description>Menu Title Label</description>
 			<type>label</type>
 			<id>0</id>
-			<posX>160</posX>
-			<posY>365</posY>
+			<posX>40</posX>
+			<posY>388</posY>
 			<font>font24</font>
+			<align>center</align>
+			<width>1204</width>
 			<label>Video Settings</label>
 			<textcolor>FFFFFFFF</textcolor>
 			<visible>control.isvisible(700)</visible>
-		</control>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
+		</control>		
 		<control>
 			<description>Video Position label</description>
 			<type>label</type>
 			<id>750</id>
-			<posX>384</posX>
-			<posY>138</posY>
+			<posX>250</posX>
+			<posY>460</posY>
 			<label>8033</label>
-			<font>font11</font>
+			<font>font13</font>
 			<textcolor>60ffffff</textcolor>
 			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
 		<control>
 			<description>Video Position label</description>
 			<type>label</type>
 			<id>0</id>
-			<posX>384</posX>
-			<posY>138</posY>
+			<posX>250</posX>
+			<posY>460</posY>
 			<label>8033</label>
 			<visible>control.hasfocus(700)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 			<textcolor>ffffffff</textcolor>
-			<font>font11</font>
+			<font>font13</font>
 		</control>
 		<control>
 			<description>Video Position Slider</description>
 			<type>slider</type>
 			<id>700</id>
-			<posX>384</posX>
-			<posY>160</posY>
+			<posX>250</posX>
+			<posY>489</posY>
 			<spintype>int</spintype>
 			<textureSliderBar>osd_slider_bg.png</textureSliderBar>
 			<textureSliderNib>osd_slider_nibNF.png</textureSliderNib>
 			<textureSliderNibFocus>osd_slider_nibFO.png</textureSliderNibFocus>
-			<onup>701</onup>
-			<ondown>704</ondown>
+			<onup>703</onup>
+			<ondown>706</ondown>
 			<onleft>700</onleft>
 			<onright>700</onright>
 			<showrange>no</showrange>
 			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
-		<control>
-			<description>brightness label</description>
+			<control>
+			<description>gamma label</description>
 			<type>label</type>
-			<id>752</id>
-			<posX>384</posX>
-			<posY>184</posY>
-			<label>464</label>
-			<font>font11</font>
+			<id>754</id>
+			<posX>250</posX>
+			<posY>550</posY>
+			<label>466</label>
+			<font>font13</font>
 			<textcolor>60ffffff</textcolor>
 			<visible>no</visible>
-		</control>
-		<control>
-			<description>Video Position label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>384</posX>
-			<posY>184</posY>
-			<label>464</label>
-			<visible>control.hasfocus(704)</visible>
-			<textcolor>ffffffff</textcolor>
-			<font>font11</font>
-		</control>
-		<control>
-			<description>brightness</description>
-			<type>slider</type>
-			<id>704</id>
-			<posX>384</posX>
-			<posY>206</posY>
-			<spintype>int</spintype>
-			<textureSliderBar>osd_slider_bg.png</textureSliderBar>
-			<textureSliderNib>osd_slider_nibNF.png</textureSliderNib>
-			<textureSliderNibFocus>osd_slider_nibFO.png</textureSliderNibFocus>
-			<onup>700</onup>
-			<ondown>705</ondown>
-			<onleft>704</onleft>
-			<onright>704</onright>
-			<showrange>no</showrange>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>contrast label</description>
-			<type>label</type>
-			<id>753</id>
-			<posX>384</posX>
-			<posY>231</posY>
-			<label>465</label>
-			<font>font11</font>
-			<textcolor>60ffffff</textcolor>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>Video Position label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>384</posX>
-			<posY>231</posY>
-			<label>465</label>
-			<visible>control.hasfocus(705)</visible>
-			<textcolor>ffffffff</textcolor>
-			<font>font11</font>
-		</control>
-		<control>
-			<description>contrast</description>
-			<type>slider</type>
-			<id>705</id>
-			<posX>384</posX>
-			<posY>253</posY>
-			<spintype>int</spintype>
-			<textureSliderBar>osd_slider_bg.png</textureSliderBar>
-			<textureSliderNib>osd_slider_nibNF.png</textureSliderNib>
-			<textureSliderNibFocus>osd_slider_nibFO.png</textureSliderNibFocus>
-			<onup>704</onup>
-			<ondown>706</ondown>
-			<onleft>705</onleft>
-			<onright>705</onright>
-			<showrange>no</showrange>
-			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
 		<control>
 			<description>gamma label</description>
 			<type>label</type>
-			<id>754</id>
-			<posX>384</posX>
-			<posY>278</posY>
-			<label>466</label>
-			<font>font11</font>
-			<textcolor>60ffffff</textcolor>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>Video Position label</description>
-			<type>label</type>
 			<id>0</id>
-			<posX>384</posX>
-			<posY>278</posY>
+			<posX>250</posX>
+			<posY>550</posY>
 			<label>466</label>
 			<visible>control.hasfocus(706)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 			<textcolor>ffffffff</textcolor>
-			<font>font11</font>
+			<font>font13</font>
 		</control>
 		<control>
 			<description>gamma</description>
 			<type>slider</type>
 			<id>706</id>
-			<posX>384</posX>
-			<posY>300</posY>
+			<posX>250</posX>
+			<posY>579</posY>
 			<spintype>int</spintype>
 			<textureSliderBar>osd_slider_bg.png</textureSliderBar>
 			<textureSliderNib>osd_slider_nibNF.png</textureSliderNib>
 			<textureSliderNibFocus>osd_slider_nibFO.png</textureSliderNibFocus>
-			<onup>705</onup>
-			<ondown>701</ondown>
+			<onup>700</onup>
+			<ondown>704</ondown>
 			<onleft>706</onleft>
 			<onright>706</onright>
 			<showrange>no</showrange>
 			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
 		</control>
+		<control>
+			<description>brightness label</description>
+			<type>label</type>
+			<id>752</id>
+			<posX>545</posX>
+			<posY>460</posY>
+			<label>464</label>
+			<font>font13</font>
+			<textcolor>60ffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
+		</control>
+		<control>
+			<description>brightness label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>545</posX>
+			<posY>460</posY>
+			<label>464</label>
+			<visible>control.hasfocus(704)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
+			<textcolor>ffffffff</textcolor>
+			<font>font13</font>
+		</control>
+		<control>
+			<description>brightness</description>
+			<type>slider</type>
+			<id>704</id>
+			<posX>545</posX>
+			<posY>489</posY>
+			<spintype>int</spintype>
+			<textureSliderBar>osd_slider_bg.png</textureSliderBar>
+			<textureSliderNib>osd_slider_nibNF.png</textureSliderNib>
+			<textureSliderNibFocus>osd_slider_nibFO.png</textureSliderNibFocus>
+			<onup>706</onup>
+			<ondown>705</ondown>
+			<onleft>704</onleft>
+			<onright>704</onright>
+			<showrange>no</showrange>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
+		</control>
+		<control>
+			<description>contrast label</description>
+			<type>label</type>
+			<id>753</id>
+			<posX>545</posX>
+			<posY>550</posY>
+			<label>465</label>
+			<font>font13</font>
+			<textcolor>60ffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
+		</control>
+		<control>
+			<description>contrast label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>545</posX>
+			<posY>550</posY>
+			<label>465</label>
+			<visible>control.hasfocus(705)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
+			<textcolor>ffffffff</textcolor>
+			<font>font13</font>
+		</control>
+		<control>
+			<description>contrast</description>
+			<type>slider</type>
+			<id>705</id>
+			<posX>545</posX>
+			<posY>579</posY>
+			<spintype>int</spintype>
+			<textureSliderBar>osd_slider_bg.png</textureSliderBar>
+			<textureSliderNib>osd_slider_nibNF.png</textureSliderNib>
+			<textureSliderNibFocus>osd_slider_nibFO.png</textureSliderNibFocus>
+			<onup>704</onup>
+			<ondown>701</ondown>
+			<onleft>705</onleft>
+			<onright>705</onright>
+			<showrange>no</showrange>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
+		</control>
+	
 		<control>
 			<description>Non-Interleaved Checkbox</description>
 			<type>checkmark</type>
 			<id>701</id>
-			<posX>584</posX>
-			<posY>157</posY>
+			<posX>825</posX>
+			<posY>459</posY>
 			<MarkWidth>25</MarkWidth>
 			<MarkHeight>25</MarkHeight>
-			<font>font12</font>
+			<font>font14</font>
 			<label>306</label>
-			<onup>706</onup>
+			<onup>705</onup>
 			<ondown>702</ondown>
 			<onleft>700</onleft>
 			<onright>700</onright>
 			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
+			<align>right</align>
 		</control>
 		<control>
 			<description>No Cache Checkbox</description>
 			<type>checkmark</type>
 			<id>702</id>
-			<posX>584</posX>
-			<posY>203</posY>
+			<posX>825</posX>
+			<posY>524</posY>
 			<MarkWidth>25</MarkWidth>
 			<MarkHeight>25</MarkHeight>
-			<font>font12</font>
+			<font>font14</font>
 			<label>431</label>
 			<onup>701</onup>
 			<ondown>703</ondown>
 			<onleft>700</onleft>
 			<onright>700</onright>
 			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
+			<align>right</align>
 		</control>
 		<control>
 			<description>Adjust Framerate Checkbox</description>
 			<type>checkmark</type>
 			<id>703</id>
-			<posX>584</posX>
-			<posY>250</posY>
+			<posX>825</posX>
+			<posY>588</posY>
 			<MarkWidth>25</MarkWidth>
 			<MarkHeight>25</MarkHeight>
-			<font>font12</font>
+			<font>font14</font>
 			<label>343</label>
 			<onup>702</onup>
 			<ondown>700</ondown>
 			<onleft>700</onleft>
 			<onright>700</onright>
 			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  	
+			<align>right</align>
 		</control>
 
 

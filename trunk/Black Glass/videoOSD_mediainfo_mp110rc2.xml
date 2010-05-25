@@ -51,13 +51,12 @@
 			<posY>559</posY>
 			<width>121</width>
 			<height>83</height>
-			<visible>string.equals(#Play.Current.HasSubtitles, False)</visible> 
 			<texture>Logos\nosubtitles.png</texture> 
 			<keepaspectratio>yes</keepaspectratio> 
 			<centered>yes</centered>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="250">windowopen</animation>
-			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]+!string.equals(#Play.Current.HasSubtitles, True)</visible>
 		</control>
 		<control>
 			<description>Subtitles</description> 
@@ -67,13 +66,12 @@
 			<posY>559</posY>
 			<width>121</width>
 			<height>83</height>
-			<visible>string.equals(#Play.Current.HasSubtitles, True)</visible> 
 			<texture>Logos\subtitles.png</texture> 
 			<keepaspectratio>yes</keepaspectratio> 
 			<centered>yes</centered>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="250">windowopen</animation>
-			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]+string.equals(#Play.Current.HasSubtitles, True)</visible>
 		</control>
 	</controls>
 </window>
