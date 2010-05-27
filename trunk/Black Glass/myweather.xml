@@ -17,68 +17,68 @@
 			<texture>bg.jpg</texture>    
 		</control>
 		<import>common.time.xml</import>
-		
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>418</width>
-				<height>720</height>
-				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
-			</control>
 
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>418</width>
+			<height>720</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+		</control>
+
+		<control>
+			<type>label</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>35</posY>
+			<label>#header.label</label>
+			<font>font24</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control> 
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>47</posY>
+			<width>385</width>
+			<height>53</height>
+			<texture>bg_button_nofocus.png</texture>
+		</control>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<posX>0</posX>
+			<posY>100</posY>
+			<layout>StackLayout</layout>
 			<control>
-				<type>label</type>
-				<id>1</id>
-				<posX>30</posX>
-				<posY>35</posY>
-				<label>#header.label</label>
-				<font>font24</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-			</control> 
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>47</posY>
-				<width>385</width>
-				<height>53</height>
-				<texture>bg_button_nofocus.png</texture>
+				<description>Switch Button</description>
+				<type>button</type>
+				<id>2</id>
+				<label>716</label>
+				<onup>17</onup>
 			</control>
 			<control>
-				<description>group element</description>
-				<type>group</type>
-				<posX>0</posX>
-				<posY>100</posY>
-				<layout>StackLayout</layout>
-				<control>
-					<description>Switch Button</description>
-					<type>button</type>
-					<id>2</id>
-					<label>716</label>
-					<onup>17</onup>
-				</control>
-				<control>
-					<description>Refresh Button</description>
-					<type>button</type>
-					<id>3</id>
-					<label>184</label>
-				</control>
-				<control>
-					<description>View Button</description>
-					<type>button</type>
-					<id>4</id>
-					<label>185</label>
-				</control>
-				<control>
-					<description>weather location select</description>
-					<type>button</type>
-					<id>5</id>
-					<label>1028</label>
-					<ondown>2</ondown>
-				</control>
+				<description>Refresh Button</description>
+				<type>button</type>
+				<id>3</id>
+				<label>184</label>
 			</control>
+			<control>
+				<description>View Button</description>
+				<type>button</type>
+				<id>4</id>
+				<label>185</label>
+			</control>
+			<control>
+				<description>weather location select</description>
+				<type>button</type>
+				<id>5</id>
+				<label>1028</label>
+				<ondown>2</ondown>
+			</control>
+		</control>
 
 		<control>
 			<type>image</type>
@@ -91,12 +91,14 @@
 		<control>
 			<type>image</type>
 			<posX>440</posX>
-			<posY>97</posY>
+			<posY>127</posY>
 			<width>840</width>
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
+			<visible>![control.hasthumb(1000)+control.isvisible(1000)]+![control.hasthumb(1200)+control.isvisible(1200)]</visible>
 		</control>
+		
 		<control>
 			<type>image</type>
 			<posX>440</posX>
@@ -227,19 +229,19 @@
 			<font>font22</font>
 			<align>left</align>
 			<textcolor>ffffffff</textcolor>
-			<width>430</width>
+			<width>790</width>
 		</control>
 		<control>
 			<description>update time label</description>
 			<type>fadelabel</type>
 			<id>11</id>
-			<posX>1250</posX>
-			<posY>103</posY>
+			<posX>470</posX>
+			<posY>141</posY>
 			<label>-</label>
-			<font>font14</font>
+			<font>font13</font>
 			<textcolor>60ffffff</textcolor>
-			<align>right</align>
-			<width>330</width>
+			<align>left</align>
+			<width>790</width>
 		</control>
 		<control>
 			<description>current weather icon</description>
@@ -584,6 +586,17 @@
 			<colorkey>FFFF00FF</colorkey>
 			<colordiffuse>White:#20</colordiffuse>
 		</control>
+		
+		<control>
+			<type>image</type>
+			<posX>440</posX>
+			<posY>97</posY>
+			<width>840</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>[control.hasthumb(1000)+control.isvisible(1000)]|[control.hasthumb(1200)+control.isvisible(1200)]</visible>
+		</control>
 		<control>
 			<description>Satellite label</description>
 			<type>label</type>
@@ -594,7 +607,6 @@
 			<align>left</align>
 			<textcolor>ffffffff</textcolor>
 			<visible>[control.hasthumb(1000)+control.isvisible(1000)]</visible>
-
 		</control>
 		<control>
 			<description>Satellite image</description>
@@ -647,6 +659,6 @@
 			<onup>2</onup>
 			<ondown>2</ondown>
 		</control>
-		
+
 	</controls>
 </window>
