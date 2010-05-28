@@ -19,91 +19,99 @@
 		</control>
 		<control>
 			<type>image</type>
-			<posX>257</posX>
+			<posX>31</posX>
 			<posY>364</posY>
-			<width>993</width>
+			<width>1219</width>
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<animation effect="fade" time="250">windowopen</animation>
 		</control>
 		<control>
+			<type>image</type>
+			<id>999</id>
+			<posX>121</posX>
+			<posY>418</posY>
+			<width>2</width>
+			<height>236</height>
+			<texture>bg_button_vertical.png</texture>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<!-- <control>
+			<type>image</type>
+			<id>999</id>
+			<posX>1124</posX>
+			<posY>418</posY>
+			<width>2</width>
+			<height>236</height>
+			<texture>bg_button_vertical.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control> -->
+		<control>
 			<description>Thumb</description>
 			<type>image</type>
 			<id>102</id>
-			<posX>76</posX>
-			<posY>383</posY>
-			<width>177</width>
-			<height>251</height>
+			<posX>142</posX>
+			<posY>434</posY>
+			<width>270</width>
+			<height>201</height>
 			<texture>#Play.Current.Thumb</texture>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
-			<zoom>yes</zoom>
+			<!-- <zoom>yes</zoom> -->
+			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
 		</control>
 		<control>
 			<description>Thumb</description>
 			<type>image</type>
-			<posX>53</posX>
-			<posY>379</posY>
-			<width>204</width>
-			<height>260</height>
-			<texture>DVDCase.png</texture>
+			<posX>134</posX>
+			<posY>427</posY>
+			<width>286</width>
+			<height>216</height>
+			<texture>PictureCase.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
 		</control>		
 		<control>
 			<description>Movie Name</description>
 			<id>36</id>
-			<type>fadelabel</type>
-			<width>620</width>
-			<height>37</height>
-			<posX>280</posX>
-			<posY>365</posY>
+			<type>textboxscrollup</type>
+			<width>1180</width>
+			<height>45</height>
+			<posX>40</posX>
+			<posY>363</posY>
 			<font>font24</font>
 			<label>#Play.Current.Title</label>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
 			<wrapString> : : : </wrapString>
+			<textalign>center</textalign>
 		</control>
 		<control>
 			<description>Plot</description>
 			<type>textboxscrollup</type>
-			<posX>280</posX>
-			<posY>428</posY>
-			<width>810</width>
+			<posX>435</posX>
+			<posY>435</posY>
+			<width>790</width>
 			<height>200</height>
 			<label>#Play.Current.Plot</label>
 			<font>font16</font>
 			<seperator>: : :</seperator>
 			<textcolor>ccFFFFFF</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
 		</control>
-		<control>
-			<description>Time</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>1190</posX>
-			<posY>373</posY>
-			<label>#time</label>
-			<align>right</align>
-			<font>font16</font>
-			<textcolor>ffffffff</textcolor>
-			<animation effect="fade" time="250">windowopen</animation>
-		</control>
-		<control>
-			<description>time logo</description>
-			<type>image</type>
-			<posX>1200</posX>
-			<posY>376</posY>
-			<width>25</width>
-			<height>25</height>
-			<texture>time.png</texture>
-			<animation effect="fade" time="250">windowopen</animation>
-		</control>
-		
-		<import>videoOSD_mediainfo_mp102.xml</import>
-		<!-- <import>videoOSD_mediainfo_mp110rc1.xml</import> -->
-		<import>videoOSD_mediainfo_mp110rc2.xml</import>
+
+		<!-- <import>videoOSD_mediainfo_mp102.xml</import>
+		<import>videoOSD_mediainfo_mp110rc2.xml</import> -->
 		<import>common.play.osd.xml</import>
 	</controls>
 </window>
