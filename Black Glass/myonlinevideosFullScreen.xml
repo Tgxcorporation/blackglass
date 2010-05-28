@@ -35,6 +35,9 @@
 			<animation effect="fade" time="100">visible</animation>
 			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|player.paused]+!window.isosdvisible</visible>
 			<wrapString> : : : </wrapString>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>1</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
 		</control>
 		<control>
 			<description>Current Time Info</description>
@@ -47,14 +50,17 @@
 			<align>right</align>
 			<animation effect="fade" time="100">visible</animation>
 			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|player.paused]+!window.isosdvisible</visible>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>1</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
 		</control>
 		<control>
 			<description>time logo</description>
 			<type>image</type>
 			<posX>1248</posX>
 			<posY>6</posY>
-			<width>25</width>
-			<height>25</height>
+			<width>24</width>
+			<height>24</height>
 			<texture>time.png</texture>
 			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|player.paused]+!window.isosdvisible</visible>
 			<animation effect="fade" time="100">visible</animation>
@@ -124,6 +130,9 @@
 			<textcolor>white</textcolor>
 			<visible>window.isosdvisible|player.paused|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visible</animation>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>1</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
 		</control>
 		<control>
 			<description>End Time Info</description>
@@ -136,6 +145,40 @@
 			<textcolor>white</textcolor>
 			<visible>window.isosdvisible|player.paused|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visible</animation>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>1</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+		</control>
+
+		<control>
+			<description>Time</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>655</posX>
+			<posY>687</posY>
+			<label>#time</label>
+			<align>right</align>
+			<font>font16</font>
+			<textcolor>ffffffff</textcolor>
+			<visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|player.paused]+window.isosdvisible</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<shadowAngle>45</shadowAngle>
+			<shadowDistance>1</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+		</control>
+		<control>
+			<description>time logo</description>
+			<type>image</type>
+			<id>999</id>
+			<posX>665</posX>
+			<posY>690</posY>
+			<width>23</width>
+			<height>23</height>
+			<texture>time.png</texture>
+			<visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|player.paused]+window.isosdvisible</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
 		</control>
 		<!-- END OF these elements need condition visibility for OSD IS VISIBLE -->
 		<control>
