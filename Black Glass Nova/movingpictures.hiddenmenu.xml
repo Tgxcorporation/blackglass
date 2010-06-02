@@ -22,8 +22,8 @@
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<!-- <animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation> -->
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -32,7 +32,7 @@
 				<width>1</width>
 				<height>1</height>
 				<texture>black.png</texture>
-				<visible>control.isvisible(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(999)]</visible>
+				<visible>control.isvisible(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)]</visible>
 			</control>
 			<control>
 				<type>image</type>
@@ -42,7 +42,6 @@
 				<width>418</width>
 				<height>720</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -51,8 +50,6 @@
 				<posY>35</posY>
 				<label>924</label>
 				<font>font24</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -68,7 +65,6 @@
 				<layout>StackLayout</layout>
 				<posX>0</posX>
 				<posY>100</posY>
-				<posX>0</posX>
 				<control>
 					<description>Cycle View</description>
 					<type>button</type>
@@ -123,13 +119,11 @@
 					<onright>50</onright>
 					<ondown>10</ondown>
 					<onup>66610</onup>
-					<ondown>999</ondown>
-					<scrollStartDelaySec>1</scrollStartDelaySec>
-					<scrollWrapString> | </scrollWrapString>
+					<ondown>66611</ondown>
 				</control>
 				<control>
 					<description>SubCentral</description>
-					<id>999</id>
+					<id>66611</id>
 					<type>button</type>
 					<label>Check for Subtitles</label>
 					<hyperlink>84623</hyperlink>
@@ -141,7 +135,6 @@
 			</control>
 			<control>
 				<id>0</id>
-				<label>#MovingPictures.Translation.SortDirection.Label</label>
 				<type>image</type>
 				<width>16</width>
 				<height>16</height>
