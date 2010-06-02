@@ -218,16 +218,29 @@
 			<posX>30</posX>
 			<posY>405</posY>
 			<width>385</width>
-			<height>164</height>
+			<height>165</height>
 			<colordiffuse>ffffffff</colordiffuse>
 			<font>font16</font>
 			<label>#TV.RecordedTV.Description</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-
-
+		<control>
+			<type>textboxscrollup</type>
+			<description>Description1</description>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>405</posY>
+			<width>385</width>
+			<height>290</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>#TV.RecordedTV.Description</label>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
 		<control>
 			<type>image</type>
 			<id>0</id>

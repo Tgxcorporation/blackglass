@@ -144,7 +144,23 @@
 			<colordiffuse>ffffffff</colordiffuse>
 			<font>font16</font>
 			<label>#infoservice.feed.selected.description</label>
-			<visible>control.hasfocus(50)</visible>
+			<visible>control.hasfocus(50)+player.hasmedia</visible>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		
+		<control>
+			<description>Chosen Story description</description>
+			<type>textboxscrollup</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>330</posY>
+			<width>380</width>
+			<height>357</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>#infoservice.feed.selected.description</label>
+			<visible>control.hasfocus(50)+!player.hasmedia</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
