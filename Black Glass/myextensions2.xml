@@ -38,7 +38,23 @@
 			<seperator>: : :</seperator>
 			<font>font16</font>
 			<label>#MPE.Selected.VersionDescription</label>
-			<visible>facadeview.list|facadeview.album|facadeview.playlist</visible>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		
+		<control>
+			<description>Summary</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>345</posY>
+			<width>385</width>
+			<height>330</height>
+			<textcolor>a0FFFFFF</textcolor>
+			<seperator>: : :</seperator>
+			<font>font16</font>
+			<label>#MPE.Selected.VersionDescription</label>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!player.hasmedia</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 

@@ -191,7 +191,22 @@
 			<colordiffuse>ffffffff</colordiffuse>
 			<font>font16</font>
 			<label>#Radio.RecordedTV.Description</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Description1</description>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>385</posY>
+			<width>350</width>
+			<height>325</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>#Radio.RecordedTV.Description</label>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
