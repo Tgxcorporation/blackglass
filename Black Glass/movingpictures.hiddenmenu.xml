@@ -32,7 +32,7 @@
 				<width>1</width>
 				<height>1</height>
 				<texture>black.png</texture>
-				<visible>control.isvisible(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)]</visible>
+				<visible>control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)]</visible>
 			</control>
 			<control>
 				<type>image</type>
@@ -65,6 +65,7 @@
 				<layout>StackLayout</layout>
 				<posX>0</posX>
 				<posY>100</posY>
+				<visible>control.isvisible(50)</visible>
 				<control>
 					<description>Cycle View</description>
 					<type>button</type>
@@ -132,17 +133,16 @@
 					<onright>50</onright>
 					<ondown>2</ondown>     
 				</control>
-			</control>
-			<control>
-				<id>0</id>
-				<type>image</type>
-				<width>16</width>
-				<height>16</height>
-				<posX>350</posX>
-				<posY>278</posY>
-				<texture>movingpictures_Sort#MovingPictures.Sort.Direction.png</texture>
-				<!-- <visible>!control.hasfocus(50)+control.isvisible(50)</visible> -->
-			</control>
+				<!-- <control>
+					<id>0</id>
+					<type>image</type>
+					<width>16</width>
+					<height>16</height>
+					<posX>350</posX>
+					<posY>278</posY>
+					<texture>movingpictures_Sort#MovingPictures.Sort.Direction.png</texture>
+				</control> -->
+			 </control>
 		</control>
 	</controls>
 </window>
