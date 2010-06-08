@@ -84,17 +84,58 @@
 		</control> 
 		<control>
 			<type>label</type>
-			<description>Number of Files Label</description>
+			<description>Buffering Label</description>
+			<id>0</id>
+			<posX>590</posX>
+			<posY>361</posY>
+			<label>#OnlineVideos.buffered%</label>
+			<align>center</align>
+			<width>100</width>
+			<textcolor>White</textcolor>
+			<font>font13</font>
+			<visible>string.equals(#OnlineVideos.IsBuffering, true) + !player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Number of Sites Label</description>
 			<id>0</id>
 			<posX>650</posX>
 			<posY>688</posY>
-			<label>#itemcount  #itemtype</label>
+			<label>#itemcount #OnlineVideos.Translation.Sites.Label</label>
 			<font>font12</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)+string.equals(#OnlineVideos.state, sites)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
+		<control>
+			<type>label</type>
+			<description>Number of Categories Label Without Selected Index</description>
+			<id>0</id>
+			<posX>650</posX>
+			<posY>688</posY>
+			<label>#itemcount #OnlineVideos.Translation.Categories.Label</label>
+			<font>font12</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)+string.equals(#OnlineVideos.state, categories)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Number of Videos Label Without Selected Index</description>
+			<id>0</id>
+			<posX>650</posX>
+			<posY>688</posY>
+			<label>#itemcount #OnlineVideos.Translation.Videos.Label</label>
+			<font>font12</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)+string.equals(#OnlineVideos.state, videos)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
 		<control>
 			<type>label</type>
 			<id>0</id>
@@ -228,9 +269,9 @@
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control> 
-		
-		
-		
+
+
+
 		<!-- *** HIDDEN MENU *** -->
 
 		<control>
