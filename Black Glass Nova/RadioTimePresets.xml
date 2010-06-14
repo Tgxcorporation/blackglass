@@ -3,7 +3,10 @@
 	<id>25653</id>
 	<defaultcontrol>101</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<define>#header.label:RadioTime - Presets</define>
 	<define>#header.background:hover_radiotime.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
@@ -14,10 +17,11 @@
 			<type>image</type>
 			<id>0</id>
 			<posX>414</posX>
-			<posY>377</posY>
+			<posY>340</posY>
 			<width>1372</width>
 			<height>500</height>
 			<texture>bg_tvguide.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -28,7 +32,8 @@
 			<height>35</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-		</control> 
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -38,8 +43,18 @@
 			<height>262</height>
 			<texture>bg_button_vertical.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-		</control> 
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
 
+		<control>
+			<type>fadelabel</type>
+			<posX>470</posX>
+			<posY>381</posY>
+			<width>785</width>
+			<font>font22</font>
+			<label>#RadioTime.Presets.Folder.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
 
 		<control>
 			<id>101</id>
@@ -47,10 +62,12 @@
 			<onleft>2</onleft>
 			<onright>106</onright>
 			<ondown>102</ondown>
+			<onup>110</onup>
 			<posX>440</posX>
 			<posY>430</posY>
 			<width>420</width>
 			<label>#RadioTime.Presets.1.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<id>102</id>
@@ -63,6 +80,7 @@
 			<posY>483</posY>
 			<width>420</width>
 			<label>#RadioTime.Presets.2.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<id>103</id>
@@ -75,6 +93,7 @@
 			<posY>536</posY>
 			<width>420</width>
 			<label>#RadioTime.Presets.3.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<id>104</id>
@@ -87,6 +106,7 @@
 			<posY>589</posY>
 			<width>420</width>
 			<label>#RadioTime.Presets.4.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<id>105</id>
@@ -99,6 +119,7 @@
 			<posY>642</posY>
 			<width>420</width>
 			<label>#RadioTime.Presets.5.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<id>106</id>
@@ -106,10 +127,12 @@
 			<onleft>101</onleft>
 			<onup>105</onup>
 			<ondown>107</ondown>
+			<onright>2</onright>
 			<posX>860</posX>
 			<posY>430</posY>
 			<width>420</width>
 			<label>#RadioTime.Presets.6.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<id>107</id>
@@ -117,10 +140,12 @@
 			<onleft>102</onleft>
 			<onup>106</onup>
 			<ondown>108</ondown>
+			<onright>2</onright>
 			<posX>860</posX>
 			<posY>483</posY>
 			<width>420</width>
 			<label>#RadioTime.Presets.7.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<id>108</id>
@@ -128,10 +153,12 @@
 			<onleft>103</onleft>
 			<onup>107</onup>
 			<ondown>109</ondown>
+			<onright>2</onright>
 			<posX>860</posX>
 			<posY>536</posY>
 			<width>420</width>
 			<label>#RadioTime.Presets.8.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<id>109</id>
@@ -139,21 +166,25 @@
 			<onleft>104</onleft>
 			<onup>108</onup>
 			<ondown>110</ondown>
+			<onright>2</onright>
 			<posX>860</posX>
 			<posY>589</posY>
 			<width>420</width>
 			<label>#RadioTime.Presets.9.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<id>110</id>
 			<type>button</type>
 			<onleft>105</onleft>
 			<onup>109</onup>
-			<ondown>2</ondown>
+			<ondown>101</ondown>
+			<onright>2</onright>
 			<posX>860</posX>
 			<posY>642</posY>
 			<width>420</width>
 			<label>#RadioTime.Presets.10.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
@@ -165,8 +196,9 @@
 			<height>254</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
-			<zoom>yes</zoom>
+			<!--<zoom>yes</zoom>-->
 			<texture flipY="true" diffuse="Thumb_Mask.png">#RadioTime.Selected.Logo</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -176,22 +208,7 @@
 			<width>360</width>
 			<height>273</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-		</control>
-
-
-
-
-
-		<!-- NOT USED -->
-
-
-		<control>
-			<type>fadelabel</type>
-			<posX>2658</posX>
-			<posY>470</posY>
-			<width>485</width>
-			<align>CENTER</align>
-			<label>#RadioTime.Presets.Folder.Name</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<!-- HIDDEN MENU -->
@@ -264,7 +281,7 @@
 				<control>
 					<id>2</id>
 					<type>button</type>
-					<onup>3</onup>
+					<onup>17</onup>
 					<ondown>3</ondown>
 					<onright>101</onright>
 					<label>#RadioTime.Translation.Home.Label</label>

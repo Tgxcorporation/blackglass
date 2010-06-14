@@ -6,9 +6,13 @@
 	<!-- cheat a little, we don't use two of the items in the imported file to blank their labels -->
 	<define>#usePlayFanart:Yes</define>
 	<define>#header.background:hover_my lyrics.png</define>
+	<define>#MyLyrics.BlacklistedControlIDs:1957,1958,1959</define>
+	<define>#MyLyrics.UseEditControlsOnLRCPick:no</define>
+	<define>#MyLyrics.EnableMouseControl:yes</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
+
 		<control>
 			<description>BG</description>
 			<type>image</type>
@@ -20,18 +24,6 @@
 		</control>
 		<import>common.music.play.fanart.xml</import>
 		<import>common.time.xml</import>
-
-
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posY>52</posY>
-			<height>645</height>
-			<posX>465</posX>
-			<width>873</width>
-			<texture>bg_facade.png</texture>
-		</control>
-
 		<control>
 			<type>label</type>
 			<id>2</id>
@@ -43,6 +35,16 @@
 			<textcolor>60ffffff</textcolor>
 		</control>
 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posY>52</posY>
+			<height>645</height>
+			<posX>465</posX>
+			<width>873</width>
+			<texture>bg_facade.png</texture>
+		</control>
+
+		<control>
 			<type>textbox</type>
 			<description>The Lyric area</description>
 			<id>20</id>
@@ -52,13 +54,15 @@
 			<height>560</height>
 			<onleft>1957</onleft>
 			<onright>1957</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
+			<onup>20</onup>
+			<ondown>20</ondown>
 			<image>icon-folder.png</image>
 			<text>6</text>
 			<font>font12</font>
 			<spinPosX>1150</spinPosX>
 			<spinPosY>620</spinPosY>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>textbox</type>
@@ -68,15 +72,16 @@
 			<posY>100</posY>
 			<width>740</width>
 			<height>560</height>
-			<onleft>1957</onleft>
-			<onright>1957</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
+			<onleft>1020</onleft>
+			<onright>1020</onright>
+			<onup>21</onup>
+			<ondown>21</ondown>
 			<image>icon-folder.png</image>
 			<text>6</text>
 			<font>font12</font>
 			<spinPosX>1150</spinPosX>
 			<spinPosY>620</spinPosY>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -88,13 +93,14 @@
 			<height>560</height>
 			<onleft>1957</onleft>
 			<onright>1957</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
+			<onup>1020</onup>
+			<ondown>1020</ondown>
 			<image>icon-folder.png</image>
 			<text>6</text>
 			<font>font12</font>
 			<spinPosX>1150</spinPosX>
 			<spinPosY>620</spinPosY>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -113,6 +119,7 @@
 			<font>font12</font>
 			<spinPosX>1150</spinPosX>
 			<spinPosY>620</spinPosY>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -123,6 +130,7 @@
 			<label>No media playing</label>
 			<font>font16</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -133,8 +141,11 @@
 			<label/>
 			<font>font16</font>
 			<textcolor>90ffffff</textcolor>
-		</control>    
-		<!-- 		<control>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<!--
+		<control>
 			<type>image</type>
 			<description>menu background image</description>
 			<id>34</id>
@@ -144,21 +155,22 @@
 			<height>160</height>
 			<texture>osd_bg.png</texture>
 			<animation effect="fade" time="150">WindowOpen</animation>
-		</control> -->
+		</control>
+		-->
 
-
-
-
-		<!--<control>
-      <type>image</type>
-      <description>title image</description>
-      <id>35</id>
-      <posX>113</posX>
-      <posY>26</posY>
-      <texture flipY="true" diffuse="Thumb_Mask.png">music_logo.png</texture>
-      <animation effect="fade" time="150">WindowOpen</animation>
-    </control>-->
-		<!-- <control>
+		<!--
+		<control>
+			<type>image</type>
+			<description>title image</description>
+			<id>35</id>
+			<posX>113</posX>
+			<posY>26</posY>
+			<texture flipY="true" diffuse="Thumb_Mask.png">music_logo.png</texture>
+			<animation effect="fade" time="150">WindowOpen</animation>
+		</control>
+		-->
+		<!--
+		<control>
 			<type>image</type>
 			<description>nowplaying background</description>
 			<id>31</id>
@@ -168,7 +180,9 @@
 			<height>484</height>
 			<texture>nowplaying_background.png</texture>
 			<animation effect="fade" time="150">WindowOpen</animation>
-		</control> -->
+		</control>
+		-->
+		
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -181,9 +195,8 @@
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
-			<visible>![control.isvisible(600)]</visible>
-			<animation effect="fade" time="250">visible</animation>
-			<animation effect="fade" time="250">hidden</animation>
+			<!--<visible>![control.isvisible(600)]</visible>-->
+			<animation effect="fade" time="250">visiblechange</animation>
 
 			<control>
 				<type>image</type>
@@ -197,6 +210,8 @@
 				<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Current.Thumb</texture>
 				<centered>yes</centered>
 				<zoom>yes</zoom>
+				<visible>![control.isvisible(600)]+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>image</type>
@@ -207,6 +222,8 @@
 				<width>360</width>
 				<height>327</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+				<visible>![control.isvisible(600)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>imagelist</type>
@@ -225,7 +242,8 @@
 				<align>left</align>
 				<imagesToDraw>5</imagesToDraw>
 				<percentage>#Play.Current.Rating</percentage>
-				<visible>player.hasmedia</visible>
+				<visible>![control.isvisible(600)]+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>image</type>
@@ -235,6 +253,8 @@
 				<height>35</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
+				<visible>![control.isvisible(600)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -247,6 +267,8 @@
 				<label>#Play.Current.Artist</label>
 				<font>font22</font>
 				<wrapString> : : : </wrapString>
+				<visible>![control.isvisible(600)]+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>image</type>
@@ -256,6 +278,8 @@
 				<height>35</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
+				<visible>![control.isvisible(600)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -269,6 +293,8 @@
 				<align>left</align>
 				<textcolor>b0ffffff</textcolor>
 				<wrapString> : : : </wrapString>
+				<visible>![control.isvisible(600)]+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>image</type>
@@ -278,6 +304,8 @@
 				<height>35</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
+				<visible>![control.isvisible(600)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -290,6 +318,8 @@
 				<label>#Play.Current.Title</label>
 				<font>font16</font>
 				<wrapString> : : : </wrapString>
+				<visible>![control.isvisible(600)]+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>image</type>
@@ -299,6 +329,8 @@
 				<height>35</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
+				<visible>![control.isvisible(600)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -311,6 +343,8 @@
 				<label>#Play.Current.Track</label>
 				<font>font12</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>![control.isvisible(600)]+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -323,8 +357,9 @@
 				<font>font12</font>
 				<align>right</align>
 				<textcolor>90ffffff</textcolor>
+				<visible>![control.isvisible(600)]+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
-
 			<control>
 				<type>image</type>
 				<posX>0</posX>
@@ -333,18 +368,21 @@
 				<height>35</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
+				<visible>![control.isvisible(600)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>label</type>
 				<description>up next label</description>
-				<id>20</id>
+				<id>0</id>
 				<posX>355</posX>
 				<posY>593</posY>
 				<label>209</label>
 				<font>font10</font>
 				<align>right</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>player.hasmedia+control.hastext(121)</visible>
+				<visible>![control.isvisible(600)]+player.hasmedia+control.hastext(121)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -358,6 +396,8 @@
 				<font>font12</font>
 				<textcolor>c0ffffff</textcolor>
 				<wrapString> : : : </wrapString>
+				<visible>![control.isvisible(600)]+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -371,6 +411,8 @@
 				<textcolor>90ffffff</textcolor>
 				<font>font12</font>
 				<wrapString> : : : </wrapString>
+				<visible>![control.isvisible(600)]+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<description>music logo</description>
@@ -383,6 +425,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<texture>#Play.Next.Thumb</texture>
+				<visible>![control.isvisible(600)]+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<description>music rectangle</description>
@@ -394,11 +438,10 @@
 				<height>68</height>
 				<texture>CDCase.png</texture>
 				<centered>yes</centered>
-				<visible>player.hasmedia+control.hastext(121)</visible>
+				<visible>![control.isvisible(600)]+player.hasmedia+control.hastext(121)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 		</control>
-
-
 
 		<control>
 			<description>Progress background</description>
@@ -410,7 +453,9 @@
 			<height>36</height>
 			<texture>osd_progress_background.png</texture>
 			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
+
 		<control>
 			<type>progress</type>
 			<description>track progress</description>
@@ -421,7 +466,9 @@
 			<height>36</height>
 			<visible>player.hasmedia</visible>
 			<label>#percentage</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
+
 		<control>
 			<description>pause image</description>
 			<id>0</id>
@@ -434,6 +481,7 @@
 			<texture>video_paused.png</texture>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
+
 		<control>
 			<type>label</type>
 			<description>track progress label</description>
@@ -445,7 +493,9 @@
 			<font>font16</font>
 			<textcolor>white</textcolor>
 			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
+
 		<control>
 			<type>label</type>
 			<description>track duration label</description>
@@ -457,6 +507,851 @@
 			<font>font16</font>
 			<textcolor>white</textcolor>
 			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>line 0</description>
+			<id>400</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>100</posY>
+			<colordiffuse>90ffffff</colordiffuse>
+			<label>line 0</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<disabledcolor>ffffffff</disabledcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 0</description>
+			<id>500</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>100</posY>
+			<label>line 0</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<disabledcolor>ffffffff</disabledcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 1</description>
+			<id>401</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>143</posY>
+			<label>line 1</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 1</description>
+			<id>501</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>143</posY>
+			<label>line 1</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 2</description>
+			<id>402</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>186</posY>
+			<label>line 2</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 2</description>
+			<id>502</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>186</posY>
+			<label>line 2</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 3</description>
+			<id>403</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>229</posY>
+			<label>line 3</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 3</description>
+			<id>503</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>229</posY>
+			<label>line 3</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 4</description>
+			<id>404</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>272</posY>
+			<label>line 4</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 4</description>
+			<id>504</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>272</posY>
+			<label>line 4</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 5</description>
+			<id>405</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>315</posY>
+			<label>line 5</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 5</description>
+			<id>505</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>315</posY>
+			<label>line 5</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 6</description>
+			<id>406</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>358</posY>
+			<label>line 6</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 6</description>
+			<id>506</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>358</posY>
+			<label>line 6</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 7</description>
+			<id>407</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>401</posY>
+			<label>line 7</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 7</description>
+			<id>507</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>401</posY>
+			<label>line 7</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 8</description>
+			<id>408</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>444</posY>
+			<label>line 8</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 8</description>
+			<id>508</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>444</posY>
+			<label>line 8</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 9</description>
+			<id>409</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>487</posY>
+			<label>line 9</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 9</description>
+			<id>509</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>487</posY>
+			<label>line 9</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 10</description>
+			<id>410</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>530</posY>
+			<label>line 10</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 10</description>
+			<id>510</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>530</posY>
+			<label>line 10</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 11</description>
+			<id>411</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>573</posY>
+			<label>line 11</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 11</description>
+			<id>511</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>573</posY>
+			<label>line 11</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 12</description>
+			<id>412</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>615</posY>
+			<label>line 12</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 12</description>
+			<id>512</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>615</posY>
+			<label>line 12</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>line 0</description>
+			<id>300</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>100</posY>
+			<label>line 0</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<disabledcolor>ffffffff</disabledcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 0</description>
+			<id>200</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>100</posY>
+			<colordiffuse>90ffffff</colordiffuse>
+			<label>line 0</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<disabledcolor>ffffffff</disabledcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 1</description>
+			<id>301</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>143</posY>
+			<label>line 1</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 1</description>
+			<id>201</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>143</posY>
+			<label>line 1</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 2</description>
+			<id>302</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>186</posY>
+			<label>line 2</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 2</description>
+			<id>202</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>186</posY>
+			<label>line 2</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>line 3</description>
+			<id>303</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>229</posY>
+			<label>line 3</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 3</description>
+			<id>203</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>229</posY>
+			<label>line 3</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>line 4</description>
+			<id>304</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>272</posY>
+			<label>line 4</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 4</description>
+			<id>204</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>272</posY>
+			<label>line 4</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 5</description>
+			<id>305</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>315</posY>
+			<label>line 5</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 5</description>
+			<id>205</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>315</posY>
+			<label>line 5</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 6</description>
+			<id>306</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>358</posY>
+			<label>line 6</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 6</description>
+			<id>206</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>358</posY>
+			<label>line 6</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 7</description>
+			<id>307</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>401</posY>
+			<label>line 7</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 7</description>
+			<id>207</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>401</posY>
+			<label>line 7</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 8</description>
+			<id>308</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>444</posY>
+			<label>line 8</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 8</description>
+			<id>208</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>444</posY>
+			<label>line 8</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 9</description>
+			<id>309</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>487</posY>
+			<label>line 9</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 9</description>
+			<id>209</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>487</posY>
+			<label>line 9</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 10</description>
+			<id>310</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>530</posY>
+			<label>line 10</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 10</description>
+			<id>210</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>530</posY>
+			<label>line 10</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 11</description>
+			<id>311</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>573</posY>
+			<label>line 11</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 11</description>
+			<id>211</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>573</posY>
+			<label>line 11</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 12</description>
+			<id>312</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>615</posY>
+			<label>line 12</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>line 12</description>
+			<id>212</id>
+			<width>740</width>
+			<posX>510</posX>
+			<posY>615</posY>
+			<label>line 12</label>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>time 0</description>
+			<id>600</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>102</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 1</description>
+			<id>601</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>145</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 2</description>
+			<id>602</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>188</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 3</description>
+			<id>603</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>231</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 4</description>
+			<id>604</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>274</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 5</description>
+			<id>605</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>317</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 6</description>
+			<id>606</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>360</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 7</description>
+			<id>607</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>403</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 8</description>
+			<id>608</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>446</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 9</description>
+			<id>609</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>489</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 10</description>
+			<id>610</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>532</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 11</description>
+			<id>611</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>575</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>time 12</description>
+			<id>612</id>
+			<width>100</width>
+			<posX>442</posX>
+			<posY>618</posY>
+			<label>(xx:xx:xx)</label>
+			<font>font11</font>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<id>50</id>
+			<description>Find LRC</description>
+			<type>button</type>
+			<onleft>1957</onleft>
+			<onright>901</onright>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<posX>366</posX>
+			<posY>13</posY>
+			<label>Tag</label>
+			<textXOff>0</textXOff>
+			<textYOff>1</textYOff>
+			<width>80</width>
+			<height>50</height>
+			<textureFocus>bg_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<textalign>center</textalign>
+			<font>font14</font>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<description>Dummy button for hidden menu</description>
+			<type>button</type>
+			<id>901</id>
+			<posX>400</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>20</onright>
+			<onleft>1957</onleft>
+			<ondown>901</ondown>
+			<onup>901</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<visible>!control.isvisible(50)+!control.isvisible(20)</visible>
 		</control>
 
 		<control>
@@ -532,6 +1427,7 @@
 					<onup>1956</onup>
 					<ondown>1958</ondown>
 					<hyperlink>500</hyperlink>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Now playing</description>
@@ -541,6 +1437,7 @@
 					<onup>1957</onup>
 					<hyperlink>510</hyperlink>
 					<ondown>1959</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Global Search</description>
@@ -551,771 +1448,11 @@
 					<visible>plugin.isenabled(Search music)</visible>
 					<onup>1958</onup>
 					<ondown>1950</ondown>
+					<onright>50</onright>
 				</control>
 			</control>
 		</control>
 
-
-		<control>
-			<type>label</type>
-			<description>line 0</description>
-			<id>400</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>100</posY>
-			<colordiffuse>90ffffff</colordiffuse>
-			<label>line 0</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-			<disabledcolor>ffffffff</disabledcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 0</description>
-			<id>500</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>100</posY>
-			<label>line 0</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-			<disabledcolor>ffffffff</disabledcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 1</description>
-			<id>401</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>143</posY>
-			<label>line 1</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 1</description>
-			<id>501</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>143</posY>
-			<label>line 1</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 2</description>
-			<id>402</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>186</posY>
-			<label>line 2</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 2</description>
-			<id>502</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>186</posY>
-			<label>line 2</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 3</description>
-			<id>403</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>229</posY>
-			<label>line 3</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 3</description>
-			<id>503</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>229</posY>
-			<label>line 3</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 4</description>
-			<id>404</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>272</posY>
-			<label>line 4</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 4</description>
-			<id>504</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>272</posY>
-			<label>line 4</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 5</description>
-			<id>405</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>315</posY>
-			<label>line 5</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 5</description>
-			<id>505</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>315</posY>
-			<label>line 5</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 6</description>
-			<id>406</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>358</posY>
-			<label>line 6</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 6</description>
-			<id>506</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>358</posY>
-			<label>line 6</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 7</description>
-			<id>407</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>401</posY>
-			<label>line 7</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 7</description>
-			<id>507</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>401</posY>
-			<label>line 7</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 8</description>
-			<id>408</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>444</posY>
-			<label>line 8</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 8</description>
-			<id>508</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>444</posY>
-			<label>line 8</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 9</description>
-			<id>409</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>487</posY>
-			<label>line 9</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 9</description>
-			<id>509</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>487</posY>
-			<label>line 9</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 10</description>
-			<id>410</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>530</posY>
-			<label>line 10</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 10</description>
-			<id>510</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>530</posY>
-			<label>line 10</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 11</description>
-			<id>411</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>573</posY>
-			<label>line 11</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 11</description>
-			<id>511</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>573</posY>
-			<label>line 11</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 12</description>
-			<id>412</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>615</posY>
-			<label>line 12</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 12</description>
-			<id>512</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>615</posY>
-			<label>line 12</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-
-		<control>
-			<type>label</type>
-			<description>line 0</description>
-			<id>300</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>100</posY>
-			<label>line 0</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-			<disabledcolor>ffffffff</disabledcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 0</description>
-			<id>200</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>100</posY>
-			<colordiffuse>90ffffff</colordiffuse>
-			<label>line 0</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-			<disabledcolor>ffffffff</disabledcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 1</description>
-			<id>301</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>143</posY>
-			<label>line 1</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 1</description>
-			<id>201</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>143</posY>
-			<label>line 1</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-
-		<control>
-			<type>label</type>
-			<description>line 2</description>
-			<id>302</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>186</posY>
-			<label>line 2</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 2</description>
-			<id>202</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>186</posY>
-			<label>line 2</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-
-		<control>
-			<type>label</type>
-			<description>line 3</description>
-			<id>303</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>229</posY>
-			<label>line 3</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 3</description>
-			<id>203</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>229</posY>
-			<label>line 3</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-
-		<control>
-			<type>label</type>
-			<description>line 4</description>
-			<id>304</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>272</posY>
-			<label>line 4</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 4</description>
-			<id>204</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>272</posY>
-			<label>line 4</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 5</description>
-			<id>305</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>315</posY>
-			<label>line 5</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 5</description>
-			<id>205</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>315</posY>
-			<label>line 5</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 6</description>
-			<id>306</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>358</posY>
-			<label>line 6</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 6</description>
-			<id>206</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>358</posY>
-			<label>line 6</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 7</description>
-			<id>307</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>401</posY>
-			<label>line 7</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 7</description>
-			<id>207</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>401</posY>
-			<label>line 7</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 8</description>
-			<id>308</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>444</posY>
-			<label>line 8</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 8</description>
-			<id>208</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>444</posY>
-			<label>line 8</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 9</description>
-			<id>309</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>487</posY>
-			<label>line 9</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 9</description>
-			<id>209</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>487</posY>
-			<label>line 9</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 10</description>
-			<id>310</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>530</posY>
-			<label>line 10</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 10</description>
-			<id>210</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>530</posY>
-			<label>line 10</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 11</description>
-			<id>311</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>573</posY>
-			<label>line 11</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 11</description>
-			<id>211</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>573</posY>
-			<label>line 11</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 12</description>
-			<id>312</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>615</posY>
-			<label>line 12</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>line 12</description>
-			<id>212</id>
-			<width>740</width>
-			<posX>510</posX>
-			<posY>615</posY>
-			<label>line 12</label>
-			<font>font12</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
-
-
-		<control>
-			<type>label</type>
-			<description>time 0</description>
-			<id>600</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>102</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 1</description>
-			<id>601</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>145</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 2</description>
-			<id>602</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>188</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 3</description>
-			<id>603</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>231</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 4</description>
-			<id>604</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>274</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 5</description>
-			<id>605</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>317</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 6</description>
-			<id>606</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>360</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 7</description>
-			<id>607</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>403</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 8</description>
-			<id>608</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>446</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 9</description>
-			<id>609</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>489</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 10</description>
-			<id>610</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>532</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 11</description>
-			<id>611</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>575</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<description>time 12</description>
-			<id>612</id>
-			<width>100</width>
-			<posX>442</posX>
-			<posY>618</posY>
-			<label>(xx:xx:xx)</label>
-			<font>font11</font>
-			<align>right</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-
-		<control>
-			<id>50</id>
-			<visible>yes</visible>
-			<description>Find LRC</description>
-			<type>button</type>
-			<onleft>1957</onleft>
-			<onright>1957</onright>
-			<posX>366</posX>
-			<posY>13</posY>
-			<label>Tag</label>
-			<textXOff>0</textXOff>
-			<textYOff>1</textYOff>
-			<width>80</width>
-			<height>50</height>
-			<textureFocus>bg_button2_focus.png</textureFocus>
-			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
-			<textalign>center</textalign>
-			<font>font14</font>
-		</control>
 	</controls>
 </window>
 
