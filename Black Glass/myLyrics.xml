@@ -5,6 +5,10 @@
 	<allowoverlay>no</allowoverlay>
 	<!-- cheat a little, we don't use two of the items in the imported file to blank their labels -->
 	<define>#usePlayFanart:Yes</define>
+	<define>#header.background:bg.jpg</define>
+	<define>#MyLyrics.BlacklistedControlIDs:1957,1958,1959</define>
+	<define>#MyLyrics.UseEditControlsOnLRCPick:no</define>
+	<define>#MyLyrics.EnableMouseControl:yes</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
@@ -14,21 +18,14 @@
 			<id>1</id>
 			<width>1280</width>
 			<height>720</height>
-			<texture>bg.jpg</texture>    
+			<texture>#header.background</texture> 
+			<animation effect="fade" time="1">WindowClose</animation>			
 		</control>
+
+
 		<import>common.music.play.fanart.xml</import>
 		<import>common.time.xml</import>
 
-
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posY>52</posY>
-			<height>645</height>
-			<posX>465</posX>
-			<width>873</width>
-			<texture>bg_facade.png</texture>
-		</control>
 		<control>
 			<type>label</type>
 			<id>2</id>
@@ -40,6 +37,15 @@
 			<textcolor>60ffffff</textcolor>
 		</control>
 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posY>52</posY>
+			<height>645</height>
+			<posX>465</posX>
+			<width>873</width>
+			<texture>bg_facade.png</texture>
+		</control>
+		<control>
 			<type>textbox</type>
 			<description>The Lyric area</description>
 			<id>20</id>
@@ -49,13 +55,15 @@
 			<height>560</height>
 			<onleft>1957</onleft>
 			<onright>1957</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
+			<onup>20</onup>
+			<ondown>20</ondown>
 			<image>icon-folder.png</image>
 			<text>6</text>
 			<font>font12</font>
 			<spinPosX>1150</spinPosX>
 			<spinPosY>620</spinPosY>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>textbox</type>
@@ -65,15 +73,16 @@
 			<posY>100</posY>
 			<width>740</width>
 			<height>560</height>
-			<onleft>1957</onleft>
-			<onright>1957</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
+			<onleft>1020</onleft>
+			<onright>1020</onright>
+			<onup>21</onup>
+			<ondown>21</ondown>
 			<image>icon-folder.png</image>
 			<text>6</text>
 			<font>font12</font>
 			<spinPosX>1150</spinPosX>
 			<spinPosY>620</spinPosY>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -85,13 +94,14 @@
 			<height>560</height>
 			<onleft>1957</onleft>
 			<onright>1957</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
+			<onup>1020</onup>
+			<ondown>1020</ondown>
 			<image>icon-folder.png</image>
 			<text>6</text>
 			<font>font12</font>
 			<spinPosX>1150</spinPosX>
 			<spinPosY>620</spinPosY>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -110,6 +120,7 @@
 			<font>font12</font>
 			<spinPosX>1150</spinPosX>
 			<spinPosY>620</spinPosY>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -120,6 +131,7 @@
 			<label>No media playing</label>
 			<font>font16</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -130,6 +142,7 @@
 			<label/>
 			<font>font16</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>    
 		<!-- 		<control>
 			<type>image</type>
@@ -283,6 +296,7 @@
 			<height>36</height>
 			<texture>osd_progress_background.png</texture>
 			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>progress</type>
@@ -294,6 +308,7 @@
 			<height>36</height>
 			<visible>player.hasmedia</visible>
 			<label>#percentage</label>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<description>pause image</description>
@@ -318,6 +333,7 @@
 			<font>font16</font>
 			<textcolor>white</textcolor>
 			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -330,6 +346,7 @@
 			<font>font16</font>
 			<textcolor>white</textcolor>
 			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
@@ -505,6 +522,7 @@
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
 			<disabledcolor>ffffffff</disabledcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -517,6 +535,7 @@
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
 			<disabledcolor>ffffffff</disabledcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -528,6 +547,7 @@
 			<label>line 1</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -539,6 +559,7 @@
 			<label>line 1</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -550,6 +571,7 @@
 			<label>line 2</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -561,6 +583,7 @@
 			<label>line 2</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -572,6 +595,7 @@
 			<label>line 3</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -583,6 +607,7 @@
 			<label>line 3</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -594,6 +619,7 @@
 			<label>line 4</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -605,6 +631,7 @@
 			<label>line 4</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -616,6 +643,7 @@
 			<label>line 5</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -627,6 +655,7 @@
 			<label>line 5</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -638,6 +667,7 @@
 			<label>line 6</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -649,6 +679,7 @@
 			<label>line 6</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -660,6 +691,7 @@
 			<label>line 7</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -671,6 +703,7 @@
 			<label>line 7</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -682,6 +715,7 @@
 			<label>line 8</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -693,6 +727,7 @@
 			<label>line 8</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -704,6 +739,7 @@
 			<label>line 9</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -715,6 +751,7 @@
 			<label>line 9</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -726,6 +763,7 @@
 			<label>line 10</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -737,6 +775,7 @@
 			<label>line 10</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -748,6 +787,7 @@
 			<label>line 11</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -759,6 +799,7 @@
 			<label>line 11</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -770,6 +811,7 @@
 			<label>line 12</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -781,6 +823,7 @@
 			<label>line 12</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
@@ -794,6 +837,7 @@
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
 			<disabledcolor>ffffffff</disabledcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -807,6 +851,7 @@
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
 			<disabledcolor>ffffffff</disabledcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -818,6 +863,7 @@
 			<label>line 1</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -829,6 +875,7 @@
 			<label>line 1</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
@@ -841,6 +888,7 @@
 			<label>line 2</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -852,6 +900,7 @@
 			<label>line 2</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
@@ -864,6 +913,7 @@
 			<label>line 3</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -875,6 +925,7 @@
 			<label>line 3</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
@@ -887,6 +938,7 @@
 			<label>line 4</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -898,6 +950,7 @@
 			<label>line 4</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -909,6 +962,7 @@
 			<label>line 5</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -920,6 +974,7 @@
 			<label>line 5</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -931,6 +986,7 @@
 			<label>line 6</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -942,6 +998,7 @@
 			<label>line 6</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -953,6 +1010,7 @@
 			<label>line 7</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -964,6 +1022,7 @@
 			<label>line 7</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -975,6 +1034,7 @@
 			<label>line 8</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -986,6 +1046,7 @@
 			<label>line 8</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -997,6 +1058,7 @@
 			<label>line 9</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1008,6 +1070,7 @@
 			<label>line 9</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1019,6 +1082,7 @@
 			<label>line 10</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1030,6 +1094,7 @@
 			<label>line 10</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1041,6 +1106,7 @@
 			<label>line 11</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1052,6 +1118,7 @@
 			<label>line 11</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1063,6 +1130,7 @@
 			<label>line 12</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1074,6 +1142,7 @@
 			<label>line 12</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 
@@ -1087,6 +1156,7 @@
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1097,8 +1167,8 @@
 			<posY>145</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1109,8 +1179,8 @@
 			<posY>188</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1121,8 +1191,8 @@
 			<posY>231</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1133,8 +1203,8 @@
 			<posY>274</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1145,8 +1215,8 @@
 			<posY>317</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1157,8 +1227,8 @@
 			<posY>360</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1169,8 +1239,8 @@
 			<posY>403</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1181,8 +1251,8 @@
 			<posY>446</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1193,8 +1263,8 @@
 			<posY>489</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1205,8 +1275,8 @@
 			<posY>532</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1217,8 +1287,8 @@
 			<posY>575</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1229,17 +1299,16 @@
 			<posY>618</posY>
 			<label>(xx:xx:xx)</label>
 			<font>font11</font>
-
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
 			<id>50</id>
-			<visible>yes</visible>
 			<description>Find LRC</description>
 			<type>button</type>
 			<onleft>1957</onleft>
-			<onright>50</onright>
+			<onright>901</onright>
 			<posX>370</posX>
 			<posY>25</posY>
 			<label>Tag</label>
@@ -1251,6 +1320,24 @@
 			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
 			<textalign>center</textalign>
 			<font>font14</font>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Dummy button for hidden menu</description>
+			<type>button</type>
+			<id>901</id>
+			<posX>400</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>20</onright>
+			<onleft>1957</onleft>
+			<ondown>901</ondown>
+			<onup>901</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<visible>!control.isvisible(50)+!control.isvisible(20)</visible>
 		</control>
 	</controls>
 </window>
