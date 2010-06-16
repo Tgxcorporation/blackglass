@@ -2,8 +2,9 @@
 <window>
 	<id>2345</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-	<define>#header.label:Shoutcast</define>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.proper.label:#header.label</define>
+	<define>#header.label:#header.extended.label</define>
 	<define>#header.background:hover_shoutcast.png</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
@@ -12,9 +13,51 @@
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
 		<import>common.music.play.fanart.xml</import>
-		<import>common.facade.background.basic.xml</import>
-		<import>common.facade.itemcount.basic.xml</import>
+		<!--<import>common.facade.background.basic.xml</import>-->
 
+		<control>
+			<description>LISTVIEW LEFT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-730</posX>
+			<posY>377</posY>
+			<width>1372</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		<control>
+			<description>LISTVIEW RIGHT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>614</posX>
+			<posY>340</posY>
+			<width>1372</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>395</posY>
+			<width>640</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control> 
+
+		<control>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>654</posX>
+			<posY>381</posY>
+			<width>605</width>
+			<font>font22</font>
+			<label>#header.proper.label</label>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<import>common.facade.itemcount.itemtype.basic.xml</import>
 
 		<control>
 			<type>fadelabel</type>
@@ -126,8 +169,8 @@
 				<id>50</id>
 				<onleft>2</onleft>
 				<onright>50</onright>
-				<onup>2</onup>
-				<ondown>2</ondown>
+				<onup>0</onup>
+				<ondown>0</ondown>
 				<onleft>2</onleft>
 				<onleft>2</onleft>
 				<onright>2</onright>
@@ -187,7 +230,7 @@
 				<width>1</width>
 				<height>1</height>
 				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(13)</visible>
+				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(14)|control.hasfocus(13)</visible>
 			</control>
 			<control>
 				<type>image</type>
@@ -229,7 +272,7 @@
 					<id>2</id>
 					<label/>
 					<onright>50</onright>
-					<onup>2</onup>
+					<onup>17</onup>
 					<ondown>3</ondown>
 				</control>
 
@@ -270,7 +313,18 @@
 					<label/>
 					<onright>50</onright>
 					<onup>5</onup>
+					<ondown>14</ondown>
+				</control>
+
+				<control>
+					<description>Now playing</description>
+					<type>button</type>
+					<id>14</id>
+					<label>4540</label>
+					<onup>6</onup>
+					<hyperlink>510</hyperlink>
 					<ondown>13</ondown>
+					<onright>50</onright>
 				</control>
 
 				<control>
@@ -279,8 +333,8 @@
 					<id>13</id>
 					<label>Lyrics</label>
 					<onright>50</onright>
-					<onup>6</onup>
-					<ondown>99</ondown>
+					<onup>14</onup>
+					<ondown>2</ondown>
 					<hyperlink>90478</hyperlink>
 					<visible>plugin.isenabled(My Lyrics)</visible>
 				</control>
