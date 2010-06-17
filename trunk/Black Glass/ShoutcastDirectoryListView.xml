@@ -2,8 +2,9 @@
 <window>
 	<id>2345</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>[facadeview.list|facadeview.smallicons|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-	<define>#header.label:Shoutcast</define>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.proper.label:#header.label</define>
+	<define>#header.label:#header.extended.label</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
@@ -90,8 +91,8 @@
 				<id>50</id>
 				<onleft>2</onleft>
 				<onright>50</onright>
-				<onup>2</onup>
-				<ondown>2</ondown>
+				<onup>0</onup>
++				<ondown>0</ondown>
 			</control>
 		</control>
 
@@ -124,7 +125,7 @@
 				<width>1</width>
 				<height>1</height>
 				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(13)</visible>
+				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(14)|control.hasfocus(13)</visible>
 			</control>
 			<control>
 				<type>image</type>
@@ -166,7 +167,7 @@
 					<id>2</id>
 					<label/>
 					<onright>50</onright>
-					<onup>2</onup>
+					<onup>17</onup>
 					<ondown>3</ondown>
 				</control>
 
@@ -207,7 +208,18 @@
 					<label/>
 					<onright>50</onright>
 					<onup>5</onup>
+					<ondown>14</ondown>
+				</control>
+
+				<control>
+					<description>Now playing</description>
+					<type>button</type>
+					<id>14</id>
+					<label>4540</label>
+					<onup>6</onup>
+					<hyperlink>510</hyperlink>
 					<ondown>13</ondown>
+					<onright>50</onright>
 				</control>
 
 				<control>
@@ -216,8 +228,8 @@
 					<id>13</id>
 					<label>Lyrics</label>
 					<onright>50</onright>
-					<onup>6</onup>
-					<ondown>99</ondown>
+					<onup>14</onup>
+					<ondown>2</ondown>
 					<hyperlink>90478</hyperlink>
 					<visible>plugin.isenabled(My Lyrics)</visible>
 				</control>
