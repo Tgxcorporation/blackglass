@@ -2,8 +2,9 @@
 <window>
 	<id>7111992</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia</allowoverlay>
+	<allowoverlay>player.hasmedia+!control.isvisible(24)</allowoverlay>
 	<define>#header.label:ShowTimes</define>
+	<define>#header.background:hover_showtimes.png</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
@@ -13,7 +14,8 @@
 			<id>0</id>
 			<width>1280</width>
 			<height>720</height>
-			<texture>bg.jpg</texture>    
+			<texture>#header.background</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<description>fanart</description>
@@ -25,8 +27,19 @@
 			<texture>#st_backdrop</texture>
 			<width>1280</width>
 			<height>720</height>
-			<colordiffuse>40ffffff</colordiffuse>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>bg.jpg</texture> 
+			<colordiffuse>c0ffffff</colordiffuse>
+			<animation effect="fade" time="250">visiblechange</animation>		
+		</control>
+
 		<import>common.time.xml</import>
 		<control>
 			<type>label</type>
@@ -38,6 +51,7 @@
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
 			<visible>!control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -46,10 +60,23 @@
 			<posX>30</posX>
 			<posY>56</posY>
 			<font>font12</font>
-			<width>800</width>
+			<width>290</width>
 			<label>#showtimes_nextupdate</label>
 			<visible>!control.isvisible(24)</visible>
-			<!-- <wrapString> : : : </wrapString><wrapString> : : : </wrapString> -->
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>BoxOffice</description>
+			<id>4651</id>
+			<posX>300</posX>
+			<posY>33</posY>
+			<font>font12</font>
+			<label>#st_boxoffice</label>
+			<width>800</width>
+			<align>left</align>
+			<visible>!control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<!-- DUMMY -->
@@ -153,6 +180,7 @@
 			<textcolor>60ffffff</textcolor>
 			<label>#itemcount</label>
 			<visible>facadeview.list+!control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<description>Cover Art</description>
@@ -245,8 +273,8 @@
 			<posX>30</posX>
 			<posY>593</posY>
 			<width>800</width>
-			<height>105</height>
-			<font>font12</font>
+			<height>108</height>
+			<font>font13</font>
 			<textcolor>ffFFFFFF</textcolor>
 			<label>#st_plot</label>
 			<visible>facadeview.list+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+!control.isvisible(47)+!control.hastext(46)</visible>
@@ -264,6 +292,7 @@
 			<align>left</align> 
 			<visible>facadeview.list+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+control.hastext(46)</visible>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -278,7 +307,9 @@
 			<align>left</align> 
 			<visible>facadeview.list+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+control.hastext(46)</visible>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
+
 
 		<!-- THUMBNAILS  -->
 		<control>
@@ -407,8 +438,8 @@
 			<posX>30</posX>
 			<posY>593</posY>
 			<width>400</width>
-			<height>105</height>
-			<font>font12</font>
+			<height>108</height>
+			<font>font13</font>
 			<textcolor>ffFFFFFF</textcolor>
 			<label>#st_plot</label>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+!control.isvisible(47)+!control.hastext(46)</visible>
@@ -426,6 +457,7 @@
 			<align>left</align> 
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+control.hastext(46)</visible>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -440,6 +472,7 @@
 			<align>left</align> 
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+control.hastext(46)</visible>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 
@@ -568,6 +601,7 @@
 			<width>750</width>
 			<visible>control.isvisible(24)</visible>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<description>movie poster</description>
@@ -612,6 +646,7 @@
 			<imagesToDraw>10</imagesToDraw>
 			<percentage>#st_userrating</percentage>
 			<visible>control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>	
 
 		<control>
@@ -625,7 +660,8 @@
 			<textcolor>FFFFFFFF</textcolor>
 			<font>font16</font>
 			<visible>control.isvisible(24)</visible>
-			<wrapString> : : : </wrapString>  
+			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
@@ -639,7 +675,8 @@
 			<font>font18</font>
 			<textcolor>90ffffff</textcolor>
 			<visible>control.isvisible(24)</visible>
-			<wrapString> : : : </wrapString>	
+			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
@@ -653,7 +690,8 @@
 			<font>font18</font>
 			<width>480</width>
 			<visible>control.isvisible(24)</visible>
-			<wrapString> : : : </wrapString>	  
+			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
@@ -667,7 +705,8 @@
 			<font>font18</font>
 			<width>480</width>
 			<visible>control.isvisible(24)</visible>
-			<wrapString> : : : </wrapString>	  
+			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation> 
 		</control>
 
 		<control>
@@ -683,6 +722,7 @@
 			<visible>control.isvisible(24)</visible>	 
 			<seperator>: : :</seperator>
 			<height>70</height>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
@@ -710,7 +750,8 @@
 			<font>font18</font>
 			<label>#st_plot</label>
 			<seperator>: : :</seperator>
-			<visible>control.isvisible(24)</visible>	  
+			<visible>control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>	  
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -723,7 +764,8 @@
 			<label>#st_theater</label>
 			<align>left</align> 
 			<visible>control.hastext(46)+control.isvisible(24)</visible>
-			<wrapString> : : : </wrapString>	  
+			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -737,7 +779,8 @@
 			<label>#st_moviedate @ #st_showtimes</label>
 			<align>left</align> 
 			<visible>control.hastext(46)+control.isvisible(24)</visible>
-			<wrapString> : : : </wrapString>	  
+			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation> 
 		</control>
 
 		<!-- FACADES -->
@@ -752,6 +795,7 @@
 			<texture>gradient.png</texture>
 			<colordiffuse>ffffffff</colordiffuse>
 			<visible>facadeview.filmstrip+!control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>group</type>
@@ -884,7 +928,7 @@
 				<width>1</width>
 				<height>1</height>
 				<texture>black.png</texture>
-				<visible>!control.isvisible(24)+[control.hasfocus(2)|control.hasfocus(3)]</visible>
+				<visible>!control.isvisible(24)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>
 			</control>
 			<control>
 				<type>image</type>
@@ -936,6 +980,16 @@
 					<id>3</id>
 					<label>-</label>
 					<onup>2</onup>
+					<ondown>4</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>	  
+				</control>
+				<control>
+					<type>button</type>
+					<description>Show BoxOffice</description>
+					<id>4</id>
+					<label>Box Office</label>
+					<onup>3</onup>
 					<ondown>40</ondown>
 					<onleft>50</onleft>
 					<onright>50</onright>	  
