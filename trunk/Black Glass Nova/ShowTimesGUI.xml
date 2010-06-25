@@ -27,6 +27,7 @@
 			<texture>#st_backdrop</texture>
 			<width>1280</width>
 			<height>720</height>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<import>common.time.xml</import>
 		<control>
@@ -39,6 +40,7 @@
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
 			<visible>!control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -50,7 +52,21 @@
 			<width>800</width>
 			<label>#showtimes_nextupdate</label>
 			<visible>!control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 			<!-- <wrapString> : : : </wrapString> -->
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>BoxOffice</description>
+			<id>4651</id>
+			<posX>30</posX>
+			<posY>83</posY>
+			<font>font12</font>
+			<label>#st_boxoffice</label>
+			<width>800</width>
+			<align>left</align>
+			<visible>!control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<!-- DUMMY -->
@@ -892,6 +908,7 @@
 			<texture>gradient.png</texture>
 			<colordiffuse>ffffffff</colordiffuse>
 			<visible>facadeview.filmstrip+!control.isvisible(24)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>group</type>
@@ -1004,7 +1021,7 @@
 			</control>
 		</control>
 
-		<!-- MENUS -->
+		<!-- MENU -->
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -1034,7 +1051,7 @@
 				<width>1</width>
 				<height>1</height>
 				<texture>black.png</texture>
-				<visible>!control.isvisible(24)+[control.hasfocus(2)|control.hasfocus(3)]</visible>
+				<visible>!control.isvisible(24)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>
 			</control>
 			<control>
 				<type>image</type>
@@ -1086,6 +1103,16 @@
 					<id>3</id>
 					<label>-</label>
 					<onup>2</onup>
+					<ondown>4</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>	  
+				</control>
+				<control>
+					<type>button</type>
+					<description>Show BoxOffice</description>
+					<id>4</id>
+					<label>Box Office</label>
+					<onup>3</onup>
 					<ondown>40</ondown>
 					<onleft>50</onleft>
 					<onright>50</onright>	  
