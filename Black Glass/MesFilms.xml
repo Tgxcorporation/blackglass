@@ -4,17 +4,20 @@
 	<defaultcontrol>1026</defaultcontrol>
 	<allowoverlay>player.hasmedia</allowoverlay>
 	<define>#header.label:Films</define>
+	<define>#header.background:hover_Films.png</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
 		<control>
 			<description>BG</description>
-			<id>1</id>
 			<type>image</type>
+			<id>0</id>
 			<width>1280</width>
 			<height>720</height>
-			<texture>bg.jpg</texture>    
+			<texture>#header.background</texture>	
+			<animation effect="fade" time="1">WindowClose</animation>	
 		</control>
+
 		<control>
 			<description>fanart</description>
 			<type>image</type>
@@ -23,11 +26,19 @@
 			<posY>0</posY>
 			<width>1280</width>
 			<height>720</height>
-			<colordiffuse>40ffffff</colordiffuse>
 			<texture>#Fanart</texture>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
+		</control>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>bg.jpg</texture> 
+			<colordiffuse>c0ffffff</colordiffuse>			
 		</control>
 		<control>
 			<type>label</type>
@@ -167,7 +178,8 @@
 			<label>#year     #length</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>!player.hasmedia+facadeview.list+control.hasfocus(1026)</visible>
-			<animation effect="fade" time="250">visiblechange</animation><wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -232,7 +244,8 @@
 			<font>font22</font>
 			<label>#selecteditem</label>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(1026)</visible>
-			<animation effect="fade" time="250">visiblechange</animation><wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<description>Category value</description>
@@ -256,7 +269,8 @@
 			<label>#year     #length</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(1026)</visible>
-			<animation effect="fade" time="250">visiblechange</animation><wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -503,7 +517,7 @@
 					<showFolder>yes</showFolder>
 					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
 					<imageFolderFocus>DVDCase.png</imageFolderFocus>
-					<thumbs flipY="true" diffuse="Thumb_Mask.png"></thumbs>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
 					<showBackGround>no</showBackGround>
 					<background>-</background>
 					<showInfoImage>no</showInfoImage>

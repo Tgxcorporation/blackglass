@@ -5,31 +5,39 @@
 	<allowoverlay>player.hasmedia</allowoverlay>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
+	<define>#header.background:hover_Films.png</define>
 	<define>#header.label:Films</define>
 	<controls>
 		<control>
+			<description>BG</description>
 			<type>image</type>
-			<description>BackGround</description>
-			<id>1</id>
-			<posX>0</posX>
-			<posY>0</posY>
+			<id>0</id>
 			<width>1280</width>
 			<height>720</height>
-			<texture>bg.jpg</texture>    
-		</control>
+			<texture>#header.background</texture>	
+			<animation effect="fade" time="1">WindowClose</animation>	
+		</control>	
 		<control>
 			<description>fanart</description>
 			<type>image</type>
 			<id>1000</id>
 			<posX>0</posX>
 			<posY>0</posY>
-			<colordiffuse>40ffffff</colordiffuse>
 			<texture>#Fanart</texture>
 			<width>1280</width>
 			<height>720</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
+		</control>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>bg.jpg</texture> 
+			<colordiffuse>c0ffffff</colordiffuse>			
 		</control>
 		<import>common.time.xml</import>
 		<control>
