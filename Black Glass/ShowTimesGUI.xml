@@ -8,15 +8,7 @@
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
-		<control>
-			<description>BG</description>
-			<type>image</type>
-			<id>0</id>
-			<width>1280</width>
-			<height>720</height>
-			<texture>#header.background</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
+		<import>common.window.background.xml</import>
 		<control>
 			<description>fanart</description>
 			<id>0</id>
@@ -29,17 +21,7 @@
 			<height>720</height>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-		<control>
-			<description>BG</description>
-			<type>image</type>
-			<id>0</id>
-			<width>1280</width>
-			<height>720</height>
-			<texture>bg.jpg</texture> 
-			<colordiffuse>c0ffffff</colordiffuse>
-			<animation effect="fade" time="250">visiblechange</animation>		
-		</control>
-
+		<import>common.window.overlay.xml</import>
 		<import>common.time.xml</import>
 		<control>
 			<type>label</type>
@@ -72,7 +54,7 @@
 			<posX>300</posX>
 			<posY>33</posY>
 			<font>font12</font>
-			<label>#st_boxoffice</label>
+			<label>#st_extra</label>
 			<width>800</width>
 			<align>left</align>
 			<visible>!control.isvisible(24)</visible>
@@ -178,8 +160,8 @@
 			<font>font16</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<label>#itemcount</label>
-			<visible>facadeview.list+!control.isvisible(24)</visible>
+			<label>#itemcount #itemtype</label>
+			<visible>facadeview.list+!control.isvisible(24)+string.equals(#itemcount)+string.equals(#itemtype)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -341,11 +323,11 @@
 			<id>0</id>
 			<posX>510</posX>
 			<posY>665</posY>
-			<label>#itemcount</label>
+			<label>#itemcount #itemtype</label>
 			<font>font16</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<visible>[facadeview.smallicons|facadeview.largeicons]+!control.isvisible(24)</visible>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+!control.isvisible(24)+string.equals(#itemcount)+string.equals(#itemtype)</visible>
 		</control>
 		<control>
 			<description>Cover Art</description>
