@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--
 This file should contain the facade view and all gui
 elements that should remain on screen during all or
@@ -174,8 +174,8 @@ multiple view modes.
 			<description>Parental controls Lock Indicator</description>
 			<type>image</type>
 			<id>16</id>
-			<posX>5</posX>
-			<posY>59</posY>
+			<posX>32</posX>
+			<posY>58</posY>
 			<width>20</width>
 			<height>20</height>
 			<texture>lock2.png</texture>
@@ -184,29 +184,51 @@ multiple view modes.
 		<control>
 			<description>Current Category</description>
 			<type>label</type>
-			<id>16</id>
+			<id>9916</id>
 			<posX>30</posX>
 			<posY>56</posY>
 			<font>font13</font>
-			<width>800</width>
+			<width>900</width>
 			<label>#MovingPictures.CurrentNode.name</label>
-			<visible>!control.isvisible(17)</visible>
+			<visible>!control.isvisible(16)+!control.isvisible(17)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<description>Current Category / Filter</description>
 			<type>label</type>
-			<id>16</id>
+			<id>9917</id>
 			<posX>30</posX>
 			<posY>56</posY>
 			<font>font13</font>
 			<width>900</width>
 			<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
-			<visible>control.isvisible(17)</visible>
+			<visible>!control.isvisible(16)+control.isvisible(17)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-
-		
+		<control>
+			<description>Current Category</description>
+			<type>label</type>
+			<id>9918</id>
+			<posX>60</posX>
+			<posY>56</posY>
+			<font>font13</font>
+			<width>870</width>
+			<label>#MovingPictures.CurrentNode.name</label>
+			<visible>control.isvisible(16)+!control.isvisible(17)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Current Category / Filter</description>
+			<type>label</type>
+			<id>9919</id>
+			<posX>60</posX>
+			<posY>56</posY>
+			<font>font13</font>
+			<width>870</width>
+			<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
+			<visible>control.isvisible(16)+control.isvisible(17)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
 		
 		<control>
 			<description>Working Animation</description>
