@@ -3,16 +3,13 @@
 	<id>2003</id>
 	<defaultcontrol>2</defaultcontrol>
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:</define>
+	<define>#header.background:hover_my videos.png</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
-		<control>
-			<description>background image</description>
-			<type>image</type>
-			<id>1</id>
-			<width>1280</width>
-			<height>720</height>
-		</control>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
 		<control>
 			<type>image</type>
 			<id>1</id>
@@ -52,7 +49,6 @@
 			<label>#title</label>
 			<font>font22</font>
 			<textcolor>FFFFFFFF</textcolor>
-
 		</control>
 
 
@@ -60,51 +56,37 @@
 			<description>group element</description>
 			<type>group</type>
 			<posX>69</posX>
-			<posY>84</posY>
+			<posY>116</posY>
 			<layout>StackLayout</layout>
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>47</posY>
-				<width>385</width>
-				<height>53</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
 			<control>
 				<description>Play Button</description>
 				<type>button</type>
 				<id>2</id>
 				<label>208</label>
-
 				<onleft>22</onleft>
 				<onright>22</onright>
 				<onup>7</onup>
 				<ondown>3</ondown>
-
 			</control>
 			<control>
 				<description>Plot</description>
 				<type>togglebutton</type>
 				<id>3</id>
 				<label>207</label>
-
 				<onleft>22</onleft>
 				<onright>22</onright>
 				<onup>2</onup>
 				<ondown>4</ondown>
-
 			</control>
 			<control>
 				<description>Cast</description>
 				<type>togglebutton</type>
 				<id>4</id>
 				<label>206</label>
-
 				<onleft>22</onleft>
 				<onright>22</onright>
 				<onup>3</onup>
 				<ondown>5</ondown>
-
 			</control>
 			<control>
 				<description>Refresh</description>
@@ -115,7 +97,6 @@
 				<onright>22</onright>
 				<onup>4</onup>
 				<ondown>6</ondown>
-
 			</control>
 			<control>
 				<description>Watched</description>
@@ -126,7 +107,6 @@
 				<onright>22</onright>
 				<onup>5</onup>
 				<ondown>10</ondown>
-
 			</control>
 		</control>
 		<control>
@@ -139,7 +119,6 @@
 			<font>font12</font>
 			<align>left</align>
 			<textcolor>90ffffff</textcolor>
-
 		</control>
 		<control>
 			<description>spin control</description>
@@ -149,7 +128,6 @@
 			<posY>565</posY>
 			<onup>6</onup>
 			<ondown>11</ondown>
-
 		</control>
 		<control>
 			<description>disc:</description>
@@ -160,7 +138,6 @@
 			<label>427</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
-
 		</control>
 		<control>
 			<description>disc select</description>
@@ -175,7 +152,6 @@
 			<textcolor>FFFFFFFF</textcolor>
 			<buddycontrolid>100</buddycontrolid>
 			<showrange>no</showrange>
-
 		</control>
 		<control>
 			<type>imagelist</type>
@@ -193,7 +169,6 @@
 			<orientation>horizontal</orientation>
 			<percentage>#rating</percentage>
 			<imagesToDraw>10</imagesToDraw>
-
 		</control>
 		<control>
 			<description>Votes txt</description>
@@ -204,7 +179,6 @@
 			<label>205</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
-
 		</control>
 		<control>
 			<description>Votes value</description>
@@ -215,7 +189,6 @@
 			<label>#votes</label>
 			<font>font14</font>
 			<textcolor>FFFFFFFF</textcolor>
-
 		</control>
 		<control>
 			<description>Genre txt</description>
@@ -226,7 +199,6 @@
 			<label>174</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
-
 		</control>
 		<control>
 			<description>Genre value</description>
@@ -248,7 +220,6 @@
 			<label>199</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
-
 		</control>
 		<control>
 			<description>Director value</description>
@@ -270,7 +241,6 @@
 			<label>201</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
-
 		</control>
 		<control>
 			<description>Year value</description>
@@ -281,7 +251,6 @@
 			<label>#year</label>
 			<font>font14</font>
 			<textcolor>FFFFFFFF</textcolor>
-
 		</control>
 		<control>
 			<description>Runtime txt</description>
@@ -292,7 +261,6 @@
 			<label>299</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
-
 		</control>
 		<control>
 			<description>Runtime value</description>
@@ -303,7 +271,6 @@
 			<label>#runtime</label>
 			<font>font14</font>
 			<textcolor>FFFFFFFF</textcolor>
-
 		</control>
 		<control>
 			<description>MPAA Rating txt</description>
@@ -314,7 +281,6 @@
 			<label>173</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
-
 		</control>
 
 		<control>
@@ -327,7 +293,6 @@
 			<label>(#mpaarating)</label>
 			<font>font14</font>
 			<textcolor>FFFFFFFF</textcolor>
-
 		</control>
 		<control>
 			<description>Plot value</description>
@@ -341,7 +306,6 @@
 			<font>font14</font>
 			<seperator>: : :</seperator>
 			<textcolor>FFFFFFFF</textcolor>
-
 		</control>
 		<control>
 			<description>fanart</description>
