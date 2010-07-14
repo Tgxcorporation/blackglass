@@ -10,17 +10,30 @@
 	<controls>
 		<import>common.window.xml</import>
 		<control>
+			<description>Movie Backdrop (Fan Art) - Plug-in sets to invisible, if no art.</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<texture>black.png</texture>
+			<visible>control.hasthumb(1000)</visible>
+			<animation effect="fade" time="1">visiblechange</animation>
+		</control>
+		<control>
 			<description>fanart</description>
 			<type>image</type>
 			<id>1000</id>
 			<posX>0</posX>
 			<posY>0</posY>
-			<texture>#Fanart</texture>
+			<texture>#myfilms.fanart</texture>
 			<width>1280</width>
 			<height>720</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<import>common.time.xml</import>
 
@@ -48,7 +61,7 @@
 			<posY>425</posY> 
 			<width>198</width> 
 			<height>280</height> 
-			<texture flipY="true" diffuse="Thumb_Mask.png">#picture</texture>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#myfilms.picture</texture>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
@@ -61,7 +74,7 @@
 			<posY>425</posY> 
 			<width>198</width> 
 			<height>280</height> 
-			<texture flipY="true" diffuse="Thumb_Mask.png">#picture</texture>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#myfilms.picture</texture>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -85,7 +98,7 @@
 			<font>font22</font>
 			<align>left</align>
 			<textcolor>ffffffff</textcolor>
-			<label>#Title</label>
+			<label>#myfilms.originaltitle</label>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -115,7 +128,7 @@
 			<posX>627</posX>
 			<posY>470</posY>
 			<width>630</width>
-			<label>#country     #year     #category</label>
+			<label>#myfilms.country     #myfilms.year     #myfilms.category</label>
 			<textcolor>ffFFFFFF</textcolor>
 		</control>
 
@@ -127,7 +140,7 @@
 			<posY>470</posY>
 			<width>350</width>
 			<align>left</align>
-			<label>#length</label>
+			<label>#myfilms.length</label>
 			<textcolor>90FFFFFF</textcolor>
 			<wrapString> : : : </wrapString>
 		</control>
@@ -156,7 +169,7 @@
 				<subitem>stargood.png</subitem>
 			</subitems>
 			<orientation>horizontal</orientation>
-			<percentage>#rating</percentage>
+			<percentage>#myfilms.rating</percentage>
 			<imagesToDraw>10</imagesToDraw>
 		</control>
 
@@ -168,7 +181,7 @@
 			<posY>509</posY>
 			<width>630</width>
 			<textcolor>90FFFFFF</textcolor>
-			<label>Directed by #director</label>
+			<label>Directed by #myfilms.director</label>
 			<wrapString> : : : </wrapString>
 		</control>
 
@@ -192,7 +205,7 @@
 			<textcolor>90FFFFFF</textcolor>
 			<font>font14</font>
 			<height>90</height>
-			<label>#actors</label>
+			<label>#myfilms.actors</label>
 			<seperator>: : :</seperator>
 		</control>
 
@@ -206,7 +219,7 @@
 			<height>90</height>
 			<textcolor>ffFFFFFF</textcolor>
 			<font>font14</font>
-			<label>#description</label>
+			<label>#myfilms.description</label>
 			<seperator>: : :</seperator>
 		</control>
 		<control>
@@ -226,7 +239,7 @@
 			<id>2026</id>
 			<posX>2520</posX>
 			<posY>128</posY>
-			<label>#OTitle</label>
+			<label>#myfilms.translatedtitle</label>
 			<width>750</width>
 			<font>font13</font>
 			<textcolor>90ffffff</textcolor>
@@ -239,7 +252,7 @@
 			<id>2068</id>
 			<posX>2730</posX>
 			<posY>131</posY>
-			<label>#length</label>
+			<label>#myfilms.length</label>
 			<font>font14</font>
 			<align>left</align>
 			<textcolor>ffffffff</textcolor>
@@ -283,7 +296,7 @@
 			<id>2063</id>
 			<posX>2730</posX>
 			<posY>260</posY>
-			<label>#country</label>
+			<label>#myfilms.country</label>
 			<width>535</width>
 			<font>font14</font>
 			<wrapString> : : : </wrapString>
@@ -318,7 +331,7 @@
 			<id>1030</id>
 			<posX>2520</posX>
 			<posY>170</posY>
-			<label>#label1</label>
+			<label>#myfilms.label1</label>
 			<textcolor>90ffffff</textcolor>
 			<font>font14</font>
 			<width>200</width>
@@ -330,7 +343,7 @@
 			<id>1032</id>
 			<posX>2520</posX>
 			<posY>320</posY>
-			<label>#label2</label>
+			<label>#myfilms.label2</label>
 			<textcolor>90ffffff</textcolor>
 			<font>font14</font>
 			<width>200</width>
@@ -360,7 +373,7 @@
 			<id>1</id>
 			<posX>265</posX>
 			<posY>663</posY>
-			<label>#mediatype     #size Mb     #framerate fps</label>
+			<label>#myfilms.mediatype     #myfilms.size Mb     #myfilms.framerate fps</label>
 			<font>font12</font>
 			<width>350</width>
 			<textcolor>ffffffff</textcolor>
@@ -372,7 +385,7 @@
 			<id>1031</id>
 			<posX>265</posX>
 			<posY>687</posY>
-			<label>#item1</label>
+			<label>#myfilms.item1</label>
 			<width>350</width>
 			<textcolor>ffffffff</textcolor>
 			<font>font12</font>
@@ -385,7 +398,7 @@
 			<id>1033</id>
 			<posX>450</posX>
 			<posY>698</posY>
-			<label>#item2</label>
+			<label>#myfilms.item2</label>
 			<width>155</width>
 			<textcolor>ffffffff</textcolor>
 			<font>font10</font>
@@ -397,7 +410,7 @@
 			<id>1</id>
 			<posX>520</posX>
 			<posY>680</posY>
-			<label>Audio: #languages - Subs: #subtitles</label>
+			<label>Audio: #myfilms.languages - Subs: #myfilms.subtitles</label>
 			<font>font12</font>
 			<width>750</width>
 			<textcolor>90ffffff</textcolor>
@@ -408,7 +421,7 @@
 			<id>2070</id>
 			<posX>520</posX>
 			<posY>690</posY>
-			<label>Languages: #languages | Subtitles: #subtitles</label>
+			<label>Languages: #myfilms.languages | Subtitles: #myfilms.subtitles</label>
 			<font>font12</font>
 			<align>left</align>
 			<textcolor>90ffffff</textcolor>
@@ -422,7 +435,7 @@
 			<posY>660</posY>
 			<width>730</width>
 			<height>50</height>
-			<texture>#Logos_ID2001</texture>
+			<texture>#myfilms.logos_id2001</texture>
 			<keepaspectratio>yes</keepaspectratio>
 			<spaceBetweenItems>10</spaceBetweenItems>
 			<visible>yes</visible>
@@ -435,7 +448,7 @@
 			<posY>660</posY>
 			<width>730</width>
 			<height>50</height>
-			<texture>#Logos_ID2002</texture>
+			<texture>#myfilms.logos_id2002</texture>
 			<keepaspectratio>yes</keepaspectratio>
 			<spaceBetweenItems>10</spaceBetweenItems>
 			<visible>yes</visible>
@@ -448,7 +461,7 @@
 			<posY>28</posY>
 			<font>font14</font>
 			<width>620</width>
-			<label>#select</label>
+			<label>#myfilms.select</label>
 			<wrapString> : : : </wrapString>
 		</control>
 
