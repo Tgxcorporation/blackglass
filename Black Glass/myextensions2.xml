@@ -4,7 +4,7 @@
 	<defaultcontrol>2</defaultcontrol>
 	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
 	<define>#header.label:14001</define>
-	<define>#header.background:hover_mpei.png</define>
+	<define>#header.background:hover_extensions.png</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
@@ -13,54 +13,74 @@
 		<import>common.facade.background.xml</import>
 		<import>common.facade.itemcount.xml</import>
 
-
+		<control>
+			<id>600</id>
+			<type>image</type>
+			<posX>39</posX>
+			<posY>100</posY>
+			<width>255</width>
+			<height>255</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<centered>yes</centered>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>93</posY>
+			<width>272</width>
+			<height>271</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">OverlayCase.png</texture>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>385</posY>
+			<width>385</width>
+			<font>font22</font>
+			<label>#selecteditem</label>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
+		</control>
 		<control>
 			<description>Summary</description>
 			<type>textboxscrollup</type>
 			<id>0</id>
 			<posX>30</posX>
-			<posY>100</posY>
+			<posY>450</posY>
 			<width>385</width>
-			<height>204</height>
-			<textcolor>ffFFFFFF</textcolor>
+			<height>236</height>
+			<textcolor>b0FFFFFF</textcolor>
 			<seperator>: : :</seperator>
 			<font>font16</font>
 			<label>#MPE.Selected.Description</label>
-			<visible>facadeview.list|facadeview.album|facadeview.playlist</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<description>Summary</description>
-			<type>textboxscrollup</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>345</posY>
-			<width>385</width>
-			<height>204</height>
-			<textcolor>a0FFFFFF</textcolor>
-			<seperator>: : :</seperator>
-			<font>font16</font>
-			<label>#MPE.Selected.VersionDescription</label>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		
-		<control>
-			<description>Summary</description>
-			<type>textboxscrollup</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>345</posY>
-			<width>385</width>
-			<height>330</height>
-			<textcolor>a0FFFFFF</textcolor>
-			<seperator>: : :</seperator>
-			<font>font16</font>
-			<label>#MPE.Selected.VersionDescription</label>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!player.hasmedia</visible>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
+		<control>
+			<description>Summary</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>450</posY>
+			<width>385</width>
+			<height>104</height>
+			<textcolor>b0FFFFFF</textcolor>
+			<seperator>: : :</seperator>
+			<font>font16</font>
+			<label>#MPE.Selected.Description</label>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
 		<import>common.facade.pictures.xml</import>
 
 
@@ -93,7 +113,7 @@
 				<width>1</width>
 				<height>1</height>
 				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)|control.hasfocus(5)|control.hasfocus(8)</visible>
+				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)|control.hasfocus(5)|control.hasfocus(8)|control.hasfocus(90)</visible>
 			</control>
 			<control>
 				<type>image</type>
@@ -178,6 +198,16 @@
 					<label>Update all</label>
 					<onright>50</onright>
 					<onup>5</onup>
+					<ondown>90</ondown>
+				</control>
+				<control>
+					<description>MPEIUPDATE:a6afa4d6-4fd8-4607-8878-5911db044fd7</description>
+					<type>button</type>
+					<id>90</id>
+					<label>#MPEI.Translation.NewVersion.Label</label>
+					<onright>50</onright>
+					<visible>string.equals(#mpei.a6afa4d6_4fd8_4607_8878_5911db044fd7.haveupdate,true)</visible>
+					<onup>8</onup>
 					<ondown>2</ondown>
 				</control>
 			</control>
