@@ -33,6 +33,9 @@
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
 		</control>
+		<import>common.time.xml</import>
+		
+		
 		<!-- :::::::::::::: INFO LABELS :::::::::::::: -->
 
 
@@ -104,7 +107,78 @@
 			<label>#Anime2.WideBanners.SelectedBannerIsDefault</label>
 		</control>
 
-		<!--  ************** HIDDEN MENU *****************  -->
+	
+
+
+		<!-- :::::::::::::: THUMBNAILPANEL :::::::::::::: -->
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>composite control consisting of a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>graphical thumbpanel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<posX>11</posX>
+					<posY>70</posY>
+					<width>1300</width>
+					<height>660</height>
+					<!-- up/down buttons & page # -->     
+					<onleft>13</onleft>
+					<onright>50</onright>		  
+					<!-- Text -->
+					<font>font16</font>
+					<selectedColor>00ffffff</selectedColor>
+					<textcolor>ffffffff</textcolor>
+					<colordiffuse>ffffffff</colordiffuse>
+					<remoteColor>FF868686</remoteColor>
+					<!-- watched color -->
+					<downloadColor>FFFFFFFF</downloadColor>
+					<!-- not watched color (normal) -->
+					<textcolor>FFC14E4A</textcolor>
+					<!-- local file not present color -->
+					<textcolor2>FFC14E4A</textcolor2>
+					<!-- local file not present color  column 2-->
+					<textcolor3>FFC14E4A</textcolor3>
+					<!-- local file not present color column 3-->
+					<suffix>|</suffix>		  
+					<itemWidthBig>422</itemWidthBig>
+					<itemHeightBig>91</itemHeightBig>
+					<!-- boxes -->
+					<textureWidthBig>413</textureWidthBig>
+					<textureHeightBig>87</textureHeightBig>
+					<!-- banners -->
+					<thumbWidthBig>399</thumbWidthBig>
+					<thumbHeightBig>73</thumbHeightBig>
+					<thumbPosXBig>7</thumbPosXBig>
+					<thumbPosYBig>7</thumbPosYBig>
+					<thumbZoom>no</thumbZoom>
+					<!-- text (No banner) -->
+					<textXOff>0</textXOff>
+					<textYOff>0</textYOff>
+					<keepaspectratio>no</keepaspectratio>
+					<enableFocusZoom>no</enableFocusZoom>
+					<unfocusedAlpha>120</unfocusedAlpha>     
+					<spinWidth>40</spinWidth>
+					<spinHeight>40</spinHeight>
+					<spinPosX>2185</spinPosX>
+					<spinPosY>660</spinPosY>
+					<spinAlign>Right</spinAlign>
+					<spinColor>60ffffff</spinColor>
+					<frameNoFocus>BannerCase.png</frameNoFocus> 
+					<frameFocus>BannerCase.png</frameFocus>
+					<imageFolder>-</imageFolder>
+					<imageFolderFocus>-</imageFolderFocus>
+					<spinCanFocus>no</spinCanFocus>
+					<scrollOffset>0</scrollOffset>
+
+				</control>
+			</control>
+		</control>
+			<!--  ************** HIDDEN MENU *****************  -->
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -203,76 +277,5 @@
 				</control>
 			</control>
 		</control>
-
-
-		<!-- :::::::::::::: THUMBNAILPANEL :::::::::::::: -->
-		<control>
-			<type>group</type>
-			<description>group element</description>
-			<control>
-				<description>composite control consisting of a thumbnail panel</description>
-				<type>facadeview</type>
-				<id>50</id>
-				<control>
-					<description>graphical thumbpanel</description>
-					<type>thumbnailpanel</type>
-					<id>50</id>
-					<posX>11</posX>
-					<posY>70</posY>
-					<width>1300</width>
-					<height>660</height>
-					<!-- up/down buttons & page # -->     
-					<onleft>13</onleft>
-					<onright>50</onright>		  
-					<!-- Text -->
-					<font>font16</font>
-					<selectedColor>00ffffff</selectedColor>
-					<textcolor>ffffffff</textcolor>
-					<colordiffuse>ffffffff</colordiffuse>
-					<remoteColor>FF868686</remoteColor>
-					<!-- watched color -->
-					<downloadColor>FFFFFFFF</downloadColor>
-					<!-- not watched color (normal) -->
-					<textcolor>FFC14E4A</textcolor>
-					<!-- local file not present color -->
-					<textcolor2>FFC14E4A</textcolor2>
-					<!-- local file not present color  column 2-->
-					<textcolor3>FFC14E4A</textcolor3>
-					<!-- local file not present color column 3-->
-					<suffix>|</suffix>		  
-					<itemWidthBig>422</itemWidthBig>
-					<itemHeightBig>91</itemHeightBig>
-					<!-- boxes -->
-					<textureWidthBig>413</textureWidthBig>
-					<textureHeightBig>87</textureHeightBig>
-					<!-- banners -->
-					<thumbWidthBig>399</thumbWidthBig>
-					<thumbHeightBig>73</thumbHeightBig>
-					<thumbPosXBig>7</thumbPosXBig>
-					<thumbPosYBig>7</thumbPosYBig>
-					<thumbZoom>no</thumbZoom>
-					<!-- text (No banner) -->
-					<textXOff>0</textXOff>
-					<textYOff>0</textYOff>
-					<keepaspectratio>no</keepaspectratio>
-					<enableFocusZoom>no</enableFocusZoom>
-					<unfocusedAlpha>120</unfocusedAlpha>     
-					<spinWidth>40</spinWidth>
-					<spinHeight>40</spinHeight>
-					<spinPosX>2185</spinPosX>
-					<spinPosY>660</spinPosY>
-					<spinAlign>Right</spinAlign>
-					<spinColor>60ffffff</spinColor>
-					<frameNoFocus>BannerCase.png</frameNoFocus> 
-					<frameFocus>BannerCase.png</frameFocus>
-					<imageFolder>-</imageFolder>
-					<imageFolderFocus>-</imageFolderFocus>
-					<spinCanFocus>no</spinCanFocus>
-					<scrollOffset>0</scrollOffset>
-
-				</control>
-			</control>
-		</control>
-		<import>common.time.xml</import>
 	</controls>
 </window>

@@ -26,6 +26,8 @@
 			<texture>bg_facade.png</texture>
 			<visible>!facadeview.filmstrip|control.isvisible(51)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<id>0</id>
@@ -38,6 +40,8 @@
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -65,6 +69,8 @@
 			<textcolor>60ffffff</textcolor>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+string.equals(#OnlineVideos.state, sites)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -78,6 +84,8 @@
 			<textcolor>60ffffff</textcolor>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+string.equals(#OnlineVideos.state, categories)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -91,6 +99,8 @@
 			<textcolor>60ffffff</textcolor>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+string.equals(#OnlineVideos.state, videos)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -133,6 +143,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<centered>yes</centered>
 		</control>
 		<control>
@@ -145,6 +157,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -157,6 +171,8 @@
 			<label>#selecteditem</label>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -170,6 +186,8 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Description</description>
@@ -186,8 +204,10 @@
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)+player.hasmedia</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control> 
-		
+
 		<control>
 			<description>Description</description>
 			<type>textboxscrollup</type>
@@ -203,6 +223,8 @@
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)+!player.hasmedia</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control> 
 
 		<!-- *** HIDDEN MENU *** -->

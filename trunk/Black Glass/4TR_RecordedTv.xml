@@ -12,7 +12,7 @@
 		<import>common.time.xml</import>
 
 
-		
+
 		<!--  <control>
       <type>image</type>
       <id>1</id>
@@ -32,6 +32,8 @@
 			<texture>bg_facade.png</texture>
 			<visible>![facadeview.filmstrip]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -44,6 +46,8 @@
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>![facadeview.filmstrip]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -57,6 +61,8 @@
 			<textcolor>60ffffff</textcolor>
 			<visible>!facadeview.filmstrip</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<!--     <control>
       <type>fadelabel</type>
@@ -71,6 +77,98 @@
       <disabledcolor>ff808080</disabledcolor>
       
     </control> -->
+		<import>common.facade.recordings.xml</import>
+
+		<control>
+			<id>500</id>
+			<type>image</type>
+			<posX>39</posX>
+			<posY>78</posY>
+			<width>332</width>
+			<height>188</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>70</posY>
+			<width>352</width>
+			<height>233</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>13</id>
+			<posX>30</posX>
+			<posY>320</posY>
+			<width>360</width>
+			<font>font20</font>
+			<label>#TV.RecordedTV.Title</label>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Current program time</description>
+			<id>14</id>
+			<posX>30</posX>
+			<posY>370</posY>
+			<label>#TV.RecordedTV.Time</label>
+			<textcolor>90ffffff</textcolor>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Description1</description>
+			<id>15</id>
+			<posX>30</posX>
+			<posY>415</posY>
+			<width>385</width>
+			<height>164</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>#TV.RecordedTV.Description</label>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Description1</description>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>415</posY>
+			<width>385</width>
+			<height>325</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>#TV.RecordedTV.Description</label>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -166,83 +264,5 @@
 				</control>
 			</control>
 		</control>
-		<control>
-			<id>500</id>
-			<type>image</type>
-			<posX>39</posX>
-			<posY>78</posY>
-			<width>332</width>
-			<height>188</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>70</posY>
-			<width>352</width>
-			<height>233</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Current program title</description>
-			<id>13</id>
-			<posX>30</posX>
-			<posY>320</posY>
-			<width>360</width>
-			<font>font20</font>
-			<label>#TV.RecordedTV.Title</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Current program time</description>
-			<id>14</id>
-			<posX>30</posX>
-			<posY>370</posY>
-			<label>#TV.RecordedTV.Time</label>
-			<textcolor>90ffffff</textcolor>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>textboxscrollup</type>
-			<description>Description1</description>
-			<id>15</id>
-			<posX>30</posX>
-			<posY>415</posY>
-			<width>385</width>
-			<height>164</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<font>font16</font>
-			<label>#TV.RecordedTV.Description</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>textboxscrollup</type>
-			<description>Description1</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>415</posY>
-			<width>385</width>
-			<height>325</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<font>font16</font>
-			<label>#TV.RecordedTV.Description</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<import>common.facade.recordings.xml</import>
 	</controls>
 </window>
