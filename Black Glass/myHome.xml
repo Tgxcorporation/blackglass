@@ -5,7 +5,7 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<disabletopbar>yes</disabletopbar>
 	<animation effect="fade" time="250">WindowOpen</animation>
-	<animation effect="fade" time="250">WindowClose</animation>
+	<animation effect="fade" time="250" delay="250">WindowClose</animation>
 	<rememberLastFocusedControl>yes</rememberLastFocusedControl>
 	<controls>
 		<control>
@@ -51,24 +51,8 @@
 			<onleft>18</onleft>
 			<scrollOffset>0</scrollOffset>
 			<animation effect="fade" time="500">VisibleChange</animation>
-		</control>
-		<control>
-			<description>BG</description>
-			<type>image</type>
-			<id>0</id>
-			<width>1280</width>
-			<height>720</height>
-			<texture>bg.jpg</texture> 
-			<colordiffuse>a0ffffff</colordiffuse>			
-		</control>
-		<control>
-			<type>image</type>
-			<posX>944</posX>
-			<posY>84</posY>
-			<width>340</width>
-			<height>51</height>
-			<texture>bg_button_nofocus.png</texture>
-			<colordiffuse>90999999</colordiffuse>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Rss image</description>
@@ -81,6 +65,8 @@
 			<texture>hover_infoservice.png</texture>
 			<visible>control.hasfocus(1111)</visible>
 			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Twitter image</description>
@@ -93,6 +79,8 @@
 			<texture>hover_twitter.png</texture>
 			<visible>control.hasfocus(1112)</visible>
 			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Extras image</description>
@@ -106,7 +94,30 @@
 			<texture>bg.jpg</texture>
 			<visible>control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)</visible>
 			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>bg.jpg</texture> 
+			<colordiffuse>a0ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>944</posX>
+			<posY>84</posY>
+			<width>340</width>
+			<height>51</height>
+			<texture>bg_button_nofocus.png</texture>
+			<colordiffuse>90999999</colordiffuse>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		
 		<control>
 			<description>Nav image</description>
 			<type>image</type>
@@ -116,6 +127,8 @@
 			<width>430</width>
 			<height>578</height>
 			<texture>bg_home2.png</texture>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="500,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="500,0" reversible="false" delay="250">WindowClose</animation>
 		</control>
 
 

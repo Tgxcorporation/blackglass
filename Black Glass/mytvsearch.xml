@@ -27,7 +27,8 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
-
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<description>listcontrol</description>
 				<type>listcontrol</type>
@@ -73,6 +74,8 @@
 			<textcolor>FFFFFFFF</textcolor>
 			<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control> 
 
@@ -88,6 +91,8 @@
 			<texture>#selectedthumb</texture>
 			<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Current channel</description>
@@ -102,6 +107,8 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Current program time</description>
@@ -113,6 +120,8 @@
 			<textcolor>ffffffff</textcolor>
 			<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>genre</description>
@@ -124,6 +133,8 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Description1</description>
@@ -139,6 +150,8 @@
 			<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]+player.hasmedia</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Description1</description>
@@ -154,6 +167,8 @@
 			<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]+!player.hasmedia</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>actiongroup</type>

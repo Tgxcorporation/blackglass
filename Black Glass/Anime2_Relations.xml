@@ -134,7 +134,7 @@
 
 		<!-- ********************** BACKGROUNDS************************************** -->
 		<import>common.window.background.xml</import>
-		
+
 
 		<control>
 			<description>Fanart Background #1</description>
@@ -162,105 +162,7 @@
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
 		</control>
-
-		<!-- :::::::::::::::::::::::::::::: TOP BAR :: TIME :: LOCATION :::::::::::::::::::::::::::::: -->
-
-		<control>
-			<type>actiongroup</type>
-			<description>action menu</description>
-			<defaultcontrol>901</defaultcontrol>
-			<onexit>0</onexit>
-			<buttonX>0</buttonX>
-			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
-			<buttonheight>720</buttonheight>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<width>425</width>
-			<height>720</height>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
-			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>control.hasfocus(901)|control.hasfocus(902)</visible>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>418</width>
-				<height>720</height>
-				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
-			</control>
-			<control>
-				<id>0</id>
-				<type>label</type>
-				<posX>30</posX>
-				<posY>35</posY>
-				<label>924</label>
-				<font>font24</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>47</posY>
-				<width>385</width>
-				<height>53</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
-			<control>
-				<type>group</type>
-				<layout>StackLayout</layout>
-				<posX>0</posX>
-				<posY>100</posY>
-				<control>
-					<description>Display Options</description>
-					<type>button</type>
-					<id>901</id>
-					<label>Anime Info</label>
-					<onleft>81</onleft>
-					<onright>81</onright>
-					<onup>902</onup>
-					<ondown>902</ondown>
-				</control>
-				<control>
-					<description>Settings</description>
-					<type>button</type>
-					<id>902</id>
-					<label>Characters</label>
-					<onleft>81</onleft>
-					<onright>81</onright>
-					<onup>901</onup>
-					<ondown>901</ondown>
-				</control>
-
-
-			</control>
-
-		</control>
-
-
-
-
-
-
+		<import>common.time.xml</import>
 
 		<!--  ************** MIDDLE ANIME *****************  -->
 
@@ -799,8 +701,97 @@
 			<textcolor>ffffffff</textcolor>
 		</control>
 
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>901</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(901)|control.hasfocus(902)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Display Options</description>
+					<type>button</type>
+					<id>901</id>
+					<label>Anime Info</label>
+					<onleft>81</onleft>
+					<onright>81</onright>
+					<onup>902</onup>
+					<ondown>902</ondown>
+				</control>
+				<control>
+					<description>Settings</description>
+					<type>button</type>
+					<id>902</id>
+					<label>Characters</label>
+					<onleft>81</onleft>
+					<onright>81</onright>
+					<onup>901</onup>
+					<ondown>901</ondown>
+				</control>
 
-		<import>common.time.xml</import>
+
+			</control>
+
+		</control>
+
 
 	</controls>
 </window>

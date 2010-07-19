@@ -34,15 +34,7 @@
 			<keepaspectratio>no</keepaspectratio>	
 			<texture>Animations\emulator\#selecteditem.jpg</texture>
 		</control>	
-		<control>
-			<description>BG</description>
-			<type>image</type>
-			<id>0</id>
-			<width>1280</width>
-			<height>720</height>
-			<texture>bg.jpg</texture>
-			<colordiffuse>c0ffffff</colordiffuse>
-		</control>
+		<import>common.window.overlay.xml</import>
 		<import>common.time.xml</import>
 		<import>common.facade.background.xml</import>
 		<import>common.facade.itemcount.xml</import>
@@ -61,6 +53,8 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -168,6 +162,8 @@
 			<texture/>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -180,6 +176,8 @@
 			<texture/>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -192,6 +190,8 @@
 			<texture/>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -204,6 +204,8 @@
 			<texture/>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -216,6 +218,8 @@
 			<texture/>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -228,6 +232,8 @@
 			<texture/>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -240,6 +246,8 @@
 			<texture/>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -252,6 +260,8 @@
 			<texture/>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -264,6 +274,8 @@
 			<texture/>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -276,6 +288,8 @@
 			<texture/>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 
@@ -292,6 +306,8 @@
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<centered>yes</centered>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -303,6 +319,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -316,6 +334,8 @@
 			<label>#selecteditem</label>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 
@@ -328,6 +348,8 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -338,6 +360,8 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Description</description>
@@ -353,6 +377,8 @@
 			<visible>!player.hasmedia+!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control> 
 
 		<!-- SIDE BUTTONS -->

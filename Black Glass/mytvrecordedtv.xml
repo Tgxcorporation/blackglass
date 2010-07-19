@@ -176,6 +176,8 @@
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -187,6 +189,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -199,6 +203,8 @@
 			<label>#TV.RecordedTV.Title</label>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -211,6 +217,8 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -226,6 +234,8 @@
 			<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -241,6 +251,8 @@
 			<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -250,8 +262,10 @@
 			<width>948</width>
 			<height>766</height>
 			<texture>bg_facade.png</texture>
-			<visible>![facadeview.filmstrip]</visible>
+			<visible>!facadeview.filmstrip</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -262,8 +276,10 @@
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-			<visible>![facadeview.filmstrip]</visible>
+			<visible>!facadeview.filmstrip</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<control>
@@ -278,6 +294,8 @@
 			<textcolor>60ffffff</textcolor>
 			<visible>!facadeview.filmstrip</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<import>common.facade.recordings.xml</import>

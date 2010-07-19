@@ -26,21 +26,8 @@
 			<type>group</type>
 			<description>group element</description>
 			<id>0</id>
-			<posX>455</posX>
-			<posY>116</posY>
-			<width>778</width>
-			<height>583</height>
-			<mpe>
-				<layout>Grid</layout>
-				<spring>no</spring>
-				<spacing>0</spacing>
-				<padding>
-					<top>0</top>
-					<right>0</right>
-					<bottom>0</bottom>
-					<left>0</left>
-				</padding>
-			</mpe>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<description>active recordings listcontrol</description>
 				<type>listcontrol</type>
@@ -63,71 +50,80 @@
 				<textureFocus>bg_facade2_line_focus.png</textureFocus>
 				<textureNoFocus>bg_facade2_line_nofocus.png</textureNoFocus>
 				<keepaspectratio>yes</keepaspectratio>
-			</control>
-			<control>
-				<type>fadelabel</type>
-				<description>Current program title</description>
-				<id>13</id>
-				<posX>30</posX>
-				<posY>100</posY>
-				<width>380</width>
-				<font>font20</font>
-				<label>#TV.Active.Title</label>
-				<visible>control.hasfocus(10)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<type>label</type>
-				<description>Current program time</description>
-				<id>14</id>
-				<posX>30</posX>
-				<posY>140</posY>
-				<label>#TV.Search.Time</label>
-				<textcolor>90FFFFFF</textcolor>
-				<visible>control.hasfocus(10)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<type>textboxscrollup</type>
-				<description>Description1</description>
-				<id>15</id>
-				<posX>30</posX>
-				<posY>215</posY>
-				<width>370</width>
-				<height>326</height>
-				<label>#TV.Active.Description</label>
-				<font>font16</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<visible>control.hasfocus(10)+player.hasmedia</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-				<seperator>: : :</seperator>
-			</control>
-			<control>
-				<type>textboxscrollup</type>
-				<description>Description1</description>
-				<id>0</id>
-				<posX>30</posX>
-				<posY>215</posY>
-				<width>370</width>
-				<height>452</height>
-				<label>#TV.Active.Description</label>
-				<font>font16</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<visible>control.hasfocus(10)+!player.hasmedia</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-				<seperator>: : :</seperator>
-			</control>
-			<!-- <control>
-				<type>label</type>
-				<description>genre</description>
-				<id>17</id>
-				<posX>30</posX>
-				<posY>175</posY>
-				<width>370</width>
-				<label>#TV.Active.Genre</label>
-				<textcolor>ffffff</textcolor>
-				<visible>control.hasfocus(10)</visible>
-			</control>  -->
+			</control>		
+		</control>
+
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>13</id>
+			<posX>30</posX>
+			<posY>100</posY>
+			<width>380</width>
+			<font>font20</font>
+			<label>#TV.Active.Title</label>
+			<visible>control.hasfocus(10)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Current program time</description>
+			<id>14</id>
+			<posX>30</posX>
+			<posY>140</posY>
+			<label>#TV.Search.Time</label>
+			<textcolor>90FFFFFF</textcolor>
+			<visible>control.hasfocus(10)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Description1</description>
+			<id>15</id>
+			<posX>30</posX>
+			<posY>215</posY>
+			<width>370</width>
+			<height>326</height>
+			<label>#TV.Active.Description</label>
+			<font>font16</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<visible>control.hasfocus(10)+player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<seperator>: : :</seperator>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Description1</description>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>215</posY>
+			<width>370</width>
+			<height>452</height>
+			<label>#TV.Active.Description</label>
+			<font>font16</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<visible>control.hasfocus(10)+!player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<seperator>: : :</seperator>
+		</control>
+		<control>
+			<type>label</type>
+			<description>genre</description>
+			<id>17</id>
+			<posX>1530</posX>
+			<posY>175</posY>
+			<width>370</width>
+			<label>#TV.Active.Genre</label>
+			<textcolor>ffffff</textcolor>
+			<visible>control.hasfocus(10)</visible>
 		</control>
 	</controls>
 </window>

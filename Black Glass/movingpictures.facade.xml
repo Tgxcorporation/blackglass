@@ -7,6 +7,8 @@ This file should contain the facade view
 		<control>
 			<type>group</type>
 			<description>group element</description>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation>
 			<control>      
 				<type>facadeview</type>
 				<id>51</id>
@@ -42,6 +44,9 @@ This file should contain the facade view
 		<control>
 			<type>group</type>
 			<description>group element</description>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="800,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="800,0" reversible="false">WindowClose</animation>
 			<control>
 				<type>facadeview</type>
 				<id>50</id>
@@ -61,8 +66,7 @@ This file should contain the facade view
 					<keepaspectratio>no</keepaspectratio>
 					<textXOff>10</textXOff>
 					<!-- group headers -->
-					<textcolor3>ff3E99D7</textcolor3>
-					<animation effect="fade" time="250">visiblechange</animation>
+					<textcolor3>ff3E99D7</textcolor3>	
 				</control>
 				<control>
 					<visible>control.isvisible(50)</visible>
@@ -90,7 +94,7 @@ This file should contain the facade view
 					<showFolder>yes</showFolder>
 					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
 					<imageFolderFocus>DVDCase.png</imageFolderFocus>
-					<thumbs flipY="true" diffuse="Thumb_Mask.png"></thumbs>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
 					<showBackGround>no</showBackGround>
 					<background>-</background>
 					<showInfoImage>no</showInfoImage>
@@ -99,7 +103,6 @@ This file should contain the facade view
 					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
 					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
 					<scrollOffset>3</scrollOffset>
-					<animation effect="fade" time="250">visiblechange</animation>				
 				</control>
 				<control>
 					<description>Thumbnail Panel</description>
@@ -142,7 +145,6 @@ This file should contain the facade view
 					<showFrame>true</showFrame>
 					<frameNoFocus>DVDCase.png</frameNoFocus> 
 					<frameFocus>DVDCase.png</frameFocus> 
-					<animation effect="fade" time="250">visiblechange</animation>
 				</control>
 			</control>
 		</control>
@@ -159,7 +161,9 @@ This file should contain the facade view
 			<height>360</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">Categories\Movies.png</texture>
 			<keepaspectratio>yes</keepaspectratio>
-			<animation effect="fade" time="250">visiblechange</animation>		
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<visible>control.isvisible(51)+!control.HasThumb(100)</visible>
 		</control>
 		<control>
@@ -172,7 +176,9 @@ This file should contain the facade view
 			<height>360</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">Categories\#MovingPictures.SelectedNode.name.png</texture>	
 			<keepaspectratio>yes</keepaspectratio>
-			<animation effect="fade" time="250">visiblechange</animation>	
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<visible>control.isvisible(51)</visible>
 		</control>
 

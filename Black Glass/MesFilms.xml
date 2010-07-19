@@ -43,8 +43,8 @@
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<animation effect="fade" start="0" end="100" time="3000">WindowOpen</animation>
-            <animation effect="fade" start="0" end="100" time="250">Visible</animation>
-            <animation effect="fade" start="100" end="0" time="250" delay="250">Hidden</animation>
+			<animation effect="fade" start="0" end="100" time="250">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="250" delay="250">Hidden</animation>
 		</control>
 
 		<control>
@@ -60,8 +60,8 @@
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<animation effect="fade" start="0" end="100" time="3000">WindowOpen</animation>
-            <animation effect="fade" start="0" end="100" time="250">Visible</animation>
-            <animation effect="fade" start="100" end="0" time="250" delay="250">Hidden</animation>
+			<animation effect="fade" start="0" end="100" time="250">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="250" delay="250">Hidden</animation>
 		</control>
 		<import>common.window.overlay.xml</import>
 		<control>
@@ -117,6 +117,8 @@
 			<texture>bg_facade.png</texture>
 			<visible>facadeview.list</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -129,6 +131,8 @@
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>facadeview.list</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -141,6 +145,8 @@
 			<label>#myfilms.nbobjects</label>
 			<visible>facadeview.list</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -153,6 +159,8 @@
 			<label>#selecteditem</label>
 			<visible>facadeview.list+control.hasfocus(1026)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -166,6 +174,8 @@
 			<textcolor>90FFFFFF</textcolor>
 			<visible>facadeview.list+control.hasfocus(1026)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Runtime value</description>
@@ -178,6 +188,8 @@
 			<textcolor>90FFFFFF</textcolor>
 			<visible>!player.hasmedia+facadeview.list+control.hasfocus(1026)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -194,6 +206,8 @@
 			<visible>!player.hasmedia+facadeview.list+control.hasfocus(1026)</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 
@@ -209,6 +223,8 @@
 			<texture>bg_facade.png</texture>
 			<visible>facadeview.smallicons|facadeview.largeicons</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -221,6 +237,8 @@
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>facadeview.smallicons|facadeview.largeicons</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -233,6 +251,8 @@
 			<label>#myfilms.nbobjects</label>
 			<visible>facadeview.smallicons|facadeview.largeicons</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -245,6 +265,8 @@
 			<label>#selecteditem</label>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(1026)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -258,6 +280,8 @@
 			<textcolor>90FFFFFF</textcolor>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(1026)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Runtime value</description>
@@ -270,6 +294,8 @@
 			<textcolor>90FFFFFF</textcolor>
 			<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(1026)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -286,6 +312,8 @@
 			<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(1026)</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<!-- COMMON FACADES -->
@@ -301,6 +329,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">#myfilms.picture</texture>
 			<visible>!facadeview.filmstrip+control.hasfocus(1026)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -314,6 +344,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 			<visible>!facadeview.filmstrip+control.hasfocus(1026)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -335,6 +367,8 @@
 			<percentage>#myfilms.rating</percentage>
 			<visible>!facadeview.filmstrip+control.hasfocus(1026)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -349,6 +383,8 @@
 			<spaceBetweenItems>0</spaceBetweenItems>
 			<visible>!player.hasmedia+control.hasfocus(1026)+!facadeview.filmstrip</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -363,6 +399,8 @@
 			<spaceBetweenItems>0</spaceBetweenItems>
 			<visible>!player.hasmedia+control.hasfocus(1026)+!facadeview.filmstrip</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 
@@ -383,6 +421,8 @@
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
 				<id>1026</id>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="800,0" reversible="false">WindowOpen</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="800,0" reversible="false">WindowClose</animation>
 				<control>
 					<description>Thumbnail Panel</description>
 					<type>thumbnailpanel</type>

@@ -21,7 +21,7 @@
 	<controls>
 		<!-- ~~~~~~~~~~~~~~~~~~~~ ALL BACKGROUNDS ~~~~~~~~~~~~~~~~~~~~ -->
 		<import>common.window.background.xml</import>
-		
+
 		<control>
 			<description>preview</description>
 			<id>4560</id>
@@ -57,6 +57,8 @@
 			<font>font16</font>
 			<align>right</align>
 			<label>#TVSeries.FanArt.DownloadingStatus #TVSeries.FanArt.LoadingStatus</label>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Status</description>
@@ -67,6 +69,8 @@
 			<font>font16</font>
 			<align>center</align>
 			<label>[#TVSeries.FanArt.SelectedFanartResolution]</label>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -77,6 +81,8 @@
 			<font>font28</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<!--  ************** HIDDEN MENU *****************  -->    
@@ -183,9 +189,8 @@
 			<type>group</type>
 			<description>group element</description>
 			<id>28</id>
-			<layout>StackLayout</layout>
-			<posX>60</posX>
-			<posY>97</posY>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
