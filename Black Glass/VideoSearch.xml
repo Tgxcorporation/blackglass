@@ -61,92 +61,13 @@
       <onup>50</onup>
       <onright>50</onright>
     </control> -->
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-386</posX>
-			<posY>3</posY>
-			<width>418</width>
-			<height>714</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<animation effect="fade" time="50">WindowClose</animation>
-		</control>
-		<control>
-			<type>actiongroup</type>
-			<description>action menu</description>
-			<defaultcontrol>102</defaultcontrol>
-			<onexit>0</onexit>
-			<buttonX>0</buttonX>
-			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
-			<buttonheight>720</buttonheight>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<width>425</width>
-			<height>720</height>
-			<dimColor>00ffffff</dimColor>
-			<animation effect="slide" time="250" start="-400,0" reversible="true">visible</animation>
-			<animation effect="slide" time="250" end="-400,0" reversible="true">hidden</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="true">WindowClose</animation>			
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>418</width>
-				<height>720</height>
-				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
-				<visible>!control.hasfocus(50)</visible>
-			</control>
 
-			<control>
-				<type>label</type>
-				<id>1</id>
-				<posX>30</posX>
-				<posY>35</posY>
-				<label>924</label>
-				<font>font24</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-			</control> 
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>47</posY>
-				<width>385</width>
-				<height>53</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
-			<control>
-				<description>group element</description>
-				<type>group</type>
-				<animation effect="fade" time="450" reversible="true">visible</animation>
-				<animation effect="fade" time="450" reversible="true">hidden</animation>
-				<posX>0</posX>
-				<posY>100</posY>
-				<visible>!control.hasfocus(50)</visible>
-				<layout>StackLayout</layout>
-				<control>
-					<type>button</type>
-					<description>Search</description>
-					<id>102</id>
-					<onright>50</onright>
-					<label>Search</label>
-					<onup>101</onup>
-					<ondown>101</ondown>
-				</control>
-				<control>
-					<description>Top Rated</description>
-					<type>button</type>
-					<id>101</id>
-					<onright>50</onright>
-					<label>Top Rated</label>
-					<onup>102</onup>
-					<ondown>102</ondown>
-				</control>
-			</control>
-		</control>
+
+
+
+
+
+
 		<control>
 			<id>500</id>
 			<type>image</type>
@@ -159,6 +80,8 @@
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<centered>yes</centered>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -170,6 +93,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -183,6 +108,8 @@
 			<label>#selecteditem</label>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -198,6 +125,8 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -255,6 +184,92 @@
 				</control>
 
 
+			</control>
+		</control>
+
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>102</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(102)|control.hasfocus(101)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<type>button</type>
+					<description>Search</description>
+					<id>102</id>
+					<onright>50</onright>
+					<label>Search</label>
+					<onup>101</onup>
+					<ondown>101</ondown>
+				</control>
+				<control>
+					<description>Top Rated</description>
+					<type>button</type>
+					<id>101</id>
+					<onright>50</onright>
+					<label>Top Rated</label>
+					<onup>102</onup>
+					<ondown>102</ondown>
+				</control>
 			</control>
 		</control>
 	</controls>
