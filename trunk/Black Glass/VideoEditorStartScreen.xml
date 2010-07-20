@@ -104,10 +104,8 @@
 				<subitem>2066</subitem>
 			</subitems>
 			<font>font18</font>
-		</control>
-		
-		
-		
+		</control>	
+
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -130,6 +128,8 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<description>JoinList</description>
 				<type>listcontrol</type>
@@ -147,12 +147,11 @@
 			</control>
 		</control>
 
-
-
-
 		<control>
 			<type>group</type>
 			<description>group element</description>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<description>Videoliste</description>
 				<type>listcontrol</type>
@@ -163,10 +162,6 @@
 			</control>
 		</control>
 
-		
-
-
-
 		<control>
 			<description>progress bar background</description>
 			<id>0</id>
@@ -176,8 +171,9 @@
 			<width>325</width>
 			<height>35</height>
 			<texture>osd_progress_background.png</texture>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
-
 
 		<control>
 			<type>progress</type>
@@ -185,6 +181,8 @@
 			<posX>18</posX>
 			<posY>662</posY>
 			<width>349</width>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -195,6 +193,8 @@
 			<align>center</align>
 			<font>font16</font>
 			<label>-</label>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 	</controls>
 </window>

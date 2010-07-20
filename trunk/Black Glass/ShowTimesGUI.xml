@@ -138,7 +138,8 @@
 			<height>766</height>
 			<texture>bg_facade.png</texture>
 			<visible>facadeview.list+!control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -150,7 +151,8 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>facadeview.list+!control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -162,7 +164,8 @@
 			<textcolor>60ffffff</textcolor>
 			<label>#itemcount #itemtype</label>
 			<visible>facadeview.list+!control.isvisible(24)+string.equals(#itemcount)+string.equals(#itemtype)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>Cover Art</description>
@@ -175,7 +178,8 @@
 			<height>348</height> 
 			<texture flipY="true" diffuse="Thumb_Mask.png">#st_poster</texture>
 			<visible>facadeview.list+control.hasfocus(50)+!control.isvisible(24)+!control.isvisible(47)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Cover Art Glass Overlay</description>
@@ -187,7 +191,8 @@
 			<height>360</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 			<visible>facadeview.list+control.hasfocus(50)+!control.isvisible(24)+!control.isvisible(47)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>imagelist</type>
@@ -207,7 +212,8 @@
 			<imagesToDraw>10</imagesToDraw>
 			<percentage>#st_userrating</percentage>
 			<visible>facadeview.list+control.hasfocus(50)+!control.isvisible(24)+!control.isvisible(47)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -219,7 +225,8 @@
 			<font>font22</font>
 			<label>#selecteditem</label>
 			<visible>facadeview.list+control.hasfocus(50)+!control.isvisible(24)+!control.isvisible(47)</visible>  
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -232,7 +239,8 @@
 			<label>#st_genre     #st_rating</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>facadeview.list + control.hasfocus(50)+!control.isvisible(24)+!control.isvisible(47)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -245,7 +253,8 @@
 			<label>#st_releasedate     #st_runtime</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>facadeview.list + control.hasfocus(50) + !player.hasmedia+!control.isvisible(24)+!control.isvisible(47)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -261,7 +270,8 @@
 			<label>#st_plot</label>
 			<visible>facadeview.list+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+!control.isvisible(47)+!control.hastext(46)</visible>
 			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control> 
 		<control>
 			<type>fadelabel</type>
@@ -274,7 +284,8 @@
 			<align>left</align> 
 			<visible>facadeview.list+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+control.hastext(46)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -289,7 +300,8 @@
 			<align>left</align> 
 			<visible>facadeview.list+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+control.hastext(46)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 
@@ -304,7 +316,9 @@
 			<height>766</height>
 			<texture>bg_facade.png</texture>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+!control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -316,7 +330,8 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+!control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -328,6 +343,8 @@
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+!control.isvisible(24)+string.equals(#itemcount)+string.equals(#itemtype)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>Cover Art</description>
@@ -340,7 +357,8 @@
 			<height>348</height> 
 			<texture flipY="true" diffuse="Thumb_Mask.png">#st_poster</texture>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(50)+!control.isvisible(24)+!control.isvisible(47)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Cover Art Glass Overlay</description>
@@ -352,7 +370,8 @@
 			<height>360</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(50)+!control.isvisible(24)+!control.isvisible(47)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>imagelist</type>
@@ -372,7 +391,8 @@
 			<imagesToDraw>10</imagesToDraw>
 			<percentage>#st_userrating</percentage>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(50)+!control.isvisible(24)+!control.isvisible(47)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -384,7 +404,8 @@
 			<font>font22</font>
 			<label>#selecteditem</label>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(50)+!control.isvisible(24)+!control.isvisible(47)</visible>  
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -397,7 +418,8 @@
 			<label>#st_genre     #st_rating</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>[facadeview.smallicons|facadeview.largeicons] + control.hasfocus(50)+!control.isvisible(24)+!control.isvisible(47)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -410,7 +432,8 @@
 			<label>#st_releasedate     #st_runtime</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>[facadeview.smallicons|facadeview.largeicons] + control.hasfocus(50) + !player.hasmedia+!control.isvisible(24)+!control.isvisible(47)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -426,7 +449,8 @@
 			<label>#st_plot</label>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+!control.isvisible(47)+!control.hastext(46)</visible>
 			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control> 
 		<control>
 			<type>fadelabel</type>
@@ -439,7 +463,8 @@
 			<align>left</align> 
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+control.hastext(46)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -454,7 +479,8 @@
 			<align>left</align> 
 			<visible>[facadeview.smallicons|facadeview.largeicons]+control.hasfocus(50)+!player.hasmedia+!control.isvisible(24)+control.hastext(46)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 
@@ -556,7 +582,10 @@
 			<height>766</height>
 			<texture>bg_facade.png</texture>
 			<visible>control.isvisible(24)</visible>	
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -568,7 +597,9 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>control.isvisible(24)</visible>	
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>Title label</description>
@@ -583,7 +614,9 @@
 			<width>750</width>
 			<visible>control.isvisible(24)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>movie poster</description>
@@ -595,7 +628,9 @@
 			<height>282</height>
 			<keepaspectratio>no</keepaspectratio>
 			<texture flipY="true" diffuse="Thumb_Mask.png">-</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>Highlight item</description>
@@ -607,7 +642,9 @@
 			<height>292</height>
 			<visible>control.isvisible(24)</visible>
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>IMDB Rating Value</description>
@@ -628,7 +665,9 @@
 			<imagesToDraw>10</imagesToDraw>
 			<percentage>#st_userrating</percentage>
 			<visible>control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>	
 
 		<control>
@@ -643,7 +682,9 @@
 			<font>font16</font>
 			<visible>control.isvisible(24)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<control>
@@ -658,7 +699,9 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>control.isvisible(24)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<control>
@@ -673,7 +716,9 @@
 			<width>480</width>
 			<visible>control.isvisible(24)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<control>
@@ -688,7 +733,9 @@
 			<width>480</width>
 			<visible>control.isvisible(24)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation> 
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<control>
@@ -704,7 +751,9 @@
 			<visible>control.isvisible(24)</visible>	 
 			<seperator>: : :</seperator>
 			<height>70</height>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<control>
@@ -717,7 +766,9 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>control.isvisible(24)</visible>	
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 
@@ -733,7 +784,9 @@
 			<label>#st_plot</label>
 			<seperator>: : :</seperator>
 			<visible>control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>	  
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation> 
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -782,6 +835,10 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<visible>!control.isvisible(24)</visible>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -794,7 +851,7 @@
 					<posX>897</posX>
 					<width>383</width>
 					<onleft>2</onleft>
-					<onright>2</onright>
+					<onright>2</onright>			
 				</control>
 				<control>
 					<description>Thumbnail Panel</description>
