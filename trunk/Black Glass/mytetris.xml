@@ -10,15 +10,8 @@
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
-		<control>
-			<type>image</type>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-		</control>
-		
+
+
 		<control>
 			<description>Score: label</description>
 			<type>label</type>
@@ -26,6 +19,10 @@
 			<posX>30</posX>
 			<posY>100</posY>
 			<label>19005</label>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Score</description>
@@ -36,6 +33,10 @@
 			<width>288</width>
 			<align>right</align>
 			<label>#tetris_score</label>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Level: label</description>
@@ -44,6 +45,10 @@
 			<posX>30</posX>
 			<posY>140</posY>
 			<label>19006</label>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Level</description>
@@ -54,6 +59,10 @@
 			<width>288</width>
 			<align>right</align>
 			<label>#tetris_level</label>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Lines: label</description>
@@ -62,6 +71,10 @@
 			<posX>30</posX>
 			<posY>180</posY>
 			<label>19007</label>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Lines</description>
@@ -72,6 +85,10 @@
 			<width>288</width>
 			<align>right</align>
 			<label>#tetris_lines</label>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Highscore: label</description>
@@ -80,6 +97,10 @@
 			<posX>30</posX>
 			<posY>220</posY>
 			<label>19008</label>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Highscore</description>
@@ -90,33 +111,50 @@
 			<width>288</width>
 			<align>right</align>
 			<label>#tetris_highscore</label>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
-			<description>Tetris control</description>
-			<type>tetris</type>
-			<id>10</id>
-			<posX>510</posX>
-			<posY>103</posY>
-			<width>750</width>
-			<height>600</height>
-			<font>font16</font>
-			<textcolor>ffffffff</textcolor>
-			<onback>2</onback>
-			<onleft>2</onleft>
-			<onright>10</onright>
-			<onup>10</onup>
-			<ondown>10</ondown>
-			<colordiffuse>30ffffff</colordiffuse>
-			<texture>tetris\background.png</texture>
-			<texturefocus>tetris\background_focus.png</texturefocus>
-			<textureLeft>tetris\guide.png</textureLeft>
-			<textureRight>tetris\guide.png</textureRight>
-			<nextblockx>580</nextblockx>
-			<nextblocky>208</nextblocky>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<description>Tetris control</description>
+				<type>tetris</type>
+				<id>10</id>
+				<posX>510</posX>
+				<posY>103</posY>
+				<width>750</width>
+				<height>600</height>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+				<onback>2</onback>
+				<onleft>2</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<colordiffuse>30ffffff</colordiffuse>
+				<texture>tetris\background.png</texture>
+				<texturefocus>tetris\background_focus.png</texturefocus>
+				<textureLeft>tetris\guide.png</textureLeft>
+				<textureRight>tetris\guide.png</textureRight>
+				<nextblockx>580</nextblockx>
+				<nextblocky>208</nextblocky>
+			</control>
 		</control>
-		
-		
+
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>

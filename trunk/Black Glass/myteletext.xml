@@ -12,46 +12,59 @@
 		<import>common.window.overlay.xml</import>		
 		<import>common.time.xml</import>
 		<control>
-			<description>tele-text rendering image</description>
-			<type>image</type>
-			<id>500</id>
-			<posX>455</posX>
-			<posY>121</posY>
-			<width>760</width>
-			<height>570</height>
-			<texture>black.png</texture>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<description>tele-text rendering image</description>
+				<type>image</type>
+				<id>500</id>
+				<posX>500</posX>
+				<posY>121</posY>
+				<width>760</width>
+				<height>570</height>
+				<texture>black.png</texture>
+			</control>
+			<control>
+				<description>tele-text rendering image 2</description>
+				<type>image</type>
+				<id>501</id>
+				<posX>500</posX>
+				<posY>121</posY>
+				<width>760</width>
+				<height>570</height>
+				<texture>black.png</texture>
+			</control>
+			<control>
+				<description>template for program title darkarea </description>
+				<type>label</type>
+				<visible>no</visible>
+				<id>26</id>
+				<label>-</label>
+				<font>font12</font>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
+			<control>
+				<description>template for program title darkarea </description>
+				<type>label</type>
+				<visible>no</visible>
+				<posX>5</posX>
+				<posY>250</posY>
+				<id>27</id>
+				<label>-</label>
+				<font>font12</font>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
 		</control>
-		<control>
-			<description>tele-text rendering image 2</description>
-			<type>image</type>
-			<id>501</id>
-			<posX>455</posX>
-			<posY>121</posY>
-			<width>760</width>
-			<height>570</height>
-			<texture>black.png</texture>
-		</control>
-		<control>
-			<description>template for program title darkarea </description>
-			<type>label</type>
-			<visible>no</visible>
-			<id>26</id>
-			<label>-</label>
-			<font>font12</font>
-			<textcolor>FFFFFFFF</textcolor>
-		</control>
-		<control>
-			<description>template for program title darkarea </description>
-			<type>label</type>
-			<visible>no</visible>
-			<posX>553</posX>
-			<posY>250</posY>
-			<id>27</id>
-			<label>-</label>
-			<font>font12</font>
-			<textcolor>FFFFFFFF</textcolor>
-		</control>
-
 		<control>
 			<type>image</type>
 			<id>1</id>
@@ -196,8 +209,9 @@
 			</control>
 		</control>
 
-		
-		
+
+
+
 		<control>
 			<description>TV preview window</description>
 			<type>videowindow</type>

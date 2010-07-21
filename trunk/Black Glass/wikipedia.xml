@@ -12,6 +12,93 @@
 		<import>common.time.xml</import>
 		<import>common.window.xml</import>
 		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>490</posX>
+				<posY>97</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>490</posX>
+				<posY>610</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>!control.isvisible(14)</visible>
+			</control>
+			<control>
+				<description>Article title/searchterm</description>
+				<type>label</type>
+				<id>4</id>
+				<posX>520</posX>
+				<posY>93</posY>
+				<visible>no</visible>
+				<label>Article title/searchterm</label>
+				<font>font24</font>
+				<align>left</align>
+				<width>750</width>
+			</control>
+			<control>
+				<description>Image description</description>
+				<type>label</type>
+				<id>5</id>
+				<posX>520</posX>
+				<posY>93</posY>
+				<visible>no</visible>
+				<label>Image description</label>
+				<font>font24</font>
+				<align>left</align>
+				<width>750</width>
+			</control>
+			<control>
+				<description>Here is the article text displayed</description>
+				<type>textbox</type>
+				<id>20</id>
+				<posX>520</posX>
+				<posY>160</posY>
+				<visible>no</visible>
+				<width>675</width>
+				<height>550</height>
+				<spinPosX>1130</spinPosX>
+				<spinPosY>672</spinPosY>
+				<onleft>10</onleft>
+				<onright>10</onright>
+			</control>
+			<control>
+				<description>Article Image</description>
+				<type>image</type>
+				<id>25</id>
+				<posX>520</posX>
+				<posY>160</posY>
+				<visible>no</visible>
+				<width>550</width>
+				<height>550</height>
+				<texture />
+				<colorkey>0</colorkey>
+				<colordiffuse>White</colordiffuse>
+				<centered>no</centered>
+				<keepaspectratio>yes</keepaspectratio>
+			</control>
+		</control>
+
+		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>10</defaultcontrol>
@@ -110,86 +197,6 @@
 					<visible>no</visible>
 				</control>
 			</control>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>490</posX>
-			<posY>97</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>490</posX>
-			<posY>610</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>!control.isvisible(14)</visible>
-		</control>
-		<control>
-			<description>Article title/searchterm</description>
-			<type>label</type>
-			<id>4</id>
-			<posX>520</posX>
-			<posY>93</posY>
-			<visible>no</visible>
-			<label>Article title/searchterm</label>
-			<font>font24</font>
-			<align>left</align>
-			<width>750</width>
-		</control>
-		<control>
-			<description>Image description</description>
-			<type>label</type>
-			<id>5</id>
-			<posX>520</posX>
-			<posY>93</posY>
-			<visible>no</visible>
-			<label>Image description</label>
-			<font>font24</font>
-			<align>left</align>
-			<width>750</width>
-		</control>
-		<control>
-			<description>Here is the article text displayed</description>
-			<type>textbox</type>
-			<id>20</id>
-			<posX>520</posX>
-			<posY>160</posY>
-			<visible>no</visible>
-			<width>675</width>
-			<height>550</height>
-			<spinPosX>1130</spinPosX>
-			<spinPosY>672</spinPosY>
-			<onleft>10</onleft>
-			<onright>10</onright>
-		</control>
-		<control>
-			<description>Article Image</description>
-			<type>image</type>
-			<id>25</id>
-			<posX>520</posX>
-			<posY>160</posY>
-			<visible>no</visible>
-			<width>550</width>
-			<height>550</height>
-			<texture />
-			<colorkey>0</colorkey>
-			<colordiffuse>White</colordiffuse>
-			<centered>no</centered>
-			<keepaspectratio>yes</keepaspectratio>
 		</control>
 	</controls>
 </window>

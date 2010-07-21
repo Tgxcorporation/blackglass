@@ -87,8 +87,10 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Current.ArtistThumb</texture>
-			<visible>player.hasmedia</visible>
+			<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
 			<zoom>yes</zoom>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 		<control>
 			<description>Cd Case</description>
@@ -99,7 +101,10 @@
 			<width>360</width>
 			<height>327</height>
 			<colordiffuse>ffffffff</colordiffuse>
+			<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
 			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -111,6 +116,9 @@
 			<font>font22</font>
 			<label>#Play.Current.Title</label>
 			<wrapString> : : : </wrapString>
+			<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -121,6 +129,9 @@
 			<label>#Play.Current.Artist\r#Play.Current.Album</label>
 			<textcolor>ffffffff</textcolor>
 			<wrapString> : : : </wrapString>
+			<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 
 		<control>
@@ -132,7 +143,10 @@
 			<height>645</height>
 			<texture>bg_facade.png</texture>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -143,7 +157,10 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -154,7 +171,10 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -165,11 +185,18 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>group</type>
 			<description>group element</description>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<type>listcontrol</type>
 				<description>current playlist control</description>
@@ -189,6 +216,10 @@
 			<label>33011</label>
 			<font>font22</font>
 			<visible>player.hasmedia</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -200,6 +231,10 @@
 			<font>font14</font>
 			<align>left</align>
 			<visible>control.hastext(444)+player.hasmedia</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>        
 		<control>
 			<type>textbox</type>
@@ -213,6 +248,10 @@
 			<align>left</align>
 			<textcolor>90ffffff</textcolor>
 			<visible>player.hasmedia</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -224,6 +263,10 @@
 			<font>font14</font>
 			<align>left</align>
 			<visible>control.hastext(333)+player.hasmedia</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>         
 		<control>
 			<type>textbox</type>
@@ -237,6 +280,10 @@
 			<align>left</align>
 			<textcolor>90ffffff</textcolor>
 			<visible>player.hasmedia</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 

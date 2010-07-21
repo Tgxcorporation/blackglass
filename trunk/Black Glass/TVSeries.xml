@@ -44,7 +44,7 @@
 		</control>
 
 		<import>common.window.overlay.xml</import>
-
+		<import>common.time.xml</import>
 		<control>
 			<type>image</type>
 			<posX>458</posX>
@@ -53,7 +53,6 @@
 			<height>766</height>
 			<texture>bg_facade.png</texture>
 			<visible>control.isvisible(1240)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
@@ -67,9 +66,8 @@
 			<height>766</height>
 			<texture>bg_facade.png</texture>
 			<visible>[facadeview.largeicons|facadeview.list]+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -80,9 +78,8 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>[facadeview.largeicons]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -93,9 +90,8 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>[facadeview.largeicons|facadeview.list]+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 
@@ -120,6 +116,7 @@
 			<font>font14</font>
 			<label>#TVSeries.SimpleCurrentView</label>
 			<visible>!control.isvisible(1239)</visible>
+			<animation effect="fade" time="250" delay="200">visiblechange</animation>
 		</control>
 
 
@@ -136,9 +133,8 @@
 			<height>348</height> 
 			<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.SeasonPoster</texture>
 			<visible>control.hasfocus(50)+control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 		<control>
 			<description>Cover Art Glass Overlay</description>
@@ -150,9 +146,8 @@
 			<height>360</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 			<visible>control.hasfocus(50)+control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 
 		<!-- <control>
@@ -199,9 +194,8 @@
 			<imagesToDraw>10</imagesToDraw>
 			<percentage>#TVSeries.Series.Rating</percentage>
 			<visible>control.hasfocus(50)+control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 
 		<control>
@@ -214,9 +208,8 @@
 			<font>font22</font>
 			<label>#TVSeries.Title</label>
 			<visible>control.hasfocus(50)+control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -229,9 +222,8 @@
 			<label>#TVSeries.Series.infopanelLine4Value     #TVSeries.Subtitle</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>control.hasfocus(50)+control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 		<control>
 			<description>Summary</description>
@@ -246,9 +238,8 @@
 			<label>#TVSeries.Description</label>
 			<visible>!player.hasmedia+control.hasfocus(50)+control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
 			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 
 		<!-- *****************************************  SERIES LIST ***************************************************************** -->
@@ -264,9 +255,8 @@
 			<height>348</height> 
 			<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.SeriesPoster</texture>
 			<visible>control.hasfocus(50)+control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 		<control>
 			<description>Cover Art Glass Overlay</description>
@@ -278,9 +268,8 @@
 			<height>360</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 			<visible>control.hasfocus(50)+control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 
 		<control>
@@ -294,9 +283,8 @@
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
 			<visible>control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<!-- <control>
@@ -330,9 +318,8 @@
 			<imagesToDraw>10</imagesToDraw>
 			<percentage>#TVSeries.Series.Rating</percentage>
 			<visible>control.hasfocus(50)+control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 
 		<control>
@@ -345,9 +332,8 @@
 			<font>font22</font>
 			<label>#TVSeries.Title</label>
 			<visible>control.hasfocus(50)+control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -360,9 +346,8 @@
 			<label>#TVSeries.Series.infopanelLine4Value     #TVSeries.Subtitle</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>control.hasfocus(50)+control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -378,9 +363,8 @@
 			<label>#TVSeries.Description</label>
 			<visible>!player.hasmedia+control.hasfocus(50)+control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
 			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 		<!-- *****************************************  SERIES BANNER ( LIST LAYOUT) ***************************************************************** -->
 
@@ -407,9 +391,8 @@
 			<texture>black.png</texture>
 			<colordiffuse>ccffffff</colordiffuse>
 			<visible>control.isvisible(1237)+facadeview.list+!control.isvisible(1242)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -421,9 +404,8 @@
 			<height>83</height>
 			<texture>#TVSeries.SeriesBanner</texture>
 			<visible>control.isvisible(1237)+facadeview.list+!control.isvisible(1242)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
+			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>	
 
 
@@ -529,8 +511,6 @@
 			<label>#TVSeries.Title</label>
 			<visible>facadeview.filmstrip+control.isvisible(1237)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -546,8 +526,6 @@
 			<label>#TVSeries.Season.SeasonLabel</label>
 			<visible>facadeview.filmstrip+control.isvisible(1238)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 
@@ -978,7 +956,10 @@
 			<height>766</height>
 			<texture>bg_facade.png</texture>
 			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -989,7 +970,11 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 		<!-- <control>
 			<type>image</type>
@@ -1025,9 +1010,12 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.EpisodeImage</texture>
 			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visiblechange</animation>
+			<animation effect="fade" time="250" delay="133">visible</animation>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control> 
 		<control>
 			<type>image</type>
@@ -1038,7 +1026,10 @@
 			<height>188</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
 			<visible>control.isvisible(1239)+control.hasthumb(67)</visible>
-			<animation effect="fade" time="250" delay="133">visiblechange</animation>
+			<animation effect="fade" time="250" delay="133">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control> 
 
 
@@ -1053,9 +1044,9 @@
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
 			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -1068,8 +1059,11 @@
 			<textcolor>90ffffff</textcolor>
 			<width>790</width>
 			<visible>[control.isvisible(1239)]</visible>
-			<animation effect="fade" time="250" delay="66">visiblechange</animation>
+			<animation effect="fade" time="250" delay="66">visible</animation>
 			<wrapString> : : : </wrapString>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 
 
@@ -1084,8 +1078,11 @@
 			<textcolor>ffffffff</textcolor>
 			<width>800</width>
 			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1239)]</visible>
-			<animation effect="fade" time="250" delay="66">visiblechange</animation>
+			<animation effect="fade" time="250" delay="66">visible</animation>
 			<wrapString> : : : </wrapString>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>imagelist</type>
@@ -1105,7 +1102,10 @@
 			<imagesToDraw>10</imagesToDraw>
 			<percentage>#TVSeries.Episode.Rating</percentage>
 			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visiblechange</animation>
+			<animation effect="fade" time="250" delay="133">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<control>      
@@ -1118,8 +1118,11 @@
 			<font>font14</font>
 			<textcolor>90ffffff</textcolor>
 			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visiblechange</animation>
+			<animation effect="fade" time="250" delay="133">visible</animation>
 			<wrapString> : : : </wrapString>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<control>      
@@ -1131,8 +1134,11 @@
 			<label>Directed by #TVSeries.Episode.infopanelLine4Value</label>
 			<font>font16</font>
 			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visiblechange</animation>
+			<animation effect="fade" time="250" delay="133">visible</animation>
 			<wrapString> : : : </wrapString>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<control>      
@@ -1145,8 +1151,11 @@
 			<textcolor>90ffffff</textcolor>
 			<font>font14</font>
 			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visiblechange</animation>
+			<animation effect="fade" time="250" delay="133">visible</animation>
 			<wrapString> : : : </wrapString>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<control>      
@@ -1159,8 +1168,11 @@
 			<textcolor>ffffffff</textcolor>
 			<font>font13</font>
 			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visiblechange</animation>
+			<animation effect="fade" time="250" delay="133">visible</animation>
 			<wrapString> : : : </wrapString>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -1171,7 +1183,10 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -1183,9 +1198,12 @@
 			<height>200</height>
 			<font>font16</font>
 			<visible>control.isvisible(1239)+!player.hasmedia</visible>
-			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
 			<seperator>: : :</seperator>
 			<label>#TVSeries.Description</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -1197,9 +1215,12 @@
 			<height>135</height>
 			<font>font16</font>
 			<visible>control.isvisible(1239)+player.hasmedia</visible>
-			<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">visible</animation>
 			<seperator>: : :</seperator>
 			<label>#TVSeries.Description</label>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>			
 		<control>
 			<type>image</type>
@@ -1210,7 +1231,10 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>!player.hasmedia+control.isvisible(1239)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -1223,8 +1247,177 @@
 			<texture>#TVSeries.Logos</texture>
 			<keepaspectratio>yes</keepaspectratio>
 			<visible>!player.hasmedia+[control.isvisible(1239)]</visible>
-			<animation effect="fade" time="250" delay="266">visiblechange</animation>
+			<animation effect="fade" time="250" delay="266">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
 		</control>
+
+
+
+		<!-- *********************** LIST /GRAPHICAL VIEW*********************************** -->
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-200</posX>
+			<posY>550</posY>
+			<width>1680</width>
+			<height>180</height>
+			<texture>gradient.png</texture>
+			<visible>facadeview.filmstrip</visible>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<!-- <animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>graphical thumbpanel (series and/or seasons if set)</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<posX>897</posX>
+					<posY>101</posY>
+					<width>390</width>
+					<height>570</height>
+					<!-- up/down buttons & page # -->     
+					<onleft>2</onleft>
+					<onright>2</onright>		  
+
+					<!-- Textures -->
+					<imageFolder>-</imageFolder> 			
+					<!-- Text -->
+					<font>font16</font>
+					<selectedColor>00ffffff</selectedColor>
+					<textcolor>ffffffff</textcolor>
+					<colordiffuse>ffffffff</colordiffuse>
+					<remoteColor>FF868686</remoteColor>
+					<!-- watched color -->
+					<downloadColor>FFFFFFFF</downloadColor>
+					<!-- not watched color (normal) -->
+					<textcolor>FFC14E4A</textcolor>
+					<!-- local file not present color -->
+					<textcolor2>FFC14E4A</textcolor2>
+					<!-- local file not present color  column 2-->
+					<textcolor3>FFC14E4A</textcolor3>
+					<!-- local file not present color column 3-->
+					<suffix>|</suffix>		  
+					<itemWidthBig>390</itemWidthBig>
+					<itemHeightBig>76</itemHeightBig>
+					<!-- boxes -->
+					<textureWidthBig>390</textureWidthBig>
+					<textureHeightBig>74</textureHeightBig>
+					<!-- banners -->
+					<thumbWidthBig>390</thumbWidthBig>
+					<thumbHeightBig>74</thumbHeightBig>
+					<thumbPosXBig>0</thumbPosXBig>
+					<thumbPosYBig>1</thumbPosYBig>
+					<thumbZoom>no</thumbZoom>
+					<!-- text (No banner) -->
+					<textXOff>0</textXOff>
+					<textYOff>0</textYOff>
+					<keepaspectratio>no</keepaspectratio>
+					<enableFocusZoom>no</enableFocusZoom>
+					<scrollOffset>1</scrollOffset>
+					<unfocusedAlpha>100</unfocusedAlpha>     
+					<spinWidth>40</spinWidth>
+					<spinHeight>40</spinHeight>
+					<spinPosX>1185</spinPosX>
+					<spinPosY>660</spinPosY>
+					<spinAlign>Right</spinAlign>
+					<spinColor>60ffffff</spinColor>
+					<textureUp>arrow_round_up_nofocus.png</textureUp>
+					<textureDown>arrow_round_down_nofocus.png</textureDown>
+					<textureUpFocus>arrow_round_up_focus.png</textureUpFocus>
+					<textureDownFocus>arrow_round_down_focus.png</textureDownFocus>
+					<spinCanFocus>yes</spinCanFocus>
+				</control>
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<spinPosY>-50</spinPosY>
+					<spinPosX>-50</spinPosX>
+					<posX>20</posX>
+					<posY>410</posY>
+					<width>1350</width>
+					<spinCanFocus>no</spinCanFocus>
+					<thumbWidth>150</thumbWidth>
+					<thumbHeight>215</thumbHeight>
+					<thumbPosX>21</thumbPosX>
+					<thumbPosY>4</thumbPosY>
+					<itemWidth>180</itemWidth>
+					<itemHeight>280</itemHeight>
+					<textureWidth>175</textureWidth>
+					<textureHeight>223</textureHeight>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+					<scrollOffset>3</scrollOffset>
+				</control>
+				<control>
+					<description>Text List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<posX>897</posX>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<width>383</width>
+					<textXOff2>383</textXOff2>
+					<textYOff2>8</textYOff2>
+					<textXOff3>390</textXOff3>
+					<textYOff3>6</textYOff3>
+					<IconXOff>420</IconXOff>
+					<IconYOff>22</IconYOff>
+					<playedColor>ff77ccff</playedColor>
+					<!-- watched -->
+					<downloadColor>ffffffff</downloadColor>
+					<!-- (normal) -->
+					<remoteColor>ffF87B72</remoteColor>
+					<!-- file not present color -->
+					<textcolor>ffffffff</textcolor>
+					<!-- not watched (normal) -->
+					<textcolor2>ffffffff</textcolor2>
+					<textcolor3>ffffffff</textcolor3>
+					<textYOff>8</textYOff>
+					<textXOff>-40</textXOff>
+				</control>
+			</control>
+		</control>
+		<!-- ********************** IMPORT PROCESS *************************************** -->
+		<control>
+			<description>Import Animation</description>
+			<type>animation</type>
+			<id>51</id>
+			<posX>592</posX>
+			<posY>312</posY>
+			<width>96</width>
+			<height>96</height>
+			<textures>common.waiting.1.png;common.waiting.2.png;common.waiting.3.png;common.waiting.4.png;common.waiting.5.png;common.waiting.6.png;common.waiting.7.png;common.waiting.8.png</textures>
+			<Duration>0:0:01.5</Duration>
+			<keepaspectratio>yes</keepaspectratio>
+		</control>
+
+
 
 		<!--  ************** HIDDEN MENU *****************  -->
 
@@ -1392,207 +1585,6 @@
 			</control>
 
 		</control>
-
-		<!-- *********************** LIST /GRAPHICAL VIEW*********************************** -->
-		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>-200</posX>
-			<posY>550</posY>
-			<width>1680</width>
-			<height>180</height>
-			<texture>gradient.png</texture>
-			<visible>facadeview.filmstrip</visible>
-		</control>
-		<control>
-			<type>group</type>
-			<description>group element</description>
-			<id>28</id>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<control>
-				<description>composite control consisting of a list control and a thumbnail panel</description>
-				<type>facadeview</type>
-				<id>50</id>
-				<control>
-					<description>graphical list (series and seasons if set)</description>
-					<type>listcontrol</type>
-					<subtype>album</subtype>
-					<id>50</id>
-					<onleft>2</onleft>
-					<onright>2</onright>		
-					<posX>700</posX>
-					<!-- 750 -->
-					<posY>170</posY>
-					<!-- 185 -->
-					<width>335</width>
-					<height>250</height>
-					<IconXOff>10</IconXOff>
-					<IconYOff>1</IconYOff>
-					<spaceBetweenItems>2</spaceBetweenItems>
-					<remoteColor>FFa6c3e1</remoteColor>
-					<!-- Watched color -->
-					<downloadColor>d4d2d2</downloadColor>
-					<!-- not watched color (normal) -->
-					<textcolor>FF78ace0</textcolor>
-					<!-- local file not present color -->
-					<textcolor2>FF78ace0</textcolor2>
-					<!-- local file not present color  column 2-->
-					<textcolor3>FF78ace0</textcolor3>
-					<!-- local file not present color column 3-->
-					<textureFocus>tvseries_banner_focus2.png</textureFocus>
-					<textureNoFocus>osd_bg.png</textureNoFocus>
-					<spinWidth>10</spinWidth>
-					<spinHeight>10</spinHeight>
-					<spinPosX>580</spinPosX>
-					<spinPosY>340</spinPosY>
-					<spinAlign>Right</spinAlign>
-					<spinColor>ffffffff</spinColor>
-					<textureUp>1scroll-up.png</textureUp>
-					<textureDown>1scroll-down.png</textureDown>
-					<textureUpFocus>1scroll-up-focus.png</textureUpFocus>
-					<textureDownFocus>1scroll-down-focus.png</textureDownFocus>
-				</control>
-				<control>
-					<description>graphical thumbpanel (series and/or seasons if set)</description>
-					<type>thumbnailpanel</type>
-					<id>50</id>
-					<posX>897</posX>
-					<posY>101</posY>
-					<width>390</width>
-					<height>570</height>
-					<!-- up/down buttons & page # -->     
-					<onleft>2</onleft>
-					<onright>2</onright>		  
-
-					<!-- Textures -->
-					<imageFolder>-</imageFolder> 			
-					<!-- Text -->
-					<font>font16</font>
-					<selectedColor>00ffffff</selectedColor>
-					<textcolor>ffffffff</textcolor>
-					<colordiffuse>ffffffff</colordiffuse>
-					<remoteColor>FF868686</remoteColor>
-					<!-- watched color -->
-					<downloadColor>FFFFFFFF</downloadColor>
-					<!-- not watched color (normal) -->
-					<textcolor>FFC14E4A</textcolor>
-					<!-- local file not present color -->
-					<textcolor2>FFC14E4A</textcolor2>
-					<!-- local file not present color  column 2-->
-					<textcolor3>FFC14E4A</textcolor3>
-					<!-- local file not present color column 3-->
-					<suffix>|</suffix>		  
-					<itemWidthBig>390</itemWidthBig>
-					<itemHeightBig>76</itemHeightBig>
-					<!-- boxes -->
-					<textureWidthBig>390</textureWidthBig>
-					<textureHeightBig>74</textureHeightBig>
-					<!-- banners -->
-					<thumbWidthBig>390</thumbWidthBig>
-					<thumbHeightBig>74</thumbHeightBig>
-					<thumbPosXBig>0</thumbPosXBig>
-					<thumbPosYBig>1</thumbPosYBig>
-					<thumbZoom>no</thumbZoom>
-					<!-- text (No banner) -->
-					<textXOff>0</textXOff>
-					<textYOff>0</textYOff>
-					<keepaspectratio>no</keepaspectratio>
-					<enableFocusZoom>no</enableFocusZoom>
-					<scrollOffset>1</scrollOffset>
-					<unfocusedAlpha>100</unfocusedAlpha>     
-					<spinWidth>40</spinWidth>
-					<spinHeight>40</spinHeight>
-					<spinPosX>1185</spinPosX>
-					<spinPosY>660</spinPosY>
-					<spinAlign>Right</spinAlign>
-					<spinColor>60ffffff</spinColor>
-					<textureUp>arrow_round_up_nofocus.png</textureUp>
-					<textureDown>arrow_round_down_nofocus.png</textureDown>
-					<textureUpFocus>arrow_round_up_focus.png</textureUpFocus>
-					<textureDownFocus>arrow_round_down_focus.png</textureDownFocus>
-					<spinCanFocus>yes</spinCanFocus>
-				</control>
-				<control>
-					<description>Filmstrip view</description>
-					<type>filmstrip</type>
-					<id>50</id>
-					<onup>2</onup>
-					<ondown>2</ondown>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<spinPosY>-50</spinPosY>
-					<spinPosX>-50</spinPosX>
-					<posX>20</posX>
-					<posY>410</posY>
-					<width>1350</width>
-					<spinCanFocus>no</spinCanFocus>
-					<thumbWidth>150</thumbWidth>
-					<thumbHeight>215</thumbHeight>
-					<thumbPosX>21</thumbPosX>
-					<thumbPosY>4</thumbPosY>
-					<itemWidth>180</itemWidth>
-					<itemHeight>280</itemHeight>
-					<textureWidth>175</textureWidth>
-					<textureHeight>223</textureHeight>
-					<showFrame>no</showFrame>
-					<frame>-</frame>
-					<frameFocus>-</frameFocus>
-					<showFolder>yes</showFolder>
-					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
-					<imageFolderFocus>DVDCase.png</imageFolderFocus>
-					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
-					<showBackGround>no</showBackGround>
-					<background>-</background>
-					<showInfoImage>no</showInfoImage>
-					<InfoImage>-</InfoImage>
-					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
-					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
-					<scrollOffset>3</scrollOffset>
-				</control>
-				<control>
-					<description>Text List</description>
-					<type>listcontrol</type>
-					<id>50</id>
-					<posX>897</posX>
-					<onleft>2</onleft>
-					<onright>2</onright>
-					<width>383</width>
-					<textXOff2>383</textXOff2>
-					<textYOff2>8</textYOff2>
-					<textXOff3>390</textXOff3>
-					<textYOff3>6</textYOff3>
-					<IconXOff>420</IconXOff>
-					<IconYOff>22</IconYOff>
-					<playedColor>ff77ccff</playedColor>
-					<!-- watched -->
-					<downloadColor>ffffffff</downloadColor>
-					<!-- (normal) -->
-					<remoteColor>ffF87B72</remoteColor>
-					<!-- file not present color -->
-					<textcolor>ffffffff</textcolor>
-					<!-- not watched (normal) -->
-					<textcolor2>ffffffff</textcolor2>
-					<textcolor3>ffffffff</textcolor3>
-					<textYOff>8</textYOff>
-					<textXOff>-40</textXOff>
-				</control>
-			</control>
-		</control>
-		<!-- ********************** IMPORT PROCESS *************************************** -->
-		<control>
-			<description>Import Animation</description>
-			<type>animation</type>
-			<id>51</id>
-			<posX>592</posX>
-			<posY>312</posY>
-			<width>96</width>
-			<height>96</height>
-			<textures>common.waiting.1.png;common.waiting.2.png;common.waiting.3.png;common.waiting.4.png;common.waiting.5.png;common.waiting.6.png;common.waiting.7.png;common.waiting.8.png</textures>
-			<Duration>0:0:01.5</Duration>
-			<keepaspectratio>yes</keepaspectratio>
-		</control>
-		<import>common.time.xml</import>
 
 	</controls>
 </window>

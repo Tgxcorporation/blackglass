@@ -62,6 +62,8 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -73,6 +75,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -86,6 +90,8 @@
 			<label>#selecteditem</label>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 
@@ -110,6 +116,8 @@
 			<align>left</align>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 
@@ -127,6 +135,8 @@
 			<textcolor>ffffffff</textcolor>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 
@@ -142,6 +152,8 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 
@@ -157,6 +169,8 @@
 			<textcolor>ffffffff</textcolor>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 
@@ -173,10 +187,13 @@
 			<height>180</height>
 			<texture>gradient.png</texture>
 			<visible>facadeview.filmstrip</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<description>group element</description>
 			<type>group</type>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>

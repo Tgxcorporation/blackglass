@@ -14,18 +14,7 @@
 		<import>common.window.overlay.xml</import>
 		<import>common.window.accessories.xml</import>
 		<import>common.time.xml</import>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>674</posX>
-			<posY>52</posY>
-			<width>798</width>
-			<height>645</height>
-			<texture>bg_facade.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>control.isvisible(29)|control.isvisible(28)</visible>
-			<animation effect="fade" time="250">Visible</animation>
-		</control>
+
 
 		<control>
 			<type>image</type>
@@ -434,328 +423,371 @@
 			<visible>player.hasmedia+control.hastext(121)</visible>
 		</control>
 
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>700</posX>
-			<posY>92</posY>
-			<width>580</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>control.isvisible(29)</visible>
-			<animation effect="fade" time="250">Visible</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>700</posX>
-			<posY>342</posY>
-			<width>580</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>control.isvisible(28)</visible>
-			<animation effect="fade" time="250">Visible</animation>
-		</control>
-		<control>
-			<type>group</type>
-			<description>group element</description>
-			<control>
-				<type>listcontrol</type>
-				<description>list of best album tracks</description>
-				<id>166</id>
-				<onup>155</onup>
-				<ondown>155</ondown>
-				<onright>2</onright>
-				<onleft>2</onleft>
-				<posX>700</posX>
-				<posY>145</posY>
-				<width>580</width>
-				<height>240</height>
-				<textYOff>8</textYOff>
-				<textXOff>-40</textXOff>
-				<IconXOff>1</IconXOff>
-				<spinColor>-</spinColor>
-				<image>-</image>
-				<textureUp>-</textureUp>
-				<textureDown>-</textureDown>
-				<textureUpFocus>-</textureUpFocus>
-				<textureDownFocus>-</textureDownFocus>
-			</control>
-		</control>
-		<control>
-			<type>group</type>
-			<description>group element</description>
-			<control>
-				<type>listcontrol</type>
-				<description>list of best tag tracks</description>
-				<id>155</id>
-				<onright>2</onright>
-				<onleft>2</onleft>
-				<onup>166</onup>
-				<ondown>166</ondown>
-				<posX>700</posX>
-				<posY>395</posY>
-				<width>580</width>
-				<height>240</height>
-				<textYOff>8</textYOff>
-				<textXOff>-40</textXOff>
-				<IconXOff>1</IconXOff>
-				<spinColor>-</spinColor>
-				<image>-</image>
-				<textureUp>-</textureUp>
-				<textureDown>-</textureDown>
-				<textureUpFocus>-</textureUpFocus>
-				<textureDownFocus>-</textureDownFocus>
-			</control>
-		</control>
-		<control>
-			<description>unknown rating1</description>
-			<type>imagelist</type>
-			<id>77</id>
-			<posX>1170</posX>
-			<posY>162</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>unknown rating2</description>
-			<type>imagelist</type>
-			<id>78</id>
-			<posX>1170</posX>
-			<posY>216</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>unknown rating3</description>
-			<type>imagelist</type>
-			<id>79</id>
-			<posX>1170</posX>
-			<posY>270</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>existent rating1</description>
-			<type>imagelist</type>
-			<id>80</id>
-			<posX>1170</posX>
-			<posY>162</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>existent rating2</description>
-			<type>imagelist</type>
-			<id>81</id>
-			<posX>1170</posX>
-			<posY>216</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>existent rating3</description>
-			<type>imagelist</type>
-			<id>82</id>
-			<posX>1170</posX>
-			<posY>270</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>known rating1</description>
-			<type>imagelist</type>
-			<id>83</id>
-			<posX>1170</posX>
-			<posY>162</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>known rating2</description>
-			<type>imagelist</type>
-			<id>84</id>
-			<posX>1170</posX>
-			<posY>216</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>known rating3</description>
-			<type>imagelist</type>
-			<id>85</id>
-			<posX>1170</posX>
-			<posY>270</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>famous rating1</description>
-			<type>imagelist</type>
-			<id>87</id>
-			<posX>1170</posX>
-			<posY>162</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>famous rating2</description>
-			<type>imagelist</type>
-			<id>88</id>
-			<posX>1170</posX>
-			<posY>216</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
-			<visible>no</visible>
-		</control>
-		<control>
-			<description>famous rating3</description>
-			<type>imagelist</type>
-			<id>89</id>
-			<posX>1170</posX>
-			<posY>270</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>20</textureWidth>
-			<textureHeight>20</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
-			<visible>no</visible>
-		</control>
 
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>674</posX>
+				<posY>52</posY>
+				<width>798</width>
+				<height>645</height>
+				<texture>bg_facade.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>control.isvisible(29)|control.isvisible(28)</visible>		
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>700</posX>
+				<posY>92</posY>
+				<width>580</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>control.isvisible(29)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>700</posX>
+				<posY>342</posY>
+				<width>580</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>control.isvisible(28)</visible>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<control>
+					<type>listcontrol</type>
+					<description>list of best album tracks</description>
+					<id>166</id>
+					<onright>2</onright>
+					<onleft>2</onleft>
+					<onup>155</onup>
+					<ondown>155</ondown>
+					<posX>700</posX>
+					<posY>145</posY>
+					<width>580</width>
+					<height>240</height>
+					<textYOff>8</textYOff>
+					<textXOff>-40</textXOff>
+					<IconXOff>1</IconXOff>
+					<spinColor>-</spinColor>
+					<image>-</image>
+					<textureUp>-</textureUp>
+					<textureDown>-</textureDown>
+					<textureUpFocus>-</textureUpFocus>
+					<textureDownFocus>-</textureDownFocus>
+				</control>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<control>
+					<type>listcontrol</type>
+					<description>list of best tag tracks</description>
+					<id>155</id>
+					<onright>2</onright>
+					<onleft>2</onleft>
+					<onup>166</onup>
+					<ondown>166</ondown>
+					<posX>700</posX>
+					<posY>395</posY>
+					<width>580</width>
+					<height>240</height>
+					<textYOff>8</textYOff>
+					<textXOff>-40</textXOff>
+					<IconXOff>1</IconXOff>
+					<spinColor>-</spinColor>
+					<image>-</image>
+					<textureUp>-</textureUp>
+					<textureDown>-</textureDown>
+					<textureUpFocus>-</textureUpFocus>
+					<textureDownFocus>-</textureDownFocus>
+				</control>
+			</control>
+			<control>
+				<description>unknown rating1</description>
+				<type>imagelist</type>
+				<id>77</id>
+				<posX>1170</posX>
+				<posY>162</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>unknown rating2</description>
+				<type>imagelist</type>
+				<id>78</id>
+				<posX>1170</posX>
+				<posY>216</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>unknown rating3</description>
+				<type>imagelist</type>
+				<id>79</id>
+				<posX>1170</posX>
+				<posY>270</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>existent rating1</description>
+				<type>imagelist</type>
+				<id>80</id>
+				<posX>1170</posX>
+				<posY>162</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>existent rating2</description>
+				<type>imagelist</type>
+				<id>81</id>
+				<posX>1170</posX>
+				<posY>216</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>existent rating3</description>
+				<type>imagelist</type>
+				<id>82</id>
+				<posX>1170</posX>
+				<posY>270</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>known rating1</description>
+				<type>imagelist</type>
+				<id>83</id>
+				<posX>1170</posX>
+				<posY>162</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>known rating2</description>
+				<type>imagelist</type>
+				<id>84</id>
+				<posX>1170</posX>
+				<posY>216</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>known rating3</description>
+				<type>imagelist</type>
+				<id>85</id>
+				<posX>1170</posX>
+				<posY>270</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>famous rating1</description>
+				<type>imagelist</type>
+				<id>87</id>
+				<posX>1170</posX>
+				<posY>162</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>famous rating2</description>
+				<type>imagelist</type>
+				<id>88</id>
+				<posX>1170</posX>
+				<posY>216</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>famous rating3</description>
+				<type>imagelist</type>
+				<id>89</id>
+				<posX>1170</posX>
+				<posY>270</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>20</textureWidth>
+				<textureHeight>20</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
+				<visible>no</visible>
+			</control>
+
+
+			<control>
+				<type>fadelabel</type>
+				<description>best album tracks label</description>
+				<id>0</id>
+				<posX>720</posX>
+				<posY>94</posY>
+				<width>530</width>
+				<label>33030</label>
+				<font>font22</font>
+				<visible>control.isvisible(29)</visible>
+			</control>
+
+			<control>
+				<type>fadelabel</type>
+				<description>best tag tracks label</description>
+				<id>0</id>
+				<posX>720</posX>
+				<posY>344</posY>
+				<width>530</width>
+				<label>Top tracks for tag</label>
+				<font>font22</font>
+				<visible>control.isvisible(28)</visible>
+			</control>
+		</control>
 		<control>
 			<type>fadelabel</type>
 			<description>best album tracks label</description>
 			<id>29</id>
-			<posX>720</posX>
+			<posX>1720</posX>
 			<posY>94</posY>
 			<width>530</width>
 			<label>33030</label>
@@ -766,7 +798,7 @@
 			<type>fadelabel</type>
 			<description>best tag tracks label</description>
 			<id>28</id>
-			<posX>720</posX>
+			<posX>1720</posX>
 			<posY>344</posY>
 			<width>530</width>
 			<label>Top tracks for tag</label>

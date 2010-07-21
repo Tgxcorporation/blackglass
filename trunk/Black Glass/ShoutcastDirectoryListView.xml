@@ -12,8 +12,23 @@
 
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
-
-
+		<import>common.facade.background.basic.xml</import>
+		<import>common.facade.itemcount.basic.xml</import>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>50</id>
+				<onleft>2</onleft>
+				<onright>50</onright>
+				<onup>0</onup>
++				<ondown>0</ondown>
+			</control>
+		</control>
 
 		<control>
 			<type>fadelabel</type>
@@ -25,6 +40,8 @@
 			<font>font20</font>
 			<label>#selecteditem</label>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -38,6 +55,8 @@
 			<align>left</align>
 			<textcolor>ffffffff</textcolor>
 			<width>350</width>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -51,6 +70,8 @@
 			<align>left</align>
 			<textcolor>ffffffff</textcolor>
 			<width>350</width>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -64,6 +85,8 @@
 			<align>left</align>
 			<textcolor>ffffffff</textcolor>
 			<width>350</width>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -79,22 +102,8 @@
 			<textcolor>ffffffff</textcolor>
 			<seperator>: : :</seperator>
 			<width>350</width>
-		</control>
-
-		<import>common.facade.background.basic.xml</import>
-		<import>common.facade.itemcount.basic.xml</import>
-		<control>
-			<description>group element</description>
-			<type>group</type>
-			<control>
-				<description>listcontrol</description>
-				<type>listcontrol</type>
-				<id>50</id>
-				<onleft>2</onleft>
-				<onright>50</onright>
-				<onup>0</onup>
-+				<ondown>0</ondown>
-			</control>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>

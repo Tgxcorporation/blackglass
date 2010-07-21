@@ -37,6 +37,115 @@
 		</control>	
 		<import>common.time.xml</import>
 
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>458</posX>
+			<posY>48</posY>
+			<width>948</width>
+			<height>766</height>
+			<texture>bg_facade.png</texture>
+			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>490</posX>
+			<posY>47</posY>
+			<width>790</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Number of Files Label</description>
+			<id>0</id>
+			<posX>510</posX>
+			<posY>665</posY>
+			<label>#itemcount #itemtype</label>
+			<font>font16</font>
+			<textcolor>60ffffff</textcolor>
+			<visible>!facadeview.filmstrip+control.isvisible(50)+string.equals(#itemcount)+string.equals(#itemtype)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+		</control>
+		<import>common.facade.video.xml</import>
+
+		<control>
+			<description>fanart list</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>62</posX> 
+			<posY>78</posY> 
+			<width>245</width> 
+			<height>348</height> 
+			<colordiffuse>ffffffff</colordiffuse>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<keepaspectratio>no</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<description>Highlight item</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>73</posY>
+			<width>283</width>
+			<height>360</height>
+			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>475</posY>
+			<width>350</width>
+			<font>font22</font>
+			<label>#selecteditem</label>
+			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>Current program</description>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>530</posY>
+			<width>350</width>
+			<label>#selecteditem2</label>
+			<textcolor>ffffffff</textcolor>
+			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+
+		
+		
+		
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -66,7 +175,7 @@
 				<width>1</width>
 				<height>1</height>
 				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)</visible>
+				<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)]+control.isvisible(50)</visible>
 			</control>
 			<control>
 				<type>image</type>
@@ -140,98 +249,8 @@
 				</control>
 			</control>
 		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-			<visible>!facadeview.filmstrip|!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>490</posX>
-			<posY>47</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Number of Files Label</description>
-			<id>0</id>
-			<posX>510</posX>
-			<posY>665</posY>
-			<label>#itemcount</label>
-			<font>font16</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<import>common.facade.video.xml</import>
-
-		<control>
-			<description>fanart list</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>62</posX> 
-			<posY>78</posY> 
-			<width>245</width> 
-			<height>348</height> 
-			<colordiffuse>ffffffff</colordiffuse>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<keepaspectratio>no</keepaspectratio>
-			<centered>yes</centered>
-		</control>
-		<control>
-			<description>Highlight item</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>73</posY>
-			<width>283</width>
-			<height>360</height>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
-			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Current program title</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>475</posY>
-			<width>350</width>
-			<font>font22</font>
-			<label>#selecteditem</label>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Current program</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>530</posY>
-			<width>350</width>
-			<label>#selecteditem2</label>
-			<textcolor>ffffffff</textcolor>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-
+		
+		
 		<!-- DETAILS -->
 		<!-- DETAILS -->
 		<!-- DETAILS -->
@@ -313,132 +332,6 @@
 			</control>
 		</control>
 
-
-		<control>
-			<description>Title label</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>520</posX>
-			<posY>95</posY>
-			<label>#MyTrailers.Details.Title</label>
-			<font>font24</font>
-			<align>left</align>
-			<textcolor>ffffffff</textcolor>
-			<width>750</width>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<wrapString> : : : </wrapString>
-		</control> 
-
-
-
-		<control>
-			<description>Genre value</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<label>#MyTrailers.Details.Rating     #MyTrailers.Details.Genre</label>
-			<font>font16</font>
-			<textcolor>90FFFFFF</textcolor>
-			<posX>780</posX>
-			<posY>170</posY>
-			<width>470</width>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-		<control>
-			<description>ReleaseDate value</description>
-			<type>label</type>
-			<width>475</width>
-			<id>1</id>
-			<label>To be released on #MyTrailers.Details.ReleaseDate</label>
-			<font>font18</font>
-			<textcolor>FFFFFFFF</textcolor>
-			<posX>780</posX>
-			<posY>208</posY>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-
-		<control>
-			<description>Studio value</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<width>475</width>
-			<label>Published by #MyTrailers.Details.Studio</label>
-			<font>font16</font>
-			<textcolor>90FFFFFF</textcolor>
-			<posX>780</posX>
-			<posY>250</posY>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-
-		<control>
-			<description>Director value</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<width>475</width>
-			<label>Directed by #MyTrailers.Details.Director</label>
-			<font>font18</font>
-			<textcolor>ffFFFFFF</textcolor>
-			<posX>780</posX>
-			<posY>290</posY>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-
-
-
-
-
-		<control>
-			<description>Cast value</description>
-			<type>textboxscrollup</type>
-			<id>1</id>
-			<posX>780</posX>
-			<posY>335</posY>
-			<width>480</width>
-			<textcolor>90ffffff</textcolor>
-			<font>font16</font>
-			<label>#MyTrailers.Details.Cast #MyTrailers.Details.Cast</label>
-			<visible>!control.isvisible(50)</visible>
-			<height>130</height>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>490</posX>
-			<posY>422</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-
-		<control>
-			<description>Summary</description>
-			<type>textboxscrollup</type>
-			<id>1</id>
-			<posX>520</posX>
-			<posY>500</posY>
-			<width>750</width>
-			<height>190</height>
-			<font>font18</font>
-			<textcolor>White</textcolor>
-			<label>#MyTrailers.Details.Description</label>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<seperator>: : :</seperator>
-		</control>
-
-
 		<control>
 			<description>Video Published</description>
 			<type>fadelabel</type>
@@ -455,61 +348,176 @@
 		</control>
 
 
-
-
-
-		<!-- 		<control>
-			<id>1</id>
-			<description>Video Title</description>
-			<posX>520</posX>
-			<width>230</width>
-			<posY>580</posY>
-			<type>fadelabel</type>
-			<textcolor>90ffffff</textcolor>
-			<font>font12</font>
-			<label>#MyTrailers.Video.Title</label>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		<control>
-			<description>Trailer Poster</description>
-			<type>image</type>
-			<id>21</id>
-			<posX>546</posX>
-			<posY>165</posY>
-			<width>200</width>
-			<height>282</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#MyTrailers.Details.Poster</texture>
-			<keepaspectratio>no</keepaspectratio>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+				<visible>!control.isvisible(50)</visible>
+			</control>
+			<control>
+				<description>Title label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>520</posX>
+				<posY>95</posY>
+				<label>#MyTrailers.Details.Title</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>750</width>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control> 
+
+			<control>
+				<description>Genre value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<label>#MyTrailers.Details.Rating     #MyTrailers.Details.Genre</label>
+				<font>font16</font>
+				<textcolor>90FFFFFF</textcolor>
+				<posX>780</posX>
+				<posY>170</posY>
+				<width>470</width>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>ReleaseDate value</description>
+				<type>label</type>
+				<width>475</width>
+				<id>1</id>
+				<label>To be released on #MyTrailers.Details.ReleaseDate</label>
+				<font>font18</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<posX>780</posX>
+				<posY>208</posY>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>Studio value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<width>475</width>
+				<label>Published by #MyTrailers.Details.Studio</label>
+				<font>font16</font>
+				<textcolor>90FFFFFF</textcolor>
+				<posX>780</posX>
+				<posY>250</posY>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>
+				<description>Director value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<width>475</width>
+				<label>Directed by #MyTrailers.Details.Director</label>
+				<font>font18</font>
+				<textcolor>ffFFFFFF</textcolor>
+				<posX>780</posX>
+				<posY>290</posY>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+
+
+
+
+
+			<control>
+				<description>Cast value</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>335</posY>
+				<width>480</width>
+				<textcolor>90ffffff</textcolor>
+				<font>font16</font>
+				<label>#MyTrailers.Details.Cast #MyTrailers.Details.Cast</label>
+				<visible>!control.isvisible(50)</visible>
+				<height>130</height>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>422</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>Summary</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>520</posX>
+				<posY>500</posY>
+				<width>750</width>
+				<height>190</height>
+				<font>font18</font>
+				<textcolor>White</textcolor>
+				<label>#MyTrailers.Details.Description</label>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<seperator>: : :</seperator>
+			</control>
+
+
+
+
+			<control>
+				<description>Trailer Poster</description>
+				<type>image</type>
+				<id>21</id>
+				<posX>546</posX>
+				<posY>165</posY>
+				<width>200</width>
+				<height>282</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#MyTrailers.Details.Poster</texture>
+				<keepaspectratio>no</keepaspectratio>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Highlight item</description>
+				<type>image</type>
+				<id>23</id>
+				<posX>520</posX>
+				<posY>160</posY>
+				<width>230</width>
+				<height>292</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
-		<control>
-			<description>Highlight item</description>
-			<type>image</type>
-			<id>23</id>
-			<posX>520</posX>
-			<posY>160</posY>
-			<width>230</width>
-			<height>292</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
+
+
+
+		
 
 
 		<!-- NOT USED -->
@@ -556,5 +564,18 @@
 			<visible>!control.isvisible(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
+		<!-- 		<control>
+			<id>1</id>
+			<description>Video Title</description>
+			<posX>520</posX>
+			<width>230</width>
+			<posY>580</posY>
+			<type>fadelabel</type>
+			<textcolor>90ffffff</textcolor>
+			<font>font12</font>
+			<label>#MyTrailers.Video.Title</label>
+			<visible>!control.isvisible(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control> -->
 	</controls>
 </window>
