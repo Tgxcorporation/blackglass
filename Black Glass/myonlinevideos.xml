@@ -2,7 +2,7 @@
 <window>
 	<id>4755</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
+	<allowoverlay>player.hasmedia+!facadeview.filmstrip+!control.isvisible(51)</allowoverlay>
 	<define>#header.label</define>
 	<define>#header.image</define>
 	<define>#useSelectedFanart:Yes</define>
@@ -24,10 +24,11 @@
 			<width>948</width>
 			<height>766</height>
 			<texture>bg_facade.png</texture>
-			<visible>!facadeview.filmstrip|control.isvisible(51)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>!facadeview.filmstrip+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<!-- <animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation> -->
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 		</control>
 		<control>
 			<id>0</id>

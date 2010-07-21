@@ -9,69 +9,82 @@
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
+
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Score: label</description>
-			<id>201</id>
-			<posX>30</posX>
-			<posY>100</posY>
-			<label>19005</label>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Score</description>
-			<id>202</id>
-			<posX>343</posX>
-			<posY>100</posY>
-			<label>#cm_score</label>
-			<align>right</align>
-		</control> 
-		<control>
-			<type>label</type>
-			<description>Highscore: label</description>
-			<id>203</id>
-			<posX>30</posX>
-			<posY>140</posY>
-			<label>19008</label>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Highscore</description>
-			<id>204</id>
-			<posX>343</posX>
-			<posY>140</posY>
-			<label>#cm_highscore</label>
-			<align>right</align>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(8)|control.hasfocus(4)|control.hasfocus(6)]</visible>
+			<control>
+				<type>label</type>
+				<description>Score: label</description>
+				<id>201</id>
+				<posX>30</posX>
+				<posY>100</posY>
+				<label>19005</label>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Score</description>
+				<id>202</id>
+				<posX>343</posX>
+				<posY>100</posY>
+				<label>#cm_score</label>
+				<align>right</align>
+			</control> 
+			<control>
+				<type>label</type>
+				<description>Highscore: label</description>
+				<id>203</id>
+				<posX>30</posX>
+				<posY>140</posY>
+				<label>19008</label>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Highscore</description>
+				<id>204</id>
+				<posX>343</posX>
+				<posY>140</posY>
+				<label>#cm_highscore</label>
+				<align>right</align>
+			</control>
 		</control>
 
 		<control>
-			<type>clickmania</type>
-			<description>ClickMania control</description>
-			<id>10</id>
-			<posX>621</posX>
-			<posY>103</posY>
-			<width>528</width>
-			<height>600</height>
-			<colordiffuse>60ffffff</colordiffuse>
-			<onleft>2</onleft>
-			<onright>2</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
-			<nextblocky>100</nextblocky>
-			<texturefocus>panel_focus.png</texturefocus>
-			<texture>panel_focus.png</texture>
-			<font>font18</font>
-			<textcolor>ff000000</textcolor>
-			<onback>2</onback>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>clickmania</type>
+				<description>ClickMania control</description>
+				<id>10</id>
+				<posX>621</posX>
+				<posY>103</posY>
+				<width>528</width>
+				<height>600</height>
+				<colordiffuse>60ffffff</colordiffuse>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<nextblocky>100</nextblocky>
+				<texturefocus>panel_focus.png</texturefocus>
+				<texture>panel_focus.png</texture>
+				<font>font18</font>
+				<textcolor>ff000000</textcolor>
+				<onback>2</onback>
+			</control>
 		</control>
 
 

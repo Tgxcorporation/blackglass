@@ -12,7 +12,25 @@
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
-
+		<import>common.facade.background.basic.xml</import>
+		<import>common.facade.itemcount.currentmodule.basic.xml</import>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>50</id>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<textYOff>8</textYOff>
+				<textXOff>-40</textXOff>
+			</control>
+		</control>
 		<control>
 			<type>textboxscrollup</type>
 			<description>Chosen Story description</description>
@@ -27,6 +45,8 @@
 			<visible>control.hasfocus(50)</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Site Logo</description>
@@ -40,10 +60,11 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
-		<import>common.facade.background.basic.xml</import>
-		<import>common.facade.itemcount.currentmodule.basic.xml</import>
+
 		<control>
 			<description>Channel name label</description>
 			<type>fadelabel</type>
@@ -57,22 +78,10 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
-		<control>
-			<type>group</type>
-			<description>group element</description>
-			<control>
-				<description>listcontrol</description>
-				<type>listcontrol</type>
-				<id>50</id>
-				<onleft>2</onleft>
-				<onright>2</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
-				<textYOff>8</textYOff>
-				<textXOff>-40</textXOff>
-			</control>
-		</control>
+
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>

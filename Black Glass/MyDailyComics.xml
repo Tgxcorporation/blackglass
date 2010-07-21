@@ -86,56 +86,6 @@
 				<ondown>2</ondown>
 			</control>
 		</control>
-		
-		<!-- Facade BG -->
-		<control>
-			<type>image</type>
-			<posX>408</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>440</posX>
-			<posY>97</posY>
-			<width>840</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
-
-		<!-- Header label -->
-		<control>
-			<description>Label top</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>470</posX>
-			<posY>96</posY>
-			<label>#MyDailyComics.Selected.Title, #MyDailyComics.Selected.Date</label>
-			<font>font22</font>
-			<align>left</align>
-			<textcolor>ffffffff</textcolor>
-			<width>716</width>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-
-		<!-- Comic images -->
-		<control>
-			<description>Comic Image</description>
-			<type>image</type>
-			<id>100</id>
-			<posX>470</posX>
-			<posY>170</posY>
-			<width>780</width>
-			<height>530</height>
-			<visible>no</visible>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>true</centered>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
 		<control>
 			<description>Comic Banner</description>
 			<type>image</type>
@@ -148,20 +98,77 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
+		
+		
+		<!-- Facade BG -->
 		<control>
-			<description>Language Flag</description>
-			<type>image</type>
-			<id>102</id>
-			<posX>1212</posX>
-			<posY>95</posY>
-			<width>48</width>
-			<height>48</height>
-			<centered>no</centered>
-			<texture></texture>
-			<keepaspectratio>yes</keepaspectratio>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<posX>408</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>440</posX>
+				<posY>97</posY>
+				<width>840</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
 
+			<!-- Header label -->
+			<control>
+				<description>Label top</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>470</posX>
+				<posY>96</posY>
+				<label>#MyDailyComics.Selected.Title, #MyDailyComics.Selected.Date</label>
+				<font>font22</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>716</width>
+				<wrapString> : : : </wrapString>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<!-- Comic images -->
+			<control>
+				<description>Comic Image</description>
+				<type>image</type>
+				<id>100</id>
+				<posX>470</posX>
+				<posY>170</posY>
+				<width>780</width>
+				<height>530</height>
+				<visible>no</visible>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>true</centered>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>Language Flag</description>
+				<type>image</type>
+				<id>102</id>
+				<posX>1212</posX>
+				<posY>95</posY>
+				<width>48</width>
+				<height>48</height>
+				<centered>no</centered>
+				<texture/>
+				<keepaspectratio>yes</keepaspectratio>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+		</control>
 		<!--
 		<control>
 			<description>Dummy button for hidden menu</description>

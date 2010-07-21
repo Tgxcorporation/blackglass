@@ -12,61 +12,57 @@
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-		</control>
-		<control>
-			<description>level label</description>
-			<type>label</type>
-			<id>5</id>
-			<posX>30</posX>
-			<posY>100</posY>
-			<font>font20</font>
-			<label>#level</label>
-		</control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(15)|control.hasfocus(16)|control.hasfocus(6)|control.hasfocus(4)|control.hasfocus(8)]</visible>
+			<control>
+				<description>level label</description>
+				<type>label</type>
+				<id>5</id>
+				<posX>30</posX>
+				<posY>100</posY>
+				<font>font20</font>
+				<label>#level</label>
+			</control>
 
-		<control>
-			<description>text label</description>
-			<type>label</type>
-			<id>21</id>
-			<posX>30</posX>
-			<posY>200</posY>
-			<label>#m1</label>
-			<textcolor>90ffffff</textcolor>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>21</id>
+				<posX>30</posX>
+				<posY>200</posY>
+				<label>#m1</label>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>22</id>
+				<posX>30</posX>
+				<posY>240</posY>
+				<label>#m2</label>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>23</id>
+				<posX>30</posX>
+				<posY>280</posY>
+				<label>#m3</label>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>24</id>
+				<posX>30</posX>
+				<posY>320</posY>
+				<label>#m4</label>
+				<textcolor>90ffffff</textcolor>
+			</control>
 		</control>
-		<control>
-			<description>text label</description>
-			<type>label</type>
-			<id>22</id>
-			<posX>30</posX>
-			<posY>240</posY>
-			<label>#m2</label>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<description>text label</description>
-			<type>label</type>
-			<id>23</id>
-			<posX>30</posX>
-			<posY>280</posY>
-			<label>#m3</label>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<description>text label</description>
-			<type>label</type>
-			<id>24</id>
-			<posX>30</posX>
-			<posY>320</posY>
-			<label>#m4</label>
-			<textcolor>90ffffff</textcolor>
-		</control>
-
 
 		<control>
 			<description>text label</description>
@@ -101,17 +97,33 @@
 			<width>90</width>
 			<texture>#engine</texture>
 		</control>
-		<control>
-			<description>background</description>
-			<type>image</type>
-			<id>1200</id>
-			<posX>573</posX>
-			<posY>103</posY>
-			<width>600</width>
-			<height>600</height>
-			<texture>#board</texture>
-		</control>
 
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+
+			<control>
+				<description>background</description>
+				<type>image</type>
+				<id>1200</id>
+				<posX>573</posX>
+				<posY>103</posY>
+				<width>600</width>
+				<height>600</height>
+				<texture>#board</texture>
+			</control>
+		</control>
 
 		<!-- MENU -->
 
