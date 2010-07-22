@@ -405,7 +405,6 @@
 			<texture>#TVSeries.SeriesBanner</texture>
 			<visible>control.isvisible(1237)+facadeview.list+!control.isvisible(1242)</visible>
 			<animation effect="fade" time="250" delay="200">visible</animation>
-			<animation effect="fade" time="250" delay="0">hidden</animation>
 		</control>	
 
 
@@ -1269,14 +1268,54 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">WindowClose</animation>
 			<!-- <animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
 				<id>50</id>
+				<control>
+					<description>graphical list (series and seasons if set)</description>
+					<type>listcontrol</type>
+					<subtype>album</subtype>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>		
+					<posX>700</posX>
+					<!-- 750 -->
+					<posY>170</posY>
+					<!-- 185 -->
+					<width>335</width>
+					<height>250</height>
+					<IconXOff>10</IconXOff>
+					<IconYOff>1</IconYOff>
+					<spaceBetweenItems>2</spaceBetweenItems>
+					<remoteColor>FFa6c3e1</remoteColor>
+					<!-- Watched color -->
+					<downloadColor>d4d2d2</downloadColor>
+					<!-- not watched color (normal) -->
+					<textcolor>FF78ace0</textcolor>
+					<!-- local file not present color -->
+					<textcolor2>FF78ace0</textcolor2>
+					<!-- local file not present color  column 2-->
+					<textcolor3>FF78ace0</textcolor3>
+					<!-- local file not present color column 3-->
+					<textureFocus>tvseries_banner_focus2.png</textureFocus>
+					<textureNoFocus>osd_bg.png</textureNoFocus>
+					<spinWidth>10</spinWidth>
+					<spinHeight>10</spinHeight>
+					<spinPosX>580</spinPosX>
+					<spinPosY>340</spinPosY>
+					<spinAlign>Right</spinAlign>
+					<spinColor>ffffffff</spinColor>
+					<textureUp>1scroll-up.png</textureUp>
+					<textureDown>1scroll-down.png</textureDown>
+					<textureUpFocus>1scroll-up-focus.png</textureUpFocus>
+					<textureDownFocus>1scroll-down-focus.png</textureDownFocus>
+				</control>
 				<control>
 					<description>graphical thumbpanel (series and/or seasons if set)</description>
 					<type>thumbnailpanel</type>
@@ -1288,7 +1327,6 @@
 					<!-- up/down buttons & page # -->     
 					<onleft>2</onleft>
 					<onright>2</onright>		  
-
 					<!-- Textures -->
 					<imageFolder>-</imageFolder> 			
 					<!-- Text -->
