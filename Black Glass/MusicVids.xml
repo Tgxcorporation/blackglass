@@ -58,6 +58,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">#MusicVids.ArtistImg</texture>
 			<visible>!control.isvisible(99)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Cd Case</description>
@@ -71,6 +73,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
 			<visible>!control.isvisible(99)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -83,6 +87,8 @@
 			<label>#selecteditem</label>
 			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
@@ -96,6 +102,8 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 
@@ -115,8 +123,10 @@
 			<visible>!player.hasmedia+control.hasfocus(50)</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
-		
+
 
 		<control>
 			<id>14</id>
@@ -130,6 +140,8 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -141,6 +153,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
 			<visible>control.isvisible(99)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -159,6 +173,8 @@
 			<description>group element</description>
 			<type>group</type>
 			<visible>!control.hasfocus(50)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
