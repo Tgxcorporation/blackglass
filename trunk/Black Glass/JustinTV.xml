@@ -30,6 +30,8 @@
 			<control>
 				<type>group</type>
 				<description>group element</description>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 				<control>
 					<description>composite control consisting of a list control and a thumbnail panel</description>
 					<type>facadeview</type>
@@ -98,6 +100,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<centered>yes</centered>
 		</control>
 		<control>
@@ -110,6 +114,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<control>
@@ -123,6 +129,8 @@
 			<label>#selecteditem</label>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 
@@ -137,6 +145,23 @@
 			<textcolor>90ffffff</textcolor>
 			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+
+		<control>
+			<description>status</description>
+			<type>fadelabel</type>
+			<id>1002</id>
+			<posX>30</posX>
+			<posY>55</posY>
+			<width>280</width>
+			<label/>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 		<!-- *** HIDDEN MENU *** -->
@@ -246,18 +271,7 @@
 			</control>
 		</control>
 
-		<control>
-			<description>status</description>
-			<type>fadelabel</type>
-			<id>1002</id>
-			<posX>30</posX>
-			<posY>55</posY>
-			<width>280</width>
-			<label/>
-			<font>font12</font>
-			<textcolor>white</textcolor>
-			<align>left</align>
-		</control>
+
 
 	</controls>
 </window>

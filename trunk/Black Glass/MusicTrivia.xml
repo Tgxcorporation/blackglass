@@ -20,6 +20,8 @@
 			<width>948</width>
 			<height>766</height>
 			<texture>bg_facade.png</texture>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -30,10 +32,14 @@
 			<texture>bg_facade2_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>control.isvisible(50)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 
 		<control>
 			<type>group</type>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<type>listcontrol</type>
 				<id>50</id>
@@ -66,181 +72,190 @@
 				<textureNoFocus>bg_facade2_line_nofocus.png</textureNoFocus>
 			</control>
 		</control>
-		<control>
-			<type>label</type>
-			<description>Timer value label</description>
-			<id>11</id>
-			<posX>30</posX>
-			<posY>100</posY>
-			<label>:00</label>
-			<font>font40</font>
-			<align>left</align>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Points value label</description>
-			<id>12</id>
-			<posX>30</posX>
-			<posY>190</posY>
-			<label/>
-			<font>font32</font>
-			<align>left</align>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Points label</description>
-			<id>0</id>
-			<posX>85</posX>
-			<posY>195</posY>
-			<label>#MusicTrivia.Translation.PointsLower.Label</label>
-			<font>font24</font>
-			<align>left</align>
-		</control>
+
 
 		<control>
-			<type>label</type>
-			<description>Player 1 label</description>
-			<id>510</id>
-			<posX>30</posX>
-			<posY>270</posY>
-			<label>#MusicTrivia.Translation.PlayerOne.Label</label>
-			<font>font18</font>
-			<align>left</align>
-		</control>
-		<control>
-			<type>label</type>
-			<id>511</id>
-			<posX>30</posX>
-			<posY>315</posY>
-			<label>#MusicTrivia.Translation.CorrectClean.Label:</label>
-			<font>font13</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<id>512</id>
-			<posX>120</posX>
-			<posY>315</posY>
-			<label/>
-			<font>font13</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<id>513</id>
-			<posX>30</posX>
-			<posY>350</posY>
-			<label>#MusicTrivia.Translation.WrongClean.Label:</label>
-			<font>font13</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<id>514</id>
-			<posX>120</posX>
-			<posY>350</posY>
-			<label/>
-			<font>font13</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<id>515</id>
-			<posX>30</posX>
-			<posY>380</posY>
-			<label>#MusicTrivia.Translation.Score.Label:</label>
-			<font>font18</font>
-			<align>left</align>
-		</control>
-		<control>
-			<type>label</type>
-			<id>516</id>
-			<posX>135</posX>
-			<posY>380</posY>
-			<label/>
-			<font>font18</font>
-			<align>left</align>
-		</control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(901)]</visible>
+			<control>
+				<type>label</type>
+				<description>Timer value label</description>
+				<id>11</id>
+				<posX>30</posX>
+				<posY>100</posY>
+				<label>:00</label>
+				<font>font40</font>
+				<align>left</align>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Points value label</description>
+				<id>12</id>
+				<posX>30</posX>
+				<posY>190</posY>
+				<label/>
+				<font>font32</font>
+				<align>left</align>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Points label</description>
+				<id>0</id>
+				<posX>85</posX>
+				<posY>195</posY>
+				<label>#MusicTrivia.Translation.PointsLower.Label</label>
+				<font>font24</font>
+				<align>left</align>
+			</control>
 
-		<control>
-			<type>label</type>
-			<description>Player 2 label</description>
-			<id>520</id>
-			<posX>245</posX>
-			<posY>270</posY>
-			<label>#MusicTrivia.Translation.PlayerTwo.Label</label>
-			<font>font18</font>
-			<align>left</align>
-		</control>
-		<control>
-			<type>label</type>
-			<description>p2 correct: label</description>
-			<id>521</id>
-			<posX>245</posX>
-			<posY>315</posY>
-			<label>#MusicTrivia.Translation.CorrectClean.Label:</label>
-			<font>font12</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<id>522</id>
-			<description>p2 number of correct label</description>
-			<posX>335</posX>
-			<posY>315</posY>
-			<label/>
-			<font>font12</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<id>523</id>
-			<description>p2 wrong: label</description>
-			<posX>245</posX>
-			<posY>350</posY>
-			<label>#MusicTrivia.Translation.WrongClean.Label:</label>
-			<font>font12</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<id>524</id>
-			<description>p2 number wrong label</description>
-			<posX>335</posX>
-			<posY>350</posY>
-			<label/>
-			<font>font12</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<type>label</type>
-			<id>525</id>
-			<description>p2 score: label</description>
-			<posX>245</posX>
-			<posY>380</posY>
-			<label>#MusicTrivia.Translation.Score.Label:</label>
-			<font>font18</font>
-			<align>left</align>
-		</control>
-		<control>
-			<type>label</type>
-			<id>526</id>
-			<description>p2 number score label</description>
-			<posX>350</posX>
-			<posY>380</posY>
-			<label/>
-			<font>font18</font>
-			<align>left</align>
-		</control>
+			<control>
+				<type>label</type>
+				<description>Player 1 label</description>
+				<id>510</id>
+				<posX>30</posX>
+				<posY>270</posY>
+				<label>#MusicTrivia.Translation.PlayerOne.Label</label>
+				<font>font18</font>
+				<align>left</align>
+			</control>
+			<control>
+				<type>label</type>
+				<id>511</id>
+				<posX>30</posX>
+				<posY>315</posY>
+				<label>#MusicTrivia.Translation.CorrectClean.Label:</label>
+				<font>font13</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>512</id>
+				<posX>120</posX>
+				<posY>315</posY>
+				<label/>
+				<font>font13</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>513</id>
+				<posX>30</posX>
+				<posY>350</posY>
+				<label>#MusicTrivia.Translation.WrongClean.Label:</label>
+				<font>font13</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>514</id>
+				<posX>120</posX>
+				<posY>350</posY>
+				<label/>
+				<font>font13</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>515</id>
+				<posX>30</posX>
+				<posY>380</posY>
+				<label>#MusicTrivia.Translation.Score.Label:</label>
+				<font>font18</font>
+				<align>left</align>
+			</control>
+			<control>
+				<type>label</type>
+				<id>516</id>
+				<posX>135</posX>
+				<posY>380</posY>
+				<label/>
+				<font>font18</font>
+				<align>left</align>
+			</control>
 
+			<control>
+				<type>label</type>
+				<description>Player 2 label</description>
+				<id>520</id>
+				<posX>245</posX>
+				<posY>270</posY>
+				<label>#MusicTrivia.Translation.PlayerTwo.Label</label>
+				<font>font18</font>
+				<align>left</align>
+			</control>
+			<control>
+				<type>label</type>
+				<description>p2 correct: label</description>
+				<id>521</id>
+				<posX>245</posX>
+				<posY>315</posY>
+				<label>#MusicTrivia.Translation.CorrectClean.Label:</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>522</id>
+				<description>p2 number of correct label</description>
+				<posX>335</posX>
+				<posY>315</posY>
+				<label/>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>523</id>
+				<description>p2 wrong: label</description>
+				<posX>245</posX>
+				<posY>350</posY>
+				<label>#MusicTrivia.Translation.WrongClean.Label:</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>524</id>
+				<description>p2 number wrong label</description>
+				<posX>335</posX>
+				<posY>350</posY>
+				<label/>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>525</id>
+				<description>p2 score: label</description>
+				<posX>245</posX>
+				<posY>380</posY>
+				<label>#MusicTrivia.Translation.Score.Label:</label>
+				<font>font18</font>
+				<align>left</align>
+			</control>
+			<control>
+				<type>label</type>
+				<id>526</id>
+				<description>p2 number score label</description>
+				<posX>350</posX>
+				<posY>380</posY>
+				<label/>
+				<font>font18</font>
+				<align>left</align>
+			</control>
+		</control>
 
 
 		<!-- MENU -->

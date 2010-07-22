@@ -10,6 +10,95 @@
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
 
+
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)]</visible>
+			<control>
+				<description>BW Label</description>
+				<type>label</type>
+				<id>95</id>
+				<posX>30</posX>
+				<posY>100</posY>
+				<width>380</width>
+				<label>Correct computer</label>
+			</control>
+			<control>
+				<description>Black Comp</description>
+				<type>selectbutton</type>
+				<id>96</id>
+				<posX>25</posX>
+				<posY>130</posY>
+				<width>380</width>
+				<label>Black: 0</label>
+				<font>font16</font>
+				<textYOff>11</textYOff>
+				<textYOff2>11</textYOff2>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<texturebg>-</texturebg>
+				<onleft>5</onleft>
+				<!--<onright>0</onright>-->
+				<onup>5</onup>
+				<ondown>97</ondown>
+				<subitems>
+					<subitem>Black: 0</subitem>
+					<subitem>Black: 1</subitem>
+					<subitem>Black: 2</subitem>
+					<subitem>Black: 3</subitem>
+					<subitem>Black: 4</subitem>
+				</subitems>
+			</control>
+			<control>
+				<description>White Comp</description>
+				<type>selectbutton</type>
+				<id>97</id>
+				<posX>25</posX>
+				<posY>170</posY>
+				<width>380</width>
+				<label>White: 0</label>
+				<font>font16</font>
+				<textYOff>11</textYOff>
+				<textYOff2>11</textYOff2>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<texturebg>-</texturebg>
+				<onleft>5</onleft>
+				<!--<onright>0</onright>-->
+				<onup>96</onup>
+				<ondown>98</ondown>
+				<subitems>
+					<subitem>White: 0</subitem>
+					<subitem>White: 1</subitem>
+					<subitem>White: 2</subitem>
+					<subitem>White: 3</subitem>
+					<subitem>White: 4</subitem>
+				</subitems>
+			</control>
+			<control>
+				<description>Ok Comp</description>
+				<type>button</type>
+				<id>98</id>
+				<posX>25</posX>
+				<posY>210</posY>
+				<width>380</width>
+				<label>Correct</label>
+				<font>font16</font>
+				<textYOff>11</textYOff>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<onleft>5</onleft>
+				<onright>98</onright>
+				<onup>97</onup>
+				<ondown>5</ondown>
+			</control>
+		</control>
+
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -19,86 +108,6 @@
 			<height>766</height>
 			<texture>bg_facade.png</texture>
 		</control>
-
-		<control>
-			<description>BW Label</description>
-			<type>label</type>
-			<id>95</id>
-			<posX>30</posX>
-			<posY>100</posY>
-			<width>380</width>
-			<label>Correct computer</label>
-		</control>
-		<control>
-			<description>Black Comp</description>
-			<type>selectbutton</type>
-			<id>96</id>
-			<posX>25</posX>
-			<posY>130</posY>
-			<width>380</width>
-			<label>Black: 0</label>
-			<font>font16</font>
-			<textYOff>11</textYOff>
-			<textYOff2>11</textYOff2>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<texturebg>-</texturebg>
-			<onleft>5</onleft>
-			<!--<onright>0</onright>-->
-			<onup>5</onup>
-			<ondown>97</ondown>
-			<subitems>
-				<subitem>Black: 0</subitem>
-				<subitem>Black: 1</subitem>
-				<subitem>Black: 2</subitem>
-				<subitem>Black: 3</subitem>
-				<subitem>Black: 4</subitem>
-			</subitems>
-		</control>
-		<control>
-			<description>White Comp</description>
-			<type>selectbutton</type>
-			<id>97</id>
-			<posX>25</posX>
-			<posY>170</posY>
-			<width>380</width>
-			<label>White: 0</label>
-			<font>font16</font>
-			<textYOff>11</textYOff>
-			<textYOff2>11</textYOff2>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<texturebg>-</texturebg>
-			<onleft>5</onleft>
-			<!--<onright>0</onright>-->
-			<onup>96</onup>
-			<ondown>98</ondown>
-			<subitems>
-				<subitem>White: 0</subitem>
-				<subitem>White: 1</subitem>
-				<subitem>White: 2</subitem>
-				<subitem>White: 3</subitem>
-				<subitem>White: 4</subitem>
-			</subitems>
-		</control>
-		<control>
-			<description>Ok Comp</description>
-			<type>button</type>
-			<id>98</id>
-			<posX>25</posX>
-			<posY>210</posY>
-			<width>380</width>
-			<label>Correct</label>
-			<font>font16</font>
-			<textYOff>11</textYOff>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<onleft>5</onleft>
-			<onright>98</onright>
-			<onup>97</onup>
-			<ondown>5</ondown>
-		</control>
-
 		<control>
 			<description>Playground Human</description>
 			<type>image</type>
