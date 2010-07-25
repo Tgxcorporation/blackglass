@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window> 
+	<controls>
+
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-200</posX>
+			<posY>550</posY>
+			<width>1680</width>
+			<height>180</height>
+			<texture>gradient.png</texture>
+			<visible>facadeview.filmstrip</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<type>listcontrol</type>
+					<subtype>album</subtype>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>	
+					<visible>[facadeview.list]+[control.isvisible(1239)]</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>	
+				</control>
+				<control>
+					<description>graphical thumbpanel (series and/or seasons if set)</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<posX>897</posX>
+					<posY>101</posY>
+					<width>390</width>
+					<height>570</height>
+					<!-- up/down buttons & page # -->     
+					<onleft>2</onleft>
+					<onright>2</onright>		  
+					<!-- Textures -->
+					<imageFolder>-</imageFolder> 			
+					<!-- Text -->
+					<font>font16</font>
+					<selectedColor>00ffffff</selectedColor>
+					<textcolor>ffffffff</textcolor>
+					<colordiffuse>ffffffff</colordiffuse>
+					<remoteColor>FF868686</remoteColor>
+					<!-- watched color -->
+					<downloadColor>FFFFFFFF</downloadColor>
+					<!-- not watched color (normal) -->
+					<textcolor>FFC14E4A</textcolor>
+					<!-- local file not present color -->
+					<textcolor2>FFC14E4A</textcolor2>
+					<!-- local file not present color  column 2-->
+					<textcolor3>FFC14E4A</textcolor3>
+					<!-- local file not present color column 3-->
+					<suffix>|</suffix>		  
+					<itemWidthBig>390</itemWidthBig>
+					<itemHeightBig>76</itemHeightBig>
+					<!-- boxes -->
+					<textureWidthBig>390</textureWidthBig>
+					<textureHeightBig>74</textureHeightBig>
+					<!-- banners -->
+					<thumbWidthBig>390</thumbWidthBig>
+					<thumbHeightBig>74</thumbHeightBig>
+					<thumbPosXBig>0</thumbPosXBig>
+					<thumbPosYBig>1</thumbPosYBig>
+					<thumbZoom>no</thumbZoom>
+					<!-- text (No banner) -->
+					<textXOff>0</textXOff>
+					<textYOff>0</textYOff>
+					<keepaspectratio>no</keepaspectratio>
+					<enableFocusZoom>no</enableFocusZoom>
+					<scrollOffset>1</scrollOffset>
+					<unfocusedAlpha>100</unfocusedAlpha>     
+					<spinWidth>40</spinWidth>
+					<spinHeight>40</spinHeight>
+					<spinPosX>1185</spinPosX>
+					<spinPosY>660</spinPosY>
+					<spinAlign>Right</spinAlign>
+					<spinColor>60ffffff</spinColor>
+					<textureUp>arrow_round_up_nofocus.png</textureUp>
+					<textureDown>arrow_round_down_nofocus.png</textureDown>
+					<textureUpFocus>arrow_round_up_focus.png</textureUpFocus>
+					<textureDownFocus>arrow_round_down_focus.png</textureDownFocus>
+					<spinCanFocus>yes</spinCanFocus>
+					<visible>[facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+				</control>
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<spinPosY>-50</spinPosY>
+					<spinPosX>-50</spinPosX>
+					<posX>20</posX>
+					<posY>410</posY>
+					<width>1350</width>
+					<spinCanFocus>no</spinCanFocus>
+					<thumbWidth>150</thumbWidth>
+					<thumbHeight>215</thumbHeight>
+					<thumbPosX>21</thumbPosX>
+					<thumbPosY>4</thumbPosY>
+					<itemWidth>180</itemWidth>
+					<itemHeight>280</itemHeight>
+					<textureWidth>175</textureWidth>
+					<textureHeight>223</textureHeight>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+					<scrollOffset>3</scrollOffset>
+					<visible>[facadeview.filmstrip]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+				</control>
+				<control>
+					<description>Text List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<posX>897</posX>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<width>383</width>
+					<textXOff2>383</textXOff2>
+					<textYOff2>8</textYOff2>
+					<textXOff3>390</textXOff3>
+					<textYOff3>6</textYOff3>
+					<IconXOff>420</IconXOff>
+					<IconYOff>22</IconYOff>
+					<playedColor>ff77ccff</playedColor>
+					<!-- watched -->
+					<downloadColor>ffffffff</downloadColor>
+					<!-- (normal) -->
+					<remoteColor>ffF87B72</remoteColor>
+					<!-- file not present color -->
+					<textcolor>ffffffff</textcolor>
+					<!-- not watched (normal) -->
+					<textcolor2>ffffffff</textcolor2>
+					<textcolor3>ffffffff</textcolor3>
+					<textYOff>8</textYOff>
+					<textXOff>-40</textXOff>
+					<visible>[facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)]</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
