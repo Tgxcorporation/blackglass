@@ -6,16 +6,10 @@
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<define>#header.label:Social</define>
+	<define>#header.background:hover_opensocial.png</define>
 	<controls>
-		<control>
-			<description>BG</description>
-			<type>image</type>
-			<id>0</id>
-			<width>1280</width>
-			<height>720</height>
-			<texture>bg.jpg</texture>    
-		</control>
-		<!-- <import>common.picback.xml</import>-->
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
 		<import>common.time.xml</import>
 		<control>
 			<type>image</type>
@@ -25,9 +19,7 @@
 			<height>720</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>!control.hasfocus(50)</visible>
 		</control>
-
 		<control>
 			<type>label</type>
 			<id>1</id>
@@ -82,6 +74,22 @@
 				<id>104</id>
 				<label>Photos</label>
 				<onup>103</onup>
+				<ondown>105</ondown>
+			</control>	  
+			<control>
+				<description>Photos5</description>
+				<type>button</type>
+				<id>105</id>
+				<label>Photos</label>
+				<onup>104</onup>
+				<ondown>106</ondown>
+			</control>	  
+			<control>
+				<description>Photos6</description>
+				<type>button</type>
+				<id>106</id>
+				<label>Photos</label>
+				<onup>105</onup>
 				<ondown>101</ondown>
 			</control>	  
 		</control>
