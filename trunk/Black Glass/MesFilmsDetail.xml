@@ -102,44 +102,49 @@
 
 		<!-- Details Box -->
 		<control>
-			<description>Detail Panel Background</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-		</control>
-		<control>
-			<description>TitleValue</description>
-			<type>fadelabel</type>
-			<id>2026</id>
-			<posX>520</posX>
-			<posY>88</posY>
-			<font>font22</font>
-			<align>left</align>
-			<textcolor>ffffffff</textcolor>
-			<width>750</width>
-			<label>#myfilms.originaltitle</label>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="60">WindowOpen</animation>
-		</control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>Detail Panel Background</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<description>TitleValue</description>
+				<type>fadelabel</type>
+				<id>2026</id>
+				<posX>520</posX>
+				<posY>88</posY>
+				<font>font22</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>750</width>
+				<label>#myfilms.originaltitle</label>
+				<wrapString> : : : </wrapString>
+				<animation effect="fade" time="250" delay="60">WindowOpen</animation>
+			</control>
 
-		<control>
-			<description>Original Title</description>
-			<type>fadelabel</type>
-			<id>2025</id>
-			<posX>520</posX>
-			<posY>128</posY>
-			<label>#myfilms.translatedtitle</label>
-			<width>750</width>
-			<font>font13</font>
-			<textcolor>90ffffff</textcolor>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="60">WindowOpen</animation>
-		</control>	
-		<!-- <control>
+			<control>
+				<description>Original Title</description>
+				<type>fadelabel</type>
+				<id>2025</id>
+				<posX>520</posX>
+				<posY>128</posY>
+				<label>#myfilms.translatedtitle</label>
+				<width>750</width>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+				<animation effect="fade" time="250" delay="60">WindowOpen</animation>
+			</control>	
+			<!-- <control>
 			<type>image</type>
 			<id>1</id>
 			<posX>490</posX>
@@ -150,186 +155,186 @@
 			<colordiffuse>77ffffff</colordiffuse>
 		</control>	 -->
 
-		<control>
-			<type>imagelist</type>
-			<id>1</id>
-			<posX>520</posX>
-			<posY>170</posY>
-			<width>115</width>
-			<height>13</height>
-			<textureWidth>27</textureWidth>
-			<textureHeight>27</textureHeight>
-			<subitems>
-				<subitem>UserRatingStarOff.png</subitem>
-				<subitem>stargood.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<percentage>#myfilms.rating</percentage>
-			<imagesToDraw>10</imagesToDraw>
-			<animation effect="fade" time="250" delay="120">WindowOpen</animation>
-		</control>
+			<control>
+				<type>imagelist</type>
+				<id>1</id>
+				<posX>520</posX>
+				<posY>170</posY>
+				<width>115</width>
+				<height>13</height>
+				<textureWidth>27</textureWidth>
+				<textureHeight>27</textureHeight>
+				<subitems>
+					<subitem>UserRatingStarOff.png</subitem>
+					<subitem>stargood.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<percentage>#myfilms.rating</percentage>
+				<imagesToDraw>10</imagesToDraw>
+				<animation effect="fade" time="250" delay="120">WindowOpen</animation>
+			</control>
 
 
-		<control>
-			<description>CategoryValue</description>
-			<type>fadelabel</type>
-			<id>2062</id>
-			<posX>520</posX>
-			<posY>205</posY>
-			<width>750</width>
-			<font>font16</font>
-			<label>#myfilms.country     #myfilms.category</label>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="120">WindowOpen</animation>
-		</control>
+			<control>
+				<description>CategoryValue</description>
+				<type>fadelabel</type>
+				<id>2062</id>
+				<posX>520</posX>
+				<posY>205</posY>
+				<width>750</width>
+				<font>font16</font>
+				<label>#myfilms.country     #myfilms.category</label>
+				<wrapString> : : : </wrapString>
+				<animation effect="fade" time="250" delay="120">WindowOpen</animation>
+			</control>
 
 
-		<control>
-			<description>YearValue</description>
-			<type>label</type>
-			<id>2061</id>
-			<posX>520</posX>
-			<posY>240</posY>
-			<width>750</width>
-			<font>font18</font>
-			<textcolor>90ffffff</textcolor>
-			<label>#myfilms.year     #myfilms.length</label>
-			<animation effect="fade" time="250" delay="120">WindowOpen</animation>
-		</control>
-		<control>
-			<description>DirectorValue</description>
-			<type>fadelabel</type>
-			<id>2064</id>
-			<posX>520</posX>
-			<posY>280</posY>
-			<width>750</width>
-			<font>font18</font>
-			<textcolor>ffFFFFFF</textcolor>
-			<label>Directed by #myfilms.director</label>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="120">WindowOpen</animation>
-		</control>
-
-
-
-		<control>
-			<type>image</type>
-			<id>1</id>
-			<posX>490</posX>
-			<posY>106</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
+			<control>
+				<description>YearValue</description>
+				<type>label</type>
+				<id>2061</id>
+				<posX>520</posX>
+				<posY>240</posY>
+				<width>750</width>
+				<font>font18</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#myfilms.year     #myfilms.length</label>
+				<animation effect="fade" time="250" delay="120">WindowOpen</animation>
+			</control>
+			<control>
+				<description>DirectorValue</description>
+				<type>fadelabel</type>
+				<id>2064</id>
+				<posX>520</posX>
+				<posY>280</posY>
+				<width>750</width>
+				<font>font18</font>
+				<textcolor>ffFFFFFF</textcolor>
+				<label>Directed by #myfilms.director</label>
+				<wrapString> : : : </wrapString>
+				<animation effect="fade" time="250" delay="120">WindowOpen</animation>
+			</control>
 
 
 
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>490</posX>
+				<posY>106</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
 
 
-		<control>
-			<description>Actors value</description>
-			<type>textboxscrollup</type>
-			<id>2040</id>
-			<posX>520</posX>
-			<posY>318</posY>
-			<width>750</width>
-			<font>font16</font>
-			<height>70</height>
-			<textcolor>90FFFFFF</textcolor>
-			<label>#myfilms.actors</label>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250" delay="120">WindowOpen</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>1</id>
-			<posX>490</posX>
-			<posY>340</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
-		<control>
-			<description>Optional Display Field 1 Value</description>
-			<type>fadelabel</type>
-			<id>1031</id>
-			<posX>520</posX>
-			<posY>405</posY>
-			<label>#myfilms.item1</label>
-			<width>340</width>
-			<textcolor>ffffffff</textcolor>
-			<font>font16</font>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="180">WindowOpen</animation>
-		</control>
-
-		<control>
-			<description>Optional Display Field 2 Value</description>
-			<type>fadelabel</type>
-			<id>1033</id>
-			<posX>1240</posX>
-			<posY>405</posY>
-			<label>#myfilms.item2</label>
-			<width>340</width>
-			<textcolor>ffffffff</textcolor>
-			<font>font16</font>
-			<align>right</align>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="180">WindowOpen</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>1</id>
-			<posX>490</posX>
-			<posY>395</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
-		<control>
-			<description>description value</description>
-			<type>textboxscrollup</type>
-			<id>2050</id>
-			<posX>520</posX>
-			<posY>455</posY>
-			<width>750</width>
-			<height>150</height>
-			<textcolor>ffFFFFFF</textcolor>
-			<font>font18</font>
-			<label>#myfilms.description</label>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250" delay="240">WindowOpen</animation>
-		</control>
 
 
-		<control>
-			<type>image</type>
-			<id>1</id>
-			<posX>490</posX>
-			<posY>560</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
 
-		<control>
-			<description>Video/Audio Format</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>520</posX>
-			<posY>667</posY>
-			<label>#myfilms.mediatype     #myfilms.format     #myfilms.resolution     #myfilms.size Mb     #myfilms.framerate fps</label>
-			<font>font12</font>
-			<width>750</width>
-			<textcolor>90ffffff</textcolor>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="300">WindowOpen</animation>
-		</control>
-		<!-- 		<control>
+			<control>
+				<description>Actors value</description>
+				<type>textboxscrollup</type>
+				<id>2040</id>
+				<posX>520</posX>
+				<posY>318</posY>
+				<width>750</width>
+				<font>font16</font>
+				<height>70</height>
+				<textcolor>90FFFFFF</textcolor>
+				<label>#myfilms.actors</label>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250" delay="120">WindowOpen</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>490</posX>
+				<posY>340</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>Optional Display Field 1 Value</description>
+				<type>fadelabel</type>
+				<id>1031</id>
+				<posX>520</posX>
+				<posY>405</posY>
+				<label>#myfilms.item1</label>
+				<width>340</width>
+				<textcolor>ffffffff</textcolor>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+				<animation effect="fade" time="250" delay="180">WindowOpen</animation>
+			</control>
+
+			<control>
+				<description>Optional Display Field 2 Value</description>
+				<type>fadelabel</type>
+				<id>1033</id>
+				<posX>1240</posX>
+				<posY>405</posY>
+				<label>#myfilms.item2</label>
+				<width>340</width>
+				<textcolor>ffffffff</textcolor>
+				<font>font16</font>
+				<align>right</align>
+				<wrapString> : : : </wrapString>
+				<animation effect="fade" time="250" delay="180">WindowOpen</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>490</posX>
+				<posY>395</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>description value</description>
+				<type>textboxscrollup</type>
+				<id>2050</id>
+				<posX>520</posX>
+				<posY>455</posY>
+				<width>750</width>
+				<height>150</height>
+				<textcolor>ffFFFFFF</textcolor>
+				<font>font18</font>
+				<label>#myfilms.description</label>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250" delay="240">WindowOpen</animation>
+			</control>
+
+
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>490</posX>
+				<posY>560</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+			<control>
+				<description>Video/Audio Format</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>520</posX>
+				<posY>667</posY>
+				<label>#myfilms.mediatype     #myfilms.format     #myfilms.resolution     #myfilms.size Mb     #myfilms.framerate fps</label>
+				<font>font12</font>
+				<width>750</width>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+				<animation effect="fade" time="250" delay="300">WindowOpen</animation>
+			</control>
+			<!-- 		<control>
 			<description>Video/Audio Format with video playing</description>
 			<type>fadelabel</type>
 			<id>1</id>
@@ -340,58 +345,59 @@
 			<width>750</width>
 			<textcolor>90ffffff</textcolor>
 		</control> -->
-		<control>
-			<description>Languages</description>
-			<type>fadelabel</type>
-			<id>2070</id>
-			<posX>520</posX>
-			<posY>690</posY>
-			<label>Languages: #myfilms.languages     Subtitles: #myfilms.subtitles</label>
-			<font>font12</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-			<width>750</width>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="300">WindowOpen</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<description>thumb Logos ID 2001</description>
-			<id>2001</id>
-			<posX>520</posX>
-			<posY>625</posY>
-			<width>730</width>
-			<height>35</height>
-			<texture>#myfilms.logos_id2001</texture>
-			<keepaspectratio>yes</keepaspectratio>
-			<spaceBetweenItems>10</spaceBetweenItems>
-			<visible>yes</visible>
-			<animation effect="fade" time="250" delay="300">WindowOpen</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<description>thumb Logos ID 2002</description>
-			<id>2002</id>
-			<posX>520</posX>
-			<posY>625</posY>
-			<width>730</width>
-			<height>35</height>
-			<texture>#myfilms.logos_id2002</texture>
-			<keepaspectratio>yes</keepaspectratio>
-			<spaceBetweenItems>10</spaceBetweenItems>
-			<visible>yes</visible>
-			<animation effect="fade" time="250" delay="300">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Selection text</description>
-			<type>fadelabel</type>
-			<id>12</id>
-			<posX>170</posX>
-			<posY>28</posY>
-			<font>font14</font>
-			<width>620</width>
-			<label>#myfilms.select</label>
-			<wrapString> : : : </wrapString>
+			<control>
+				<description>Languages</description>
+				<type>fadelabel</type>
+				<id>2070</id>
+				<posX>520</posX>
+				<posY>690</posY>
+				<label>Languages: #myfilms.languages     Subtitles: #myfilms.subtitles</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+				<width>750</width>
+				<wrapString> : : : </wrapString>
+				<animation effect="fade" time="250" delay="300">WindowOpen</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>thumb Logos ID 2001</description>
+				<id>2001</id>
+				<posX>520</posX>
+				<posY>625</posY>
+				<width>730</width>
+				<height>35</height>
+				<texture>#myfilms.logos_id2001</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<spaceBetweenItems>10</spaceBetweenItems>
+				<visible>yes</visible>
+				<animation effect="fade" time="250" delay="300">WindowOpen</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>thumb Logos ID 2002</description>
+				<id>2002</id>
+				<posX>520</posX>
+				<posY>625</posY>
+				<width>730</width>
+				<height>35</height>
+				<texture>#myfilms.logos_id2002</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<spaceBetweenItems>10</spaceBetweenItems>
+				<visible>yes</visible>
+				<animation effect="fade" time="250" delay="300">WindowOpen</animation>
+			</control>
+			<control>
+				<description>Selection text</description>
+				<type>fadelabel</type>
+				<id>12</id>
+				<posX>170</posX>
+				<posY>28</posY>
+				<font>font14</font>
+				<width>620</width>
+				<label>#myfilms.select</label>
+				<wrapString> : : : </wrapString>
+			</control>
 		</control>
 
 		<control>
