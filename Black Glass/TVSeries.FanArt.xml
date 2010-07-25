@@ -6,18 +6,6 @@
 	<define>#header.background:hover_my tv series.png</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
-	<define>#title.color:ffffffff</define>
-	<!-- Titles Color     Default: ffdedede-->
-	<define>#smalltitle.color:ffffffff</define>
-	<!-- Small Titles Color     Default: ff999999 -->
-	<define>#text.color:ffffffff</define>
-	<!-- Text Color     Default: ffffffff-->
-	<define>#default.color:ffffffff</define>
-	<!-- Normal List Color     Default: ffffffff-->
-	<define>#watched.color:ffffffff</define>
-	<!-- Watched List Color     Default: ff666666 -->
-	<define>#notpresent.color:ffffffff</define>
-	<!-- File Not Present in List Color     Default: ffef6d16 -->
 	<controls>
 		<!-- ~~~~~~~~~~~~~~~~~~~~ ALL BACKGROUNDS ~~~~~~~~~~~~~~~~~~~~ -->
 		<import>common.window.background.xml</import>
@@ -68,7 +56,8 @@
 			<posY>40</posY>	  
 			<font>font16</font>
 			<align>center</align>
-			<label>[#TVSeries.FanArt.SelectedFanartResolution]</label>
+			<!-- <label>#TVSeries.FanArt.SelectedFanartResolution</label> -->
+			<label>#TVSeries.FanArt.FilterResolution</label>
 			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
@@ -84,6 +73,21 @@
 			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
+		
+		<!-- <control>
+			<description>Fanart Count</description>
+			<type>label</type>
+			<label>#TVSeries.FanArt.Count #TVSeries.Translation.FanArt.Label</label>
+			<id>0</id>
+			<width>250</width>
+			<posX>1260</posX>
+			<posY>23</posY>
+			<align>right</align>
+			<font>font11</font>
+			<textcolor>ffFFFFFF</textcolor>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control> -->
 
 		<!--  ************** HIDDEN MENU *****************  -->    
 		<control>
@@ -172,7 +176,6 @@
 					<label>Random Fanart</label>
 					<onright>50</onright>
 				</control>		  
-
 			</control>
 		</control>
 		<control>
@@ -184,6 +187,7 @@
 			<height>180</height>
 			<texture>gradient.png</texture>
 			<visible>facadeview.filmstrip</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>group</type>
