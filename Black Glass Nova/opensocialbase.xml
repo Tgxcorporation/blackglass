@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>30050</id>
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:Open Social</define> 
+	<define>#header.background:hover_opensocial.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.time.xml</import>
+		<import>common.facade.background.xml</import>
+		<import>common.facade.itemcount.xml</import>
+		<control>
+			<type>label</type>
+			<id>100</id>
+			<posX>30</posX>
+			<posY>56</posY>
+			<font>font13</font>
+			<label>#header.title</label>
+			<textcolor>White</textcolor>
+		</control>
+
+
+
+		<control>
+			<id>500</id>
+			<type>image</type>
+			<posX>40</posX>
+			<posY>419</posY>
+			<width>340</width>
+			<height>254</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>no</zoom>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+			<visible>[facadeview.list|facadeview.album]+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250" reversible="false">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>410</posY>
+			<width>360</width>
+			<height>273</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+			<visible>[facadeview.list|facadeview.album]+control.hasfocus(50)+control.hasthumb(500)</visible>
+			<animation effect="fade" time="250">hidden</animation>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		
+		
+		<!-- <control>
+			<type>label</type>
+			<description>Current program title</description>
+			<posX>30</posX>
+			<posY>395</posY>
+			<width>350</width>
+			<font>font22</font>
+			<label>#selecteditem</label>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Current program</description>
+			<posX>30</posX>
+			<posY>450</posY>
+			<width>350</width>
+			<label>#selecteditem2</label>
+			<textcolor>ffffffff</textcolor>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control> -->
+
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-200</posX>
+			<posY>550</posY>
+			<width>1680</width>
+			<height>180</height>
+			<texture>gradient.png</texture>
+			<visible>facadeview.filmstrip</visible>
+		</control>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<!-- <animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation> -->
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>listcontrol</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<onleft>5</onleft>
+					<onright>5</onright>
+					<scrollOffset>2</scrollOffset>
+					<posX>640</posX>
+					<width>640</width>
+					<posY>430</posY>
+					<height>300</height>
+					<textureHeight>35</textureHeight>
+					<itemWidth>40</itemWidth>
+					<itemHeight>30</itemHeight>
+					<IconXOff>10</IconXOff>
+					<IconYOff>2</IconYOff>
+					<textXOff2>630</textXOff2>
+					<textYOff2>2</textYOff2>
+					<textXOff3>630</textXOff3>
+					<textYOff3>2</textYOff3>
+					<font>font14</font>	
+					<font2>font14</font2>	
+					<font3>font14</font3>	
+					<textYOff>2</textYOff>
+					<spinWidth>30</spinWidth>
+					<spinHeight>30</spinHeight>
+					<spinPosX>1210</spinPosX>
+					<spinPosY>685</spinPosY>
+					<PinIconXOff>627</PinIconXOff> 
+					<PinIconYOff>4</PinIconYOff>
+				</control>
+				<control>
+					<description>album view listcontrol</description>
+					<type>listcontrol</type>
+					<subtype>album</subtype>
+					<id>50</id>
+					<scrollOffset>2</scrollOffset>
+					<posX>640</posX>
+					<width>640</width>
+					<posY>430</posY>
+					<height>300</height>
+					<textureHeight>49</textureHeight>
+					<itemWidth>40</itemWidth>
+					<itemHeight>30</itemHeight>
+					<IconXOff>10</IconXOff>
+					<IconYOff>9</IconYOff>
+					<textXOff2>630</textXOff2>
+					<textYOff2>26</textYOff2>
+					<textXOff3>60</textXOff3>
+					<textYOff3>26</textYOff3>
+					<font>font14</font>	
+					<font2>font10</font2>	
+					<font3>font10</font3>	
+					<textYOff>1</textYOff>
+					<spinWidth>30</spinWidth>
+					<spinHeight>30</spinHeight>
+					<spinPosX>1210</spinPosX>
+					<spinPosY>685</spinPosY>
+					<PinIconXOff>627</PinIconXOff> 
+					<PinIconYOff>12</PinIconYOff>
+					<onleft>5</onleft>
+					<onright>5</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+				</control>
+				<control>
+					<description>Thumbnail Panel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<onleft>5</onleft>
+					<onright>5</onright>
+					<posX>20</posX>
+					<posY>250</posY>
+					<width>1340</width>
+					<height>420</height>
+					<scrollOffset>1</scrollOffset>
+					<itemWidth>98</itemWidth>
+					<itemHeight>95</itemHeight>
+					<textureWidth>83</textureWidth>
+					<textureHeight>63</textureHeight>
+					<thumbWidth>77</thumbWidth>
+					<thumbHeight>56</thumbHeight>
+					<thumbPosX>3</thumbPosX>
+					<thumbPosY>3</thumbPosY>
+					<itemWidthBig>209</itemWidthBig>
+					<itemHeightBig>189</itemHeightBig>
+					<thumbWidthBig>190</thumbWidthBig>
+					<thumbHeightBig>142</thumbHeightBig>
+					<textureWidthBig>202</textureWidthBig>
+					<textureHeightBig>153</textureHeightBig>
+					<thumbPosXBig>6</thumbPosXBig>
+					<thumbPosYBig>5</thumbPosYBig>
+					<unfocusedAlpha>120</unfocusedAlpha>
+					<hideUnfocusTexture>no</hideUnfocusTexture>
+					<renderFocusText>yes</renderFocusText>
+					<renderUnfocusText>yes</renderUnfocusText>
+					<imageFolder>-</imageFolder>
+					<imageFolderFocus>-</imageFolderFocus>
+					<thumbZoom>no</thumbZoom>
+					<enableFocusZoom>no</enableFocusZoom>
+					<textXOff>2</textXOff>
+					<textYOff>2</textYOff>
+					<spinCanFocus>yes</spinCanFocus>
+					<showFrame>true</showFrame>
+					<frameNoFocus>PictureCase.png</frameNoFocus> 
+					<frameFocus>PictureCase.png</frameFocus>
+					<spinWidth>30</spinWidth>
+					<spinHeight>30</spinHeight>
+					<spinPosX>1210</spinPosX>
+					<spinPosY>660</spinPosY>
+					<spinAlign>Right</spinAlign>
+					<spinColor>60ffffff</spinColor>
+				</control>
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<dimColor>90ffffff</dimColor>
+					<id>50</id>
+					<scrollOffset>2</scrollOffset>
+					<onup>5</onup>
+					<onleft>5</onleft>
+					<posX>20</posX>
+					<posY>450</posY>
+					<width>1350</width>
+					<thumbWidth>226</thumbWidth>
+					<thumbHeight>168</thumbHeight>
+					<thumbPosX>7</thumbPosX>
+					<thumbPosY>6</thumbPosY>
+					<itemWidth>253</itemWidth>
+					<itemHeight>280</itemHeight>
+					<textureWidth>240</textureWidth>
+					<textureHeight>181</textureHeight>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</imageFolder>
+					<imageFolderFocus>PictureCase.png</imageFolderFocus>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<visible>facadeview.filmstrip</visible>
+					<thumbAnimation effect="slide" end="0,-15" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+					<scrollOffset>3</scrollOffset>
+				</control>
+				<control>
+					<description>playlist listcontrol</description>
+					<type>playlistcontrol</type>
+					<id>50</id>
+					<onleft>5</onleft>
+					<onright>5</onright>
+					<scrollOffset>2</scrollOffset>
+					<posX>640</posX>
+					<width>640</width>
+					<posY>430</posY>
+					<height>300</height>
+					<textureHeight>35</textureHeight>
+					<itemWidth>40</itemWidth>
+					<itemHeight>30</itemHeight>
+					<IconXOff>3010</IconXOff>
+					<IconYOff>2</IconYOff>
+					<textXOff>-40</textXOff>
+					<textYOff2>2</textYOff2>
+					<textYOff3>2</textYOff3>
+					<font>font14</font>	
+					<font2>font14</font2>	
+					<font3>font14</font3>	
+					<textYOff>2</textYOff>
+					<spinWidth>30</spinWidth>
+					<spinHeight>30</spinHeight>
+					<spinPosX>1210</spinPosX>
+					<spinPosY>685</spinPosY>
+					<upBtnWidth>31</upBtnWidth>
+					<downBtnWidth>31</downBtnWidth>
+					<deleteBtnWidth>31</deleteBtnWidth>
+					<upBtnHeight>34</upBtnHeight>
+					<downBtnHeight>34</downBtnHeight>
+					<deleteBtnHeight>34</deleteBtnHeight>
+					<upBtnXOffset>540</upBtnXOffset>
+					<downBtnXOffset>570</downBtnXOffset>
+					<deleteBtnXOffset>600</deleteBtnXOffset>
+					<upBtnYOffset>0</upBtnYOffset>
+					<downBtnYOffset>0</downBtnYOffset>
+					<deleteBtnYOffset>0</deleteBtnYOffset>
+				</control>
+			</control>
+		</control>
+
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>5</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(59)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Friends Button</description>
+					<type>button</type>
+					<id>5</id>
+					<posX>71</posX>
+					<posY>291</posY>		
+					<label>Friends</label>
+					<onright>50</onright>
+					<ondown>6</ondown>
+				</control>
+
+				<control>
+					<description>Photos</description>
+					<type>button</type>
+					<id>6</id>
+					<posX>71</posX>
+					<posY>333</posY>
+					<label>Photos</label>
+					<onright>50</onright>
+					<onup>5</onup>
+					<ondown>7</ondown>
+				</control>
+
+				<control>
+					<description>Search button</description>
+					<type>button</type>
+					<id>7</id>
+					<posX>71</posX>
+					<posY>375</posY>		  
+					<label>Search</label>
+					<onright>50</onright>
+					<onup>6</onup>
+					<ondown>8</ondown>
+				</control>
+
+				<control>
+					<description>extras button</description>
+					<type>button</type>
+					<id>8</id>
+					<posX>71</posX>
+					<posY>417</posY>		  
+					<label>Extras</label>
+					<onright>50</onright>
+					<onup>6</onup>
+					<ondown>3</ondown>
+				</control>
+
+				<control>
+					<description>Swich view</description>
+					<type>button</type>
+					<id>3</id>
+					<posX>71</posX>
+					<posY>459</posY>		
+					<label/>
+					<onright>50</onright>
+					<onup>7</onup>
+					<ondown>59</ondown>
+				</control>
+				<control>
+					<description>MPEIUNINSTALL:3664ae64-c5af-4084-baf0-7ecb57b89711</description>
+					<type>button</type>
+					<id>59</id>
+					<label>New version</label>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>2</ondown>     
+					<visible>string.equals(#mpei.3664ae64_c5af_4084_baf0_7ecb57b89711.haveupdate,true)</visible>
+				</control>
+			</control>
+		</control>
+
+		<!-- NOT USED -->
+		<control>
+			<description>Curent pers thumb</description>
+			<type>image</type>
+			<id>106</id>
+			<posX>2105</posX>
+			<posY>40</posY>		
+			<width>150</width>
+			<height>100</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#Social.Curent.Person.Thumb</texture>
+		</control>
+
+	</controls>
+</window>
