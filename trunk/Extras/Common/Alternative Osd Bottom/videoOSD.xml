@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>2901</id>
+	<defaultcontrol>220</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#play.progressbar.percentage:#percentage</define>
+	<define>#play.progressbar.currentplaytime:#currentplaytime</define>
+	<define>#play.progressbar.currentremaining:#currentremaining</define>
+	<controls>
+		<control>
+			<description>background</description>
+			<id>0</id>
+			<type>image</type>
+			<posX>149</posX>
+			<posY>440</posY>
+			<width>982</width>
+			<height>276</height>
+			<texture>bg_osd_small_bottom.png</texture>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>999</id>
+			<posX>250</posX>
+			<posY>480</posY>
+			<width>2</width>
+			<height>173</height>
+			<texture>bg_button_vertical.png</texture>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>999</id>
+			<posX>1005</posX>
+			<posY>480</posY>
+			<width>2</width>
+			<height>173</height>
+			<texture>bg_button_vertical.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>388</posX>
+			<posY>470</posY>
+			<width>617</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>274</posX>
+			<posY>488</posY>
+			<width>111</width>
+			<height>158</height>
+			<texture>#Play.Current.Thumb</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>259</posX>
+			<posY>485</posY>
+			<width>129</width>
+			<height>164</height>
+			<texture>DVDCase.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>		
+		<control>
+			<description>Movie Name</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>400</posX>
+			<posY>485</posY>
+			<width>595</width>
+			<label>#Play.Current.Title</label>
+			<align>left</align>
+			<font>font18</font>
+			<textcolor>ffffffff</textcolor>
+			<wrapString> : : : </wrapString>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Plot</description>
+			<type>textboxscrollup</type>
+			<posX>400</posX>
+			<posY>528</posY>
+			<width>590</width>
+			<height>117</height>
+			<label>#Play.Current.Plot</label>
+			<font>font14</font>
+			<seperator>: : :</seperator>
+			<textcolor>a0FFFFFF</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+
+		<import>videoOSD_mediainfo_mp102.xml</import>
+		<import>videoOSD_mediainfo_mp110rc2.xml</import>
+		<import>common.play.osd.xml</import>
+	</controls>
+</window>
