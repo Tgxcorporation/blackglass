@@ -2,7 +2,7 @@
 <window>
 	<id>604</id>
 	<defaultcontrol>10</defaultcontrol>
-	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
+	<allowoverlay>player.hasmedia</allowoverlay>
 	<disabletopbar>no</disabletopbar>
 	<define>#header.label:100747</define>
 	<define>#header.background:hover_my tv.png</define>
@@ -139,11 +139,11 @@
 		<control>
 			<description>Description1</description>
 			<type>textboxscrollup</type>
-			<id>15</id>
+			<id>0</id>
 			<posX>30</posX>
 			<posY>240</posY>
 			<width>360</width>
-			<height>330</height>
+			<height>326</height>
 			<label>#TV.Search.Description</label>
 			<font>font16</font>
 			<textcolor>FFFFFFFF</textcolor>
@@ -153,7 +153,7 @@
 			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
-		<control>
+ 		<control>
 			<description>Description1</description>
 			<type>textboxscrollup</type>
 			<id>0</id>
@@ -275,6 +275,26 @@
 					<ondown>2</ondown>
 				</control>
 			</control>
+		</control>
+		
+		
+		<!-- NOT USED -->
+		<control>
+			<description>Description1</description>
+			<type>textboxscrollup</type>
+			<id>15</id>
+			<posX>2230</posX>
+			<posY>240</posY>
+			<width>360</width>
+			<height>330</height>
+			<label>#TV.Search.Description</label>
+			<font>font16</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]+player.hasmedia</visible>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 	</controls>
 </window>
