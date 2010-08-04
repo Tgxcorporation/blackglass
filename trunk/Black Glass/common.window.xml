@@ -7,8 +7,17 @@
 			<id>0</id>
 			<width>1280</width>
 			<height>720</height>
+			<texture>bg.jpg</texture> 		
+		</control>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
 			<texture>#header.background</texture>	
 			<animation effect="fade" time="1">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>BG</description>
@@ -17,7 +26,9 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>bg.jpg</texture> 
-			<colordiffuse>c0ffffff</colordiffuse>			
+			<colordiffuse>c0ffffff</colordiffuse>		
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -28,6 +39,8 @@
 			<font>font28</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -42,6 +55,8 @@
 			<label>#selecteditem</label>
 			<visible>facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 	</controls>
 </window>

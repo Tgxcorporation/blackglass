@@ -6,150 +6,10 @@
 	<define>#header.label:100748</define>
 	<define>#selecteditem:</define>
 	<define>#header.background:hover_my tv.png</define>
-	<animation effect="fade" time="250">WindowOpen</animation>
-	<animation effect="fade" time="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
-		<control>
-			<type>actiongroup</type>
-			<description>action menu</description>
-			<defaultcontrol>2</defaultcontrol>
-			<onexit>0</onexit>
-			<buttonX>0</buttonX>
-			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
-			<buttonheight>720</buttonheight>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<width>425</width>
-			<height>720</height>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
-			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)</visible>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>418</width>
-				<height>720</height>
-				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
-			</control>
-			<control>
-				<id>0</id>
-				<type>label</type>
-				<posX>30</posX>
-				<posY>35</posY>
-				<label>924</label>
-				<font>font24</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>47</posY>
-				<width>385</width>
-				<height>53</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
-			<control>
-				<type>group</type>
-				<layout>StackLayout</layout>
-				<posX>0</posX>
-				<posY>100</posY>
-				<control>
-					<description>Record</description>
-					<type>button</type>
-					<id>2</id>
-					<onup>17</onup>
-					<ondown>3</ondown>
-					<onright>10</onright>
-				</control>
-				<control>
-					<description>Advanced Record</description>
-					<type>button</type>
-					<id>3</id>
-					<label>1038</label>
-					<onup>2</onup>
-					<ondown>4</ondown>
-					<onright>10</onright>
-				</control>
-				<control>
-					<description>Keep</description>
-					<type>button</type>
-					<id>4</id>
-					<label>1042</label>
-					<onup>2</onup>
-					<ondown>5</ondown>
-					<onright>10</onright>
-				</control>
-				<control>
-					<description>Notify</description>
-					<type>togglebutton</type>
-					<id>5</id>
-					<label>1040</label>
-					<onup>4</onup>
-					<ondown>6</ondown>
-					<onright>10</onright>
-				</control>
-				<control>
-					<description>Quality</description>
-					<type>button</type>
-					<id>6</id>
-					<label>882</label>
-					<onup>5</onup>
-					<ondown>7</ondown>
-					<onright>10</onright>
-				</control>
-				<control>
-					<description>Episodes</description>
-					<type>button</type>
-					<id>7</id>
-					<label>888</label>
-					<onup>6</onup>
-					<ondown>8</ondown>
-					<onright>10</onright>
-				</control>
-				<control>
-					<description>PreRecord</description>
-					<type>button</type>
-					<id>8</id>
-					<label>1444</label>
-					<onup>7</onup>
-					<ondown>9</ondown>
-					<onright>10</onright>
-				</control>
-				<control>
-					<description>PostRecord</description>
-					<type>button</type>
-					<id>9</id>
-					<label>1445</label>
-					<onup>8</onup>
-					<ondown>99</ondown>
-					<onright>10</onright>
-				</control>
-			</control>
-		</control>
-
 		<import>common.facade.background.basic.xml</import>
 		<import>common.facade.itemcount.itemtype.basic.xml</import>
 		<control>
@@ -291,6 +151,145 @@
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Record</description>
+					<type>button</type>
+					<id>2</id>
+					<onup>17</onup>
+					<ondown>3</ondown>
+					<onright>10</onright>
+				</control>
+				<control>
+					<description>Advanced Record</description>
+					<type>button</type>
+					<id>3</id>
+					<label>1038</label>
+					<onup>2</onup>
+					<ondown>4</ondown>
+					<onright>10</onright>
+				</control>
+				<control>
+					<description>Keep</description>
+					<type>button</type>
+					<id>4</id>
+					<label>1042</label>
+					<onup>2</onup>
+					<ondown>5</ondown>
+					<onright>10</onright>
+				</control>
+				<control>
+					<description>Notify</description>
+					<type>togglebutton</type>
+					<id>5</id>
+					<label>1040</label>
+					<onup>4</onup>
+					<ondown>6</ondown>
+					<onright>10</onright>
+				</control>
+				<control>
+					<description>Quality</description>
+					<type>button</type>
+					<id>6</id>
+					<label>882</label>
+					<onup>5</onup>
+					<ondown>7</ondown>
+					<onright>10</onright>
+				</control>
+				<control>
+					<description>Episodes</description>
+					<type>button</type>
+					<id>7</id>
+					<label>888</label>
+					<onup>6</onup>
+					<ondown>8</ondown>
+					<onright>10</onright>
+				</control>
+				<control>
+					<description>PreRecord</description>
+					<type>button</type>
+					<id>8</id>
+					<label>1444</label>
+					<onup>7</onup>
+					<ondown>9</ondown>
+					<onright>10</onright>
+				</control>
+				<control>
+					<description>PostRecord</description>
+					<type>button</type>
+					<id>9</id>
+					<label>1445</label>
+					<onup>8</onup>
+					<ondown>99</ondown>
+					<onright>10</onright>
+				</control>
+			</control>
 		</control>
 	</controls>
 </window>
