@@ -4,8 +4,7 @@
 	<defaultcontrol>107</defaultcontrol>
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<disabletopbar>yes</disabletopbar>
-	<animation effect="fade" time="250">WindowOpen</animation>
-	<animation effect="fade" time="250" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
 	<rememberLastFocusedControl>yes</rememberLastFocusedControl>
 	<controls>
 
@@ -13,9 +12,21 @@
 			<description>BG</description>
 			<type>image</type>
 			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>bg.jpg</texture>
+			<animation effect="fade" time="250" start="70" end="100">WindowOpen</animation>
+			<animation effect="fade" time="250" start="100" end="70">WindowClose</animation>			
+		</control>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
 			<texture>basichome_bg.jpg</texture>
 			<width>1280</width>
 			<height>720</height>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>BG</description>
@@ -24,6 +35,8 @@
 			<texture>basichome_side.png</texture>
 			<width>1280</width>
 			<height>720</height>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>Date</description>
@@ -189,9 +202,9 @@
 
 		<!-- FANART SCRAPER -->
 		<import>BasicHome_Fanart_Scraper.xml</import>	
-		
+
 		<!-- OVERLAY -->
 		<import>minioverlay.xml</import>	
-		
+
 	</controls>
 </window>
