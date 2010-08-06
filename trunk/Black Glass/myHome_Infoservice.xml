@@ -11,6 +11,8 @@
 			<texture>black.png</texture>
 			<colordiffuse>ffffffff</colordiffuse>
 			<visible>plugin.isenabled(InfoService)+[string.equals(#infoservice.feed.enabled, true)|string.equals(#infoservice.twitter.enabled, true)]</visible>
+			<animation effect="fade" time="250" delay="125">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -22,6 +24,8 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>ffa0a0a0</colordiffuse>
 			<visible>plugin.isenabled(InfoService)+[string.equals(#infoservice.feed.enabled, true)|string.equals(#infoservice.twitter.enabled, true)]</visible>
+			<animation effect="fade" time="250" delay="125">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -33,8 +37,10 @@
 			<texture>bg_facade_line_focus.png</texture>
 			<colordiffuse>ffa0a0a0</colordiffuse>
 			<visible>plugin.isenabled(InfoService)+[string.equals(#infoservice.feed.enabled, true)|string.equals(#infoservice.twitter.enabled, true)]</visible>
+			<animation effect="fade" time="250" delay="125">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
-		
+
 		<control>
 			<description>RSS Button</description> 
 			<type>button</type> 
@@ -51,9 +57,11 @@
 			<textureFocus>InfoService/home_rss_focus.png</textureFocus> 
 			<textureNoFocus>InfoService/home_rss_nofocus.png</textureNoFocus>
 			<animation effect="zoom" start="100,100" end="110,110" time="250">focus</animation>
-			<visible>plugin.isenabled(InfoService)+string.equals(#infoservice.feed.enabled, true)</visible> 
+			<visible>plugin.isenabled(InfoService)+string.equals(#infoservice.feed.enabled, true)</visible>
+			<animation effect="fade" time="250" delay="125">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
-		
+
 		<control>
 			<description>Twitter Button</description> 
 			<type>button</type> 
@@ -70,9 +78,11 @@
 			<textureFocus>InfoService/home_twitter_focus.png</textureFocus> 
 			<textureNoFocus>InfoService/home_twitter_nofocus.png</textureNoFocus>
 			<animation effect="zoom" start="100,100" end="110,110" time="250">focus</animation>
-			<visible>plugin.isenabled(InfoService)+string.equals(#infoservice.twitter.enabled, true)</visible> 
+			<visible>plugin.isenabled(InfoService)+string.equals(#infoservice.twitter.enabled, true)</visible>
+			<animation effect="fade" time="250" delay="125">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
-		
+
 		<control>
 			<description>Feed Items</description>
 			<type>fadelabel</type>
@@ -87,8 +97,10 @@
 			<animation effect="fade" time="250">VisibleChange</animation>
 			<wrapString> : : : </wrapString>
 			<visible>plugin.isenabled(InfoService)+string.equals(#infoservice.feed.enabled, true)+!control.hasfocus(1112)</visible>
+			<animation effect="fade" time="250" delay="125">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
-		
+
 		<control>
 			<description>Twitter Items</description>
 			<type>fadelabel</type>
@@ -102,9 +114,11 @@
 			<label>#infoservice.twitter.messages</label> 
 			<animation effect="fade" time="250">VisibleChange</animation>
 			<wrapString> : : : </wrapString>
-			<visible>plugin.isenabled(InfoService)+string.equals(#infoservice.twitter.enabled, true)+control.hasfocus(1112)</visible> 
+			<visible>plugin.isenabled(InfoService)+string.equals(#infoservice.twitter.enabled, true)+control.hasfocus(1112)</visible>
+			<animation effect="fade" time="250" delay="125">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
-		
-	
+
+
 	</controls>
 </window>
