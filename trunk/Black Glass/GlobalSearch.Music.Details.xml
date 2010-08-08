@@ -5,7 +5,7 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:Global Search</define>
 	<define>#header.background:hover_search music.png</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.music.fanart.xml</import>
@@ -20,7 +20,8 @@
 			<height>720</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>!control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<id>0</id>
@@ -31,6 +32,8 @@
 			<font>font24</font>
 			<align>left</align>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<id>0</id>
@@ -40,6 +43,8 @@
 			<width>385</width>
 			<height>53</height>
 			<texture>bg_button_nofocus.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>group element</description>
@@ -47,7 +52,9 @@
 			<posX>0</posX>
 			<posY>100</posY>
 			<layout>StackLayout</layout>
-			<control>
+			<animation effect="fade" time="250">WindowClose</animation>
+				<animation effect="fade" time="250">WindowOpen</animation>
+				<control>
 				<type>button</type>
 				<description>Play now</description>
 				<id>11</id>
@@ -96,6 +103,8 @@
 			<width>948</width>
 			<height>766</height>
 			<texture>bg_facade.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 
@@ -107,7 +116,7 @@
 			<label>Rating</label>
 			<textcolor>90ffffff</textcolor>
 			<font>font12</font>
-		</control> -->
+		<animation effect="fade" time="250">WindowClose</animation><animation effect="fade" time="250">WindowOpen</animation></control> -->
 
 
 
@@ -124,6 +133,8 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<texture flipY="true" diffuse="Thumb_Mask.png">-</texture>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Cd Case</description>
@@ -135,6 +146,8 @@
 			<height>327</height>
 			<colordiffuse>ffffffff</colordiffuse>
 			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Rating Value</description>
@@ -155,6 +168,7 @@
 			<imagesToDraw>10</imagesToDraw>
 			<percentage>#Play.Current.Rating</percentage>
 			<animation effect="fade" time="250" delay="30">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>	
 
 		<control>
@@ -166,6 +180,7 @@
 			<textcolor>90ffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -177,6 +192,7 @@
 			<font>font12</font>
 			<wrapString> : : : </wrapString>
 			<animation effect="fade" time="250" delay="60">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -187,6 +203,7 @@
 			<textcolor>90ffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="90">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -198,6 +215,7 @@
 			<font>font12</font>
 			<wrapString> : : : </wrapString>
 			<animation effect="fade" time="250" delay="90">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -208,6 +226,7 @@
 			<textcolor>90ffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="120">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -219,6 +238,7 @@
 			<font>font12</font>
 			<wrapString> : : : </wrapString>
 			<animation effect="fade" time="250" delay="120">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -229,6 +249,7 @@
 			<textcolor>90ffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="150">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -240,6 +261,7 @@
 			<font>font12</font>
 			<wrapString> : : : </wrapString>
 			<animation effect="fade" time="250" delay="150">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -250,6 +272,7 @@
 			<textcolor>90ffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="180">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -261,6 +284,7 @@
 			<font>font12</font>
 			<wrapString> : : : </wrapString>
 			<animation effect="fade" time="250" delay="180">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -271,6 +295,7 @@
 			<textcolor>90ffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="210">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -283,6 +308,7 @@
 			<width>340</width>
 			<wrapString> : : : </wrapString>
 			<animation effect="fade" time="250" delay="210">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<id>0</id>
@@ -293,6 +319,7 @@
 			<textcolor>90ffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 
 
@@ -305,6 +332,7 @@
 			<textcolor>ffffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -315,6 +343,7 @@
 			<textcolor>90ffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="280">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -325,6 +354,7 @@
 			<textcolor>ffffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="280">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -335,6 +365,7 @@
 			<textcolor>90ffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="310">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -345,6 +376,7 @@
 			<textcolor>ffffffff</textcolor>
 			<font>font12</font>
 			<animation effect="fade" time="250" delay="310">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 	</controls>
 </window>

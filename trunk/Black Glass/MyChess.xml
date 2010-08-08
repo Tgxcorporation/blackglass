@@ -5,7 +5,7 @@
 	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
 	<define>#header.label:Chess</define>
 	<define>#header.background:hover_my_chess.png</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
@@ -13,6 +13,8 @@
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(15)|control.hasfocus(16)|control.hasfocus(6)|control.hasfocus(4)|control.hasfocus(8)]</visible>
 			<control>
 				<description>level label</description>
@@ -60,42 +62,42 @@
 				<label>#m4</label>
 				<textcolor>90ffffff</textcolor>
 			</control>
-		</control>
 
-		<control>
-			<description>text label</description>
-			<type>label</type>
-			<id>7</id>
-			<posX>30</posX>
-			<posY>440</posY>
-			<label>#Player</label>
-		</control>
-		<control>
-			<description>time label</description>
-			<type>label</type>
-			<id>9</id>
-			<posX>30</posX>
-			<posY>480</posY>
-			<label>#chess_time</label>
-		</control>
-		<control>
-			<description>time label</description>
-			<type>label</type>
-			<id>10</id>
-			<posX>30</posX>
-			<posY>520</posY>
-			<label>#chess_move</label>
-		</control>
-		<control>
-			<type>image</type>
-			<id>25</id>
-			<posX>30</posX>
-			<posY>560</posY>
-			<height>40</height>
-			<width>90</width>
-			<texture>#engine</texture>
-		</control>
 
+			<control>
+				<description>text label</description>
+				<type>label</type>
+				<id>7</id>
+				<posX>30</posX>
+				<posY>440</posY>
+				<label>#Player</label>
+			</control>
+			<control>
+				<description>time label</description>
+				<type>label</type>
+				<id>9</id>
+				<posX>30</posX>
+				<posY>480</posY>
+				<label>#chess_time</label>
+			</control>
+			<control>
+				<description>time label</description>
+				<type>label</type>
+				<id>10</id>
+				<posX>30</posX>
+				<posY>520</posY>
+				<label>#chess_move</label>
+			</control>
+			<control>
+				<type>image</type>
+				<id>25</id>
+				<posX>30</posX>
+				<posY>560</posY>
+				<height>40</height>
+				<width>90</width>
+				<texture>#engine</texture>
+			</control>
+		</control>
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>

@@ -6,7 +6,7 @@
 	<define>#header.label:4540</define>
 	<define>#usePlayFanart:Yes</define>
 	<define>#header.background:hover_my music.png</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.music.play.fanart.xml</import>
@@ -27,6 +27,8 @@
 			<centered>yes</centered>
 			<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Current.Thumb</texture>
 			<zoom>yes</zoom>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -37,6 +39,8 @@
 			<width>360</width>
 			<height>327</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<!--     <control>
       <type>image</type>
@@ -57,6 +61,8 @@
 			<height>100</height>
 			<texture>VU aus.png</texture>
 			<visible>!Player.playing</visible>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -69,6 +75,8 @@
 			<texture>#VUMeterL</texture>
 			<visible>Player.HasAudio + Player.playing</visible>
 			<animation effect="fade" time="250">Visible</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -79,6 +87,8 @@
 			<height>100</height>
 			<texture>VU aus.png</texture>
 			<visible>!Player.playing</visible>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>image</type>
@@ -91,6 +101,8 @@
 			<texture>#VUMeterR</texture>
 			<visible>Player.HasAudio + Player.playing</visible>
 			<animation effect="fade" time="250">Visible</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<control>
@@ -111,6 +123,8 @@
 			<imagesToDraw>5</imagesToDraw>
 			<percentage>#Play.Current.Rating</percentage>
 			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -123,6 +137,8 @@
 			<label>#Play.Current.Artist</label>
 			<font>font24</font>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -136,6 +152,8 @@
 			<align>left</align>
 			<textcolor>b0ffffff</textcolor>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<!-- <control>
 			<type>fadelabel</type>
@@ -160,6 +178,8 @@
 			<label>Track: #Play.Current.Track</label>
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -172,6 +192,8 @@
 			<label>#Play.Current.Title</label>
 			<font>font18</font>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -184,6 +206,8 @@
 			<font>font12</font>
 			<align>left</align>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 
@@ -199,6 +223,8 @@
 			<height>36</height>
 			<texture>osd_progress_background.png</texture>
 			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>progress</type>
@@ -210,6 +236,8 @@
 			<height>36</height>
 			<visible>player.hasmedia</visible>
 			<label>#percentage</label>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>pause image</description>
@@ -221,6 +249,8 @@
 			<visible>player.paused</visible>
 			<texture>video_paused.png</texture>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -233,6 +263,8 @@
 			<font>font16</font>
 			<textcolor>white</textcolor>
 			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -245,6 +277,8 @@
 			<font>font16</font>
 			<textcolor>white</textcolor>
 			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 
@@ -370,6 +404,8 @@
 			<align>left</align>
 			<textcolor>80ffffff</textcolor>
 			<visible>player.hasmedia+control.hastext(121)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -383,6 +419,8 @@
 			<textcolor>80ffffff</textcolor>
 			<font>font12</font>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -396,6 +434,8 @@
 			<textcolor>80ffffff</textcolor>
 			<font>font12</font>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>music logo</description>
@@ -408,6 +448,8 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Next.Thumb</texture>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>music rectangle</description>
@@ -420,6 +462,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
 			<centered>yes</centered>
 			<visible>player.hasmedia+control.hastext(121)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 

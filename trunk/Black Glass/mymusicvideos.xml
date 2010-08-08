@@ -4,17 +4,19 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
 	<define>#header.label:30000</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
-		
+
 		<control>
 			<description>group element</description>
 			<type>group</type>
 			<posX>71</posX>
 			<posY>121</posY>
 			<layout>StackLayout</layout>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 			<control>
 				<description>back button</description>
 				<type>button</type>
@@ -63,7 +65,7 @@
 				<scrollOffset>2</scrollOffset>
 			</control>
 		</control>
-		
+
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>

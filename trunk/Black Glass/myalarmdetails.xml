@@ -5,7 +5,7 @@
 	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
 	<define>#header.label:#MyAlarm.Translation.AlarmDetails.Label</define>
 	<define>#header.background:hover_my alarm.png</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
@@ -17,6 +17,8 @@
 			<width>1000</width>
 			<height>600</height>
 			<texture>bg_dialog_big.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<!--Dummy Labels for conditional visibility-->
@@ -68,6 +70,8 @@
 			<width>500</width>
 			<textureFocus>bg_button_text_focus.png</textureFocus>
 			<textureNoFocus>bg_button_text_nofocus.png</textureNoFocus>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<control>
@@ -84,6 +88,8 @@
 			<onright>31</onright>
 			<onup>3</onup>
 			<ondown>22</ondown>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<control>
@@ -100,6 +106,8 @@
 			<onright>10</onright>
 			<onup>21</onup>
 			<ondown>24</ondown>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>fade in volume</description>
@@ -115,6 +123,8 @@
 			<onright>10</onright>
 			<onup>22</onup>
 			<ondown>23</ondown>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>wake up pc</description>
@@ -130,6 +140,8 @@
 			<onright>23</onright>
 			<onup>24</onup>
 			<ondown>25</ondown>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<control>
@@ -151,6 +163,8 @@
 			<height>60</height>
 			<textureFocus>bg_button2_focus.png</textureFocus>
 			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Media Type</description>
@@ -163,6 +177,8 @@
 			<wrapString> : : : </wrapString>
 			<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,File)</visible>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Media Type</description>
@@ -175,6 +191,8 @@
 			<wrapString> : : : </wrapString>
 			<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Playlist)</visible>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Media Type</description>
@@ -187,6 +205,8 @@
 			<wrapString> : : : </wrapString>
 			<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Message)</visible>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 
@@ -199,6 +219,8 @@
 			<label>#MyAlarm.Translation.AlarmTime.Label:</label>
 			<align>right</align>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>alarm time hours</description>
@@ -218,6 +240,8 @@
 			<textureDown>arrow_round_down_nofocus.png</textureDown>
 			<textureUpFocus>arrow_round_up_focus.png</textureUpFocus>
 			<textureDownFocus>arrow_round_down_focus.png</textureDownFocus>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>alarm time minutes</description>
@@ -237,6 +261,8 @@
 			<textureDown>arrow_round_down_nofocus.png</textureDown>
 			<textureUpFocus>arrow_round_up_focus.png</textureUpFocus>
 			<textureDownFocus>arrow_round_down_focus.png</textureDownFocus>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 
@@ -247,9 +273,11 @@
 			<posX>810</posX>
 			<posY>250</posY>
 			<label>#MyAlarm.Translation.AlarmDate.Label:</label>
-			<visible>!Control.IsVisible(62)</visible>
+			<visible>!control.isvisible(62)</visible>
 			<align>right</align>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>DD</description>
@@ -269,7 +297,9 @@
 			<textureDown>arrow_round_down_nofocus.png</textureDown>
 			<textureUpFocus>arrow_round_up_focus.png</textureUpFocus>
 			<textureDownFocus>arrow_round_down_focus.png</textureDownFocus>
-			<visible>!Control.IsVisible(62)</visible>
+			<visible>!control.isvisible(62)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>MM</description>
@@ -289,7 +319,9 @@
 			<textureDown>arrow_round_down_nofocus.png</textureDown>
 			<textureUpFocus>arrow_round_up_focus.png</textureUpFocus>
 			<textureDownFocus>arrow_round_down_focus.png</textureDownFocus>
-			<visible>!Control.IsVisible(62)</visible>
+			<visible>!control.isvisible(62)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>YYYY</description>
@@ -301,7 +333,6 @@
 			<posX>990</posX>
 			<posY>256</posY>
 			<onleft>34</onleft>
-
 			<onright>16</onright>
 			<onup>32</onup>
 			<ondown>10</ondown>
@@ -310,7 +341,9 @@
 			<textureDown>arrow_round_down_nofocus.png</textureDown>
 			<textureUpFocus>arrow_round_up_focus.png</textureUpFocus>
 			<textureDownFocus>arrow_round_down_focus.png</textureDownFocus>
-			<visible>!Control.IsVisible(62)</visible>e
+			<visible>!control.isvisible(62)</visible>e
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 
@@ -321,8 +354,10 @@
 			<posX>370</posX>
 			<posY>250</posY>
 			<label>#MyAlarm.Translation.EnabledOnTheseDays.Label:</label>
-			<visible>Control.IsVisible(62)</visible>
+			<visible>control.isvisible(62)</visible>
 			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Monday checkbox</description>
@@ -337,7 +372,9 @@
 			<onright>11</onright>
 			<onup>33</onup>
 			<ondown>24</ondown>
-			<visible>Control.IsVisible(62)</visible>
+			<visible>control.isvisible(62)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Tuesday checkbox</description>
@@ -352,7 +389,9 @@
 			<onright>12</onright>
 			<onup>33</onup>
 			<ondown>24</ondown>
-			<visible>Control.IsVisible(62)</visible>
+			<visible>control.isvisible(62)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Wednesday checkbox</description>
@@ -367,7 +406,9 @@
 			<onright>13</onright>
 			<onup>33</onup>
 			<ondown>24</ondown>
-			<visible>Control.IsVisible(62)</visible>
+			<visible>control.isvisible(62)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Thursday checkbox</description>
@@ -382,7 +423,9 @@
 			<onright>14</onright>
 			<onup>33</onup>
 			<ondown>24</ondown>
-			<visible>Control.IsVisible(62)</visible>
+			<visible>control.isvisible(62)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Friday checkbox</description>
@@ -397,7 +440,9 @@
 			<onright>15</onright>
 			<onup>33</onup>
 			<ondown>24</ondown>
-			<visible>Control.IsVisible(62)</visible>
+			<visible>control.isvisible(62)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Saturday checkbox</description>
@@ -412,7 +457,9 @@
 			<onright>16</onright>
 			<onup>33</onup>
 			<ondown>24</ondown>
-			<visible>Control.IsVisible(62)</visible>
+			<visible>control.isvisible(62)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Sunday checkbox</description>
@@ -428,7 +475,9 @@
 			<onright>33</onright>
 			<onup>33</onup>
 			<ondown>24</ondown>
-			<visible>Control.IsVisible(62)</visible>
+			<visible>control.isvisible(62)</visible>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<control>
@@ -440,6 +489,8 @@
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<control>
@@ -461,6 +512,8 @@
 			<textalign>center</textalign>
 			<textureFocus>bg_button2_focus.png</textureFocus>
 			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Cancel Button</description>
@@ -481,6 +534,8 @@
 			<textalign>center</textalign>
 			<textureFocus>bg_button2_focus.png</textureFocus>
 			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Delete Button</description>
@@ -501,6 +556,8 @@
 			<textalign>center</textalign>
 			<textureFocus>bg_button2_focus.png</textureFocus>
 			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 	</controls>

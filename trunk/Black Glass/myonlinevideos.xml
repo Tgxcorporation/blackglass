@@ -7,7 +7,7 @@
 	<define>#header.image</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_OnlineVideos.png</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 
 		<!-- *** WINDOW DEFAULTS *** -->
@@ -56,6 +56,8 @@
 			<font>font13</font>
 			<visible>string.equals(#OnlineVideos.IsBuffering, true) + !player.hasmedia</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -113,6 +115,8 @@
 			<textcolor>60ffffff</textcolor>
 			<visible>!control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Filter</description>
@@ -125,6 +129,8 @@
 			<font>font11</font>
 			<visible>!control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 			<wrapString> : : : </wrapString>
 		</control>    
 		<import>common.time.xml</import>

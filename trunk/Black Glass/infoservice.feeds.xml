@@ -6,7 +6,7 @@
 	<define>#header.label:InfoService Feeds</define>
 	<define>#infoservice.feed.itemtype:Feed items</define>
 	<define>#header.background:hover_infoservice.png</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
@@ -66,6 +66,8 @@
 			<width>380</width>
 			<label>#infoservice.feed.lastupdated.message</label>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<control>
@@ -191,7 +193,8 @@
 			<description>Number of Files Label</description>
 			<posX>510</posX>
 			<posY>665</posY>
-			<label>#infoservice.feed.itemcount #infoservice.feed.itemtype</label>
+			<!-- <label>#infoservice.feed.itemcount #infoservice.feed.itemtype</label> -->
+			<label>#infoservice.feed.itemcount #itemtype</label>
 			<font>font16</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
