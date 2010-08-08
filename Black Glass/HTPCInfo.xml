@@ -5,11 +5,11 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:HTPC Info</define>
 	<define>#header.background:hover_htpcinfo.png</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>		
-		
+
 		<control>
 			<type>image</type>
 			<id>1</id>
@@ -19,6 +19,8 @@
 			<height>720</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<control>
@@ -30,6 +32,8 @@
 			<font>font24</font>
 			<align>left</align>
 			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control> 
 		<control>
 			<type>image</type>
@@ -39,6 +43,8 @@
 			<width>385</width>
 			<height>53</height>
 			<texture>bg_button_nofocus.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<!-- *** Button *** -->
 
@@ -48,6 +54,8 @@
 			<layout>StackLayout</layout>
 			<posX>0</posX>
 			<posY>100</posY>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
 			<control>
 				<description>Section</description>
 				<type>button</type>
@@ -167,11 +175,11 @@
 			<visible>control.isvisible(54)</visible>
 		</control>
 
-		
-		
-		
+
+
+
 		<!-- *** Section Import *** -->
-		
+
 		<import>HTPCInfoOverview.xml</import>
 		<import>HTPCInfoDetails.xml</import>
 		<import>HTPCInfoGauges.xml</import>

@@ -4,7 +4,7 @@
 	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
 	<define>#header.label:Mastermind</define>
 	<define>#header.background:hover_my mastermind.png</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
@@ -99,33 +99,39 @@
 		</control>
 
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-		</control>
-		<control>
-			<description>Playground Human</description>
-			<type>image</type>
-			<id>20</id>
-			<visible>no</visible>
-			<posX>510</posX>
-			<posY>103</posY>
-			<texture>Mastermind_Back.png</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<description>Playground Computer</description>
-			<type>image</type>
-			<id>21</id>
-			<visible>no</visible>
-			<posX>900</posX>
-			<posY>103</posY>
-			<texture>Mastermind_Back.png</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<description>Playground Human</description>
+				<type>image</type>
+				<id>20</id>
+				<visible>no</visible>
+				<posX>510</posX>
+				<posY>103</posY>
+				<texture>Mastermind_Back.png</texture>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Playground Computer</description>
+				<type>image</type>
+				<id>21</id>
+				<visible>no</visible>
+				<posX>900</posX>
+				<posY>103</posY>
+				<texture>Mastermind_Back.png</texture>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
 
 
@@ -309,7 +315,7 @@
 			<onup>50</onup>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
-			<scrollWrapString></scrollWrapString>
+			<scrollWrapString/>
 			<visible allowhiddenfocus="false">!Control.HasFocus(50)+[!Control.HasFocus(96)+!Control.HasFocus(97)+!Control.HasFocus(98)]+[Control.HasFocus(2)|Control.HasFocus(3)|Control.HasFocus(4)|Control.HasFocus(5)|Control.HasFocus(6)|Control.HasFocus(7)|Control.HasFocus(8)]</visible>
 		</control>
 

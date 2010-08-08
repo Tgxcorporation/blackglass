@@ -4,7 +4,7 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
 	<define>#header.background:hover_radiotime.png</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 
 		<import>common.window.background.xml</import>
@@ -18,6 +18,8 @@
 			<font>font28</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -30,6 +32,8 @@
 			<label>#header.label</label>
 			<wrapString> : : : </wrapString>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -44,6 +48,8 @@
 			<label>#selecteditem</label>
 			<visible>[facadeview.filmstrip]+[control.hasfocus(50)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<import>common.time.xml</import>
 		<import>common.facade.background.xml</import>

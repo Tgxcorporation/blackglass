@@ -6,7 +6,7 @@
 	<define>#header.label:InfoService Twitter</define>
 	<define>#infoservice.twitter.itemtype:Twitter items</define>
 	<define>#header.background:hover_infoservice.png</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
@@ -67,6 +67,8 @@
 			<width>380</width>
 			<label>#infoservice.twitter.lastupdated.message</label>
 			<wrapString> : : : </wrapString>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Channel name label</description>
@@ -155,7 +157,8 @@
 			<description>Number of Files Label</description>
 			<posX>510</posX>
 			<posY>665</posY>
-			<label>#infoservice.twitter.itemcount #infoservice.twitter.itemtype</label>
+			<!-- <label>#infoservice.twitter.itemcount #infoservice.twitter.itemtype</label> -->
+			<label>#infoservice.twitter.itemcount #itemtype</label>
 			<font>font16</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>

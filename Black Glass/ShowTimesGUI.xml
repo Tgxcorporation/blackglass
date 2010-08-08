@@ -5,7 +5,7 @@
 	<allowoverlay>player.hasmedia+!control.isvisible(24)</allowoverlay>
 	<define>#header.label:ShowTimes</define>
 	<define>#header.background:hover_showtimes.png</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<control>
@@ -19,6 +19,8 @@
 			<width>1280</width>
 			<height>720</height>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="1">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<import>common.window.overlay.xml</import>
 		<import>common.time.xml</import>
@@ -33,6 +35,8 @@
 			<textcolor>60ffffff</textcolor>
 			<visible>!control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -45,6 +49,8 @@
 			<label>#showtimes_nextupdate</label>
 			<visible>!control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -58,6 +64,8 @@
 			<align>left</align>
 			<visible>!control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<!-- DUMMY -->
@@ -100,6 +108,8 @@
 			<label>#selecteditem</label>
 			<visible>facadeview.filmstrip+!control.isvisible(24)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<!-- <control>
 			<type>fadelabel</type>
@@ -494,6 +504,8 @@
 			<colorDiffuse>ffffffff</colorDiffuse>
 			<visible>control.isvisible(24)</visible>
 			<animation effect="fade" time="250" reversible="false">visible</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<control>
@@ -507,6 +519,8 @@
 			<textcolor>ffffffff</textcolor>
 			<visible>control.isvisible(24)</visible>
 			<animation effect="fade" time="250" reversible="false">visible</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control> 
 		<control>
 			<type>image</type>
@@ -517,11 +531,15 @@
 			<texture>bg_button_nofocus.png</texture>
 			<visible>control.isvisible(24)</visible>
 			<animation effect="fade" time="250" reversible="false">visible</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>group element</description>
 			<type>group</type>
 			<animation effect="fade" time="250" reversible="false">visible</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 			<posX>0</posX>
 			<posY>100</posY>
 			<visible>control.isvisible(24)</visible>
@@ -800,6 +818,8 @@
 			<visible>control.hastext(46)+control.isvisible(24)</visible>
 			<wrapString> : : : </wrapString>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -814,7 +834,9 @@
 			<align>left</align> 
 			<visible>control.hastext(46)+control.isvisible(24)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation> 
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<!-- FACADES -->
@@ -830,6 +852,8 @@
 			<colordiffuse>ffffffff</colordiffuse>
 			<visible>facadeview.filmstrip+!control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>group</type>

@@ -5,10 +5,10 @@
 	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
 	<define>#header.background:hover_Films.png</define>
 	<define>#header.label:Films</define>
-	<animation effect="fade" time="250" start="100" end="100" delay="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
-		<control>
+		<!-- <control>
 			<description>Movie Backdrop (Fan Art) - Plug-in sets to invisible, if no art.</description>
 			<type>image</type>
 			<id>0</id>
@@ -19,7 +19,7 @@
 			<texture>black.png</texture>
 			<visible>control.hasthumb(1000)</visible>
 			<animation effect="fade" time="1">visiblechange</animation>
-		</control>
+		</control> -->
 		<control>
 			<description>fanart</description>
 			<type>image</type>
@@ -33,6 +33,8 @@
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="1">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<import>common.window.overlay.xml</import>		
 		<import>common.time.xml</import>
@@ -45,6 +47,8 @@
 			<font>font28</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<control>
@@ -59,6 +63,8 @@
 			<keepaspectration>yes</keepaspectration>
 			<visible>!player.hasmedia</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Cover Art Glass Overlay</description>
@@ -71,6 +77,8 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 			<visible>!player.hasmedia+control.isvisible(2024)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Thumbnail with video playing</description>
@@ -84,6 +92,8 @@
 			<keepaspectration>yes</keepaspectration>
 			<visible>player.hasmedia</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>Cover Art Glass Overlay</description>
@@ -96,6 +106,8 @@
 			<texture>DVDCase.png</texture>
 			<visible>player.hasmedia+control.isvisible(2023)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 
@@ -409,6 +421,8 @@
 			<align>right</align>
 			<texture>Films_DD.png</texture>
 			<colordiffuse>7fffffff</colordiffuse>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>animation</type>
@@ -574,7 +588,7 @@
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>290</width>
-			<scrollWrapString></scrollWrapString>
+			<scrollWrapString/>
 		</control>
 
 
