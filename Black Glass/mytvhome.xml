@@ -5,8 +5,7 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:605</define>
 	<define>#header.background:hover_my tv.png</define>
-	<animation effect="fade" time="250">WindowOpen</animation>
-	<animation effect="fade" time="250">WindowClose</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>	
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
@@ -23,6 +22,8 @@
 			<onright>2</onright>
 			<action>18</action>
 			<textureFocus>tv_green_border.png</textureFocus>
+			<animation effect="fade" time="250" delay="150">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="125">WindowClose</animation>
 		</control>
 		<control>
 			<description>TV background</description>
@@ -34,6 +35,8 @@
 			<height>562</height>
 			<colordiffuse>ffffffff</colordiffuse>
 			<texture>TVCase.png</texture>
+			<animation effect="fade" time="250" delay="150">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="125">WindowClose</animation>
 		</control>
 		<control>
 			<description>Channel Image</description>
@@ -46,6 +49,8 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<texture flipY="true" diffuse="Thumb_Mask.png">#TV.View.thumb</texture>
+			<animation effect="fade" time="250" delay="300">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>REAL Current program title</description>
@@ -57,7 +62,11 @@
 			<font>font22</font>
 			<label>#TV.View.title</label>
 			<textcolor>FFFFFFFF</textcolor>
-			<visible>control.hasfocus(99)</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<wrapString> : : : </wrapString>
 		</control> 
 
 
@@ -72,8 +81,11 @@
 			<label>#TV.View.channel</label>
 			<align>left</align>
 			<textcolor>90ffffff</textcolor>
-			<visible>control.hasfocus(99)</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<description>Current program time</description>
@@ -84,8 +96,11 @@
 			<width>360</width>
 			<label>#TV.View.start - #TV.View.stop</label>
 			<textcolor>ffffffff</textcolor>
-			<visible>control.hasfocus(99)</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<description>genre</description>
@@ -95,8 +110,10 @@
 			<posY>205</posY>
 			<label>#TV.Search.Genre</label>
 			<textcolor>90ffffff</textcolor>
-			<visible>control.hasfocus(99)</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Description1</description>
@@ -109,9 +126,11 @@
 			<label>#TV.View.description</label>
 			<font>font16</font>
 			<textcolor>FFFFFFFF</textcolor>
-			<visible>control.hasfocus(99)</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
 
 
