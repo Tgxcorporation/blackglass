@@ -4,30 +4,44 @@
 	<defaultcontrol>30</defaultcontrol>
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:109003</define>
-	<define>#header.image:settings_logo.png</define>
-	<define>#header.hover:hover_settings.png</define>
-	<!-- cheat a little, we don't use two of the items in the imported file to blank their labels -->
-	<define>#itemcount:-</define>
-	<define>#selecteditem:-</define>
 	<define>#header.background:hover_settings.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
+		<import>common.time.xml</import>
+		<control>
+			<description>Nav image</description>
+			<type>image</type>
+			<posX>413</posX>
+			<posY>44</posY>
+			<width>449</width>
+			<height>696</height>
+			<texture>bg_home2.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>447</posX>
+			<posY>43</posY>
+			<width>385</width>
+			<height>53</height>
+			<texture>bg_button_nofocus.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
 		<control>
 			<description>buttons</description>
 			<type>group</type>
 			<animation effect="fade" time="250">WindowOpen</animation>
 			<animation effect="fade" time="250">WindowClose</animation>
-			<animation effect="slide" time="150" start="-300,0">WindowOpen</animation>
-			<animation effect="slide" time="250" end="-300,0">WindowClose</animation>
-			<posX>497</posX>
-			<posY>206</posY>
+			<posX>447</posX>
+			<posY>96</posY>
 			<layout>StackLayout</layout>
 			<control>
 				<description>Volume Display</description>
 				<type>togglebutton</type>
 				<id>30</id>
-				<width>300</width>
 				<label>9121</label>
 				<onup>17</onup>
 			</control>
@@ -35,70 +49,60 @@
 				<description>Progress display</description>
 				<type>togglebutton</type>
 				<id>31</id>
-				<width>300</width>
 				<label>9122</label>
 			</control>
 			<control>
 				<description>Disk Icon</description>
 				<type>togglebutton</type>
 				<id>32</id>
-				<width>300</width>
 				<label>9123</label>
 			</control>
 			<control>
 				<description>Media Status</description>
 				<type>togglebutton</type>
 				<id>33</id>
-				<width>300</width>
 				<label>9124</label>
 			</control>
 			<control>
 				<description>CD/DVD Status</description>
 				<type>togglebutton</type>
 				<id>34</id>
-				<width>300</width>
 				<label>9125</label>
 			</control>
 			<control>
 				<description>Use Custom Font</description>
 				<type>togglebutton</type>
 				<id>35</id>
-				<width>300</width>
 				<label>9126</label>
 			</control>
 			<control>
 				<description>Use Large Icons</description>
 				<type>togglebutton</type>
 				<id>36</id>
-				<width>300</width>
 				<label>9127</label>
 			</control>
 			<control>
 				<description>Use Custom Large Icons</description>
 				<type>togglebutton</type>
 				<id>37</id>
-				<width>300</width>
 				<label>9128</label>
 			</control>
 			<control>
 				<description>Invert Large Icons</description>
 				<type>togglebutton</type>
 				<id>38</id>
-				<width>300</width>
 				<label>9129</label>
 			</control>
 			<control>
 				<description>Font Editor</description>
 				<type>button</type>
 				<id>39</id>
-				<width>300</width>
 				<label>9130</label>
 			</control>
 			<control>
 				<description>Icon Editor</description>
 				<type>button</type>
 				<id>40</id>
-				<width>300</width>
 				<label>9131</label>
 			</control>
 		</control>
