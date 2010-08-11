@@ -4,9 +4,8 @@
 	<defaultcontrol>5</defaultcontrol>
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:109000</define>
-	<!-- cheat a little, we don't use two of the items in the imported file to blank their labels -->
-	<define>#itemcount:-</define>
-	<define>#selecteditem:-</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
 	<define>#header.background:hover_settings.png</define>
 	<controls>
 		<import>common.window.xml</import>
@@ -21,10 +20,18 @@
 			<texture>bg_home2.png</texture>
 		</control>
 		<control>
+			<type>image</type>
+			<posX>447</posX>
+			<posY>149</posY>
+			<width>385</width>
+			<height>53</height>
+			<texture>bg_button_nofocus.png</texture>
+		</control>
+		<control>
 			<description>Plugin is not configured.</description>
 			<type>label</type>
 			<id>3</id>
-			<width>300</width>
+			<width>2300</width>
 			<posX>490</posX>
 			<posY>206</posY>
 			<label>9101</label>
@@ -34,19 +41,11 @@
 			<description>Please run configure.exe first!</description>
 			<type>label</type>
 			<id>4</id>
-			<width>300</width>
+			<width>2300</width>
 			<posX>490</posX>
 			<posY>256</posY>
 			<label>9102</label>
 			<align>center</align>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>447</posX>
-			<posY>149</posY>
-			<width>385</width>
-			<height>53</height>
-			<texture>bg_button_nofocus.png</texture>
 		</control>
 		<control>
 			<description>buttons</description>
