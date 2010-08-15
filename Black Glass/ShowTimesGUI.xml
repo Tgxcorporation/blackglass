@@ -542,6 +542,7 @@
 			<animation effect="fade" time="250">WindowOpen</animation>
 			<posX>0</posX>
 			<posY>100</posY>
+			<dimColor>ffffffff</dimColor>
 			<visible>control.isvisible(24)</visible>
 			<layout>StackLayout</layout>
 			<control>
@@ -549,7 +550,7 @@
 				<description>ShowTimes</description>
 				<id>40</id>
 				<label>71119924</label>
-				<onup>3</onup>
+				<onup>17</onup>
 				<ondown>41</ondown>
 				<onleft>40</onleft>
 				<onright>40</onright>
@@ -583,7 +584,7 @@
 				<id>43</id>
 				<label>210</label>
 				<onup>42</onup>
-				<ondown>2</ondown>
+				<ondown>40</ondown>
 				<onleft>43</onleft>
 				<onright>43</onright>	  
 				<visible>control.isvisible(24)</visible>					
@@ -632,6 +633,7 @@
 			<visible>control.isvisible(24)</visible>
 			<wrapString> : : : </wrapString>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
@@ -800,19 +802,52 @@
 			<font>font18</font>
 			<label>#st_plot</label>
 			<seperator>: : :</seperator>
-			<visible>control.isvisible(24)</visible>
+			<visible>!control.hastext(46)+control.isvisible(24)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation> 
 		</control>
+		
+		<control>
+			<description>Plot value</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>520</posX>
+			<posY>495</posY>
+			<width>750</width>
+			<height>112</height>
+			<font>font18</font>
+			<label>#st_plot</label>
+			<seperator>: : :</seperator>
+			<visible>control.hastext(46)+control.isvisible(24)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation> 
+		</control>
+		
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>490</posX>
+			<posY>575</posY>
+			<width>790</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.hastext(46)+control.isvisible(24)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+		</control>
+		
 		<control>
 			<type>fadelabel</type>
 			<description>Theater</description>
 			<id>44</id>
 			<posX>520</posX>
-			<posY>15</posY>
-			<font>font16</font>
-			<width>450</width>
+			<posY>642</posY>
+			<font>font18</font>
+			<width>750</width>
 			<label>#st_theater</label>
 			<align>left</align> 
 			<visible>control.hastext(46)+control.isvisible(24)</visible>
@@ -826,9 +861,9 @@
 			<description>Theater</description>
 			<id>0</id>
 			<posX>520</posX>
-			<posY>42</posY>
-			<font>font11</font>
-			<width>450</width>
+			<posY>677</posY>
+			<font>font16</font>
+			<width>750</width>
 			<textcolor>aaffffff</textcolor>
 			<label>#st_moviedate @ #st_showtimes</label>
 			<align>left</align> 
