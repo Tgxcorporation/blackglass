@@ -94,7 +94,7 @@
 			<height>348</height> 
 			<colordiffuse>ffffffff</colordiffuse>
 			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+			<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<keepaspectratio>no</keepaspectratio>
 			<centered>yes</centered>
@@ -109,7 +109,7 @@
 			<posY>73</posY>
 			<width>283</width>
 			<height>360</height>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+			<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
@@ -124,7 +124,7 @@
 			<width>350</width>
 			<font>font22</font>
 			<label>#selecteditem</label>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+			<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<wrapString> : : : </wrapString>
 			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
@@ -139,7 +139,7 @@
 			<width>350</width>
 			<label>#selecteditem2</label>
 			<textcolor>ffffffff</textcolor>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+			<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<wrapString> : : : </wrapString>
 			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
@@ -301,20 +301,7 @@
 			<animation effect="fade" time="250">WindowClose</animation>	
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>490</posX>
-			<posY>97</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
+
 		<control>
 			<type>group</type>
 			<description>group element</description>
@@ -368,6 +355,8 @@
 			<dimColor>ffffffff</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -376,6 +365,17 @@
 				<width>948</width>
 				<height>766</height>
 				<texture>bg_facade.png</texture>
+				<visible>!control.isvisible(50)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>97</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
 				<visible>!control.isvisible(50)</visible>
 			</control>
 			<control>
@@ -390,7 +390,6 @@
 				<textcolor>ffffffff</textcolor>
 				<width>750</width>
 				<visible>!control.isvisible(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control> 
 
@@ -405,7 +404,6 @@
 				<posY>170</posY>
 				<width>470</width>
 				<visible>!control.isvisible(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -419,7 +417,6 @@
 				<posX>780</posX>
 				<posY>208</posY>
 				<visible>!control.isvisible(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -433,7 +430,6 @@
 				<posX>780</posX>
 				<posY>250</posY>
 				<visible>!control.isvisible(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
 
@@ -448,13 +444,8 @@
 				<posX>780</posX>
 				<posY>290</posY>
 				<visible>!control.isvisible(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-
-
-
-
 
 			<control>
 				<description>Cast value</description>
@@ -468,7 +459,6 @@
 				<label>#MyTrailers.Details.Cast #MyTrailers.Details.Cast</label>
 				<visible>!control.isvisible(50)</visible>
 				<height>130</height>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -481,7 +471,6 @@
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
 				<visible>!control.isvisible(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -496,12 +485,8 @@
 				<textcolor>White</textcolor>
 				<label>#MyTrailers.Details.Description</label>
 				<visible>!control.isvisible(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 				<seperator>: : :</seperator>
 			</control>
-
-
-
 
 			<control>
 				<description>Trailer Poster</description>
@@ -514,7 +499,6 @@
 				<texture flipY="true" diffuse="Thumb_Mask.png">#MyTrailers.Details.Poster</texture>
 				<keepaspectratio>no</keepaspectratio>
 				<visible>!control.isvisible(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<description>Highlight item</description>
@@ -526,7 +510,6 @@
 				<height>292</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 				<visible>!control.isvisible(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 		</control>
 
