@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<controls>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>bg.jpg</texture>
+			<animation effect="fade" time="250" start="25" end="100">WindowOpen</animation>
+			<animation effect="fade" time="250" start="100" end="25">WindowClose</animation>			
+		</control>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>10</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Selected item Label</description>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>651</posY>
+			<width>1220</width>
+			<font>font24</font>
+			<height>45</height>
+			<textalign>center</textalign>
+			<label>#selecteditem</label>
+			<visible>facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+		</control>
+	</controls>
+</window>
