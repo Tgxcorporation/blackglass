@@ -1,25 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
-	<id>801</id>
-	<defaultcontrol>2</defaultcontrol>
+	<id>464554871</id>
+	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
-	<define>#header.label:14001</define>
-	<define>#header.background:hover_extensions.png</define>
+	<define>#header.label:FritzBox Manager</define>
+	<define>#header.background:hover_FritzBox.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.time.xml</import>
-		<import>common.facade.background.xml</import>
-		<import>common.facade.itemcount.xml</import>
 		<import>common.facade.pictures.xml</import>
-		
+		<import>common.facade.background.xml</import>
+		<import>common.facade.itemcount.currentmodule.xml</import>
 		<control>
-			<id>600</id>
+			<id>500</id>
 			<type>image</type>
-			<posX>39</posX>
-			<posY>100</posY>
-			<width>255</width>
-			<height>255</height>
+			<posX>40</posX>
+			<posY>78</posY>
+			<width>346</width>
+			<height>260</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
@@ -30,12 +29,12 @@
 		</control>
 		<control>
 			<type>image</type>
-			<id>0</id>
+			<id>1</id>
 			<posX>30</posX>
-			<posY>93</posY>
-			<width>272</width>
-			<height>271</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">OverlayCase.png</texture>
+			<posY>71</posY>
+			<width>365</width>
+			<height>276</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
@@ -46,8 +45,8 @@
 			<description>Current program title</description>
 			<id>0</id>
 			<posX>30</posX>
-			<posY>385</posY>
-			<width>385</width>
+			<posY>375</posY>
+			<width>350</width>
 			<font>font22</font>
 			<label>#selecteditem</label>
 			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
@@ -57,43 +56,22 @@
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
-			<description>Summary</description>
-			<type>textboxscrollup</type>
+			<type>fadelabel</type>
+			<description>Current program</description>
 			<id>0</id>
 			<posX>30</posX>
-			<posY>450</posY>
-			<width>385</width>
-			<height>236</height>
-			<textcolor>b0FFFFFF</textcolor>
-			<seperator>: : :</seperator>
-			<font>font16</font>
-			<label>#MPE.Selected.Description</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
+			<posY>430</posY>
+			<width>350</width>
+			<label>#selecteditem2</label>
+			<textcolor>ffffffff</textcolor>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<wrapString> : : : </wrapString>
 		</control>
 
-		<control>
-			<description>Summary</description>
-			<type>textboxscrollup</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>450</posY>
-			<width>385</width>
-			<height>104</height>
-			<textcolor>b0FFFFFF</textcolor>
-			<seperator>: : :</seperator>
-			<font>font16</font>
-			<label>#MPE.Selected.Description</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-
-
-
+		
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -123,7 +101,7 @@
 				<width>1</width>
 				<height>1</height>
 				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)|control.hasfocus(5)|control.hasfocus(8)|control.hasfocus(90)</visible>
+				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(9)</visible>
 			</control>
 			<control>
 				<type>image</type>
@@ -158,69 +136,43 @@
 				<type>group</type>
 				<layout>StackLayout</layout>
 				<posX>0</posX>
-				<posY>100</posY>
-				<control>
+				<posY>100</posY><control>
+					<id>2</id>
 					<description>View-As</description>
 					<type>button</type>
-					<id>2</id>
-					<label>100</label>
 					<onright>50</onright>
 					<onup>17</onup>
 					<ondown>3</ondown>
+					<label>100</label>
 				</control>
 				<control>
+					<id>3</id>
 					<description>Sort</description>
 					<type>sortbutton</type>
-					<id>3</id>
 					<onright>50</onright>
 					<onup>2</onup>
-					<ondown>6</ondown>
+					<ondown>4</ondown>
 				</control>
 				<control>
-					<description>Views</description>
+					<id>4</id>
+					<description>Modus</description>
 					<type>button</type>
-					<id>6</id>
-					<label>14002</label>
 					<onright>50</onright>
 					<onup>3</onup>
-					<ondown>5</ondown>
+					<ondown>9</ondown>
+					<label>Anrufliste</label>
 				</control>
 				<control>
-					<description>Restart</description>
+					<id>9</id>
+					<description>Receive new list</description>
 					<type>button</type>
-					<id>5</id>
-					<label>#MPEI.Translation.Restart.Label</label>
 					<onright>50</onright>
-					<onup>6</onup>
-					<ondown>8</ondown>
-				</control>
-				<!-- <control>
-					<description>Update list</description>
-					<type>button</type>
-					<id>7</id>
-					<label>Update Info</label>
-					<onright>50</onright>
-				</control> -->
-				<control>
-					<description>Update all</description>
-					<type>button</type>
-					<id>8</id>
-					<label>#MPEI.Translation.UpdateAll.Label</label>
-					<onright>50</onright>
-					<onup>5</onup>
-					<ondown>90</ondown>
-				</control>
-				<control>
-					<description>MPEIUPDATE:a6afa4d6-4fd8-4607-8878-5911db044fd7</description>
-					<type>button</type>
-					<id>90</id>
-					<label>#MPEI.Translation.NewVersion.Label</label>
-					<onright>50</onright>
-					<visible>string.equals(#mpei.a6afa4d6_4fd8_4607_8878_5911db044fd7.haveupdate,true)</visible>
-					<onup>8</onup>
+					<onup>4</onup>
 					<ondown>2</ondown>
+					<label>Update</label>
 				</control>
 			</control>
 		</control>
+		
 	</controls>
 </window>
