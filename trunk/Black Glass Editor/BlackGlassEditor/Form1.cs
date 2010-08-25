@@ -15,6 +15,7 @@ using System.Reflection;
 using BlackGlassEditor;
 using System.Security;
 using System.Xml;
+using ImageHuer;
 
 namespace BlackGlassEditor
 {
@@ -147,11 +148,30 @@ namespace BlackGlassEditor
 
             textBoxTarget.Text = BlackGlassDirClass.Path;
 
-            if (plugin[16].InnerText == "blue") radioButtonBlue.Checked = true;
-            if (plugin[16].InnerText == "black") radioButtonBlack.Checked = true;
-            if (plugin[16].InnerText == "red") radioButtonRed.Checked = true;
-            if (plugin[16].InnerText == "yellow") radioButtonYellow.Checked = true;
-            if (plugin[16].InnerText == "green") radioButtonGreen.Checked = true;
+            
+
+            Assembly myAssembly = Assembly.GetExecutingAssembly();
+            Stream myStream = myAssembly.GetManifestResourceStream("BlackGlassEditor.Images.blue_bg_sample.png");
+            radioButtonCustomColor.BackgroundImage = new Bitmap(myStream);
+
+            myStream = myAssembly.GetManifestResourceStream("BlackGlassEditor.Images.black_bg_sample.png");
+            radioButtonBlack.BackgroundImage = new Bitmap(myStream);
+
+            if (plugin[16].InnerText == "black")
+            {
+                radioButtonBlack.Checked = true;
+                numericUpDownColor.Value = 0.0m;
+            }
+            else
+            {
+                radioButtonCustomColor.Checked = true;
+                numericUpDownColor.Value = Decimal.Parse(plugin[16].InnerText);
+               
+                myStream = myAssembly.GetManifestResourceStream("BlackGlassEditor.Images.blue_bg_sample.png");
+                ImageManipulator im = new ImageManipulator(new Bitmap(myStream));
+                String newvalue = numericUpDownColor.Value.ToString();
+                radioButtonCustomColor.BackgroundImage = (Bitmap)im.RotateHue(float.Parse(newvalue));
+            }
         }
 
 
@@ -1524,23 +1544,40 @@ namespace BlackGlassEditor
 
                 // SELEZIONA COLORE THEME
 
-                String themecolor = "blue";
-                if (radioButtonBlue.Checked == true) themecolor = "blue";
-                if (radioButtonRed.Checked == true) themecolor = "red";
-                if (radioButtonYellow.Checked == true) themecolor = "yellow";
-                if (radioButtonGreen.Checked == true) themecolor = "green";
+                String themecolor = "custom";
+                if (radioButtonCustomColor.Checked == true) themecolor = "blue";
                 if (radioButtonBlack.Checked == true) themecolor = "black";
+                String newhuevalue = numericUpDownColor.Value.ToString();
+                Bitmap basichome_bg;
+                Bitmap bg;
 
                 // CARICAMENTO basichome_bg.jpg
                 Assembly myAssembly = Assembly.GetExecutingAssembly();
 
                 Stream myStream = myAssembly.GetManifestResourceStream("BlackGlassEditor.Images." + themecolor + "_bg_up.png");
-                Bitmap basichome_bg = new Bitmap(myStream);
-
+                if (radioButtonCustomColor.Checked == true)
+                {
+                    ImageManipulator im = new ImageManipulator(new Bitmap(myStream));
+                    basichome_bg = (Bitmap)im.RotateHue(float.Parse(newhuevalue));
+                }
+                else
+                {
+                    basichome_bg = new Bitmap(myStream);
+                }
 
                 // CARICAMENTO bg.jpg
                 myStream = myAssembly.GetManifestResourceStream("BlackGlassEditor.Images." + themecolor + "_bg_down.png");
-                Bitmap bg = new Bitmap(myStream);
+                if (radioButtonCustomColor.Checked == true)
+                {
+                    ImageManipulator im = new ImageManipulator(new Bitmap(myStream));
+                    bg = (Bitmap)im.RotateHue(float.Parse(newhuevalue));
+                }
+                else
+                {
+                    bg = new Bitmap(myStream);
+                }
+
+
 
 
                 // CARICAMENTO sidebuttons
@@ -1801,8 +1838,8 @@ namespace BlackGlassEditor
 
                 deleteBlackGlassCacheDir();
 
-                //MessageBox.Show("Theme Creation Complete!");
                 toolStripStatusLabel1.Text = "Basic Home Creation Complete!";
+                MessageBox.Show("Basic Home Creation Complete!");
 
             }
 
@@ -2980,7 +3017,8 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + weather_button + @")</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""250"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>";
 
 
@@ -3000,7 +3038,8 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + tvseries_button + @")+plugin.isenabled(MP-TV Series)</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""250"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>";
 
                 if (movingpictures_button != "") txt = txt
@@ -3018,7 +3057,8 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Moving Pictures)</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""250"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control> -->";
 
                 txt = txt + @"
@@ -3293,11 +3333,7 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
-                String themecolor = "blue";
-                if (radioButtonBlue.Checked == true) themecolor = "blue";
-                if (radioButtonRed.Checked == true) themecolor = "red";
-                if (radioButtonYellow.Checked == true) themecolor = "yellow";
-                if (radioButtonGreen.Checked == true) themecolor = "green";
+                String themecolor = numericUpDownColor.Value.ToString();
                 if (radioButtonBlack.Checked == true) themecolor = "black";
 
                 textWriter.WriteStartElement("button");
@@ -3967,6 +4003,20 @@ namespace BlackGlassEditor
             }
 
             return ButtonId;
+        }
+
+        private void numericUpDownColor_ValueChanged(object sender, EventArgs e)
+        {
+            radioButtonCustomColor.Checked = true;
+
+            Assembly myAssembly = Assembly.GetExecutingAssembly();
+            Stream myStream = myAssembly.GetManifestResourceStream("BlackGlassEditor.Images.blue_bg_sample.png");
+
+
+            ImageManipulator im = new ImageManipulator(new Bitmap(myStream));
+            String newvalue = numericUpDownColor.Value.ToString();
+            radioButtonCustomColor.BackgroundImage = (Bitmap)im.RotateHue(float.Parse(newvalue));
+
         }
 
     }

@@ -48,6 +48,7 @@
             this.buttonEmpty111 = new System.Windows.Forms.Button();
             this.textBoxid111 = new System.Windows.Forms.TextBox();
             this.groupBox100 = new System.Windows.Forms.GroupBox();
+            this.buttonEmpty100 = new System.Windows.Forms.Button();
             this.textBoxid100 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -154,6 +155,7 @@
             this.buttonSave109f = new System.Windows.Forms.Button();
             this.buttonSave109u = new System.Windows.Forms.Button();
             this.groupBox101 = new System.Windows.Forms.GroupBox();
+            this.buttonEmpty101 = new System.Windows.Forms.Button();
             this.textBoxid101 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.pictureBox101 = new System.Windows.Forms.PictureBox();
@@ -164,6 +166,7 @@
             this.buttonSave101f = new System.Windows.Forms.Button();
             this.buttonSave101u = new System.Windows.Forms.Button();
             this.groupBox102 = new System.Windows.Forms.GroupBox();
+            this.buttonEmpty102 = new System.Windows.Forms.Button();
             this.textBoxid102 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.pictureBox102 = new System.Windows.Forms.PictureBox();
@@ -174,6 +177,7 @@
             this.buttonSave102f = new System.Windows.Forms.Button();
             this.buttonSave102u = new System.Windows.Forms.Button();
             this.groupBox103 = new System.Windows.Forms.GroupBox();
+            this.buttonEmpty103 = new System.Windows.Forms.Button();
             this.textBoxid103 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.pictureBox103 = new System.Windows.Forms.PictureBox();
@@ -184,6 +188,7 @@
             this.buttonSave103f = new System.Windows.Forms.Button();
             this.buttonSave103u = new System.Windows.Forms.Button();
             this.groupBox104 = new System.Windows.Forms.GroupBox();
+            this.buttonEmpty104 = new System.Windows.Forms.Button();
             this.textBoxid104 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.pictureBox104 = new System.Windows.Forms.PictureBox();
@@ -197,17 +202,11 @@
             this.DialogFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.textBoxTarget = new System.Windows.Forms.TextBox();
             this.buttonTarget = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.buttonEmpty100 = new System.Windows.Forms.Button();
-            this.buttonEmpty101 = new System.Windows.Forms.Button();
-            this.buttonEmpty102 = new System.Windows.Forms.Button();
-            this.buttonEmpty103 = new System.Windows.Forms.Button();
-            this.buttonEmpty104 = new System.Windows.Forms.Button();
-            this.radioButtonYellow = new System.Windows.Forms.RadioButton();
-            this.radioButtonRed = new System.Windows.Forms.RadioButton();
-            this.radioButtonGreen = new System.Windows.Forms.RadioButton();
             this.radioButtonBlack = new System.Windows.Forms.RadioButton();
-            this.radioButtonBlue = new System.Windows.Forms.RadioButton();
+            this.radioButtonCustomColor = new System.Windows.Forms.RadioButton();
+            this.numericUpDownColor = new System.Windows.Forms.NumericUpDown();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox111)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox100)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -239,6 +238,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox103)).BeginInit();
             this.groupBox104.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox104)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColor)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLoad111
@@ -438,6 +438,16 @@
             this.groupBox100.TabIndex = 21;
             this.groupBox100.TabStop = false;
             this.groupBox100.Text = "Button ID 100";
+            // 
+            // buttonEmpty100
+            // 
+            this.buttonEmpty100.Location = new System.Drawing.Point(140, 88);
+            this.buttonEmpty100.Name = "buttonEmpty100";
+            this.buttonEmpty100.Size = new System.Drawing.Size(85, 23);
+            this.buttonEmpty100.TabIndex = 44;
+            this.buttonEmpty100.Text = "Empty Button";
+            this.buttonEmpty100.UseVisualStyleBackColor = true;
+            this.buttonEmpty100.Click += new System.EventHandler(this.buttonEmpty100_Click);
             // 
             // textBoxid100
             // 
@@ -1546,6 +1556,16 @@
             this.groupBox101.TabStop = false;
             this.groupBox101.Text = "Button ID 101";
             // 
+            // buttonEmpty101
+            // 
+            this.buttonEmpty101.Location = new System.Drawing.Point(140, 88);
+            this.buttonEmpty101.Name = "buttonEmpty101";
+            this.buttonEmpty101.Size = new System.Drawing.Size(85, 23);
+            this.buttonEmpty101.TabIndex = 46;
+            this.buttonEmpty101.Text = "Empty Button";
+            this.buttonEmpty101.UseVisualStyleBackColor = true;
+            this.buttonEmpty101.Click += new System.EventHandler(this.buttonEmpty101_Click);
+            // 
             // textBoxid101
             // 
             this.textBoxid101.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1650,6 +1670,16 @@
             this.groupBox102.TabIndex = 31;
             this.groupBox102.TabStop = false;
             this.groupBox102.Text = "Button ID 102";
+            // 
+            // buttonEmpty102
+            // 
+            this.buttonEmpty102.Location = new System.Drawing.Point(140, 88);
+            this.buttonEmpty102.Name = "buttonEmpty102";
+            this.buttonEmpty102.Size = new System.Drawing.Size(85, 23);
+            this.buttonEmpty102.TabIndex = 47;
+            this.buttonEmpty102.Text = "Empty Button";
+            this.buttonEmpty102.UseVisualStyleBackColor = true;
+            this.buttonEmpty102.Click += new System.EventHandler(this.buttonEmpty102_Click);
             // 
             // textBoxid102
             // 
@@ -1756,6 +1786,16 @@
             this.groupBox103.TabStop = false;
             this.groupBox103.Text = "Button ID 103";
             // 
+            // buttonEmpty103
+            // 
+            this.buttonEmpty103.Location = new System.Drawing.Point(140, 88);
+            this.buttonEmpty103.Name = "buttonEmpty103";
+            this.buttonEmpty103.Size = new System.Drawing.Size(85, 23);
+            this.buttonEmpty103.TabIndex = 48;
+            this.buttonEmpty103.Text = "Empty Button";
+            this.buttonEmpty103.UseVisualStyleBackColor = true;
+            this.buttonEmpty103.Click += new System.EventHandler(this.buttonEmpty103_Click);
+            // 
             // textBoxid103
             // 
             this.textBoxid103.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1861,6 +1901,16 @@
             this.groupBox104.TabStop = false;
             this.groupBox104.Text = "Button ID 104";
             // 
+            // buttonEmpty104
+            // 
+            this.buttonEmpty104.Location = new System.Drawing.Point(140, 88);
+            this.buttonEmpty104.Name = "buttonEmpty104";
+            this.buttonEmpty104.Size = new System.Drawing.Size(85, 23);
+            this.buttonEmpty104.TabIndex = 49;
+            this.buttonEmpty104.Text = "Empty Button";
+            this.buttonEmpty104.UseVisualStyleBackColor = true;
+            this.buttonEmpty104.Click += new System.EventHandler(this.buttonEmpty104_Click);
+            // 
             // textBoxid104
             // 
             this.textBoxid104.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1949,9 +1999,9 @@
             // buttonXMLButtons
             // 
             this.buttonXMLButtons.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXMLButtons.Location = new System.Drawing.Point(723, 601);
+            this.buttonXMLButtons.Location = new System.Drawing.Point(723, 599);
             this.buttonXMLButtons.Name = "buttonXMLButtons";
-            this.buttonXMLButtons.Size = new System.Drawing.Size(468, 39);
+            this.buttonXMLButtons.Size = new System.Drawing.Size(468, 41);
             this.buttonXMLButtons.TabIndex = 34;
             this.buttonXMLButtons.Text = "Create Full Basic Home";
             this.buttonXMLButtons.UseVisualStyleBackColor = true;
@@ -1961,156 +2011,91 @@
             // 
             this.textBoxTarget.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxTarget.Enabled = false;
-            this.textBoxTarget.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTarget.Location = new System.Drawing.Point(78, 611);
+            this.textBoxTarget.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTarget.Location = new System.Drawing.Point(12, 572);
             this.textBoxTarget.Name = "textBoxTarget";
-            this.textBoxTarget.Size = new System.Drawing.Size(479, 20);
+            this.textBoxTarget.Size = new System.Drawing.Size(705, 21);
             this.textBoxTarget.TabIndex = 43;
             this.textBoxTarget.WordWrap = false;
             // 
             // buttonTarget
             // 
             this.buttonTarget.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTarget.Location = new System.Drawing.Point(563, 609);
+            this.buttonTarget.Location = new System.Drawing.Point(723, 570);
             this.buttonTarget.Name = "buttonTarget";
-            this.buttonTarget.Size = new System.Drawing.Size(154, 24);
+            this.buttonTarget.Size = new System.Drawing.Size(468, 25);
             this.buttonTarget.TabIndex = 44;
             this.buttonTarget.Text = "Select Target Path";
             this.buttonTarget.UseVisualStyleBackColor = true;
             this.buttonTarget.Click += new System.EventHandler(this.buttonTarget_Click);
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(11, 613);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(63, 13);
-            this.label31.TabIndex = 45;
-            this.label31.Text = "Target Path";
-            // 
-            // buttonEmpty100
-            // 
-            this.buttonEmpty100.Location = new System.Drawing.Point(140, 88);
-            this.buttonEmpty100.Name = "buttonEmpty100";
-            this.buttonEmpty100.Size = new System.Drawing.Size(85, 23);
-            this.buttonEmpty100.TabIndex = 44;
-            this.buttonEmpty100.Text = "Empty Button";
-            this.buttonEmpty100.UseVisualStyleBackColor = true;
-            this.buttonEmpty100.Click += new System.EventHandler(this.buttonEmpty100_Click);
-            // 
-            // buttonEmpty101
-            // 
-            this.buttonEmpty101.Location = new System.Drawing.Point(140, 88);
-            this.buttonEmpty101.Name = "buttonEmpty101";
-            this.buttonEmpty101.Size = new System.Drawing.Size(85, 23);
-            this.buttonEmpty101.TabIndex = 46;
-            this.buttonEmpty101.Text = "Empty Button";
-            this.buttonEmpty101.UseVisualStyleBackColor = true;
-            this.buttonEmpty101.Click += new System.EventHandler(this.buttonEmpty101_Click);
-            // 
-            // buttonEmpty102
-            // 
-            this.buttonEmpty102.Location = new System.Drawing.Point(140, 88);
-            this.buttonEmpty102.Name = "buttonEmpty102";
-            this.buttonEmpty102.Size = new System.Drawing.Size(85, 23);
-            this.buttonEmpty102.TabIndex = 47;
-            this.buttonEmpty102.Text = "Empty Button";
-            this.buttonEmpty102.UseVisualStyleBackColor = true;
-            this.buttonEmpty102.Click += new System.EventHandler(this.buttonEmpty102_Click);
-            // 
-            // buttonEmpty103
-            // 
-            this.buttonEmpty103.Location = new System.Drawing.Point(140, 88);
-            this.buttonEmpty103.Name = "buttonEmpty103";
-            this.buttonEmpty103.Size = new System.Drawing.Size(85, 23);
-            this.buttonEmpty103.TabIndex = 48;
-            this.buttonEmpty103.Text = "Empty Button";
-            this.buttonEmpty103.UseVisualStyleBackColor = true;
-            this.buttonEmpty103.Click += new System.EventHandler(this.buttonEmpty103_Click);
-            // 
-            // buttonEmpty104
-            // 
-            this.buttonEmpty104.Location = new System.Drawing.Point(140, 88);
-            this.buttonEmpty104.Name = "buttonEmpty104";
-            this.buttonEmpty104.Size = new System.Drawing.Size(85, 23);
-            this.buttonEmpty104.TabIndex = 49;
-            this.buttonEmpty104.Text = "Empty Button";
-            this.buttonEmpty104.UseVisualStyleBackColor = true;
-            this.buttonEmpty104.Click += new System.EventHandler(this.buttonEmpty104_Click);
-            // 
-            // radioButtonYellow
-            // 
-            this.radioButtonYellow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(96)))), ((int)(((byte)(3)))));
-            this.radioButtonYellow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonYellow.ForeColor = System.Drawing.Color.White;
-            this.radioButtonYellow.Location = new System.Drawing.Point(960, 570);
-            this.radioButtonYellow.Name = "radioButtonYellow";
-            this.radioButtonYellow.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.radioButtonYellow.Size = new System.Drawing.Size(231, 26);
-            this.radioButtonYellow.TabIndex = 50;
-            this.radioButtonYellow.Text = "Background Yellow";
-            this.radioButtonYellow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButtonYellow.UseVisualStyleBackColor = false;
-            // 
-            // radioButtonRed
-            // 
-            this.radioButtonRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(5)))), ((int)(((byte)(4)))));
-            this.radioButtonRed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonRed.ForeColor = System.Drawing.Color.White;
-            this.radioButtonRed.Location = new System.Drawing.Point(723, 570);
-            this.radioButtonRed.Name = "radioButtonRed";
-            this.radioButtonRed.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.radioButtonRed.Size = new System.Drawing.Size(231, 26);
-            this.radioButtonRed.TabIndex = 49;
-            this.radioButtonRed.Text = "Background Red";
-            this.radioButtonRed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButtonRed.UseVisualStyleBackColor = false;
-            // 
-            // radioButtonGreen
-            // 
-            this.radioButtonGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(93)))), ((int)(((byte)(3)))));
-            this.radioButtonGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonGreen.ForeColor = System.Drawing.Color.White;
-            this.radioButtonGreen.Location = new System.Drawing.Point(486, 570);
-            this.radioButtonGreen.Name = "radioButtonGreen";
-            this.radioButtonGreen.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.radioButtonGreen.Size = new System.Drawing.Size(231, 26);
-            this.radioButtonGreen.TabIndex = 48;
-            this.radioButtonGreen.Text = "Background Green";
-            this.radioButtonGreen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButtonGreen.UseVisualStyleBackColor = false;
-            // 
             // radioButtonBlack
             // 
             this.radioButtonBlack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.radioButtonBlack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.radioButtonBlack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonBlack.ForeColor = System.Drawing.Color.White;
-            this.radioButtonBlack.Location = new System.Drawing.Point(249, 570);
+            this.radioButtonBlack.Location = new System.Drawing.Point(12, 602);
             this.radioButtonBlack.Name = "radioButtonBlack";
             this.radioButtonBlack.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.radioButtonBlack.Size = new System.Drawing.Size(231, 26);
+            this.radioButtonBlack.Size = new System.Drawing.Size(231, 35);
             this.radioButtonBlack.TabIndex = 47;
-            this.radioButtonBlack.Text = "Background Black";
+            this.radioButtonBlack.Text = "Black Background";
             this.radioButtonBlack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButtonBlack.UseVisualStyleBackColor = false;
             // 
-            // radioButtonBlue
+            // radioButtonCustomColor
             // 
-            this.radioButtonBlue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(48)))), ((int)(((byte)(89)))));
-            this.radioButtonBlue.Checked = true;
-            this.radioButtonBlue.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.radioButtonBlue.FlatAppearance.BorderSize = 3;
-            this.radioButtonBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonBlue.ForeColor = System.Drawing.Color.White;
-            this.radioButtonBlue.Location = new System.Drawing.Point(12, 570);
-            this.radioButtonBlue.Name = "radioButtonBlue";
-            this.radioButtonBlue.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.radioButtonBlue.Size = new System.Drawing.Size(231, 26);
-            this.radioButtonBlue.TabIndex = 46;
-            this.radioButtonBlue.TabStop = true;
-            this.radioButtonBlue.Text = "Background Blue";
-            this.radioButtonBlue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButtonBlue.UseVisualStyleBackColor = false;
+            this.radioButtonCustomColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(48)))), ((int)(((byte)(89)))));
+            this.radioButtonCustomColor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radioButtonCustomColor.Checked = true;
+            this.radioButtonCustomColor.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.radioButtonCustomColor.FlatAppearance.BorderSize = 3;
+            this.radioButtonCustomColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomColor.ForeColor = System.Drawing.Color.White;
+            this.radioButtonCustomColor.Location = new System.Drawing.Point(249, 602);
+            this.radioButtonCustomColor.Name = "radioButtonCustomColor";
+            this.radioButtonCustomColor.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.radioButtonCustomColor.Size = new System.Drawing.Size(231, 35);
+            this.radioButtonCustomColor.TabIndex = 46;
+            this.radioButtonCustomColor.TabStop = true;
+            this.radioButtonCustomColor.Text = "Custom Color Background";
+            this.radioButtonCustomColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonCustomColor.UseVisualStyleBackColor = false;
+            // 
+            // numericUpDownColor
+            // 
+            this.numericUpDownColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownColor.Location = new System.Drawing.Point(486, 602);
+            this.numericUpDownColor.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.numericUpDownColor.Name = "numericUpDownColor";
+            this.numericUpDownColor.Size = new System.Drawing.Size(73, 35);
+            this.numericUpDownColor.TabIndex = 48;
+            this.numericUpDownColor.ValueChanged += new System.EventHandler(this.numericUpDownColor_ValueChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(565, 604);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(88, 16);
+            this.label32.TabIndex = 49;
+            this.label32.Text = "Custom Color";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(565, 619);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(108, 16);
+            this.label33.TabIndex = 50;
+            this.label33.Text = "Hue Offset Value";
             // 
             // Form1
             // 
@@ -2119,12 +2104,11 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1199, 667);
-            this.Controls.Add(this.radioButtonYellow);
-            this.Controls.Add(this.radioButtonRed);
-            this.Controls.Add(this.radioButtonGreen);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.numericUpDownColor);
             this.Controls.Add(this.radioButtonBlack);
-            this.Controls.Add(this.radioButtonBlue);
-            this.Controls.Add(this.label31);
+            this.Controls.Add(this.radioButtonCustomColor);
             this.Controls.Add(this.buttonTarget);
             this.Controls.Add(this.textBoxTarget);
             this.Controls.Add(this.buttonXMLButtons);
@@ -2193,6 +2177,7 @@
             this.groupBox104.ResumeLayout(false);
             this.groupBox104.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox104)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2358,7 +2343,6 @@
         private System.Windows.Forms.FolderBrowserDialog DialogFolder;
         private System.Windows.Forms.TextBox textBoxTarget;
         private System.Windows.Forms.Button buttonTarget;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button buttonEmpty110;
         private System.Windows.Forms.Button buttonEmpty111;
@@ -2375,11 +2359,11 @@
         private System.Windows.Forms.Button buttonEmpty102;
         private System.Windows.Forms.Button buttonEmpty103;
         private System.Windows.Forms.Button buttonEmpty104;
-        private System.Windows.Forms.RadioButton radioButtonYellow;
-        private System.Windows.Forms.RadioButton radioButtonRed;
-        private System.Windows.Forms.RadioButton radioButtonGreen;
         private System.Windows.Forms.RadioButton radioButtonBlack;
-        private System.Windows.Forms.RadioButton radioButtonBlue;
+        private System.Windows.Forms.RadioButton radioButtonCustomColor;
+        private System.Windows.Forms.NumericUpDown numericUpDownColor;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
     }
 }
 
