@@ -1817,8 +1817,8 @@ namespace BlackGlassEditor
 
                 deleteBlackGlassCacheDir();
 
-                //MessageBox.Show("Theme Creation Complete!");
                 toolStripStatusLabel1.Text = "Basic Home Creation Complete!";
+                MessageBox.Show("Basic Home Creation Complete!");
 
             }
 
