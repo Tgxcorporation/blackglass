@@ -2004,8 +2004,7 @@ namespace BlackGlassEditor
 			<texture>basichome_100_focus.png</texture>
 			<visible>control.hasfocus(100)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+		    <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
 		<control>
@@ -2073,8 +2072,7 @@ namespace BlackGlassEditor
 			<texture>basichome_101_focus.png</texture>
 			<visible>control.hasfocus(101)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 		<control>
@@ -2142,8 +2140,7 @@ namespace BlackGlassEditor
 			<visible>control.hasfocus(102)</visible>
 			<texture>basichome_102_focus.png</texture>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
 		<control>
@@ -2210,8 +2207,7 @@ namespace BlackGlassEditor
 			<texture>basichome_103_focus.png</texture>
 			<visible>control.hasfocus(103)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 		<control>
@@ -2278,8 +2274,7 @@ namespace BlackGlassEditor
 			<texture>basichome_104_focus.png</texture>
 			<visible>control.hasfocus(104)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
 		<control>
@@ -2346,8 +2341,7 @@ namespace BlackGlassEditor
 			<texture>basichome_105_focus.png</texture>
 			<visible>control.hasfocus(105)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
 		<control>
@@ -2414,8 +2408,7 @@ namespace BlackGlassEditor
 			<visible>control.hasfocus(106)</visible>
 			<texture>basichome_106_focus.png</texture>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 		<control>
@@ -2482,8 +2475,7 @@ namespace BlackGlassEditor
 			<texture>basichome_107_focus.png</texture>
 			<visible>control.hasfocus(107)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
 		<control>
@@ -2550,8 +2542,7 @@ namespace BlackGlassEditor
 			<visible>control.hasfocus(108)</visible>
 			<texture>basichome_108_focus.png</texture>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 		<control>
@@ -2618,8 +2609,7 @@ namespace BlackGlassEditor
 			<texture>basichome_109_focus.png</texture>
 			<visible>control.hasfocus(109)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
 		<control>
@@ -2686,8 +2676,7 @@ namespace BlackGlassEditor
 			<texture>basichome_110_focus.png</texture>
 			<visible>control.hasfocus(110)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
 		<control>
@@ -2754,8 +2743,7 @@ namespace BlackGlassEditor
 			<texture>basichome_111_focus.png</texture>
 			<visible>control.hasfocus(111)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 		<control>
@@ -2822,8 +2810,7 @@ namespace BlackGlassEditor
 			<visible>control.hasfocus(112)</visible>
 			<texture>basichome_112_focus.png</texture>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
 		<control>
@@ -2890,8 +2877,7 @@ namespace BlackGlassEditor
 			<texture>basichome_113_focus.png</texture>
 			<visible>control.hasfocus(113)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 		<control>
@@ -2958,8 +2944,7 @@ namespace BlackGlassEditor
 			<texture>basichome_114_focus.png</texture>
 			<visible>control.hasfocus(114)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
 		<control>
