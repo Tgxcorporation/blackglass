@@ -1977,8 +1977,6 @@ namespace BlackGlassEditor
 			<textureNoFocus>basichome_1000.png</textureNoFocus>
 			<visible>control.hasfocus(100)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""70,70"" end=""100,100"" time=""500"">VisibleChange</animation>
-			<animation effect=""slide"" end=""0,-6"" time=""500"">VisibleChange</animation>
 		</control>
 		
 		";
@@ -2000,8 +1998,6 @@ namespace BlackGlassEditor
 			<textureNoFocus>basichome_1001.png</textureNoFocus>
 			<visible>control.hasfocus(101)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""70,70"" end=""100,100"" time=""500"">VisibleChange</animation>
-			<animation effect=""slide"" end=""0,-6"" time=""500"">VisibleChange</animation>
 		</control>
 		
 		";
@@ -2023,8 +2019,6 @@ namespace BlackGlassEditor
 			<textureNoFocus>basichome_1002.png</textureNoFocus>
 			<visible>control.hasfocus(102)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""70,70"" end=""100,100"" time=""500"">VisibleChange</animation>
-			<animation effect=""slide"" end=""0,-6"" time=""500"">VisibleChange</animation>
 		</control>
 		
 		";
@@ -2046,8 +2040,6 @@ namespace BlackGlassEditor
 			<textureNoFocus>basichome_1003.png</textureNoFocus>
 			<visible>control.hasfocus(103)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""70,70"" end=""100,100"" time=""500"">VisibleChange</animation>
-			<animation effect=""slide"" end=""0,-6"" time=""500"">VisibleChange</animation>
 		</control>
 
         ";
@@ -2069,8 +2061,6 @@ namespace BlackGlassEditor
 			<textureNoFocus>basichome_1004.png</textureNoFocus>
 			<visible>control.hasfocus(104)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""70,70"" end=""100,100"" time=""500"">VisibleChange</animation>
-			<animation effect=""slide"" end=""0,-6"" time=""500"">VisibleChange</animation>
 		</control>
 
         ";
@@ -2097,7 +2087,6 @@ namespace BlackGlassEditor
 			<texture>basichome_100_focus.png</texture>
 			<visible>control.hasfocus(100)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>100 hover label</description>
@@ -2158,7 +2147,6 @@ namespace BlackGlassEditor
 			<texture>basichome_101_focus.png</texture>
 			<visible>control.hasfocus(101)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>101 hover label</description>
@@ -2219,7 +2207,6 @@ namespace BlackGlassEditor
 			<visible>control.hasfocus(102)</visible>
 			<texture>basichome_102_focus.png</texture>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>102 hover label</description>
@@ -2280,7 +2267,6 @@ namespace BlackGlassEditor
 			<texture>basichome_103_focus.png</texture>
 			<visible>control.hasfocus(103)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>103 hover label</description>
@@ -2342,7 +2328,6 @@ namespace BlackGlassEditor
 			<texture>basichome_104_focus.png</texture>
 			<visible>control.hasfocus(104)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>104 hover label</description>
@@ -2408,7 +2393,6 @@ namespace BlackGlassEditor
 			<texture>basichome_105_focus.png</texture>
 			<visible>control.hasfocus(105)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>105 hover label</description>
@@ -2476,7 +2460,6 @@ namespace BlackGlassEditor
 			<visible>control.hasfocus(106)</visible>
 			<texture>basichome_106_focus.png</texture>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>106 hover label</description>
@@ -2544,7 +2527,6 @@ namespace BlackGlassEditor
 			<texture>basichome_107_focus.png</texture>
 			<visible>control.hasfocus(107)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>107 hover label</description>
@@ -2612,7 +2594,6 @@ namespace BlackGlassEditor
 			<visible>control.hasfocus(108)</visible>
 			<texture>basichome_108_focus.png</texture>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>108 hover label</description>
@@ -2681,7 +2662,6 @@ namespace BlackGlassEditor
 			<texture>basichome_109_focus.png</texture>
 			<visible>control.hasfocus(109)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>109 hover label</description>
@@ -2748,7 +2728,6 @@ namespace BlackGlassEditor
 			<texture>basichome_110_focus.png</texture>
 			<visible>control.hasfocus(110)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>110 hover label</description>
@@ -2811,7 +2790,6 @@ namespace BlackGlassEditor
 			<texture>basichome_111_focus.png</texture>
 			<visible>control.hasfocus(111)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>111 hover label</description>
@@ -2874,7 +2852,6 @@ namespace BlackGlassEditor
 			<visible>control.hasfocus(112)</visible>
 			<texture>basichome_112_focus.png</texture>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>112 hover label</description>
@@ -2937,7 +2914,6 @@ namespace BlackGlassEditor
 			<texture>basichome_113_focus.png</texture>
 			<visible>control.hasfocus(113)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>113 hover label</description>
@@ -3000,7 +2976,6 @@ namespace BlackGlassEditor
 			<texture>basichome_114_focus.png</texture>
 			<visible>control.hasfocus(114)</visible>
 			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""zoom"" start=""100,100"" end=""102,102"" time=""500"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>114 hover label</description>
