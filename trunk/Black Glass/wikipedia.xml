@@ -8,13 +8,28 @@
 	<define>#header.background:hover_wikipedia.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.time.xml</import>
-		<import>common.window.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 			<control>
 				<type>image</type>
 				<posX>458</posX>

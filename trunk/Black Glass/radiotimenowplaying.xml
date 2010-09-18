@@ -9,142 +9,141 @@
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
-		<import>common.music.play.fanart.xml</import>
+		<import>common.window.music.play.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
 		<import>common.window.accessories.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 
 
 
 		<control>
-			<id>112</id>
-			<description>album art image</description>
-			<type>image</type>
-			<posX>40</posX>
-			<posY>90</posY>
-			<width>342</width>
-			<height>275</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#RadioTime.Play.Image</texture>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>80</posY>
-			<width>360</width>
-			<height>293</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<id>112</id>
+				<description>album art image</description>
+				<type>image</type>
+				<posX>40</posX>
+				<posY>90</posY>
+				<width>342</width>
+				<height>275</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#RadioTime.Play.Image</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>80</posY>
+				<width>360</width>
+				<height>293</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+			</control>
 
 
 
-		<control>
-			<id>0</id>
-			<description>Station label</description>
-			<type>fadelabel</type>
-			<posX>30</posX>
-			<posY>390</posY>
-			<width>600</width>
-			<height>25</height>
-			<font>font24</font>
-			<label>#RadioTime.Play.Station</label>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<id>0</id>
-			<description>Slogan label</description>
-			<type>fadelabel</type>
-			<posX>30</posX>
-			<posY>430</posY>
-			<width>600</width>
-			<font>font14</font>
-			<textcolor>90ffffff</textcolor>
-			<label>#RadioTime.Play.Slogan</label>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
+			<control>
+				<id>0</id>
+				<description>Station label</description>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>390</posY>
+				<width>600</width>
+				<height>25</height>
+				<font>font24</font>
+				<label>#RadioTime.Play.Station</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Slogan label</description>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>430</posY>
+				<width>600</width>
+				<font>font14</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#RadioTime.Play.Slogan</label>
+				<wrapString> : : : </wrapString>
+			</control>
 
-		<control>
-			<id>0</id>
-			<description>Description label</description>
-			<type>fadelabel</type>
-			<posX>30</posX>
-			<posY>480</posY>
-			<width>600</width>
-			<height>25</height>
-			<font>font18</font>
-			<label>#RadioTime.Play.Description</label>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
+			<control>
+				<id>0</id>
+				<description>Description label</description>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>480</posY>
+				<width>600</width>
+				<height>25</height>
+				<font>font18</font>
+				<label>#RadioTime.Play.Description</label>
+				<wrapString> : : : </wrapString>
+			</control>
 
-		<control>
-			<id>0</id>
-			<description>Location label</description>
-			<type>fadelabel</type>
-			<posX>30</posX>
-			<posY>515</posY>
-			<width>600</width>
-			<font>font14</font>
-			<textcolor>b0ffffff</textcolor>
-			<label>#RadioTime.Play.Location</label>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<id>0</id>
-			<description>Language label</description>
-			<type>fadelabel</type>
-			<posX>30</posX>
-			<posY>545</posY>
-			<width>600</width>
-			<height>30</height>
-			<font>font14</font>
-			<textcolor>60ffffff</textcolor>
-			<label>#RadioTime.Play.Language</label>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
+			<control>
+				<id>0</id>
+				<description>Location label</description>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>515</posY>
+				<width>600</width>
+				<font>font14</font>
+				<textcolor>b0ffffff</textcolor>
+				<label>#RadioTime.Play.Location</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Language label</description>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>545</posY>
+				<width>600</width>
+				<height>30</height>
+				<font>font14</font>
+				<textcolor>60ffffff</textcolor>
+				<label>#RadioTime.Play.Language</label>
+				<wrapString> : : : </wrapString>
+			</control>
 
-		<control>
-			<id>0</id>
-			<description>Location label</description>
-			<type>fadelabel</type>
-			<posX>30</posX>
-			<posY>600</posY>
-			<width>600</width>
-			<font>font22</font>
-			<textcolor>ffffffff</textcolor>
-			<label>#Play.Current.Artist</label>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<id>0</id>
-			<description>Location label</description>
-			<type>fadelabel</type>
-			<posX>30</posX>
-			<posY>640</posY>
-			<width>600</width>
-			<font>font18</font>
-			<textcolor>90ffffff</textcolor>
-			<label>#Play.Current.Title</label>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<control>
+				<id>0</id>
+				<description>Location label</description>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>600</posY>
+				<width>600</width>
+				<font>font22</font>
+				<textcolor>ffffffff</textcolor>
+				<label>#Play.Current.Artist</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Location label</description>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>640</posY>
+				<width>600</width>
+				<font>font18</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#Play.Current.Title</label>
+				<wrapString> : : : </wrapString>
+			</control>
 		</control>
 
 

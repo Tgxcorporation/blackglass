@@ -37,86 +37,80 @@
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<import>common.window.overlay.xml</import>		
-		<import>common.time.xml</import>
-		<control>
-			<type>label</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>10</posY>
-			<label>#header.label</label>
-			<font>font28</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-
-		<control>
-			<type>image</type>
-			<description>Thumbnail with no video playing</description>
-			<id>2024</id>
-			<posX>64</posX>
-			<posY>81</posY>
-			<width>380</width>
-			<height>538</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#myfilms.picture</texture>
-			<keepaspectration>yes</keepaspectration>
-			<visible>!player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Cover Art Glass Overlay</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>15</posX>
-			<posY>72</posY>
-			<width>437</width>
-			<height>556</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-			<visible>!player.hasmedia+control.isvisible(2024)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Thumbnail with video playing</description>
-			<type>image</type>
-			<id>2023</id>
-			<posX>58</posX>
-			<posY>81</posY>
-			<width>332</width>
-			<height>469</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#myfilms.picture</texture>
-			<keepaspectration>yes</keepaspectration>
-			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Cover Art Glass Overlay</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>15</posX>
-			<posY>72</posY>
-			<width>382</width>
-			<height>486</height>
-			<texture>DVDCase.png</texture>
-			<visible>player.hasmedia+control.isvisible(2023)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
+		<import>common.window.time.xml</import>
 
 
-		<!-- Details Box -->
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(102)|control.hasfocus(103)|control.hasfocus(104)|control.hasfocus(105)|control.hasfocus(106)|control.hasfocus(107)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>Thumbnail with no video playing</description>
+				<id>2024</id>
+				<posX>64</posX>
+				<posY>81</posY>
+				<width>380</width>
+				<height>538</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#myfilms.picture</texture>
+				<keepaspectration>yes</keepaspectration>
+				<visible>!player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>15</posX>
+				<posY>72</posY>
+				<width>437</width>
+				<height>556</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<visible>!player.hasmedia+control.isvisible(2024)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Thumbnail with video playing</description>
+				<type>image</type>
+				<id>2023</id>
+				<posX>58</posX>
+				<posY>81</posY>
+				<width>332</width>
+				<height>469</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#myfilms.picture</texture>
+				<keepaspectration>yes</keepaspectration>
+				<visible>player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>15</posX>
+				<posY>72</posY>
+				<width>382</width>
+				<height>486</height>
+				<texture>DVDCase.png</texture>
+				<visible>player.hasmedia+control.isvisible(2023)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+
+			<!-- Details Box -->
 			<control>
 				<description>Detail Panel Background</description>
 				<type>image</type>
@@ -410,19 +404,7 @@
 			</control>
 		</control>
 
-		<control>
-			<type>image</type>
-			<id>2072</id>
-			<posX>2170</posX>
-			<posY>160</posY>
-			<width>35</width>
-			<height>35</height>
-			<align>right</align>
-			<texture>Films_DD.png</texture>
-			<colordiffuse>7fffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
+		
 		<control>
 			<type>animation</type>
 			<id>2080</id>
@@ -592,6 +574,17 @@
 
 
 		<!-- UNUSED -->
+		<control>
+			<type>image</type>
+			<id>2072</id>
+			<posX>2170</posX>
+			<posY>160</posY>
+			<width>35</width>
+			<height>35</height>
+			<align>right</align>
+			<texture>Films_DD.png</texture>
+			<colordiffuse>7fffffff</colordiffuse>
+		</control>
 		<control>
 			<description>DurationValue</description>
 			<type>label</type>

@@ -10,10 +10,10 @@
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
-		<import>common.music.play.fanart.xml</import>
+		<import>common.window.music.play.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
 		<import>common.window.accessories.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 		<control>
 			<description>Progress background</description>
 			<type>image</type>
@@ -24,8 +24,7 @@
 			<height>36</height>
 			<texture>osd_progress_background.png</texture>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>progress</type>
@@ -37,8 +36,7 @@
 			<height>36</height>
 			<visible>player.hasmedia</visible>
 			<label>#percentage</label>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<description>pause image</description>
@@ -51,8 +49,6 @@
 			<visible>player.paused</visible>
 			<texture>video_paused.png</texture>
 			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -65,8 +61,7 @@
 			<font>font16</font>
 			<textcolor>white</textcolor>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -79,76 +74,80 @@
 			<font>font16</font>
 			<textcolor>white</textcolor>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
-
-
 		<control>
-			<type>image</type>
-			<description>artist art image</description>
-			<id>112</id>
-			<posX>71</posX>
-			<posY>82</posY>
-			<width>312</width>
-			<height>312</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Current.ArtistThumb</texture>
-			<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
-			<zoom>yes</zoom>
-			<animation effect="fade" time="250">visible</animation>
-			<animation effect="fade" time="250" delay="0">hidden</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Cd Case</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>73</posY>
-			<width>360</width>
-			<height>327</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
-			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
-			<animation effect="fade" time="250">visible</animation>
-			<animation effect="fade" time="250" delay="0">hidden</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Current program title</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>465</posY>
-			<width>350</width>
-			<font>font22</font>
-			<label>#Play.Current.Title</label>
-			<wrapString> : : : </wrapString>
-			<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
-			<animation effect="fade" time="250">visible</animation>
-			<animation effect="fade" time="250" delay="0">hidden</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Current program</description>
-			<posX>30</posX>
-			<posY>520</posY>
-			<width>350</width>
-			<label>#Play.Current.Artist\r#Play.Current.Album</label>
-			<textcolor>ffffffff</textcolor>
-			<wrapString> : : : </wrapString>
-			<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
-			<animation effect="fade" time="250">visible</animation>
-			<animation effect="fade" time="250" delay="0">hidden</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>artist art image</description>
+				<id>112</id>
+				<posX>71</posX>
+				<posY>82</posY>
+				<width>312</width>
+				<height>312</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Current.ArtistThumb</texture>
+				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<zoom>yes</zoom>
+			</control>
+			<control>
+				<description>Cd Case</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>73</posY>
+				<width>360</width>
+				<height>327</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>465</posY>
+				<width>350</width>
+				<font>font22</font>
+				<label>#Play.Current.Title</label>
+				<wrapString> : : : </wrapString>
+				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program</description>
+				<posX>30</posX>
+				<posY>520</posY>
+				<width>350</width>
+				<label>#Play.Current.Artist\r#Play.Current.Album</label>
+				<textcolor>ffffffff</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
 
 		<control>

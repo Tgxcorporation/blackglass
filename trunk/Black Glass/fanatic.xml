@@ -8,44 +8,56 @@
 	<define>#header.background:hover_FANatic Monitor.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 		<control>
-			<description>info label</description>
-			<type>label</type>
-			<id>1101</id>
-			<posX>30</posX>
-			<posY>54</posY>
-			<font>font14</font>
-			<label>#infolabel</label>
-			<align>left</align>
-			<textcolor>ffffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>307</posX>
-			<posY>65</posY>
-			<width>669</width>
-			<height>650</height>
-			<texture>bg_dialog_conflict.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>info label</description>
+				<type>label</type>
+				<id>1101</id>
+				<posX>30</posX>
+				<posY>54</posY>
+				<font>font14</font>
+				<label>#infolabel</label>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>307</posX>
+				<posY>65</posY>
+				<width>669</width>
+				<height>650</height>
+				<texture>bg_dialog_conflict.png</texture>
+			</control>
 
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>341</posX>
-			<posY>110</posY>
-			<width>602</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<!-- <control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>341</posX>
+				<posY>110</posY>
+				<width>602</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+			</control>
+			<!-- <control>
 			<description>Heading</description>
 			<type>label</type>
 			<id>0</id>
@@ -57,89 +69,81 @@
 			<align>left</align>
 			<label>Readings</label>
 		<animation effect="fade" time="250">WindowClose</animation><animation effect="fade" time="250">WindowOpen</animation></control> -->
-		<control>
-			<description>current readings label</description>
-			<type>label</type>
-			<id>1102</id>
-			<posX>420</posX>
-			<posY>110</posY>
-			<width>560</width>
-			<textcolor>ffffffff</textcolor>
-			<font>font22</font>
-			<align>left</align>
-			<label>#currentreading_header</label>
-			<animation effect="fade" time="250">WindowClose</animation>
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>current readings label</description>
-			<type>label</type>
-			<id>1103</id>
-			<posX>760</posX>
-			<posY>110</posY>
-			<width>560</width>
-			<label>#currentreading_reading</label>
-			<font>font22</font>
-			<align>left</align>
-			<textcolor>ffffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-
-		<control>
-			<type>group</type>
-			<description>group element</description>
 			<control>
-				<type>facadeview</type>
-				<id>1201</id>
+				<description>current readings label</description>
+				<type>label</type>
+				<id>1102</id>
+				<posX>420</posX>
+				<posY>110</posY>
+				<width>560</width>
+				<textcolor>ffffffff</textcolor>
+				<font>font22</font>
+				<align>left</align>
+				<label>#currentreading_header</label>
+			</control>
+			<control>
+				<description>current readings label</description>
+				<type>label</type>
+				<id>1103</id>
+				<posX>760</posX>
+				<posY>110</posY>
+				<width>560</width>
+				<label>#currentreading_reading</label>
+				<font>font22</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+
+			<control>
+				<type>group</type>
+				<description>group element</description>
 				<control>
-					<description>listcontrol</description>
-					<type>listcontrol</type>
+					<type>facadeview</type>
 					<id>1201</id>
-					<scrollOffset>2</scrollOffset>
-					<width>603</width>
-					<posX>340</posX>
-					<posY>163</posY>
-					<height>530</height>
-					<textureHeight>52</textureHeight>
-					<textXOff>20</textXOff>
-					<onright>1301</onright>
-					<onleft>1301</onleft>
-					<spinPosX>420</spinPosX>
-					<spinPosY>640</spinPosY>
-					<spinAlign>left</spinAlign>
+					<control>
+						<description>listcontrol</description>
+						<type>listcontrol</type>
+						<id>1201</id>
+						<scrollOffset>2</scrollOffset>
+						<width>603</width>
+						<posX>340</posX>
+						<posY>163</posY>
+						<height>530</height>
+						<textureHeight>52</textureHeight>
+						<textXOff>20</textXOff>
+						<onright>1301</onright>
+						<onleft>1301</onleft>
+						<spinPosX>420</spinPosX>
+						<spinPosY>640</spinPosY>
+						<spinAlign>left</spinAlign>
+					</control>
 				</control>
-				<animation effect="fade" time="250">WindowClose</animation>
-				<animation effect="fade" time="250">WindowOpen</animation>
 			</control>
-		</control>
-		<control>
-			<type>group</type>
-			<description>group element</description>
 			<control>
-				<type>facadeview</type>
-				<id>1301</id>
+				<type>group</type>
+				<description>group element</description>
 				<control>
-					<description>listcontrol</description>
-					<type>listcontrol</type>
+					<type>facadeview</type>
 					<id>1301</id>
-					<scrollOffset>2</scrollOffset>
-					<width>603</width>
-					<posX>340</posX>
-					<posY>163</posY>
-					<height>530</height>
-					<textureHeight>52</textureHeight>
-					<textXOff>360</textXOff>
-					<onright>1201</onright>
-					<onleft>1201</onleft>
-					<spinPosX>760</spinPosX>
-					<spinPosY>640</spinPosY>
-					<spinAlign>left</spinAlign>
+					<control>
+						<description>listcontrol</description>
+						<type>listcontrol</type>
+						<id>1301</id>
+						<scrollOffset>2</scrollOffset>
+						<width>603</width>
+						<posX>340</posX>
+						<posY>163</posY>
+						<height>530</height>
+						<textureHeight>52</textureHeight>
+						<textXOff>360</textXOff>
+						<onright>1201</onright>
+						<onleft>1201</onleft>
+						<spinPosX>760</spinPosX>
+						<spinPosY>640</spinPosY>
+						<spinAlign>left</spinAlign>
+					</control>
 				</control>
-				<animation effect="fade" time="250">WindowClose</animation>
-				<animation effect="fade" time="250">WindowOpen</animation>
 			</control>
 		</control>
-
 	</controls>
 </window>

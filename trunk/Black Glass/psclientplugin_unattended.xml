@@ -7,29 +7,44 @@
 	<define>#header.background:bg.jpg</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 		<control>
-			<posX>142</posX>
-			<posY>187</posY>
-			<type>label</type>
-			<id>2</id>
-			<label>40002</label>
-			<font>font12</font>
-			<textcolor>White</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<posX>142</posX>
-			<posY>250</posY>
-			<type>label</type>
-			<id>2</id>
-			<label>40003</label>
-			<font>font12</font>
-			<textcolor>White</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<posX>142</posX>
+				<posY>187</posY>
+				<type>label</type>
+				<id>2</id>
+				<label>40002</label>
+				<font>font12</font>
+				<textcolor>White</textcolor>
+			</control>
+			<control>
+				<posX>142</posX>
+				<posY>250</posY>
+				<type>label</type>
+				<id>2</id>
+				<label>40003</label>
+				<font>font12</font>
+				<textcolor>White</textcolor>
+			</control>
 		</control>
 	</controls>
 </window>

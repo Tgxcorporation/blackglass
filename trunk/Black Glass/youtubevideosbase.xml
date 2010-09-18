@@ -9,95 +9,94 @@
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
-		<import>common.music.fanart.xml</import>
+		<import>common.window.music.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
 		<!-- <import>common.window.accessories.xml</import> -->
-		<import>common.time.xml</import>
-		<control>
-			<type>fadelabel</type>
-			<id>100</id>
-			<posX>30</posX>
-			<posY>54</posY>
-			<label>#header.title</label>
-			<font>font14</font>
-			<align>left</align>
-			<textcolor>White</textcolor>
-			<width>400</width>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-
+		<import>common.window.time.xml</import>
 		<import>common.facade.background.xml</import>
 		<import>common.facade.itemcount.xml</import>
 		<import>common.facade.pictures.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 
-		<control>
-			<id>500</id>
-			<type>image</type>
-			<posX>40</posX>
-			<posY>100</posY>
-			<width>342</width>
-			<height>255</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<centered>yes</centered>
-		</control>
-		<control>
-			<type>image</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>90</posY>
-			<width>360</width>
-			<height>273</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-			<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>imagelist</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>385</posY>
-			<width>420</width>
-			<height>24</height>
-			<textureWidth>24</textureWidth>
-			<textureHeight>24</textureHeight>
-			<subitems>
-				<subitem>star_nofocus.png</subitem>
-				<subitem>star_focus.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Youtube.fm.Curent.Video.Rating</percentage>
-			<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control> 
-		<control>
-			<type>fadelabel</type>
-			<description>Current program title</description>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>415</posY>
-			<width>360</width>
-			<font>font22</font>
-			<label>#selecteditem</label>
-			<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-		<!-- 		<control>
+			<control>
+				<type>fadelabel</type>
+				<id>100</id>
+				<posX>30</posX>
+				<posY>54</posY>
+				<label>#header.title</label>
+				<font>font14</font>
+				<align>left</align>
+				<textcolor>White</textcolor>
+				<width>400</width>
+				<wrapString> : : : </wrapString>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(106)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+
+			<control>
+				<id>500</id>
+				<type>image</type>
+				<posX>40</posX>
+				<posY>100</posY>
+				<width>342</width>
+				<height>255</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>90</posY>
+				<width>360</width>
+				<height>273</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+				<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>imagelist</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>385</posY>
+				<width>420</width>
+				<height>24</height>
+				<textureWidth>24</textureWidth>
+				<textureHeight>24</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Youtube.fm.Curent.Video.Rating</percentage>
+				<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control> 
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>415</posY>
+				<width>360</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<!-- 		<control>
 			<description>title2</description>
 			<type>label</type>
 			<id>1</id>
@@ -121,35 +120,32 @@
 			<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>-->
-		<control>
-			<description>title2</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>465</posY>
-			<width>350</width>
-			<label>Loved by #Youtube.fm.Curent.Video.FavoriteCount Users</label>
-			<textcolor>90ffffff</textcolor>
-			<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-		<control>
-			<description>title2</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>500</posY>
-			<width>350</width>
-			<label>Viewed by #Youtube.fm.Curent.Video.ViewCount Users</label>
-			<textcolor>ffffffff</textcolor>
-			<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
+			<control>
+				<description>title2</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>465</posY>
+				<width>350</width>
+				<label>Loved by #Youtube.fm.Curent.Video.FavoriteCount Users</label>
+				<textcolor>90ffffff</textcolor>
+				<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>title2</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>500</posY>
+				<width>350</width>
+				<label>Viewed by #Youtube.fm.Curent.Video.ViewCount Users</label>
+				<textcolor>ffffffff</textcolor>
+				<visible>!facadeview.filmstrip+[control.hasfocus(50)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
 		</control>
 		<!-- 		<control>
 			<description>Description</description>

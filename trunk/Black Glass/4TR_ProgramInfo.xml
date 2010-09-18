@@ -7,8 +7,10 @@
 	<define>#header.background:hover_my tv.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>		
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>		
 		<import>common.facade.background.xml</import>
 		<import>common.facade.itemcount.xml</import>
 
@@ -44,93 +46,99 @@
 			</control>
 		</control>
 		<control>
-			<description>Current program title</description>
-			<type>fadelabel</type>
-			<id>13</id>
-			<posX>30</posX>
-			<posY>100</posY>
-			<width>380</width>
-			<font>font20</font>
-			<visible>control.hasfocus(10)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Current program title</description>
+				<type>fadelabel</type>
+				<id>13</id>
+				<posX>30</posX>
+				<posY>100</posY>
+				<width>380</width>
+				<font>font20</font>
+				<visible>control.hasfocus(10)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Current program time</description>
+				<type>label</type>
+				<id>14</id>
+				<posX>30</posX>
+				<posY>140</posY>
+				<textcolor>90FFFFFF</textcolor>
+				<visible>control.hasfocus(10)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>    
+			<control>
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>15</id>
+				<posX>30</posX>
+				<posY>215</posY>
+				<width>370</width>
+				<height>326</height>
+				<font>font16</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<visible>control.hasfocus(10)+player.hasmedia</visible>
+				<label>#TV.RecordedTV.Description</label>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>215</posY>
+				<width>370</width>
+				<height>452</height>
+				<font>font16</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<visible>control.hasfocus(10)+!player.hasmedia</visible>
+				<label>#TV.RecordedTV.Description</label>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Current program channel</description>
+				<type>fadelabel</type>
+				<id>16</id>
+				<posX>30</posX>
+				<posY>85</posY>
+				<width>350</width>
+				<font>font22</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<visible>control.hasfocus(10)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>    
+			<control>
+				<description>genre</description>
+				<type>label</type>
+				<id>17</id>
+				<posX>30</posX>
+				<posY>175</posY>
+				<width>370</width>
+				<textcolor>ffffff</textcolor>
+				<visible>control.hasfocus(10)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
-		<control>
-			<description>Current program time</description>
-			<type>label</type>
-			<id>14</id>
-			<posX>30</posX>
-			<posY>140</posY>
-			<textcolor>90FFFFFF</textcolor>
-			<visible>control.hasfocus(10)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>    
-		<control>
-			<description>Description1</description>
-			<type>textboxscrollup</type>
-			<id>15</id>
-			<posX>30</posX>
-			<posY>215</posY>
-			<width>370</width>
-			<height>326</height>
-			<font>font16</font>
-			<textcolor>FFFFFFFF</textcolor>
-			<visible>control.hasfocus(10)+player.hasmedia</visible>
-			<label>#TV.RecordedTV.Description</label>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Description1</description>
-			<type>textboxscrollup</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>215</posY>
-			<width>370</width>
-			<height>452</height>
-			<font>font16</font>
-			<textcolor>FFFFFFFF</textcolor>
-			<visible>control.hasfocus(10)+!player.hasmedia</visible>
-			<label>#TV.RecordedTV.Description</label>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Current program channel</description>
-			<type>fadelabel</type>
-			<id>16</id>
-			<posX>30</posX>
-			<posY>85</posY>
-			<width>350</width>
-			<font>font22</font>
-			<textcolor>FFFFFFFF</textcolor>
-			<visible>control.hasfocus(10)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>    
-
-		<control>
-			<description>genre</description>
-			<type>label</type>
-			<id>17</id>
-			<posX>30</posX>
-			<posY>175</posY>
-			<width>370</width>
-			<textcolor>ffffff</textcolor>
-			<visible>control.hasfocus(10)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-
+		
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>

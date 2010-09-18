@@ -9,14 +9,14 @@
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
-		<import>common.music.play.fanart.xml</import>
+		<import>common.window.music.play.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
 		<import>common.window.accessories.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 		<import>common.facade.background.xml</import>
 		<import>common.facade.itemcount.xml</import>
 		<import>common.facade.music.xml</import>
-		
+
 		<!-- <control>
 			<type>image</type>
 			<description>artist art image</description>
@@ -68,27 +68,44 @@
 		</control>-->
 
 		<control>
-			<description>Total Playlist Duration</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>107</posY>
-			<width>380</width>
-			<font>font18</font>
-			<label>Playlist Duration : #runtime</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Total Playlist Duration</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>107</posY>
+				<width>380</width>
+				<font>font18</font>
+				<label>Playlist Duration : #runtime</label>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
 		</control>
 
 
-		
-		
-	
-		
-		
+
+
+
+
+
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>

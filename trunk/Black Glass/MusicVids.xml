@@ -9,7 +9,7 @@
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
-		<import>common.music.fanart.xml</import>
+		<import>common.window.music.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
 		<import>common.window.accessories.xml</import>
 
@@ -29,131 +29,136 @@
 		</control> -->
 
 
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 
 
 
 		<control>
-			<description>Music Vids Hierachy</description>
-			<type>label</type>
-			<id>10</id>
-			<posX>12000</posX>
-			<posY>12000</posY>
-			<label>#MusicVids.Hierachy</label>
-			<font>font14</font>
-			<textcolor>ffffffff</textcolor>
-		</control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Music Vids Hierachy</description>
+				<type>label</type>
+				<id>10</id>
+				<posX>12000</posX>
+				<posY>12000</posY>
+				<label>#MusicVids.Hierachy</label>
+				<font>font14</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
 
-		<control>
-			<type>image</type>
-			<description>artist art image</description>
-			<id>13</id>
-			<posX>71</posX>
-			<posY>82</posY>
-			<width>312</width>
-			<height>312</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#MusicVids.ArtistImg</texture>
-			<visible>!control.isvisible(99)+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Cd Case</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>73</posY>
-			<width>360</width>
-			<height>327</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
-			<visible>!control.isvisible(99)+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Current program title</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>430</posY>
-			<width>360</width>
-			<font>font22</font>
-			<label>#selecteditem</label>
-			<visible>control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Current program</description>
-			<id>11</id>
-			<posX>30</posX>
-			<posY>485</posY>
-			<width>350</width>
-			<label>#MusicVids.ArtistName</label>
-			<textcolor>90ffffff</textcolor>
-			<visible>control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-
-
-
-		<control>
-			<type>textboxscrollup</type>
-			<description>Description1</description>
-			<id>12</id>
-			<posX>30</posX>
-			<posY>530</posY>
-			<width>385</width>
-			<height>175</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<font>font14</font>
-			<label>#MusicVids.ArtistBio</label>
-			<visible>!player.hasmedia+control.hasfocus(50)</visible>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
+			<control>
+				<type>image</type>
+				<description>artist art image</description>
+				<id>13</id>
+				<posX>71</posX>
+				<posY>82</posY>
+				<width>312</width>
+				<height>312</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#MusicVids.ArtistImg</texture>
+				<visible>!control.isvisible(99)+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Cd Case</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>73</posY>
+				<width>360</width>
+				<height>327</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+				<visible>!control.isvisible(99)+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>430</posY>
+				<width>360</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<visible>control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program</description>
+				<id>11</id>
+				<posX>30</posX>
+				<posY>485</posY>
+				<width>350</width>
+				<label>#MusicVids.ArtistName</label>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
 
 
-		<control>
-			<id>14</id>
-			<type>image</type>
-			<posX>39</posX>
-			<posY>78</posY>
-			<width>332</width>
-			<height>188</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#MusicVids.VideoImg</texture>
-			<visible>control.isvisible(99)+control.hasfocus(50)</visible>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>70</posY>
-			<width>352</width>
-			<height>233</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
-			<visible>control.isvisible(99)+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description1</description>
+				<id>12</id>
+				<posX>30</posX>
+				<posY>530</posY>
+				<width>385</width>
+				<height>175</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<font>font14</font>
+				<label>#MusicVids.ArtistBio</label>
+				<visible>!player.hasmedia+control.hasfocus(50)</visible>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+
+			<control>
+				<id>14</id>
+				<type>image</type>
+				<posX>39</posX>
+				<posY>78</posY>
+				<width>332</width>
+				<height>188</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#MusicVids.VideoImg</texture>
+				<visible>control.isvisible(99)+control.hasfocus(50)</visible>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>70</posY>
+				<width>352</width>
+				<height>233</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
+				<visible>control.isvisible(99)+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
 
 		<control>
@@ -435,8 +440,6 @@
 			<align>left</align> 
 			<font>font32</font> 
 			<textcolor>20ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
 		</control> 
 
 	</controls>

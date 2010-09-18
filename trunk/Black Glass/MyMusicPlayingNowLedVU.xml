@@ -9,40 +9,58 @@
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
-		<import>common.music.play.fanart.xml</import>
+		<import>common.window.music.play.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
 		<import>common.window.accessories.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 
 
 		<control>
-			<type>image</type>
-			<description>album art image</description>
-			<id>600</id>
-			<posX>71</posX>
-			<posY>82</posY>
-			<width>312</width>
-			<height>312</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Current.Thumb</texture>
-			<zoom>yes</zoom>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<description>nowplaying shine</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>73</posY>
-			<width>360</width>
-			<height>327</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<!-- <control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>album art image</description>
+				<id>600</id>
+				<posX>71</posX>
+				<posY>82</posY>
+				<width>312</width>
+				<height>312</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Current.Thumb</texture>
+				<zoom>yes</zoom>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>nowplaying shine</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>73</posY>
+				<width>360</width>
+				<height>327</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<!-- <control>
 			<type>image</type>
 			<description>vu_background</description>
 			<id>0</id>
@@ -63,21 +81,19 @@
 			<texture>VU aus led.png</texture>
 			<visible>!Player.playing</visible>
 		</control> -->
-		<control>
-			<type>image</type>
-			<id>999</id>
-			<posX>405</posX>
-			<posY>355</posY>
-			<width>270</width>
-			<height>20</height>
-			<imagepath>Animations\LedVu</imagepath>
-			<texture>#VUMeterL</texture>
-			<visible>Player.HasAudio + Player.playing</visible>
-			<animation effect="fade" time="250">Visible</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<!-- <control>
+			<control>
+				<type>image</type>
+				<id>999</id>
+				<posX>405</posX>
+				<posY>355</posY>
+				<width>270</width>
+				<height>20</height>
+				<imagepath>Animations\LedVu</imagepath>
+				<texture>#VUMeterL</texture>
+				<visible>Player.HasAudio + Player.playing+![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<!-- <control>
 			<type>image</type>
 			<id>0</id>
 			<posX>405</posX>
@@ -87,72 +103,69 @@
 			<texture>VU aus led.png</texture>
 			<visible>!Player.playing</visible>
 		</control> -->
-		<control>
-			<type>image</type>
-			<id>998</id>
-			<posX>405</posX>
-			<posY>375</posY>
-			<width>270</width>
-			<height>20</height>
-			<imagepath>Animations\LedVu</imagepath>
-			<texture>#VUMeterR</texture>
-			<visible>Player.HasAudio + Player.playing</visible>
-			<animation effect="fade" time="250">Visible</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
+			<control>
+				<type>image</type>
+				<id>998</id>
+				<posX>405</posX>
+				<posY>375</posY>
+				<width>270</width>
+				<height>20</height>
+				<imagepath>Animations\LedVu</imagepath>
+				<texture>#VUMeterR</texture>
+				<visible>Player.HasAudio + Player.playing+![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 
-		<control>
-			<type>imagelist</type>
-			<id>1337</id>
-			<posX>30</posX>
-			<posY>440</posY>
-			<width>177</width>
-			<height>40</height>
-			<textureWidth>22</textureWidth>
-			<textureHeight>22</textureHeight>
-			<subitems>
-				<subitem>star_nofocus.png</subitem>
-				<subitem>star_focus.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>5</imagesToDraw>
-			<percentage>#Play.Current.Rating</percentage>
-			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Artist label</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>470</posY>
-			<width>600</width>
-			<height>25</height>
-			<label>#Play.Current.Artist</label>
-			<font>font24</font>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>album label</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>525</posY>
-			<width>600</width>
-			<label>#Play.Current.Album</label>
-			<font>font18</font>
-			<align>left</align>
-			<textcolor>b0ffffff</textcolor>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<!-- <control>
+			<control>
+				<type>imagelist</type>
+				<id>1337</id>
+				<posX>30</posX>
+				<posY>440</posY>
+				<width>177</width>
+				<height>40</height>
+				<textureWidth>22</textureWidth>
+				<textureHeight>22</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Play.Current.Rating</percentage>
+				<visible>player.hasmedia+![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Artist label</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>470</posY>
+				<width>600</width>
+				<height>25</height>
+				<label>#Play.Current.Artist</label>
+				<font>font24</font>
+				<wrapString> : : : </wrapString>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>album label</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>525</posY>
+				<width>600</width>
+				<label>#Play.Current.Album</label>
+				<font>font18</font>
+				<align>left</align>
+				<textcolor>b0ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<!-- <control>
 			<type>fadelabel</type>
 			<description>track label</description>
 			<id>0</id>
@@ -164,49 +177,120 @@
 			<font>font12</font>
 			<textcolor>90ffffff</textcolor>
 		</control> -->
-		<control>
-			<type>fadelabel</type>
-			<description>track label</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>570</posY>
-			<width>468</width>
-			<height>25</height>
-			<label>Track: #Play.Current.Track</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<control>
+				<type>fadelabel</type>
+				<description>track label</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>570</posY>
+				<width>468</width>
+				<height>25</height>
+				<label>Track: #Play.Current.Track</label>
+				<font>font12</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Title label</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>600</posY>
+				<width>600</width>
+				<height>25</height>
+				<label>#Play.Current.Title</label>
+				<font>font18</font>
+				<wrapString> : : : </wrapString>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>year label</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>640</posY>
+				<width>200</width>
+				<label>#Play.Current.Year</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<description>up next label</description>
+				<!-- <id>20</id> -->
+				<id>0</id>
+				<posX>410</posX>
+				<posY>100</posY>
+				<label>209</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>80ffffff</textcolor>
+				<visible>player.hasmedia+control.hastext(121)+![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>next track label</description>
+				<id>121</id>
+				<posX>410</posX>
+				<posY>246</posY>
+				<width>220</width>
+				<label>#Play.Next.Title</label>
+				<align>left</align>
+				<font>font12</font>
+				<textcolor>80ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>next artist label</description>
+				<id>123</id>
+				<posX>410</posX>
+				<posY>220</posY>
+				<width>220</width>
+				<label>#Play.Next.Artist</label>
+				<align>left</align>
+				<textcolor>80ffffff</textcolor>
+				<font>font12</font>
+				<wrapString> : : : </wrapString>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>music logo</description>
+				<type>image</type>
+				<id>600</id>
+				<posX>418</posX>
+				<posY>133</posY>
+				<width>65</width>
+				<height>65</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Next.Thumb</texture>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>music rectangle</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>410</posX>
+				<posY>130</posY>
+				<width>74</width>
+				<height>68</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+				<centered>yes</centered>
+				<visible>player.hasmedia+control.hastext(121)+![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Title label</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>600</posY>
-			<width>600</width>
-			<height>25</height>
-			<label>#Play.Current.Title</label>
-			<font>font18</font>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>year label</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>640</posY>
-			<width>200</width>
-			<label>#Play.Current.Year</label>
-			<font>font12</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-
 
 
 
@@ -220,8 +304,7 @@
 			<height>36</height>
 			<texture>osd_progress_background.png</texture>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>progress</type>
@@ -232,9 +315,8 @@
 			<width>1300</width>
 			<height>36</height>
 			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 			<label>#percentage</label>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<description>pause image</description>
@@ -247,8 +329,6 @@
 			<visible>player.paused</visible>
 			<texture>video_paused.png</texture>
 			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -261,8 +341,7 @@
 			<font>font16</font>
 			<textcolor>white</textcolor>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -275,8 +354,7 @@
 			<font>font16</font>
 			<textcolor>white</textcolor>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<control>
@@ -388,79 +466,7 @@
 				</control>
 			</control>
 		</control>
-		<control>
-			<type>label</type>
-			<description>up next label</description>
-			<!-- <id>20</id> -->
-			<id>0</id>
-			<posX>410</posX>
-			<posY>100</posY>
-			<label>209</label>
-			<font>font12</font>
-			<align>left</align>
-			<textcolor>80ffffff</textcolor>
-			<visible>player.hasmedia+control.hastext(121)</visible>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>next track label</description>
-			<id>121</id>
-			<posX>410</posX>
-			<posY>246</posY>
-			<width>220</width>
-			<label>#Play.Next.Title</label>
-			<align>left</align>
-			<font>font12</font>
-			<textcolor>80ffffff</textcolor>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>next artist label</description>
-			<id>123</id>
-			<posX>410</posX>
-			<posY>220</posY>
-			<width>220</width>
-			<label>#Play.Next.Artist</label>
-			<align>left</align>
-			<textcolor>80ffffff</textcolor>
-			<font>font12</font>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>music logo</description>
-			<type>image</type>
-			<id>600</id>
-			<posX>418</posX>
-			<posY>133</posY>
-			<width>65</width>
-			<height>65</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Next.Thumb</texture>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>music rectangle</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>410</posX>
-			<posY>130</posY>
-			<width>74</width>
-			<height>68</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
-			<centered>yes</centered>
-			<visible>player.hasmedia+control.hastext(121)</visible>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
+
 
 		<control>
 			<type>group</type>
@@ -478,7 +484,8 @@
 				<height>645</height>
 				<texture>bg_facade.png</texture>
 				<colorDiffuse>ffffffff</colorDiffuse>
-				<visible>control.isvisible(29)|control.isvisible(28)</visible>		
+				<visible>control.isvisible(29)|control.isvisible(28)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>image</type>
@@ -490,6 +497,7 @@
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
 				<visible>control.isvisible(29)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>image</type>
@@ -501,6 +509,7 @@
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
 				<visible>control.isvisible(28)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>group</type>
@@ -526,6 +535,7 @@
 					<textureDown>-</textureDown>
 					<textureUpFocus>-</textureUpFocus>
 					<textureDownFocus>-</textureDownFocus>
+					<animation effect="fade" time="250">visiblechange</animation>
 				</control>
 			</control>
 			<control>
@@ -552,6 +562,7 @@
 					<textureDown>-</textureDown>
 					<textureUpFocus>-</textureUpFocus>
 					<textureDownFocus>-</textureDownFocus>
+					<animation effect="fade" time="250">visiblechange</animation>
 				</control>
 			</control>
 			<control>
@@ -806,6 +817,7 @@
 				<label>33030</label>
 				<font>font22</font>
 				<visible>control.isvisible(29)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -818,6 +830,7 @@
 				<label>Top tracks for tag</label>
 				<font>font22</font>
 				<visible>control.isvisible(28)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 		</control>
 		<control>

@@ -9,172 +9,163 @@
 
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>		
-		<control>
-			<type>label</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>10</posY>
-			<label>Radio Time</label>
-			<font>font28</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>cur_view</description>
-			<id>0</id>
-			<posX>32</posX>
-			<posY>54</posY>
-			<font>font12</font>
-			<width>420</width>
-			<label>#header.label</label>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>textboxscrollup</type>
-			<description>Selected item Label</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>651</posY>
-			<width>1220</width>
-			<font>font24</font>
-			<height>45</height>
-			<textalign>center</textalign>
-			<label>#selecteditem</label>
-			<visible>[facadeview.filmstrip]+[control.hasfocus(50)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 		<import>common.facade.background.xml</import>
 		<import>common.facade.itemcount.xml</import>
-
 		<control>
-			<id>51</id>
-			<type>image</type>
-			<posX>40</posX>
-			<posY>95</posY>
-			<width>342</width>
-			<height>275</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>85</posY>
-			<width>360</width>
-			<height>293</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-
-		<control>
-			<type>fadelabel</type>
-			<id>0</id>
-			<description>Current program title</description>
-			<posX>30</posX>
-			<posY>395</posY>
-			<width>385</width>
-			<font>font20</font>
-			<label>#selecteditem</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-
-		<control>
-			<id>81</id>
-			<description>existent rating2</description>
-			<type>imagelist</type>
-			<visible>no</visible>
-			<posX>30</posX>
-			<posY>439</posY>
-			<width>142</width>
-			<height>40</height>
-			<textureWidth>22</textureWidth>
-			<textureHeight>22</textureHeight>
-			<subitems>
-				<subitem>star_nofocus.png</subitem>
-				<subitem>star_focus.png</subitem>
-			</subitems>
-			<percentage>#RadioTime.Selected.Reliability</percentage>
-			<imagesToDraw>5</imagesToDraw>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>Radio Time</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(5)|control.hasfocus(7)|control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(8)|control.hasfocus(6)|control.hasfocus(11)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(90)|control.hasfocus(91)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>cur_view</description>
+				<id>0</id>
+				<posX>32</posX>
+				<posY>54</posY>
+				<font>font12</font>
+				<width>420</width>
+				<label>#header.label</label>
+				<wrapString> : : : </wrapString>
+				<visible>![control.hasfocus(5)|control.hasfocus(7)|control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(8)|control.hasfocus(6)|control.hasfocus(11)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(90)|control.hasfocus(91)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Selected item Label</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>651</posY>
+				<width>1220</width>
+				<font>font24</font>
+				<height>45</height>
+				<textalign>center</textalign>
+				<label>#selecteditem</label>
+				<visible>[facadeview.filmstrip]+[control.hasfocus(50)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 
 
-		<control>
-			<description>meta label</description>
-			<id>0</id>
-			<type>fadelabel</type>
-			<posX>30</posX>
-			<posY>470</posY>
-			<label>#RadioTime.Selected.NowPlaying</label>
-			<align>left</align>
-			<width>385</width>
-			<textcolor>ffffffff</textcolor>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control>
+			<control>
+				<id>51</id>
+				<type>image</type>
+				<posX>40</posX>
+				<posY>95</posY>
+				<width>342</width>
+				<height>275</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>85</posY>
+				<width>360</width>
+				<height>293</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 
-		<control>
-			<description>meta label</description>
-			<id>0</id>
-			<type>fadelabel</type>
-			<posX>30</posX>
-			<posY>500</posY>
-			<label>#RadioTime.Selected.Subtext</label>
-			<align>left</align>
-			<width>385</width>
-			<textcolor>90ffffff</textcolor>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<description>Current program title</description>
+				<posX>30</posX>
+				<posY>395</posY>
+				<width>385</width>
+				<font>font20</font>
+				<label>#selecteditem</label>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
 
-		<control>
-			<description>meta label</description>
-			<id>0</id>
-			<type>fadelabel</type>
-			<posX>30</posX>
-			<posY>530</posY>
-			<label>#RadioTime.Selected.Format</label>
-			<align>left</align>
-			<width>385</width>
-			<textcolor>ffffffff</textcolor>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
+			<control>
+				<id>81</id>
+				<description>existent rating2</description>
+				<type>imagelist</type>
+				<visible>no</visible>
+				<posX>30</posX>
+				<posY>439</posY>
+				<width>142</width>
+				<height>40</height>
+				<textureWidth>22</textureWidth>
+				<textureHeight>22</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<percentage>#RadioTime.Selected.Reliability</percentage>
+				<imagesToDraw>5</imagesToDraw>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+
+			<control>
+				<description>meta label</description>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>470</posY>
+				<label>#RadioTime.Selected.NowPlaying</label>
+				<align>left</align>
+				<width>385</width>
+				<textcolor>ffffffff</textcolor>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>
+				<description>meta label</description>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>500</posY>
+				<label>#RadioTime.Selected.Subtext</label>
+				<align>left</align>
+				<width>385</width>
+				<textcolor>90ffffff</textcolor>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>
+				<description>meta label</description>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>530</posY>
+				<label>#RadioTime.Selected.Format</label>
+				<align>left</align>
+				<width>385</width>
+				<textcolor>ffffffff</textcolor>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
 		</control>
 
 
@@ -191,6 +182,9 @@
 			<texture>gradient.png</texture>
 			<visible>facadeview.filmstrip</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>group element</description>

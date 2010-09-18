@@ -9,50 +9,55 @@
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>		
-		<control>
-			<type>label</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>10</posY>
-			<label>#header.label</label>
-			<font>font22</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 		<import>common.facadeview.background.xml</import>
 		<control>
-			<type>label</type>
-			<description>Title (Filmstrip)</description>
-			<id>640</id>
-			<posX>30</posX>
-			<posY>677</posY>
-			<width>1220</width>
-			<align>center</align>
-			<font>font24</font>
-			<label>#selecteditem</label>
-			<visible>[facadeview.filmstrip]+[control.hasfocus(50)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>	 
-		<!-- <import>VideoSearch.details.xml</import> -->
-		<control>
-			<description>Status</description>
-			<type>fadelabel</type>
-			<id>6</id>
-			<posX>30</posX>
-			<posY>44</posY>
-			<font>font13</font>
-			<textcolor>ffffffff</textcolor>
-			<label/>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<!--    <control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font22</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(102)|control.hasfocus(101)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Status</description>
+				<type>fadelabel</type>
+				<id>6</id>
+				<posX>30</posX>
+				<posY>44</posY>
+				<font>font13</font>
+				<textcolor>ffffffff</textcolor>
+				<label/>
+				<wrapString> : : : </wrapString>
+				<visible>![control.hasfocus(102)|control.hasfocus(101)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Title (Filmstrip)</description>
+				<id>640</id>
+				<posX>30</posX>
+				<posY>677</posY>
+				<width>1220</width>
+				<align>center</align>
+				<font>font24</font>
+				<label>#selecteditem</label>
+				<visible>[facadeview.filmstrip]+[control.hasfocus(50)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>	 
+			<!-- <import>VideoSearch.details.xml</import> -->
+
+			<!--    <control>
       <type>button</type>
       <description>Search</description>
       <id>66</id>
@@ -73,49 +78,44 @@
 
 
 
-		<control>
-			<id>500</id>
-			<type>image</type>
-			<posX>40</posX>
-			<posY>79</posY>
-			<width>341</width>
-			<height>254</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<centered>yes</centered>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>73</posY>
-			<width>360</width>
-			<height>273</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
+			<control>
+				<id>500</id>
+				<type>image</type>
+				<posX>40</posX>
+				<posY>79</posY>
+				<width>341</width>
+				<height>254</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>73</posY>
+				<width>360</width>
+				<height>273</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 
-		<control>
-			<type>fadelabel</type>
-			<description>Current program title</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>355</posY>
-			<width>360</width>
-			<font>font22</font>
-			<label>#selecteditem</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>355</posY>
+				<width>360</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
 		</control>
 		<control>
 			<id>0</id>
@@ -127,6 +127,9 @@
 			<texture>gradient.png</texture>
 			<visible>facadeview.filmstrip</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>group element</description>

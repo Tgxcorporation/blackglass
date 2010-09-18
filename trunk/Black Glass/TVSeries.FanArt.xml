@@ -38,43 +38,56 @@
 		</control> -->
 
 		<control>
-			<description>Status</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>1250</posX>
-			<posY>20</posY>
-			<font>font16</font>
-			<align>right</align>
-			<label>#TVSeries.FanArt.DownloadingStatus #TVSeries.FanArt.LoadingStatus</label>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(12)|control.hasfocus(13)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Status</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1250</posX>
+				<posY>20</posY>
+				<font>font16</font>
+				<align>right</align>
+				<label>#TVSeries.FanArt.DownloadingStatus #TVSeries.FanArt.LoadingStatus</label>
+			</control>
+			<control>
+				<description>Status</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>640</posX>
+				<posY>40</posY>	  
+				<font>font16</font>
+				<align>center</align>
+				<!-- <label>#TVSeries.FanArt.SelectedFanartResolution</label> -->
+				<label>#TVSeries.FanArt.FilterResolution</label>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#TVSeries.FanArt.PageTitle</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
 		</control>
-		<control>
-			<description>Status</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>640</posX>
-			<posY>40</posY>	  
-			<font>font16</font>
-			<align>center</align>
-			<!-- <label>#TVSeries.FanArt.SelectedFanartResolution</label> -->
-			<label>#TVSeries.FanArt.FilterResolution</label>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>10</posY>
-			<label>#TVSeries.FanArt.PageTitle</label>
-			<font>font28</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		
+
 		<!-- <control>
 			<description>Fanart Count</description>
 			<type>label</type>
@@ -86,9 +99,7 @@
 			<align>right</align>
 			<font>font11</font>
 			<textcolor>ffFFFFFF</textcolor>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control> -->
+			</control> -->
 
 		<!--  ************** HIDDEN MENU *****************  -->    
 		<control>
@@ -189,6 +200,9 @@
 			<texture>gradient.png</texture>
 			<visible>facadeview.filmstrip</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>group</type>
