@@ -7,8 +7,10 @@
 	<define>#header.background:hover_my radio.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 
 
 		<control>
@@ -53,96 +55,81 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
-		<!--  <control>
-      <type>fadelabel</type>
-      <description>Selected item Label</description>
-      <id>1</id>
-      <posX>1168</posX>
-      <posY>85</posY>
-      <width>622</width>
-      <label>#selecteditem</label>
-      <font>font14</font>
-      <align>right</align>
-      <disabledcolor>ff808080</disabledcolor>
-      <animation effect="fade" time="250">WindowOpen</animation>
-      <animation effect="fade" time="250">WindowClose</animation>
-    </control> -->
+
 		<import>common.facade.recordings.xml</import>
 
-
 		<control>
-			<type>fadelabel</type>
-			<description>Current program title</description>
-			<id>13</id>
-			<posX>30</posX>
-			<posY>285</posY>
-			<width>350</width>
-			<font>font20</font>
-			<label>#Radio.RecordedTV.Title</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>13</id>
+				<posX>30</posX>
+				<posY>285</posY>
+				<width>350</width>
+				<font>font20</font>
+				<label>#Radio.RecordedTV.Title</label>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Current program time</description>
+				<id>14</id>
+				<posX>30</posX>
+				<posY>340</posY>
+				<label>#Radio.RecordedTV.Time</label>
+				<textcolor>90ffffff</textcolor>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description1</description>
+				<id>15</id>
+				<posX>30</posX>
+				<posY>385</posY>
+				<width>350</width>
+				<height>194</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<font>font16</font>
+				<label>#Radio.RecordedTV.Description</label>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description1</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>385</posY>
+				<width>350</width>
+				<height>325</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<font>font16</font>
+				<label>#Radio.RecordedTV.Description</label>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
-		<control>
-			<type>label</type>
-			<description>Current program time</description>
-			<id>14</id>
-			<posX>30</posX>
-			<posY>340</posY>
-			<label>#Radio.RecordedTV.Time</label>
-			<textcolor>90ffffff</textcolor>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>textboxscrollup</type>
-			<description>Description1</description>
-			<id>15</id>
-			<posX>30</posX>
-			<posY>385</posY>
-			<width>350</width>
-			<height>194</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<font>font16</font>
-			<label>#Radio.RecordedTV.Description</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>textboxscrollup</type>
-			<description>Description1</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>385</posY>
-			<width>350</width>
-			<height>325</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<font>font16</font>
-			<label>#Radio.RecordedTV.Description</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<!--          <control>
-            <type>label</type>
-            <description>genre</description>
-            <id>17</id>
-            <posX>404</posX>
-            <posY>460</posY>
-            <label>#Radio.RecordedTV.Genre</label>
-            <align>right</align>
-            <textcolor>ffb2d4f5</textcolor>
-         </control> -->
-
-
 
 		<control>
 			<type>actiongroup</type>
@@ -239,5 +226,29 @@
 				</control>
 			</control>
 		</control>
+		<!--  <control>
+      <type>fadelabel</type>
+      <description>Selected item Label</description>
+      <id>1</id>
+      <posX>1168</posX>
+      <posY>85</posY>
+      <width>622</width>
+      <label>#selecteditem</label>
+      <font>font14</font>
+      <align>right</align>
+      <disabledcolor>ff808080</disabledcolor>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control> -->
+		<!--          <control>
+            <type>label</type>
+            <description>genre</description>
+            <id>17</id>
+            <posX>404</posX>
+            <posY>460</posY>
+            <label>#Radio.RecordedTV.Genre</label>
+            <align>right</align>
+            <textcolor>ffb2d4f5</textcolor>
+         </control> -->
 	</controls>
 </window>

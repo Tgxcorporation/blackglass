@@ -7,133 +7,169 @@
 	<define>#header.background:hover_my burner.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 		<control>
-			<type>image</type>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-			<visible>control.isvisible(20)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(4)|control.hasfocus(7)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+				<visible>control.isvisible(20)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>490</posX>
+				<posY>47</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>control.isvisible(20)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>490</posX>
+				<posY>431</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>control.isvisible(20)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>My burner File Size label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>32</posX>
+				<posY>681</posY>
+				<width>416</width>
+				<label>#burner_size</label>
+				<font>font16</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>DVR Convert Info Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>32</posX>
+				<posY>681</posY>
+				<width>416</width>
+				<label>#convert_info</label>
+				<font>font16</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>My burner Info Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>32</posX>
+				<posY>681</posY>
+				<width>416</width>
+				<label>#burner_info</label>
+				<font>font16</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>progress bar background</description>
+				<type>image</type>
+				<posX>32</posX>
+				<posY>662</posY>
+				<width>416</width>
+				<height>36</height>
+				<texture>osd_progress_background.png</texture>
+			</control>
+			<control>
+				<description>Status Bar</description>
+				<type>statusbar</type>
+				<id>1</id>
+				<posX>20</posX>
+				<posY>662</posY>
+				<width>440</width>
+				<height>36</height>
+				<posYTop>500</posYTop>
+				<texturebg>-</texturebg>
+				<lefttexture>osd_progress_left_dummy.png</lefttexture>
+				<midtexture>osd_progress_mid.png</midtexture>
+				<righttexture>-</righttexture>
+				<visible>yes</visible>
+				<label>#burner_perc</label>
+			</control>
+			<control>
+				<description>CD Detail Panel</description>
+				<type>textbox</type>
+				<id>50</id>
+				<label>-</label>
+				<posY>32</posY>
+				<posX>462</posX>
+				<height>500</height>
+				<onleft>2</onleft>
+				<onright>3</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<font>font12</font>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<control>
+					<description>file listcontrol</description>
+					<type>listcontrol</type>
+					<id>20</id>
+					<spinPosY>387</spinPosY>
+					<height>312</height>
+					<onright>2</onright>
+					<onleft>2</onleft>
+					<onup>4</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<control>
+					<description>copy listcontrol</description>
+					<type>listcontrol</type>
+					<id>30</id>
+					<posY>484</posY>
+					<height>250</height>
+					<onright>2</onright>
+					<onleft>2</onleft>
+					<onup>4</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
 		</control>
-		<control>
-			<type>image</type>
-			<posX>490</posX>
-			<posY>47</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>control.isvisible(20)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>490</posX>
-			<posY>431</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>control.isvisible(20)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<description>My burner File Size label</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>32</posX>
-			<posY>681</posY>
-			<width>416</width>
-			<label>#burner_size</label>
-			<font>font16</font>
-			<align>center</align>
-			<textcolor>ffffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>DVR Convert Info Label</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>32</posX>
-			<posY>681</posY>
-			<width>416</width>
-			<label>#convert_info</label>
-			<font>font16</font>
-			<align>center</align>
-			<textcolor>ffffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>My burner Info Label</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>32</posX>
-			<posY>681</posY>
-			<width>416</width>
-			<label>#burner_info</label>
-			<font>font16</font>
-			<align>center</align>
-			<textcolor>ffffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>progress bar background</description>
-			<type>image</type>
-			<posX>32</posX>
-			<posY>662</posY>
-			<width>416</width>
-			<height>36</height>
-			<texture>osd_progress_background.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Status Bar</description>
-			<type>statusbar</type>
-			<id>1</id>
-			<posX>20</posX>
-			<posY>662</posY>
-			<width>440</width>
-			<height>36</height>
-			<posYTop>500</posYTop>
-			<texturebg>-</texturebg>
-			<lefttexture>osd_progress_left_dummy.png</lefttexture>
-			<midtexture>osd_progress_mid.png</midtexture>
-			<righttexture>-</righttexture>
-			<visible>yes</visible>
-			<label>#burner_perc</label>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>CD Detail Panel</description>
-			<type>textbox</type>
-			<id>50</id>
-			<label>-</label>
-			<posY>32</posY>
-			<posX>462</posX>
-			<height>500</height>
-			<onleft>2</onleft>
-			<onright>3</onright>
-			<onup>3</onup>
-			<ondown>3</ondown>
-			<font>font12</font>
-			<textcolor>FFFFFFFF</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
+
+
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -261,39 +297,6 @@
 				</control>
 			</control>
 		</control>
-		<control>
-			<type>group</type>
-			<description>group element</description>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<control>
-				<description>file listcontrol</description>
-				<type>listcontrol</type>
-				<id>20</id>
-				<spinPosY>387</spinPosY>
-				<height>312</height>
-				<onright>2</onright>
-				<onleft>2</onleft>
-				<onup>4</onup>
-				<ondown>2</ondown>
-			</control>
-		</control>
-		<control>
-			<type>group</type>
-			<description>group element</description>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<control>
-				<description>copy listcontrol</description>
-				<type>listcontrol</type>
-				<id>30</id>
-				<posY>484</posY>
-				<height>250</height>
-				<onright>2</onright>
-				<onleft>2</onleft>
-				<onup>4</onup>
-				<ondown>2</ondown>
-			</control>
-		</control>
+
 	</controls>
 </window>

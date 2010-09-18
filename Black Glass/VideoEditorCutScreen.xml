@@ -9,228 +9,203 @@
 
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>		
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 
 
 		<!-- LEFT PANEL -->
 
 		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>418</width>
-			<height>720</height>
-			<texture>bg_left.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-
-		<control>
-			<type>label</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>35</posY>
-			<label>2090</label>
-			<font>font24</font>
-			<align>left</align>
-			<textcolor>ffffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control> 
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>47</posY>
-			<width>385</width>
-			<height>53</height>
-			<texture>bg_button_nofocus.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>	
-		<control>
-			<type>button</type>
-			<description>cut</description>
-			<id>24</id>
-			<posX>0</posX>
-			<posY>100</posY>
-			<onup>25</onup>
-			<ondown>25</ondown>
-			<onright>100</onright>
-			<label>2095</label>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>button</type>
-			<id>25</id>
-			<posX>0</posX>
-			<posY>153</posY>
-			<onup>24</onup>
-			<ondown>101</ondown>
-			<onright>100</onright>
-			<label>510</label>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Title</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>230</posY>
-			<align>left</align>
-			<font>font12</font>
-			<label>178</label>
-			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>scrolling info label</description>
-			<id>0</id>
-			<type>label</type>
-			<posX>30</posX>
-			<posY>247</posY>
-			<width>355</width>
-			<font>font14</font>
-			<label>#Play.Current.Title</label>
-			<align>left</align>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>old duration</description>
-			<id>26</id>
-			<posX>30</posX>
-			<posY>282</posY>
-			<onup>24</onup>
-			<ondown>24</ondown>
-			<label>2097</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<id>35</id>
-			<description>Label Alte Länge</description>
-			<posX>30</posX>
-			<posY>299</posY>
-			<onup>24</onup>
-			<ondown>24</ondown>
-			<font>font14</font>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Neue Länge</description>
-			<id>27</id>
-			<posX>30</posX>
-			<posY>334</posY>
-			<onup>24</onup>
-			<ondown>24</ondown>
-			<label>2098</label>
-			<textcolor>90ffffff</textcolor>
-			<font>font12</font>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Label Neue Länge</description>
-			<id>36</id>
-			<posX>30</posX>
-			<posY>351</posY>
-			<onup>24</onup>
-			<ondown>24</ondown>
-			<font>font14</font>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>aktuelle Position</description>
-			<id>32</id>
-			<posX>30</posX>
-			<posY>386</posY>
-			<onup>24</onup>
-			<ondown>24</ondown>
-			<label>2099</label>
-			<textcolor>90ffffff</textcolor>
-			<font>font12</font>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Label Aktuelle Position</description>
-			<id>33</id>
-			<posX>30</posX>
-			<posY>403</posY>
-			<onup>24</onup>
-			<ondown>24</ondown>
-			<label>#currentplaytime</label>
-			<font>font14</font>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>465</posY>
-			<width>385</width>
-			<height>35</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
 			<type>group</type>
-			<description>group element</description>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
 			<control>
-				<description>Schneideliste</description>
-				<type>listcontrol</type>
-				<id>101</id>
+				<id>0</id>
+				<type>image</type>
 				<posX>0</posX>
-				<posY>500</posY>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>2090</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
 				<width>385</width>
-				<height>200</height>
-				<label>Schneideliste</label>
-				<onleft>31</onleft>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>	
+			<control>
+				<type>button</type>
+				<description>cut</description>
+				<id>24</id>
+				<posX>0</posX>
+				<posY>100</posY>
+				<onup>25</onup>
+				<ondown>25</ondown>
 				<onright>100</onright>
+				<label>2095</label>
+			</control>
+			<control>
+				<type>button</type>
+				<id>25</id>
+				<posX>0</posX>
+				<posY>153</posY>
+				<onup>24</onup>
+				<ondown>101</ondown>
+				<onright>100</onright>
+				<label>510</label>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Title</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>230</posY>
+				<align>left</align>
+				<font>font12</font>
+				<label>178</label>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>scrolling info label</description>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>247</posY>
+				<width>355</width>
+				<font>font14</font>
+				<label>#Play.Current.Title</label>
+				<align>left</align>
+			</control>
+			<control>
+				<type>label</type>
+				<description>old duration</description>
+				<id>26</id>
+				<posX>30</posX>
+				<posY>282</posY>
 				<onup>24</onup>
 				<ondown>24</ondown>
-				<textureHeight>35</textureHeight>
-				<font>font14</font>	
-				<font2>font14</font2>	
-				<font3>font14</font3>	
-				<textYOff>2</textYOff>
-				<textYOff2>2</textYOff2>
-				<textYOff3>2</textYOff3>
-				<textXOff>-30</textXOff>
-				<spinPosX>285</spinPosX>
-				<spinPosY>660</spinPosY>
+				<label>2097</label>
+				<font>font12</font>
+				<textcolor>90ffffff</textcolor>
 			</control>
-		</control>
-		<control>
-			<type>label</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>460</posY>
-			<align>left</align>
-			<label>2088</label>
-			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<control>
+				<type>label</type>
+				<id>35</id>
+				<description>Label Alte Länge</description>
+				<posX>30</posX>
+				<posY>299</posY>
+				<onup>24</onup>
+				<ondown>24</ondown>
+				<font>font14</font>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Neue Länge</description>
+				<id>27</id>
+				<posX>30</posX>
+				<posY>334</posY>
+				<onup>24</onup>
+				<ondown>24</ondown>
+				<label>2098</label>
+				<textcolor>90ffffff</textcolor>
+				<font>font12</font>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Label Neue Länge</description>
+				<id>36</id>
+				<posX>30</posX>
+				<posY>351</posY>
+				<onup>24</onup>
+				<ondown>24</ondown>
+				<font>font14</font>
+			</control>
+			<control>
+				<type>label</type>
+				<description>aktuelle Position</description>
+				<id>32</id>
+				<posX>30</posX>
+				<posY>386</posY>
+				<onup>24</onup>
+				<ondown>24</ondown>
+				<label>2099</label>
+				<textcolor>90ffffff</textcolor>
+				<font>font12</font>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Label Aktuelle Position</description>
+				<id>33</id>
+				<posX>30</posX>
+				<posY>403</posY>
+				<onup>24</onup>
+				<ondown>24</ondown>
+				<label>#currentplaytime</label>
+				<font>font14</font>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>465</posY>
+				<width>385</width>
+				<height>35</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<control>
+					<description>Schneideliste</description>
+					<type>listcontrol</type>
+					<id>101</id>
+					<posX>0</posX>
+					<posY>500</posY>
+					<width>385</width>
+					<height>200</height>
+					<label>Schneideliste</label>
+					<onleft>31</onleft>
+					<onright>100</onright>
+					<onup>24</onup>
+					<ondown>24</ondown>
+					<textureHeight>35</textureHeight>
+					<font>font14</font>	
+					<font2>font14</font2>	
+					<font3>font14</font3>	
+					<textYOff>2</textYOff>
+					<textYOff2>2</textYOff2>
+					<textYOff3>2</textYOff3>
+					<textXOff>-30</textXOff>
+					<spinPosX>285</spinPosX>
+					<spinPosY>660</spinPosY>
+				</control>
+			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>460</posY>
+				<align>left</align>
+				<label>2088</label>
+				<textcolor>90ffffff</textcolor>
+			</control>
 		</control>
 
 

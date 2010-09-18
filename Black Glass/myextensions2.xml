@@ -1,95 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
 	<id>801</id>
-	<defaultcontrol>2</defaultcontrol>
+	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
 	<define>#header.label:14001</define>
 	<define>#header.background:hover_extensions.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 		<import>common.facade.background.xml</import>
 		<import>common.facade.itemcount.xml</import>
 		<import>common.facade.pictures.xml</import>
-		
-		<control>
-			<id>600</id>
-			<type>image</type>
-			<posX>39</posX>
-			<posY>100</posY>
-			<width>255</width>
-			<height>255</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<centered>yes</centered>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>93</posY>
-			<width>272</width>
-			<height>271</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">OverlayCase.png</texture>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Current program title</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>385</posY>
-			<width>385</width>
-			<font>font22</font>
-			<label>#selecteditem</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-		<control>
-			<description>Summary</description>
-			<type>textboxscrollup</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>450</posY>
-			<width>385</width>
-			<height>236</height>
-			<textcolor>b0FFFFFF</textcolor>
-			<seperator>: : :</seperator>
-			<font>font16</font>
-			<label>#MPE.Selected.Description</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
 
 		<control>
-			<description>Summary</description>
-			<type>textboxscrollup</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>450</posY>
-			<width>385</width>
-			<height>104</height>
-			<textcolor>b0FFFFFF</textcolor>
-			<seperator>: : :</seperator>
-			<font>font16</font>
-			<label>#MPE.Selected.Description</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)|control.hasfocus(5)|control.hasfocus(8)|control.hasfocus(90)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<id>600</id>
+				<type>image</type>
+				<posX>39</posX>
+				<posY>100</posY>
+				<width>255</width>
+				<height>255</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>93</posY>
+				<width>272</width>
+				<height>271</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">OverlayCase.png</texture>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>385</posY>
+				<width>385</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Summary</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>450</posY>
+				<width>385</width>
+				<height>236</height>
+				<textcolor>b0FFFFFF</textcolor>
+				<seperator>: : :</seperator>
+				<font>font16</font>
+				<label>#MPE.Selected.Description</label>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>Summary</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>450</posY>
+				<width>385</width>
+				<height>104</height>
+				<textcolor>b0FFFFFF</textcolor>
+				<seperator>: : :</seperator>
+				<font>font16</font>
+				<label>#MPE.Selected.Description</label>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
 
 

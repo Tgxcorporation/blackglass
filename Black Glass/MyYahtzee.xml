@@ -7,49 +7,64 @@
 	<define>#header.background:hover_my yahtzee.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
-		
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
+
 		<control>
-			<description>Player Nr</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>100</posY>
-			<label>#Yahtzee_Player</label>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Try x of 3</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>140</posY>
-			<label>#Yahtzee_Try</label>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Dice</description>
-			<type>button</type>
-			<id>6</id>
-			<posX>20</posX>
-			<posY>200</posY>
-			<label>Dice</label>
-			<onup>6</onup>
-			<ondown>6</ondown>
-			<onleft>2</onleft>
-			<onright>501</onright>
-			<textXOff>0</textXOff>
-			<textYOff>3</textYOff>
-			<width>200</width>
-			<height>60</height>
-			<textureFocus>bg_button2_focus.png</textureFocus>
-			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
-			<textalign>center</textalign>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(7)|control.hasfocus(8)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Player Nr</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>100</posY>
+				<label>#Yahtzee_Player</label>
+			</control>
+			<control>
+				<description>Try x of 3</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>140</posY>
+				<label>#Yahtzee_Try</label>
+			</control>
+			<control>
+				<description>Dice</description>
+				<type>button</type>
+				<id>6</id>
+				<posX>20</posX>
+				<posY>200</posY>
+				<label>Dice</label>
+				<onup>6</onup>
+				<ondown>6</ondown>
+				<onleft>2</onleft>
+				<onright>501</onright>
+				<textXOff>0</textXOff>
+				<textYOff>3</textYOff>
+				<width>200</width>
+				<height>60</height>
+				<textureFocus>bg_button2_focus.png</textureFocus>
+				<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+				<textalign>center</textalign>
+			</control>
 		</control>
 
 		<control>

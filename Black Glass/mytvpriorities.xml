@@ -7,8 +7,10 @@
 	<define>#header.background:hover_my tv.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 		<import>common.facade.background.basic.xml</import>
 		<import>common.facade.itemcount.currentmodule.basic.xml</import>
 		<control>
@@ -54,25 +56,38 @@
 				<unfocusedAlpha>120</unfocusedAlpha>
 			</control>
 		</control>
-
 		<control>
-			<description>REAL Current program title</description>
-			<type>fadelabel</type>
-			<id>13</id>
-			<posX>30</posX>
-			<posY>75</posY>
-			<width>360</width>
-			<font>font22</font>
-			<label>#TV.Scheduled.Title</label>
-			<textcolor>FFFFFFFF</textcolor>
-			<visible>control.hasfocus(10)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control> 
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>REAL Current program title</description>
+				<type>fadelabel</type>
+				<id>13</id>
+				<posX>30</posX>
+				<posY>75</posY>
+				<width>360</width>
+				<font>font22</font>
+				<label>#TV.Scheduled.Title</label>
+				<textcolor>FFFFFFFF</textcolor>
+				<visible>control.hasfocus(10)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control> 
 
-		<!-- 		<control>
+			<!-- 		<control>
 			<description>Channel Image</description>
 			<type>image</type>
 			<id>1</id>
@@ -85,68 +100,60 @@
 			<visible>control.hasfocus(10)</visible>
 		</control> -->
 
-		<control>
-			<description>Current program time</description>
-			<type>label</type>
-			<id>14</id>
-			<posX>30</posX>
-			<posY>168</posY>
-			<label>#TV.Scheduled.Time</label>
-			<textcolor>ffffffff</textcolor>
-			<visible>control.hasfocus(10)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>genre</description>
-			<type>fadelabel</type>
-			<id>17</id>
-			<posX>30</posX>
-			<posY>205</posY>
-			<label>#TV.Scheduled.Genre</label>
-			<textcolor>90ffffff</textcolor>
-			<visible>control.hasfocus(10)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-		<control>
-			<description>Description1</description>
-			<type>textboxscrollup</type>
-			<id>15</id>
-			<posX>30</posX>
-			<posY>240</posY>
-			<width>360</width>
-			<height>330</height>
-			<label>#TV.Scheduled.Description</label>
-			<font>font16</font>
-			<textcolor>FFFFFFFF</textcolor>
-			<visible>[control.hasfocus(10)]+player.hasmedia</visible>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
+			<control>
+				<description>Current program time</description>
+				<type>label</type>
+				<id>14</id>
+				<posX>30</posX>
+				<posY>168</posY>
+				<label>#TV.Scheduled.Time</label>
+				<textcolor>ffffffff</textcolor>
+				<visible>control.hasfocus(10)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>genre</description>
+				<type>fadelabel</type>
+				<id>17</id>
+				<posX>30</posX>
+				<posY>205</posY>
+				<label>#TV.Scheduled.Genre</label>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.hasfocus(10)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>15</id>
+				<posX>30</posX>
+				<posY>240</posY>
+				<width>360</width>
+				<height>330</height>
+				<label>#TV.Scheduled.Description</label>
+				<font>font16</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<visible>[control.hasfocus(10)]+player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 
-		<control>
-			<description>Description1</description>
-			<type>textboxscrollup</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>240</posY>
-			<width>360</width>
-			<height>452</height>
-			<label>#TV.Scheduled.Description</label>
-			<font>font16</font>
-			<textcolor>FFFFFFFF</textcolor>
-			<visible>[control.hasfocus(10)]+!player.hasmedia</visible>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<control>
+				<description>Description1</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>240</posY>
+				<width>360</width>
+				<height>452</height>
+				<label>#TV.Scheduled.Description</label>
+				<font>font16</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<visible>[control.hasfocus(10)]+!player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
-
 	</controls>
 </window>

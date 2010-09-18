@@ -7,18 +7,113 @@
 	<define>#header.background:hover_settings.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 		<control>
-			<description>Nav image</description>
-			<type>image</type>
-			<posX>413</posX>
-			<posY>140</posY>
-			<width>449</width>
-			<height>590</height>
-			<texture>bg_home2.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Keypad Options</description>
+					<type>button</type>
+					<id>5</id>
+					<label>9103</label>
+					<hyperlink>9005</hyperlink>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>Display Options</description>
+					<type>button</type>
+					<id>6</id>
+					<label>9104</label>
+					<hyperlink>9003</hyperlink>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>Display control Options</description>
+					<type>button</type>
+					<id>7</id>
+					<label>9105</label>
+					<hyperlink>9002</hyperlink>
+				</control>
+				<control>
+					<description>Equalizer Options</description>
+					<type>button</type>
+					<id>8</id>
+					<label>9106</label>
+					<hyperlink>9004</hyperlink>
+				</control>
+				<control>
+					<description>Backlight Options</description>
+					<type>button</type>
+					<id>9</id>
+					<label>9107</label>
+					<hyperlink>9001</hyperlink>
+				</control>
+				<control>
+					<description>Remote Options</description>
+					<type>button</type>
+					<id>10</id>
+					<label>9108</label>
+					<hyperlink>9006</hyperlink>
+				</control>
+				<control>
+					<description>Monitor Power States</description>
+					<type>togglebutton</type>
+					<id>11</id>
+					<label>9109</label>
+				</control>
+				<control>
+					<description>Contrast</description>
+					<type>selectbutton</type>
+					<id>12</id>
+					<label>9110</label>
+				</control>
+				<control>
+					<description>Brightness</description>
+					<type>selectbutton</type>
+					<id>13</id>
+					<label>9111</label>
+				</control>
+			</control>
 		</control>
 		<control>
 			<description>Plugin is not configured.</description>
@@ -43,87 +138,6 @@
 			<align>center</align>
 			<animation effect="fade" time="250">WindowClose</animation>	
 			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>447</posX>
-			<posY>149</posY>
-			<width>385</width>
-			<height>53</height>
-			<texture>bg_button_nofocus.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>buttons</description>
-			<type>group</type>
-			<posX>447</posX>
-			<posY>202</posY>
-			<layout>StackLayout</layout>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<control>
-				<description>Keypad Options</description>
-				<type>button</type>
-				<id>5</id>
-				<label>9103</label>
-				<hyperlink>9005</hyperlink>
-				<onup>17</onup>
-			</control>
-			<control>
-				<description>Display Options</description>
-				<type>button</type>
-				<id>6</id>
-				<label>9104</label>
-				<hyperlink>9003</hyperlink>
-				<onup>17</onup>
-			</control>
-			<control>
-				<description>Display control Options</description>
-				<type>button</type>
-				<id>7</id>
-				<label>9105</label>
-				<hyperlink>9002</hyperlink>
-			</control>
-			<control>
-				<description>Equalizer Options</description>
-				<type>button</type>
-				<id>8</id>
-				<label>9106</label>
-				<hyperlink>9004</hyperlink>
-			</control>
-			<control>
-				<description>Backlight Options</description>
-				<type>button</type>
-				<id>9</id>
-				<label>9107</label>
-				<hyperlink>9001</hyperlink>
-			</control>
-			<control>
-				<description>Remote Options</description>
-				<type>button</type>
-				<id>10</id>
-				<label>9108</label>
-				<hyperlink>9006</hyperlink>
-			</control>
-			<control>
-				<description>Monitor Power States</description>
-				<type>togglebutton</type>
-				<id>11</id>
-				<label>9109</label>
-			</control>
-			<control>
-				<description>Contrast</description>
-				<type>selectbutton</type>
-				<id>12</id>
-				<label>9110</label>
-			</control>
-			<control>
-				<description>Brightness</description>
-				<type>selectbutton</type>
-				<id>13</id>
-				<label>9111</label>
-			</control>
 		</control>
 	</controls>
 </window>

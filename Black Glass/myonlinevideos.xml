@@ -9,12 +9,13 @@
 	<define>#header.background:hover_OnlineVideos.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
- 
+
 		<!-- *** WINDOW DEFAULTS *** -->
 
 		<import>common.window.background.xml</import>
-		<import>common.video.fanart.xml</import>
+		<import>common.window.video.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
+
 		<control>
 			<id>0</id>
 			<type>image</type>
@@ -56,8 +57,6 @@
 			<font>font13</font>
 			<visible>string.equals(#OnlineVideos.IsBuffering, true) + !player.hasmedia</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -104,133 +103,125 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
-		<control>
-			<type>label</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>10</posY>
-			<label>#header.label</label>
-			<font>font28</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<visible>!control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Filter</description>
-			<type>fadelabel</type>
-			<id>1</id>      
-			<posX>30</posX>
-			<posY>56</posY>
-			<width>385</width>
-			<label>#OnlineVideos.filter</label>
-			<font>font11</font>
-			<visible>!control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<wrapString> : : : </wrapString>
-		</control>    
-		<import>common.time.xml</import>
-		<import>myonlinevideos.details.xml</import>
+
+
+		<import>common.window.time.xml</import>
 		<import>myonlinevideos.facade.xml</import>
 
-		<!-- *** Bottom part *** -->
+		<!-- *** left part *** -->
 		<control>
-			<id>500</id>
-			<type>image</type>
-			<posX>40</posX>
-			<posY>100</posY>
-			<width>342</width>
-			<height>255</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<centered>yes</centered>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>93</posY>
-			<width>360</width>
-			<height>273</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Current program title</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>375</posY>
-			<width>385</width>
-			<font>font22</font>
-			<label>#selecteditem</label>
-			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control>
-		<control>
-			<description>Length</description>
-			<type>label</type>
-			<id>501</id>
-			<posX>30</posX>
-			<posY>417</posY>
-			<width>385</width>
-			<label>#OnlineVideos.length</label>
-			<textcolor>90ffffff</textcolor>
-			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Description</description>
-			<type>textboxscrollup</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>450</posY>
-			<width>355</width>
-			<height>98</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<font>font16</font>
-			<label>#OnlineVideos.desc</label>
-			<textcolor>White</textcolor>
-			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)+player.hasmedia</visible>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control> 
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>control.isvisible(50)+!control.isvisible(51)+!control.isvisible(24)+![control.hasfocus(2)|control.hasfocus(10)|control.hasfocus(9)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Filter</description>
+				<type>fadelabel</type>
+				<id>1</id>      
+				<posX>30</posX>
+				<posY>56</posY>
+				<width>385</width>
+				<label>#OnlineVideos.filter</label>
+				<font>font11</font>
+				<visible>control.isvisible(50)+!control.isvisible(51)+!control.isvisible(24)+![control.hasfocus(2)|control.hasfocus(10)|control.hasfocus(9)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>    
+			<control>
+				<id>500</id>
+				<type>image</type>
+				<posX>40</posX>
+				<posY>100</posY>
+				<width>342</width>
+				<height>255</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>93</posY>
+				<width>360</width>
+				<height>273</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+				<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>375</posY>
+				<width>385</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Length</description>
+				<type>label</type>
+				<id>501</id>
+				<posX>30</posX>
+				<posY>417</posY>
+				<width>385</width>
+				<label>#OnlineVideos.length</label>
+				<textcolor>90ffffff</textcolor>
+				<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Description</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>450</posY>
+				<width>355</width>
+				<height>98</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<font>font16</font>
+				<label>#OnlineVideos.desc</label>
+				<textcolor>White</textcolor>
+				<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)+player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control> 
 
-		<control>
-			<description>Description</description>
-			<type>textboxscrollup</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>450</posY>
-			<width>355</width>
-			<height>229</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<font>font16</font>
-			<label>#OnlineVideos.desc</label>
-			<textcolor>White</textcolor>
-			<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)+!player.hasmedia</visible>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<control>
+				<description>Description</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>450</posY>
+				<width>355</width>
+				<height>229</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<font>font16</font>
+				<label>#OnlineVideos.desc</label>
+				<textcolor>White</textcolor>
+				<visible>!facadeview.filmstrip+!control.isvisible(51)+control.hasfocus(50)+!player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control> 
 
 		<!-- *** HIDDEN MENU *** -->
@@ -444,5 +435,7 @@
 				</control>
 			</control>
 		</control>   
+		<import>myonlinevideos.details.xml</import>
+		
 	</controls>
 </window>

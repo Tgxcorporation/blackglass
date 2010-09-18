@@ -7,41 +7,58 @@
 	<define>#header.background:hover_mytorrents.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 		<!-- <import>mp-mytorrents.common.overlay.xml</import>  -->
 		<import>common.facade.background.basic.xml</import>
 		<import>common.facade.itemcount.basic.xml</import>
 		<control>
-			<description>Spin control Label</description>
-			<type>fadelabel</type>
-			<label>#MyTorrents.Count Torrents</label>
-			<id>0</id>
-			<posX>520</posX>
-			<posY>665</posY>
-			<font>font16</font>
-			<textcolor>60ffffff</textcolor>
-			<width>360</width>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>    
-		<control>
 			<type>group</type>
-			<description>group element</description>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
-				<description>listcontrol</description>
-				<type>listcontrol</type>
-				<id>5</id>
-				<textXOff>-40</textXOff>
-				<scrollOffset>2</scrollOffset>
-				<onup>4</onup>
-				<ondown>4</ondown>
-				<onleft>4</onleft>
-				<onright>4</onright>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(4)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Spin control Label</description>
+				<type>fadelabel</type>
+				<label>#MyTorrents.Count Torrents</label>
+				<id>0</id>
+				<posX>520</posX>
+				<posY>665</posY>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<width>360</width>
+				<wrapString> : : : </wrapString>
 			</control>    
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<control>
+					<description>listcontrol</description>
+					<type>listcontrol</type>
+					<id>5</id>
+					<textXOff>-40</textXOff>
+					<scrollOffset>2</scrollOffset>
+					<onup>4</onup>
+					<ondown>4</ondown>
+					<onleft>4</onleft>
+					<onright>4</onright>
+				</control>    
+			</control>
 		</control>
 		<control>
 			<type>actiongroup</type>

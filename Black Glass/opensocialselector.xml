@@ -9,96 +9,94 @@
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 		<control>
-			<type>image</type>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>418</width>
-			<height>720</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>35</posY>
-			<label>#header.label</label>
-			<font>font24</font>
-			<align>left</align>
-			<textcolor>ffffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control> 
-		<control>
-			<type>image</type>
-			<posX>0</posX>
-			<posY>47</posY>
-			<width>385</width>
-			<height>53</height>
-			<texture>bg_button_nofocus.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>group element</description>
 			<type>group</type>
-			<posX>0</posX>
-			<posY>100</posY>
-			<layout>StackLayout</layout>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
 			<control>
-				<description>Photos1</description>
-				<type>button</type>
-				<id>101</id>
-				<label>Photos</label>
-				<onup>104</onup>
-				<ondown>102</ondown>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
 			</control>
 			<control>
-				<description>Photos2</description>
-				<type>button</type>
-				<id>102</id>
-				<label>Photos</label>
-				<onup>101</onup>
-				<ondown>103</ondown>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
 			</control>
 			<control>
-				<description>Photos3</description>
-				<type>button</type>
-				<id>103</id>
-				<label>Photos</label>
-				<onup>102</onup>
-				<ondown>104</ondown>
+				<description>group element</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>100</posY>
+				<layout>StackLayout</layout>
+				<control>
+					<description>Photos1</description>
+					<type>button</type>
+					<id>101</id>
+					<label>Photos</label>
+					<onup>104</onup>
+					<ondown>102</ondown>
+				</control>
+				<control>
+					<description>Photos2</description>
+					<type>button</type>
+					<id>102</id>
+					<label>Photos</label>
+					<onup>101</onup>
+					<ondown>103</ondown>
+				</control>
+				<control>
+					<description>Photos3</description>
+					<type>button</type>
+					<id>103</id>
+					<label>Photos</label>
+					<onup>102</onup>
+					<ondown>104</ondown>
+				</control>
+				<control>
+					<description>Photos4</description>
+					<type>button</type>
+					<id>104</id>
+					<label>Photos</label>
+					<onup>103</onup>
+					<ondown>105</ondown>
+				</control>	  
+				<control>
+					<description>Photos5</description>
+					<type>button</type>
+					<id>105</id>
+					<label>Photos</label>
+					<onup>104</onup>
+					<ondown>106</ondown>
+				</control>	  
+				<control>
+					<description>Photos6</description>
+					<type>button</type>
+					<id>106</id>
+					<label>Photos</label>
+					<onup>105</onup>
+					<ondown>101</ondown>
+				</control>	  
 			</control>
-			<control>
-				<description>Photos4</description>
-				<type>button</type>
-				<id>104</id>
-				<label>Photos</label>
-				<onup>103</onup>
-				<ondown>105</ondown>
-			</control>	  
-			<control>
-				<description>Photos5</description>
-				<type>button</type>
-				<id>105</id>
-				<label>Photos</label>
-				<onup>104</onup>
-				<ondown>106</ondown>
-			</control>	  
-			<control>
-				<description>Photos6</description>
-				<type>button</type>
-				<id>106</id>
-				<label>Photos</label>
-				<onup>105</onup>
-				<ondown>101</ondown>
-			</control>	  
 		</control>
 	</controls>
 </window>

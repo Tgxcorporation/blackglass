@@ -6,69 +6,72 @@
 	<define>#header.background:hover_musictrivia.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 
 
-
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>490</posX>
-			<posY>7</posY>
-			<width>790</width>
-			<height>100</height>
-			<texture>bg_facade2_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>control.isvisible(50)</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
 
 		<control>
 			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
-				<type>listcontrol</type>
-				<id>50</id>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
 				<posX>490</posX>
-				<posY>107</posY>
+				<posY>7</posY>
 				<width>790</width>
-				<height>580</height>
-				<font>font18</font>
-				<font2>font13</font2>
-				<font3>font13</font3>
-				<textXOff>35</textXOff>
-				<textXOff2>0</textXOff2>
-				<textXOff3>107</textXOff3>
-				<textYOff>6</textYOff>
-				<textYOff2>88</textYOff2>
-				<textYOff3>40</textYOff3>
-				<IconXOff>22</IconXOff>
-				<IconYOff>18</IconYOff>
-				<itemHeight>60</itemHeight>
-				<itemWidth>60</itemWidth>
-				<textureHeight>100</textureHeight>
-				<keepaspectratio>yes</keepaspectratio>
-				<textcolor2>ff909090</textcolor2>
-				<textcolor3>ff909090</textcolor3>
-				<onleft>3</onleft>
-				<onright>50</onright>
-				<visible>no</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-				<textureFocus>bg_facade2_line_focus.png</textureFocus>
-				<textureNoFocus>bg_facade2_line_nofocus.png</textureNoFocus>
+				<height>100</height>
+				<texture>bg_facade2_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>control.isvisible(50)</visible>
+			</control>
+
+			<control>
+				<type>group</type>
+				<control>
+					<type>listcontrol</type>
+					<id>50</id>
+					<posX>490</posX>
+					<posY>107</posY>
+					<width>790</width>
+					<height>580</height>
+					<font>font18</font>
+					<font2>font13</font2>
+					<font3>font13</font3>
+					<textXOff>35</textXOff>
+					<textXOff2>0</textXOff2>
+					<textXOff3>107</textXOff3>
+					<textYOff>6</textYOff>
+					<textYOff2>88</textYOff2>
+					<textYOff3>40</textYOff3>
+					<IconXOff>22</IconXOff>
+					<IconYOff>18</IconYOff>
+					<itemHeight>60</itemHeight>
+					<itemWidth>60</itemWidth>
+					<textureHeight>100</textureHeight>
+					<keepaspectratio>yes</keepaspectratio>
+					<textcolor2>ff909090</textcolor2>
+					<textcolor3>ff909090</textcolor3>
+					<onleft>3</onleft>
+					<onright>50</onright>
+					<visible>no</visible>
+					<animation effect="fade" time="250">visiblechange</animation>
+					<textureFocus>bg_facade2_line_focus.png</textureFocus>
+					<textureNoFocus>bg_facade2_line_nofocus.png</textureNoFocus>
+				</control>
 			</control>
 		</control>
 
@@ -76,10 +79,21 @@
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(901)]</visible>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
 			<control>
 				<type>label</type>
 				<description>Timer value label</description>
@@ -393,7 +407,7 @@
 			<ondown>500</ondown>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
-			<scrollWrapString></scrollWrapString>
+			<scrollWrapString/>
 			<visible>!String.Contains(#MusicTrivia.Game.InProgress,rue)</visible>
 		</control>
 

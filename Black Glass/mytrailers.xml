@@ -9,146 +9,136 @@
 	<controls> 
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>		
+		<import>common.window.time.xml</import>
 		<control>
-			<type>label</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>10</posY>
-			<label>#header.label</label>
-			<font>font28</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<visible>control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Title (Filmstrip)</description>
-			<id>640</id>
-			<posX>30</posX>
-			<posY>677</posY>
-			<width>1220</width>
-			<align>center</align>
-			<font>font24</font>
-			<label>#selecteditem</label>
-			<visible>facadeview.filmstrip+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>	
-		<import>common.time.xml</import>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>control.isvisible(50)+![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Title (Filmstrip)</description>
+				<id>640</id>
+				<posX>30</posX>
+				<posY>677</posY>
+				<width>1220</width>
+				<align>center</align>
+				<font>font24</font>
+				<label>#selecteditem</label>
+				<visible>facadeview.filmstrip+control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>	
 
 
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+				<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>47</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Number of Files Label</description>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>665</posY>
+				<label>#itemcount #itemtype</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>!facadeview.filmstrip+control.isvisible(50)+string.equals(#itemcount)+string.equals(#itemtype)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+
+			<control>
+				<description>fanart list</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>62</posX> 
+				<posY>78</posY> 
+				<width>245</width> 
+				<height>348</height> 
+				<colordiffuse>ffffffff</colordiffuse>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<keepaspectratio>no</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<description>Highlight item</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>73</posY>
+				<width>283</width>
+				<height>360</height>
+				<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>475</posY>
+				<width>350</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>530</posY>
+				<width>350</width>
+				<label>#selecteditem2</label>
+				<textcolor>ffffffff</textcolor>
+				<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
 		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>490</posX>
-			<posY>47</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Number of Files Label</description>
-			<id>0</id>
-			<posX>510</posX>
-			<posY>665</posY>
-			<label>#itemcount #itemtype</label>
-			<font>font16</font>
-			<textcolor>60ffffff</textcolor>
-			<visible>!facadeview.filmstrip+control.isvisible(50)+string.equals(#itemcount)+string.equals(#itemtype)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
+
+
+
 		<import>common.facade.video.xml</import>
-
-		<control>
-			<description>fanart list</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>62</posX> 
-			<posY>78</posY> 
-			<width>245</width> 
-			<height>348</height> 
-			<colordiffuse>ffffffff</colordiffuse>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<keepaspectratio>no</keepaspectratio>
-			<centered>yes</centered>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Highlight item</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>73</posY>
-			<width>283</width>
-			<height>360</height>
-			<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
-			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Current program title</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>475</posY>
-			<width>350</width>
-			<font>font22</font>
-			<label>#selecteditem</label>
-			<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<description>Current program</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>530</posY>
-			<width>350</width>
-			<label>#selecteditem2</label>
-			<textcolor>ffffffff</textcolor>
-			<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-
-
-
-
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -260,99 +250,97 @@
 
 
 		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>418</width>
-			<height>720</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-
-		<control>
-			<type>label</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>35</posY>
-			<label>#header.label</label>
-			<font>font24</font>
-			<align>left</align>
-			<textcolor>ffffffff</textcolor>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control> 
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>47</posY>
-			<width>385</width>
-			<height>53</height>
-			<texture>bg_button_nofocus.png</texture>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-
-		<control>
 			<type>group</type>
-			<description>group element</description>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
 			<control>
-				<description>videolist</description>
-				<type>listcontrol</type>
-				<id>4</id>
+				<id>0</id>
+				<type>image</type>
 				<posX>0</posX>
-				<posY>100</posY>
-				<width>385</width>
-				<height>590</height>
-				<font>font18</font>
-				<textXOff>-30</textXOff>
-				<textYOff>6</textYOff>
-				<spinPosX>-700</spinPosX>
-				<spinPosY>-677</spinPosY>
-				<IconXOff>-100</IconXOff>
-				<IconYOff>7</IconYOff>
-				<onup>4</onup>
-				<ondown>4</ondown>
-				<onright>4</onright>
-				<onleft>4</onleft>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
 				<visible>!control.isvisible(50)</visible>
-				<spinCanFocus>no</spinCanFocus>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
-		</control>
 
-		<control>
-			<description>Video Published</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>680</posY>
-			<label>Trailer published on #MyTrailers.Video.Published</label>
-			<font>font12</font>
-			<textcolor>90FFFFFF</textcolor>
-			<visible>!control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<width>380</width>
-			<wrapString> : : : </wrapString>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control> 
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<control>
+					<description>videolist</description>
+					<type>listcontrol</type>
+					<id>4</id>
+					<posX>0</posX>
+					<posY>100</posY>
+					<width>385</width>
+					<height>590</height>
+					<font>font18</font>
+					<textXOff>-30</textXOff>
+					<textYOff>6</textYOff>
+					<spinPosX>-700</spinPosX>
+					<spinPosY>-677</spinPosY>
+					<IconXOff>-100</IconXOff>
+					<IconYOff>7</IconYOff>
+					<onup>4</onup>
+					<ondown>4</ondown>
+					<onright>4</onright>
+					<onleft>4</onleft>
+					<visible>!control.isvisible(50)</visible>
+					<spinCanFocus>no</spinCanFocus>
+					<animation effect="fade" time="250">visiblechange</animation>
+				</control>
+			</control>
+
+			<control>
+				<description>Video Published</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>680</posY>
+				<label>Trailer published on #MyTrailers.Video.Published</label>
+				<font>font12</font>
+				<textcolor>90FFFFFF</textcolor>
+				<visible>!control.isvisible(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<width>380</width>
+				<wrapString> : : : </wrapString>
+			</control>
 		</control>
 
 
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
+			<visible>!control.isvisible(50)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
@@ -364,8 +352,7 @@
 				<posY>48</posY>
 				<width>948</width>
 				<height>766</height>
-				<texture>bg_facade.png</texture>
-				<visible>!control.isvisible(50)</visible>
+				<texture>bg_facade.png</texture>	
 			</control>
 			<control>
 				<type>image</type>
@@ -376,7 +363,6 @@
 				<height>53</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>!control.isvisible(50)</visible>
 			</control>
 			<control>
 				<description>Title label</description>
@@ -389,7 +375,6 @@
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
 				<width>750</width>
-				<visible>!control.isvisible(50)</visible>
 				<wrapString> : : : </wrapString>
 			</control> 
 
@@ -403,7 +388,6 @@
 				<posX>780</posX>
 				<posY>170</posY>
 				<width>470</width>
-				<visible>!control.isvisible(50)</visible>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -416,7 +400,6 @@
 				<textcolor>FFFFFFFF</textcolor>
 				<posX>780</posX>
 				<posY>208</posY>
-				<visible>!control.isvisible(50)</visible>
 			</control>
 
 			<control>
@@ -429,7 +412,6 @@
 				<textcolor>90FFFFFF</textcolor>
 				<posX>780</posX>
 				<posY>250</posY>
-				<visible>!control.isvisible(50)</visible>
 				<wrapString> : : : </wrapString>
 			</control>
 
@@ -443,7 +425,6 @@
 				<textcolor>ffFFFFFF</textcolor>
 				<posX>780</posX>
 				<posY>290</posY>
-				<visible>!control.isvisible(50)</visible>
 				<wrapString> : : : </wrapString>
 			</control>
 
@@ -457,7 +438,6 @@
 				<textcolor>90ffffff</textcolor>
 				<font>font16</font>
 				<label>#MyTrailers.Details.Cast #MyTrailers.Details.Cast</label>
-				<visible>!control.isvisible(50)</visible>
 				<height>130</height>
 			</control>
 
@@ -470,7 +450,6 @@
 				<height>53</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>!control.isvisible(50)</visible>
 			</control>
 
 			<control>
@@ -484,7 +463,6 @@
 				<font>font18</font>
 				<textcolor>White</textcolor>
 				<label>#MyTrailers.Details.Description</label>
-				<visible>!control.isvisible(50)</visible>
 				<seperator>: : :</seperator>
 			</control>
 
@@ -498,7 +476,6 @@
 				<height>282</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#MyTrailers.Details.Poster</texture>
 				<keepaspectratio>no</keepaspectratio>
-				<visible>!control.isvisible(50)</visible>
 			</control>
 			<control>
 				<description>Highlight item</description>
@@ -509,7 +486,6 @@
 				<width>230</width>
 				<height>292</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-				<visible>!control.isvisible(50)</visible>
 			</control>
 		</control>
 

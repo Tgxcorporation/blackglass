@@ -7,113 +7,102 @@
 	<define>#header.background:hover_tetris.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 
 
 		<control>
-			<description>Score: label</description>
-			<type>label</type>
-			<id>201</id>
-			<posX>30</posX>
-			<posY>100</posY>
-			<label>19005</label>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Score</description>
-			<type>label</type>
-			<id>202</id>
-			<posX>343</posX>
-			<posY>100</posY>
-			<width>288</width>
-			<align>right</align>
-			<label>#tetris_score</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Level: label</description>
-			<type>label</type>
-			<id>203</id>
-			<posX>30</posX>
-			<posY>140</posY>
-			<label>19006</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Level</description>
-			<type>label</type>
-			<id>204</id>
-			<posX>343</posX>
-			<posY>140</posY>
-			<width>288</width>
-			<align>right</align>
-			<label>#tetris_level</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Lines: label</description>
-			<type>label</type>
-			<id>205</id>
-			<posX>30</posX>
-			<posY>180</posY>
-			<label>19007</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Lines</description>
-			<type>label</type>
-			<id>206</id>
-			<posX>343</posX>
-			<posY>180</posY>
-			<width>288</width>
-			<align>right</align>
-			<label>#tetris_lines</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Highscore: label</description>
-			<type>label</type>
-			<id>205</id>
-			<posX>30</posX>
-			<posY>220</posY>
-			<label>19008</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Highscore</description>
-			<type>label</type>
-			<id>206</id>
-			<posX>343</posX>
-			<posY>220</posY>
-			<width>288</width>
-			<align>right</align>
-			<label>#tetris_highscore</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>Score: label</description>
+				<type>label</type>
+				<id>201</id>
+				<posX>30</posX>
+				<posY>100</posY>
+				<label>19005</label>
+			</control>
+			<control>
+				<description>Score</description>
+				<type>label</type>
+				<id>202</id>
+				<posX>343</posX>
+				<posY>100</posY>
+				<width>288</width>
+				<align>right</align>
+				<label>#tetris_score</label>
+			</control>
+			<control>
+				<description>Level: label</description>
+				<type>label</type>
+				<id>203</id>
+				<posX>30</posX>
+				<posY>140</posY>
+				<label>19006</label>
+			</control>
+			<control>
+				<description>Level</description>
+				<type>label</type>
+				<id>204</id>
+				<posX>343</posX>
+				<posY>140</posY>
+				<width>288</width>
+				<align>right</align>
+				<label>#tetris_level</label>
+			</control>
+			<control>
+				<description>Lines: label</description>
+				<type>label</type>
+				<id>205</id>
+				<posX>30</posX>
+				<posY>180</posY>
+				<label>19007</label>
+			</control>
+			<control>
+				<description>Lines</description>
+				<type>label</type>
+				<id>206</id>
+				<posX>343</posX>
+				<posY>180</posY>
+				<width>288</width>
+				<align>right</align>
+				<label>#tetris_lines</label>
+			</control>
+			<control>
+				<description>Highscore: label</description>
+				<type>label</type>
+				<id>205</id>
+				<posX>30</posX>
+				<posY>220</posY>
+				<label>19008</label>
+			</control>
+			<control>
+				<description>Highscore</description>
+				<type>label</type>
+				<id>206</id>
+				<posX>343</posX>
+				<posY>220</posY>
+				<width>288</width>
+				<align>right</align>
+				<label>#tetris_highscore</label>
+			</control>
 		</control>
 
 		<control>

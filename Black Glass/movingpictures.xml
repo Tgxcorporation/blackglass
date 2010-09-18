@@ -104,8 +104,8 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>#MovingPictures.Backdrop</texture>
-			<animation effect="fade" start="0" end="100" time="250">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="250" delay="250">Hidden</animation>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">hidden</animation>
 			<animation effect="fade" time="1">WindowClose</animation>	
 			<animation effect="fade" time="250">WindowOpen</animation>
 			<!-- Do not modify the visibility for this component. It is handled by the plug-in. Use the above 
@@ -121,8 +121,8 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>#MovingPictures.Backdrop2</texture>
-			<animation effect="fade" start="0" end="100" time="250">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="250" delay="250">Hidden</animation>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">hidden</animation>
 			<animation effect="fade" time="1">WindowClose</animation>	
 			<animation effect="fade" time="250">WindowOpen</animation>
 			<!-- Do not modify the visibility for this component. It is handled by the plug-in. Use the above 
@@ -130,20 +130,10 @@
 		</control>
 
 		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
 
 
-		<control>
-			<type>label</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>05</posY>
-			<label>#header.label</label>
-			<font>font28</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
+
 
 
 
@@ -161,77 +151,85 @@
 
 		<!-- Top Bar controls -->
 
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>5</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)]]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 
-		<import>common.time.xml</import>
-		<control>
-			<description>Parental controls Lock Indicator</description>
-			<type>image</type>
-			<id>16</id>
-			<posX>32</posX>
-			<posY>58</posY>
-			<width>20</width>
-			<height>20</height>
-			<texture>lock2.png</texture>
-			<visible>[control.isvisible(50)|control.isvisible(51)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Current Category</description>
-			<type>label</type>
-			<id>9916</id>
-			<posX>30</posX>
-			<posY>56</posY>
-			<font>font13</font>
-			<width>900</width>
-			<label>#MovingPictures.CurrentNode.name</label>
-			<visible>!control.isvisible(16)+[control.isvisible(50)|control.isvisible(51)]+!control.isvisible(17)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Current Category / Filter</description>
-			<type>label</type>
-			<id>9917</id>
-			<posX>30</posX>
-			<posY>56</posY>
-			<font>font13</font>
-			<width>900</width>
-			<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
-			<visible>!control.isvisible(16)+[control.isvisible(50)|control.isvisible(51)]+control.isvisible(17)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Current Category</description>
-			<type>label</type>
-			<id>9918</id>
-			<posX>60</posX>
-			<posY>56</posY>
-			<font>font13</font>
-			<width>870</width>
-			<label>#MovingPictures.CurrentNode.name</label>
-			<visible>control.isvisible(16)+[control.isvisible(50)|control.isvisible(51)]+!control.isvisible(17)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Current Category / Filter</description>
-			<type>label</type>
-			<id>9919</id>
-			<posX>60</posX>
-			<posY>56</posY>
-			<font>font13</font>
-			<width>870</width>
-			<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
-			<visible>control.isvisible(16)+[control.isvisible(50)|control.isvisible(51)]+control.isvisible(17)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<control>
+				<description>Parental controls Lock Indicator</description>
+				<type>image</type>
+				<id>16</id>
+				<posX>32</posX>
+				<posY>58</posY>
+				<width>20</width>
+				<height>20</height>
+				<texture>lock2.png</texture>
+				<visible>[control.isvisible(50)|control.isvisible(51)]+![control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)]]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Current Category</description>
+				<type>label</type>
+				<id>9916</id>
+				<posX>30</posX>
+				<posY>56</posY>
+				<font>font13</font>
+				<width>900</width>
+				<label>#MovingPictures.CurrentNode.name</label>
+				<visible>!control.isvisible(16)+[[control.isvisible(50)|control.isvisible(51)]+!control.isvisible(17)]+![control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)]]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Current Category / Filter</description>
+				<type>label</type>
+				<id>9917</id>
+				<posX>30</posX>
+				<posY>56</posY>
+				<font>font13</font>
+				<width>900</width>
+				<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
+				<visible>!control.isvisible(16)+[[control.isvisible(50)|control.isvisible(51)]+control.isvisible(17)]+![control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)]]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Current Category</description>
+				<type>label</type>
+				<id>9918</id>
+				<posX>60</posX>
+				<posY>56</posY>
+				<font>font13</font>
+				<width>870</width>
+				<label>#MovingPictures.CurrentNode.name</label>
+				<visible>control.isvisible(16)+[[control.isvisible(50)|control.isvisible(51)]+!control.isvisible(17)]+![control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)]]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Current Category / Filter</description>
+				<type>label</type>
+				<id>9919</id>
+				<posX>60</posX>
+				<posY>56</posY>
+				<font>font13</font>
+				<width>870</width>
+				<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
+				<visible>control.isvisible(16)+[[control.isvisible(50)|control.isvisible(51)]+control.isvisible(17)]+![control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)]]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
 
 

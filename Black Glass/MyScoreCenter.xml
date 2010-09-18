@@ -63,8 +63,8 @@
 			<height>720</height>
 			<texture>#fanarthandler.scorecenter.backdrop1.selected</texture>
 			<visible>plugin.isenabled(Fanart Handler)+control.isvisible(91919291)+control.isvisible(91919293)</visible>
-			<animation effect="fade" start="0" end="100" time="250" delay="100" reversible="false">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">hidden</animation>
 			<animation effect="fade" time="1">WindowClose</animation>	
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
@@ -79,115 +79,124 @@
 			<height>720</height>
 			<texture>#fanarthandler.scorecenter.backdrop2.selected</texture>
 			<visible>plugin.isenabled(Fanart Handler)+control.isvisible(91919292)+control.isvisible(91919293)</visible>
-			<animation effect="fade" start="0" end="100" time="250" delay="100" reversible="false">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">hidden</animation>
 			<animation effect="fade" time="1">WindowClose</animation>	
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 
 		<import>common.window.overlay.xml</import>		
-		<import>common.time.xml</import>
-		<control>
-			<type>image</type>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>418</width>
-			<height>720</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-
-		<control>
-			<type>label</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>34</posY>
-			<label>Score Center</label>
-			<font>font24</font>
-			<align>left</align>
-			<textcolor>ffffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control> 
-		<control>
-			<type>image</type>
-			<posX>0</posX>
-			<posY>45</posY>
-			<width>385</width>
-			<height>53</height>
-			<texture>bg_button_nofocus.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
+		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
-			<description>group element</description>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
 			<control>
-				<description>Scores</description>
-				<type>listcontrol</type>
-				<id>10</id>
+				<type>image</type>
 				<posX>0</posX>
-				<posY>98</posY>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>34</posY>
+				<label>Score Center</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>45</posY>
 				<width>385</width>
-				<height>650</height>
-				<textYOff>6</textYOff>
-				<textvisible2>no</textvisible2>
-				<textvisible3>no</textvisible3>
-				<keepaspectratio>yes</keepaspectratio>
-				<spinPosX>-510</spinPosX>
-				<spinPosY>650</spinPosY>
-				<onright>40</onright>
-				<font>font18</font>
-				<spinCanFocus>no</spinCanFocus>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<control>
+					<description>Scores</description>
+					<type>listcontrol</type>
+					<id>10</id>
+					<posX>0</posX>
+					<posY>98</posY>
+					<width>385</width>
+					<height>650</height>
+					<textYOff>6</textYOff>
+					<textvisible2>no</textvisible2>
+					<textvisible3>no</textvisible3>
+					<keepaspectratio>yes</keepaspectratio>
+					<spinPosX>-510</spinPosX>
+					<spinPosY>650</spinPosY>
+					<onright>40</onright>
+					<font>font18</font>
+					<spinCanFocus>no</spinCanFocus>
+				</control>
 			</control>
 		</control>
 
 
 		<control>
-			<description>Current Category</description>
-			<type>image</type>
-			<posX>465</posX>
-			<posY>10</posY>
-			<width>50</width>
-			<height>50</height>
-			<texture>#ScoreCenter.CatIco</texture>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Current League Image</description>
-			<type>image</type>
-			<posX>525</posX>
-			<posY>10</posY>
-			<width>50</width>
-			<height>50</height>
-			<texture>#ScoreCenter.LIco</texture>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
-		<control>
-			<description>Current Score Image</description>
-			<type>image</type>
-			<posX>585</posX>
-			<posY>10</posY>
-			<width>50</width>
-			<height>50</height>
-			<texture>#ScoreCenter.ScoreIco</texture>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>Current Category</description>
+				<type>image</type>
+				<posX>465</posX>
+				<posY>10</posY>
+				<width>50</width>
+				<height>50</height>
+				<texture>#ScoreCenter.CatIco</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<description>Current League Image</description>
+				<type>image</type>
+				<posX>525</posX>
+				<posY>10</posY>
+				<width>50</width>
+				<height>50</height>
+				<texture>#ScoreCenter.LIco</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<description>Current Score Image</description>
+				<type>image</type>
+				<posX>585</posX>
+				<posY>10</posY>
+				<width>50</width>
+				<height>50</height>
+				<texture>#ScoreCenter.ScoreIco</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+			</control>
 
-		<!--
+			<!--
     <control>
       <description>Current Category</description>
       <type>label</type>
@@ -209,11 +218,6 @@
       <textcolor>ffffffff</textcolor>
     </control>
     -->
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
 				<type>image</type>
 				<posX>408</posX>

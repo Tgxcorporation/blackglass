@@ -7,132 +7,118 @@
 	<define>#header.background:hover_mynumberplace.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
 
 		<control>
-			<description>current playtime Label</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>100</posY>
-			<width>711</width>
-			<label>#numberplace.time</label>
-			<font>font22</font>
-			<align>left</align>
-			<textcolor>White</textcolor>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>		
 			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
-		</control>
-		<control>
-			<description>Highscore: label</description>
-			<type>label</type>
-			<id>21</id>
-			<posX>30</posX>
-			<posY>200</posY>
-			<label>19008</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
-		</control>
-		<control>
-			<description>Time</description>
-			<type>label</type>
-			<id>22</id>
-			<posX>343</posX>
-			<posY>200</posY>
-			<width>288</width>
-			<align>right</align>
-			<label>#numberplace.time</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
-		</control>
-		<control>
-			<description>Rank1: label</description>
-			<type>label</type>
-			<id>24</id>
-			<posX>30</posX>
-			<posY>240</posY>
-			<label>#numberplace.name1</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
-		</control>
-		<control>
-			<description>Rank1 Score: label</description>
-			<type>label</type>
-			<id>25</id>
-			<posX>343</posX>
-			<posY>240</posY>
-			<width>288</width>
-			<align>right</align>
-			<label>#numberplace.score1</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
-		</control>
-		<control>
-			<description>Rank2 Name: label</description>
-			<type>label</type>
-			<id>26</id>
-			<posX>30</posX>
-			<posY>280</posY>
-			<label>#numberplace.name2</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
-		</control>
-		<control>
-			<description>Rank2 Score: label</description>
-			<type>label</type>
-			<id>27</id>
-			<posX>343</posX>
-			<posY>280</posY>
-			<width>288</width>
-			<align>right</align>
-			<label>#numberplace.score2</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
-		</control>
-		<control>
-			<description>Rank3 Name: label</description>
-			<type>label</type>
-			<id>28</id>
-			<posX>30</posX>
-			<posY>320</posY>
-			<label>#numberplace.name3</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
-		</control>
-		<control>
-			<description>Rank3 Score: label</description>
-			<type>label</type>
-			<id>29</id>
-			<posX>343</posX>
-			<posY>320</posY>
-			<width>288</width>
-			<align>right</align>
-			<label>#numberplace.score3</label>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>current playtime Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>100</posY>
+				<width>711</width>
+				<label>#numberplace.time</label>
+				<font>font22</font>
+				<align>left</align>
+				<textcolor>White</textcolor>
+			</control>
+			<control>
+				<description>Highscore: label</description>
+				<type>label</type>
+				<id>21</id>
+				<posX>30</posX>
+				<posY>200</posY>
+				<label>19008</label>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>22</id>
+				<posX>343</posX>
+				<posY>200</posY>
+				<width>288</width>
+				<align>right</align>
+				<label>#numberplace.time</label>
+			</control>
+			<control>
+				<description>Rank1: label</description>
+				<type>label</type>
+				<id>24</id>
+				<posX>30</posX>
+				<posY>240</posY>
+				<label>#numberplace.name1</label>
+			</control>
+			<control>
+				<description>Rank1 Score: label</description>
+				<type>label</type>
+				<id>25</id>
+				<posX>343</posX>
+				<posY>240</posY>
+				<width>288</width>
+				<align>right</align>
+				<label>#numberplace.score1</label>
+			</control>
+			<control>
+				<description>Rank2 Name: label</description>
+				<type>label</type>
+				<id>26</id>
+				<posX>30</posX>
+				<posY>280</posY>
+				<label>#numberplace.name2</label>
+			</control>
+			<control>
+				<description>Rank2 Score: label</description>
+				<type>label</type>
+				<id>27</id>
+				<posX>343</posX>
+				<posY>280</posY>
+				<width>288</width>
+				<align>right</align>
+				<label>#numberplace.score2</label>
+			</control>
+			<control>
+				<description>Rank3 Name: label</description>
+				<type>label</type>
+				<id>28</id>
+				<posX>30</posX>
+				<posY>320</posY>
+				<label>#numberplace.name3</label>
+			</control>
+			<control>
+				<description>Rank3 Score: label</description>
+				<type>label</type>
+				<id>29</id>
+				<posX>343</posX>
+				<posY>320</posY>
+				<width>288</width>
+				<align>right</align>
+				<label>#numberplace.score3</label>
+			</control>
 		</control>
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>

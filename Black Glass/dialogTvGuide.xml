@@ -5,8 +5,8 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:4</define>
 	<define>#header.background:</define>
-	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
-	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+	<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 	<controls>
 		<control>
 			<type>label</type>
@@ -16,9 +16,10 @@
 			<label>#header.label</label>
 			<font>font28</font>
 			<align>left</align>
-			<textcolor>60ffffff</textcolor><animation effect="fade" time="250">WindowClose</animation>
+			<textcolor>60ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 		<control>
 			<type>image</type>
 			<posX>-5</posX>

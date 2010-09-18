@@ -9,10 +9,10 @@
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
-		<import>common.video.fanart.xml</import>
+		<import>common.window.video.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
 		<import>common.window.accessories.xml</import>
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 		<import>common.facade.background.xml</import>
 		<import>common.facade.itemcount.currentmodule.xml</import>
 		<import>common.facade.video.xml</import>
@@ -20,128 +20,133 @@
 
 
 		<control>
-			<description>fanart list</description>
-			<type>image</type>
-			<id>500</id>
-			<posX>62</posX> 
-			<posY>88</posY> 
-			<width>245</width> 
-			<height>348</height> 
-			<colordiffuse>ffffffff</colordiffuse>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>!facadeview.filmstrip + control.hasfocus(50)</visible>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Highlight item</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>83</posY>
-			<width>283</width>
-			<height>360</height>
-			<visible>!facadeview.filmstrip + control.hasfocus(50)</visible>
-			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>imagelist</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>454</posY>
-			<width>302</width>
-			<height>40</height>
-			<textureWidth>22</textureWidth>
-			<textureHeight>22</textureHeight>
-			<subitems>
-				<subitem>star_nofocus.png</subitem>
-				<subitem>star_focus.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>10</imagesToDraw>
-			<percentage>#rating</percentage>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)+control.hastext(11234)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(10)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>fanart list</description>
+				<type>image</type>
+				<id>500</id>
+				<posX>62</posX> 
+				<posY>88</posY> 
+				<width>245</width> 
+				<height>348</height> 
+				<colordiffuse>ffffffff</colordiffuse>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>!facadeview.filmstrip + control.hasfocus(50)</visible>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Highlight item</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>83</posY>
+				<width>283</width>
+				<height>360</height>
+				<visible>!facadeview.filmstrip + control.hasfocus(50)</visible>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>imagelist</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>454</posY>
+				<width>302</width>
+				<height>40</height>
+				<textureWidth>22</textureWidth>
+				<textureHeight>22</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#rating</percentage>
+				<visible>!facadeview.filmstrip+control.hasfocus(50)+control.hastext(11234)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 
-		<control>
-			<type>fadelabel</type>
-			<description>Current program title</description>
-			<id>11234</id>
-			<posX>30</posX>
-			<posY>476</posY>
-			<width>420</width>
-			<font>font22</font>
-			<label>#title</label>
-			<visible>!facadeview.filmstrip + control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-		</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>11234</id>
+				<posX>30</posX>
+				<posY>476</posY>
+				<width>420</width>
+				<font>font22</font>
+				<label>#title</label>
+				<visible>!facadeview.filmstrip + control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
 
 
 
 
-		<control>
-			<description>Genre value</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>517</posY>
-			<width>420</width>
-			<textcolor>90FFFFFF</textcolor>
-			<label>#genre</label>
-			<visible>!facadeview.filmstrip + control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-			<font>font14</font>
-		</control>
+			<control>
+				<description>Genre value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>517</posY>
+				<width>420</width>
+				<textcolor>90FFFFFF</textcolor>
+				<label>#genre</label>
+				<visible>!facadeview.filmstrip + control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+				<font>font14</font>
+			</control>
 
-		<control>
-			<description>Runtime value</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>544</posY>
-			<width>420</width>
-			<label>#year     #mpaarating     #runtime mins</label>
-			<textcolor>90FFFFFF</textcolor>
-			<visible>!facadeview.filmstrip + control.hasfocus(50)+control.hastext(11234)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<wrapString> : : : </wrapString>
-			<font>font14</font>
-		</control>
+			<control>
+				<description>Runtime value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>544</posY>
+				<width>420</width>
+				<label>#year     #mpaarating     #runtime mins</label>
+				<textcolor>90FFFFFF</textcolor>
+				<visible>!facadeview.filmstrip + control.hasfocus(50)+control.hastext(11234)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+				<font>font14</font>
+			</control>
 
-		<control>
-			<description>Plot value</description>
-			<type>textboxscrollup</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>575</posY>
-			<width>420</width>
-			<height>124</height>
-			<label>#plot</label>
-			<font>font12</font>
-			<textcolor>FFFFFFFF</textcolor>
-			<visible>!facadeview.filmstrip + control.hasfocus(50) + !player.hasmedia</visible>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<control>
+				<description>Plot value</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>575</posY>
+				<width>420</width>
+				<height>124</height>
+				<label>#plot</label>
+				<font>font12</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<visible>!facadeview.filmstrip + control.hasfocus(50) + !player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
 
 

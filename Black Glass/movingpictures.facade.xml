@@ -40,11 +40,15 @@
 			<texture>gradient.png</texture>
 			<visible>facadeview.filmstrip+control.isvisible(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<type>group</type>
 			<description>group element</description>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation>
 			<control>
@@ -157,36 +161,39 @@
 		</control>
 
 
-		<!-- Selected Category Facade Item -->	
 		<control>
-			<description>Default Image</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>10</posX>
-			<posY>90</posY>
-			<width>360</width>
-			<height>360</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">Categories\Movies.png</texture>
-			<keepaspectratio>yes</keepaspectratio>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<visible>control.isvisible(51)+!control.HasThumb(100)</visible>
-		</control>
-		<control>
-			<description>Default Image</description>
-			<type>image</type>
-			<id>100</id>
-			<posX>10</posX>
-			<posY>90</posY>
-			<width>360</width>
-			<height>360</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">Categories\#MovingPictures.SelectedNode.name.png</texture>	
-			<keepaspectratio>yes</keepaspectratio>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<visible>control.isvisible(51)</visible>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<!-- Selected Category Facade Item -->	
+			<control>
+				<description>Default Image</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>10</posX>
+				<posY>90</posY>
+				<width>360</width>
+				<height>360</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">Categories\Movies.png</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>control.isvisible(51)+!control.HasThumb(100)</visible>
+			</control>
+			<control>
+				<description>Default Image</description>
+				<type>image</type>
+				<id>100</id>
+				<posX>10</posX>
+				<posY>90</posY>
+				<width>360</width>
+				<height>360</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">Categories\#MovingPictures.SelectedNode.name.png</texture>	
+				<keepaspectratio>yes</keepaspectratio>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>control.isvisible(51)</visible>
+			</control>
 		</control>
 
 	</controls>

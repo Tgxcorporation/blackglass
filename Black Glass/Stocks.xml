@@ -9,24 +9,48 @@
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<control>
-			<type>label</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>10</posY>
-			<label>#header.label</label>
-			<font>font24</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<animation effect="fade" time="250">WindowClose</animation>
-		</control>
-		<import>common.time.xml</import>
+		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<!-- *** Provider Info *** -->
+			<control>
+				<description>Provider Info</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>85</posY>
+				<label>Provided by Yahoo! Finance</label>
+				<font>font12</font>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Provider Info</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>105</posY>
+				<label>Quotes are delayed</label>
+				<font>font12</font>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -3340,33 +3364,7 @@
 		</control>
 
 
-		<!-- *** Provider Info *** -->
-		<control>
-			<description>Provider Info</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>85</posY>
-			<label>Provided by Yahoo! Finance</label>
-			<font>font12</font>
-			<visible>control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<description>Provider Info</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>105</posY>
-			<label>Quotes are delayed</label>
-			<font>font12</font>
-			<visible>control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="250" delay="200">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
+
 
 		<control>
 			<type>actiongroup</type>
