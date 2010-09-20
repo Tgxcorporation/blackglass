@@ -1982,32 +1982,6 @@ namespace BlackGlassEditor
                 {
                     txt = txt + @"<!-- ID 100 -->
 		<control>
-			<description>100 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>100</posX>
-			<posY>398</posY>
-			<width>239</width>
-			<height>245</height>
-			<texture>basichome_100_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
-		<control>
-			<description>100 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>100</posX>
-			<posY>398</posY>
-			<width>239</width>
-			<height>245</height>
-			<texture>basichome_100_focus.png</texture>
-			<visible>control.hasfocus(100)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-		    <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
-		<control>
 			<description>100 hover label</description>
 			<type>label</type>
 			<id>0</id>
@@ -2029,7 +2003,7 @@ namespace BlackGlassEditor
 			<id>100</id>
 			<posX>100</posX>
 			<posY>398</posY>
-			<width>241</width>
+			<width>239</width>
 			<height>245</height>
 			<label>" + SecurityElement.Escape(textBox100.Text) + @"</label>
 			<textXOff>3000</textXOff>
@@ -2038,8 +2012,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("100") + @"</onright>
 			<onup>" + findButtonUp("100") + @"</onup>
 			<ondown>" + findButtonDown("100") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_100_focus.png</textureFocus>
+			<textureNoFocus>basichome_100_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
 
         ";
@@ -2049,32 +2025,6 @@ namespace BlackGlassEditor
                 if (comboBox101.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 101 -->
-		<control>
-			<description>101 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>336</posX>
-			<posY>410</posY>
-			<width>209</width>
-			<height>214</height>
-			<texture>basichome_101_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
-		<control>
-			<description>101 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>336</posX>
-			<posY>410</posY>
-			<width>209</width>
-			<height>214</height>
-			<texture>basichome_101_focus.png</texture>
-			<visible>control.hasfocus(101)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
 		<control>
 			<description>101 hover label</description>
 			<type>label</type>
@@ -2095,10 +2045,10 @@ namespace BlackGlassEditor
 			<description>101 button</description>
 			<type>button</type>
 			<id>101</id>
-			<posX>335</posX>
+			<posX>336</posX>
 			<posY>410</posY>
-			<width>211</width>
-			<height>215</height>
+			<width>209</width>
+			<height>214</height>
 			<label>" + SecurityElement.Escape(textBox101.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid101.Text) + @"</hyperlink>
@@ -2106,8 +2056,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("101") + @"</onright>
 			<onup>" + findButtonUp("101") + @"</onup>
 			<ondown>" + findButtonDown("101") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_101_focus.png</textureFocus>
+			<textureNoFocus>basichome_101_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 
         ";
@@ -2117,32 +2069,6 @@ namespace BlackGlassEditor
                 if (comboBox102.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 102 -->
-		<control>
-			<description>102 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>542</posX>
-			<posY>414</posY>
-			<width>196</width>
-			<height>205</height>
-			<texture>basichome_102_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>
-		<control>
-			<description>102 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>542</posX>
-			<posY>414</posY>
-			<width>196</width>
-			<height>205</height>
-			<visible>control.hasfocus(102)</visible>
-			<texture>basichome_102_focus.png</texture>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>
 		<control>
 			<description>102 hover label</description>
 			<type>label</type>
@@ -2163,9 +2089,9 @@ namespace BlackGlassEditor
 			<description>102 button</description>
 			<type>button</type>
 			<id>102</id>
-			<posX>541</posX>
+			<posX>542</posX>
 			<posY>414</posY>
-			<width>198</width>
+			<width>196</width>
 			<height>205</height>
 			<label>" + SecurityElement.Escape(textBox102.Text) + @"</label>
 			<textXOff>3000</textXOff>
@@ -2174,8 +2100,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("102") + @"</onright>
 			<onup>" + findButtonUp("102") + @"</onup>
 			<ondown>" + findButtonDown("102") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_102_focus.png</textureFocus>
+			<textureNoFocus>basichome_102_nofocus.png</textureNoFocus>
+		    <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
 
         ";
@@ -2184,32 +2112,6 @@ namespace BlackGlassEditor
                 if (comboBox103.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 103 -->
-		<control>
-			<description>103 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>736</posX>
-			<posY>410</posY>
-			<width>209</width>
-			<height>215</height>
-			<texture>basichome_103_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
-		<control>
-			<description>103 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>736</posX>
-			<posY>410</posY>
-			<width>209</width>
-			<height>215</height>
-			<texture>basichome_103_focus.png</texture>
-			<visible>control.hasfocus(103)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
 		<control>
 			<description>103 hover label</description>
 			<type>label</type>
@@ -2230,9 +2132,9 @@ namespace BlackGlassEditor
 			<description>103 button</description>
 			<type>button</type>
 			<id>103</id>
-			<posX>735</posX>
+			<posX>736</posX>
 			<posY>410</posY>
-			<width>210</width>
+			<width>209</width>
 			<height>215</height>
 			<label>" + SecurityElement.Escape(textBox103.Text) + @"</label>
 			<textXOff>3000</textXOff>
@@ -2241,8 +2143,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("103") + @"</onright>
 			<onup>" + findButtonUp("103") + @"</onup>
 			<ondown>" + findButtonDown("103") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_103_focus.png</textureFocus>
+			<textureNoFocus>basichome_103_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 
         ";
@@ -2251,32 +2155,6 @@ namespace BlackGlassEditor
                 if (comboBox104.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 104 -->
-		<control>
-			<description>104 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>941</posX>
-			<posY>398</posY>
-			<width>239</width>
-			<height>242</height>
-			<texture>basichome_104_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
-		<control>
-			<description>104 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>941</posX>
-			<posY>398</posY>
-			<width>239</width>
-			<height>242</height>
-			<texture>basichome_104_focus.png</texture>
-			<visible>control.hasfocus(104)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
 		<control>
 			<description>104 hover label</description>
 			<type>label</type>
@@ -2297,9 +2175,9 @@ namespace BlackGlassEditor
 			<description>104 button</description>
 			<type>button</type>
 			<id>104</id>
-			<posX>940</posX>
+			<posX>941</posX>
 			<posY>398</posY>
-			<width>241</width>
+			<width>239</width>
 			<height>242</height>
 			<label>" + SecurityElement.Escape(textBox104.Text) + @"</label>
 			<textXOff>3000</textXOff>
@@ -2308,8 +2186,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("104") + @"</onright>
 			<onup>" + findButtonUp("104") + @"</onup>
 			<ondown>" + findButtonDown("104") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_104_focus.png</textureFocus>
+			<textureNoFocus>basichome_104_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
 
         ";
@@ -2318,32 +2198,6 @@ namespace BlackGlassEditor
                 if (comboBox105.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 105 -->
-		<control>
-			<description>105 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>114</posX>
-			<posY>231</posY>
-			<width>232</width>
-			<height>183</height>
-			<texture>basichome_105_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
-		<control>
-			<description>105 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>114</posX>
-			<posY>231</posY>
-			<width>232</width>
-			<height>183</height>
-			<texture>basichome_105_focus.png</texture>
-			<visible>control.hasfocus(105)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
 		<control>
 			<description>105 hover label</description>
 			<type>label</type>
@@ -2364,10 +2218,10 @@ namespace BlackGlassEditor
 			<description>105 button</description>
 			<type>button</type>
 			<id>105</id>
-			<posX>113</posX>
+			<posX>114</posX>
 			<posY>231</posY>
-			<width>234</width>
-			<height>184</height>
+			<width>232</width>
+			<height>183</height>
 			<label>" + SecurityElement.Escape(textBox105.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid105.Text) + @"</hyperlink>
@@ -2375,8 +2229,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("105") + @"</onright>
 			<onup>" + findButtonUp("105") + @"</onup>
 			<ondown>" + findButtonDown("105") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_105_focus.png</textureFocus>
+			<textureNoFocus>basichome_105_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>	
 		</control>
 
         ";
@@ -2385,32 +2241,6 @@ namespace BlackGlassEditor
                 if (comboBox106.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 106 -->
-		<control>
-			<description>106 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>342</posX>
-			<posY>270</posY>
-			<width>205</width>
-			<height>151</height>
-			<texture>basichome_106_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
-		<control>
-			<description>106 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>342</posX>
-			<posY>270</posY>
-			<width>205</width>
-			<height>151</height>
-			<visible>control.hasfocus(106)</visible>
-			<texture>basichome_106_focus.png</texture>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
 		<control>
 			<description>106 hover label</description>
 			<type>label</type>
@@ -2431,10 +2261,10 @@ namespace BlackGlassEditor
 			<description>106 button</description>
 			<type>button</type>
 			<id>106</id>
-			<posX>341</posX>
+			<posX>342</posX>
 			<posY>270</posY>
-			<width>207</width>
-			<height>152</height>
+			<width>205</width>
+			<height>151</height>
 			<label>" + SecurityElement.Escape(textBox106.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid106.Text) + @"</hyperlink>
@@ -2442,8 +2272,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("106") + @"</onright>
 			<onup>" + findButtonUp("106") + @"</onup>
 			<ondown>" + findButtonDown("106") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_106_focus.png</textureFocus>
+			<textureNoFocus>basichome_106_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 
         ";
@@ -2452,32 +2284,6 @@ namespace BlackGlassEditor
                 if (comboBox107.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 107 -->
-		<control>
-			<description>107 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>543</posX>
-			<posY>286</posY>
-			<width>194</width>
-			<height>137</height>
-			<texture>basichome_107_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>
-		<control>
-			<description>107 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>543</posX>
-			<posY>286</posY>
-			<width>194</width>
-			<height>137</height>
-			<texture>basichome_107_focus.png</texture>
-			<visible>control.hasfocus(107)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>
 		<control>
 			<description>107 hover label</description>
 			<type>label</type>
@@ -2500,8 +2306,8 @@ namespace BlackGlassEditor
 			<id>107</id>
 			<posX>543</posX>
 			<posY>286</posY>
-			<width>195</width>
-			<height>138</height>
+			<width>194</width>
+			<height>137</height>
 			<label>" + SecurityElement.Escape(textBox107.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid107.Text) + @"</hyperlink>
@@ -2509,8 +2315,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("107") + @"</onright>
 			<onup>" + findButtonUp("107") + @"</onup>
 			<ondown>" + findButtonDown("107") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_107_focus.png</textureFocus>
+			<textureNoFocus>basichome_107_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
 
         ";
@@ -2519,32 +2327,6 @@ namespace BlackGlassEditor
                 if (comboBox108.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 108 -->
-		<control>
-			<description>108 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>733</posX>
-			<posY>270</posY>
-			<width>205</width>
-			<height>151</height>
-			<texture>basichome_108_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
-		<control>
-			<description>108 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>733</posX>
-			<posY>270</posY>
-			<width>205</width>
-			<height>151</height>
-			<visible>control.hasfocus(108)</visible>
-			<texture>basichome_108_focus.png</texture>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
 		<control>
 			<description>108 hover label</description>
 			<type>label</type>
@@ -2567,8 +2349,8 @@ namespace BlackGlassEditor
 			<id>108</id>
 			<posX>733</posX>
 			<posY>270</posY>
-			<width>206</width>
-			<height>152</height>
+			<width>205</width>
+			<height>151</height>
 			<label>" + SecurityElement.Escape(textBox108.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid108.Text) + @"</hyperlink>
@@ -2576,8 +2358,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("108") + @"</onright>
 			<onup>" + findButtonUp("108") + @"</onup>
 			<ondown>" + findButtonDown("108") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_108_focus.png</textureFocus>
+			<textureNoFocus>basichome_108_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 
         ";
@@ -2586,32 +2370,6 @@ namespace BlackGlassEditor
                 if (comboBox109.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 109 -->
-		<control>
-			<description>109 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>935</posX>
-			<posY>231</posY>
-			<width>232</width>
-			<height>183</height>
-			<texture>basichome_109_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
-		<control>
-			<description>109 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>935</posX>
-			<posY>231</posY>
-			<width>232</width>
-			<height>183</height>
-			<texture>basichome_109_focus.png</texture>
-			<visible>control.hasfocus(109)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
 		<control>
 			<description>109 hover label</description>
 			<type>label</type>
@@ -2632,10 +2390,10 @@ namespace BlackGlassEditor
 			<description>109 button</description>
 			<type>button</type>
 			<id>109</id>
-			<posX>934</posX>
+			<posX>935</posX>
 			<posY>231</posY>
-			<width>234</width>
-			<height>184</height>
+			<width>232</width>
+			<height>183</height>
 			<label>" + SecurityElement.Escape(textBox109.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid109.Text) + @"</hyperlink>
@@ -2643,8 +2401,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("109") + @"</onright>
 			<onup>" + findButtonUp("109") + @"</onup>
 			<ondown>" + findButtonDown("109") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_109_focus.png</textureFocus>
+			<textureNoFocus>basichome_109_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
 
         ";
@@ -2653,32 +2413,6 @@ namespace BlackGlassEditor
                 if (comboBox110.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 110 -->
-		<control>
-			<description>110 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>126</posX>
-			<posY>76</posY>
-			<width>226</width>
-			<height>196</height>
-			<texture>basichome_110_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
-		<control>
-			<description>110 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>126</posX>
-			<posY>76</posY>
-			<width>226</width>
-			<height>196</height>
-			<texture>basichome_110_focus.png</texture>
-			<visible>control.hasfocus(110)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
 		<control>
 			<description>110 hover label</description>
 			<type>label</type>
@@ -2701,8 +2435,8 @@ namespace BlackGlassEditor
 			<id>110</id>
 			<posX>126</posX>
 			<posY>76</posY>
-			<width>227</width>
-			<height>197</height>
+			<width>226</width>
+			<height>196</height>
 			<label>" + SecurityElement.Escape(textBox110.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid110.Text) + @"</hyperlink>
@@ -2710,8 +2444,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("110") + @"</onright>
 			<onup>" + findButtonUp("110") + @"</onup>
 			<ondown>" + findButtonDown("110") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_110_focus.png</textureFocus>
+			<textureNoFocus>basichome_110_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
 
         ";
@@ -2720,32 +2456,6 @@ namespace BlackGlassEditor
                 if (comboBox111.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 111 -->
-		<control>
-			<description>111 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>348</posX>
-			<posY>138</posY>
-			<width>201</width>
-			<height>154</height>
-			<texture>basichome_111_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
-		<control>
-			<description>111 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>348</posX>
-			<posY>138</posY>
-			<width>201</width>
-			<height>154</height>
-			<texture>basichome_111_focus.png</texture>
-			<visible>control.hasfocus(111)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
 		<control>
 			<description>111 hover label</description>
 			<type>label</type>
@@ -2766,10 +2476,10 @@ namespace BlackGlassEditor
 			<description>111 button</description>
 			<type>button</type>
 			<id>111</id>
-			<posX>347</posX>
+			<posX>348</posX>
 			<posY>138</posY>
-			<width>204</width>
-			<height>158</height>
+			<width>201</width>
+			<height>154</height>
 			<label>" + SecurityElement.Escape(textBox111.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid111.Text) + @"</hyperlink>
@@ -2777,8 +2487,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("111") + @"</onright>
 			<onup>" + findButtonUp("111") + @"</onup>
 			<ondown>" + findButtonDown("111") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_111_focus.png</textureFocus>
+			<textureNoFocus>basichome_111_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 
         ";
@@ -2787,32 +2499,6 @@ namespace BlackGlassEditor
                 if (comboBox112.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 112 -->
-		<control>
-			<description>112 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>545</posX>
-			<posY>162</posY>
-			<width>190</width>
-			<height>133</height>
-			<texture>basichome_112_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>
-		<control>
-			<description>112 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>545</posX>
-			<posY>162</posY>
-			<width>190</width>
-			<height>133</height>
-			<visible>control.hasfocus(112)</visible>
-			<texture>basichome_112_focus.png</texture>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>
 		<control>
 			<description>112 hover label</description>
 			<type>label</type>
@@ -2833,10 +2519,10 @@ namespace BlackGlassEditor
 			<description>112 button</description>
 			<type>button</type>
 			<id>112</id>
-			<posX>544</posX>
+			<posX>545</posX>
 			<posY>162</posY>
-			<width>192</width>
-			<height>134</height>
+			<width>190</width>
+			<height>133</height>
 			<label>" + SecurityElement.Escape(textBox112.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid112.Text) + @"</hyperlink>
@@ -2844,8 +2530,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("112") + @"</onright>
 			<onup>" + findButtonUp("112") + @"</onup>
 			<ondown>" + findButtonDown("112") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_112_focus.png</textureFocus>
+			<textureNoFocus>basichome_112_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
 
         ";
@@ -2854,32 +2542,6 @@ namespace BlackGlassEditor
                 if (comboBox113.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 113 -->
-		<control>
-			<description>113 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>731</posX>
-			<posY>138</posY>
-			<width>201</width>
-			<height>154</height>
-			<texture>basichome_113_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
-		<control>
-			<description>113 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>731</posX>
-			<posY>138</posY>
-			<width>201</width>
-			<height>154</height>
-			<texture>basichome_113_focus.png</texture>
-			<visible>control.hasfocus(113)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
 		<control>
 			<description>113 hover label</description>
 			<type>label</type>
@@ -2900,10 +2562,10 @@ namespace BlackGlassEditor
 			<description>113 button</description>
 			<type>button</type>
 			<id>113</id>
-			<posX>730</posX>
+			<posX>731</posX>
 			<posY>138</posY>
-			<width>203</width>
-			<height>155</height>
+			<width>201</width>
+			<height>154</height>
 			<label>" + SecurityElement.Escape(textBox113.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid113.Text) + @"</hyperlink>
@@ -2911,8 +2573,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("113") + @"</onright>
 			<onup>" + findButtonUp("113") + @"</onup>
 			<ondown>" + findButtonDown("113") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_113_focus.png</textureFocus>
+			<textureNoFocus>basichome_113_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
 
         ";
@@ -2921,32 +2585,6 @@ namespace BlackGlassEditor
                 if (comboBox114.SelectedItem.ToString() != findPluginName(0))
                 {
                     txt = txt + @"<!-- ID 114 -->
-		<control>
-			<description>114 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>929</posX>
-			<posY>76</posY>
-			<width>225</width>
-			<height>196</height>
-			<texture>basichome_114_nofocus.png</texture>
-            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
-		<control>
-			<description>114 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>929</posX>
-			<posY>76</posY>
-			<width>225</width>
-			<height>196</height>
-			<texture>basichome_114_focus.png</texture>
-			<visible>control.hasfocus(114)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
 		<control>
 			<description>114 hover label</description>
 			<type>label</type>
@@ -2967,10 +2605,10 @@ namespace BlackGlassEditor
 			<description>114 button</description>
 			<type>button</type>
 			<id>114</id>
-			<posX>928</posX>
+			<posX>929</posX>
 			<posY>76</posY>
-			<width>227</width>
-			<height>197</height>
+			<width>225</width>
+			<height>196</height>
 			<label>" + SecurityElement.Escape(textBox114.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid114.Text) + @"</hyperlink>
@@ -2978,8 +2616,10 @@ namespace BlackGlassEditor
 			<onright>" + findButtonRight("1114") + @"</onright>
 			<onup>" + findButtonUp("114") + @"</onup>
 			<ondown>" + findButtonDown("114") + @"</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
+			<textureFocus>basichome_114_focus.png</textureFocus>
+			<textureNoFocus>basichome_114_nofocus.png</textureNoFocus>
+            <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
 
         ";
