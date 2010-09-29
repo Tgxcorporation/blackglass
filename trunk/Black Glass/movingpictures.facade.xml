@@ -47,7 +47,6 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
-			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation>
@@ -55,9 +54,6 @@
 				<type>facadeview</type>
 				<id>50</id>
 				<control>
-					<visible>control.isvisible(50)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">visible</animation>
-					<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">hidden</animation>
 					<description>Movie List</description>
 					<type>listcontrol</type>
 					<id>50</id>
@@ -72,12 +68,14 @@
 					<keepaspectratio>no</keepaspectratio>
 					<textXOff>10</textXOff>
 					<!-- group headers -->
-					<textcolor3>ff3E99D7</textcolor3>	
+					<textcolor3>ff3E99D7</textcolor3>
+					<visible>control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">hidden</animation>
+					<animation effect="fade" time="250">visible</animation>
+					<animation effect="fade" time="150">hidden</animation>	
 				</control>
 				<control>
-					<visible>control.isvisible(50)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="800,0" reversible="false">visible</animation>
-					<animation effect="slide" tween="circle" easing="out" time="200" end="800,0" reversible="false">hidden</animation>
 					<description>Filmstrip view</description>
 					<type>filmstrip</type>
 					<id>50</id>
@@ -111,11 +109,13 @@
 					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
 					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
 					<scrollOffset>3</scrollOffset>
-				</control>
-				<control>
 					<visible>control.isvisible(50)</visible>
 					<animation effect="slide" tween="circle" easing="out" time="200" start="800,0" reversible="false">visible</animation>
 					<animation effect="slide" tween="circle" easing="out" time="200" end="800,0" reversible="false">hidden</animation>
+					<animation effect="fade" time="250">visible</animation>
+					<animation effect="fade" time="150">hidden</animation>	
+				</control>
+				<control>
 					<description>Thumbnail Panel</description>
 					<type>thumbnailpanel</type>
 					<id>50</id>
@@ -155,7 +155,12 @@
 					<unfocusedAlpha>120</unfocusedAlpha>
 					<showFrame>true</showFrame>
 					<frameNoFocus>DVDCase.png</frameNoFocus> 
-					<frameFocus>DVDCase.png</frameFocus> 
+					<frameFocus>DVDCase.png</frameFocus>
+					<visible>control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="800,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="800,0" reversible="false">hidden</animation>
+					<animation effect="fade" time="250">visible</animation>
+					<animation effect="fade" time="150">hidden</animation>	
 				</control>
 			</control>
 		</control>
