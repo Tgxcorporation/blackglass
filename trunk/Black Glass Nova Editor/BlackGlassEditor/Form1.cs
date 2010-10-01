@@ -39,6 +39,7 @@ namespace BlackGlassEditor
             XmlNodeList phover = Plugins.GetElementsByTagName("hover");
 
             plugins.Add(new MPplugin(0, "Empty Button", ""));
+            plugins.Add(new MPplugin(99999, "Custom Plugin", "hover_custom"));
 
             for (int i = 0; i < pid.Count; i++ )
             {
@@ -1476,7 +1477,7 @@ namespace BlackGlassEditor
 
         public string findPluginName(int pluginId)
         {
-            string Name = "";
+            string Name = "Custom Plugin";
             foreach (MPplugin p in plugins)
             {
                 if (p.Hyperlink == pluginId) Name = p.Name;
@@ -3042,7 +3043,8 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#TVSeries.Translation.RecentlyAdded.Label:     #infoservice.recentlyAdded.series1.title     #TVSeries.Translation.Season.Label #infoservice.recentlyAdded.series1.season     #TVSeries.Translation.Episode.Label #infoservice.recentlyAdded.series1.episodenumber     #infoservice.recentlyAdded.series1.episodetitle</label>			<align>center</align>
+			<label>#TVSeries.Translation.RecentlyAdded.Label:     #infoservice.recentlyAdded.series1.title     #TVSeries.Translation.Season.Label #infoservice.recentlyAdded.series1.season     #TVSeries.Translation.Episode.Label #infoservice.recentlyAdded.series1.episodenumber     #infoservice.recentlyAdded.series1.episodetitle</label>
+			<align>center</align>
 			<font>font11</font>
 			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + tvseries_button + @")+plugin.isenabled(MP-TV Series)</visible>
 			<textcolor>90ffffff</textcolor>
