@@ -32,7 +32,7 @@
 				<width>1</width>
 				<height>1</height>
 				<texture>black.png</texture>
-				<visible>control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)]</visible>
+				<visible>control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)]</visible>
 			</control>
 			<control>
 				<type>image</type>
@@ -118,18 +118,28 @@
 					<id>15</id>
 					<label>#MovingPictures.Translation.ToggleParentalLock.Label</label>
 					<onright>50</onright>
-					<ondown>10</ondown>
 					<onup>66610</onup>
 					<ondown>66611</ondown>
 				</control>
 				<control>
-					<description>SubCentral</description>
+					<description>My Trailers</description>
 					<id>66611</id>
+					<type>button</type>
+					<label>5906</label>
+					<hyperlink>5900</hyperlink>
+					<visible>plugin.isenabled(My Trailers)</visible>
+					<onup>15</onup>
+					<onright>50</onright>
+					<ondown>66612</ondown>
+				</control>
+				<control>
+					<description>SubCentral</description>
+					<id>66612</id>
 					<type>button</type>
 					<label>Check for Subtitles</label>
 					<hyperlink>84623</hyperlink>
 					<visible>plugin.isenabled(SubCentral)</visible>
-					<onup>15</onup>
+					<onup>66611</onup>
 					<onright>50</onright>
 					<ondown>2</ondown>     
 				</control>
