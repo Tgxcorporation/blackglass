@@ -7,6 +7,11 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -16,8 +21,6 @@
 				<height>720</height>
 				<texture>bg_left.png</texture>
 				<colorDiffuse>ffffffff</colorDiffuse>
-				<visible>control.isvisible(24)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -30,8 +33,6 @@
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
-				<visible>control.isvisible(24)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control> 
 			<control>
 				<type>image</type>
@@ -41,20 +42,6 @@
 				<width>385</width>
 				<height>53</height>
 				<texture>bg_button_nofocus.png</texture>
-				<visible>control.isvisible(24)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>490</posX>
-				<posY>97</posY>
-				<width>790</width>
-				<height>53</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-				<visible>control.isvisible(24)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>group</type>
@@ -80,30 +67,37 @@
 					<onleft>51</onleft>
 					<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 					<spinCanFocus>no</spinCanFocus>
-					<animation effect="fade" time="250">visiblechange</animation>
 				</control>
 			</control>
 		</control>
-		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-			<visible>control.isvisible(51)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
+
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>97</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
 			<control>
 				<description>Trailer Poster</description>
 				<type>image</type>
@@ -114,9 +108,6 @@
 				<height>282</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#OnlineVideos.Details.Poster</texture>
 				<keepaspectratio>no</keepaspectratio>
-				<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
 			</control>
 			<control>
 				<description>Highlight item</description>
@@ -127,9 +118,6 @@
 				<width>230</width>
 				<height>292</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-				<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
 			</control>
 			<control>
 				<description>Title label</description>
@@ -142,9 +130,6 @@
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
 				<width>750</width>
-				<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
 				<wrapString> : : : </wrapString>
 			</control>
 			<!-- <control>
@@ -165,11 +150,8 @@
 				<posY>170</posY>
 				<width>470</width>
 				<visible>no</visible>
-				<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 				<label>#OnlineVideos.Details.Genres</label>
 				<font>font18</font>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
 				<wrapString> : : : </wrapString>
 			</control>
 
@@ -180,12 +162,9 @@
 				<posX>780</posX>
 				<posY>220</posY>
 				<label>#OnlineVideos.Translation.DateOfRelease.Label: #OnlineVideos.Details.ReleaseDate</label>
-				<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 				<textcolor>90FFFFFF</textcolor>
 				<font>font18</font>
 				<width>480</width>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
 				<wrapString> : : : </wrapString>
 			</control>
 			<!-- <control>
@@ -211,9 +190,6 @@
 				<textcolor>ffFFFFFF</textcolor>
 				<font>font18</font>
 				<width>480</width>
-				<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
 			</control>
 			<control>
 				<description>Actors value</description>
@@ -223,13 +199,10 @@
 				<posY>320</posY>
 				<width>480</width>
 				<label>#OnlineVideos.Details.Actors</label>
-				<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
 				<font>font16</font>
 				<textcolor>90FFFFFF</textcolor>
 				<seperator>: : :</seperator>
 				<height>135</height>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
 			</control>
 
 			<!-- 		<control>
@@ -251,9 +224,6 @@
 				<height>53</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
 			</control>
 
 
@@ -268,9 +238,6 @@
 				<font>font18</font>
 				<label>#OnlineVideos.Details.Synopsis</label>
 				<seperator>: : :</seperator>
-				<visible>String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
 			</control>
 		</control>
 	</controls>
