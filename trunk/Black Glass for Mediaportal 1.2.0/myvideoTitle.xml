@@ -34,7 +34,7 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(10)]</visible>		
+				<visible>control.hasfocus(50)</visible>		
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -165,23 +165,12 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
+			<visible>!control.hasfocus(50)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(10)</visible>
-			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -212,15 +201,18 @@
 				<texture>bg_button_nofocus.png</texture>
 			</control>
 			<control>
+				<description>button group</description>
 				<type>group</type>
-				<layout>StackLayout</layout>
 				<posX>0</posX>
 				<posY>100</posY>
+				<layout>StackLayout</layout>
 				<control>
 					<description>View-As</description>
 					<type>button</type>
 					<id>2</id>
 					<label>100</label>
+					<posX>70</posX>
+					<posY>100</posY>
 					<onright>50</onright>
 					<onup>17</onup>
 					<ondown>3</ondown>
@@ -230,6 +222,8 @@
 					<type>sortbutton</type>
 					<id>3</id>
 					<label>103</label>
+					<posX>70</posX>
+					<posY>140</posY>
 					<onright>50</onright>
 					<onup>2</onup>
 					<ondown>5</ondown>
@@ -239,6 +233,8 @@
 					<type>button</type>
 					<id>5</id>
 					<label>457</label>
+					<posX>70</posX>
+					<posY>180</posY>
 					<onright>50</onright>
 					<onup>3</onup>
 					<ondown>6</ondown>
@@ -248,47 +244,34 @@
 					<type>button</type>
 					<id>6</id>
 					<label>341</label>
+					<posX>70</posX>
+					<posY>220</posY>
 					<onright>50</onright>
 					<onup>5</onup>
 					<ondown>20</ondown>
 				</control>
-				<!--<control>
-        <description>Eject Disc</description>
-        <type>button</type>
-        <id>7</id>
-        <label>654</label>
-        <action>100</action>
-        <onright>50</onright>
-      </control>-->
 				<control>
 					<description>Current Playlist</description>
 					<type>button</type>
 					<id>20</id>
 					<label>4555</label>
 					<action>33</action>
+					<posX>70</posX>
+					<posY>260</posY>
 					<onright>50</onright>
-					<onup>6</onup>
 					<ondown>9</ondown>
+					<onup>6</onup>
 				</control>
 				<control>
 					<description>My Playlists</description>
 					<type>button</type>
 					<id>9</id>
 					<label>983</label>
+					<posX>70</posX>
+					<posY>300</posY>
 					<onright>50</onright>
-					<ondown>10</ondown>
+					<ondown>2</ondown>
 					<onup>20</onup>
-					<ondown>10</ondown>
-				</control>
-				<control>
-					<description>TV Shows</description>
-					<type>button</type>
-					<id>10</id>
-					<hyperlink>9811</hyperlink>
-					<label>1300</label>
-					<onright>50</onright>
-					<ondown>99</ondown>
-					<visible>plugin.isenabled(MP-TV Series)</visible>
 				</control>
 			</control>
 		</control>
