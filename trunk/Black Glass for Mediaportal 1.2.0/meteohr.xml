@@ -1,0 +1,1661 @@
+<window>
+	<id>16581</id>
+	<defaultcontrol>49</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:meteo.hr</define>
+	<define>#header.background:hover_meteo.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>		
+		<import>common.window.time.xml</import>
+
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>418</width>
+			<height>720</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>35</posY>
+			<label>#header.label</label>
+			<font>font24</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control> 
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>47</posY>
+			<width>385</width>
+			<height>53</height>
+			<texture>bg_button_nofocus.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<control>
+			<type>image</type>
+			<posX>408</posX>
+			<posY>48</posY>
+			<width>948</width>
+			<height>766</height>
+			<texture>bg_facade.png</texture>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>440</posX>
+			<posY>97</posY>
+			<width>840</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>440</posX>
+			<posY>405</posY>
+			<width>840</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(4)|control.isvisible(5)|control.isvisible(11)|control.isvisible(12)|control.isvisible(22)|control.isvisible(23)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<!-- Aktualno -->
+		<control>
+			<description>label aktualno top</description>
+			<type>label</type>
+			<id>30</id>
+			<posX>470</posX>
+			<posY>96</posY>
+			<label>-</label>
+			<font>font22</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>780</width>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image aktualno</description>
+			<type>image</type>
+			<id>2</id>
+			<posX>470</posX>
+			<posY>170</posY>
+			<width>400</width>
+			<height>400</height>
+			<centered>no</centered>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label aktualno temp</description>
+			<type>fadelabel</type>
+			<id>31</id>
+			<posX>900</posX>
+			<posY>170</posY>
+			<width>350</width>
+			<label>-</label>
+			<font>font16</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label aktualno rel tlak</description>
+			<type>fadelabel</type>
+			<id>32</id>
+			<posX>900</posX>
+			<posY>210</posY>
+			<width>350</width>
+			<label>-</label>
+			<font>font16</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label aktualno vjetar</description>
+			<type>fadelabel</type>
+			<id>33</id>
+			<posX>900</posX>
+			<posY>250</posY>
+			<width>350</width>
+			<label>-</label>
+			<font>font16</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label aktualno naoblaka</description>
+			<type>fadelabel</type>
+			<id>34</id>
+			<posX>900</posX>
+			<posY>290</posY>
+			<width>350</width>
+			<label>-</label>
+			<font>font16</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<!-- HR danas -->
+		<control>
+			<description>label hr danas top</description>
+			<type>label</type>
+			<id>10</id>
+			<posX>470</posX>
+			<posY>96</posY>
+			<label>-</label>
+			<font>font22</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>780</width>
+			<visible>control.isvisible(3)|control.isvisible(21)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image hr danas</description>
+			<type>image</type>
+			<id>3</id>
+			<posX>470</posX>
+			<posY>170</posY>
+			<width>400</width>
+			<height>400</height>
+			<centered>no</centered>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text hr danas</description>
+			<type>textboxscrollup</type>
+			<id>21</id>
+			<posX>900</posX>
+			<posY>170</posY>
+			<width>350</width>
+			<height>530</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<!-- Zagreb -->
+		<control>
+			<description>label zagreb danas</description>
+			<type>label</type>
+			<id>11</id>
+			<posX>470</posX>
+			<posY>96</posY>
+			<label>Prognoza za Zagreb - danas</label>
+			<font>font22</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>640</width>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image zagreb danas</description>
+			<type>image</type>
+			<id>4</id>
+			<posX>1140</posX>
+			<posY>90</posY>
+			<width>110</width>
+			<height>55</height>
+			<visible>no</visible>
+			<centered>no</centered>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label zagreb sutra</description>
+			<type>label</type>
+			<id>12</id>
+			<posX>470</posX>
+			<posY>404</posY>
+			<label>Prognoza za Zagreb - sutra</label>
+			<font>font22</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>640</width>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image zagreb sutra</description>
+			<type>image</type>
+			<id>5</id>
+			<posX>1140</posX>
+			<posY>398</posY>
+			<width>110</width>
+			<height>55</height>
+			<visible>no</visible>
+			<centered>no</centered>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text zagreb danas</description>
+			<type>textboxscrollup</type>
+			<id>22</id>
+			<posX>470</posX>
+			<posY>170</posY>
+			<width>780</width>
+			<height>220</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text zagreb sutra</description>
+			<type>textboxscrollup</type>
+			<id>23</id>
+			<posX>470</posX>
+			<posY>478</posY>
+			<width>780</width>
+			<height>220</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<!-- Tjedna prognoza -->		
+		<control>
+			<description>label 7dana top</description>
+			<type>label</type>
+			<id>701</id>
+			<posX>470</posX>
+			<posY>96</posY>
+			<label>-</label>
+			<font>font22</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>780</width>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana back</description>
+			<type>image</type>
+			<id>700</id>
+			<posX>470</posX>
+			<posY>87</posY>
+			<width>600</width>
+			<height>60</height>
+			<visible>no</visible>
+			<texture>-</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana dan</description>
+			<type>label</type>
+			<id>705</id>
+			<posX>470</posX>
+			<posY>185</posY>
+			<label>Datum</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>control.isvisible(700)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana min</description>
+			<type>label</type>
+			<id>702</id>
+			<posX>810</posX>
+			<posY>185</posY>
+			<label>Min</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana max</description>
+			<type>label</type>
+			<id>703</id>
+			<posX>910</posX>
+			<posY>185</posY>
+			<label>Max</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana vjetar</description>
+			<type>label</type>
+			<id>704</id>
+			<posX>1010</posX>
+			<posY>185</posY>
+			<label>Vjetar</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana back 1</description>
+			<type>image</type>
+			<id>710</id>
+			<posX>470</posX>
+			<posY>201</posY>
+			<width>600</width>
+			<height>60</height>
+			<visible>no</visible>
+			<texture>meteohrBack.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana 1</description>
+			<type>label</type>
+			<id>711</id>
+			<posX>470</posX>
+			<posY>220</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana datum 1</description>
+			<type>label</type>
+			<id>712</id>
+			<posX>470</posX>
+			<posY>250</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana slika 1</description>
+			<type>image</type>
+			<id>713</id>
+			<posX>700</posX>
+			<posY>209</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana min 1</description>
+			<type>label</type>
+			<id>714</id>
+			<posX>810</posX>
+			<posY>232</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana max 1</description>
+			<type>label</type>
+			<id>715</id>
+			<posX>910</posX>
+			<posY>232</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana vjetar 1</description>
+			<type>image</type>
+			<id>716</id>
+			<posX>990</posX>
+			<posY>209</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana back 2</description>
+			<type>image</type>
+			<id>720</id>
+			<posX>470</posX>
+			<posY>272</posY>
+			<width>600</width>
+			<height>60</height>
+			<visible>no</visible>
+			<texture>meteohrBack.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana 2</description>
+			<type>label</type>
+			<id>721</id>
+			<posX>470</posX>
+			<posY>290</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana datum 2</description>
+			<type>label</type>
+			<id>722</id>
+			<posX>470</posX>
+			<posY>320</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana slika 2</description>
+			<type>image</type>
+			<id>723</id>
+			<posX>700</posX>
+			<posY>279</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana min 2</description>
+			<type>label</type>
+			<id>724</id>
+			<posX>810</posX>
+			<posY>302</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana max 2</description>
+			<type>label</type>
+			<id>725</id>
+			<posX>910</posX>
+			<posY>302</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana vjetar 2</description>
+			<type>image</type>
+			<id>726</id>
+			<posX>990</posX>
+			<posY>279</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana back 3</description>
+			<type>image</type>
+			<id>730</id>
+			<posX>470</posX>
+			<posY>342</posY>
+			<width>600</width>
+			<height>60</height>
+			<visible>no</visible>
+			<texture>meteohrBack.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana 3</description>
+			<type>label</type>
+			<id>731</id>
+			<posX>470</posX>
+			<posY>360</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana datum 3</description>
+			<type>label</type>
+			<id>732</id>
+			<posX>470</posX>
+			<posY>390</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana slika 3</description>
+			<type>image</type>
+			<id>733</id>
+			<posX>700</posX>
+			<posY>349</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana min 3</description>
+			<type>label</type>
+			<id>734</id>
+			<posX>810</posX>
+			<posY>372</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana max 3</description>
+			<type>label</type>
+			<id>735</id>
+			<posX>910</posX>
+			<posY>372</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana vjetar 3</description>
+			<type>image</type>
+			<id>736</id>
+			<posX>990</posX>
+			<posY>349</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana back 4</description>
+			<type>image</type>
+			<id>740</id>
+			<posX>470</posX>
+			<posY>412</posY>
+			<width>600</width>
+			<height>60</height>
+			<visible>no</visible>
+			<texture>meteohrBack.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana 4</description>
+			<type>label</type>
+			<id>741</id>
+			<posX>470</posX>
+			<posY>430</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana datum 4</description>
+			<type>label</type>
+			<id>742</id>
+			<posX>470</posX>
+			<posY>460</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana slika 4</description>
+			<type>image</type>
+			<id>743</id>
+			<posX>700</posX>
+			<posY>419</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana min 4</description>
+			<type>label</type>
+			<id>744</id>
+			<posX>810</posX>
+			<posY>442</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana max 4</description>
+			<type>label</type>
+			<id>745</id>
+			<posX>910</posX>
+			<posY>442</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana vjetar 4</description>
+			<type>image</type>
+			<id>746</id>
+			<posX>990</posX>
+			<posY>419</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana back 5</description>
+			<type>image</type>
+			<id>750</id>
+			<posX>470</posX>
+			<posY>482</posY>
+			<width>600</width>
+			<height>60</height>
+			<visible>no</visible>
+			<texture>meteohrBack.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana 5</description>
+			<type>label</type>
+			<id>751</id>
+			<posX>470</posX>
+			<posY>500</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana datum 5</description>
+			<type>label</type>
+			<id>752</id>
+			<posX>470</posX>
+			<posY>530</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana slika 5</description>
+			<type>image</type>
+			<id>753</id>
+			<posX>700</posX>
+			<posY>489</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana min 5</description>
+			<type>label</type>
+			<id>754</id>
+			<posX>810</posX>
+			<posY>512</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana max 5</description>
+			<type>label</type>
+			<id>755</id>
+			<posX>910</posX>
+			<posY>512</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana vjetar 5</description>
+			<type>image</type>
+			<id>756</id>
+			<posX>990</posX>
+			<posY>489</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana back 6</description>
+			<type>image</type>
+			<id>760</id>
+			<posX>470</posX>
+			<posY>552</posY>
+			<width>600</width>
+			<height>60</height>
+			<visible>no</visible>
+			<texture>meteohrBack.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana 6</description>
+			<type>label</type>
+			<id>761</id>
+			<posX>470</posX>
+			<posY>570</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana datum 6</description>
+			<type>label</type>
+			<id>762</id>
+			<posX>470</posX>
+			<posY>600</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana slika 6</description>
+			<type>image</type>
+			<id>763</id>
+			<posX>700</posX>
+			<posY>559</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana min 6</description>
+			<type>label</type>
+			<id>764</id>
+			<posX>810</posX>
+			<posY>582</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana max 6</description>
+			<type>label</type>
+			<id>765</id>
+			<posX>910</posX>
+			<posY>582</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana vjetar 6</description>
+			<type>image</type>
+			<id>766</id>
+			<posX>990</posX>
+			<posY>559</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana back 7</description>
+			<type>image</type>
+			<id>770</id>
+			<posX>470</posX>
+			<posY>622</posY>
+			<width>600</width>
+			<height>60</height>
+			<visible>no</visible>
+			<texture>meteohrBack.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana 7</description>
+			<type>label</type>
+			<id>771</id>
+			<posX>470</posX>
+			<posY>640</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana datum 7</description>
+			<type>label</type>
+			<id>772</id>
+			<posX>470</posX>
+			<posY>670</posY>
+			<label>-</label>
+			<width>230</width>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana slika 7</description>
+			<type>image</type>
+			<id>773</id>
+			<posX>700</posX>
+			<posY>629</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana min 7</description>
+			<type>label</type>
+			<id>774</id>
+			<posX>810</posX>
+			<posY>652</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>label 7dana max 7</description>
+			<type>label</type>
+			<id>775</id>
+			<posX>910</posX>
+			<posY>652</posY>
+			<label>-</label>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>ffffffff</textcolor>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image 7dana vjetar 7</description>
+			<type>image</type>
+			<id>776</id>
+			<posX>990</posX>
+			<posY>629</posY>
+			<width>46</width>
+			<height>46</height>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<!-- Temperature mora -->
+		<control>
+			<description>label temperature mora top</description>
+			<type>label</type>
+			<id>80</id>
+			<posX>470</posX>
+			<posY>96</posY>
+			<label>-</label>
+			<font>font22</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>780</width>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text temperature mora mjesto</description>
+			<type>textboxscrollup</type>
+			<id>81</id>
+			<posX>470</posX>
+			<posY>170</posY>
+			<width>350</width>
+			<height>530</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<align>center</align>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text temp mora 7</description>
+			<type>textboxscrollup</type>
+			<id>82</id>
+			<posX>820</posX>
+			<posY>170</posY>
+			<width>75</width>
+			<height>530</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<align>center</align>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text temp mora 8</description>
+			<type>textboxscrollup</type>
+			<id>83</id>
+			<posX>895</posX>
+			<posY>170</posY>
+			<width>75</width>
+			<height>530</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<align>center</align>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text temp mora 11</description>
+			<type>textboxscrollup</type>
+			<id>84</id>
+			<posX>970</posX>
+			<posY>170</posY>
+			<width>75</width>
+			<height>530</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<align>center</align>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text temp mora 14</description>
+			<type>textboxscrollup</type>
+			<id>85</id>
+			<posX>1045</posX>
+			<posY>170</posY>
+			<width>75</width>
+			<height>530</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<align>center</align>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text temp mora 15</description>
+			<type>textboxscrollup</type>
+			<id>86</id>
+			<posX>1120</posX>
+			<posY>170</posY>
+			<width>75</width>
+			<height>530</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<align>center</align>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text temp mora 17</description>
+			<type>textboxscrollup</type>
+			<id>87</id>
+			<posX>1195</posX>
+			<posY>170</posY>
+			<width>75</width>
+			<height>530</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<align>center</align>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<!-- Visine snijega -->
+		<control>
+			<description>label visine snijega top</description>
+			<type>label</type>
+			<id>90</id>
+			<posX>470</posX>
+			<posY>96</posY>
+			<label>-</label>
+			<font>font22</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>780</width>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text visine snijega mjesto</description>
+			<type>textboxscrollup</type>
+			<id>91</id>
+			<posX>470</posX>
+			<posY>170</posY>
+			<width>350</width>
+			<height>530</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<align>center</align>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>text visine snijega ukupno</description>
+			<type>textboxscrollup</type>
+			<id>92</id>
+			<posX>820</posX>
+			<posY>170</posY>
+			<width>250</width>
+			<height>530</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<align>center</align>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>text visine snijega novi</description>
+			<id>93</id>
+			<posX>1070</posX>
+			<posY>170</posY>
+			<width>250</width>
+			<height>530</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>-</label>
+			<visible>no</visible>
+			<seperator>: : :</seperator>
+			<align>center</align>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<!-- Satelitska slika -->
+		<control>
+			<description>label satelitska slika top</description>
+			<type>label</type>
+			<id>13</id>
+			<posX>470</posX>
+			<posY>96</posY>
+			<label>-</label>
+			<font>font22</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>780</width>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image satelitska slika</description>
+			<type>image</type>
+			<id>6</id>
+			<posX>470</posX>
+			<posY>170</posY>
+			<width>780</width>
+			<height>530</height>
+			<visible>no</visible>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<!-- Radarska slika -->
+		<control>
+			<description>label radarska slika top</description>
+			<type>label</type>
+			<id>14</id>
+			<posX>470</posX>
+			<posY>96</posY>
+			<label>-</label>
+			<font>font22</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>780</width>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image radarska slika</description>
+			<type>image</type>
+			<id>7</id>
+			<posX>470</posX>
+			<posY>170</posY>
+			<width>780</width>
+			<height>530</height>
+			<visible>no</visible>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<!-- Karte prognoza -->
+		<control>
+			<description>label karte top</description>
+			<type>label</type>
+			<id>101</id>
+			<posX>470</posX>
+			<posY>96</posY>
+			<label>-</label>
+			<font>font22</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>780</width>
+			<visible>no</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image karte prognoza</description>
+			<type>image</type>
+			<id>102</id>
+			<posX>470</posX>
+			<posY>170</posY>
+			<width>780</width>
+			<height>530</height>
+			<visible>no</visible>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image karte prognoza tlak sutra</description>
+			<type>image</type>
+			<id>103</id>
+			<posX>470</posX>
+			<posY>170</posY>
+			<width>780</width>
+			<height>530</height>
+			<visible>no</visible>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>image karte valovi</description>
+			<type>image</type>
+			<id>104</id>
+			<posX>470</posX>
+			<posY>170</posY>
+			<width>780</width>
+			<height>530</height>
+			<visible>no</visible>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<!-- Menu 1 -->
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<posX>0</posX>
+			<posY>100</posY>
+			<layout>StackLayout</layout>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<control>
+				<description>aktualno</description>
+				<type>button</type>
+				<id>49</id>
+				<label>Aktualno</label>
+				<onup>17</onup>
+				<onright>49</onright>
+			</control>
+			<control>
+				<description>hr danas</description>
+				<type>button</type>
+				<id>50</id>
+				<label>HR danas</label>
+				<onright>50</onright>
+			</control>
+			<control>
+				<description>hr sutra</description>
+				<type>button</type>
+				<id>51</id>
+				<label>HR sutra</label>
+				<onright>51</onright>
+			</control>
+			<control>
+				<description>zagreb</description>
+				<type>button</type>
+				<id>52</id>
+				<label>Zagreb</label>
+				<onright>52</onright>
+			</control>
+			<control>
+				<description>tjedna prognoza</description>
+				<type>button</type>
+				<id>53</id>
+				<label>Tjedna prognoza</label>
+				<onright>53</onright>
+			</control>
+			<control>
+				<description>htv video</description>
+				<type>button</type>
+				<id>54</id>
+				<label>HTV video</label>
+				<onright>54</onright>
+			</control>
+			<control>
+				<description>temperature mora</description>
+				<type>button</type>
+				<id>57</id>
+				<label>Temperature mora</label>
+				<onright>57</onright>
+			</control>
+			<control>
+				<description>visine snijega</description>
+				<type>button</type>
+				<id>58</id>
+				<label>Visine snijega</label>
+				<onright>58</onright>
+			</control>
+			<control>
+				<description>satelitska slika</description>
+				<type>button</type>
+				<id>55</id>
+				<label>Satelitska slika</label>
+				<onright>55</onright>
+			</control>
+			<control>
+				<description>radarska slika</description>
+				<type>button</type>
+				<id>56</id>
+				<label>Radarska slika</label>
+				<onright>56</onright>
+			</control>
+			<control>
+				<description>karte prognoza</description>
+				<type>button</type>
+				<id>59</id>
+				<label>Karte prognoza</label>
+				<ondown>49</ondown>
+				<onright>59</onright>
+			</control>
+		</control>
+
+		<!-- Menu 2 -->
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<posX>0</posX>
+			<posY>100</posY>
+			<layout>StackLayout</layout>
+			<animation effect="fade" time="250">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<control>
+				<description>prognoze/nazad</description>
+				<type>button</type>
+				<id>70</id>
+				<label>Prognoze/Nazad</label>
+				<onup>17</onup>
+				<onright>70</onright>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>karta hr danas</description>
+				<type>button</type>
+				<id>60</id>
+				<label>HR danas</label>
+				<onright>60</onright>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>karta hr sutra</description>
+				<type>button</type>
+				<id>61</id>
+				<label>HR sutra</label>
+				<onright>61</onright>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>karta hr +2 dana</description>
+				<type>button</type>
+				<id>62</id>
+				<label>HR +2 dana</label>
+				<onright>62</onright>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>karta hr +3 dana</description>
+				<type>button</type>
+				<id>63</id>
+				<label>HR +3 dana</label>
+				<onright>63</onright>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>karta eu danas</description>
+				<type>button</type>
+				<id>64</id>
+				<label>EU danas</label>
+				<onright>64</onright>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>karta eu sutra</description>
+				<type>button</type>
+				<id>65</id>
+				<label>EU sutra</label>
+				<onright>65</onright>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>karta eu +2 dana</description>
+				<type>button</type>
+				<id>66</id>
+				<label>EU +2 dana</label>
+				<onright>66</onright>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>karta eu +3 dana</description>
+				<type>button</type>
+				<id>67</id>
+				<label>EU +3 dana</label>
+				<onright>67</onright>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>karta tlak sutra</description>
+				<type>button</type>
+				<id>68</id>
+				<label>Tlak sutra</label>
+				<onright>68</onright>
+				<visible>no</visible>
+			</control>
+			<control>
+				<description>karta valovi</description>
+				<type>button</type>
+				<id>69</id>
+				<label>Valovi</label>
+				<ondown>60</ondown>
+				<onright>69</onright>
+				<visible>no</visible>
+			</control>
+		</control>
+	</controls>
+</window>

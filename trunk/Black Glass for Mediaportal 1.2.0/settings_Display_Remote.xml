@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>9006</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:109006</define>
+	<define>#header.background:hover_settings.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<description>NO REMOTE OPTIONS</description>
+			<type>label</type>
+			<id>40</id>
+			<posX>1400</posX>
+			<label>9144</label>
+			<onup>17</onup>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>325</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Disable Remote</description>
+					<type>togglebutton</type>
+					<id>50</id>
+					<label>9145</label>
+				</control>
+				<control>
+					<description>Disable Repeat</description>
+					<type>togglebutton</type>
+					<id>51</id>
+					<label>9146</label>
+				</control>
+				<control>
+					<description>Repeat Delay</description>
+					<type>selectbutton</type>
+					<id>52</id>
+					<label>9147</label>
+				</control>
+				<control>
+					<description>Remote Mapping</description>
+					<type>button</type>
+					<id>53</id>
+					<label>9148</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

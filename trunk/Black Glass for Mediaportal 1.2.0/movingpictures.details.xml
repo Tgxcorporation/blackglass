@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<controls>
+
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>PLAY Button</description>
+				<type>button</type>
+				<id>6</id>
+				<label>-</label>
+				<onup>6</onup>
+				<ondown>6</ondown>
+				<onleft>6</onleft>
+				<onright>6</onright>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			</control>
+
+			<!--            :: MAIN DETAILS ::            -->
+
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>-->	
+			</control>
+			<control>
+				<type>image</type>
+				<posX>490</posX>
+				<posY>97</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>-->	
+			</control>
+			<control>
+				<type>image</type>
+				<posX>490</posX>
+				<posY>338</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>-->	
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>492</posX>
+				<posY>587</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>-->	
+			</control>
+
+
+			<control>
+				<description>Cover Art</description>
+				<type>image</type>
+				<id>60</id>
+				<posX>79</posX>
+				<posY>81</posY>
+				<width>380</width>
+				<height>538</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#MovingPictures.Coverart</texture>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>72</posY>
+				<width>437</width>
+				<height>556</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>Watched Icon Background</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>422</posX>
+				<posY>122</posY>
+				<width>40</width>
+				<height>50</height>
+				<texture>overlaywubg.png</texture>
+				<colordiffuse>b0ffffff</colordiffuse>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			</control>
+			<control>
+				<description>Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>427</posX>
+				<posY>127</posY>
+				<width>30</width>
+				<height>30</height>
+				<texture>overlaywatched.png</texture>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+control.isvisible(9)</visible>
+				<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			</control>
+			<control>
+				<description>Un-Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>427</posX>
+				<posY>127</posY>
+				<width>30</width>
+				<height>30</height>
+				<texture>overlayunwatched.png</texture>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+!control.isvisible(9)</visible>
+				<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			</control>
+
+
+			<control>
+				<description>Cover Art</description>
+				<type>image</type>
+				<id>60</id>
+				<posX>73</posX>
+				<posY>81</posY>
+				<width>332</width>
+				<height>469</height>
+				<texture>#MovingPictures.Coverart</texture>
+				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>72</posY>
+				<width>382</width>
+				<height>486</height>
+				<texture>DVDCase.png</texture>
+				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>Watched Icon Background</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>368</posX>
+				<posY>113</posY>
+				<width>40</width>
+				<height>50</height>
+				<texture>overlaywubg.png</texture>
+				<colordiffuse>b0ffffff</colordiffuse>
+				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			</control>
+			<control>
+				<description>Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>373</posX>
+				<posY>118</posY>
+				<width>30</width>
+				<height>30</height>
+				<texture>overlaywatched.png</texture>
+				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+control.isvisible(9)</visible>
+				<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			</control>
+			<control>
+				<description>Un-Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>373</posX>
+				<posY>118</posY>
+				<width>30</width>
+				<height>30</height>
+				<texture>overlayunwatched.png</texture>
+				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+!control.isvisible(9)</visible>
+				<animation effect="fade" time="250" delay="200">visiblechange</animation>
+			</control>
+
+			<!-- Details Box -->
+
+			<control>
+				<description>Title label</description>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>520</posX>
+				<posY>95</posY>
+				<label>#MovingPictures.SelectedMovie.title</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>750</width>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="66">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>-->	
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>
+				<description>IMDB Rating Value</description>
+				<type>imagelist</type>
+				<id>0</id>
+				<posX>520</posX>
+				<posY>165</posY>
+				<width>115</width>
+				<height>13</height>
+				<textureWidth>27</textureWidth>
+				<textureHeight>27</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="133">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation> -->	
+			</control>	
+
+			<!-- <control>
+			<description>Genres Label</description>
+			<type>label</type>
+			<label>#MovingPictures.Translation.Genres.Label</label>
+			<id>0</id>
+			<posX>520</posX>
+			<posY>205</posY>
+			<width>115</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control> -->
+
+			<control>
+				<description>Genres</description>
+				<type>fadelabel</type>
+				<label>#MovingPictures.SelectedMovie.genres</label>
+				<id>0</id>
+				<posX>520</posX>
+				<posY>200</posY>
+				<width>750</width>
+				<font>font16</font>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="133">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>-->	
+				<wrapString> : : : </wrapString>
+			</control>
+			<!-- 		<control>
+			<description>year</description>
+			<type>label</type>
+			<label>#MovingPictures.Translation.Year.Label</label>
+			<id>0</id>
+			<posX>520</posX>
+			<posY>235</posY>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control> -->
+			<control>
+				<description>year</description>
+				<type>fadelabel</type>
+				<label>#MovingPictures.SelectedMovie.year     #MovingPictures.SelectedMovie.runtime.localized.long     #MovingPictures.SelectedMovie.certification</label>
+				<id>0</id>
+				<posX>520</posX>
+				<posY>235</posY>
+				<width>750</width>
+				<font>font18</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="133">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>-->	
+				<wrapString> : : : </wrapString>
+			</control>
+			<!-- <control>
+			<description>certification</description>
+			<type>label</type>
+			<label>#MovingPictures.Translation.Certification.Label</label>
+			<id>0</id>
+			<posX>520</posX>
+			<posY>265</posY>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>certification</description>
+			<type>fadelabel</type>
+			<label>#MovingPictures.SelectedMovie.certification</label>
+			<id>0</id>
+			<posX>730</posX>
+			<posY>265</posY>
+			<width>530</width>
+			<font>font14</font>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>runtime</description>
+			<type>label</type>
+			<label>#MovingPictures.Translation.Runtime.Label</label>
+			<id>0</id>
+			<posX>520</posX>
+			<posY>295</posY>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>runtime</description>
+			<type>fadelabel</type>
+			<label>#MovingPictures.SelectedMovie.runtime.localized.long</label>
+			<id>0</id>
+			<posX>730</posX>
+			<posY>295</posY>
+			<width>530</width>
+			<font>font14</font>
+			<textcolor>ffFFFFFF</textcolor>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control> 
+
+
+		<control>
+			<description>Directors Label</description>
+			<type>label</type>
+			<label>#MovingPictures.Translation.Directors.Label</label>
+			<id>0</id>
+			<posX>520</posX>
+			<posY>325</posY>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control>-->
+			<control>
+				<description>Directors</description>
+				<type>fadelabel</type>
+				<label>Directed by #MovingPictures.SelectedMovie.directors</label>
+				<id>0</id>
+				<posX>520</posX>
+				<posY>275</posY>
+				<width>750</width>
+				<font>font18</font>
+				<textcolor>ffFFFFFF</textcolor>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="133">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>-->	
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<!-- <control>
+			<description>Writers</description>
+			<type>label</type>
+			<label>#MovingPictures.Translation.Writers.Label</label>
+			<id>0</id>
+			<posX>363</posX>
+			<posY>622</posY>
+			<width>115</width>
+			<font>font11</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control>
+		<control>
+			<description>Writer</description>
+			<type>label</type>
+			<label>#MovingPictures.SelectedMovie.writers</label>
+			<id>0</id>
+			<posX>485</posX>
+			<posY>622</posY>
+			<width>388</width>
+			<font>font11</font>
+			<textcolor>ffFFFFFF</textcolor>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control> -->
+
+			<!-- <control>
+			<description>actors</description>
+			<type>label</type>
+			<label>#MovingPictures.Translation.Actors.Label</label>
+			<id>0</id>
+			<posX>520</posX>
+			<posY>355</posY>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control> -->
+			<control>
+				<description>actors</description>
+				<type>textboxscrollup</type>
+				<label>#MovingPictures.SelectedMovie.actors</label>
+				<id>0</id>
+				<posX>520</posX>
+				<posY>313</posY>
+				<width>750</width>
+				<font>font16</font>
+				<height>70</height>
+				<textcolor>90FFFFFF</textcolor>
+				<seperator>: : :</seperator>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="133">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>-->	
+			</control>
+
+			<control>
+				<description>Summary</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>520</posX>
+				<posY>405</posY>
+				<width>750</width>
+				<height>225</height>
+				<textcolor>ffFFFFFF</textcolor>
+				<font>font18</font>
+				<label>#MovingPictures.SelectedMovie.summary</label>
+				<seperator>: : :</seperator>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="250" delay="200">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>-->	
+			</control>
+		</control>
+
+	</controls>
+</window>
