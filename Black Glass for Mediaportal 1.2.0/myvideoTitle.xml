@@ -152,6 +152,20 @@
 
 
 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(9111)|control.hasfocus(9112)|control.hasfocus(9113)|control.hasfocus(9114)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
@@ -211,8 +225,6 @@
 					<type>button</type>
 					<id>2</id>
 					<label>100</label>
-					<posX>70</posX>
-					<posY>100</posY>
 					<onright>50</onright>
 					<onup>17</onup>
 					<ondown>3</ondown>
@@ -222,8 +234,6 @@
 					<type>sortbutton</type>
 					<id>3</id>
 					<label>103</label>
-					<posX>70</posX>
-					<posY>140</posY>
 					<onright>50</onright>
 					<onup>2</onup>
 					<ondown>5</ondown>
@@ -233,8 +243,6 @@
 					<type>button</type>
 					<id>5</id>
 					<label>457</label>
-					<posX>70</posX>
-					<posY>180</posY>
 					<onright>50</onright>
 					<onup>3</onup>
 					<ondown>6</ondown>
@@ -244,8 +252,6 @@
 					<type>button</type>
 					<id>6</id>
 					<label>341</label>
-					<posX>70</posX>
-					<posY>220</posY>
 					<onright>50</onright>
 					<onup>5</onup>
 					<ondown>20</ondown>
@@ -256,22 +262,62 @@
 					<id>20</id>
 					<label>4555</label>
 					<action>33</action>
-					<posX>70</posX>
-					<posY>260</posY>
 					<onright>50</onright>
-					<ondown>9</ondown>
 					<onup>6</onup>
+					<ondown>9</ondown>
 				</control>
 				<control>
 					<description>My Playlists</description>
 					<type>button</type>
 					<id>9</id>
 					<label>983</label>
-					<posX>70</posX>
-					<posY>300</posY>
 					<onright>50</onright>
-					<ondown>2</ondown>
 					<onup>20</onup>
+					<ondown>9111</ondown>
+				</control>
+				<control>
+					<description>Moving Pictures</description>
+					<type>button</type>
+					<id>9111</id>
+					<hyperlink>96742</hyperlink>
+					<label>Moving Pictures</label>
+					<onright>50</onright>
+					<onup>9</onup>
+					<ondown>9112</ondown>
+					<visible>plugin.isenabled(Moving Pictures)</visible>
+				</control>
+				<control>
+					<description>TV Shows</description>
+					<type>button</type>
+					<id>9112</id>
+					<hyperlink>9811</hyperlink>
+					<label>1300</label>
+					<onright>50</onright>
+					<onup>9111</onup>
+					<ondown>9113</ondown>
+					<visible>plugin.isenabled(MP-TV Series)</visible>
+				</control>
+				<control>
+					<description>My Trailers</description>
+					<type>button</type>
+					<id>9113</id>
+					<label>5906</label>
+					<hyperlink>5900</hyperlink>
+					<visible>plugin.isenabled(My Trailers)</visible>
+					<onright>50</onright>
+					<onup>9112</onup>
+					<ondown>9114</ondown>
+				</control>
+				<control>
+					<description>SubCentral</description>
+					<type>button</type>
+					<id>9114</id>
+					<label>287</label>
+					<hyperlink>84623</hyperlink>
+					<visible>plugin.isenabled(SubCentral)</visible>
+					<onright>50</onright>
+					<onup>9113</onup>
+					<ondown>2</ondown>
 				</control>
 			</control>
 		</control>
