@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>25653</id>
+	<defaultcontrol>101</defaultcontrol>
+	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
+	<define>#header.label:Radio Time</define>
+	<define>#header.background:hover_radiotime.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<id>101</id>
+				<type>button</type>
+				<onright>2</onright>
+				<onleft>2</onleft>
+				<ondown>102</ondown>
+				<onup>110</onup>
+				<posX>490</posX>
+				<posY>100</posY>
+				<width>790</width>
+				<label>#RadioTime.Presets.1.Name</label>
+			</control>
+			<control>
+				<id>102</id>
+				<type>button</type>
+				<onright>2</onright>
+				<onleft>2</onleft>
+				<onup>101</onup>
+				<ondown>103</ondown>
+				<posX>490</posX>
+				<posY>153</posY>
+				<width>790</width>
+				<label>#RadioTime.Presets.2.Name</label>
+			</control>
+			<control>
+				<id>103</id>
+				<type>button</type>
+				<onright>2</onright>
+				<onleft>2</onleft>
+				<onup>102</onup>
+				<ondown>104</ondown>
+				<posX>490</posX>
+				<posY>206</posY>
+				<width>790</width>
+				<label>#RadioTime.Presets.3.Name</label>
+			</control>
+			<control>
+				<id>104</id>
+				<type>button</type>
+				<onright>2</onright>
+				<onleft>2</onleft>
+				<onup>103</onup>
+				<ondown>105</ondown>
+				<posX>490</posX>
+				<posY>259</posY>
+				<width>790</width>
+				<label>#RadioTime.Presets.4.Name</label>
+			</control>
+			<control>
+				<id>105</id>
+				<type>button</type>
+				<onright>2</onright>
+				<onleft>2</onleft>
+				<onup>104</onup>
+				<ondown>106</ondown>
+				<posX>490</posX>
+				<posY>312</posY>
+				<width>790</width>
+				<label>#RadioTime.Presets.5.Name</label>
+			</control>
+			<control>
+				<id>106</id>
+				<type>button</type>
+				<onright>2</onright>
+				<onleft>2</onleft>
+				<onup>105</onup>
+				<ondown>107</ondown>
+				<posX>490</posX>
+				<posY>365</posY>
+				<width>790</width>
+				<label>#RadioTime.Presets.6.Name</label>
+			</control>
+			<control>
+				<id>107</id>
+				<type>button</type>
+				<onright>2</onright>
+				<onleft>2</onleft>
+				<onup>106</onup>
+				<ondown>108</ondown>
+				<posX>490</posX>
+				<posY>418</posY>
+				<width>790</width>
+				<label>#RadioTime.Presets.7.Name</label>
+			</control>
+			<control>
+				<id>108</id>
+				<type>button</type>
+				<onright>2</onright>
+				<onleft>2</onleft>
+				<onup>107</onup>
+				<ondown>109</ondown>
+				<posX>490</posX>
+				<posY>471</posY>
+				<width>790</width>
+				<label>#RadioTime.Presets.8.Name</label>
+			</control>
+			<control>
+				<id>109</id>
+				<type>button</type>
+				<onright>2</onright>
+				<onleft>2</onleft>
+				<onup>108</onup>
+				<ondown>110</ondown>
+				<posX>490</posX>
+				<posY>524</posY>
+				<width>790</width>
+				<label>#RadioTime.Presets.9.Name</label>
+			</control>
+			<control>
+				<id>110</id>
+				<type>button</type>
+				<onright>2</onright>
+				<onleft>2</onleft>
+				<onup>109</onup>
+				<ondown>101</ondown>
+				<posX>490</posX>
+				<posY>577</posY>
+				<width>790</width>
+				<label>#RadioTime.Presets.10.Name</label>
+			</control>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>40</posX>
+				<posY>95</posY>
+				<width>342</width>
+				<height>275</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#RadioTime.Selected.Logo</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>85</posY>
+				<width>360</width>
+				<height>293</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+			</control>
+
+
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>395</posY>
+				<width>385</width>
+				<font>font20</font>
+				<label>#RadioTime.Presets.Folder.Name</label>
+				<wrapString> : : : </wrapString>
+			</control>
+		</control>
+
+		<!-- HIDDEN MENU -->
+
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(2)|control.hasfocus(3)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<id>2</id>
+					<type>button</type>
+					<onup>17</onup>
+					<ondown>3</ondown>
+					<onright>101</onright>
+					<label>#RadioTime.Translation.Home.Label</label>
+				</control>
+				<control>
+					<id>3</id>
+					<type>button</type>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onright>101</onright>
+					<label>#RadioTime.Translation.Folders.Label</label>
+				</control>
+			</control>
+		</control>
+
+	</controls>
+</window>

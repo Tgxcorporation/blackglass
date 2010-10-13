@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>747</id>
+	<defaultcontrol>51</defaultcontrol>
+	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
+	<define>#header.label:724</define>
+	<define>#header.background:hover_my tv.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls> 
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>50</id>
+				<onleft>51</onleft>
+				<onright>51</onright>
+				<onup>2</onup>
+				<ondown>51</ondown>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>status</description>
+				<type>label</type>
+				<id>2</id>
+				<posX>30</posX>
+				<posY>100</posY>
+				<label>6035</label>
+				<font>font22</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control> 
+
+			<control>
+				<description>sms input</description>
+				<type>smsinput</type>
+				<id>51</id>
+				<posX>30</posX>
+				<posY>280</posY>
+				<width>355</width>
+				<height>125</height>
+				<onleft>51</onleft>
+				<onright>51</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<font>font14</font>
+				<font2>font14</font2>
+				<textcolor2>60ffffff</textcolor2>
+				<textboxFont>font18</textboxFont>
+				<textboxXpos>30</textboxXpos>
+				<textboxYpos>200</textboxYpos>
+				<textboxWidth>400</textboxWidth>
+				<textboxHeight>28</textboxHeight>
+				<textboxColor>FFFFFFff</textboxColor>
+				<textboxBgColor>ffffffff</textboxBgColor>
+			</control>
+		</control>
+	</controls>
+</window>

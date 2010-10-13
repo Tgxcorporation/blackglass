@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<visible>control.isvisible(52)|control.isvisible(53)</visible>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<posX>408</posX>
+				<posY>-25</posY>
+				<width>948</width>
+				<height>790</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<!-- *** Processor Gauge *** -->
+			<control>
+				<description>Processor Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>470</posX>
+				<posY>40</posY>
+				<width>145</width>
+				<height>130</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>#HTPCInfo.ProcessorGauge</texture>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Label Processor Gauge *** -->
+			<control>
+				<description>Processor Gauge Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>470</posX>
+				<posY>185</posY>
+				<width>145</width>
+				<label>Processor</label>
+				<align>center</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Processor Usage *** -->
+			<control>
+				<description>Processor Usage Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>66</posY>
+				<width>190</width>
+				<label>Usage</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(52)</visible>
+			</control>
+			<control>
+				<description>Processor Usage</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>65</posY>
+				<width>430</width>
+				<label>#HTPCInfo.ProcessorUsage%</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Label Processor Core Count *** -->
+			<control>
+				<description>Processor Core Count Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>91</posY>
+				<width>190</width>
+				<label>Processor(s)</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(52)</visible>
+			</control>
+			<control>
+				<description>Processor Core Count</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>90</posY>
+				<width>430</width>
+				<label>#HTPCInfo.ProcessorCoresx #HTPCInfo.ProcessorManufacturer (#HTPCInfo.SensorTemperatureCPU/#HTPCInfo.SensorVoltageCPU/#HTPCInfo.SensorFanCPU0)</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<!-- *** Label Processor Name *** -->
+			<control>
+				<description>Processor Usage Gauge Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>116</posY>
+				<width>190</width>
+				<label>Type</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(52)</visible>
+			</control>
+			<control>
+				<description>Processor Core Count</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>115</posY>
+				<width>430</width>
+				<label>#HTPCInfo.ProcessorVersion</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Memory Gauge *** -->
+			<control>
+				<description>Memory Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>470</posX>
+				<posY>260</posY>
+				<width>145</width>
+				<height>130</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>#HTPCInfo.MemoryGauge</texture>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Label Memory Gauge *** -->
+			<control>
+				<description>Memory Gauge Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>480</posX>
+				<posY>404</posY>
+				<width>120</width>
+				<label>Memory</label>
+				<align>center</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Memory Usage *** -->
+			<control>
+				<description>Memory Usage Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>283</posY>
+				<width>190</width>
+				<label>Usage</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(52)</visible>
+			</control>
+			<control>
+				<description>Memory Usage</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>282</posY>
+				<width>430</width>
+				<label>#HTPCInfo.MemoryPercentUsed% (#HTPCInfo.MemoryAvailable free)</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Label Processor Name *** -->
+			<control>
+				<description>Pagefile Usage Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>308</posY>
+				<width>190</width>
+				<label>Pagefile Usage</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(52)</visible>
+			</control>
+			<control>
+				<description>Pagefile Usage</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>307</posY>
+				<width>430</width>
+				<label>#HTPCInfo.PagefileUsed%</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Label Processor Core Count *** -->
+			<control>
+				<description>Memory Size Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>333</posY>
+				<width>190</width>
+				<label>Memory Size</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(52)</visible>
+			</control>
+			<control>
+				<description>Memory Size</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>332</posY>
+				<width>430</width>
+				<label>#HTPCInfo.MemoryPhysical</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Drive1 Gauge *** -->
+			<control>
+				<description>Drive1 Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>470</posX>
+				<posY>480</posY>
+				<width>68</width>
+				<height>63</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>#HTPCInfo.Drive1Gauge</texture>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Drive2 Gauge *** -->
+			<control>
+				<description>Drive2 Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>540</posX>
+				<posY>480</posY>
+				<width>68</width>
+				<height>63</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>#HTPCInfo.Drive2Gauge</texture>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Drive3 Gauge *** -->
+			<control>
+				<description>Drive3 Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>470</posX>
+				<posY>545</posY>
+				<width>68</width>
+				<height>63</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>#HTPCInfo.Drive3Gauge</texture>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Drive4 Gauge *** -->
+			<control>
+				<description>Drive4 Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>540</posX>
+				<posY>545</posY>
+				<width>68</width>
+				<height>63</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>#HTPCInfo.Drive4Gauge</texture>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Label Drives Gauge *** -->
+			<control>
+				<description>Drives Gauge Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>470</posX>
+				<posY>620</posY>
+				<width>135</width>
+				<label>Harddisks</label>
+				<align>center</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+			</control>
+
+			<!-- *** Drive C Usage *** -->
+			<control>
+				<description>Drive C Usage Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>491</posY>
+				<width>190</width>
+				<label>Drive #HTPCInfo.Drive1Name</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(52)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Drive C Usage</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>490</posY>
+				<width>430</width>
+				<label>#HTPCInfo.Drive1PercentUsedSpace% used (#HTPCInfo.Drive1FreeSpace free)</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<!-- *** Drive D Usage *** -->
+			<control>
+				<description>Drive D Usage Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>516</posY>
+				<width>190</width>
+				<label>Drive #HTPCInfo.Drive2Name</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(52)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Drive D Usage</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>515</posY>
+				<width>430</width>
+				<label>#HTPCInfo.Drive2PercentUsedSpace% used (#HTPCInfo.Drive2FreeSpace free)</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<!-- *** Drive E Usage *** -->
+			<control>
+				<description>Drive E Usage Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>541</posY>
+				<width>190</width>
+				<label>Drive #HTPCInfo.Drive3Name</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(52)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Drive E Usage</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>540</posY>
+				<width>430</width>
+				<label>#HTPCInfo.Drive3PercentUsedSpace% used (#HTPCInfo.Drive3FreeSpace free)</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<!-- *** Drive F Usage *** -->
+			<control>
+				<description>Drive F Usage Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>566</posY>
+				<width>190</width>
+				<label>Drive #HTPCInfo.Drive4Name</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(52)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Drive F Usage</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>565</posY>
+				<width>430</width>
+				<label>#HTPCInfo.Drive4PercentUsedSpace% used (#HTPCInfo.Drive4FreeSpace free)</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.isvisible(52)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+
+
+			<!-- PROGRESS BARS -->
+
+			<control>
+				<description>Processor Gauge Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>30</posY>
+				<width>800</width>
+				<label>Processor #HTPCInfo.ProcessorUsage% (#HTPCInfo.SensorTemperatureCPU/#HTPCInfo.SensorVoltageCPU/#HTPCInfo.SensorFanCPU0)</label>
+				<align>left</align>
+				<font>font14</font>
+				<visible>control.isvisible(53)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Processor Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>60</posY>
+				<width>300</width>
+				<height>18</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#HTPCInfo.ProcessorGauge</texture>
+				<visible>control.isvisible(53)</visible>
+			</control>
+
+
+			<control>
+				<description>Memory Gauge Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>100</posY>
+				<width>800</width>
+				<label>Memory #HTPCInfo.MemoryPercentUsed% (#HTPCInfo.MemoryAvailable free / #HTPCInfo.MemoryPhysical)</label>
+				<align>left</align>
+				<font>font14</font>
+				<visible>control.isvisible(53)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Memory Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>130</posY>
+				<width>300</width>
+				<height>18</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#HTPCInfo.MemoryGauge</texture>
+				<visible>control.isvisible(53)</visible>
+			</control>
+
+			<control>
+				<type>image</type>
+				<posX>440</posX>
+				<posY>120</posY>
+				<width>840</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<visible>control.isvisible(53)</visible>
+			</control>
+
+			<control>
+				<description>Drive1 Gauge Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>200</posY>
+				<width>800</width>
+				<label>Drive #HTPCInfo.Drive1Name #HTPCInfo.Drive1PercentUsedSpace% used (#HTPCInfo.Drive1FreeSpace free)</label>
+				<align>left</align>
+				<font>font14</font>
+				<visible>control.isvisible(53)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Drive1 Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>230</posY>
+				<width>300</width>
+				<height>18</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#HTPCInfo.Drive1Gauge</texture>
+				<visible>control.isvisible(53)</visible>
+			</control>
+
+
+			<control>
+				<description>Drive2 Gauge Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>270</posY>
+				<width>800</width>
+				<label>Drive #HTPCInfo.Drive2Name #HTPCInfo.Drive2PercentUsedSpace% used (#HTPCInfo.Drive2FreeSpace free)</label>
+				<align>left</align>
+				<font>font14</font>
+				<visible>control.isvisible(53)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Drive2 Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>300</posY>
+				<width>300</width>
+				<height>18</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#HTPCInfo.Drive2Gauge</texture>
+				<visible>control.isvisible(53)</visible>
+			</control>
+
+
+			<control>
+				<description>Drive3 Gauge Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>340</posY>
+				<width>800</width>
+				<label>Drive #HTPCInfo.Drive3Name #HTPCInfo.Drive3PercentUsedSpace% used (#HTPCInfo.Drive3FreeSpace free)</label>
+				<align>left</align>
+				<font>font14</font>
+				<visible>control.isvisible(53)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Drive3 Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>370</posY>
+				<width>300</width>
+				<height>18</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#HTPCInfo.Drive3Gauge</texture>
+				<visible>control.isvisible(53)</visible>
+			</control>
+
+
+			<control>
+				<description>Drive4 Gauge Label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>410</posY>
+				<width>800</width>
+				<label>Drive #HTPCInfo.Drive4Name #HTPCInfo.Drive4PercentUsedSpace% used (#HTPCInfo.Drive4FreeSpace free)</label>
+				<align>left</align>
+				<font>font14</font>
+				<visible>control.isvisible(53)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Drive4 Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>460</posX>
+				<posY>440</posY>
+				<width>300</width>
+				<height>18</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#HTPCInfo.Drive4Gauge</texture>
+				<visible>control.isvisible(53)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

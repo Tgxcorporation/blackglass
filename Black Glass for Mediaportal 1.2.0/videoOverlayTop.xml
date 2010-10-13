@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<defaultcontrol>4</defaultcontrol>
+	<id>3008</id>
+	<controls>
+		<control>
+			<description>Pause logo</description>
+			<type>image</type>
+			<id>4</id>
+			<posX>407</posX>
+			<posY>583</posY>
+			<width>49</width>
+			<height>50</height>
+			<texture>logo_pause.png</texture>
+			<visible>player.paused</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>FF logo</description>
+			<type>image</type>
+			<id>5</id>
+			<posX>402</posX>
+			<posY>588</posY>
+			<width>50</width>
+			<height>40</height>
+			<texture>logo_fastforward.png</texture>
+			<visible>player.forwarding</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>RW logo</description>
+			<type>image</type>
+			<id>6</id>
+			<posX>400</posX>
+			<posY>588</posY>
+			<width>50</width>
+			<height>40</height>
+			<texture>logo_rewind.png</texture>
+			<visible>player.rewinding</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control> 
+			<description>Image</description> 
+			<type>image</type> 
+			<id>0</id> 
+			<posX>409</posX>
+			<posY>591</posY>
+			<width>14</width>
+			<height>34</height>
+			<keepaspectratio>no</keepaspectratio> 
+			<texture>#VolumeControl.ImagePeakChannel0</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>player.hasmedia+plugin.isenabled(Volume Control)+![player.rewinding|player.forwarding|player.paused]</visible>
+		</control> 
+		<control> 
+			<description>Image</description> 
+			<type>image</type> 
+			<id>0</id> 
+			<posX>429</posX>
+			<posY>591</posY>
+			<width>14</width>
+			<height>34</height>
+			<keepaspectratio>no</keepaspectratio> 
+			<texture>#VolumeControl.ImagePeakChannel1</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>player.hasmedia+plugin.isenabled(Volume Control)+![player.rewinding|player.forwarding|player.paused]</visible>
+		</control> 
+	</controls>
+</window>
+
+
