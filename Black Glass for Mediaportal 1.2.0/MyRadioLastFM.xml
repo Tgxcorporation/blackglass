@@ -92,7 +92,7 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>		
+				<visible>control.hasfocus(123)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -106,7 +106,7 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Current.ArtistThumb</texture>
-				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+				<visible>player.hasmedia+control.hasfocus(123)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<zoom>yes</zoom>
 			</control>
@@ -119,7 +119,7 @@
 				<width>360</width>
 				<height>327</height>
 				<colordiffuse>ffffffff</colordiffuse>
-				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+				<visible>player.hasmedia+control.hasfocus(123)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
 			</control>
@@ -133,7 +133,7 @@
 				<font>font22</font>
 				<label>#Play.Current.Title</label>
 				<wrapString> : : : </wrapString>
-				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+				<visible>player.hasmedia+control.hasfocus(123)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -145,7 +145,7 @@
 				<label>#Play.Current.Artist : : : #Play.Current.Album</label>
 				<textcolor>ffffffff</textcolor>
 				<wrapString> : : : </wrapString>
-				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+				<visible>player.hasmedia+control.hasfocus(123)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 		</control>
@@ -208,6 +208,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<visible>player.hasmedia</visible>
 			<control>
 				<type>listcontrol</type>
 				<description>current playlist control</description>
@@ -294,6 +295,20 @@
 
 
 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>control.hasfocus(123)</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>10</defaultcontrol>
@@ -307,23 +322,14 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
+			<visible>!control.hasfocus(123)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)</visible>
-			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
