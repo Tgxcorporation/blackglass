@@ -70,7 +70,7 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+				<visible>control.hasfocus(99)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -85,7 +85,7 @@
 				<align>left</align>
 				<textcolor>White</textcolor>
 				<width>350</width>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+				<visible>control.hasfocus(99)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -99,7 +99,7 @@
 				<label>#TV.View.description</label>
 				<font>font16</font>
 				<textcolor>White</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+				<visible>control.hasfocus(99)</visible>
 				<seperator>: : :</seperator>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
@@ -114,7 +114,7 @@
 				<font>font20</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+				<visible>control.hasfocus(99)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -129,11 +129,25 @@
 				<align>left</align>
 				<font>font20</font>
 				<textcolor>90ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+				<visible>control.hasfocus(99)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 		</control>
 
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -141,30 +155,19 @@
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
+			<visible>!control.hasfocus(99)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)</visible>
-			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -341,7 +344,7 @@
 			<textcolor>80ffffff</textcolor>
 			
 		</control> -->
-			<!--     <control>
+		<!--     <control>
       <description>rectangle</description>
       <type>image</type>
       <id>21</id>
