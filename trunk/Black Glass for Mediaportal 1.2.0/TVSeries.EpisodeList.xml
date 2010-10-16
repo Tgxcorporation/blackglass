@@ -2,105 +2,84 @@
 <window> 
 	<controls>
 		<control>
-			<description>details background</description>
-			<id>0</id>
-			<type>image</type>
-			<posX>-73</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150" delay="100">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">WindowClose</animation>
 			<visible>control.isvisible(1239)</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">hidden</animation> -->
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>92</posY>
-			<label>#TVSeries.Title</label>
-			<font>font20</font>
-			<align>left</align>
-			<textcolor>ffffffff</textcolor>
-			<width>800</width>
-			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="66">visible</animation>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>fadelabel</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>128</posY>
-			<label>#TVSeries.Series.Pretty_Name     #TVSeries.Episode.SeasonLabel     #TVSeries.Subtitle</label>
-			<font>font13</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-			<width>790</width>
-			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="66">visible</animation>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-438</posX>
-			<posY>107</posY>
-			<width>1280</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">hidden</animation> -->
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<description>Big Episode Thumb</description>
-			<type>image</type>
-			<id>67</id>
-			<posX>39</posX>
-			<posY>186</posY>
-			<width>270</width>     
-			<height>152</height>     
-			<keepaspectratio>yes</keepaspectratio>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.EpisodeImage</texture>
-			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visible</animation>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control> 
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>180</posY>
-			<width>285</width>
-			<height>188</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
-			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control> 
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>-73</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>92</posY>
+				<label>#TVSeries.Title</label>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>800</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>128</posY>
+				<label>#TVSeries.Series.Pretty_Name     #TVSeries.Episode.SeasonLabel     #TVSeries.Subtitle</label>
+				<font>font13</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+				<width>790</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-438</posX>
+				<posY>107</posY>
+				<width>1280</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>Big Episode Thumb</description>
+				<type>image</type>
+				<id>67</id>
+				<posX>39</posX>
+				<posY>186</posY>
+				<width>270</width>     
+				<height>152</height>     
+				<keepaspectratio>yes</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.EpisodeImage</texture>
+				<animation effect="fade" time="250" delay="133">visible</animation>
+				<centered>yes</centered>
+				<zoom>yes</zoom>
+			</control> 
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>180</posY>
+				<width>285</width>
+				<height>188</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
+			</control> 
 
-		<!-- Watched Icons for Episode View-->
-	<!-- <control>
+			<!-- Watched Icons for Episode View-->
+			<!-- <control>
             <description>Episode Watched Icon Background</description>
             <type>image</type>
             <id>0</id>
@@ -162,110 +141,82 @@
         </control> -->
 
 
-		<control>
-			<type>imagelist</type>
-			<id>0</id>
-			<posX>340</posX>
-			<posY>185</posY>
-			<width>302</width>
-			<height>40</height>
-			<textureWidth>27</textureWidth>
-			<textureHeight>27</textureHeight>
-			<subitems>
-				<subitem>star_nofocus.png</subitem>
-				<subitem>star_focus.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>10</imagesToDraw>
-			<percentage>#TVSeries.Episode.Rating</percentage>
-			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control>
+			<control>
+				<type>imagelist</type>
+				<id>0</id>
+				<posX>340</posX>
+				<posY>185</posY>
+				<width>302</width>
+				<height>40</height>
+				<textureWidth>27</textureWidth>
+				<textureHeight>27</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#TVSeries.Episode.Rating</percentage>
+			</control>
 
-		<control>      
-			<type>fadelabel</type>
-			<id>0</id>
-			<posX>340</posX>
-			<posY>225</posY>
-			<width>480</width>
-			<label>#TVSeries.Episode.infopanelLine2Value    #TVSeries.Episode.infopanelLine3Value</label>
-			<font>font14</font>
-			<textcolor>90ffffff</textcolor>
-			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visible</animation>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control>
+			<control>      
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>340</posX>
+				<posY>225</posY>
+				<width>480</width>
+				<label>#TVSeries.Episode.infopanelLine2Value    #TVSeries.Episode.infopanelLine3Value</label>
+				<font>font14</font>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
 
-		<control>      
-			<type>fadelabel</type>
-			<id>0</id>
-			<posX>340</posX>
-			<posY>260</posY>
-			<width>480</width>
-			<label>Directed by #TVSeries.Episode.infopanelLine4Value</label>
-			<font>font16</font>
-			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visible</animation>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control>
+			<control>      
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>340</posX>
+				<posY>260</posY>
+				<width>480</width>
+				<label>Directed by #TVSeries.Episode.infopanelLine4Value</label>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+			</control>
 
-		<control>      
-			<type>fadelabel</type>
-			<id>0</id>
-			<posX>340</posX>
-			<posY>300</posY>
-			<width>480</width>
-			<label>Written by #TVSeries.Episode.infopanelLine5Value</label>
-			<textcolor>90ffffff</textcolor>
-			<font>font14</font>
-			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visible</animation>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control>
+			<control>      
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>340</posX>
+				<posY>300</posY>
+				<width>480</width>
+				<label>Written by #TVSeries.Episode.infopanelLine5Value</label>
+				<textcolor>90ffffff</textcolor>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+			</control>
 
-		<control>      
-			<type>fadelabel</type>
-			<id>0</id>
-			<posX>340</posX>
-			<posY>340</posY>
-			<width>480</width>
-			<label>#TVSeries.Series.infopanelLine6Value #TVSeries.Episode.infopanelLine6Value</label>
-			<textcolor>ffffffff</textcolor>
-			<font>font14</font>
-			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="133">visible</animation>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-438</posX>
-			<posY>345</posY>
-			<width>1280</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>control.isvisible(1239)</visible>
-			<animation effect="fade" time="250">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
+			<control>      
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>340</posX>
+				<posY>340</posY>
+				<width>480</width>
+				<label>#TVSeries.Series.infopanelLine6Value #TVSeries.Episode.infopanelLine6Value</label>
+				<textcolor>ffffffff</textcolor>
+				<font>font14</font>
+				<visible>control.isvisible(1239)</visible>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-438</posX>
+				<posY>345</posY>
+				<width>1280</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
