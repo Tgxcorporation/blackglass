@@ -7,7 +7,7 @@
 	<define>#header.background:hover_my anime.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
-	
+
 		<!-- ********************** DUMMY controlS FOR VISIBILITY ************************************** -->
 		<control>
 			<type>label</type>
@@ -72,10 +72,10 @@
 			<!-- to make a control visible only when FANART is loaded do this: <visible>control.isvisible(1501)</visible> -->
 			<!-- to make a control invisible when FANART is loaded do this: <visible>!control.isvisible(1501)</visible> -->
 		</control>
-		
-		
-		
-		
+
+
+
+
 		<import>common.window.background.xml</import>
 		<control>
 			<description>Fanart Background #1</description>
@@ -109,7 +109,7 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>control.hasfocus(50)</visible>
+				<visible>![control.hasfocus(801)|control.hasfocus(802)|control.hasfocus(803)|control.hasfocus(901)|control.hasfocus(902)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -1103,7 +1103,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>control.hasfocus(50)</visible>
+			<visible>![control.hasfocus(801)|control.hasfocus(802)|control.hasfocus(803)|control.hasfocus(901)|control.hasfocus(902)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -1122,7 +1122,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.hasfocus(50)</visible>
+			<visible>[control.hasfocus(801)|control.hasfocus(802)|control.hasfocus(803)|control.hasfocus(901)|control.hasfocus(902)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
