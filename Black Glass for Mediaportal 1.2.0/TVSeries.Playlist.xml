@@ -133,54 +133,88 @@
 			</control>
 		</control>  
 		<control>
-			<id>1</id>
-			<type>image</type>
-			<posX>36</posX>
-			<posY>74</posY>
-			<width>340</width>
-			<height>191</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>[facadeview.playlist|facadeview.album]+control.hasfocus(50)</visible>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>70</posY>
-			<width>352</width>
-			<height>201</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-			<visible>[facadeview.playlist|facadeview.album]+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Current program title</description>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>375</posY>
-			<width>350</width>
-			<font>font20</font>
-			<label>#selecteditem</label>
-			<visible>[facadeview.playlist|facadeview.album]+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Current program</description>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>430</posY>
-			<width>350</width>
-			<label>#selecteditem2</label>
-			<textcolor>ffffffff</textcolor>
-			<visible>[facadeview.playlist|facadeview.album]+control.hasfocus(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<posX>36</posX>
+				<posY>74</posY>
+				<width>340</width>
+				<height>191</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>[facadeview.playlist|facadeview.album]+control.hasfocus(50)</visible>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>70</posY>
+				<width>352</width>
+				<height>201</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+				<visible>[facadeview.playlist|facadeview.album]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Current program title</description>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>375</posY>
+				<width>350</width>
+				<font>font20</font>
+				<label>#selecteditem</label>
+				<visible>[facadeview.playlist|facadeview.album]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Current program</description>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>430</posY>
+				<width>350</width>
+				<label>#selecteditem2</label>
+				<textcolor>ffffffff</textcolor>
+				<visible>[facadeview.playlist|facadeview.album]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 		</control>
 
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(40)|control.hasfocus(21)|control.hasfocus(22)|control.hasfocus(23)|control.hasfocus(24)|control.hasfocus(25)|control.hasfocus(9)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -195,23 +229,14 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
+			<visible>control.hasfocus(2)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(40)|control.hasfocus(21)|control.hasfocus(22)|control.hasfocus(23)|control.hasfocus(24)|control.hasfocus(25)|control.hasfocus(9)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(40)|control.hasfocus(21)|control.hasfocus(22)|control.hasfocus(23)|control.hasfocus(24)|control.hasfocus(25)|control.hasfocus(9)</visible>
-			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>

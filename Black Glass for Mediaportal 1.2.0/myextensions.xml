@@ -14,7 +14,26 @@
 		<import>common.facade.background.xml</import>
 		<import>common.facade.itemcount.xml</import>
 		<import>common.facade.pictures.xml</import>
-		
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+		</control>
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -24,7 +43,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>control.hasfocus(50)</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -43,7 +62,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.hasfocus(50)</visible>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(6)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
