@@ -45,7 +45,7 @@
 			<animation effect="fade" time="250">visible</animation>
 			<animation effect="fade" time="250" delay="250">hidden</animation>
 			<animation effect="fade" time="1">WindowClose</animation>	
-			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 		</control>
 		<import>common.window.overlay.xml</import>
 		<import>common.window.time.xml</import>
@@ -111,6 +111,10 @@
 				<label>#selecteditem</label>
 				<visible>facadeview.filmstrip+!control.isvisible(24)+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			</control>
 			<!-- <control>
 			<type>fadelabel</type>
@@ -472,9 +476,26 @@
 
 		<!-- DETAILS -->
 		<control>
+			<description>DUMMY movie poster</description>
+			<type>image</type>
+			<id>24</id>
+			<posX>3546</posX>
+			<posY>165</posY>
+			<width>200</width>
+			<height>282</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture flipY="true" diffuse="Thumb_Mask.png">-</texture>
+		</control>
+		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
 			<control>
 				<type>image</type>
 				<posX>0</posX>
@@ -561,203 +582,163 @@
 			</control>
 		</control>
 		<control>
-			<description>details background</description>
-			<id>0</id>
-			<type>image</type>
-			<posX>458</posX>
-			<posY>48</posY>
-			<width>948</width>
-			<height>766</height>
-			<texture>bg_facade.png</texture>
-			<visible>control.isvisible(24)</visible>	
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>490</posX>
-			<posY>97</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
 			<visible>control.isvisible(24)</visible>	
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<description>Title label</description>
-			<id>0</id>
-			<type>fadelabel</type>
-			<posX>520</posX>
-			<posY>93</posY>
-			<label>#st_title</label>
-			<font>font24</font>
-			<align>left</align>
-			<textcolor>ffffffff</textcolor>
-			<width>750</width>
-			<visible>control.isvisible(24)</visible>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<description>movie poster</description>
-			<type>image</type>
-			<id>24</id>
-			<posX>546</posX>
-			<posY>165</posY>
-			<width>200</width>
-			<height>282</height>
-			<keepaspectratio>no</keepaspectratio>
-			<texture flipY="true" diffuse="Thumb_Mask.png">-</texture>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<description>Highlight item</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>520</posX>
-			<posY>160</posY>
-			<width>230</width>
-			<height>292</height>
-			<visible>control.isvisible(24)</visible>
-			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<description>IMDB Rating Value</description>
-			<type>imagelist</type>
-			<id>32</id>
-			<posX>780</posX>
-			<posY>165</posY>
-			<width>115</width>
-			<height>13</height>
-			<textureWidth>27</textureWidth>
-			<textureHeight>27</textureHeight>
-			<subitems>
-				<subitem>star_nofocus.png</subitem>
-				<subitem>star_focus.png</subitem>
-			</subitems>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<imagesToDraw>10</imagesToDraw>
-			<percentage>#st_userrating</percentage>
-			<visible>control.isvisible(24)</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>	
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>	
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>97</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>Title label</description>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>520</posX>
+				<posY>93</posY>
+				<label>#st_title</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>750</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>REAL movie poster</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>546</posX>
+				<posY>165</posY>
+				<width>200</width>
+				<height>282</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#st_poster</texture>
+			</control>
+			<control>
+				<description>Highlight item</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>520</posX>
+				<posY>160</posY>
+				<width>230</width>
+				<height>292</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+			</control>
+			<control>
+				<description>IMDB Rating Value</description>
+				<type>imagelist</type>
+				<id>32</id>
+				<posX>780</posX>
+				<posY>165</posY>
+				<width>115</width>
+				<height>13</height>
+				<textureWidth>27</textureWidth>
+				<textureHeight>27</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#st_userrating</percentage>
+			</control>	
 
-		<control>
-			<description>Genre value</description>
-			<type>fadelabel</type>
-			<id>36</id>
-			<posX>780</posX>
-			<posY>205</posY>
-			<width>470</width>
-			<label>#st_genre</label>
-			<textcolor>FFFFFFFF</textcolor>
-			<font>font16</font>
-			<visible>control.isvisible(24)</visible>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
+			<control>
+				<description>Genre value</description>
+				<type>fadelabel</type>
+				<id>36</id>
+				<posX>780</posX>
+				<posY>205</posY>
+				<width>470</width>
+				<label>#st_genre</label>
+				<textcolor>FFFFFFFF</textcolor>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+			</control>
 
-		<control>
-			<description>runtime</description>
-			<type>fadelabel</type>
-			<label>#st_rating     #st_runtime</label>
-			<id>25</id>
-			<posX>780</posX>
-			<posY>245</posY>
-			<width>480</width>
-			<font>font18</font>
-			<textcolor>90ffffff</textcolor>
-			<visible>control.isvisible(24)</visible>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
+			<control>
+				<description>runtime</description>
+				<type>fadelabel</type>
+				<label>#st_rating     #st_runtime</label>
+				<id>25</id>
+				<posX>780</posX>
+				<posY>245</posY>
+				<width>480</width>
+				<font>font18</font>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
 
-		<control>
-			<description>Date Value</description>
-			<type>fadelabel</type>
-			<id>0</id>
-			<posX>780</posX>
-			<posY>285</posY>
-			<label>#st_releasedate</label>
-			<textcolor>FFFFFFFF</textcolor>
-			<font>font18</font>
-			<width>480</width>
-			<visible>control.isvisible(24)</visible>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
+			<control>
+				<description>Date Value</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>285</posY>
+				<label>#st_releasedate</label>
+				<textcolor>FFFFFFFF</textcolor>
+				<font>font18</font>
+				<width>480</width>
+				<wrapString> : : : </wrapString>
+			</control>
 
-		<control>
-			<description>Director Value</description>
-			<type>fadelabel</type>
-			<id>31</id>
-			<posX>780</posX>
-			<posY>325</posY>
-			<label>Directed by #st_director</label>
-			<textcolor>90FFFFFF</textcolor>
-			<font>font18</font>
-			<width>480</width>
-			<visible>control.isvisible(24)</visible>
-			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
+			<control>
+				<description>Director Value</description>
+				<type>fadelabel</type>
+				<id>31</id>
+				<posX>780</posX>
+				<posY>325</posY>
+				<label>Directed by #st_director</label>
+				<textcolor>90FFFFFF</textcolor>
+				<font>font18</font>
+				<width>480</width>
+				<wrapString> : : : </wrapString>
+			</control>
 
-		<control>
-			<description>Actors value</description>
-			<type>textboxscrollup</type>
-			<id>29</id>
-			<posX>780</posX>
-			<posY>370</posY>
-			<width>480</width>
-			<label>#st_starring</label>
-			<font>font16</font>
-			<textcolor>FFFFFFFF</textcolor>
-			<visible>control.isvisible(24)</visible>	 
-			<seperator>: : :</seperator>
-			<height>70</height>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
+			<control>
+				<description>Actors value</description>
+				<type>textboxscrollup</type>
+				<id>29</id>
+				<posX>780</posX>
+				<posY>370</posY>
+				<width>480</width>
+				<label>#st_starring</label>
+				<font>font16</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<seperator>: : :</seperator>
+				<height>70</height>
+			</control>
 
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>490</posX>
-			<posY>422</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>control.isvisible(24)</visible>	
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>422</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
 		</control>
 
 
@@ -773,7 +754,8 @@
 			<label>#st_plot</label>
 			<seperator>: : :</seperator>
 			<visible>!control.hastext(46)+control.isvisible(24)</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation> 
 		</control>
@@ -790,7 +772,8 @@
 			<label>#st_plot</label>
 			<seperator>: : :</seperator>
 			<visible>control.hastext(46)+control.isvisible(24)</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation> 
 		</control>
@@ -805,7 +788,8 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>control.hastext(46)+control.isvisible(24)</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
@@ -822,7 +806,8 @@
 			<align>left</align> 
 			<visible>control.hastext(46)+control.isvisible(24)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
@@ -839,7 +824,8 @@
 			<align>left</align> 
 			<visible>control.hastext(46)+control.isvisible(24)</visible>
 			<wrapString> : : : </wrapString>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
@@ -867,6 +853,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<visible>!control.isvisible(24)</visible>
 			<control>
@@ -982,7 +969,7 @@
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-	<control>
+		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>3</defaultcontrol>
