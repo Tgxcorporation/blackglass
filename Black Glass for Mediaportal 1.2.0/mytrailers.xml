@@ -2,7 +2,7 @@
 <window>
 	<id>5900</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]</allowoverlay>
 	<define>#header.label:Trailers</define>
 	<define>#header.background:hover_my trailers.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
@@ -53,7 +53,7 @@
 				<width>948</width>
 				<height>766</height>
 				<texture>bg_facade.png</texture>
-				<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.isvisible(50)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
 				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			</control>
@@ -66,7 +66,7 @@
 				<height>53</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>!facadeview.filmstrip+control.isvisible(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.isvisible(50)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
 				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
 			</control>
@@ -79,7 +79,7 @@
 				<label>#itemcount #itemtype</label>
 				<font>font16</font>
 				<textcolor>60ffffff</textcolor>
-				<visible>!facadeview.filmstrip+control.isvisible(50)+string.equals(#itemcount)+string.equals(#itemtype)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.isvisible(50)+string.equals(#itemcount)+string.equals(#itemtype)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
@@ -94,7 +94,7 @@
 				<height>348</height> 
 				<colordiffuse>ffffffff</colordiffuse>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-				<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.isvisible(50)+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<keepaspectratio>no</keepaspectratio>
 				<centered>yes</centered>
@@ -107,7 +107,7 @@
 				<posY>73</posY>
 				<width>283</width>
 				<height>360</height>
-				<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.isvisible(50)+control.hasfocus(50)</visible>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
@@ -120,7 +120,7 @@
 				<width>350</width>
 				<font>font22</font>
 				<label>#selecteditem</label>
-				<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.isvisible(50)+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -133,7 +133,7 @@
 				<width>350</width>
 				<label>#selecteditem2</label>
 				<textcolor>ffffffff</textcolor>
-				<visible>!facadeview.filmstrip+control.isvisible(50)+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.isvisible(50)+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>

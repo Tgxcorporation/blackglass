@@ -2,7 +2,7 @@
 <window>
 	<id>501</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]</allowoverlay>
 	<autohidetopbar>yes</autohidetopbar>
 	<define>#header.label:2</define>
 	<define>#useSelectedFanart:Yes</define>
@@ -47,7 +47,7 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -60,7 +60,7 @@
 				<height>327</height>
 				<colordiffuse>ffffffff</colordiffuse>
 				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -72,7 +72,7 @@
 				<width>360</width>
 				<font>font22</font>
 				<label>#selecteditem</label>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -85,7 +85,7 @@
 				<width>350</width>
 				<label>#selecteditem2</label>
 				<textcolor>ffffffff</textcolor>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>

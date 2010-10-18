@@ -2,7 +2,7 @@
 <window>
 	<id>4755</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+!facadeview.filmstrip+!control.isvisible(51)</allowoverlay>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+!control.isvisible(51)</allowoverlay>
 	<define>#header.label</define>
 	<define>#header.image</define>
 	<define>#useSelectedFanart:Yes</define>
@@ -24,7 +24,7 @@
 			<width>948</width>
 			<height>766</height>
 			<texture>bg_facade.png</texture>
-			<visible>!facadeview.filmstrip+!String.Equals(#OnlineVideos.state,details)</visible>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
@@ -39,7 +39,7 @@
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-			<visible>!facadeview.filmstrip+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]</visible>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
@@ -68,7 +68,7 @@
 			<font>font16</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<visible>!facadeview.filmstrip+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+string.equals(#OnlineVideos.state, sites)</visible>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+string.equals(#OnlineVideos.state, sites)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
@@ -83,7 +83,7 @@
 			<font>font16</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<visible>!facadeview.filmstrip+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+string.equals(#OnlineVideos.state, categories)</visible>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+string.equals(#OnlineVideos.state, categories)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
@@ -98,7 +98,7 @@
 			<font>font16</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<visible>!facadeview.filmstrip+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+string.equals(#OnlineVideos.state, videos)</visible>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+string.equals(#OnlineVideos.state, videos)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
@@ -149,7 +149,7 @@
 				<height>255</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-				<visible>!facadeview.filmstrip+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<centered>yes</centered>
 			</control>
@@ -161,7 +161,7 @@
 				<width>360</width>
 				<height>273</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-				<visible>!facadeview.filmstrip+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -173,7 +173,7 @@
 				<width>385</width>
 				<font>font22</font>
 				<label>#selecteditem</label>
-				<visible>!facadeview.filmstrip+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -186,7 +186,7 @@
 				<width>385</width>
 				<label>#OnlineVideos.length</label>
 				<textcolor>90ffffff</textcolor>
-				<visible>!facadeview.filmstrip+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -201,7 +201,7 @@
 				<font>font16</font>
 				<label>#OnlineVideos.desc</label>
 				<textcolor>White</textcolor>
-				<visible>!facadeview.filmstrip+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)+player.hasmedia</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)+player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control> 
@@ -218,7 +218,7 @@
 				<font>font16</font>
 				<label>#OnlineVideos.desc</label>
 				<textcolor>White</textcolor>
-				<visible>!facadeview.filmstrip+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)+!player.hasmedia</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+control.hasfocus(50)+!player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
