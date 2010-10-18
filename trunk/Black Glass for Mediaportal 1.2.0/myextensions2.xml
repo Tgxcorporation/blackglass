@@ -2,7 +2,7 @@
 <window>
 	<id>801</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]</allowoverlay>
 	<define>#header.label:14001</define>
 	<define>#header.background:hover_extensions.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
@@ -42,7 +42,7 @@
 				<height>255</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<centered>yes</centered>
 			</control>
@@ -54,7 +54,7 @@
 				<width>272</width>
 				<height>271</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">OverlayCase.png</texture>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -66,7 +66,7 @@
 				<width>385</width>
 				<font>font22</font>
 				<label>#selecteditem</label>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -82,7 +82,7 @@
 				<seperator>: : :</seperator>
 				<font>font16</font>
 				<label>#MPE.Selected.Description</label>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)+!player.hasmedia</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
@@ -98,7 +98,7 @@
 				<seperator>: : :</seperator>
 				<font>font16</font>
 				<label>#MPE.Selected.Description</label>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)+player.hasmedia</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 		</control>

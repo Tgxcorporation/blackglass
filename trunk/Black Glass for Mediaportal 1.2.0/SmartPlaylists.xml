@@ -2,7 +2,7 @@
 <window>
 	<id>45678</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]</allowoverlay>
 	<define>#header.label:Smart Playlists</define>
 	<define>#header.hover:-</define>
 	<define>#header.background:bg.jpg</define>
@@ -29,7 +29,7 @@
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -41,7 +41,7 @@
 			<height>327</height>
 			<colordiffuse>ffffffff</colordiffuse>
 			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control> 
 		<control>
@@ -52,7 +52,7 @@
 			<width>360</width>
 			<font>font22</font>
 			<label>#selecteditem</label>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -63,7 +63,7 @@
 			<width>350</width>
 			<label>#selecteditem2</label>
 			<textcolor>ffffffff</textcolor>
-			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>-->
 
@@ -94,7 +94,7 @@
 				<width>380</width>
 				<font>font18</font>
 				<label>Playlist Duration : #runtime</label>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>

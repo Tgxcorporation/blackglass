@@ -2,7 +2,7 @@
 <window>
 	<id>603</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]</allowoverlay>
 	<define>#header.label:604</define>
 	<define>#header.background:hover_my tv.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
@@ -52,7 +52,7 @@
 			<font>font16</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<visible>!facadeview.filmstrip</visible>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
@@ -86,7 +86,7 @@
 				<width>332</width>
 				<height>188</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<animation effect="fade" time="250">visiblechange</animation>
@@ -99,7 +99,7 @@
 				<width>352</width>
 				<height>233</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -111,7 +111,7 @@
 				<width>360</width>
 				<font>font20</font>
 				<label>#TV.RecordedTV.Title</label>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -122,7 +122,7 @@
 				<posY>370</posY>
 				<label>#TV.RecordedTV.Time</label>
 				<textcolor>90ffffff</textcolor>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -136,7 +136,7 @@
 				<colordiffuse>ffffffff</colordiffuse>
 				<font>font16</font>
 				<label>#TV.RecordedTV.Description</label>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)+player.hasmedia</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)+player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
@@ -151,7 +151,7 @@
 				<colordiffuse>ffffffff</colordiffuse>
 				<font>font16</font>
 				<label>#TV.RecordedTV.Description</label>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)+!player.hasmedia</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)+!player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
