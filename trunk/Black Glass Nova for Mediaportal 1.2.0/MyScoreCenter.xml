@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>42000</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<define>#header.background:hover_score center.png</define>
+	<define>#useSelectedFanart:Yes</define>
+	<controls>
+
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#header.background</texture>
+			<animation effect="fade" time="1">WindowClose</animation>			
+		</control>
+
+
+		<!-- backdrop matching current sport -->
+		<control>
+			<description>backdrop</description>
+			<type>image</type>
+			<id>30</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#ScoreCenter.bd.jpg</texture>
+		</control>
+
+		<control>
+			<description>DUMMY CONTROLL FOR FANART VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>91919291</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+		</control>
+
+		<control>
+			<description>DUMMY CONTROLL FOR FANART VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>91919292</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+		</control>
+
+		<control>
+			<description>DUMMY CONTROLL FOR FANART AVAILABILITY CONDITION</description>
+			<type>label</type>
+			<id>91919293</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+		</control>
+
+
+		<control>
+			<description>FANART IMAGE 1</description>
+			<id>897688</id>
+			<type>image</type>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#fanarthandler.scorecenter.backdrop1.selected</texture>
+			<visible>plugin.isenabled(Fanart Handler)+control.isvisible(91919291)+control.isvisible(91919293)</visible>
+			<animation effect="fade" start="0" end="100" time="250" delay="100" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+		</control>
+
+		<control>
+			<description>FANART IMAGE 2</description>
+			<id>897689</id>
+			<type>image</type>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#fanarthandler.scorecenter.backdrop2.selected</texture>
+			<visible>plugin.isenabled(Fanart Handler)+control.isvisible(91919292)+control.isvisible(91919293)</visible>
+			<animation effect="fade" start="0" end="100" time="250" delay="100" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+		</control>
+
+
+
+		<import>common.window.time.xml</import>
+		<control>
+
+			<type>image</type>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>418</width>
+			<height>720</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+
+		</control>
+
+		<control>
+			<type>label</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>34</posY>
+			<label>Score Center</label>
+			<font>font24</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control> 
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>45</posY>
+			<width>385</width>
+			<height>53</height>
+			<texture>bg_button_nofocus.png</texture>
+		</control>
+
+		<control>
+			<description>Current Category</description>
+			<type>image</type>
+			<posX>465</posX>
+			<posY>10</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>#ScoreCenter.CatIco</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+		</control>
+		<control>
+			<description>Current League Image</description>
+			<type>image</type>
+			<posX>525</posX>
+			<posY>10</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>#ScoreCenter.LIco</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+		</control>
+		<control>
+			<description>Current Score Image</description>
+			<type>image</type>
+			<posX>585</posX>
+			<posY>10</posY>
+			<width>50</width>
+			<height>50</height>
+			<texture>#ScoreCenter.ScoreIco</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+		</control>
+
+		<!--
+    <control>
+      <description>Current Category</description>
+      <type>label</type>
+      <posX>10</posX>
+      <posY>70</posY>
+      <label>#ScoreCenter.Category</label>
+      <font>font14</font>
+      <align>left</align>
+      <textcolor>ffffffff</textcolor>
+    </control>
+    <control>
+      <description>Current League</description>
+      <type>label</type>
+      <posX>10</posX>
+      <posY>100</posY>
+      <label>#ScoreCenter.League</label>
+      <font>font14</font>
+      <align>left</align>
+      <textcolor>ffffffff</textcolor>
+    </control>
+    -->
+		<control>
+			<description>Current Results</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>465</posX>
+			<posY>89</posY>
+			<label>#ScoreCenter.Results</label>
+			<font>font20</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>750</width>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>source</description>
+			<posX>465</posX>
+			<posY>123</posY>
+			<width>750</width>
+			<label>#ScoreCenter.Source</label>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<align>left</align>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>Scores</description>
+				<type>listcontrol</type>
+				<id>10</id>
+				<posX>0</posX>
+				<posY>98</posY>
+				<width>385</width>
+				<height>650</height>
+				<textYOff>6</textYOff>
+				<textvisible2>no</textvisible2>
+				<textvisible3>no</textvisible3>
+				<keepaspectratio>yes</keepaspectratio>
+				<spinPosX>-510</spinPosX>
+				<spinPosY>650</spinPosY>
+				<onright>40</onright>
+				<font>font18</font>
+				<spinCanFocus>no</spinCanFocus>
+			</control>
+		</control>
+
+
+		<control>
+			<type>image</type>
+			<posX>408</posX>
+			<posY>48</posY>
+			<width>948</width>
+			<height>766</height>
+			<texture>bg_facade.png</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>440</posX>
+			<posY>97</posY>
+			<width>840</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<!-- This control defines the area and the format (font and color)
+    in which the score will be displayed -->
+		<control>
+			<description>Results</description>
+			<type>textboxscrollup</type>
+			<id>20</id>
+			<posX>465</posX>
+			<posY>170</posY>
+			<visible>yes</visible>
+			<width>800</width>
+			<height>500</height>
+			<font>font12</font>
+		</control>
+
+		<control>
+			<description>Next Button</description>
+			<type>button</type>
+			<id>40</id>
+			<posX>1118</posX>
+			<posY>87</posY>
+			<width>150</width>
+			<label>Next</label>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<textureFocus>bg_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+			<textalign>center</textalign>
+			<textXOff>0</textXOff>
+			<textYOff>3</textYOff>
+			<height>60</height>
+		</control>
+
+	</controls>
+</window>

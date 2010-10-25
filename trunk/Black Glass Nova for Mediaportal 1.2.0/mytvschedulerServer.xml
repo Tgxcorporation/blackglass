@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<window>
+	<id>601</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:646</define>
+	<define>#header.background:hover_my tv2.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.basic.xml</import>
+		<import>common.facade.itemcount.currentmodule.basic.xml</import>
+
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>scheduler recordings listcontrol</description>
+				<type>listcontrol</type>
+				<id>10</id>
+				<onleft>2</onleft>
+				<scrollOffset>2</scrollOffset>
+				<posX>640</posX>
+				<width>640</width>
+				<posY>430</posY>
+				<height>300</height>
+				<textureHeight>35</textureHeight>
+				<itemWidth>40</itemWidth>
+				<itemHeight>30</itemHeight>
+				<IconXOff>10</IconXOff>
+				<IconYOff>2</IconYOff>
+				<textXOff2>630</textXOff2>
+				<textYOff2>2</textYOff2>
+				<textXOff3>630</textXOff3>
+				<textYOff3>2</textYOff3>
+				<font>font14</font>	
+				<font2>font14</font2>	
+				<font3>font14</font3>	
+				<textYOff>2</textYOff>
+				<spinWidth>30</spinWidth>
+				<spinHeight>30</spinHeight>
+				<spinPosX>1210</spinPosX>
+				<spinPosY>685</spinPosY>
+				<PinIconXOff>627</PinIconXOff> 
+				<PinIconYOff>4</PinIconYOff>
+			</control>
+		</control>
+		<control>
+			<description>REAL Current program title</description>
+			<type>fadelabel</type>
+			<id>13</id>
+			<posX>30</posX>
+			<posY>420</posY>
+			<width>565</width>
+			<font>font20</font>
+			<label>#selecteditem</label>
+			<textcolor>FFFFFFFF</textcolor>
+			<wrapString> : : : </wrapString>
+		</control> 
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>430</posY>
+			<width>609</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+
+		<control>
+			<description>Current program time</description>
+			<type>label</type>
+			<id>14</id>
+			<posX>30</posX>
+			<posY>468</posY>
+			<width>565</width>
+			<textcolor>90ffffff</textcolor>
+			<label>#TV.Scheduled.Time</label>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>465</posY>
+			<width>609</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>Channel Image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>502</posY>
+			<width>41</width>
+			<height>31</height>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#selectedthumb</texture>
+		</control>
+		<control>
+			<description>Current genre</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>90</posX>
+			<posY>503</posY>
+			<width>320</width>
+			<label>#TV.Scheduled.Genre</label>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control> 
+		<control>
+			<description>Current channel</description>
+			<type>label</type>
+			<id>17</id>
+			<posX>90</posX>
+			<posY>2503</posY>
+			<width>320</width>
+			<label>#TV.Scheduled.Channel</label>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control> 
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>500</posY>
+			<width>609</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+
+
+
+
+		<control>
+			<description>Description1</description>
+			<type>textboxscrollup</type>
+			<id>15</id>
+			<posX>30</posX>
+			<posY>540</posY>
+			<width>565</width>
+			<height>165</height>
+			<label>#TV.Scheduled.Description</label>
+			<font>font16</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<seperator>: : :</seperator>
+		</control>
+
+
+
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<type>sortbutton</type>
+					<id>2</id>
+					<label>620</label>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>17</onup>
+					<ondown>11</ondown>
+				</control>
+				<control>
+					<description>Toggle button series</description>
+					<type>togglebutton</type>
+					<id>11</id>
+					<label>3019</label>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>2</onup>
+					<ondown>6</ondown>
+				</control>
+				<control>
+					<description>New button</description>
+					<type>button</type>
+					<id>6</id>
+					<label>617</label>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>11</onup>
+					<ondown>7</ondown>
+				</control>
+				<control>
+					<description>Cleanup</description>
+					<type>button</type>
+					<id>7</id>
+					<label>624</label>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>6</onup>
+					<ondown>8</ondown>
+				</control>
+				<control>
+					<description>Priorities</description>
+					<type>button</type>
+					<id>8</id>
+					<label>877</label>
+					<hyperlink>607</hyperlink>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>7</onup>
+					<ondown>9</ondown>
+				</control>
+				<control>
+					<description>Conflicts</description>
+					<type>button</type>
+					<id>9</id>
+					<label>892</label>
+					<hyperlink>608</hyperlink>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>8</onup>
+					<ondown>99</ondown>
+				</control>
+			</control>
+		</control>
+
+	</controls>
+</window>
