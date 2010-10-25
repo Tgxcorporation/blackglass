@@ -95,6 +95,20 @@
 
 		<!-- UPPER BUTTONS -->
 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>515</posX>
+			<posY>-224</posY>
+			<width>250</width>
+			<height>250</height>
+			<texture>bg_basichome_slide.png</texture>
+			<colorDiffuse>a0ffffff</colorDiffuse>
+			<visible>![control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>18</defaultcontrol>
@@ -108,20 +122,12 @@
 			<width>200</width>
 			<height>60</height>
 			<dimColor>ffffffff</dimColor>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="0,-33" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="0,-33" reversible="false">hidden</animation>
+			<visible>[control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)]</visible>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,-30" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="0,-30" reversible="false">hidden</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>[control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)]</visible>
-			</control>	
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<control>
 				<type>image</type>
 				<id>0</id>
