@@ -146,6 +146,20 @@
 
 		<!-- Menu -->
 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
@@ -159,23 +173,14 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
+			<visible>!control.hasfocus(50)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(3)</visible>
-			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -224,16 +229,8 @@
 					<id>3</id>
 					<label>Date</label>
 					<onright>50</onright>
-					<ondown>50</ondown>
+					<ondown>2</ondown>
 				</control>
-			</control>
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>593</posY>
-				<width>385</width>
-				<height>53</height>
-				<texture>bg_button_nofocus.png</texture>
 			</control>
 			<control>
 				<description>Comic Banner</description>
@@ -248,8 +245,6 @@
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 		</control>
-
-
 		<control>
 			<description>Dummy button for hidden menu</description>
 			<type>button</type>
@@ -261,11 +256,11 @@
 			<label/>
 			<onright>2</onright>
 			<onleft>2</onleft>
-			<ondown>50</ondown>
-			<onup>50</onup>
+			<ondown>2</ondown>
+			<onup>2</onup>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
-			<scrollWrapString></scrollWrapString>
+			<scrollWrapString/>
 		</control>
 	</controls>
 </window>

@@ -215,36 +215,41 @@
 		</control>
 
 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
-			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -287,7 +292,6 @@
 					<label>TV Guide</label>
 					<onup>8</onup>
 					<ondown>3</ondown>
-					<onright>99</onright>
 				</control>
 				<control>
 					<description>Search TVGuide</description>
@@ -296,7 +300,6 @@
 					<label>Search</label>
 					<onup>2</onup>
 					<ondown>4</ondown>
-					<onright>99</onright>
 				</control>
 				<control>
 					<description>Recordings</description>
@@ -305,7 +308,6 @@
 					<label>Recorded TV</label>
 					<onup>3</onup>
 					<ondown>5</ondown>
-					<onright>99</onright>
 				</control>
 				<control>
 					<description>Channel button</description>
@@ -332,7 +334,6 @@
 					<label>Upcoming Programs</label>
 					<onup>6</onup>
 					<ondown>8</ondown>
-					<onright>99</onright>
 				</control>
 				<control>
 					<description>ActiveRecordings</description>
@@ -341,7 +342,6 @@
 					<label>Active Recordings</label>
 					<onup>7</onup>
 					<ondown>2</ondown>
-					<onright>99</onright>
 				</control>
 				<!--<control>
         <description>Schedules</description>

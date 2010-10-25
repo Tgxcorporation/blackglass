@@ -169,6 +169,20 @@
 
 		<!-- MENU -->
 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
@@ -182,23 +196,14 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)</visible>
-			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -238,7 +243,7 @@
 					<type>button</type>
 					<id>2</id>
 					<label>19002</label>
-					<onright>96</onright>
+					<onright>50</onright>
 					<onup>17</onup>
 					<ondown>8</ondown>
 				</control>
@@ -277,7 +282,7 @@
 					<id>4</id>
 					<label>Check row</label>
 					<onleft>4</onleft>
-					<onright>96</onright>
+					<onright>50</onright>
 					<onup>3</onup>
 					<ondown>5</ondown>
 				</control>
@@ -287,7 +292,7 @@
 					<id>5</id>
 					<label>I Surrender</label>
 					<onleft>5</onleft>
-					<onright>96</onright>
+					<onright>50</onright>
 					<onup>4</onup>
 					<ondown>6</ondown>
 				</control>
@@ -324,7 +329,7 @@
 					<id>7</id>
 					<label>What's Mastermind?</label>
 					<onleft>7</onleft>
-					<onright>96</onright>
+					<onright>50</onright>
 					<onup>6</onup>
 					<ondown>2</ondown>
 				</control>
@@ -339,14 +344,15 @@
 			<posY>0</posY>
 			<width>0</width>
 			<height>720</height>
-			<label></label>
+			<label/>
 			<!--<onright>96</onright>-->
 			<!--<onleft>2</onleft>-->
+			<ondown>50</ondown>
 			<ondown>50</ondown>
 			<onup>50</onup>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
-			<scrollWrapString></scrollWrapString>
+			<scrollWrapString/>
 			<visible allowhiddenfocus="false">!Control.HasFocus(50)+[!Control.HasFocus(96)+!Control.HasFocus(97)+!Control.HasFocus(98)]+[Control.HasFocus(2)|Control.HasFocus(3)|Control.HasFocus(4)|Control.HasFocus(5)|Control.HasFocus(6)|Control.HasFocus(7)|Control.HasFocus(8)]</visible>
 		</control>
 
