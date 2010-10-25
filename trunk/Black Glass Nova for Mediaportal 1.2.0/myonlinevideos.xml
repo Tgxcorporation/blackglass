@@ -276,6 +276,20 @@
 		<!-- *** HIDDEN MENU *** -->
 
 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+[control.hasfocus(50)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
@@ -289,23 +303,14 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
+			<visible>![String.Equals(#OnlineVideos.state,details)+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)]+![control.hasfocus(50)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<!--<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>-->
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>control.isvisible(50)+!control.isvisible(51)+!control.isvisible(24)+[control.hasfocus(2)|control.hasfocus(10)|control.hasfocus(9)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>
-			</control>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -337,7 +342,6 @@
 				<layout>StackLayout</layout>
 				<posX>0</posX>
 				<posY>100</posY>
-				<visible>control.isvisible(50)+!control.isvisible(51)+!control.isvisible(24)</visible>
 				<control>
 					<description>View-As</description>
 					<type>button</type>
@@ -359,8 +363,7 @@
 					<label>#OnlineVideos.Translation.Search.Label</label>
 					<height>49</height>
 					<textYOff>7</textYOff>
-					<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-				</control>
+					</control>
 				<control>
 					<description>select category</description>
 					<type>selectbutton</type>
@@ -371,8 +374,7 @@
 					<label>#OnlineVideos.Translation.Category.Label</label>
 					<height>49</height>
 					<textYOff>7</textYOff>
-					<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-				</control>
+					</control>
 				<control>
 					<type>selectbutton</type>
 					<description>Max Results</description>
@@ -383,8 +385,7 @@
 					<label>#OnlineVideos.Translation.MaxResults.Label</label>
 					<height>49</height>
 					<textYOff>7</textYOff>
-					<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-				</control>
+					</control>
 				<control>
 					<type>selectbutton</type>
 					<description>Order By</description>
@@ -395,8 +396,7 @@
 					<label>#OnlineVideos.Translation.SortOptions.Label</label>
 					<height>49</height>
 					<textYOff>7</textYOff>
-					<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-				</control>
+					</control>
 				<control>
 					<type>selectbutton</type>
 					<description>TimeFrame button</description>
@@ -407,8 +407,7 @@
 					<label>#OnlineVideos.Translation.Timeframe.Label</label>
 					<height>49</height>
 					<textYOff>7</textYOff>
-					<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-				</control>
+					</control>
 				<control>
 					<type>button</type>
 					<description>Update button</description>
@@ -419,8 +418,7 @@
 					<label>#OnlineVideos.Translation.Refresh.Label</label>
 					<height>49</height>
 					<textYOff>7</textYOff>
-					<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-				</control>
+					</control>
 				<control>
 					<type>button</type>
 					<description>Next Page</description>
@@ -431,8 +429,7 @@
 					<label>#OnlineVideos.Translation.NextPage.Label</label>
 					<height>49</height>
 					<textYOff>7</textYOff>
-					<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-				</control>
+					</control>
 				<control>
 					<type>button</type>
 					<description>Previous Page</description>
@@ -443,8 +440,7 @@
 					<label>#OnlineVideos.Translation.PreviousPage.Label</label>
 					<height>49</height>
 					<textYOff>7</textYOff>
-					<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-				</control>
+					</control>
 				<control>
 					<type>button</type>
 					<description>Favorites</description>
@@ -455,8 +451,7 @@
 					<label>#OnlineVideos.Translation.Favourites.Label</label>
 					<height>49</height>
 					<textYOff>7</textYOff>
-					<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-				</control>
+					</control>
 				<control>
 					<type>button</type>
 					<description>Do Age Check</description>
@@ -467,8 +462,7 @@
 					<label>#OnlineVideos.Translation.EnterPin.Label</label>
 					<height>49</height>
 					<textYOff>7</textYOff>
-					<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-				</control>
+					</control>
 				<control>
 					<type>button</type>
 					<description>Update Sites</description>
@@ -480,9 +474,8 @@
 					<hyperlink>4757</hyperlink>
 					<height>49</height>
 					<textYOff>7</textYOff>
-					<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-				</control>
+					</control>
 			</control>
-		</control>  
+		</control>   
 	</controls>
 </window>
