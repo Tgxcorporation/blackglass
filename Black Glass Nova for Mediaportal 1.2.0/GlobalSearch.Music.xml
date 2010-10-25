@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>30885</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:Global Search</define>
+	<define>#header.background:hover_search music.png</define>
+	<define>#useSelectedFanart:Yes</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+	
+		<import>common.window.xml</import>
+		<import>common.window.music.fanart.xml</import>
+		<import>common.window.time.xml</import>
+		
+		<control>
+			<description>LISTVIEW RIGHT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>614</posX>
+			<posY>377</posY>
+			<width>1372</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>395</posY>
+			<width>640</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control> 
+		<control>
+			<type>label</type>
+			<description>Number of Files Label</description>
+			<id>0</id>
+			<posX>650</posX>
+			<posY>688</posY>
+			<label>#itemcount</label>
+			<font>font12</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+		</control>
+		<import>common.facade.music.xml</import>
+		
+		<control>
+			<type>image</type>
+			<description>artist art image</description>
+			<id>500</id>
+			<posX>61</posX>
+			<posY>419</posY>
+			<width>275</width>
+			<height>276</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+			<visible>control.hasfocus(50)</visible>
+			<animation effect="fade" time="250" reversible="false">visible</animation>
+		</control>
+		<control>
+			<description>Cd Case</description>
+			<type>image</type>
+			<id>1</id>
+			<type>image</type>
+			<posX>25</posX>
+			<posY>410</posY>
+			<width>318</width>
+			<height>290</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+			<visible>control.hasfocus(50)+control.hasthumb(500)</visible>
+			<animation effect="fade" time="250">hidden</animation>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+<!-- 		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>430</posY>
+			<width>360</width>
+			<font>font22</font>
+			<label>#selecteditem</label>
+			<visible>control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>Current program</description>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>485</posY>
+			<width>350</width>
+			<label>#selecteditem2</label>
+			<textcolor>ffffffff</textcolor>
+			<visible>control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control> -->
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(2)|control.hasfocus(7)|control.hasfocus(6)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(997)|control.hasfocus(998)|control.hasfocus(999)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Search phrase to use</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Search phrase</label>
+					<onup>17</onup>
+					<ondown>7</ondown>
+				</control>	  
+				<control>
+					<description>Last searches</description>
+					<type>button</type>
+					<id>7</id>
+					<label>Search history</label>
+					<onup>2</onup>
+					<ondown>6</ondown>
+				</control>
+				<control>
+					<description>Search fields (Song, Album, Artist, etc.)</description>
+					<type>button</type>
+					<id>6</id>
+					<label>Search fields</label>
+					<ondown>3</ondown>
+					<onup>7</onup>
+				</control>
+				<control>
+					<description>Case sensitivity</description>
+					<type>togglebutton</type>
+					<id>3</id>
+					<label>Case sensitive</label>
+					<ondown>5</ondown>
+					<onup>6</onup>
+				</control>
+				<control>
+					<description>Search type (start, contain, end)</description>
+					<type>selectbutton</type>
+					<id>5</id>
+					<label>Search type</label>
+					<ondown>999</ondown>
+					<onup>3</onup>
+					<subitems>
+						<subitem>Equals</subitem>
+						<subitem>Starts with</subitem>
+						<subitem>Contains</subitem>
+						<subitem>Ends with</subitem>
+					</subitems>
+					<selected>2</selected>
+				</control>
+				<control>
+					<description>Current Playlist</description>
+					<type>button</type>
+					<id>999</id>
+					<label>4555</label>
+					<hyperlink>500</hyperlink>
+					<onup>5</onup>
+					<ondown>9</ondown>
+				</control>
+				<control>
+					<description>Now playing</description>
+					<type>button</type>
+					<id>9</id>
+					<label>4540</label>
+					<ondown>8</ondown>
+					<onup>999</onup>
+				</control>
+				<control>
+					<description>My music</description>
+					<type>button</type>
+					<id>8</id>
+					<label>2</label>
+					<hyperlink>501</hyperlink>
+					<ondown>997</ondown>
+					<onup>9</onup>
+				</control>
+				<control>
+					<description>My Lyrics</description>
+					<type>button</type>
+					<id>997</id>
+					<label>Lyrics</label>
+					<hyperlink>90478</hyperlink>
+					<visible>plugin.isenabled(My Lyrics)</visible>
+					<ondown>2</ondown>
+					<onup>8</onup>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
