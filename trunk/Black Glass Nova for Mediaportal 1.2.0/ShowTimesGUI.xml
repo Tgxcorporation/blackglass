@@ -39,8 +39,6 @@
 			<font>font28</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<visible>!control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>fadelabel</type>
@@ -51,8 +49,6 @@
 			<font>font12</font>
 			<width>800</width>
 			<label>#showtimes_nextupdate</label>
-			<visible>!control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
 			<!-- <wrapString> : : : </wrapString> -->
 		</control>
 		<control>
@@ -60,13 +56,11 @@
 			<description>BoxOffice</description>
 			<id>4651</id>
 			<posX>30</posX>
-			<posY>83</posY>
+			<posY>80</posY>
 			<font>font12</font>
 			<label>#st_extra</label>
 			<width>800</width>
 			<align>left</align>
-			<visible>!control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
 		<!-- DUMMY -->
@@ -182,7 +176,7 @@
 			<width>1372</width>
 			<height>500</height>
 			<texture>bg_tvguide.png</texture>
-			<visible>facadeview.list+!control.isvisible(24)</visible>
+			<visible>facadeview.list+!control.isvisible(24)+control.isvisible(5674)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -213,7 +207,7 @@
 		<control>
 			<type>fadelabel</type>
 			<description>Current program title</description>
-			<id>0</id>
+			<id>5674</id>
 			<posX>265</posX>
 			<posY>419</posY>
 			<width>560</width>
@@ -288,14 +282,14 @@
 			<posY>501</posY>
 			<width>330</width>
 			<align>left</align>
-			<label>#st_runtime</label>
+			<label>#st_runtime min</label>
 			<textcolor>ffFFFFFF</textcolor>
 			<visible>facadeview.list + !control.isvisible(24)+!control.isvisible(47)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<wrapString> : : : </wrapString>
 		</control>
 		<control>
-			<description>Runtime value</description>
+			<description>Rating value</description>
 			<type>fadelabel</type>
 			<id>0</id>
 			<posX>830</posX>
@@ -450,7 +444,7 @@
 			<width>1240</width>
 			<height>30</height>
 			<textalign>center</textalign>
-			<label>#st_releasedate     #st_genre     #st_runtime     #st_rating</label>
+			<label>#st_releasedate     #st_genre     #st_runtime min     #st_rating</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>[facadeview.smallicons|facadeview.largeicons]+!control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -703,7 +697,7 @@
 			<posX>265</posX>
 			<posY>468</posY>
 			<width>760</width>
-			<label>#st_releasedate     #st_runtime     #st_genre     #st_rating</label>
+			<label>#st_releasedate     #st_runtime min    #st_genre     #st_rating</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -750,7 +744,7 @@
 
 
 		<control>
-			<description>runtime</description>
+			<description>Director</description>
 			<type>fadelabel</type>
 			<label>Directed by #st_director</label>
 			<id>25</id>
