@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>464554871</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:FritzBox Manager</define>
+	<define>#header.background:hover_FritzBox.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.xml</import>
+		<import>common.facade.itemcount.xml</import>
+		<import>common.facade.pictures.xml</import>
+		
+		<control>
+			<id>500</id>
+			<type>image</type>
+			<posX>40</posX>
+			<posY>419</posY>
+			<width>340</width>
+			<height>254</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+			<visible>[facadeview.list|facadeview.album]+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250" reversible="false">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>30</posX>
+			<posY>410</posY>
+			<width>360</width>
+			<height>273</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+			<visible>[facadeview.list|facadeview.album]+control.hasfocus(50)+control.hasthumb(500)</visible>
+			<animation effect="fade" time="250">hidden</animation>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+
+		
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(9)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout</layout>
+				<posX>0</posX>
+				<posY>100</posY><control>
+					<id>2</id>
+					<description>View-As</description>
+					<type>button</type>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>3</ondown>
+					<label>100</label>
+				</control>
+				<control>
+					<id>3</id>
+					<description>Sort</description>
+					<type>sortbutton</type>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>4</ondown>
+				</control>
+				<control>
+					<id>4</id>
+					<description>Modus</description>
+					<type>button</type>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>9</ondown>
+					<label>Anrufliste</label>
+				</control>
+				<control>
+					<id>9</id>
+					<description>Receive new list</description>
+					<type>button</type>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>2</ondown>
+					<label>Update</label>
+				</control>
+			</control>
+		</control>
+		
+	</controls>
+</window>
