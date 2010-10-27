@@ -62,7 +62,7 @@
 				<id>13</id>
 				<posX>30</posX>
 				<posY>320</posY>
-				<width>350</width>
+				<width>380</width>
 				<font>font22</font>
 				<label>#TV.RecordedTV.Title</label>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
@@ -74,35 +74,63 @@
 				<description>Current program time</description>
 				<id>14</id>
 				<posX>30</posX>
-				<posY>367</posY>
+				<posY>365</posY>
 				<label>#TV.RecordedTV.Time</label>
 				<textcolor>90ffffff</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
+				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>399</posY>
+				<width>41</width>
+				<height>31</height>
+				<texture>#TV.RecordedTV.thumb</texture>
+				<centered>yes</centered>
+				<zoom>yes</zoom>
+				<keepaspectratio>yes</keepaspectratio>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>85</posX>
+				<posY>400</posY>
+				<label>#TV.RecordedTV.Channel</label>
+				<textcolor>ffffffff</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<width>295</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program genre</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>435</posY>
+				<label>#TV.RecordedTV.Genre</label>
+				<textcolor>90ffffff</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<width>385</width>
+				<wrapString> : : : </wrapString>
+			</control>
+
+
+			<control>
 				<type>textboxscrollup</type>
 				<description>Description1</description>
 				<id>15</id>
 				<posX>30</posX>
-				<posY>405</posY>
+				<posY>470</posY>
 				<width>385</width>
-				<height>165</height>
-				<colordiffuse>ffffffff</colordiffuse>
-				<font>font16</font>
-				<label>#TV.RecordedTV.Description</label>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)+player.hasmedia</visible>
-				<seperator>: : :</seperator>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<type>textboxscrollup</type>
-				<description>Description1</description>
-				<id>0</id>
-				<posX>30</posX>
-				<posY>405</posY>
-				<width>385</width>
-				<height>290</height>
+				<height>230</height>
 				<colordiffuse>ffffffff</colordiffuse>
 				<font>font16</font>
 				<label>#TV.RecordedTV.Description</label>
