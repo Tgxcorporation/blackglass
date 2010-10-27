@@ -5,159 +5,118 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
-	<define>#header.label:</define>
+	<define>#header.label:#view</define>
 	<define>#header.background:hover_my videos.png</define>
+	<define>#useSelectedFanart:Yes</define>
 	<controls>
 		<import>common.window.xml</import>
+		<import>common.window.video.fanart.xml</import>
+		<import>common.window.time.xml</import>
 		<control>
+			<description>Backdrop Overlay</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>40</posX>
-			<posY>15</posY>
-			<width>1200</width>
-			<height>690</height>
-			<texture>bg_dialog_big.png</texture>
+			<posX>-100</posX>
+			<posY>377</posY>
+			<width>1572</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		<control>
+			<description>Cover Art</description>
+			<type>image</type>
+			<id>21</id>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<posX>46</posX> 
+			<posY>425</posY> 
+			<width>198</width> 
+			<height>280</height> 
+			<texture flipY="true" diffuse="Thumb_Mask.png">#thumb</texture>
+		</control>
+		<control>
+			<description>Cover Art Glass Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>20</posX>
+			<posY>420</posY>
+			<width>228</width>
+			<height>290</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>1</id>
+			<posX>265</posX>
+			<posY>419</posY>
+			<width>995</width>
+			<font>font22</font>
+			<label>#Actor.Name</label>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<type>image</type>
-			<id>0</id>
-			<posX>68</posX>
-			<posY>84</posY>
-			<width>1143</width>
-			<height>53</height>
+			<posX>249</posX>
+			<posY>428</posY>
+			<width>1035</width>
+			<height>35</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 		</control>
-
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>454</posX>
-			<posY>137</posY>
-			<width>2</width>
-			<height>489</height>
-			<texture>bg_button_vertical.png</texture>
-		</control>
-
-		<!-- 		<control>
-			<description>Actor Name Label</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>177</posX>
-			<posY>125</posY>
-			<label>493</label>
-			<font>font13</font>
-			<textcolor>FFB2D4F5</textcolor>
-		</control> -->
-
-		<control>
-			<description>Actor Name value</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>474</posX>
-			<posY>65</posY>
-			<width>700</width>
-			<label>#Actor.Name</label>
-			<font>font22</font>
-			<textcolor>FFFFFFFF</textcolor>
-		</control>
-
-
-		<!-- 		<control>
-			<description>Born</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>177</posX>
-			<posY>150</posY>
-			<label>686</label>
-			<font>font13</font>
-			<textcolor>FFB2D4F5</textcolor>
-		</control> -->
 		<control>
 			<description>Date of Birth</description>
 			<type>fadelabel</type>
 			<id>1</id>
-			<posX>474</posX>
-			<posY>105</posY>
-			<width>711</width>
+			<posX>265</posX>
+			<posY>467</posY>
+			<width>995</width>
 			<label>#Actor.DateOfBirth #Actor.PlaceOfBirth</label>
-			<font>font12</font>
 			<textcolor>90FFFFFF</textcolor>
-		</control>
-		<control>
-			<description>group element</description>
-			<type>group</type>
-			<posX>69</posX>
-			<posY>520</posY>
-			<layout>StackLayout</layout>
-			<control>
-				<description>Biography</description>
-				<type>togglebutton</type>
-				<id>3</id>
-				<label>1011</label>
-				<onleft>22</onleft>
-				<onright>22</onright>
-				<onup>2</onup>
-				<ondown>4</ondown>
-			</control>
-			<control>
-				<description>Movies</description>
-				<type>togglebutton</type>
-				<id>4</id>
-				<label>342</label>
-				<onleft>22</onleft>
-				<onright>22</onright>
-				<onup>3</onup>
-				<ondown>5</ondown>
-			</control>
-		</control>
-		<control>
-			<id>21</id>
-			<description>Image logo</description>
-			<type>image</type>
-			<posX>90</posX>
-			<posY>157</posY>
-			<width>346</width>
-			<height>260</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#thumb</texture>
-			<centered>yes</centered>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<type>image</type>
-			<description>Image logo</description>
-			<id>1</id>
-			<posX>80</posX>
-			<posY>150</posY>
-			<width>365</width>
-			<height>276</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>68</posX>
-			<posY>573</posY>
-			<width>1143</width>
-			<height>53</height>
+			<posX>249</posX>
+			<posY>465</posY>
+			<width>1035</width>
+			<height>35</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 		</control>
 		<control>
-			<type>image</type>
+			<description>Actors value</description>
+			<type>textboxscrollup</type>
 			<id>0</id>
-			<posX>69</posX>
-			<posY>467</posY>
-			<width>385</width>
-			<height>53</height>
-			<texture>bg_button_nofocus.png</texture>
-			<visible>control.isvisible(3)</visible>
+			<posX>265</posX>
+			<posY>504</posY>
+			<width>490</width>
+			<label>#Actor.Biography</label>
+			<textcolor>ffFFFFFF</textcolor>
+			<font>font14</font>
+			<height>205</height>
 		</control>
+
+		<control>
+			<description>Summary</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>765</posX>
+			<posY>504</posY>
+			<width>490</width>
+			<height>205</height>
+			<textcolor>90FFFFFF</textcolor>
+			<font>font14</font>
+			<label>#Actor.Movies</label>
+			<seperator>: : :</seperator>
+		</control>
+
+		<!-- NOT USED -->
 		<control>
 			<description>Biography value</description>
 			<type>textboxscrollup</type>
 			<id>20</id>
-			<posX>474</posX>
+			<posX>2474</posX>
 			<posY>150</posY>
 			<width>700</width>
 			<height>440</height>
@@ -171,17 +130,36 @@
 			<description>textarea</description>
 			<type>textbox</type>
 			<id>22</id>
-			<posX>474</posX>
+			<posX>2474</posX>
 			<posY>150</posY>
 			<width>700</width>
 			<height>450</height>
-			<onleft>4</onleft>
-			<onright>4</onright>
-			<onup>4</onup>
-			<ondown>4</ondown>
-			<spinPosX>1044</spinPosX>
+			<spinPosX>2044</spinPosX>
 			<spinPosY>636</spinPosY>
 			<label>#Actor.Movies</label>
+		</control>
+
+		<control>
+			<description>Biography</description>
+			<type>togglebutton</type>
+			<id>3</id>
+			<posX>2474</posX>
+			<label>1011</label>
+			<onleft>3</onleft>
+			<onright>50</onright>
+			<onup>2</onup>
+			<ondown>4</ondown>
+		</control>
+		<control>
+			<description>Movies</description>
+			<type>togglebutton</type>
+			<id>4</id>
+			<posX>2474</posX>
+			<label>342</label>
+			<onleft>50</onleft>
+			<onright>4</onright>
+			<onup>3</onup>
+			<ondown>5</ondown>
 		</control>
 	</controls>
 </window>
