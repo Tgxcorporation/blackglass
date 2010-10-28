@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
-	<id>604</id>
+	<id>8900</id>
 	<defaultcontrol>10</defaultcontrol>
 	<allowoverlay>player.hasmedia</allowoverlay>
 	<disabletopbar>no</disabletopbar>
 	<define>#header.label:100747</define>
-	<define>#header.background:hover_my tv.png</define>
+	<define>#header.background:hover_my radio.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
@@ -41,7 +41,6 @@
 			</control>
 		</control>
 
-
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
@@ -60,6 +59,7 @@
 				<visible>![control.hasfocus(2)|control.hasfocus(20)|control.hasfocus(7)|control.hasfocus(19)|control.hasfocus(21)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+
 			<control>
 				<description>REAL Current program title</description>
 				<type>fadelabel</type>
@@ -74,7 +74,6 @@
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control> 
-
 			<control>
 				<description>Channel Image</description>
 				<type>image</type>
@@ -88,6 +87,7 @@
 				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+
 			<control>
 				<description>Current channel</description>
 				<type>label</type>
@@ -96,34 +96,37 @@
 				<posY>118</posY>
 				<!-- <width>380</width> -->
 				<font>font22</font>
-				<label>#TV.Search.Channel</label>
+				<label>#Radio.Search.Channel</label>
 				<align>left</align>
 				<textcolor>90ffffff</textcolor>
 				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+
 			<control>
 				<description>Current program time</description>
 				<type>label</type>
 				<id>14</id>
 				<posX>30</posX>
 				<posY>168</posY>
-				<label>#TV.Search.Time</label>
+				<label>#Radio.Search.Time</label>
 				<textcolor>ffffffff</textcolor>
 				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+
 			<control>
 				<description>genre</description>
 				<type>label</type>
 				<id>17</id>
 				<posX>30</posX>
 				<posY>205</posY>
-				<label>#TV.Search.Genre</label>
+				<label>#Radio.Search.Genre</label>
 				<textcolor>90ffffff</textcolor>
 				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+
 			<control>
 				<description>Description1</description>
 				<type>textboxscrollup</type>
@@ -132,7 +135,7 @@
 				<posY>240</posY>
 				<width>360</width>
 				<height>326</height>
-				<label>#TV.Search.Description</label>
+				<label>#Radio.Search.Description</label>
 				<font>font16</font>
 				<textcolor>FFFFFFFF</textcolor>
 				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]+player.hasmedia</visible>
@@ -147,14 +150,16 @@
 				<posY>240</posY>
 				<width>360</width>
 				<height>452</height>
-				<label>#TV.Search.Description</label>
+				<label>#Radio.Search.Description</label>
 				<font>font16</font>
 				<textcolor>FFFFFFFF</textcolor>
 				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]+!player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+
 		</control>
+
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -228,6 +233,7 @@
 					<type>sortbutton</type>
 					<id>2</id>
 					<label>620</label>
+					<onup>17</onup>
 					<ondown>20</ondown>
 				</control>
 				<control>
@@ -265,22 +271,20 @@
 			</control>
 		</control>
 
-
 		<!-- NOT USED -->
+
 		<control>
 			<description>Description1</description>
 			<type>textboxscrollup</type>
 			<id>15</id>
-			<posX>2230</posX>
-			<posY>240</posY>
-			<width>360</width>
-			<height>330</height>
-			<label>#TV.Search.Description</label>
-			<font>font16</font>
+			<posX>2462</posX>
+			<posY>575</posY>
+			<width>764</width>
+			<height>85</height>
+			<label>#Radio.Search.Description</label>
+			<font>font13</font>
 			<textcolor>FFFFFFFF</textcolor>
-			<seperator>: : :</seperator>
 		</control>
-
 		<control>
 			<description>DUMMY Number of Files Label</description>
 			<type>label</type>
