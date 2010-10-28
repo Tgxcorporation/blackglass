@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
-	<id>604</id>
+	<id>8900</id>
 	<defaultcontrol>10</defaultcontrol>
 	<allowoverlay>player.hasmedia</allowoverlay>
 	<disabletopbar>no</disabletopbar>
-	<define>#header.label:100747</define>
-	<define>#header.background:hover_my tv2.png</define>
+	<define>#header.label:137</define>
+	<define>#header.background:hover_my radio.png</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
@@ -160,11 +160,10 @@
 			<posY>468</posY>
 			<width>565</width>
 			<textcolor>90ffffff</textcolor>
-			<label>#TV.Search.Time</label>
+			<label>#Radio.Search.Time</label>
 			<visible>control.isvisible(16)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -177,7 +176,6 @@
 			<visible>control.isvisible(16)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-
 		<control>
 			<description>Channel Image</description>
 			<type>image</type>
@@ -200,7 +198,7 @@
 			<posX>90</posX>
 			<posY>503</posY>
 			<width>320</width>
-			<label>#TV.Search.Channel</label>
+			<label>#Radio.Search.Channel</label>
 			<align>left</align>
 			<visible>control.isvisible(16)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -217,19 +215,17 @@
 			<visible>control.isvisible(16)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-
 		<control>
 			<description>genre</description>
 			<type>label</type>
 			<id>17</id>
 			<posX>30</posX>
 			<posY>538</posY>
-			<label>#TV.Search.Genre</label>
+			<label>#Radio.Search.Genre</label>
 			<textcolor>90ffffff</textcolor>
 			<visible>control.isvisible(16)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -242,7 +238,6 @@
 			<visible>control.isvisible(16)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-
 		<control>
 			<description>Description1</description>
 			<type>textboxscrollup</type>
@@ -251,15 +246,13 @@
 			<posY>575</posY>
 			<width>565</width>
 			<height>133</height>
-			<label>#TV.Search.Description</label>
+			<label>#Radio.Search.Description</label>
 			<font>font16</font>
 			<textcolor>FFFFFFFF</textcolor>
 			<visible>control.isvisible(16)</visible>
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-
-
 
 
 		<control>
@@ -335,6 +328,7 @@
 					<type>sortbutton</type>
 					<id>2</id>
 					<label>620</label>
+					<onup>17</onup>
 					<ondown>20</ondown>
 				</control>
 				<control>
@@ -375,16 +369,27 @@
 		<!-- NOT USED -->
 
 		<control>
+			<description>Description1</description>
+			<type>textboxscrollup</type>
+			<id>15</id>
+			<posX>2462</posX>
+			<posY>575</posY>
+			<width>764</width>
+			<height>85</height>
+			<label>#Radio.Search.Description</label>
+			<font>font13</font>
+			<textcolor>FFFFFFFF</textcolor>
+		</control>
+		<control>
 			<description>DUMMY Number of Files Label</description>
 			<type>label</type>
 			<id>12</id>
 			<posX>1470</posX>
 			<posY>537</posY>
-			<label>#itemcount</label>
+			<label>#itemcount #itemtype</label>
 			<align>left</align>
 			<textcolor>FFFFFFFF</textcolor>
 		</control>
-
 		<control>
 			<description>DUMMY Current program title</description>
 			<type>fadelabel</type>
@@ -395,7 +400,7 @@
 			<font>font22</font>
 			<label>#TV.Search.Title</label>
 			<textcolor>FFFFFFFF</textcolor>
-			<wrapString> : : : </wrapString>
 		</control>
+
 	</controls>
 </window>
