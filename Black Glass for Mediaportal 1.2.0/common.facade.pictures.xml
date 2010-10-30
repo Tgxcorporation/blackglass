@@ -2,25 +2,33 @@
 <window>
 	<controls>
 		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>-200</posX>
-			<posY>550</posY>
-			<width>1680</width>
-			<height>180</height>
-			<texture>gradient.png</texture>
-			<visible>facadeview.filmstrip</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="150">WindowClose</animation>	
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
 			<description>group element</description>
 			<type>group</type>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>-200</posX>
+				<posY>550</posY>
+				<width>1680</width>
+				<height>180</height>
+				<texture>gradient.png</texture>
+				<visible>facadeview.filmstrip</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>-200</posX>
+				<posY>400</posY>
+				<width>1680</width>
+				<height>320</height>
+				<texture>gradient.png</texture>
+				<visible>[facadeview.coverflow]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -127,6 +135,101 @@
 					<thumbAnimation effect="slide" end="0,-15" time="200">focus</thumbAnimation>
 					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
 					<scrollOffset>3</scrollOffset>
+				</control>
+				<control>
+					<description>Cover Flow view</description>
+					<type>coverflow</type>
+					<colordiffuse>ffffffff</colordiffuse>
+					<dimColor>90ffffff</dimColor>
+					<id>50</id>
+					<posX>0</posX>
+					<posY>350</posY>
+					<width>1280</width>
+					<height>720</height>
+					<onup>2</onup>
+					<onleft>2</onleft>
+					<selectedCard>0</selectedCard>
+					<cardWidth>380</cardWidth>
+					<cardHeight>213</cardHeight>
+					<angle>45</angle>
+					<sideShift>290</sideShift>
+					<sideGap>150</sideGap>
+					<sideDepth>250</sideDepth>
+					<offsetY>20</offsetY>
+					<selectedOffsetY>0</selectedOffsetY>
+					<speed>8</speed>
+					<showFrame>yes</showFrame>
+					<frame>PictureCase_coverflow.png</frame>
+					<frameFocus>PictureCase_coverflow.png</frameFocus>
+					<frameWidth>380</frameWidth>
+					<frameHeight>213</frameHeight>
+					<spinSpeed>8</spinSpeed>
+					<font1>font14</font1>
+					<font2>font11</font2>
+					<label1/>
+					<label2>#genre</label2>
+					<label1YOff>255</label1YOff>
+					<label2YOff>280</label2YOff>
+					<pageSize>5</pageSize>
+					<!-- <visible>facadeview.coverflow</visible> -->
+					<cards flipY="yes" diffuse="Thumb_Mask.png" mask="PictureCase_coverflow.png"/>
+					<subitems>
+						<subitem>
+							<![CDATA[
+							<controls>
+								
+								<control>
+									<description>background</description>
+									<type>image</type>
+									<posX>0</posX>
+									<posY>0</posY>
+									<width>380</width>
+									<height>213</height>
+									<texture flipY="yes" diffuse="Thumb_Mask.png" mask="PictureCase_coverflow.png">black.png</texture>
+								</control>
+								
+								<control>
+									<description>Title</description>
+									<type>fadelabel</type>
+									<id>0</id>
+									<posX>15</posX>
+									<posY>9</posY>
+									<width>350</width>
+									<label>#selecteditem</label>
+									<font>font16</font>
+									<textcolor>FFFFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+									<shadowAngle>45</shadowAngle>
+									<shadowDistance>2</shadowDistance>
+									<shadowColor>FF000000</shadowColor>
+								</control>
+								
+								<!-- <control>
+									<type>image</type>
+									<id>0</id>
+									<posX>1</posX>
+									<posY>-10</posY>
+									<width>278</width>
+									<height>53</height>
+									<texture>bg_button_nofocus.png</texture>
+								</control> -->
+								
+								<control>
+									<description>genre</description>
+									<type>fadelabel</type>
+									<posX>15</posX>
+									<posY>48</posY>
+									<width>350</width>
+									<label>#selecteditem2</label>
+									<font>font11</font>
+									<textcolor>90FFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								
+							</controls>
+							]]>
+						</subitem>
+					</subitems>
 				</control>
 				<control>
 					<description>playlist listcontrol</description>
