@@ -1,6 +1,6 @@
 <window>
 	<id>16581</id>
-	<defaultcontrol>602</defaultcontrol>
+	<defaultcontrol>601</defaultcontrol>
 	<allowoverlay>!control.isvisible(101)</allowoverlay>
 	<define>#header.label:meteo.hr</define>
 	<define>#header.background:hover_meteo.png</define>
@@ -40,6 +40,7 @@
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
 			<visible>control.isvisible(101)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>label</type>
@@ -1479,6 +1480,20 @@
 
 		<!-- Hidden menu 1 -->
 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>!control.isvisible(101)+![control.hasfocus(49)|control.hasfocus(50)|control.hasfocus(51)|control.hasfocus(52)|control.hasfocus(53)|control.hasfocus(54)|control.hasfocus(55)|control.hasfocus(56)|control.hasfocus(57)|control.hasfocus(58)|control.hasfocus(59)]+![control.hasfocus(60)|control.hasfocus(61)|control.hasfocus(62)|control.hasfocus(63)|control.hasfocus(64)|control.hasfocus(65)|control.hasfocus(66)|control.hasfocus(67)|control.hasfocus(68)|control.hasfocus(69)|control.hasfocus(70)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>49</defaultcontrol>
@@ -1492,6 +1507,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
+			<visible>!control.isvisible(101)+[control.hasfocus(49)|control.hasfocus(50)|control.hasfocus(51)|control.hasfocus(52)|control.hasfocus(53)|control.hasfocus(54)|control.hasfocus(55)|control.hasfocus(56)|control.hasfocus(57)|control.hasfocus(58)|control.hasfocus(59)]+![control.hasfocus(60)|control.hasfocus(61)|control.hasfocus(62)|control.hasfocus(63)|control.hasfocus(64)|control.hasfocus(65)|control.hasfocus(66)|control.hasfocus(67)|control.hasfocus(68)|control.hasfocus(69)|control.hasfocus(70)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -1499,16 +1515,6 @@
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>control.hasfocus(49)|control.hasfocus(50)|control.hasfocus(51)|control.hasfocus(52)|control.hasfocus(53)|control.hasfocus(54)|control.hasfocus(55)|control.hasfocus(56)|control.hasfocus(57)|control.hasfocus(58)|control.hasfocus(59)</visible>
-			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -1660,6 +1666,7 @@
 				<id>70</id>
 				<label>Prognoze/Nazad</label>
 				<onup>17</onup>
+				<ondown>60</ondown>
 				<onright>70</onright>
 				<visible>no</visible>
 			</control>
@@ -1668,6 +1675,8 @@
 				<type>button</type>
 				<id>60</id>
 				<label>HR danas</label>
+				<onup>70</onup>
+				<ondown>61</ondown>
 				<onright>60</onright>
 				<visible>no</visible>
 			</control>
@@ -1676,6 +1685,8 @@
 				<type>button</type>
 				<id>61</id>
 				<label>HR sutra</label>
+				<onup>60</onup>
+				<ondown>62</ondown>
 				<onright>61</onright>
 				<visible>no</visible>
 			</control>
@@ -1684,6 +1695,8 @@
 				<type>button</type>
 				<id>62</id>
 				<label>HR +2 dana</label>
+				<onup>61</onup>
+				<ondown>63</ondown>
 				<onright>62</onright>
 				<visible>no</visible>
 			</control>
@@ -1692,6 +1705,8 @@
 				<type>button</type>
 				<id>63</id>
 				<label>HR +3 dana</label>
+				<onup>62</onup>
+				<ondown>64</ondown>
 				<onright>63</onright>
 				<visible>no</visible>
 			</control>
@@ -1700,6 +1715,8 @@
 				<type>button</type>
 				<id>64</id>
 				<label>EU danas</label>
+				<onup>63</onup>
+				<ondown>65</ondown>
 				<onright>64</onright>
 				<visible>no</visible>
 			</control>
@@ -1708,6 +1725,8 @@
 				<type>button</type>
 				<id>65</id>
 				<label>EU sutra</label>
+				<onup>64</onup>
+				<ondown>66</ondown>
 				<onright>65</onright>
 				<visible>no</visible>
 			</control>
@@ -1716,6 +1735,8 @@
 				<type>button</type>
 				<id>66</id>
 				<label>EU +2 dana</label>
+				<onup>65</onup>
+				<ondown>67</ondown>
 				<onright>66</onright>
 				<visible>no</visible>
 			</control>
@@ -1724,6 +1745,8 @@
 				<type>button</type>
 				<id>67</id>
 				<label>EU +3 dana</label>
+				<onup>66</onup>
+				<ondown>68</ondown>
 				<onright>67</onright>
 				<visible>no</visible>
 			</control>
@@ -1732,6 +1755,8 @@
 				<type>button</type>
 				<id>68</id>
 				<label>Tlak sutra</label>
+				<onup>67</onup>
+				<ondown>69</ondown>
 				<onright>68</onright>
 				<visible>no</visible>
 			</control>
@@ -1740,6 +1765,7 @@
 				<type>button</type>
 				<id>69</id>
 				<label>Valovi</label>
+				<onup>68</onup>
 				<ondown>60</ondown>
 				<onright>69</onright>
 				<visible>no</visible>
@@ -1768,7 +1794,7 @@
 			<posX>400</posX>
 			<posY>0</posY>
 			<layout>StackLayout</layout>
-			<visible>control.isvisible(30)|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(80)|control.isvisible(90)|control.isvisible(701)</visible>
+			<visible>!control.isvisible(101)+[control.isvisible(30)|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|control.isvisible(80)|control.isvisible(90)|control.isvisible(701)]</visible>
 			<control>
 				<description>dummy aktualno</description>
 				<type>button</type>
