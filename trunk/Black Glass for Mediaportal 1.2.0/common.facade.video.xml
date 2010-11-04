@@ -2,33 +2,39 @@
 <window>
 	<controls>
 		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-200</posX>
+			<posY>550</posY>
+			<width>1680</width>
+			<height>180</height>
+			<texture>gradient.png</texture>
+			<visible>facadeview.filmstrip</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-200</posX>
+			<posY>400</posY>
+			<width>1680</width>
+			<height>320</height>
+			<texture>gradient.png</texture>
+			<visible>[facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+		</control>
+		<control>
 			<description>group element</description>
 			<type>group</type>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<control>
-				<id>0</id>
-				<type>image</type>
-				<posX>-200</posX>
-				<posY>550</posY>
-				<width>1680</width>
-				<height>180</height>
-				<texture>gradient.png</texture>
-				<visible>facadeview.filmstrip</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<id>0</id>
-				<type>image</type>
-				<posX>-200</posX>
-				<posY>400</posY>
-				<width>1680</width>
-				<height>320</height>
-				<texture>gradient.png</texture>
-				<visible>[facadeview.coverflow]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -126,16 +132,16 @@
 					<dimColor>90ffffff</dimColor>
 					<id>50</id>
 					<posX>0</posX>
-					<posY>200</posY>
+					<posY>373</posY>
 					<width>1280</width>
 					<height>720</height>
 					<onup>2</onup>
 					<onleft>2</onleft>
 					<selectedCard>0</selectedCard>
-					<cardWidth>255</cardWidth>
-					<cardHeight>360</cardHeight>
+					<cardWidth>184</cardWidth>
+					<cardHeight>260</cardHeight>
 					<angle>45</angle>
-					<sideShift>220</sideShift>
+					<sideShift>140</sideShift>
 					<sideGap>150</sideGap>
 					<sideDepth>250</sideDepth>
 					<offsetY>0</offsetY>
@@ -144,13 +150,13 @@
 					<showFrame>yes</showFrame>
 					<frame>DVDCase_coverflow.png</frame>
 					<frameFocus>DVDCase_coverflow.png</frameFocus>
-					<frameWidth>255</frameWidth>
-					<frameHeight>360</frameHeight>
+					<frameWidth>184</frameWidth>
+					<frameHeight>260</frameHeight>
 					<spinSpeed>8</spinSpeed>
 					<font1>font14</font1>
 					<font2>font11</font2>
 					<label1/>
-					<label2>#genre</label2>
+					<label2/>
 					<label1YOff>405</label1YOff>
 					<label2YOff>430</label2YOff>
 					<pageSize>5</pageSize>
@@ -164,8 +170,8 @@
 									<type>image</type>
 									<posX>0</posX>
 									<posY>0</posY>
-									<width>255</width>
-									<height>360</height>
+									<width>184</width>
+									<height>260</height>
 									<texture flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png">black.png</texture>
 								</control>
 
@@ -174,7 +180,7 @@
 									<description>Watched Icon</description>
 									<type>image</type>
 									<id>0</id>
-									<posX>233</posX>
+									<posX>158</posX>
 									<posY>10</posY>
 									<width>15</width>
 									<height>15</height>
@@ -185,7 +191,7 @@
 									<description>Un-Watched Icon</description>
 									<type>image</type>
 									<id>0</id>
-									<posX>233</posX>
+									<posX>158</posX>
 									<posY>10</posY>
 									<width>15</width>
 									<height>15</height>
@@ -197,11 +203,11 @@
 									<description>Movie Title</description>
 									<type>fadelabel</type>
 									<id>0</id>
-									<posX>20</posX>
-									<posY>9</posY>
-									<width>215</width>
+									<posX>15</posX>
+									<posY>6</posY>
+									<width>165</width>
 									<label>#title</label>
-									<font>font16</font>
+									<font>font13</font>
 									<textcolor>FFFFFFFF</textcolor>
 									<wrapString> : : : </wrapString>
 									<shadowAngle>45</shadowAngle>
@@ -214,8 +220,8 @@
 									<type>image</type>
 									<id>0</id>
 									<posX>15</posX>
-									<posY>-10</posY>
-									<width>225</width>
+									<posY>-20</posY>
+									<width>154</width>
 									<height>53</height>
 									<texture>bg_button_nofocus.png</texture>
 									<visible>!string.equals(#runtime,0)+!string.equals(#year,1900)</visible>
@@ -225,9 +231,9 @@
 								<control>
 									<type>imagelist</type>
 									<id>1</id>
-									<posX>20</posX>
-									<posY>51</posY>
-									<width>302</width>
+									<posX>15</posX>
+									<posY>41</posY>
+									<width>185</width>
 									<height>40</height>
 									<textureWidth>15</textureWidth>
 									<textureHeight>15</textureHeight>
@@ -244,9 +250,9 @@
 								<control>
 									<description>genre</description>
 									<type>fadelabel</type>
-									<posX>20</posX>
-									<posY>72</posY>
-									<width>215</width>
+									<posX>15</posX>
+									<posY>62</posY>
+									<width>165</width>
 									<label>#genre</label>
 									<font>font11</font>
 									<textcolor>ffFFFFFF</textcolor>
@@ -256,9 +262,9 @@
 								<control>
 									<description>year</description>
 									<type>fadelabel</type>
-									<posX>20</posX>
-									<posY>97</posY>
-									<width>215</width>
+									<posX>15</posX>
+									<posY>87</posY>
+									<width>165</width>
 									<label>#year     #runtime min     #mpaarating</label>
 									<font>font11</font>
 									<textcolor>90FFFFFF</textcolor>
@@ -270,22 +276,21 @@
 								<control>
 									<description>Director</description>
 									<type>fadelabel</type>
-									<posX>20</posX>
-									<posY>123</posY>
-									<width>215</width>
-									<label>Directed by #director</label>
-									<font>font12</font>
+									<posX>15</posX>
+									<posY>113</posY>
+									<width>165</width>
+									<label>Dir. by #director</label>
+									<font>font11</font>
 									<textcolor>FFFFFFFF</textcolor>
 									<wrapString> : : : </wrapString>
 									<visible>!string.equals(#runtime,0)+!string.equals(#year,1900)</visible>
 								</control>
 								<control>
 									<description>cast</description>
-									<type>textboxscrollup</type>
-									<posX>20</posX>
-									<posY>150</posY>
-									<width>215</width>
-									<height>20</height>
+									<type>fadelabel</type>
+									<posX>15</posX>
+									<posY>140</posY>
+									<width>165</width>
 									<label>#cast</label>
 									<font>font10</font>
 									<lineSpacing>2</lineSpacing>
@@ -297,12 +302,12 @@
 								<control>
 									<description>plot</description>
 									<type>textboxscrollup</type>
-									<posX>20</posX>
-									<posY>205</posY>
-									<width>215</width>
-									<height>70</height>
+									<posX>15</posX>
+									<posY>165</posY>
+									<width>165</width>
+									<height>40</height>
 									<label>#plot</label>
-									<font>font10</font>
+									<font>font9</font>
 									<lineSpacing>2</lineSpacing>
 									<textcolor>FFFFFFFF</textcolor>
 									<visible>!string.equals(#runtime,0)+!string.equals(#year,1900)</visible>
@@ -315,11 +320,11 @@
 									<description>Title</description>
 									<type>fadelabel</type>
 									<id>0</id>
-									<posX>20</posX>
-									<posY>9</posY>
-									<width>215</width>
+									<posX>15</posX>
+									<posY>19</posY>
+									<width>165</width>
 									<label>#selecteditem</label>
-									<font>font16</font>
+									<font>font13</font>
 									<textcolor>FFFFFFFF</textcolor>
 									<wrapString> : : : </wrapString>
 									<shadowAngle>45</shadowAngle>
@@ -341,11 +346,11 @@
 								<control>
 									<description>genre</description>
 									<type>fadelabel</type>
-									<posX>20</posX>
+									<posX>15</posX>
 									<posY>48</posY>
-									<width>215</width>
+									<width>165</width>
 									<label>#selecteditem2</label>
-									<font>font11</font>
+									<font>font10</font>
 									<textcolor>90FFFFFF</textcolor>
 									<wrapString> : : : </wrapString>
 									<visible>![!string.equals(#runtime,0)+!string.equals(#year,1900)]</visible>
