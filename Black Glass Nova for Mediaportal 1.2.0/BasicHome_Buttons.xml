@@ -130,7 +130,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>2</label>
 			<font>font40</font>
@@ -187,7 +187,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>Moving Pictures</label>
 			<font>font40</font>
@@ -244,7 +244,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>605</label>
 			<font>font40</font>
@@ -301,7 +301,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>TV Series</label>
 			<font>font40</font> 
@@ -359,7 +359,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>8</label>
 			<font>font40</font>
@@ -417,7 +417,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>3</label>
 			<font>font40</font>
@@ -475,7 +475,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>Online Videos</label>
 			<font>font40</font>
@@ -533,7 +533,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>913</label>
 			<font>font40</font>
@@ -591,7 +591,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>Showtimes</label>
 			<font>font40</font>
@@ -649,7 +649,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>1</label>
 			<font>font40</font>
@@ -707,7 +707,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>665</label>
 			<font>font40</font>
@@ -765,7 +765,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>34000</label>
 			<font>font40</font>
@@ -823,7 +823,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>5</label>
 			<font>font40</font>
@@ -881,7 +881,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>Media Slayer</label>
 			<font>font40</font>
@@ -939,7 +939,7 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>Stream Radio</label>
 			<font>font40</font>
@@ -989,26 +989,82 @@
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#TVSeries.Translation.RecentlyAdded.Label:     #infoservice.recentlyAdded.series1.title     #TVSeries.Translation.Season.Label #infoservice.recentlyAdded.series1.season     #TVSeries.Translation.Episode.Label #infoservice.recentlyAdded.series1.episodenumber     #infoservice.recentlyAdded.series1.episodetitle</label>
+			<label>#fanarthandler.tvseries.latest1.dateAdded:     #fanarthandler.tvseries.latest1.serieName     #fanarthandler.tvseries.latest1.seasonIndexx#fanarthandler.tvseries.latest1.episodeIndex - #fanarthandler.tvseries.latest1.episodeName</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(InfoService)+control.hasfocus(103)+plugin.isenabled(MP-TV Series)</visible>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(103)+plugin.isenabled(MP-TV Series)</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="250">VisibleChange</animation>
+			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
-		<!-- <control>
+		
+		<control>
 			<description>Moving Pictures updates</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>Recently added:     #infoservice.recentlyAdded.movie1.title</label>
+			<label>#fanarthandler.movingpicture.latest1.dateAdded:     #fanarthandler.movingpicture.latest1.title     #fanarthandler.movingpicture.latest1.genre     #fanarthandler.movingpicture.latest1.year</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(InfoService)+control.hasfocus(101)+plugin.isenabled(Moving Pictures)</visible>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(101)+plugin.isenabled(Moving Pictures)</visible>
 			<textcolor>90ffffff</textcolor>
-            <animation effect="fade" time="250">VisibleChange</animation>
-		</control> -->
+			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		
+		<control>
+			<description>TV updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.tvrecordings.latest1.dateAdded:     #fanarthandler.tvrecordings.latest1.title     #fanarthandler.tvrecordings.latest1.genre</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(102)+plugin.isenabled(TV)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		
+		<control>
+			<description>Picture updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.picture.latest1.dateAdded:     #fanarthandler.picture.latest1.filename</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(109)+plugin.isenabled(Pictures)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		
+		<control>
+			<description>Music updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.music.latest1.dateAdded:     #fanarthandler.music.latest1.artist     #fanarthandler.music.latest1.album</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(100)+plugin.isenabled(Music)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
 	</controls>
 </window>
