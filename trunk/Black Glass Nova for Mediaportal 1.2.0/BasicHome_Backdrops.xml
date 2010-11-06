@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
 	<controls>
-		
-	<control>
+
+		<control>
 			<description>100 image</description>
 			<type>image</type>
 			<id>0</id>
@@ -62,7 +62,7 @@
 			<visible>control.hasfocus(104)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-        <control>
+		<control>
 			<description>105 image</description>
 			<type>image</type>
 			<id>0</id>
@@ -74,7 +74,7 @@
 			<visible>control.hasfocus(105)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-        <control>
+		<control>
 			<description>106 image</description>
 			<type>image</type>
 			<id>0</id>
@@ -86,7 +86,7 @@
 			<visible>control.hasfocus(106)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-        <control>
+		<control>
 			<description>107 image</description>
 			<type>image</type>
 			<id>0</id>
@@ -98,7 +98,7 @@
 			<visible>control.hasfocus(107)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-        <control>
+		<control>
 			<description>108 image</description>
 			<type>image</type>
 			<id>0</id>
@@ -110,7 +110,7 @@
 			<visible>control.hasfocus(108)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-        <control>
+		<control>
 			<description>109 image</description>
 			<type>image</type>
 			<id>0</id>
@@ -122,7 +122,7 @@
 			<visible>control.hasfocus(109)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-        <control>
+		<control>
 			<description>110 image</description>
 			<type>image</type>
 			<id>0</id>
@@ -134,7 +134,7 @@
 			<visible>control.hasfocus(110)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-        <control>
+		<control>
 			<description>111 image</description>
 			<type>image</type>
 			<id>0</id>
@@ -146,7 +146,7 @@
 			<visible>control.hasfocus(111)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-        <control>
+		<control>
 			<description>112 image</description>
 			<type>image</type>
 			<id>0</id>
@@ -158,7 +158,7 @@
 			<visible>control.hasfocus(112)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-        <control>
+		<control>
 			<description>113 image</description>
 			<type>image</type>
 			<id>0</id>
@@ -170,7 +170,7 @@
 			<visible>control.hasfocus(113)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-        <control>
+		<control>
 			<description>114 image</description>
 			<type>image</type>
 			<id>0</id>
@@ -182,7 +182,7 @@
 			<visible>control.hasfocus(114)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-        <control>
+		<control>
 			<description>weather image</description>
 			<type>image</type>
 			<id>0</id>
@@ -194,8 +194,8 @@
 			<visible>control.hasfocus(104)+plugin.isenabled(InfoService)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
-		
-	<control>
+
+		<control>
 			<description>TV Series image</description>
 			<type>image</type>
 			<id>0</id>
@@ -203,10 +203,77 @@
 			<posY>0</posY>
 			<width>1280</width>
 			<height>720</height>
-			<texture>#infoservice.recentlyAdded.series1.fanart</texture>
-			<visible>control.hasfocus(103)+plugin.isenabled(InfoService)</visible>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.tvseries.latest1.fanart</texture>
+			<visible>control.hasfocus(103)+plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
 		
+		<control>
+			<description>Moving Pictures image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.movingpicture.latest1.fanart</texture>
+			<visible>control.hasfocus(101)+plugin.isenabled(Fanart Handler)+plugin.isenabled(Moving Pictures)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		
+		<control>
+			<description>TV image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.tvrecordings.latest1.thumb</texture>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(102)+plugin.isenabled(TV)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		
+		<control>
+			<description>Picture image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.picture.latest1.thumb</texture>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(109)+plugin.isenabled(Pictures)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		
+		<control>
+			<description>Music image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.music.latest1.thumb</texture>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(100)+plugin.isenabled(Music)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+
 	</controls>
 </window>
