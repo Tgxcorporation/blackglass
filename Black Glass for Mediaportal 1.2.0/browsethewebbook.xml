@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>54537689</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<disabletopbar>false</disabletopbar>
+	<define>#header.label:Browse the Web - Favorites</define>
+	<define>#header.background:hover_BrowseTheWeb.png</define> 
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.facade.background.basic.xml</import>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>10</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>100</posY>
+				<width>360</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<wrapString> : : : </wrapString>
+			</control>
+		</control>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>50</id>
+			</control>
+		</control>     
+
+	</controls>
+</window>
