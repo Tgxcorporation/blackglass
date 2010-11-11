@@ -10,19 +10,9 @@
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.facade.background.basic.xml</import>
-		<control>
-			<type>label</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>10</posY>
-			<label>#header.label</label>
-			<font>font28</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>
-			<animation effect="fade" time="250">WindowOpen</animation>
-		</control>
+		<import>common.facade.background.xml</import>
+		<import>common.facade.video.xml</import>
+
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
@@ -30,29 +20,57 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
-				<type>fadelabel</type>
-				<description>Current program title</description>
+				<type>label</type>
 				<id>0</id>
 				<posX>30</posX>
-				<posY>100</posY>
-				<width>360</width>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>Cover Art</description>
+				<type>image</type>
+				<id>60</id>
+				<keepaspectratio>no</keepaspectratio>
+				<posX>62</posX> 
+				<posY>88</posY> 
+				<width>245</width> 
+				<height>348</height> 
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>83</posY>
+				<width>283</width>
+				<height>360</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>485</posY>
+				<width>420</width>
 				<font>font22</font>
 				<label>#selecteditem</label>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
 		</control>
-		<control>
-			<description>group element</description>
-			<type>group</type>
-			<animation effect="fade" time="150">WindowClose</animation>	
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<control>
-				<description>listcontrol</description>
-				<type>listcontrol</type>
-				<id>50</id>
-			</control>
-		</control>     
+
 
 	</controls>
 </window>
