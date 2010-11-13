@@ -50,6 +50,7 @@
             this.textBoxid111 = new System.Windows.Forms.TextBox();
             this.textBoxhover111 = new System.Windows.Forms.TextBox();
             this.groupBox100 = new System.Windows.Forms.GroupBox();
+            this.checkBox100 = new System.Windows.Forms.CheckBox();
             this.label43 = new System.Windows.Forms.Label();
             this.textBoxid100 = new System.Windows.Forms.TextBox();
             this.textBoxhover100 = new System.Windows.Forms.TextBox();
@@ -60,6 +61,7 @@
             this.groupBox105 = new System.Windows.Forms.GroupBox();
             this.buttonEmpty105 = new System.Windows.Forms.Button();
             this.label38 = new System.Windows.Forms.Label();
+            this.checkBox105 = new System.Windows.Forms.CheckBox();
             this.textBoxid105 = new System.Windows.Forms.TextBox();
             this.textBoxhover105 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -176,6 +178,7 @@
             this.buttonSave109f = new System.Windows.Forms.Button();
             this.buttonSave109u = new System.Windows.Forms.Button();
             this.groupBox101 = new System.Windows.Forms.GroupBox();
+            this.checkBox101 = new System.Windows.Forms.CheckBox();
             this.label44 = new System.Windows.Forms.Label();
             this.textBoxid101 = new System.Windows.Forms.TextBox();
             this.textBoxhover101 = new System.Windows.Forms.TextBox();
@@ -189,6 +192,7 @@
             this.buttonSave101u = new System.Windows.Forms.Button();
             this.groupBox102 = new System.Windows.Forms.GroupBox();
             this.label45 = new System.Windows.Forms.Label();
+            this.checkBox102 = new System.Windows.Forms.CheckBox();
             this.textBoxid102 = new System.Windows.Forms.TextBox();
             this.textBoxhover102 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -202,6 +206,7 @@
             this.groupBox103 = new System.Windows.Forms.GroupBox();
             this.label46 = new System.Windows.Forms.Label();
             this.textBoxid103 = new System.Windows.Forms.TextBox();
+            this.checkBox103 = new System.Windows.Forms.CheckBox();
             this.textBoxhover103 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.pictureBox103 = new System.Windows.Forms.PictureBox();
@@ -228,6 +233,16 @@
             this.textBoxTarget = new System.Windows.Forms.TextBox();
             this.buttonTarget = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
+            this.checkBox114 = new System.Windows.Forms.CheckBox();
+            this.checkBox109 = new System.Windows.Forms.CheckBox();
+            this.checkBox104 = new System.Windows.Forms.CheckBox();
+            this.checkBox106 = new System.Windows.Forms.CheckBox();
+            this.checkBox107 = new System.Windows.Forms.CheckBox();
+            this.checkBox108 = new System.Windows.Forms.CheckBox();
+            this.checkBox113 = new System.Windows.Forms.CheckBox();
+            this.checkBox112 = new System.Windows.Forms.CheckBox();
+            this.checkBox111 = new System.Windows.Forms.CheckBox();
+            this.checkBox110 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox111)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox100)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -404,6 +419,7 @@
             // 
             // groupBox111
             // 
+            this.groupBox111.Controls.Add(this.checkBox111);
             this.groupBox111.Controls.Add(this.buttonEmpty111);
             this.groupBox111.Controls.Add(this.label34);
             this.groupBox111.Controls.Add(this.textBoxid111);
@@ -462,6 +478,7 @@
             // groupBox100
             // 
             this.groupBox100.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox100.Controls.Add(this.checkBox100);
             this.groupBox100.Controls.Add(this.label43);
             this.groupBox100.Controls.Add(this.textBoxid100);
             this.groupBox100.Controls.Add(this.textBoxhover100);
@@ -479,6 +496,19 @@
             this.groupBox100.TabIndex = 21;
             this.groupBox100.TabStop = false;
             this.groupBox100.Text = "Button ID 100";
+            // 
+            // checkBox100
+            // 
+            this.checkBox100.AutoSize = true;
+            this.checkBox100.BackColor = System.Drawing.Color.Black;
+            this.checkBox100.ForeColor = System.Drawing.Color.White;
+            this.checkBox100.Location = new System.Drawing.Point(7, 122);
+            this.checkBox100.Name = "checkBox100";
+            this.checkBox100.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox100.Size = new System.Drawing.Size(126, 21);
+            this.checkBox100.TabIndex = 40;
+            this.checkBox100.Text = "Fanart Enabled?";
+            this.checkBox100.UseVisualStyleBackColor = false;
             // 
             // label43
             // 
@@ -547,6 +577,7 @@
             this.groupBox105.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox105.Controls.Add(this.buttonEmpty105);
             this.groupBox105.Controls.Add(this.label38);
+            this.groupBox105.Controls.Add(this.checkBox105);
             this.groupBox105.Controls.Add(this.textBoxid105);
             this.groupBox105.Controls.Add(this.textBoxhover105);
             this.groupBox105.Controls.Add(this.label5);
@@ -582,6 +613,19 @@
             this.label38.Size = new System.Drawing.Size(68, 13);
             this.label38.TabIndex = 24;
             this.label38.Text = "Hover Image";
+            // 
+            // checkBox105
+            // 
+            this.checkBox105.AutoSize = true;
+            this.checkBox105.BackColor = System.Drawing.Color.Black;
+            this.checkBox105.ForeColor = System.Drawing.Color.White;
+            this.checkBox105.Location = new System.Drawing.Point(7, 90);
+            this.checkBox105.Name = "checkBox105";
+            this.checkBox105.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox105.Size = new System.Drawing.Size(126, 21);
+            this.checkBox105.TabIndex = 51;
+            this.checkBox105.Text = "Fanart Enabled?";
+            this.checkBox105.UseVisualStyleBackColor = false;
             // 
             // textBoxid105
             // 
@@ -679,6 +723,7 @@
             // 
             // groupBox110
             // 
+            this.groupBox110.Controls.Add(this.checkBox110);
             this.groupBox110.Controls.Add(this.buttonEmpty110);
             this.groupBox110.Controls.Add(this.label33);
             this.groupBox110.Controls.Add(this.textBoxhover110);
@@ -815,6 +860,7 @@
             // 
             // groupBox112
             // 
+            this.groupBox112.Controls.Add(this.checkBox112);
             this.groupBox112.Controls.Add(this.buttonEmpty112);
             this.groupBox112.Controls.Add(this.label35);
             this.groupBox112.Controls.Add(this.textBoxid112);
@@ -949,6 +995,7 @@
             // 
             // groupBox113
             // 
+            this.groupBox113.Controls.Add(this.checkBox113);
             this.groupBox113.Controls.Add(this.buttonEmpty113);
             this.groupBox113.Controls.Add(this.label36);
             this.groupBox113.Controls.Add(this.textBoxid113);
@@ -1083,6 +1130,7 @@
             // 
             // groupBox114
             // 
+            this.groupBox114.Controls.Add(this.checkBox114);
             this.groupBox114.Controls.Add(this.buttonEmpty114);
             this.groupBox114.Controls.Add(this.textBoxhover114);
             this.groupBox114.Controls.Add(this.label37);
@@ -1228,6 +1276,7 @@
             // groupBox106
             // 
             this.groupBox106.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox106.Controls.Add(this.checkBox106);
             this.groupBox106.Controls.Add(this.buttonEmpty106);
             this.groupBox106.Controls.Add(this.label39);
             this.groupBox106.Controls.Add(this.textBoxhover106);
@@ -1365,6 +1414,7 @@
             this.groupBox107.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox107.Controls.Add(this.buttonEmpty107);
             this.groupBox107.Controls.Add(this.label40);
+            this.groupBox107.Controls.Add(this.checkBox107);
             this.groupBox107.Controls.Add(this.textBoxid107);
             this.groupBox107.Controls.Add(this.textBoxhover107);
             this.groupBox107.Controls.Add(this.label17);
@@ -1500,6 +1550,7 @@
             this.groupBox108.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox108.Controls.Add(this.buttonEmpty108);
             this.groupBox108.Controls.Add(this.label41);
+            this.groupBox108.Controls.Add(this.checkBox108);
             this.groupBox108.Controls.Add(this.textBoxid108);
             this.groupBox108.Controls.Add(this.textBoxhover108);
             this.groupBox108.Controls.Add(this.label19);
@@ -1633,6 +1684,7 @@
             // groupBox109
             // 
             this.groupBox109.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox109.Controls.Add(this.checkBox109);
             this.groupBox109.Controls.Add(this.buttonEmpty109);
             this.groupBox109.Controls.Add(this.label42);
             this.groupBox109.Controls.Add(this.textBoxid109);
@@ -1768,6 +1820,7 @@
             // groupBox101
             // 
             this.groupBox101.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox101.Controls.Add(this.checkBox101);
             this.groupBox101.Controls.Add(this.label44);
             this.groupBox101.Controls.Add(this.textBoxid101);
             this.groupBox101.Controls.Add(this.textBoxhover101);
@@ -1785,6 +1838,19 @@
             this.groupBox101.TabIndex = 30;
             this.groupBox101.TabStop = false;
             this.groupBox101.Text = "Button ID 101";
+            // 
+            // checkBox101
+            // 
+            this.checkBox101.AutoSize = true;
+            this.checkBox101.BackColor = System.Drawing.Color.Black;
+            this.checkBox101.ForeColor = System.Drawing.Color.White;
+            this.checkBox101.Location = new System.Drawing.Point(7, 122);
+            this.checkBox101.Name = "checkBox101";
+            this.checkBox101.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox101.Size = new System.Drawing.Size(126, 21);
+            this.checkBox101.TabIndex = 38;
+            this.checkBox101.Text = "Fanart Enabled?";
+            this.checkBox101.UseVisualStyleBackColor = false;
             // 
             // label44
             // 
@@ -1893,6 +1959,7 @@
             // 
             this.groupBox102.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox102.Controls.Add(this.label45);
+            this.groupBox102.Controls.Add(this.checkBox102);
             this.groupBox102.Controls.Add(this.textBoxid102);
             this.groupBox102.Controls.Add(this.textBoxhover102);
             this.groupBox102.Controls.Add(this.label25);
@@ -1918,6 +1985,19 @@
             this.label45.Size = new System.Drawing.Size(68, 13);
             this.label45.TabIndex = 47;
             this.label45.Text = "Hover Image";
+            // 
+            // checkBox102
+            // 
+            this.checkBox102.AutoSize = true;
+            this.checkBox102.BackColor = System.Drawing.Color.Black;
+            this.checkBox102.ForeColor = System.Drawing.Color.White;
+            this.checkBox102.Location = new System.Drawing.Point(7, 122);
+            this.checkBox102.Name = "checkBox102";
+            this.checkBox102.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox102.Size = new System.Drawing.Size(126, 21);
+            this.checkBox102.TabIndex = 41;
+            this.checkBox102.Text = "Fanart Enabled?";
+            this.checkBox102.UseVisualStyleBackColor = false;
             // 
             // textBoxid102
             // 
@@ -2018,6 +2098,7 @@
             this.groupBox103.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox103.Controls.Add(this.label46);
             this.groupBox103.Controls.Add(this.textBoxid103);
+            this.groupBox103.Controls.Add(this.checkBox103);
             this.groupBox103.Controls.Add(this.textBoxhover103);
             this.groupBox103.Controls.Add(this.label27);
             this.groupBox103.Controls.Add(this.pictureBox103);
@@ -2050,6 +2131,19 @@
             this.textBoxid103.Name = "textBoxid103";
             this.textBoxid103.Size = new System.Drawing.Size(41, 21);
             this.textBoxid103.TabIndex = 46;
+            // 
+            // checkBox103
+            // 
+            this.checkBox103.AutoSize = true;
+            this.checkBox103.BackColor = System.Drawing.Color.Black;
+            this.checkBox103.ForeColor = System.Drawing.Color.White;
+            this.checkBox103.Location = new System.Drawing.Point(7, 122);
+            this.checkBox103.Name = "checkBox103";
+            this.checkBox103.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox103.Size = new System.Drawing.Size(126, 21);
+            this.checkBox103.TabIndex = 39;
+            this.checkBox103.Text = "Fanart Enabled?";
+            this.checkBox103.UseVisualStyleBackColor = false;
             // 
             // textBoxhover103
             // 
@@ -2140,6 +2234,7 @@
             // groupBox104
             // 
             this.groupBox104.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox104.Controls.Add(this.checkBox104);
             this.groupBox104.Controls.Add(this.label47);
             this.groupBox104.Controls.Add(this.textBoxid104);
             this.groupBox104.Controls.Add(this.textBoxhover104);
@@ -2302,6 +2397,136 @@
             this.label31.Size = new System.Drawing.Size(63, 13);
             this.label31.TabIndex = 45;
             this.label31.Text = "Target Path";
+            // 
+            // checkBox114
+            // 
+            this.checkBox114.AutoSize = true;
+            this.checkBox114.BackColor = System.Drawing.Color.Black;
+            this.checkBox114.ForeColor = System.Drawing.Color.White;
+            this.checkBox114.Location = new System.Drawing.Point(7, 96);
+            this.checkBox114.Name = "checkBox114";
+            this.checkBox114.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox114.Size = new System.Drawing.Size(126, 21);
+            this.checkBox114.TabIndex = 39;
+            this.checkBox114.Text = "Fanart Enabled?";
+            this.checkBox114.UseVisualStyleBackColor = false;
+            // 
+            // checkBox109
+            // 
+            this.checkBox109.AutoSize = true;
+            this.checkBox109.BackColor = System.Drawing.Color.Black;
+            this.checkBox109.ForeColor = System.Drawing.Color.White;
+            this.checkBox109.Location = new System.Drawing.Point(7, 90);
+            this.checkBox109.Name = "checkBox109";
+            this.checkBox109.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox109.Size = new System.Drawing.Size(126, 21);
+            this.checkBox109.TabIndex = 41;
+            this.checkBox109.Text = "Fanart Enabled?";
+            this.checkBox109.UseVisualStyleBackColor = false;
+            // 
+            // checkBox104
+            // 
+            this.checkBox104.AutoSize = true;
+            this.checkBox104.BackColor = System.Drawing.Color.Black;
+            this.checkBox104.ForeColor = System.Drawing.Color.White;
+            this.checkBox104.Location = new System.Drawing.Point(7, 122);
+            this.checkBox104.Name = "checkBox104";
+            this.checkBox104.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox104.Size = new System.Drawing.Size(126, 21);
+            this.checkBox104.TabIndex = 49;
+            this.checkBox104.Text = "Fanart Enabled?";
+            this.checkBox104.UseVisualStyleBackColor = false;
+            // 
+            // checkBox106
+            // 
+            this.checkBox106.AutoSize = true;
+            this.checkBox106.BackColor = System.Drawing.Color.Black;
+            this.checkBox106.ForeColor = System.Drawing.Color.White;
+            this.checkBox106.Location = new System.Drawing.Point(7, 90);
+            this.checkBox106.Name = "checkBox106";
+            this.checkBox106.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox106.Size = new System.Drawing.Size(126, 21);
+            this.checkBox106.TabIndex = 35;
+            this.checkBox106.Text = "Fanart Enabled?";
+            this.checkBox106.UseVisualStyleBackColor = false;
+            // 
+            // checkBox107
+            // 
+            this.checkBox107.AutoSize = true;
+            this.checkBox107.BackColor = System.Drawing.Color.Black;
+            this.checkBox107.ForeColor = System.Drawing.Color.White;
+            this.checkBox107.Location = new System.Drawing.Point(7, 90);
+            this.checkBox107.Name = "checkBox107";
+            this.checkBox107.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox107.Size = new System.Drawing.Size(126, 21);
+            this.checkBox107.TabIndex = 47;
+            this.checkBox107.Text = "Fanart Enabled?";
+            this.checkBox107.UseVisualStyleBackColor = false;
+            // 
+            // checkBox108
+            // 
+            this.checkBox108.AutoSize = true;
+            this.checkBox108.BackColor = System.Drawing.Color.Black;
+            this.checkBox108.ForeColor = System.Drawing.Color.White;
+            this.checkBox108.Location = new System.Drawing.Point(7, 90);
+            this.checkBox108.Name = "checkBox108";
+            this.checkBox108.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox108.Size = new System.Drawing.Size(126, 21);
+            this.checkBox108.TabIndex = 51;
+            this.checkBox108.Text = "Fanart Enabled?";
+            this.checkBox108.UseVisualStyleBackColor = false;
+            // 
+            // checkBox113
+            // 
+            this.checkBox113.AutoSize = true;
+            this.checkBox113.BackColor = System.Drawing.Color.Black;
+            this.checkBox113.ForeColor = System.Drawing.Color.White;
+            this.checkBox113.Location = new System.Drawing.Point(7, 96);
+            this.checkBox113.Name = "checkBox113";
+            this.checkBox113.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox113.Size = new System.Drawing.Size(126, 21);
+            this.checkBox113.TabIndex = 37;
+            this.checkBox113.Text = "Fanart Enabled?";
+            this.checkBox113.UseVisualStyleBackColor = false;
+            // 
+            // checkBox112
+            // 
+            this.checkBox112.AutoSize = true;
+            this.checkBox112.BackColor = System.Drawing.Color.Black;
+            this.checkBox112.ForeColor = System.Drawing.Color.White;
+            this.checkBox112.Location = new System.Drawing.Point(7, 96);
+            this.checkBox112.Name = "checkBox112";
+            this.checkBox112.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox112.Size = new System.Drawing.Size(126, 21);
+            this.checkBox112.TabIndex = 35;
+            this.checkBox112.Text = "Fanart Enabled?";
+            this.checkBox112.UseVisualStyleBackColor = false;
+            // 
+            // checkBox111
+            // 
+            this.checkBox111.AutoSize = true;
+            this.checkBox111.BackColor = System.Drawing.Color.Black;
+            this.checkBox111.ForeColor = System.Drawing.Color.White;
+            this.checkBox111.Location = new System.Drawing.Point(7, 96);
+            this.checkBox111.Name = "checkBox111";
+            this.checkBox111.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox111.Size = new System.Drawing.Size(126, 21);
+            this.checkBox111.TabIndex = 25;
+            this.checkBox111.Text = "Fanart Enabled?";
+            this.checkBox111.UseVisualStyleBackColor = false;
+            // 
+            // checkBox110
+            // 
+            this.checkBox110.AutoSize = true;
+            this.checkBox110.BackColor = System.Drawing.Color.Black;
+            this.checkBox110.ForeColor = System.Drawing.Color.White;
+            this.checkBox110.Location = new System.Drawing.Point(7, 96);
+            this.checkBox110.Name = "checkBox110";
+            this.checkBox110.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox110.Size = new System.Drawing.Size(126, 21);
+            this.checkBox110.TabIndex = 24;
+            this.checkBox110.Text = "Fanart Enabled?";
+            this.checkBox110.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -2586,6 +2811,21 @@
         private System.Windows.Forms.Button buttonEmpty107;
         private System.Windows.Forms.Button buttonEmpty108;
         private System.Windows.Forms.Button buttonEmpty109;
+        private System.Windows.Forms.CheckBox checkBox100;
+        private System.Windows.Forms.CheckBox checkBox105;
+        private System.Windows.Forms.CheckBox checkBox101;
+        private System.Windows.Forms.CheckBox checkBox102;
+        private System.Windows.Forms.CheckBox checkBox103;
+        private System.Windows.Forms.CheckBox checkBox114;
+        private System.Windows.Forms.CheckBox checkBox109;
+        private System.Windows.Forms.CheckBox checkBox104;
+        private System.Windows.Forms.CheckBox checkBox111;
+        private System.Windows.Forms.CheckBox checkBox110;
+        private System.Windows.Forms.CheckBox checkBox112;
+        private System.Windows.Forms.CheckBox checkBox113;
+        private System.Windows.Forms.CheckBox checkBox106;
+        private System.Windows.Forms.CheckBox checkBox107;
+        private System.Windows.Forms.CheckBox checkBox108;
     }
 }
 

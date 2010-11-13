@@ -37,7 +37,7 @@ namespace BlackGlassEditor
             XmlNodeList pid = Plugins.GetElementsByTagName("id");
             XmlNodeList pname = Plugins.GetElementsByTagName("name");
             XmlNodeList phover = Plugins.GetElementsByTagName("hover");
-
+           
             plugins.Add(new MPplugin(0, "Empty Button", ""));
             plugins.Add(new MPplugin(99999, "Custom Plugin", "hover_custom"));
 
@@ -45,7 +45,9 @@ namespace BlackGlassEditor
             {
                 plugins.Add(new MPplugin(int.Parse(pid[i].InnerText), pname[i].InnerText, phover[i].InnerText));
             }
+            
 
+            //Combobox plugin list
             foreach (MPplugin p in plugins)
             {
                 comboBox100.Items.Add(p.Name);
@@ -74,6 +76,7 @@ namespace BlackGlassEditor
             XmlNodeList name = Buttons.GetElementsByTagName("name");
             XmlNodeList plugin = Buttons.GetElementsByTagName("plugin");
             XmlNodeList hover = Buttons.GetElementsByTagName("hover");
+            XmlNodeList fanart = Buttons.GetElementsByTagName("fanart");
 
             comboBox100.SelectedItem = findPluginName(Int32.Parse(plugin[0].InnerText));
             comboBox101.SelectedItem = findPluginName(Int32.Parse(plugin[1].InnerText));
@@ -138,6 +141,23 @@ namespace BlackGlassEditor
             textBoxhover112.Text = hover[12].InnerText;
             textBoxhover113.Text = hover[13].InnerText;
             textBoxhover114.Text = hover[14].InnerText;
+
+            if (fanart[0].InnerText == "yes") { checkBox100.Checked = true; } else { checkBox100.Visible = false; }
+            if (fanart[1].InnerText == "yes") { checkBox101.Checked = true; } else { checkBox101.Visible = false; }
+            if (fanart[2].InnerText == "yes") { checkBox102.Checked = true; } else { checkBox102.Visible = false; }
+            if (fanart[3].InnerText == "yes") { checkBox103.Checked = true; } else { checkBox103.Visible = false; }
+            if (fanart[4].InnerText == "yes") { checkBox104.Checked = true; } else { checkBox104.Visible = false; }
+            if (fanart[5].InnerText == "yes") { checkBox105.Checked = true; } else { checkBox105.Visible = false; }
+            if (fanart[6].InnerText == "yes") { checkBox106.Checked = true; } else { checkBox106.Visible = false; }
+            if (fanart[7].InnerText == "yes") { checkBox107.Checked = true; } else { checkBox107.Visible = false; }
+            if (fanart[8].InnerText == "yes") { checkBox108.Checked = true; } else { checkBox108.Visible = false; }
+            if (fanart[9].InnerText == "yes") { checkBox109.Checked = true; } else { checkBox109.Visible = false; }
+            if (fanart[10].InnerText == "yes") { checkBox110.Checked = true; } else { checkBox110.Visible = false; }
+            if (fanart[11].InnerText == "yes") { checkBox111.Checked = true; } else { checkBox111.Visible = false; }
+            if (fanart[12].InnerText == "yes") { checkBox112.Checked = true; } else { checkBox112.Visible = false; }
+            if (fanart[13].InnerText == "yes") { checkBox113.Checked = true; } else { checkBox113.Visible = false; }
+            if (fanart[14].InnerText == "yes") { checkBox114.Checked = true; } else { checkBox114.Visible = false; }
+
 
             String ApplicationPath = Application.StartupPath;
 
@@ -1324,7 +1344,7 @@ namespace BlackGlassEditor
             {
                 shadow = (Bitmap)Functions.SetImgOpacity(shadow, 0.70f);
                 img = Functions.MakeGrayscale(img);
-                
+
             }
 
             img = Functions.SetImgOpacity(img, 0.70f);
@@ -1364,6 +1384,9 @@ namespace BlackGlassEditor
             textBoxid100.Text = findPlugin(comboBox100.Text).ToString();
             textBoxhover100.Text = findPluginHover(Int32.Parse(textBoxid100.Text));
             if (comboBox100.Text == "Empty Button") { textBox100.Text = ""; textBoxid100.Text = ""; };
+            checkBox100.Visible = false;
+            checkBox100.Checked = false;
+            if (textBoxid100.Text == "501" || textBoxid100.Text == "96742" || textBoxid100.Text == "1" || textBoxid100.Text == "9811" || textBoxid100.Text == "2600" || textBoxid100.Text == "2") { checkBox100.Visible = true; };
         }
         private void comboBox101_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1371,6 +1394,9 @@ namespace BlackGlassEditor
             textBoxid101.Text = findPlugin(comboBox101.Text).ToString();
             textBoxhover101.Text = findPluginHover(Int32.Parse(textBoxid101.Text));
             if (comboBox101.Text == "Empty Button") { textBox101.Text = ""; textBoxid101.Text = ""; };
+            checkBox101.Visible = false;
+            checkBox101.Checked = false;
+            if (textBoxid101.Text == "501" || textBoxid101.Text == "96742" || textBoxid101.Text == "1" || textBoxid101.Text == "9811" || textBoxid101.Text == "2600" || textBoxid101.Text == "2") { checkBox101.Visible = true; };
         }
         private void comboBox102_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1378,6 +1404,9 @@ namespace BlackGlassEditor
             textBoxid102.Text = findPlugin(comboBox102.Text).ToString();
             textBoxhover102.Text = findPluginHover(Int32.Parse(textBoxid102.Text));
             if (comboBox102.Text == "Empty Button") { textBox102.Text = ""; textBoxid102.Text = ""; };
+            checkBox102.Visible = false;
+            checkBox102.Checked = false;
+            if (textBoxid102.Text == "501" || textBoxid102.Text == "96742" || textBoxid102.Text == "1" || textBoxid102.Text == "9811" || textBoxid102.Text == "2600" || textBoxid102.Text == "2") { checkBox102.Visible = true; };
         }
         private void comboBox103_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1385,6 +1414,9 @@ namespace BlackGlassEditor
             textBoxid103.Text = findPlugin(comboBox103.Text).ToString();
             textBoxhover103.Text = findPluginHover(Int32.Parse(textBoxid103.Text));
             if (comboBox103.Text == "Empty Button") { textBox103.Text = ""; textBoxid103.Text = ""; };
+            checkBox103.Visible = false;
+            checkBox103.Checked = false;
+            if (textBoxid103.Text == "501" || textBoxid103.Text == "96742" || textBoxid103.Text == "1" || textBoxid103.Text == "9811" || textBoxid103.Text == "2600" || textBoxid103.Text == "2") { checkBox103.Visible = true; };
         }
         private void comboBox104_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1392,6 +1424,9 @@ namespace BlackGlassEditor
             textBoxid104.Text = findPlugin(comboBox104.Text).ToString();
             textBoxhover104.Text = findPluginHover(Int32.Parse(textBoxid104.Text));
             if (comboBox104.Text == "Empty Button") { textBox104.Text = ""; textBoxid104.Text = ""; };
+            checkBox104.Visible = false;
+            checkBox104.Checked = false;
+            if (textBoxid104.Text == "501" || textBoxid104.Text == "96742" || textBoxid104.Text == "1" || textBoxid104.Text == "9811" || textBoxid104.Text == "2600" || textBoxid104.Text == "2") { checkBox104.Visible = true; };
         }
         private void comboBox105_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1399,6 +1434,9 @@ namespace BlackGlassEditor
             textBoxid105.Text = findPlugin(comboBox105.Text).ToString();
             textBoxhover105.Text = findPluginHover(Int32.Parse(textBoxid105.Text));
             if (comboBox105.Text == "Empty Button") { textBox105.Text = ""; textBoxid105.Text = ""; };
+            checkBox105.Visible = false;
+            checkBox105.Checked = false; 
+            if (textBoxid105.Text == "501" || textBoxid105.Text == "96742" || textBoxid105.Text == "1" || textBoxid105.Text == "9811" || textBoxid105.Text == "2600" || textBoxid105.Text == "2") { checkBox105.Visible = true; };
         }
         private void comboBox106_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1406,6 +1444,9 @@ namespace BlackGlassEditor
             textBoxid106.Text = findPlugin(comboBox106.Text).ToString();
             textBoxhover106.Text = findPluginHover(Int32.Parse(textBoxid106.Text));
             if (comboBox106.Text == "Empty Button") { textBox106.Text = ""; textBoxid106.Text = ""; };
+            checkBox106.Visible = false;
+            checkBox106.Checked = false; 
+            if (textBoxid106.Text == "501" || textBoxid106.Text == "96742" || textBoxid106.Text == "1" || textBoxid106.Text == "9811" || textBoxid106.Text == "2600" || textBoxid106.Text == "2") { checkBox106.Visible = true; };
         }
         private void comboBox107_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1413,6 +1454,9 @@ namespace BlackGlassEditor
             textBoxid107.Text = findPlugin(comboBox107.Text).ToString();
             textBoxhover107.Text = findPluginHover(Int32.Parse(textBoxid107.Text));
             if (comboBox107.Text == "Empty Button") { textBox107.Text = ""; textBoxid107.Text = ""; };
+            checkBox107.Visible = false;
+            checkBox107.Checked = false; 
+            if (textBoxid107.Text == "501" || textBoxid107.Text == "96742" || textBoxid107.Text == "1" || textBoxid107.Text == "9811" || textBoxid107.Text == "2600" || textBoxid107.Text == "2") { checkBox107.Visible = true; };
         }
         private void comboBox108_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1420,6 +1464,9 @@ namespace BlackGlassEditor
             textBoxid108.Text = findPlugin(comboBox108.Text).ToString();
             textBoxhover108.Text = findPluginHover(Int32.Parse(textBoxid108.Text));
             if (comboBox108.Text == "Empty Button") { textBox108.Text = ""; textBoxid108.Text = ""; };
+            checkBox108.Visible = false;
+            checkBox108.Checked = false; 
+            if (textBoxid108.Text == "501" || textBoxid108.Text == "96742" || textBoxid108.Text == "1" || textBoxid108.Text == "9811" || textBoxid108.Text == "2600" || textBoxid108.Text == "2") { checkBox108.Visible = true; };
         }
         private void comboBox109_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1427,6 +1474,9 @@ namespace BlackGlassEditor
             textBoxid109.Text = findPlugin(comboBox109.Text).ToString();
             textBoxhover109.Text = findPluginHover(Int32.Parse(textBoxid109.Text));
             if (comboBox109.Text == "Empty Button") { textBox109.Text = ""; textBoxid109.Text = ""; };
+            checkBox109.Visible = false;
+            checkBox109.Checked = false; 
+            if (textBoxid109.Text == "501" || textBoxid109.Text == "96742" || textBoxid109.Text == "1" || textBoxid109.Text == "9811" || textBoxid109.Text == "2600" || textBoxid109.Text == "2") { checkBox109.Visible = true; };
         }
         private void comboBox110_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1434,34 +1484,49 @@ namespace BlackGlassEditor
             textBoxid110.Text = findPlugin(comboBox110.Text).ToString();
             textBoxhover110.Text = findPluginHover(Int32.Parse(textBoxid110.Text));
             if (comboBox110.Text == "Empty Button") { textBox110.Text = ""; textBoxid110.Text = ""; };
+            checkBox110.Visible = false;
+            checkBox110.Checked = false; 
+            if (textBoxid110.Text == "501" || textBoxid110.Text == "96742" || textBoxid110.Text == "1" || textBoxid110.Text == "9811" || textBoxid110.Text == "2600" || textBoxid110.Text == "2") { checkBox110.Visible = true; };
         }
         private void comboBox111_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox111.Text = comboBox111.Text;
             textBoxid111.Text = findPlugin(comboBox111.Text).ToString();
             textBoxhover111.Text = findPluginHover(Int32.Parse(textBoxid111.Text));
-            if (comboBox111.Text == "Empty Button") { textBox111.Text = ""; textBoxid111.Text = ""; };
+            if (comboBox111.Text == "Empty Button") { textBox111.Text = ""; textBoxid111.Text = ""; }; 
+            checkBox111.Visible = false;
+            checkBox111.Checked = false; 
+            if (textBoxid111.Text == "501" || textBoxid111.Text == "96742" || textBoxid111.Text == "1" || textBoxid111.Text == "9811" || textBoxid111.Text == "2600" || textBoxid111.Text == "2") { checkBox111.Visible = true; };
         }
         private void comboBox112_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox112.Text = comboBox112.Text;
             textBoxid112.Text = findPlugin(comboBox112.Text).ToString();
             textBoxhover112.Text = findPluginHover(Int32.Parse(textBoxid112.Text));
-            if (comboBox112.Text == "Empty Button") { textBox112.Text = ""; textBoxid112.Text = ""; };
+            if (comboBox112.Text == "Empty Button") { textBox112.Text = ""; textBoxid112.Text = ""; }; 
+            checkBox112.Visible = false;
+            checkBox112.Checked = false; 
+            if (textBoxid112.Text == "501" || textBoxid112.Text == "96742" || textBoxid112.Text == "1" || textBoxid112.Text == "9811" || textBoxid112.Text == "2600" || textBoxid112.Text == "2") { checkBox112.Visible = true; };
         }
         private void comboBox113_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox113.Text = comboBox113.Text;
             textBoxid113.Text = findPlugin(comboBox113.Text).ToString();
             textBoxhover113.Text = findPluginHover(Int32.Parse(textBoxid113.Text));
-            if (comboBox113.Text == "Empty Button") { textBox113.Text = ""; textBoxid113.Text = ""; };
+            if (comboBox113.Text == "Empty Button") { textBox113.Text = ""; textBoxid113.Text = ""; }; 
+            checkBox113.Visible = false;
+            checkBox113.Checked = false; 
+            if (textBoxid113.Text == "501" || textBoxid113.Text == "96742" || textBoxid113.Text == "1" || textBoxid113.Text == "9811" || textBoxid113.Text == "2600" || textBoxid113.Text == "2") { checkBox113.Visible = true; };
         }
         private void comboBox114_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox114.Text = comboBox114.Text;
             textBoxid114.Text = findPlugin(comboBox114.Text).ToString();
             textBoxhover114.Text = findPluginHover(Int32.Parse(textBoxid114.Text));
-            if (comboBox114.Text == "Empty Button") { textBox114.Text = ""; textBoxid114.Text = ""; };
+            if (comboBox114.Text == "Empty Button") { textBox114.Text = ""; textBoxid114.Text = ""; }; 
+            checkBox114.Visible = false;
+            checkBox114.Checked = false; 
+            if (textBoxid114.Text == "501" || textBoxid114.Text == "96742" || textBoxid114.Text == "1" || textBoxid114.Text == "9811" || textBoxid114.Text == "2600" || textBoxid114.Text == "2") { checkBox114.Visible = true; };
         }
 
 
@@ -1660,7 +1725,7 @@ namespace BlackGlassEditor
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_104_nofocus.png", pictureBox104.Image, "104", 0);
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_104_focus.png", pictureBox104.Image, "104", 1);
 
-                Bitmap buttonImage105 = null; 
+                Bitmap buttonImage105 = null;
                 if (pictureBox105.Image != null)
                 {
                     buttonImage105 = new Bitmap(buildImage(pictureBox105.Image, "105", 1));
@@ -1751,8 +1816,8 @@ namespace BlackGlassEditor
                 // CREA bg_homefull.jpg 
                 gfx.DrawImage(gradient, new System.Drawing.Rectangle(0, 0, 1280, 720));
 
-                
-                
+
+
                 // CARICAMENTO left & right
                 myStream = myAssembly.GetManifestResourceStream("BlackGlassEditor.Images.basichome_left.png");
                 Bitmap left = new Bitmap(myStream);
@@ -1955,6 +2020,63 @@ namespace BlackGlassEditor
                 if (textBoxid113.Text == "96742") movingpictures_button = "113";
                 if (textBoxid114.Text == "96742") movingpictures_button = "114";
 
+
+                String tv_button = "";
+
+                if (textBoxid100.Text == "1") tv_button = "100";
+                if (textBoxid101.Text == "1") tv_button = "101";
+                if (textBoxid102.Text == "1") tv_button = "102";
+                if (textBoxid103.Text == "1") tv_button = "103";
+                if (textBoxid104.Text == "1") tv_button = "104";
+                if (textBoxid105.Text == "1") tv_button = "105";
+                if (textBoxid106.Text == "1") tv_button = "106";
+                if (textBoxid107.Text == "1") tv_button = "107";
+                if (textBoxid108.Text == "1") tv_button = "108";
+                if (textBoxid109.Text == "1") tv_button = "109";
+                if (textBoxid110.Text == "1") tv_button = "110";
+                if (textBoxid111.Text == "1") tv_button = "111";
+                if (textBoxid112.Text == "1") tv_button = "112";
+                if (textBoxid113.Text == "1") tv_button = "113";
+                if (textBoxid114.Text == "1") tv_button = "114";
+
+
+                String pictures_button = "";
+
+                if (textBoxid100.Text == "2") pictures_button = "100";
+                if (textBoxid101.Text == "2") pictures_button = "101";
+                if (textBoxid102.Text == "2") pictures_button = "102";
+                if (textBoxid103.Text == "2") pictures_button = "103";
+                if (textBoxid104.Text == "2") pictures_button = "104";
+                if (textBoxid105.Text == "2") pictures_button = "105";
+                if (textBoxid106.Text == "2") pictures_button = "106";
+                if (textBoxid107.Text == "2") pictures_button = "107";
+                if (textBoxid108.Text == "2") pictures_button = "108";
+                if (textBoxid109.Text == "2") pictures_button = "109";
+                if (textBoxid110.Text == "2") pictures_button = "110";
+                if (textBoxid111.Text == "2") pictures_button = "111";
+                if (textBoxid112.Text == "2") pictures_button = "112";
+                if (textBoxid113.Text == "2") pictures_button = "113";
+                if (textBoxid114.Text == "2") pictures_button = "114";
+
+
+                String music_button = "";
+
+                if (textBoxid100.Text == "501") pictures_button = "100";
+                if (textBoxid101.Text == "501") pictures_button = "101";
+                if (textBoxid102.Text == "501") pictures_button = "102";
+                if (textBoxid103.Text == "501") pictures_button = "103";
+                if (textBoxid104.Text == "501") pictures_button = "104";
+                if (textBoxid105.Text == "501") pictures_button = "105";
+                if (textBoxid106.Text == "501") pictures_button = "106";
+                if (textBoxid107.Text == "501") pictures_button = "107";
+                if (textBoxid108.Text == "501") pictures_button = "108";
+                if (textBoxid109.Text == "501") pictures_button = "109";
+                if (textBoxid110.Text == "501") pictures_button = "110";
+                if (textBoxid111.Text == "501") pictures_button = "111";
+                if (textBoxid112.Text == "501") pictures_button = "112";
+                if (textBoxid113.Text == "501") pictures_button = "113";
+                if (textBoxid114.Text == "501") pictures_button = "114";
+
                 string txt = @"<?xml version=""1.0"" encoding=""utf-8"" standalone=""yes""?>
 <window>
   <controls>
@@ -1977,7 +2099,7 @@ namespace BlackGlassEditor
 			<textureFocus>basichome_1000.png</textureFocus>
 			<textureNoFocus>basichome_1000.png</textureNoFocus>
 			<visible>control.hasfocus(100)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		
 		";
@@ -1998,7 +2120,7 @@ namespace BlackGlassEditor
 			<textureFocus>basichome_1001.png</textureFocus>
 			<textureNoFocus>basichome_1001.png</textureNoFocus>
 			<visible>control.hasfocus(101)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		
 		";
@@ -2019,7 +2141,7 @@ namespace BlackGlassEditor
 			<textureFocus>basichome_1002.png</textureFocus>
 			<textureNoFocus>basichome_1002.png</textureNoFocus>
 			<visible>control.hasfocus(102)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		
 		";
@@ -2040,7 +2162,7 @@ namespace BlackGlassEditor
 			<textureFocus>basichome_1003.png</textureFocus>
 			<textureNoFocus>basichome_1003.png</textureNoFocus>
 			<visible>control.hasfocus(103)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 
         ";
@@ -2061,7 +2183,7 @@ namespace BlackGlassEditor
 			<textureFocus>basichome_1004.png</textureFocus>
 			<textureNoFocus>basichome_1004.png</textureNoFocus>
 			<visible>control.hasfocus(104)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 
         ";
@@ -2087,21 +2209,21 @@ namespace BlackGlassEditor
 			<height>245</height>
 			<texture>basichome_100_focus.png</texture>
 			<visible>control.hasfocus(100)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>100 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox100.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(100)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>100 button</description>
@@ -2147,21 +2269,21 @@ namespace BlackGlassEditor
 			<height>214</height>
 			<texture>basichome_101_focus.png</texture>
 			<visible>control.hasfocus(101)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>101 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox101.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(101)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>101 button</description>
@@ -2207,21 +2329,21 @@ namespace BlackGlassEditor
 			<height>205</height>
 			<visible>control.hasfocus(102)</visible>
 			<texture>basichome_102_focus.png</texture>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>102 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox102.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(102)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>102 button</description>
@@ -2267,21 +2389,21 @@ namespace BlackGlassEditor
 			<height>215</height>
 			<texture>basichome_103_focus.png</texture>
 			<visible>control.hasfocus(103)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>103 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox103.Text) + @"</label>
-			<font>font40</font> 
+			<font>font37</font> 
 			<align>center</align>
 			<visible>control.hasfocus(103)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>103 button</description>
@@ -2328,21 +2450,21 @@ namespace BlackGlassEditor
 			<height>242</height>
 			<texture>basichome_104_focus.png</texture>
 			<visible>control.hasfocus(104)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>104 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox104.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(104)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>104 button</description>
@@ -2381,7 +2503,7 @@ namespace BlackGlassEditor
 			<height>183</height>
 			<texture>basichome_105_nofocus.png</texture>
 			<visible>control.hasfocus(1000)|control.hasfocus(105)|control.hasfocus(110)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>105 hover image</description>
@@ -2393,21 +2515,21 @@ namespace BlackGlassEditor
 			<height>183</height>
 			<texture>basichome_105_focus.png</texture>
 			<visible>control.hasfocus(105)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>105 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox105.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(105)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>105 button</description>
@@ -2448,7 +2570,7 @@ namespace BlackGlassEditor
 			<height>151</height>
 			<texture>basichome_106_nofocus.png</texture>
 			<visible>control.hasfocus(1001)|control.hasfocus(106)|control.hasfocus(111)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>106 hover image</description>
@@ -2460,21 +2582,21 @@ namespace BlackGlassEditor
 			<height>151</height>
 			<visible>control.hasfocus(106)</visible>
 			<texture>basichome_106_focus.png</texture>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>106 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox106.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(106)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>106 button</description>
@@ -2515,7 +2637,7 @@ namespace BlackGlassEditor
 			<height>137</height>
 			<texture>basichome_107_nofocus.png</texture>
 			<visible>control.hasfocus(1002)|control.hasfocus(107)|control.hasfocus(112)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>107 hover image</description>
@@ -2527,21 +2649,21 @@ namespace BlackGlassEditor
 			<height>137</height>
 			<texture>basichome_107_focus.png</texture>
 			<visible>control.hasfocus(107)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>107 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox107.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(107)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>107 button</description>
@@ -2582,7 +2704,7 @@ namespace BlackGlassEditor
 			<height>151</height>
 			<texture>basichome_108_nofocus.png</texture>
 			<visible>control.hasfocus(1003)|control.hasfocus(108)|control.hasfocus(113)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>108 hover image</description>
@@ -2594,21 +2716,21 @@ namespace BlackGlassEditor
 			<height>151</height>
 			<visible>control.hasfocus(108)</visible>
 			<texture>basichome_108_focus.png</texture>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>108 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox108.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(108)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>108 button</description>
@@ -2650,7 +2772,7 @@ namespace BlackGlassEditor
 			<height>183</height>
 			<texture>basichome_109_nofocus.png</texture>
 			<visible>control.hasfocus(1004)|control.hasfocus(109)|control.hasfocus(114)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>109 hover image</description>
@@ -2662,21 +2784,21 @@ namespace BlackGlassEditor
 			<height>183</height>
 			<texture>basichome_109_focus.png</texture>
 			<visible>control.hasfocus(109)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>109 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox109.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(109)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>109 button</description>
@@ -2716,7 +2838,7 @@ namespace BlackGlassEditor
 			<height>196</height>
 			<texture>basichome_110_nofocus.png</texture>
 			<visible>control.hasfocus(1000)|control.hasfocus(105)|control.hasfocus(110)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>110 hover image</description>
@@ -2728,21 +2850,21 @@ namespace BlackGlassEditor
 			<height>196</height>
 			<texture>basichome_110_focus.png</texture>
 			<visible>control.hasfocus(110)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>110 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox110.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(110)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>110 button</description>
@@ -2778,7 +2900,7 @@ namespace BlackGlassEditor
 			<height>154</height>
 			<texture>basichome_111_nofocus.png</texture>
 			<visible>control.hasfocus(1001)|control.hasfocus(106)|control.hasfocus(111)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>111 hover image</description>
@@ -2790,21 +2912,21 @@ namespace BlackGlassEditor
 			<height>154</height>
 			<texture>basichome_111_focus.png</texture>
 			<visible>control.hasfocus(111)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>111 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox111.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(111)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>111 button</description>
@@ -2840,7 +2962,7 @@ namespace BlackGlassEditor
 			<height>133</height>
 			<texture>basichome_112_nofocus.png</texture>
 			<visible>control.hasfocus(1002)|control.hasfocus(107)|control.hasfocus(112)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>112 hover image</description>
@@ -2852,21 +2974,21 @@ namespace BlackGlassEditor
 			<height>133</height>
 			<visible>control.hasfocus(112)</visible>
 			<texture>basichome_112_focus.png</texture>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>112 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox112.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(112)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>112 button</description>
@@ -2902,7 +3024,7 @@ namespace BlackGlassEditor
 			<height>154</height>
 			<texture>basichome_113_nofocus.png</texture>
 			<visible>control.hasfocus(1003)|control.hasfocus(108)|control.hasfocus(113)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>113 hover image</description>
@@ -2914,21 +3036,21 @@ namespace BlackGlassEditor
 			<height>154</height>
 			<texture>basichome_113_focus.png</texture>
 			<visible>control.hasfocus(113)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>113 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox113.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(113)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>113 button</description>
@@ -2964,7 +3086,7 @@ namespace BlackGlassEditor
 			<height>196</height>
 			<texture>basichome_114_nofocus.png</texture>
 			<visible>control.hasfocus(1004)|control.hasfocus(109)|control.hasfocus(114)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>114 hover image</description>
@@ -2976,21 +3098,21 @@ namespace BlackGlassEditor
 			<height>196</height>
 			<texture>basichome_114_focus.png</texture>
 			<visible>control.hasfocus(114)</visible>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>114 hover label</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
-			<posY>630</posY>
+			<posY>625</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox114.Text) + @"</label>
-			<font>font40</font>
+			<font>font37</font>
 			<align>center</align>
 			<visible>control.hasfocus(114)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
 		</control>
 		<control>
 			<description>114 button</description>
@@ -3027,9 +3149,11 @@ namespace BlackGlassEditor
 			<label>#infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + weather_button + @")</visible>
+			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + weather_button + @"))+!string.equals(#infoservice.weather.today.condition,)</visible>
 			<textcolor>90ffffff</textcolor>
-            <animation effect=""fade"" time=""250"">VisibleChange</animation>
+            <animation effect=""fade"" time=""150"">VisibleChange</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>";
 
 
@@ -3043,30 +3167,91 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#TVSeries.Translation.RecentlyAdded.Label:     #infoservice.recentlyAdded.series1.title     #TVSeries.Translation.Season.Label #infoservice.recentlyAdded.series1.season     #TVSeries.Translation.Episode.Label #infoservice.recentlyAdded.series1.episodenumber     #infoservice.recentlyAdded.series1.episodetitle</label>
+			<label>#fanarthandler.tvseries.latest1.dateAdded:     #fanarthandler.tvseries.latest1.serieName     #fanarthandler.tvseries.latest1.seasonIndexx#fanarthandler.tvseries.latest1.episodeIndex - #fanarthandler.tvseries.latest1.episodeName</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + tvseries_button + @")+plugin.isenabled(MP-TV Series)</visible>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + tvseries_button + @")+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest1.episodeName,)</visible>
 			<textcolor>90ffffff</textcolor>
-            <animation effect=""fade"" time=""250"">VisibleChange</animation>
+            <animation effect=""fade"" time=""150"">VisibleChange</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>";
 
                 if (movingpictures_button != "") txt = txt
-                + @"
-        <!-- <control>
+                 + @"
+        <control>
 			<description>Moving Pictures updates</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>Recently added:     #infoservice.recentlyAdded.movie1.title</label>
+			<label>#fanarthandler.movingpicture.latest1.dateAdded:     #fanarthandler.movingpicture.latest1.title     #fanarthandler.movingpicture.latest1.genre     #fanarthandler.movingpicture.latest1.year</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Moving Pictures)</visible>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Moving Pictures)+!string.equals(#fanarthandler.movingpicture.latest1.title,)</visible>
 			<textcolor>90ffffff</textcolor>
-            <animation effect=""fade"" time=""250"">VisibleChange</animation>
-		</control> -->";
+            <animation effect=""fade"" time=""150"">VisibleChange</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>";
+
+                if (tv_button != "") txt = txt
+                + @"
+        <control>
+			<description>TV updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.tvrecordings.latest1.dateAdded:     #fanarthandler.tvrecordings.latest1.title     #fanarthandler.tvrecordings.latest1.genre</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + tv_button + @")+plugin.isenabled(TV)+!string.equals(#fanarthandler.tvrecordings.latest1.title,)</visible>
+			<textcolor>90ffffff</textcolor>
+            <animation effect=""fade"" time=""150"">VisibleChange</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>";
+
+                if (pictures_button != "") txt = txt
+                + @"
+        <control>
+			<description>Pictures updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.picture.latest1.dateAdded:     #fanarthandler.picture.latest1.filename</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + pictures_button + @")+plugin.isenabled(Pictures)+!string.equals(#fanarthandler.picture.latest1.filename,)</visible>
+			<textcolor>90ffffff</textcolor>
+            <animation effect=""fade"" time=""150"">VisibleChange</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>";
+
+                if (music_button != "") txt = txt
+                + @"
+        <control>
+			<description>Music updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.music.latest1.dateAdded:     #fanarthandler.music.latest1.artist     #fanarthandler.music.latest1.album</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + music_button + @")+plugin.isenabled(Music)+!string.equals(#fanarthandler.music.latest1.album,)</visible>
+			<textcolor>90ffffff</textcolor>
+            <animation effect=""fade"" time=""150"">VisibleChange</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>";
 
                 txt = txt + @"
     </controls>
@@ -3297,7 +3482,7 @@ namespace BlackGlassEditor
 		</control>
         ";
 
-                if (weather_button != "") txt = txt + @"<control>
+                if (weather_button != "" && checkCheckBoxes(weather_button) == true) txt = txt + @"<control>
 			<description>weather image</description>
 			<type>image</type>
 			<id>0</id>
@@ -3305,14 +3490,17 @@ namespace BlackGlassEditor
 			<posY>0</posY>
 			<width>1280</width>
 			<height>720</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
 			<texture>animations\weather\#infoservice.weather.today.img.big.filenamewithoutext.jpg</texture>
 			<visible>control.hasfocus(" + weather_button + @")+plugin.isenabled(InfoService)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
+			<animation effect=""fade"" time=""150"">visible</animation>
 		</control>
 		
 	";
 
-                if (tvseries_button != "") txt = txt + @"<control>
+                if (tvseries_button != "" && checkCheckBoxes(tvseries_button) == true) txt = txt + @"<control>
 			<description>TV Series image</description>
 			<type>image</type>
 			<id>0</id>
@@ -3320,9 +3508,86 @@ namespace BlackGlassEditor
 			<posY>0</posY>
 			<width>1280</width>
 			<height>720</height>
-			<texture>#infoservice.recentlyAdded.series1.fanart</texture>
-			<visible>control.hasfocus(" + tvseries_button + @")+plugin.isenabled(InfoService)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.tvseries.latest1.fanart</texture>
+			<visible>control.hasfocus(" + tvseries_button + @")+plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)</visible>
+			<animation effect=""fade"" time=""150"">visible</animation>
+		</control>
+		
+	";
+
+
+                if (movingpictures_button != "" && checkCheckBoxes(movingpictures_button) == true) txt = txt + @"<control>
+			<description>Moving Pictures image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.movingpicture.latest1.fanart</texture>
+			<visible>control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Fanart Handler)+plugin.isenabled(Moving Pictures)</visible>
+			<animation effect=""fade"" time=""150"">visible</animation>
+		</control>
+		
+	";
+
+                if (tv_button != "" && checkCheckBoxes(tv_button) == true) txt = txt + @"<control>
+			<description>TV Series image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.tvrecordings.latest1.thumb</texture>
+			<visible>control.hasfocus(" + tv_button + @")+plugin.isenabled(Fanart Handler)+plugin.isenabled(TV)</visible>
+			<animation effect=""fade"" time=""150"">visible</animation>
+		</control>
+		
+	";
+
+                if (pictures_button != "" && checkCheckBoxes(pictures_button) == true) txt = txt + @"<control>
+			<description>TV Series image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.picture.latest1.thumb</texture>
+			<visible>control.hasfocus(" + pictures_button + @")+plugin.isenabled(Fanart Handler)+plugin.isenabled(Pictures)+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)</visible>
+			<animation effect=""fade"" time=""150"">visible</animation>
+		</control>
+		
+	";
+
+
+                if (music_button != "" && checkCheckBoxes(music_button) == true) txt = txt + @"<control>
+			<description>TV Series image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>#fanarthandler.music.latest1.thumb</texture>
+			<visible>control.hasfocus(" + music_button + @")+plugin.isenabled(Fanart Handler)+plugin.isenabled(Music)</visible>
+			<animation effect=""fade"" time=""150"">visible</animation>
 		</control>
 		
 	";
@@ -3818,15 +4083,41 @@ namespace BlackGlassEditor
             return errors;
         }
 
-        private String findButtonLeft(String id) { 
-        
+        private Boolean checkCheckBoxes(String pluginId)
+        {
+
+            Boolean found = false;
+
+            if (checkBox100.Checked == true && textBoxid100.Text == pluginId) found = true;
+            if (checkBox101.Checked == true && textBoxid101.Text == pluginId) found = true;
+            if (checkBox102.Checked == true && textBoxid102.Text == pluginId) found = true;
+            if (checkBox103.Checked == true && textBoxid103.Text == pluginId) found = true;
+            if (checkBox104.Checked == true && textBoxid104.Text == pluginId) found = true;
+            if (checkBox105.Checked == true && textBoxid105.Text == pluginId) found = true;
+            if (checkBox106.Checked == true && textBoxid106.Text == pluginId) found = true;
+            if (checkBox107.Checked == true && textBoxid107.Text == pluginId) found = true;
+            if (checkBox108.Checked == true && textBoxid108.Text == pluginId) found = true;
+            if (checkBox109.Checked == true && textBoxid109.Text == pluginId) found = true;
+            if (checkBox110.Checked == true && textBoxid110.Text == pluginId) found = true;
+            if (checkBox111.Checked == true && textBoxid111.Text == pluginId) found = true;
+            if (checkBox112.Checked == true && textBoxid112.Text == pluginId) found = true;
+            if (checkBox113.Checked == true && textBoxid113.Text == pluginId) found = true;
+            if (checkBox114.Checked == true && textBoxid114.Text == pluginId) found = true;
+            
+            return found;
+        }
+
+        private String findButtonLeft(String id)
+        {
+
             String ButtonId = id;
 
-            switch (id) { 
-            
+            switch (id)
+            {
+
                 case "105":
                     ButtonId = "105";
-                    if (comboBox106.SelectedItem.ToString() != findPluginName(0)) ButtonId = "106"; 
+                    if (comboBox106.SelectedItem.ToString() != findPluginName(0)) ButtonId = "106";
                     if (comboBox107.SelectedItem.ToString() != findPluginName(0)) ButtonId = "107";
                     if (comboBox108.SelectedItem.ToString() != findPluginName(0)) ButtonId = "108";
                     if (comboBox109.SelectedItem.ToString() != findPluginName(0)) ButtonId = "109";
@@ -3854,7 +4145,7 @@ namespace BlackGlassEditor
                     if (comboBox105.SelectedItem.ToString() != findPluginName(0)) ButtonId = "105";
                     if (comboBox106.SelectedItem.ToString() != findPluginName(0)) ButtonId = "106";
                     if (comboBox107.SelectedItem.ToString() != findPluginName(0)) ButtonId = "107";
-                    
+
                     break;
 
                 case "109":
@@ -3920,7 +4211,7 @@ namespace BlackGlassEditor
 
                 case "105":
                     ButtonId = "105";
-                    if (comboBox109.SelectedItem.ToString() != findPluginName(0)) ButtonId = "109"; 
+                    if (comboBox109.SelectedItem.ToString() != findPluginName(0)) ButtonId = "109";
                     if (comboBox108.SelectedItem.ToString() != findPluginName(0)) ButtonId = "108";
                     if (comboBox107.SelectedItem.ToString() != findPluginName(0)) ButtonId = "107";
                     if (comboBox106.SelectedItem.ToString() != findPluginName(0)) ButtonId = "106";
@@ -3964,7 +4255,7 @@ namespace BlackGlassEditor
                     ButtonId = "110";
                     if (comboBox114.SelectedItem.ToString() != findPluginName(0)) ButtonId = "114";
                     if (comboBox113.SelectedItem.ToString() != findPluginName(0)) ButtonId = "113";
-                    if (comboBox112.SelectedItem.ToString() != findPluginName(0)) ButtonId = "112"; 
+                    if (comboBox112.SelectedItem.ToString() != findPluginName(0)) ButtonId = "112";
                     if (comboBox111.SelectedItem.ToString() != findPluginName(0)) ButtonId = "111";
                     break;
 
@@ -4004,6 +4295,6 @@ namespace BlackGlassEditor
         }
 
     }
-    
+
 
 }
