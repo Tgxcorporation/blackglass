@@ -142,21 +142,21 @@ namespace BlackGlassEditor
             textBoxhover113.Text = hover[13].InnerText;
             textBoxhover114.Text = hover[14].InnerText;
 
-            if (fanart[0].InnerText == "yes") { checkBox100.Checked = true; } else { checkBox100.Visible = false; }
-            if (fanart[1].InnerText == "yes") { checkBox101.Checked = true; } else { checkBox101.Visible = false; }
-            if (fanart[2].InnerText == "yes") { checkBox102.Checked = true; } else { checkBox102.Visible = false; }
-            if (fanart[3].InnerText == "yes") { checkBox103.Checked = true; } else { checkBox103.Visible = false; }
-            if (fanart[4].InnerText == "yes") { checkBox104.Checked = true; } else { checkBox104.Visible = false; }
-            if (fanart[5].InnerText == "yes") { checkBox105.Checked = true; } else { checkBox105.Visible = false; }
-            if (fanart[6].InnerText == "yes") { checkBox106.Checked = true; } else { checkBox106.Visible = false; }
-            if (fanart[7].InnerText == "yes") { checkBox107.Checked = true; } else { checkBox107.Visible = false; }
-            if (fanart[8].InnerText == "yes") { checkBox108.Checked = true; } else { checkBox108.Visible = false; }
-            if (fanart[9].InnerText == "yes") { checkBox109.Checked = true; } else { checkBox109.Visible = false; }
-            if (fanart[10].InnerText == "yes") { checkBox110.Checked = true; } else { checkBox110.Visible = false; }
-            if (fanart[11].InnerText == "yes") { checkBox111.Checked = true; } else { checkBox111.Visible = false; }
-            if (fanart[12].InnerText == "yes") { checkBox112.Checked = true; } else { checkBox112.Visible = false; }
-            if (fanart[13].InnerText == "yes") { checkBox113.Checked = true; } else { checkBox113.Visible = false; }
-            if (fanart[14].InnerText == "yes") { checkBox114.Checked = true; } else { checkBox114.Visible = false; }
+            if (fanart[0].InnerText == "True") { checkBox100.Checked = true; } else { checkBox100.Visible = false; }
+            if (fanart[1].InnerText == "True") { checkBox101.Checked = true; } else { checkBox101.Visible = false; }
+            if (fanart[2].InnerText == "True") { checkBox102.Checked = true; } else { checkBox102.Visible = false; }
+            if (fanart[3].InnerText == "True") { checkBox103.Checked = true; } else { checkBox103.Visible = false; }
+            if (fanart[4].InnerText == "True") { checkBox104.Checked = true; } else { checkBox104.Visible = false; }
+            if (fanart[5].InnerText == "True") { checkBox105.Checked = true; } else { checkBox105.Visible = false; }
+            if (fanart[6].InnerText == "True") { checkBox106.Checked = true; } else { checkBox106.Visible = false; }
+            if (fanart[7].InnerText == "True") { checkBox107.Checked = true; } else { checkBox107.Visible = false; }
+            if (fanart[8].InnerText == "True") { checkBox108.Checked = true; } else { checkBox108.Visible = false; }
+            if (fanart[9].InnerText == "True") { checkBox109.Checked = true; } else { checkBox109.Visible = false; }
+            if (fanart[10].InnerText == "True") { checkBox110.Checked = true; } else { checkBox110.Visible = false; }
+            if (fanart[11].InnerText == "True") { checkBox111.Checked = true; } else { checkBox111.Visible = false; }
+            if (fanart[12].InnerText == "True") { checkBox112.Checked = true; } else { checkBox112.Visible = false; }
+            if (fanart[13].InnerText == "True") { checkBox113.Checked = true; } else { checkBox113.Visible = false; }
+            if (fanart[14].InnerText == "True") { checkBox114.Checked = true; } else { checkBox114.Visible = false; }
 
 
             String ApplicationPath = Application.StartupPath;
@@ -1386,7 +1386,7 @@ namespace BlackGlassEditor
             if (comboBox100.Text == "Empty Button") { textBox100.Text = ""; textBoxid100.Text = ""; };
             checkBox100.Visible = false;
             checkBox100.Checked = false;
-            if (textBoxid100.Text == "501" || textBoxid100.Text == "96742" || textBoxid100.Text == "1" || textBoxid100.Text == "9811" || textBoxid100.Text == "2600" || textBoxid100.Text == "2") { checkBox100.Visible = true; };
+            if (textBoxid100.Text == "504" || textBoxid100.Text == "501" || textBoxid100.Text == "96742" || textBoxid100.Text == "1" || textBoxid100.Text == "9811" || textBoxid100.Text == "2600" || textBoxid100.Text == "2") { checkBox100.Visible = true; };
         }
         private void comboBox101_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1396,7 +1396,7 @@ namespace BlackGlassEditor
             if (comboBox101.Text == "Empty Button") { textBox101.Text = ""; textBoxid101.Text = ""; };
             checkBox101.Visible = false;
             checkBox101.Checked = false;
-            if (textBoxid101.Text == "501" || textBoxid101.Text == "96742" || textBoxid101.Text == "1" || textBoxid101.Text == "9811" || textBoxid101.Text == "2600" || textBoxid101.Text == "2") { checkBox101.Visible = true; };
+            if (textBoxid101.Text == "504" || textBoxid101.Text == "501" || textBoxid101.Text == "96742" || textBoxid101.Text == "1" || textBoxid101.Text == "9811" || textBoxid101.Text == "2600" || textBoxid101.Text == "2") { checkBox101.Visible = true; };
         }
         private void comboBox102_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1406,7 +1406,7 @@ namespace BlackGlassEditor
             if (comboBox102.Text == "Empty Button") { textBox102.Text = ""; textBoxid102.Text = ""; };
             checkBox102.Visible = false;
             checkBox102.Checked = false;
-            if (textBoxid102.Text == "501" || textBoxid102.Text == "96742" || textBoxid102.Text == "1" || textBoxid102.Text == "9811" || textBoxid102.Text == "2600" || textBoxid102.Text == "2") { checkBox102.Visible = true; };
+            if (textBoxid102.Text == "504" || textBoxid102.Text == "501" || textBoxid102.Text == "96742" || textBoxid102.Text == "1" || textBoxid102.Text == "9811" || textBoxid102.Text == "2600" || textBoxid102.Text == "2") { checkBox102.Visible = true; };
         }
         private void comboBox103_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1416,7 +1416,7 @@ namespace BlackGlassEditor
             if (comboBox103.Text == "Empty Button") { textBox103.Text = ""; textBoxid103.Text = ""; };
             checkBox103.Visible = false;
             checkBox103.Checked = false;
-            if (textBoxid103.Text == "501" || textBoxid103.Text == "96742" || textBoxid103.Text == "1" || textBoxid103.Text == "9811" || textBoxid103.Text == "2600" || textBoxid103.Text == "2") { checkBox103.Visible = true; };
+            if (textBoxid103.Text == "504" || textBoxid103.Text == "501" || textBoxid103.Text == "96742" || textBoxid103.Text == "1" || textBoxid103.Text == "9811" || textBoxid103.Text == "2600" || textBoxid103.Text == "2") { checkBox103.Visible = true; };
         }
         private void comboBox104_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1426,7 +1426,7 @@ namespace BlackGlassEditor
             if (comboBox104.Text == "Empty Button") { textBox104.Text = ""; textBoxid104.Text = ""; };
             checkBox104.Visible = false;
             checkBox104.Checked = false;
-            if (textBoxid104.Text == "501" || textBoxid104.Text == "96742" || textBoxid104.Text == "1" || textBoxid104.Text == "9811" || textBoxid104.Text == "2600" || textBoxid104.Text == "2") { checkBox104.Visible = true; };
+            if (textBoxid104.Text == "504" || textBoxid104.Text == "501" || textBoxid104.Text == "96742" || textBoxid104.Text == "1" || textBoxid104.Text == "9811" || textBoxid104.Text == "2600" || textBoxid104.Text == "2") { checkBox104.Visible = true; };
         }
         private void comboBox105_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1435,8 +1435,8 @@ namespace BlackGlassEditor
             textBoxhover105.Text = findPluginHover(Int32.Parse(textBoxid105.Text));
             if (comboBox105.Text == "Empty Button") { textBox105.Text = ""; textBoxid105.Text = ""; };
             checkBox105.Visible = false;
-            checkBox105.Checked = false; 
-            if (textBoxid105.Text == "501" || textBoxid105.Text == "96742" || textBoxid105.Text == "1" || textBoxid105.Text == "9811" || textBoxid105.Text == "2600" || textBoxid105.Text == "2") { checkBox105.Visible = true; };
+            checkBox105.Checked = false;
+            if (textBoxid105.Text == "504" || textBoxid105.Text == "501" || textBoxid105.Text == "96742" || textBoxid105.Text == "1" || textBoxid105.Text == "9811" || textBoxid105.Text == "2600" || textBoxid105.Text == "2") { checkBox105.Visible = true; };
         }
         private void comboBox106_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1445,8 +1445,8 @@ namespace BlackGlassEditor
             textBoxhover106.Text = findPluginHover(Int32.Parse(textBoxid106.Text));
             if (comboBox106.Text == "Empty Button") { textBox106.Text = ""; textBoxid106.Text = ""; };
             checkBox106.Visible = false;
-            checkBox106.Checked = false; 
-            if (textBoxid106.Text == "501" || textBoxid106.Text == "96742" || textBoxid106.Text == "1" || textBoxid106.Text == "9811" || textBoxid106.Text == "2600" || textBoxid106.Text == "2") { checkBox106.Visible = true; };
+            checkBox106.Checked = false;
+            if (textBoxid106.Text == "504" || textBoxid106.Text == "501" || textBoxid106.Text == "96742" || textBoxid106.Text == "1" || textBoxid106.Text == "9811" || textBoxid106.Text == "2600" || textBoxid106.Text == "2") { checkBox106.Visible = true; };
         }
         private void comboBox107_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1455,8 +1455,8 @@ namespace BlackGlassEditor
             textBoxhover107.Text = findPluginHover(Int32.Parse(textBoxid107.Text));
             if (comboBox107.Text == "Empty Button") { textBox107.Text = ""; textBoxid107.Text = ""; };
             checkBox107.Visible = false;
-            checkBox107.Checked = false; 
-            if (textBoxid107.Text == "501" || textBoxid107.Text == "96742" || textBoxid107.Text == "1" || textBoxid107.Text == "9811" || textBoxid107.Text == "2600" || textBoxid107.Text == "2") { checkBox107.Visible = true; };
+            checkBox107.Checked = false;
+            if (textBoxid107.Text == "504" || textBoxid107.Text == "501" || textBoxid107.Text == "96742" || textBoxid107.Text == "1" || textBoxid107.Text == "9811" || textBoxid107.Text == "2600" || textBoxid107.Text == "2") { checkBox107.Visible = true; };
         }
         private void comboBox108_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1465,8 +1465,8 @@ namespace BlackGlassEditor
             textBoxhover108.Text = findPluginHover(Int32.Parse(textBoxid108.Text));
             if (comboBox108.Text == "Empty Button") { textBox108.Text = ""; textBoxid108.Text = ""; };
             checkBox108.Visible = false;
-            checkBox108.Checked = false; 
-            if (textBoxid108.Text == "501" || textBoxid108.Text == "96742" || textBoxid108.Text == "1" || textBoxid108.Text == "9811" || textBoxid108.Text == "2600" || textBoxid108.Text == "2") { checkBox108.Visible = true; };
+            checkBox108.Checked = false;
+            if (textBoxid108.Text == "504" || textBoxid108.Text == "501" || textBoxid108.Text == "96742" || textBoxid108.Text == "1" || textBoxid108.Text == "9811" || textBoxid108.Text == "2600" || textBoxid108.Text == "2") { checkBox108.Visible = true; };
         }
         private void comboBox109_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1475,8 +1475,8 @@ namespace BlackGlassEditor
             textBoxhover109.Text = findPluginHover(Int32.Parse(textBoxid109.Text));
             if (comboBox109.Text == "Empty Button") { textBox109.Text = ""; textBoxid109.Text = ""; };
             checkBox109.Visible = false;
-            checkBox109.Checked = false; 
-            if (textBoxid109.Text == "501" || textBoxid109.Text == "96742" || textBoxid109.Text == "1" || textBoxid109.Text == "9811" || textBoxid109.Text == "2600" || textBoxid109.Text == "2") { checkBox109.Visible = true; };
+            checkBox109.Checked = false;
+            if (textBoxid109.Text == "504" || textBoxid109.Text == "501" || textBoxid109.Text == "96742" || textBoxid109.Text == "1" || textBoxid109.Text == "9811" || textBoxid109.Text == "2600" || textBoxid109.Text == "2") { checkBox109.Visible = true; };
         }
         private void comboBox110_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1485,8 +1485,8 @@ namespace BlackGlassEditor
             textBoxhover110.Text = findPluginHover(Int32.Parse(textBoxid110.Text));
             if (comboBox110.Text == "Empty Button") { textBox110.Text = ""; textBoxid110.Text = ""; };
             checkBox110.Visible = false;
-            checkBox110.Checked = false; 
-            if (textBoxid110.Text == "501" || textBoxid110.Text == "96742" || textBoxid110.Text == "1" || textBoxid110.Text == "9811" || textBoxid110.Text == "2600" || textBoxid110.Text == "2") { checkBox110.Visible = true; };
+            checkBox110.Checked = false;
+            if (textBoxid110.Text == "504" || textBoxid110.Text == "501" || textBoxid110.Text == "96742" || textBoxid110.Text == "1" || textBoxid110.Text == "9811" || textBoxid110.Text == "2600" || textBoxid110.Text == "2") { checkBox110.Visible = true; };
         }
         private void comboBox111_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1495,8 +1495,8 @@ namespace BlackGlassEditor
             textBoxhover111.Text = findPluginHover(Int32.Parse(textBoxid111.Text));
             if (comboBox111.Text == "Empty Button") { textBox111.Text = ""; textBoxid111.Text = ""; }; 
             checkBox111.Visible = false;
-            checkBox111.Checked = false; 
-            if (textBoxid111.Text == "501" || textBoxid111.Text == "96742" || textBoxid111.Text == "1" || textBoxid111.Text == "9811" || textBoxid111.Text == "2600" || textBoxid111.Text == "2") { checkBox111.Visible = true; };
+            checkBox111.Checked = false;
+            if (textBoxid111.Text == "504" || textBoxid111.Text == "501" || textBoxid111.Text == "96742" || textBoxid111.Text == "1" || textBoxid111.Text == "9811" || textBoxid111.Text == "2600" || textBoxid111.Text == "2") { checkBox111.Visible = true; };
         }
         private void comboBox112_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1505,8 +1505,8 @@ namespace BlackGlassEditor
             textBoxhover112.Text = findPluginHover(Int32.Parse(textBoxid112.Text));
             if (comboBox112.Text == "Empty Button") { textBox112.Text = ""; textBoxid112.Text = ""; }; 
             checkBox112.Visible = false;
-            checkBox112.Checked = false; 
-            if (textBoxid112.Text == "501" || textBoxid112.Text == "96742" || textBoxid112.Text == "1" || textBoxid112.Text == "9811" || textBoxid112.Text == "2600" || textBoxid112.Text == "2") { checkBox112.Visible = true; };
+            checkBox112.Checked = false;
+            if (textBoxid112.Text == "504" || textBoxid112.Text == "501" || textBoxid112.Text == "96742" || textBoxid112.Text == "1" || textBoxid112.Text == "9811" || textBoxid112.Text == "2600" || textBoxid112.Text == "2") { checkBox112.Visible = true; };
         }
         private void comboBox113_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1515,8 +1515,8 @@ namespace BlackGlassEditor
             textBoxhover113.Text = findPluginHover(Int32.Parse(textBoxid113.Text));
             if (comboBox113.Text == "Empty Button") { textBox113.Text = ""; textBoxid113.Text = ""; }; 
             checkBox113.Visible = false;
-            checkBox113.Checked = false; 
-            if (textBoxid113.Text == "501" || textBoxid113.Text == "96742" || textBoxid113.Text == "1" || textBoxid113.Text == "9811" || textBoxid113.Text == "2600" || textBoxid113.Text == "2") { checkBox113.Visible = true; };
+            checkBox113.Checked = false;
+            if (textBoxid113.Text == "504" || textBoxid113.Text == "501" || textBoxid113.Text == "96742" || textBoxid113.Text == "1" || textBoxid113.Text == "9811" || textBoxid113.Text == "2600" || textBoxid113.Text == "2") { checkBox113.Visible = true; };
         }
         private void comboBox114_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1525,8 +1525,8 @@ namespace BlackGlassEditor
             textBoxhover114.Text = findPluginHover(Int32.Parse(textBoxid114.Text));
             if (comboBox114.Text == "Empty Button") { textBox114.Text = ""; textBoxid114.Text = ""; }; 
             checkBox114.Visible = false;
-            checkBox114.Checked = false; 
-            if (textBoxid114.Text == "501" || textBoxid114.Text == "96742" || textBoxid114.Text == "1" || textBoxid114.Text == "9811" || textBoxid114.Text == "2600" || textBoxid114.Text == "2") { checkBox114.Visible = true; };
+            checkBox114.Checked = false;
+            if (textBoxid114.Text == "504" || textBoxid114.Text == "501" || textBoxid114.Text == "96742" || textBoxid114.Text == "1" || textBoxid114.Text == "9811" || textBoxid114.Text == "2600" || textBoxid114.Text == "2") { checkBox114.Visible = true; };
         }
 
 
@@ -2061,21 +2061,21 @@ namespace BlackGlassEditor
 
                 String music_button = "";
 
-                if (textBoxid100.Text == "501") pictures_button = "100";
-                if (textBoxid101.Text == "501") pictures_button = "101";
-                if (textBoxid102.Text == "501") pictures_button = "102";
-                if (textBoxid103.Text == "501") pictures_button = "103";
-                if (textBoxid104.Text == "501") pictures_button = "104";
-                if (textBoxid105.Text == "501") pictures_button = "105";
-                if (textBoxid106.Text == "501") pictures_button = "106";
-                if (textBoxid107.Text == "501") pictures_button = "107";
-                if (textBoxid108.Text == "501") pictures_button = "108";
-                if (textBoxid109.Text == "501") pictures_button = "109";
-                if (textBoxid110.Text == "501") pictures_button = "110";
-                if (textBoxid111.Text == "501") pictures_button = "111";
-                if (textBoxid112.Text == "501") pictures_button = "112";
-                if (textBoxid113.Text == "501") pictures_button = "113";
-                if (textBoxid114.Text == "501") pictures_button = "114";
+                if (textBoxid100.Text == "501" || textBoxid100.Text == "504") music_button = "100";
+                if (textBoxid101.Text == "501" || textBoxid101.Text == "504") music_button = "101";
+                if (textBoxid102.Text == "501" || textBoxid102.Text == "504") music_button = "102";
+                if (textBoxid103.Text == "501" || textBoxid103.Text == "504") music_button = "103";
+                if (textBoxid104.Text == "501" || textBoxid104.Text == "504") music_button = "104";
+                if (textBoxid105.Text == "501" || textBoxid105.Text == "504") music_button = "105";
+                if (textBoxid106.Text == "501" || textBoxid106.Text == "504") music_button = "106";
+                if (textBoxid107.Text == "501" || textBoxid107.Text == "504") music_button = "107";
+                if (textBoxid108.Text == "501" || textBoxid108.Text == "504") music_button = "108";
+                if (textBoxid109.Text == "501" || textBoxid109.Text == "504") music_button = "109";
+                if (textBoxid110.Text == "501" || textBoxid110.Text == "504") music_button = "110";
+                if (textBoxid111.Text == "501" || textBoxid111.Text == "504") music_button = "111";
+                if (textBoxid112.Text == "501" || textBoxid112.Text == "504") music_button = "112";
+                if (textBoxid113.Text == "501" || textBoxid113.Text == "504") music_button = "113";
+                if (textBoxid114.Text == "501" || textBoxid114.Text == "504") music_button = "114";
 
                 string txt = @"<?xml version=""1.0"" encoding=""utf-8"" standalone=""yes""?>
 <window>
@@ -3149,7 +3149,7 @@ namespace BlackGlassEditor
 			<label>#infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + weather_button + @"))+!string.equals(#infoservice.weather.today.condition,)</visible>
+			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + weather_button + @")+!string.equals(#infoservice.weather.today.condition,)</visible>
 			<textcolor>90ffffff</textcolor>
             <animation effect=""fade"" time=""150"">VisibleChange</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
@@ -3482,7 +3482,7 @@ namespace BlackGlassEditor
 		</control>
         ";
 
-                if (weather_button != "" && checkCheckBoxes(weather_button) == true) txt = txt + @"<control>
+                if (weather_button != "" && checkCheckBoxes(weather_button)) txt = txt + @"<control>
 			<description>weather image</description>
 			<type>image</type>
 			<id>0</id>
@@ -3670,6 +3670,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover100.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox100.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3684,6 +3687,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover101.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox101.Checked.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3700,6 +3706,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover102.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox102.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3715,6 +3724,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover103.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox103.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3729,6 +3741,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover104.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox104.Checked.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3746,6 +3761,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover105.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox105.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3761,6 +3779,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover106.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox106.Checked.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3778,6 +3799,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover107.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox107.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3793,6 +3817,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover108.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox108.Checked.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3810,6 +3837,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover109.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox109.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3825,6 +3855,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover110.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox110.Checked.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3842,6 +3875,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover111.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox111.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3857,6 +3893,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover112.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox112.Checked.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3874,6 +3913,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover113.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox113.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3890,6 +3932,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("hover", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxhover114.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox114.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3903,6 +3948,9 @@ namespace BlackGlassEditor
                 textWriter.WriteString(BlackGlassDirClass.Path);
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("hover", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString("");
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
@@ -4083,26 +4131,26 @@ namespace BlackGlassEditor
             return errors;
         }
 
-        private Boolean checkCheckBoxes(String pluginId)
+        private Boolean checkCheckBoxes(String buttonId)
         {
 
             Boolean found = false;
 
-            if (checkBox100.Checked == true && textBoxid100.Text == pluginId) found = true;
-            if (checkBox101.Checked == true && textBoxid101.Text == pluginId) found = true;
-            if (checkBox102.Checked == true && textBoxid102.Text == pluginId) found = true;
-            if (checkBox103.Checked == true && textBoxid103.Text == pluginId) found = true;
-            if (checkBox104.Checked == true && textBoxid104.Text == pluginId) found = true;
-            if (checkBox105.Checked == true && textBoxid105.Text == pluginId) found = true;
-            if (checkBox106.Checked == true && textBoxid106.Text == pluginId) found = true;
-            if (checkBox107.Checked == true && textBoxid107.Text == pluginId) found = true;
-            if (checkBox108.Checked == true && textBoxid108.Text == pluginId) found = true;
-            if (checkBox109.Checked == true && textBoxid109.Text == pluginId) found = true;
-            if (checkBox110.Checked == true && textBoxid110.Text == pluginId) found = true;
-            if (checkBox111.Checked == true && textBoxid111.Text == pluginId) found = true;
-            if (checkBox112.Checked == true && textBoxid112.Text == pluginId) found = true;
-            if (checkBox113.Checked == true && textBoxid113.Text == pluginId) found = true;
-            if (checkBox114.Checked == true && textBoxid114.Text == pluginId) found = true;
+            if (checkBox100.Checked == true && buttonId == "100") found = true;
+            if (checkBox101.Checked == true && buttonId == "101") found = true;
+            if (checkBox102.Checked == true && buttonId == "102") found = true;
+            if (checkBox103.Checked == true && buttonId == "103") found = true;
+            if (checkBox104.Checked == true && buttonId == "104") found = true;
+            if (checkBox105.Checked == true && buttonId == "105") found = true;
+            if (checkBox106.Checked == true && buttonId == "106") found = true;
+            if (checkBox107.Checked == true && buttonId == "107") found = true;
+            if (checkBox108.Checked == true && buttonId == "108") found = true;
+            if (checkBox109.Checked == true && buttonId == "109") found = true;
+            if (checkBox110.Checked == true && buttonId == "110") found = true;
+            if (checkBox111.Checked == true && buttonId == "111") found = true;
+            if (checkBox112.Checked == true && buttonId == "112") found = true;
+            if (checkBox113.Checked == true && buttonId == "113") found = true;
+            if (checkBox114.Checked == true && buttonId == "114") found = true;
             
             return found;
         }
