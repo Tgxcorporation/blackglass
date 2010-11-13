@@ -2052,7 +2052,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(100)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
@@ -2096,7 +2096,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(101)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
@@ -2140,7 +2140,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(102)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
@@ -2183,7 +2183,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(103)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
@@ -2226,7 +2226,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(104)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
@@ -2269,7 +2269,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(105)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
@@ -2312,7 +2312,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(106)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
@@ -2355,7 +2355,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(107)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
@@ -2398,7 +2398,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(108)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
@@ -2441,7 +2441,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(109)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
@@ -2484,7 +2484,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(110)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
@@ -2527,7 +2527,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(111)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
@@ -2570,7 +2570,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(112)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
@@ -2613,7 +2613,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(113)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
 		</control>
@@ -2656,7 +2656,7 @@ namespace BlackGlassEditor
 			<align>center</align>
 			<visible>control.hasfocus(114)</visible>
 			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""500"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""83"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
 		</control>
@@ -2695,11 +2695,12 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location</label>			<align>center</align>
+			<label>#infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location</label>
+			<align>center</align>
 			<font>font11</font>
 			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + weather_button + @")+!string.equals(#infoservice.weather.today.condition,)</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""250"">VisibleChange</animation>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>";
@@ -2715,10 +2716,12 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#fanarthandler.tvseries.latest1.dateAdded:     #fanarthandler.tvseries.latest1.serieName     #fanarthandler.tvseries.latest1.seasonIndexx#fanarthandler.tvseries.latest1.episodeIndex - #fanarthandler.tvseries.latest1.episodeName</label>			<align>center</align>
+			<label>#fanarthandler.tvseries.latest1.dateAdded:     #fanarthandler.tvseries.latest1.serieName     #fanarthandler.tvseries.latest1.seasonIndexx#fanarthandler.tvseries.latest1.episodeIndex - #fanarthandler.tvseries.latest1.episodeName</label>
+			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + tvseries_button + @")+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest1.episodeName,)</visible>			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""250"">VisibleChange</animation>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + tvseries_button + @")+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest1.episodeName,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>";
@@ -2732,8 +2735,12 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#fanarthandler.movingpicture.latest1.dateAdded:     #fanarthandler.movingpicture.latest1.title     #fanarthandler.movingpicture.latest1.genre     #fanarthandler.movingpicture.latest1.year</label>			<align>center</align>			<font>font11</font>			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Moving Pictures)+!string.equals(#fanarthandler.movingpicture.latest1.title,)</visible>			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""250"">VisibleChange</animation>
+			<label>#fanarthandler.movingpicture.latest1.dateAdded:     #fanarthandler.movingpicture.latest1.title     #fanarthandler.movingpicture.latest1.genre     #fanarthandler.movingpicture.latest1.year</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Moving Pictures)+!string.equals(#fanarthandler.movingpicture.latest1.title,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>";
@@ -2747,8 +2754,12 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#fanarthandler.tvrecordings.latest1.dateAdded:     #fanarthandler.tvrecordings.latest1.title     #fanarthandler.tvrecordings.latest1.genre</label>			<align>center</align>			<font>font11</font>			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + tv_button + @")+plugin.isenabled(TV)+!string.equals(#fanarthandler.tvrecordings.latest1.title,)</visible>			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""250"">VisibleChange</animation>
+			<label>#fanarthandler.tvrecordings.latest1.dateAdded:     #fanarthandler.tvrecordings.latest1.title     #fanarthandler.tvrecordings.latest1.genre</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + tv_button + @")+plugin.isenabled(TV)+!string.equals(#fanarthandler.tvrecordings.latest1.title,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>";
@@ -2762,8 +2773,12 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#fanarthandler.picture.latest1.dateAdded:     #fanarthandler.picture.latest1.filename</label>			<align>center</align>			<font>font11</font>			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + pictures_button + @")+plugin.isenabled(Pictures)+!string.equals(#fanarthandler.picture.latest1.filename,)</visible>			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""250"">VisibleChange</animation>
+			<label>#fanarthandler.picture.latest1.dateAdded:     #fanarthandler.picture.latest1.filename</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + pictures_button + @")+plugin.isenabled(Pictures)+!string.equals(#fanarthandler.picture.latest1.filename,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>";
@@ -2777,8 +2792,12 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#fanarthandler.music.latest1.dateAdded:     #fanarthandler.music.latest1.artist     #fanarthandler.music.latest1.album</label>			<align>center</align>			<font>font11</font>			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + music_button + @")+plugin.isenabled(Music)+!string.equals(#fanarthandler.music.latest1.album,)</visible>			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""250"">VisibleChange</animation>
+			<label>#fanarthandler.music.latest1.dateAdded:     #fanarthandler.music.latest1.artist     #fanarthandler.music.latest1.album</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + music_button + @")+plugin.isenabled(Music)+!string.equals(#fanarthandler.music.latest1.album,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>";
