@@ -75,6 +75,7 @@ namespace BlackGlassEditor
             XmlNodeList name = Buttons.GetElementsByTagName("name");
             XmlNodeList plugin = Buttons.GetElementsByTagName("plugin");
 
+
             comboBox100.SelectedItem = findPluginName(Int32.Parse(plugin[0].InnerText));
             comboBox101.SelectedItem = findPluginName(Int32.Parse(plugin[1].InnerText));
             comboBox102.SelectedItem = findPluginName(Int32.Parse(plugin[2].InnerText));
@@ -1974,6 +1975,63 @@ namespace BlackGlassEditor
                 if (textBoxid113.Text == "96742") movingpictures_button = "113";
                 if (textBoxid114.Text == "96742") movingpictures_button = "114";
 
+
+                String tv_button = "";
+
+                if (textBoxid100.Text == "1") tv_button = "100";
+                if (textBoxid101.Text == "1") tv_button = "101";
+                if (textBoxid102.Text == "1") tv_button = "102";
+                if (textBoxid103.Text == "1") tv_button = "103";
+                if (textBoxid104.Text == "1") tv_button = "104";
+                if (textBoxid105.Text == "1") tv_button = "105";
+                if (textBoxid106.Text == "1") tv_button = "106";
+                if (textBoxid107.Text == "1") tv_button = "107";
+                if (textBoxid108.Text == "1") tv_button = "108";
+                if (textBoxid109.Text == "1") tv_button = "109";
+                if (textBoxid110.Text == "1") tv_button = "110";
+                if (textBoxid111.Text == "1") tv_button = "111";
+                if (textBoxid112.Text == "1") tv_button = "112";
+                if (textBoxid113.Text == "1") tv_button = "113";
+                if (textBoxid114.Text == "1") tv_button = "114";
+
+
+                String pictures_button = "";
+
+                if (textBoxid100.Text == "2") pictures_button = "100";
+                if (textBoxid101.Text == "2") pictures_button = "101";
+                if (textBoxid102.Text == "2") pictures_button = "102";
+                if (textBoxid103.Text == "2") pictures_button = "103";
+                if (textBoxid104.Text == "2") pictures_button = "104";
+                if (textBoxid105.Text == "2") pictures_button = "105";
+                if (textBoxid106.Text == "2") pictures_button = "106";
+                if (textBoxid107.Text == "2") pictures_button = "107";
+                if (textBoxid108.Text == "2") pictures_button = "108";
+                if (textBoxid109.Text == "2") pictures_button = "109";
+                if (textBoxid110.Text == "2") pictures_button = "110";
+                if (textBoxid111.Text == "2") pictures_button = "111";
+                if (textBoxid112.Text == "2") pictures_button = "112";
+                if (textBoxid113.Text == "2") pictures_button = "113";
+                if (textBoxid114.Text == "2") pictures_button = "114";
+
+
+                String music_button = "";
+
+                if (textBoxid100.Text == "501") pictures_button = "100";
+                if (textBoxid101.Text == "501") pictures_button = "101";
+                if (textBoxid102.Text == "501") pictures_button = "102";
+                if (textBoxid103.Text == "501") pictures_button = "103";
+                if (textBoxid104.Text == "501") pictures_button = "104";
+                if (textBoxid105.Text == "501") pictures_button = "105";
+                if (textBoxid106.Text == "501") pictures_button = "106";
+                if (textBoxid107.Text == "501") pictures_button = "107";
+                if (textBoxid108.Text == "501") pictures_button = "108";
+                if (textBoxid109.Text == "501") pictures_button = "109";
+                if (textBoxid110.Text == "501") pictures_button = "110";
+                if (textBoxid111.Text == "501") pictures_button = "111";
+                if (textBoxid112.Text == "501") pictures_button = "112";
+                if (textBoxid113.Text == "501") pictures_button = "113";
+                if (textBoxid114.Text == "501") pictures_button = "114";
+
                 string txt = @"<?xml version=""1.0"" encoding=""utf-8"" standalone=""yes""?>
 <window>
   <controls>
@@ -1990,7 +2048,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox100.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(100)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2034,7 +2092,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox101.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(101)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2078,7 +2136,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox102.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(102)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2121,7 +2179,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox103.Text) + @"</label>
-			<font>font48</font> 
+			<font>font40</font> 
 			<align>center</align>
 			<visible>control.hasfocus(103)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2164,7 +2222,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox104.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(104)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2207,7 +2265,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox105.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(105)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2250,7 +2308,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox106.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(106)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2293,7 +2351,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox107.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(107)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2336,7 +2394,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox108.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(108)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2379,7 +2437,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox109.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(109)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2422,7 +2480,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox110.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(110)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2465,7 +2523,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox111.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(111)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2508,7 +2566,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox112.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(112)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2551,7 +2609,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox113.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(113)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2594,7 +2652,7 @@ namespace BlackGlassEditor
 			<posY>618</posY>
 			<width>1280</width>
 			<label>" + SecurityElement.Escape(textBox114.Text) + @"</label>
-			<font>font48</font>
+			<font>font40</font>
 			<align>center</align>
 			<visible>control.hasfocus(114)</visible>
 			<textcolor>ffffffff</textcolor>
@@ -2637,10 +2695,9 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location</label>
-			<align>center</align>
+			<label>#infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location</label>			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + weather_button + @")</visible>
+			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + weather_button + @")+!string.equals(#infoservice.weather.today.condition,)</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""250"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
@@ -2658,11 +2715,9 @@ namespace BlackGlassEditor
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#TVSeries.Translation.RecentlyAdded.Label:     #infoservice.recentlyAdded.series1.title     #TVSeries.Translation.Season.Label #infoservice.recentlyAdded.series1.season     #TVSeries.Translation.Episode.Label #infoservice.recentlyAdded.series1.episodenumber     #infoservice.recentlyAdded.series1.episodetitle</label>
-			<align>center</align>
+			<label>#fanarthandler.tvseries.latest1.dateAdded:     #fanarthandler.tvseries.latest1.serieName     #fanarthandler.tvseries.latest1.seasonIndexx#fanarthandler.tvseries.latest1.episodeIndex - #fanarthandler.tvseries.latest1.episodeName</label>			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + tvseries_button + @")+plugin.isenabled(MP-TV Series)</visible>
-			<textcolor>90ffffff</textcolor>
+			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + tvseries_button + @")+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest1.episodeName,)</visible>			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""250"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
@@ -2670,22 +2725,63 @@ namespace BlackGlassEditor
 
                 if (movingpictures_button != "") txt = txt
                 + @"
-   <!-- <control>
+        <control>
 			<description>Moving Pictures updates</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>Latest movie added: #infoservice.recentlyAdded.movie1.title</label>
-			<align>center</align>
-			<font>font11</font>
-			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Moving Pictures)</visible>
-			<textcolor>90ffffff</textcolor>
+			<label>#fanarthandler.movingpicture.latest1.dateAdded:     #fanarthandler.movingpicture.latest1.title     #fanarthandler.movingpicture.latest1.genre     #fanarthandler.movingpicture.latest1.year</label>			<align>center</align>			<font>font11</font>			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Moving Pictures)+!string.equals(#fanarthandler.movingpicture.latest1.title,)</visible>			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""250"">VisibleChange</animation>
             <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control> -->";
+		</control>";
+
+                if (tv_button != "") txt = txt
+                + @"
+        <control>
+			<description>TV updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.tvrecordings.latest1.dateAdded:     #fanarthandler.tvrecordings.latest1.title     #fanarthandler.tvrecordings.latest1.genre</label>			<align>center</align>			<font>font11</font>			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + tv_button + @")+plugin.isenabled(TV)+!string.equals(#fanarthandler.tvrecordings.latest1.title,)</visible>			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""250"">VisibleChange</animation>
+            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>";
+
+                if (pictures_button != "") txt = txt
+               + @"
+        <control>
+			<description>Pictures updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.picture.latest1.dateAdded:     #fanarthandler.picture.latest1.filename</label>			<align>center</align>			<font>font11</font>			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + pictures_button + @")+plugin.isenabled(Pictures)+!string.equals(#fanarthandler.picture.latest1.filename,)</visible>			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""250"">VisibleChange</animation>
+            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>";
+
+                if (music_button != "") txt = txt
+               + @"
+        <control>
+			<description>Music updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.music.latest1.dateAdded:     #fanarthandler.music.latest1.artist     #fanarthandler.music.latest1.album</label>			<align>center</align>			<font>font11</font>			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + music_button + @")+plugin.isenabled(Music)+!string.equals(#fanarthandler.music.latest1.album,)</visible>			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""250"">VisibleChange</animation>
+            <animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>";
 
                 txt = txt + @"
     </controls>
