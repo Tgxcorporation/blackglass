@@ -2016,21 +2016,21 @@ namespace BlackGlassEditor
 
                 String music_button = "";
 
-                if (textBoxid100.Text == "501") pictures_button = "100";
-                if (textBoxid101.Text == "501") pictures_button = "101";
-                if (textBoxid102.Text == "501") pictures_button = "102";
-                if (textBoxid103.Text == "501") pictures_button = "103";
-                if (textBoxid104.Text == "501") pictures_button = "104";
-                if (textBoxid105.Text == "501") pictures_button = "105";
-                if (textBoxid106.Text == "501") pictures_button = "106";
-                if (textBoxid107.Text == "501") pictures_button = "107";
-                if (textBoxid108.Text == "501") pictures_button = "108";
-                if (textBoxid109.Text == "501") pictures_button = "109";
-                if (textBoxid110.Text == "501") pictures_button = "110";
-                if (textBoxid111.Text == "501") pictures_button = "111";
-                if (textBoxid112.Text == "501") pictures_button = "112";
-                if (textBoxid113.Text == "501") pictures_button = "113";
-                if (textBoxid114.Text == "501") pictures_button = "114";
+                if (textBoxid100.Text == "501" || textBoxid100.Text == "504") music_button = "100";
+                if (textBoxid101.Text == "501" || textBoxid101.Text == "504") music_button = "101";
+                if (textBoxid102.Text == "501" || textBoxid102.Text == "504") music_button = "102";
+                if (textBoxid103.Text == "501" || textBoxid103.Text == "504") music_button = "103";
+                if (textBoxid104.Text == "501" || textBoxid104.Text == "504") music_button = "104";
+                if (textBoxid105.Text == "501" || textBoxid105.Text == "504") music_button = "105";
+                if (textBoxid106.Text == "501" || textBoxid106.Text == "504") music_button = "106";
+                if (textBoxid107.Text == "501" || textBoxid107.Text == "504") music_button = "107";
+                if (textBoxid108.Text == "501" || textBoxid108.Text == "504") music_button = "108";
+                if (textBoxid109.Text == "501" || textBoxid109.Text == "504") music_button = "109";
+                if (textBoxid110.Text == "501" || textBoxid110.Text == "504") music_button = "110";
+                if (textBoxid111.Text == "501" || textBoxid111.Text == "504") music_button = "111";
+                if (textBoxid112.Text == "501" || textBoxid112.Text == "504") music_button = "112";
+                if (textBoxid113.Text == "501" || textBoxid113.Text == "504") music_button = "113";
+                if (textBoxid114.Text == "501" || textBoxid114.Text == "504") music_button = "114";
 
                 string txt = @"<?xml version=""1.0"" encoding=""utf-8"" standalone=""yes""?>
 <window>
@@ -2672,7 +2672,7 @@ namespace BlackGlassEditor
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid114.Text) + @"</hyperlink>
 			<onleft>" + findButtonLeft("114") + @"</onleft>
-			<onright>" + findButtonRight("1114") + @"</onright>
+			<onright>" + findButtonRight("114") + @"</onright>
 			<onup>" + findButtonUp("114") + @"</onup>
 			<ondown>" + findButtonDown("114") + @"</ondown>
 			<textureFocus>basichome_114_focus.png</textureFocus>
