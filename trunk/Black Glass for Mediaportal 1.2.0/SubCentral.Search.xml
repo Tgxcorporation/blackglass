@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<controls>
+		<!-- 
+		This skin file is meant for all controls that should be visible for the user
+		when in the search view of the plugin. All controls should be tagged at a minimum
+		with "<visible>Control.isvisible(102)</visible>". 
+		-->
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<visible>Control.isvisible(102)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>47</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+			<control>
+				<type>label</type>
+				<description>Number of Files Label</description>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>665</posY>
+				<label>#itemcount</label>
+				<font>font16</font>
+				<label>#itemcount</label>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<dimColor>ffffffff</dimColor>
+				<control>
+					<description>listcontrol</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<onleft>202</onleft>
+					<onright>202</onright>
+					<scrollOffset>2</scrollOffset>
+				</control>
+			</control>
+		</control>
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>Cover Art</description>
+				<type>image</type>
+				<id>911</id>
+				<keepaspectratio>no</keepaspectratio>
+				<posX>62</posX> 
+				<posY>88</posY> 
+				<width>245</width> 
+				<height>348</height> 
+				<texture flipY="true" diffuse="Thumb_Mask.png">#SubCentral.Search.Media.Thumb</texture>
+				<visible>Control.isvisible(102)+ control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>83</posY>
+				<width>283</width>
+				<height>360</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<visible>Control.isvisible(102)+ control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>460</posY>
+				<width>420</width>
+				<label>#SubCentral.Search.Media.Title</label>
+				<font>font22</font>
+				<wrapString> : : : </wrapString>
+				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,NONE)+ control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>460</posY>
+				<width>420</width>
+				<label>#SubCentral.Search.Media.TitleWithYear</label>
+				<font>font22</font>
+				<wrapString> : : : </wrapString>
+				<visible>Control.isvisible(102)+[String.Equals(#SubCentral.Search.SearchType.Type,MOVIE)|String.Equals(#SubCentral.Search.SearchType.Type,IMDb)]+ control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>460</posY>
+				<width>420</width>
+				<label>#SubCentral.Search.Media.TitleWithSE</label>
+				<font>font22</font>
+				<wrapString> : : : </wrapString>
+				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,TVSHOW)+ control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>505</posY>
+				<width>420</width>
+				<font>font16</font>
+				<label>#SubCentral.Search.Source.Text</label>
+				<wrapString> : : : </wrapString>
+				<textcolor>90ffffff</textcolor>
+				<visible>Control.isvisible(102)+ control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>540</posY>
+				<width>420</width>
+				<label>#SubCentral.Search.SearchType.Text</label>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+				<visible>Control.isvisible(102)+!String.Equals(#SubCentral.Search.SearchType.Type,NONE)+ control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>540</posY>
+				<width>420</width>
+				<label>#SubCentral.Search.SearchType.Text</label>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,NONE)+ control.hasfocus(50)</visible>
+				<textcolor>ffF87B72</textcolor>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>575</posY>
+				<width>420</width>
+				<label>#SubCentral.Search.Media.IMDb.ID.Text</label>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,IMDb)+ control.hasfocus(50)</visible>
+				<textcolor>90ffffff</textcolor>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>Media Files</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>610</posY>
+				<width>420</width>
+				<height>90</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<font>font14</font>
+				<label>#SubCentral.Search.Files.AllNames</label>
+				<seperator>: : :</seperator>
+				<visible>Control.isvisible(102)+ control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+		</control>
+
+	</controls>
+</window>
