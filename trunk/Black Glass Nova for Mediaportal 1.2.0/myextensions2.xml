@@ -25,7 +25,7 @@
 			<visible>facadeview.list|facadeview.album|facadeview.playlist</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-		
+
 		<control>
 			<id>600</id>
 			<type>image</type>
@@ -48,6 +48,41 @@
 			<height>219</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">OverlayCase.png</texture>
 			<visible>[facadeview.list|facadeview.album|facadeview.playlist]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+
+		<control>
+			<type>image</type>
+			<posX>95</posX>
+			<posY>487</posY>
+			<width>87</width>
+			<height>15</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>status_editorpick.png</texture>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+string.equals(#MPE.Selected.DeveloperPick,true)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>33</posX>
+			<posY>487</posY>
+			<width>60</width>
+			<height>15</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>status_new.png</texture>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+string.equals(#MPE.Selected.JustAded,true)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>182</posX>
+			<posY>487</posY>
+			<width>50</width>
+			<height>15</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<texture>status_popular.png</texture>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+string.equals(#MPE.Selected.Popular,true)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
@@ -93,7 +128,7 @@
 			<seperator>: : :</seperator>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control> 		
-	
+
 		<import>common.facade.pictures.xml</import>
 
 
