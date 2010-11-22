@@ -30,9 +30,25 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)]</visible>		
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+
+			<!-- *** Progress *** -->
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>134</posY>
+				<width>385</width>
+				<label>Progress: #UpdateControl.DownloadOverallProgress%, #UpdateControl.InstallOverallProgress% done.</label>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+				<visible>!string.equals(#UpdateControl.DownloadOverallProgress,0)+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+
 			<!-- *** Item Selection *** -->
 			<control>
 				<type>image</type>
@@ -49,14 +65,26 @@
 			<control>
 				<type>fadelabel</type>
 				<id>0</id>
-				<posX>30</posX>
-				<posY>130</posY>
-				<width>375</width>
+				<posX>60</posX>
+				<posY>82</posY>
+				<width>325</width>
 				<font>font22</font>
 				<label>#UpdateControl.UpdateTitle</label>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<visible>control.hasfocus(50)</visible>
 				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>665</posY>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<label>#UpdateControl.AvailableUpdateSelectionSize selected</label>
+				<visible>!string.equals(#UpdateControl.AvailableUpdateCount,0)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -126,7 +154,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)]</visible>		
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -145,7 +173,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)</visible>
+			<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -215,16 +243,34 @@
 					<onright>50</onright>
 				</control>
 				<control>
+					<description>Restore Points</description>
+					<type>togglebutton</type>
+					<id>5</id>
+					<label>Restore Points</label>
+					<onup>4</onup>
+					<ondown>6</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
 					<description>Reboot</description>
 					<type>button</type>
-					<id>5</id>
+					<id>6</id>
 					<label>Reboot</label>
-					<onup>4</onup>
+					<onup>5</onup>
+					<ondown>7</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Clean</description>
+					<type>button</type>
+					<id>7</id>
+					<label>Clean distribution folder</label>
+					<onup>6</onup>
 					<ondown>2</ondown>
 					<onright>50</onright>
 				</control>
 			</control>
-			
+
 			<!-- *** Action *** -->
 			<control>
 				<description>Action</description>
