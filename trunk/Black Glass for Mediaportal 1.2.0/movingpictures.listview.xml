@@ -17,11 +17,9 @@
 				<width>948</width>
 				<height>766</height>
 				<texture>bg_facade.png</texture>
-				<visible>facadeview.list+[control.isvisible(50)|control.isvisible(51)]</visible>
+				<visible>facadeview.list+[control.isvisible(51)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">hidden</animation> 
-			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation>-->
+				<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">hidden</animation>
 			</control>
 
 			<control>
@@ -32,11 +30,37 @@
 				<height>53</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>facadeview.list+[control.isvisible(50)|control.isvisible(51)]</visible>
+				<visible>facadeview.list+[control.isvisible(51)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">visible</animation>		
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">hidden</animation> 
-			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation>-->
+				<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">hidden</animation>		
+			</control>
+			
+			
+			<control>
+				<description>Backdrop Overlay - ListView</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>865</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.list+[control.isvisible(50)]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">hidden</animation>
+			</control>
+
+			<control>
+				<type>image</type>
+				<posX>897</posX>
+				<posY>47</posY>
+				<width>383</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>facadeview.list+[control.isvisible(50)]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">visible</animation>		
+				<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">hidden</animation>		
 			</control>
 
 
@@ -52,10 +76,24 @@
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
 				<label>#MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
-				<visible>facadeview.list+[control.isvisible(50)|control.isvisible(51)]</visible>
+				<visible>facadeview.list+[control.isvisible(51)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation> -->
+				<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">hidden</animation>		
+			</control>
+			
+			
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>915</posX>
+				<posY>665</posY>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<label>#MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
+				<visible>facadeview.list+[control.isvisible(50)]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">hidden</animation>		
 			</control>
 
 			<control>
@@ -69,8 +107,10 @@
 				<width>245</width> 
 				<height>348</height> 
 				<texture flipY="true" diffuse="Thumb_Mask.png">#MovingPictures.Coverart</texture>
-				<visible>facadeview.list+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+				<animation effect="fade" time="150">hidden</animation>	
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 			</control>
 
 			<control>
@@ -82,8 +122,10 @@
 				<width>283</width>
 				<height>360</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-				<visible>facadeview.list+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+				<animation effect="fade" time="150">hidden</animation>	
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 			</control>
 
 
@@ -99,8 +141,10 @@
 				<height>40</height>
 				<colordiffuse>b0ffffff</colordiffuse>
 				<texture>overlaywubg.png</texture>
-				<visible>facadeview.list+control.isvisible(50)+ control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+				<animation effect="fade" time="150">hidden</animation>	
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 			</control> 
 
 			<control>
@@ -112,8 +156,10 @@
 				<width>24</width>
 				<height>24</height>
 				<texture>overlaywatched.png</texture>
-				<visible>facadeview.list+control.isvisible(50)+control.isvisible(9)+ control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>facadeview.list+control.isvisible(50)+control.isvisible(9)</visible>
+				<animation effect="fade" time="150">hidden</animation>	
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 			</control>
 
 			<control>
@@ -125,8 +171,10 @@
 				<width>24</width>
 				<height>24</height>
 				<texture>overlayunwatched.png</texture>
-				<visible>facadeview.list+control.isvisible(50)+!control.isvisible(9)+ control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>facadeview.list+control.isvisible(50)+!control.isvisible(9)</visible>
+				<animation effect="fade" time="150">hidden</animation>	
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 			</control>
 			<control>
 				<type>imagelist</type>
@@ -145,8 +193,10 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
-				<visible>facadeview.list+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+				<animation effect="fade" time="150">hidden</animation>	
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -157,9 +207,11 @@
 				<width>800</width>
 				<font>font22</font>
 				<label>#MovingPictures.SelectedMovie.title</label>
-				<visible>facadeview.list+control.hasfocus(50)</visible>  
-				<animation effect="fade" time="250">visiblechange</animation>
-				<wrapString> : : : </wrapString>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+				<animation effect="fade" time="150">hidden</animation>	
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<wrapString> : : : </wrapString>
 			</control>
 			<control>
 				<description>Genre value</description>
@@ -170,9 +222,11 @@
 				<width>800</width>
 				<label>#MovingPictures.SelectedMovie.genres</label>
 				<textcolor>90FFFFFF</textcolor>
-				<visible>facadeview.list + control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-				<wrapString> : : : </wrapString>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+				<animation effect="fade" time="150">hidden</animation>	
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<wrapString> : : : </wrapString>
 			</control>
 			<control>
 				<description>Runtime value</description>
@@ -183,9 +237,11 @@
 				<width>800</width>
 				<label>#MovingPictures.SelectedMovie.year     #MovingPictures.SelectedMovie.runtime.localized.long     #MovingPictures.SelectedMovie.certification</label>
 				<textcolor>90FFFFFF</textcolor>
-				<visible>facadeview.list + control.hasfocus(50) + !player.hasmedia</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-				<wrapString> : : : </wrapString>
+				<visible>facadeview.list+control.isvisible(50)+ !player.hasmedia</visible>
+				<animation effect="fade" time="150">hidden</animation>	
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			<wrapString> : : : </wrapString>
 			</control>
 
 			<control>
@@ -199,9 +255,11 @@
 				<font>font12</font>
 				<textcolor>ffFFFFFF</textcolor>
 				<label>#MovingPictures.SelectedMovie.summary</label>
-				<visible>facadeview.list+control.hasfocus(50)+!player.hasmedia</visible>
+				<visible>facadeview.list+control.isvisible(50)+!player.hasmedia</visible>
 				<seperator>: : :</seperator>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<animation effect="fade" time="150">hidden</animation>	
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 			</control>
 		</control>
 		<!--
