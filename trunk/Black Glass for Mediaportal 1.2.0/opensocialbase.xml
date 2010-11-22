@@ -259,7 +259,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(59)]</visible>
+			<visible>![control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(9)control.hasfocus(59)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -278,7 +278,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(59)</visible>
+			<visible>control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(9)|control.hasfocus(59)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -378,13 +378,24 @@
 					<onup>7</onup>
 					<ondown>59</ondown>
 				</control>
+
+				<control>
+					<description>Change provider</description>
+					<type>button</type>
+					<id>9</id>
+					<label>Change provider</label>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>59</ondown>
+				</control>
+
 				<control>
 					<description>MPEIUNINSTALL:3664ae64-c5af-4084-baf0-7ecb57b89711</description>
 					<type>button</type>
 					<id>59</id>
 					<label>New version</label>
 					<onright>50</onright>
-					<onup>3</onup>
+					<onup>9</onup>
 					<ondown>2</ondown>     
 					<visible>string.equals(#mpei.3664ae64_c5af_4084_baf0_7ecb57b89711.haveupdate,true)</visible>
 				</control>
