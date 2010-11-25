@@ -10,7 +10,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -29,7 +29,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.hasfocus(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)]</visible>
+			<visible>!control.hasfocus(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -176,8 +176,20 @@
 					<visible>plugin.isenabled(SubCentral)+control.isvisible(1239)</visible>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<ondown>2</ondown>
+					<ondown>66613</ondown>
 					<onup>30</onup>
+				</control>
+				<control>
+					<description>dlCentral</description>
+					<type>button</type>
+					<id>66613</id>
+					<label>Download</label>
+					<hyperlink>181966</hyperlink>
+					<onup>9111</onup>
+					<ondown>2</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(dlCentral)+control.isvisible(1239)</visible>
 				</control>
 			</control>
 
@@ -190,7 +202,8 @@
 				<posX>30</posX>
 				<posY>680</posY>		
 				<wrapString> : : : </wrapString>	
-				<width>340</width>				
+				<width>340</width>
+				<visible>![plugin.isenabled(dlCentral)+control.isvisible(1239)]</visible>				
 			</control>
 		</control>
 	</controls>
