@@ -4,8 +4,7 @@
 	<defaultcontrol>912</defaultcontrol>
 	<allowoverlay>player.hasmedia+!control.isvisible(103)</allowoverlay>
 	<define>#header.label:#SubCentral.Header.Label</define>
-	<!--<define>#header.background.custom:bg.jpg</define>-->
-	<define>#header.background.custom:hover_subcentral.png</define>
+	<define>#header.background:hover_subcentral.png</define>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
@@ -41,15 +40,8 @@
 			<width>0</width>
 		</control>
 		
-		<control>
-			<description>BG</description>
-			<type>image</type>
-			<id>0</id>
-			<width>1280</width>
-			<height>720</height>
-			<texture>#header.background.custom</texture>
-			<animation effect="fade" time="1">WindowClose</animation>			
-		</control>
+		<import>common.window.xml</import>
+		<import>common.window.time.xml</import>
 		
 		<control>
 			<description>backdrop</description>
@@ -63,9 +55,7 @@
 			<animation effect="fade" time="1">WindowClose</animation>			
 		</control>
 
-		<!-- Controls common to all views of the GUI -->
-		<import>common.window.xml</import>
-		<import>common.window.time.xml</import>
+		
 
 		<control>
 			<description>Media tags</description>
