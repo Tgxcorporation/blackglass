@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<id>181966</id>
+	<defaultcontrol>912</defaultcontrol>
+	<allowoverlay>player.hasmedia+!control.isvisible(103)</allowoverlay>
+	<define>#header.label:#dlCentral.Header.Label</define>
+	<define>#header.background:hover_dlCentral.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<!-- 
+		This is the main subcentral skin file and should contain all screen elements that are common
+		to all views in the GUI. Anything that belongs only in a specific view should be placed in the
+		coorespodning subfile.
+		-->
+
+		<!-- Dummy Controls meant for visibility and status purposes. -->
+		<control>
+			<description>Visible when in the main view mode.</description>
+			<type>label</type>
+			<id>101</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>0</width>
+		</control>
+		<control>
+			<description>Visible when in the file view mode.</description>
+			<type>label</type>
+			<id>102</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>0</width>
+		</control>
+		<control>
+			<description>Visible when in the manual search mode.</description>
+			<type>label</type>
+			<id>103</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>0</width>
+		</control>
+
+		<import>common.window.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<description>Backdrop</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#dlCentral.Search.Media.FanArt</texture>
+			<animation effect="fade" time="1">WindowClose</animation>	
+		</control>
+		
+
+		<import>dlCentral.Main.xml</import>
+		<import>dlCentral.Search.xml</import>
+		<import>dlCentral.HiddenMenu.xml</import>
+
+	</controls>
+</window>
