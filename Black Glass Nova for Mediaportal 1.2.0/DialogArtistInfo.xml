@@ -5,257 +5,244 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
-	<define>#header.label:</define>
+	<define>#header.label:#view</define>
 	<define>#header.background:hover_my music.png</define>
+	<define>#useSelectedFanart:Yes</define>
 	<controls>
 		<import>common.window.xml</import>
+		<import>common.window.music.fanart.xml</import>
+		<import>common.window.time.xml</import>
 		<control>
-			<type>image</type>
-			<id>1</id>
-			<posX>40</posX>
-			<posY>15</posY>
-			<width>1200</width>
-			<height>690</height>
-			<texture>bg_dialog_big.png</texture>
+			<id>5</id>
+			<description>Tracks/Review</description>
+			<type>button</type>
+			<onleft>6</onleft>
+			<onright>6</onright>
+			<onup>5</onup>
+			<ondown>4</ondown>
+			<posX>12</posX>
+			<posY>321</posY>
+			<width>250</width>
+			<height>68</height>
+			<font>font16</font>
+			<textureFocus>bg_tab_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_tab_button2_nofocus.png</textureNoFocus>
+			<label>689</label>
+			<textalign>CENTER</textalign>
+			<textXOff>20</textXOff>
+			<textYOff>-3</textYOff>
 		</control>
 		<control>
-			<type>image</type>
-			<posX>68</posX>
-			<posY>63</posY>
-			<width>1143</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
+			<id>6</id>
+			<description>Refresh</description>
+			<type>button</type>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>6</onup>
+			<ondown>4</ondown>
+			<posX>250</posX>
+			<posY>321</posY>
+			<width>250</width>
+			<height>68</height>
+			<font>font16</font>
+			<textureFocus>bg_tab_button2_focus.png</textureFocus>
+			<textureNoFocus>bg_tab_button2_nofocus.png</textureNoFocus>
+			<label>184</label>
+			<textalign>CENTER</textalign>
+			<textXOff>20</textXOff>
+			<textYOff>-3</textYOff>
 		</control>
 		<control>
+			<id>0</id>
+			<description>Backdrop Overlay</description>
 			<type>image</type>
-			<posX>68</posX>
-			<posY>562</posY>
-			<width>1143</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
+			<posX>-100</posX>
+			<posY>342</posY>
+			<width>1572</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
 		</control>
 		<control>
-			<description>Artist</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>177</posX>
-			<posY>125</posY>
-			<label>493</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
+			<description>artist image</description>
+			<type>image</type>
+			<id>3</id>
+			<posX>56</posX>
+			<posY>394</posY>
+			<width>275</width>
+			<height>275</height>
+			<texture>-</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+		</control>
+		<control>
+			<id>0</id>
+			<description>music rectangle</description>
+			<type>image</type>
+			<posX>20</posX>
+			<posY>385</posY>
+			<width>318</width>
+			<height>290</height>
+			<texture>CDCase.png</texture>
 		</control>
 		<control>
 			<description>Artist value</description>
 			<type>label</type>
 			<id>20</id>
-			<posX>391</posX>
-			<posY>65</posY>
-			<width>800</width>
+			<posX>350</posX>
+			<posY>384</posY>
+			<width>910</width>
 			<label>-</label>
 			<font>font22</font>
 			<align>left</align>
 			<textcolor>FFFFFFFF</textcolor>
 		</control>
 		<control>
-			<description>Born</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>177</posX>
-			<posY>150</posY>
-			<label>686</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
+			<id>0</id>
+			<type>image</type>
+			<colordiffuse>77ffffff</colordiffuse>
+			<posX>337</posX>
+			<posY>395</posY>
+			<width>943</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
 		</control>
 		<control>
-			<description>Years Active</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>177</posX>
-			<posY>175</posY>
-			<label>687</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<description>Genres</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>177</posX>
-			<posY>200</posY>
-			<label>135</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<description>Tones</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>177</posX>
-			<posY>225</posY>
-			<label>175</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<description>Styles</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>177</posX>
-			<posY>250</posY>
-			<label>176</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<description>Instruments</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>177</posX>
-			<posY>275</posY>
-			<label>688</label>
-			<font>font12</font>
-			<textcolor>90ffffff</textcolor>
-		</control>
-		<control>
-			<description>Artist value</description>
-			<type>label</type>
-			<id>21</id>
-			<posX>391</posX>
-			<posY>125</posY>
-			<label>-</label>
-			<font>font12</font>
-			<textcolor>FFFFFFFF</textcolor>
+			<id>0</id>
+			<type>image</type>
+			<colordiffuse>77ffffff</colordiffuse>
+			<posX>337</posX>
+			<posY>430</posY>
+			<width>943</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
 		</control>
 		<control>
 			<description>Born value</description>
 			<type>label</type>
 			<id>22</id>
-			<posX>391</posX>
-			<posY>150</posY>
+			<posX>350</posX>
+			<posY>432</posY>
+			<width>910</width>
+			<textcolor>90ffffff</textcolor>
 			<label>-</label>
-			<font>font12</font>
-			<textcolor>FFFFFFFF</textcolor>
-		</control>
-		<control>
-			<description>Years Active value</description>
-			<type>label</type>
-			<id>23</id>
-			<posX>391</posX>
-			<posY>175</posY>
-			<label>-</label>
-			<font>font12</font>
-			<textcolor>FFFFFFFF</textcolor>
-		</control>
-		<control>
-			<description>Genres value</description>
-			<type>label</type>
-			<id>24</id>
-			<posX>391</posX>
-			<posY>200</posY>
-			<label>-</label>
-			<font>font12</font>
-			<textcolor>FFFFFFFF</textcolor>
-		</control>
-		<control>
-			<description>Tones value</description>
-			<type>fadelabel</type>
-			<id>25</id>
-			<posX>391</posX>
-			<posY>225</posY>
-			<width>711</width>
-			<label>-</label>
-			<font>font12</font>
-			<textcolor>FFFFFFFF</textcolor>
-		</control>
-		<control>
-			<description>Styles value</description>
-			<type>fadelabel</type>
-			<id>26</id>
-			<posX>391</posX>
-			<posY>250</posY>
-			<width>711</width>
-			<label>-</label>
-			<font>font12</font>
-			<textcolor>FFFFFFFF</textcolor>
 		</control>
 		<control>
 			<description>Instruments value</description>
 			<type>label</type>
 			<id>27</id>
-			<posX>391</posX>
-			<posY>275</posY>
+			<posX>350</posX>
+			<posY>468</posY>
+			<width>430</width>
 			<label>-</label>
-			<font>font12</font>
-			<textcolor>FFFFFFFF</textcolor>
+			<font>font16</font>
+			</control>
+		<control>
+			<description>Years Active value</description>
+			<type>label</type>
+			<id>23</id>
+			<posX>790</posX>
+			<posY>468</posY>
+			<width>80</width>
+			<font>font16</font>
+			<label>-</label>
 		</control>
 		<control>
-			<description>artist image</description>
+			<id>24</id>
+			<description>Genre value</description>
+			<type>label</type>
+			<posX>920</posX>
+			<posY>468</posY>
+			<width>340</width>
+			<font>font16</font>
+			<label>-</label>
+		</control>
+		<control>
+			<id>0</id>
 			<type>image</type>
-			<id>3</id>
-			<posX>177</posX>
-			<posY>312</posY>
-			<width>177</width>
-			<height>125</height>
-			<texture>-</texture>
-			<colorkey>FFFF00FF</colorkey>
-			<colordiffuse>FFFFFFFF</colordiffuse>
-			<keepaspectratio>yes</keepaspectratio>
+			<colordiffuse>77ffffff</colordiffuse>
+			<posX>337</posX>
+			<posY>465</posY>
+			<width>943</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+		</control>
+		<control>
+			<id>25</id>
+			<description>Tones value</description>
+			<type>fadelabel</type>
+			<posX>350</posX>
+			<posY>506</posY>
+			<width>910</width>
+			<font>font12</font>
+			<textcolor>ffffffff</textcolor>
+			<label>-</label>
+			<textcolor>c0ffffff</textcolor>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<colordiffuse>77ffffff</colordiffuse>
+			<posX>337</posX>
+			<posY>499</posY>
+			<width>943</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+		</control>
+		<control>
+			<id>26</id>
+			<description>Styles value</description>
+			<type>fadelabel</type>
+			<posX>350</posX>
+			<posY>538</posY>
+			<width>910</width>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
+			<wrapString> : : : </wrapString>
+		</control>
+		
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<colordiffuse>77ffffff</colordiffuse>
+			<posX>337</posX>
+			<posY>529</posY>
+			<width>943</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
 		</control>
 		<control>
 			<description>textarea</description>
 			<type>textbox</type>
 			<id>4</id>
-			<posY>312</posY>
-			<onleft>6</onleft>
+			<onleft>5</onleft>
 			<onright>5</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
-			<font>font14</font>
-			<height>330</height>
-			<spinPosX>1080</spinPosX>
-			<spinPosY>630</spinPosY>
+			<posX>349</posX>
+			<posY>569</posY>
+			<width>890</width>
+			<height>158</height>
+			<spinPosX>1185</spinPosX>
+			<spinPosY>691</spinPosY>
+			<spinHeight>25</spinHeight>
+			<spinWidth>25</spinWidth>
+			<font>font12</font>
 		</control>
+
+		<!-- NOT USED -->
 		<control>
-			<description>Bio/Albums</description>
-			<type>button</type>
-			<id>5</id>
-			<posX>380</posX>
-			<posY>617</posY>
-			<label>689</label>
-			<onleft>4</onleft>
-			<onright>6</onright>
-			<onup>4</onup>
-			<ondown>4</ondown>
-			<width>200</width>
-			<font>font18</font>
-			<textalign>center</textalign>
-			<height>60</height>
-			<textureFocus>bg_button2_focus.png</textureFocus>
-			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
-			<textXOff>0</textXOff>
-			<textYOff>3</textYOff>
+			<description>Artist value</description>
+			<type>label</type>
+			<id>21</id>
+			<posX>2350</posX>
+			<posY>470</posY>
+			<width>400</width>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
 		</control>
-		<control>
-			<description>Refresh</description>
-			<type>button</type>
-			<id>6</id>
-			<posX>610</posX>
-			<posY>617</posY>
-			<label>184</label>
-			<onleft>5</onleft>
-			<onright>4</onright>
-			<onup>4</onup>
-			<ondown>4</ondown>
-			<width>200</width>
-			<font>font18</font>
-			<textalign>center</textalign>
-			<height>60</height>
-			<textureFocus>bg_button2_focus.png</textureFocus>
-			<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
-			<textXOff>0</textXOff>
-			<textYOff>3</textYOff>
-		</control>
+
 	</controls>
 </window>
