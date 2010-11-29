@@ -47,7 +47,7 @@
 				<height>348</height> 
 				<colordiffuse>ffffffff</colordiffuse>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album] + control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)</visible>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<animation effect="fade" time="250">visiblechange</animation>
@@ -60,7 +60,7 @@
 				<posY>83</posY>
 				<width>283</width>
 				<height>360</height>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album] + control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album] + control.hasfocus(50) + control.hasthumb(500)</visible>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
@@ -81,7 +81,7 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#rating</percentage>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)+control.hastext(11234)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album]+control.hasfocus(50)+!string.equals(#runtime,0)+!string.equals(#year,1900)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
@@ -126,7 +126,7 @@
 				<width>420</width>
 				<label>#year     #mpaarating     #runtime mins</label>
 				<textcolor>90FFFFFF</textcolor>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album] + control.hasfocus(50)+control.hastext(11234)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album] + control.hasfocus(50)+!string.equals(#runtime,0)+!string.equals(#year,1900)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 				<font>font14</font>
