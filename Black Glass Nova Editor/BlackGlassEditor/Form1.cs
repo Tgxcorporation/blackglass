@@ -3585,7 +3585,7 @@ namespace BlackGlassEditor
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<texture>#fanarthandler.music.latest1.thumb</texture>
+			<texture>#fanarthandler.music.latest1.fanart1</texture>
 			<visible>control.hasfocus(" + music_button + @")+plugin.isenabled(Fanart Handler)+plugin.isenabled(Music)</visible>
 			<animation effect=""fade"" time=""150"">visible</animation>
 		</control>
