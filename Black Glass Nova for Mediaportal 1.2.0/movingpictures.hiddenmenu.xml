@@ -12,7 +12,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>Control.HasFocus(50)+control.isvisible(50)+![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)]</visible>
+			<visible>Control.HasFocus(50)+control.isvisible(50)+![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)|control.hasfocus(180)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -31,7 +31,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)]</visible>
+			<visible>control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)|control.hasfocus(180)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -70,7 +70,7 @@
 				<layout>StackLayout</layout>
 				<posX>0</posX>
 				<posY>100</posY>
-				<visible>control.isvisible(50)</visible>
+				<!--<visible>control.isvisible(50)</visible>-->
 				<animation effect="slide" tween="circle" easing="out" time="10" start="-208,0" reversible="false">visible</animation>
 				<animation effect="slide" tween="circle" easing="out" time="10" end="-208,0" reversible="false">hidden</animation>
 				<control>
@@ -148,7 +148,19 @@
 					<visible>plugin.isenabled(SubCentral)</visible>
 					<onup>66611</onup>
 					<onright>50</onright>
-					<ondown>2</ondown>     
+					<ondown>180</ondown>     
+				</control>
+				<control>
+					<description>dlCentral</description>
+					<type>button</type>
+					<id>180</id>
+					<label>Download</label>
+					<hyperlink>181966</hyperlink>
+					<onup>66610</onup>
+					<ondown>2</ondown>
+					<onup>66612</onup>
+					<onright>50</onright>
+					<visible>plugin.isenabled(dlCentral)</visible>
 				</control>
 			 </control>
 			<control>
