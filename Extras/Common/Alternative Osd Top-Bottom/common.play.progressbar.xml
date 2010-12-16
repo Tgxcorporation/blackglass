@@ -12,7 +12,7 @@
 			<height>136</height>
 			<texture>bg_osd_small_top.png</texture>
 			<animation effect="fade" time="100">visible</animation>
-			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|player.paused]|window.isosdvisible</visible>
+			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]|window.isosdvisible</visible>
 		</control>
 		<control>
 			<description>progress bar</description>
@@ -27,7 +27,7 @@
 			<midtexture>osd_small_progress_mid_blue.png</midtexture>
 			<righttexture>-</righttexture>
 			<label>#play.progressbar.percentage</label>
-			<visible>[window.isosdvisible|player.paused|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<animation effect="fade" time="100">visible</animation>
 		</control>
 		<control>
@@ -43,7 +43,7 @@
 			<textalign>left</textalign>
 			<wrapString> : : : </wrapString>
 			<animation effect="fade" time="100">visible</animation>
-			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|player.paused]|window.isosdvisible</visible>
+			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]|window.isosdvisible</visible>
 		</control>
 		<control>
 			<type>image</type>
@@ -55,7 +55,7 @@
 			<width>22</width>
 			<texture>time.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-			<visible>window.isosdvisible|player.paused|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visible</animation>
 		</control>
 
@@ -70,7 +70,7 @@
 			<align>right</align>
 			<label>#time</label>
 			<textcolor>47ffffff</textcolor>
-			<visible>window.isosdvisible|player.paused|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visible</animation>
 		</control>
 		<control>
@@ -83,7 +83,7 @@
 			<align>left</align>
 			<font>font14</font>
 			<textcolor>white</textcolor>
-			<visible>window.isosdvisible|player.paused|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visible</animation>
 			<shadowAngle>315</shadowAngle>
 			<shadowDistance>1</shadowDistance>
@@ -99,7 +99,7 @@
 			<align>right</align>
 			<font>font14</font>
 			<textcolor>white</textcolor>
-			<visible>window.isosdvisible|player.paused|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visible</animation>
 			<shadowAngle>315</shadowAngle>
 			<shadowDistance>1</shadowDistance>
@@ -120,7 +120,7 @@
 			<posY>104</posY>
 			<width>120</width>
 			<height>27</height>
-			<visible>player.paused+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>window.ispauseosdvisible+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video_paused.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
