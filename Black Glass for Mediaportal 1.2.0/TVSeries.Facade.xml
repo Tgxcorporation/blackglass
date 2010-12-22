@@ -188,6 +188,140 @@
 					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">visible</animation>
 					<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">hidden</animation>
 				</control>
+				<control>
+					<description>Cover Flow view</description>
+					<type>coverflow</type>
+					<colordiffuse>ffffffff</colordiffuse>
+					<dimColor>90ffffff</dimColor>
+					<id>50</id>
+					<posX>0</posX>
+					<posY>373</posY>
+					<width>1280</width>
+					<height>720</height>
+					<onup>2</onup>
+					<onleft>2</onleft>
+					<selectedCard>0</selectedCard>
+					<cardWidth>184</cardWidth>
+					<cardHeight>260</cardHeight>
+					<angle>30</angle>
+					<sideShift>180</sideShift>
+					<sideGap>50</sideGap>
+					<sideDepth>250</sideDepth>
+					<offsetY>0</offsetY>
+					<selectedOffsetY>-40</selectedOffsetY>
+					<speed>8</speed>
+					<showFrame>yes</showFrame>
+					<frame>DVDCase_coverflow.png</frame>
+					<frameFocus>DVDCase_coverflow.png</frameFocus>
+					<frameWidth>184</frameWidth>
+					<frameHeight>260</frameHeight>
+					<spinSpeed>8</spinSpeed>
+					<font1>font14</font1>
+					<font2>font11</font2>
+					<label1/>
+					<label2/>
+					<label1YOff>405</label1YOff>
+					<label2YOff>430</label2YOff>
+					<pageSize>5</pageSize>
+					<scrollbarYOff>243</scrollbarYOff>
+					<cards flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png"/>
+					<visible>[facadeview.coverflow]+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1240)]+control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">hidden</animation>
+					<subitems>
+						<subitem>
+							<![CDATA[
+							<controls>
+								<control>
+									<description>background</description>
+									<type>image</type>
+									<posX>0</posX>
+									<posY>0</posY>
+									<width>184</width>
+									<height>260</height>
+									<texture flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png">black.png</texture>
+								</control>
+								<control>
+									<description>Movie Title</description>
+									<type>fadelabel</type>
+									<id>0</id>
+									<posX>15</posX>
+									<posY>6</posY>
+									<width>150</width>
+									<label>#TVSeries.Title</label>
+									<font>font13</font>
+									<textcolor>FFFFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+									<shadowAngle>45</shadowAngle>
+									<shadowDistance>2</shadowDistance>
+									<shadowColor>FF000000</shadowColor>
+								</control>
+								<control>
+									<type>image</type>
+									<id>0</id>
+									<posX>15</posX>
+									<posY>-20</posY>
+									<width>154</width>
+									<height>53</height>
+									<texture>bg_button_nofocus.png</texture>
+								</control>
+								<control>
+									<type>imagelist</type>
+									<id>1</id>
+									<posX>15</posX>
+									<posY>41</posY>
+									<width>185</width>
+									<height>40</height>
+									<textureWidth>15</textureWidth>
+									<textureHeight>15</textureHeight>
+									<subitems>
+										<subitem>star_nofocus.png</subitem>
+										<subitem>star_focus.png</subitem>
+									</subitems>
+									<orientation>horizontal</orientation>
+									<align>left</align>
+									<imagesToDraw>10</imagesToDraw>
+									<percentage>#TVSeries.Series.Rating</percentage>
+								</control>
+								<control>
+									<description>genre</description>
+									<type>fadelabel</type>
+									<posX>15</posX>
+									<posY>62</posY>
+									<width>165</width>
+									<label>#TVSeries.Subtitle</label>
+									<font>font11</font>
+									<textcolor>ffFFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								<control>
+									<description>year</description>
+									<type>fadelabel</type>
+									<posX>15</posX>
+									<posY>87</posY>
+									<width>165</width>
+									<label>#TVSeries.Series.infopanelLine4Value</label>
+									<font>font11</font>
+									<textcolor>90FFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								<control>
+									<description>plot</description>
+									<type>textboxscrollup</type>
+									<posX>15</posX>
+									<posY>113</posY>
+									<width>165</width>
+									<height>70</height>
+									<label>#TVSeries.Series.Summary</label>
+									<font>font9</font>
+									<lineSpacing>2</lineSpacing>
+									<textcolor>FFFFFFFF</textcolor>
+								</control>
+							</controls>
+							]]>
+						</subitem>
+					</subitems>
+				</control>
 			</control>
 		</control>
 	</controls>
