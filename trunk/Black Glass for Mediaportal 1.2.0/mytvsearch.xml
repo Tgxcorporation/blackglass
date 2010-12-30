@@ -70,23 +70,34 @@
 				<font>font22</font>
 				<label>#selecteditem</label>
 				<textcolor>FFFFFFFF</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
+				<visible>[control.hasfocus(11)|control.hasfocus(10)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control> 
-
+			<control>
+				<description>genre</description>
+				<type>label</type>
+				<id>17</id>
+				<posX>30</posX>
+				<posY>115</posY>
+				<label>#TV.Search.Genre</label>
+				<textcolor>90ffffff</textcolor>
+				<visible>[control.hasfocus(11)|control.hasfocus(10)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			
 			<control>
 				<description>Channel Image</description>
 				<type>image</type>
 				<id>1</id>
 				<posX>30</posX>
-				<posY>121</posY>
+				<posY>153</posY>
 				<width>50</width>
 				<height>35</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<texture>#selectedthumb</texture>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
+				<visible>control.hastext(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -94,13 +105,13 @@
 				<type>label</type>
 				<id>16</id>
 				<posX>90</posX>
-				<posY>118</posY>
+				<posY>150</posY>
 				<!-- <width>380</width> -->
 				<font>font22</font>
 				<label>#TV.Search.Channel</label>
 				<align>left</align>
-				<textcolor>90ffffff</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
+				<textcolor>ffffffff</textcolor>
+				<visible>[control.hasfocus(11)|control.hasfocus(10)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -108,23 +119,13 @@
 				<type>label</type>
 				<id>14</id>
 				<posX>30</posX>
-				<posY>168</posY>
+				<posY>203</posY>
 				<label>#TV.Search.Time</label>
-				<textcolor>ffffffff</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>genre</description>
-				<type>label</type>
-				<id>17</id>
-				<posX>30</posX>
-				<posY>205</posY>
-				<label>#TV.Search.Genre</label>
 				<textcolor>90ffffff</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
+				<visible>control.hastext(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+			
 			<control>
 				<description>Description1</description>
 				<type>textboxscrollup</type>
@@ -136,7 +137,7 @@
 				<label>#TV.Search.Description</label>
 				<font>font16</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]+player.hasmedia</visible>
+				<visible>[control.hasfocus(11)|control.hasfocus(10)]+player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
@@ -151,7 +152,7 @@
 				<label>#TV.Search.Description</label>
 				<font>font16</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]+!player.hasmedia</visible>
+				<visible>[control.hasfocus(11)|control.hasfocus(10)]+!player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
