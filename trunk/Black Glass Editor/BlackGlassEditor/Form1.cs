@@ -40,7 +40,7 @@ namespace BlackGlassEditor
             XmlNodeList phover = Plugins.GetElementsByTagName("hover");
 
             plugins.Add(new MPplugin(0, "Empty Button", ""));
-            plugins.Add(new MPplugin(99999 , "Custom Plugin", "hover_custom"));
+            plugins.Add(new MPplugin(99999, "Custom Plugin", "hover_custom"));
 
             for (int i = 0; i < pid.Count; i++)
             {
@@ -74,7 +74,7 @@ namespace BlackGlassEditor
 
             XmlNodeList name = Buttons.GetElementsByTagName("name");
             XmlNodeList plugin = Buttons.GetElementsByTagName("plugin");
-
+            XmlNodeList fanart = Buttons.GetElementsByTagName("fanart");
 
             comboBox100.SelectedItem = findPluginName(Int32.Parse(plugin[0].InnerText));
             comboBox101.SelectedItem = findPluginName(Int32.Parse(plugin[1].InnerText));
@@ -124,6 +124,22 @@ namespace BlackGlassEditor
             if (plugin[13].InnerText != "0") textBoxid113.Text = plugin[13].InnerText;
             if (plugin[14].InnerText != "0") textBoxid114.Text = plugin[14].InnerText;
 
+            //if (fanart[0].InnerText == "True") { checkBox100.Checked = true; } else { checkBox100.Visible = false; }
+            //if (fanart[1].InnerText == "True") { checkBox101.Checked = true; } else { checkBox101.Visible = false; }
+            //if (fanart[2].InnerText == "True") { checkBox102.Checked = true; } else { checkBox102.Visible = false; }
+            //if (fanart[3].InnerText == "True") { checkBox103.Checked = true; } else { checkBox103.Visible = false; }
+            //if (fanart[4].InnerText == "True") { checkBox104.Checked = true; } else { checkBox104.Visible = false; }
+            if (fanart[5].InnerText == "True") { checkBox105.Checked = true; } else { checkBox105.Visible = false; }
+            if (fanart[6].InnerText == "True") { checkBox106.Checked = true; } else { checkBox106.Visible = false; }
+            if (fanart[7].InnerText == "True") { checkBox107.Checked = true; } else { checkBox107.Visible = false; }
+            if (fanart[8].InnerText == "True") { checkBox108.Checked = true; } else { checkBox108.Visible = false; }
+            if (fanart[9].InnerText == "True") { checkBox109.Checked = true; } else { checkBox109.Visible = false; }
+            if (fanart[10].InnerText == "True") { checkBox110.Checked = true; } else { checkBox110.Visible = false; }
+            if (fanart[11].InnerText == "True") { checkBox111.Checked = true; } else { checkBox111.Visible = false; }
+            if (fanart[12].InnerText == "True") { checkBox112.Checked = true; } else { checkBox112.Visible = false; }
+            if (fanart[13].InnerText == "True") { checkBox113.Checked = true; } else { checkBox113.Visible = false; }
+            if (fanart[14].InnerText == "True") { checkBox114.Checked = true; } else { checkBox114.Visible = false; }
+
 
             String ApplicationPath = Application.StartupPath;
 
@@ -150,7 +166,7 @@ namespace BlackGlassEditor
 
             textBoxTarget.Text = BlackGlassDirClass.Path;
 
-            
+
 
             Assembly myAssembly = Assembly.GetExecutingAssembly();
             Stream myStream = myAssembly.GetManifestResourceStream("BlackGlassEditor.Images.blue_bg_sample.png");
@@ -168,7 +184,7 @@ namespace BlackGlassEditor
             {
                 radioButtonCustomColor.Checked = true;
                 numericUpDownColor.Value = Decimal.Parse(plugin[16].InnerText);
-               
+
                 myStream = myAssembly.GetManifestResourceStream("BlackGlassEditor.Images.blue_bg_sample.png");
                 ImageManipulator im = new ImageManipulator(new Bitmap(myStream));
                 String newvalue = numericUpDownColor.Value.ToString();
@@ -1403,60 +1419,90 @@ namespace BlackGlassEditor
             textBox105.Text = comboBox105.Text;
             textBoxid105.Text = findPlugin(comboBox105.Text).ToString();
             if (comboBox105.Text == "Empty Button") { textBox105.Text = ""; textBoxid105.Text = ""; };
+            checkBox105.Visible = false;
+            checkBox105.Checked = false;
+            if (textBoxid105.Text == "504" || textBoxid105.Text == "501" || textBoxid105.Text == "96742" || textBoxid105.Text == "1" || textBoxid105.Text == "9811" || textBoxid105.Text == "2600" || textBoxid105.Text == "2") { checkBox105.Visible = true; };
         }
         private void comboBox106_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox106.Text = comboBox106.Text;
             textBoxid106.Text = findPlugin(comboBox106.Text).ToString();
             if (comboBox106.Text == "Empty Button") { textBox106.Text = ""; textBoxid106.Text = ""; };
+            checkBox106.Visible = false;
+            checkBox106.Checked = false;
+            if (textBoxid106.Text == "504" || textBoxid106.Text == "501" || textBoxid106.Text == "96742" || textBoxid106.Text == "1" || textBoxid106.Text == "9811" || textBoxid106.Text == "2600" || textBoxid106.Text == "2") { checkBox106.Visible = true; };
         }
         private void comboBox107_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox107.Text = comboBox107.Text;
             textBoxid107.Text = findPlugin(comboBox107.Text).ToString();
             if (comboBox107.Text == "Empty Button") { textBox107.Text = ""; textBoxid107.Text = ""; };
+            checkBox107.Visible = false;
+            checkBox107.Checked = false;
+            if (textBoxid107.Text == "504" || textBoxid107.Text == "501" || textBoxid107.Text == "96742" || textBoxid107.Text == "1" || textBoxid107.Text == "9811" || textBoxid107.Text == "2600" || textBoxid107.Text == "2") { checkBox107.Visible = true; };
         }
         private void comboBox108_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox108.Text = comboBox108.Text;
             textBoxid108.Text = findPlugin(comboBox108.Text).ToString();
             if (comboBox108.Text == "Empty Button") { textBox108.Text = ""; textBoxid108.Text = ""; };
+            checkBox108.Visible = false;
+            checkBox108.Checked = false;
+            if (textBoxid108.Text == "504" || textBoxid108.Text == "501" || textBoxid108.Text == "96742" || textBoxid108.Text == "1" || textBoxid108.Text == "9811" || textBoxid108.Text == "2600" || textBoxid108.Text == "2") { checkBox108.Visible = true; };
         }
         private void comboBox109_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox109.Text = comboBox109.Text;
             textBoxid109.Text = findPlugin(comboBox109.Text).ToString();
             if (comboBox109.Text == "Empty Button") { textBox109.Text = ""; textBoxid109.Text = ""; };
+            checkBox109.Visible = false;
+            checkBox109.Checked = false;
+            if (textBoxid109.Text == "504" || textBoxid109.Text == "501" || textBoxid109.Text == "96742" || textBoxid109.Text == "1" || textBoxid109.Text == "9811" || textBoxid109.Text == "2600" || textBoxid109.Text == "2") { checkBox109.Visible = true; };
         }
         private void comboBox110_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox110.Text = comboBox110.Text;
             textBoxid110.Text = findPlugin(comboBox110.Text).ToString();
             if (comboBox110.Text == "Empty Button") { textBox110.Text = ""; textBoxid110.Text = ""; };
+            checkBox110.Visible = false;
+            checkBox110.Checked = false;
+            if (textBoxid110.Text == "504" || textBoxid110.Text == "501" || textBoxid110.Text == "96742" || textBoxid110.Text == "1" || textBoxid110.Text == "9811" || textBoxid110.Text == "2600" || textBoxid110.Text == "2") { checkBox110.Visible = true; };
         }
         private void comboBox111_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox111.Text = comboBox111.Text;
             textBoxid111.Text = findPlugin(comboBox111.Text).ToString();
             if (comboBox111.Text == "Empty Button") { textBox111.Text = ""; textBoxid111.Text = ""; };
+            checkBox111.Visible = false;
+            checkBox111.Checked = false;
+            if (textBoxid111.Text == "504" || textBoxid111.Text == "501" || textBoxid111.Text == "96742" || textBoxid111.Text == "1" || textBoxid111.Text == "9811" || textBoxid111.Text == "2600" || textBoxid111.Text == "2") { checkBox111.Visible = true; };
         }
         private void comboBox112_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox112.Text = comboBox112.Text;
             textBoxid112.Text = findPlugin(comboBox112.Text).ToString();
             if (comboBox112.Text == "Empty Button") { textBox112.Text = ""; textBoxid112.Text = ""; };
+            checkBox112.Visible = false;
+            checkBox112.Checked = false;
+            if (textBoxid112.Text == "504" || textBoxid112.Text == "501" || textBoxid112.Text == "96742" || textBoxid112.Text == "1" || textBoxid112.Text == "9811" || textBoxid112.Text == "2600" || textBoxid112.Text == "2") { checkBox112.Visible = true; };
         }
         private void comboBox113_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox113.Text = comboBox113.Text;
             textBoxid113.Text = findPlugin(comboBox113.Text).ToString();
             if (comboBox113.Text == "Empty Button") { textBox113.Text = ""; textBoxid113.Text = ""; };
+            checkBox113.Visible = false;
+            checkBox113.Checked = false;
+            if (textBoxid113.Text == "504" || textBoxid113.Text == "501" || textBoxid113.Text == "96742" || textBoxid113.Text == "1" || textBoxid113.Text == "9811" || textBoxid113.Text == "2600" || textBoxid113.Text == "2") { checkBox113.Visible = true; };
         }
         private void comboBox114_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox114.Text = comboBox114.Text;
             textBoxid114.Text = findPlugin(comboBox114.Text).ToString();
             if (comboBox114.Text == "Empty Button") { textBox114.Text = ""; textBoxid114.Text = ""; };
+            checkBox114.Visible = false;
+            checkBox114.Checked = false;
+            if (textBoxid114.Text == "504" || textBoxid114.Text == "501" || textBoxid114.Text == "96742" || textBoxid114.Text == "1" || textBoxid114.Text == "9811" || textBoxid114.Text == "2600" || textBoxid114.Text == "2") { checkBox114.Visible = true; };
         }
 
 
@@ -1918,6 +1964,12 @@ namespace BlackGlassEditor
             else if (checkEmptyCombos() > 0) MessageBox.Show("Error: At least a Button has no associated plugin!");
             else
             {
+                String plugin_name = "";
+                String texture_name = "";
+
+                String pictures_plugin_trick = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                String plugin_trick = "";
+
 
                 String weather_button = "";
 
@@ -2295,6 +2347,64 @@ namespace BlackGlassEditor
 		</control>
 
         ";
+                    if (checkBox105.Checked == true) {
+                        plugin_trick = "";
+                        if (textBoxid105.Text == "2") plugin_trick = pictures_plugin_trick;
+                        plugin_name = findFanartPluginName(textBoxid105.Text);
+                        texture_name = findFanartTexture(textBoxid105.Text);
+                        txt = txt + @"<control>
+			<description>105 fanart Black cover</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>114</posX>
+			<posY>231</posY>
+			<width>232</width>
+			<height>183</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>ff000000</colordiffuse>
+			<texture mask=""basichome_105_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(105)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>	
+		</control>
+        <control>
+			<description>105 fanart unfocused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>114</posX>
+			<posY>231</posY>
+			<width>232</width>
+			<height>183</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>90ffffff</colordiffuse>
+			<texture mask=""basichome_105_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(105)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>	
+		</control>
+        <control>
+			<description>105 fanart focused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>114</posX>
+			<posY>231</posY>
+			<width>232</width>
+			<height>183</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask=""basichome_105_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(105)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>	
+		</control>
+        
+        ";
+                    }
                 }
 
                 if (comboBox106.SelectedItem.ToString() != findPluginName(0))
@@ -2338,6 +2448,65 @@ namespace BlackGlassEditor
 		</control>
 
         ";
+                    if (checkBox106.Checked == true)
+                    {
+                        plugin_trick = "";
+                        if (textBoxid106.Text == "2") plugin_trick = pictures_plugin_trick;
+                        plugin_name = findFanartPluginName(textBoxid106.Text);
+                        texture_name = findFanartTexture(textBoxid106.Text);
+                        txt = txt + @"<control>
+			<description>106 fanart Black cover</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>342</posX>
+			<posY>270</posY>
+			<width>205</width>
+			<height>151</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>ff000000</colordiffuse>
+			<texture mask=""basichome_106_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(106)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
+		</control>
+        <control>
+			<description>106 fanart unfocused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>342</posX>
+			<posY>270</posY>
+			<width>205</width>
+			<height>151</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>90ffffff</colordiffuse>
+			<texture mask=""basichome_106_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(106)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>	
+		</control>
+        <control>
+			<description>106 fanart focused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>342</posX>
+			<posY>270</posY>
+			<width>205</width>
+			<height>151</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask=""basichome_106_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(106)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>	
+		</control>
+        
+        ";
+                    }
                 }
 
                 if (comboBox107.SelectedItem.ToString() != findPluginName(0))
@@ -2381,6 +2550,65 @@ namespace BlackGlassEditor
 		</control>
 
         ";
+                    if (checkBox107.Checked == true)
+                    {
+                        plugin_trick = "";
+                        if (textBoxid107.Text == "2") plugin_trick = pictures_plugin_trick;
+                        plugin_name = findFanartPluginName(textBoxid107.Text);
+                        texture_name = findFanartTexture(textBoxid107.Text);
+                        txt = txt + @"<control>
+			<description>107 fanart Black cover</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>543</posX>
+			<posY>286</posY>
+			<width>194</width>
+			<height>137</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>ff000000</colordiffuse>
+			<texture mask=""basichome_107_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(107)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>
+        <control>
+			<description>107 fanart unfocused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>543</posX>
+			<posY>286</posY>
+			<width>194</width>
+			<height>137</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>90ffffff</colordiffuse>
+			<texture mask=""basichome_107_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(107)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>	
+		</control>
+        <control>
+			<description>107 fanart focused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>543</posX>
+			<posY>286</posY>
+			<width>194</width>
+			<height>137</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask=""basichome_107_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(107)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>	
+		</control>
+        
+        ";
+                    }
                 }
 
                 if (comboBox108.SelectedItem.ToString() != findPluginName(0))
@@ -2424,6 +2652,65 @@ namespace BlackGlassEditor
 		</control>
 
         ";
+                    if (checkBox108.Checked == true)
+                    {
+                        plugin_trick = "";
+                        if (textBoxid108.Text == "2") plugin_trick = pictures_plugin_trick;
+                        plugin_name = findFanartPluginName(textBoxid108.Text);
+                        texture_name = findFanartTexture(textBoxid108.Text);
+                        txt = txt + @"<control>
+			<description>108 fanart Black cover</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>733</posX>
+			<posY>270</posY>
+			<width>205</width>
+			<height>151</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>ff000000</colordiffuse>
+			<texture mask=""basichome_108_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(108)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
+		</control>
+        <control>
+			<description>108 fanart unfocused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>733</posX>
+			<posY>270</posY>
+			<width>205</width>
+			<height>151</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>90ffffff</colordiffuse>
+			<texture mask=""basichome_108_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(108)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>	
+		</control>
+        <control>
+			<description>108 fanart focused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>733</posX>
+			<posY>270</posY>
+			<width>205</width>
+			<height>151</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask=""basichome_108_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(108)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
+		</control>
+        
+        ";
+                    }
                 }
 
                 if (comboBox109.SelectedItem.ToString() != findPluginName(0))
@@ -2467,6 +2754,65 @@ namespace BlackGlassEditor
 		</control>
 
         ";
+                    if (checkBox109.Checked == true)
+                    {
+                        plugin_trick = "";
+                        if (textBoxid109.Text == "2") plugin_trick = pictures_plugin_trick;
+                        plugin_name = findFanartPluginName(textBoxid109.Text);
+                        texture_name = findFanartTexture(textBoxid109.Text);
+                        txt = txt + @"<control>
+			<description>109 fanart Black cover</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>935</posX>
+			<posY>231</posY>
+			<width>232</width>
+			<height>183</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>ff000000</colordiffuse>
+			<texture mask=""basichome_109_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(109)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
+		</control>
+        <control>
+			<description>109 fanart unfocused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>935</posX>
+			<posY>231</posY>
+			<width>232</width>
+			<height>183</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>90ffffff</colordiffuse>
+			<texture mask=""basichome_109_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(109)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
+		</control>
+        <control>
+			<description>109 fanart focused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>935</posX>
+			<posY>231</posY>
+			<width>232</width>
+			<height>183</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask=""basichome_109_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(109)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
+		</control>
+        
+        ";
+                    }
                 }
 
                 if (comboBox110.SelectedItem.ToString() != findPluginName(0))
@@ -2510,6 +2856,65 @@ namespace BlackGlassEditor
 		</control>
 
         ";
+                    if (checkBox110.Checked == true)
+                    {
+                        plugin_trick = "";
+                        if (textBoxid110.Text == "2") plugin_trick = pictures_plugin_trick;
+                        plugin_name = findFanartPluginName(textBoxid110.Text);
+                        texture_name = findFanartTexture(textBoxid110.Text);
+                        txt = txt + @"<control>
+			<description>110 fanart Black cover</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>126</posX>
+			<posY>76</posY>
+			<width>226</width>
+			<height>196</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>ff000000</colordiffuse>
+			<texture mask=""basichome_110_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(110)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
+		</control>
+        <control>
+			<description>110 fanart unfocused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>126</posX>
+			<posY>76</posY>
+			<width>226</width>
+			<height>196</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>90ffffff</colordiffuse>
+			<texture mask=""basichome_110_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(110)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>	
+		</control>
+        <control>
+			<description>110 fanart focused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>126</posX>
+			<posY>76</posY>
+			<width>226</width>
+			<height>196</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask=""basichome_110_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(110)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
+		</control>
+        
+        ";
+                    }
                 }
 
                 if (comboBox111.SelectedItem.ToString() != findPluginName(0))
@@ -2553,6 +2958,65 @@ namespace BlackGlassEditor
 		</control>
 
         ";
+                    if (checkBox111.Checked == true)
+                    {
+                        plugin_trick = "";
+                        if (textBoxid111.Text == "2") plugin_trick = pictures_plugin_trick;
+                        plugin_name = findFanartPluginName(textBoxid111.Text);
+                        texture_name = findFanartTexture(textBoxid111.Text);
+                        txt = txt + @"<control>
+			<description>111 fanart Black cover</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>348</posX>
+			<posY>138</posY>
+			<width>201</width>
+			<height>154</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>ff000000</colordiffuse>
+			<texture mask=""basichome_111_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(111)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
+		</control>
+        <control>
+			<description>111 fanart unfocused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>348</posX>
+			<posY>138</posY>
+			<width>201</width>
+			<height>154</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>90ffffff</colordiffuse>
+			<texture mask=""basichome_111_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(111)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>	
+		</control>
+        <control>
+			<description>111 fanart focused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>348</posX>
+			<posY>138</posY>
+			<width>201</width>
+			<height>154</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask=""basichome_111_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(111)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
+		</control>
+        
+        ";
+                    }
                 }
 
                 if (comboBox112.SelectedItem.ToString() != findPluginName(0))
@@ -2596,6 +3060,65 @@ namespace BlackGlassEditor
 		</control>
 
         ";
+                    if (checkBox112.Checked == true)
+                    {
+                        plugin_trick = "";
+                        if (textBoxid112.Text == "2") plugin_trick = pictures_plugin_trick;
+                        plugin_name = findFanartPluginName(textBoxid112.Text);
+                        texture_name = findFanartTexture(textBoxid112.Text);
+                        txt = txt + @"<control>
+			<description>112 fanart Black cover</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>545</posX>
+			<posY>162</posY>
+			<width>190</width>
+			<height>133</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>ff000000</colordiffuse>
+			<texture mask=""basichome_112_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(112)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>
+        <control>
+			<description>112 fanart unfocused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>545</posX>
+			<posY>162</posY>
+			<width>190</width>
+			<height>133</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>90ffffff</colordiffuse>
+			<texture mask=""basichome_112_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(112)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>	
+		</control>
+        <control>
+			<description>112 fanart focused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>545</posX>
+			<posY>162</posY>
+			<width>190</width>
+			<height>133</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask=""basichome_112_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(112)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>	
+		</control>
+        
+        ";
+                    }
                 }
 
                 if (comboBox113.SelectedItem.ToString() != findPluginName(0))
@@ -2639,6 +3162,65 @@ namespace BlackGlassEditor
 		</control>
 
         ";
+                    if (checkBox113.Checked == true)
+                    {
+                        plugin_trick = "";
+                        if (textBoxid113.Text == "2") plugin_trick = pictures_plugin_trick;
+                        plugin_name = findFanartPluginName(textBoxid113.Text);
+                        texture_name = findFanartTexture(textBoxid113.Text);
+                        txt = txt + @"<control>
+			<description>113 fanart Black cover</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>731</posX>
+			<posY>138</posY>
+			<width>201</width>
+			<height>154</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>ff000000</colordiffuse>
+			<texture mask=""basichome_113_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(113)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
+		</control>
+        <control>
+			<description>113 fanart unfocused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>731</posX>
+			<posY>138</posY>
+			<width>201</width>
+			<height>154</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>90ffffff</colordiffuse>
+			<texture mask=""basichome_113_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(113)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>	
+		</control>
+        <control>
+			<description>113 fanart focused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>731</posX>
+			<posY>138</posY>
+			<width>201</width>
+			<height>154</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask=""basichome_113_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(113)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
+		</control>
+        
+        ";
+                    }
                 }
 
                 if (comboBox114.SelectedItem.ToString() != findPluginName(0))
@@ -2682,6 +3264,65 @@ namespace BlackGlassEditor
 		</control>
 
         ";
+                    if (checkBox114.Checked == true)
+                    {
+                        plugin_trick = "";
+                        if (textBoxid114.Text == "2") plugin_trick = pictures_plugin_trick;
+                        plugin_name = findFanartPluginName(textBoxid114.Text);
+                        texture_name = findFanartTexture(textBoxid114.Text);
+                        txt = txt + @"<control>
+			<description>114 fanart Black cover</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>929</posX>
+			<posY>76</posY>
+			<width>225</width>
+			<height>196</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>ff000000</colordiffuse>
+			<texture mask=""basichome_114_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(114)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
+		</control>
+        <control>
+			<description>114 fanart unfocused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>929</posX>
+			<posY>76</posY>
+			<width>225</width>
+			<height>196</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<colordiffuse>90ffffff</colordiffuse>
+			<texture mask=""basichome_114_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(114)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>	
+		</control>
+        <control>
+			<description>114 fanart focused</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>929</posX>
+			<posY>76</posY>
+			<width>225</width>
+			<height>196</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask=""basichome_114_mask.png"">" + texture_name + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(114)" + plugin_trick + @"</visible>
+			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
+		</control>
+        
+        ";
+                    }
                 }
 
                 txt = txt + @"<!-- SUBTITLES -->";
@@ -2878,6 +3519,9 @@ namespace BlackGlassEditor
                 if (textBoxid100.Text == "") textWriter.WriteString("0");
                 if (textBoxid100.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid100.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2890,6 +3534,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("plugin", "");
                 if (textBoxid101.Text == "") textWriter.WriteString("0");
                 if (textBoxid101.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid101.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString("");
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -2904,6 +3551,9 @@ namespace BlackGlassEditor
                 if (textBoxid102.Text == "") textWriter.WriteString("0");
                 if (textBoxid102.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid102.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2916,6 +3566,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("plugin", "");
                 if (textBoxid103.Text == "") textWriter.WriteString("0");
                 if (textBoxid103.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid103.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString("");
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -2930,6 +3583,9 @@ namespace BlackGlassEditor
                 if (textBoxid104.Text == "") textWriter.WriteString("0");
                 if (textBoxid104.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid104.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2942,6 +3598,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("plugin", "");
                 if (textBoxid105.Text == "") textWriter.WriteString("0");
                 if (textBoxid105.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid105.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox105.Checked.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -2956,6 +3615,9 @@ namespace BlackGlassEditor
                 if (textBoxid106.Text == "") textWriter.WriteString("0");
                 if (textBoxid106.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid106.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox106.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2968,6 +3630,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("plugin", "");
                 if (textBoxid107.Text == "") textWriter.WriteString("0");
                 if (textBoxid107.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid107.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox107.Checked.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -2982,6 +3647,9 @@ namespace BlackGlassEditor
                 if (textBoxid108.Text == "") textWriter.WriteString("0");
                 if (textBoxid108.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid108.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox108.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2994,6 +3662,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("plugin", "");
                 if (textBoxid109.Text == "") textWriter.WriteString("0");
                 if (textBoxid109.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid109.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox109.Checked.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3008,6 +3679,9 @@ namespace BlackGlassEditor
                 if (textBoxid110.Text == "") textWriter.WriteString("0");
                 if (textBoxid110.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid110.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox110.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3020,6 +3694,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("plugin", "");
                 if (textBoxid111.Text == "") textWriter.WriteString("0");
                 if (textBoxid111.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid111.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox111.Checked.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3034,6 +3711,9 @@ namespace BlackGlassEditor
                 if (textBoxid112.Text == "") textWriter.WriteString("0");
                 if (textBoxid112.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid112.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox112.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3046,6 +3726,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("plugin", "");
                 if (textBoxid113.Text == "") textWriter.WriteString("0");
                 if (textBoxid113.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid113.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox113.Checked.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3060,6 +3743,9 @@ namespace BlackGlassEditor
                 if (textBoxid114.Text == "") textWriter.WriteString("0");
                 if (textBoxid114.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid114.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString(SecurityElement.Escape(checkBox114.Checked.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3071,6 +3757,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("plugin", "");
                 textWriter.WriteString(BlackGlassDirClass.Path);
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString("");
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3086,6 +3775,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("plugin", "");
                 textWriter.WriteString(themecolor);
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString("");
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
                 // Ends the document.
@@ -3760,7 +4452,71 @@ namespace BlackGlassEditor
 
         }
 
+
+        private String findFanartPluginName(String id)
+        {
+            String plugin_name = "";
+            switch (id)
+            {
+                case "504":
+                    plugin_name = "Music";
+                    break;
+                case "501":
+                    plugin_name = "Music";
+                    break;
+                case "1":
+                    plugin_name = "TV";
+                    break;
+                case "2":
+                    plugin_name = "Pictures";
+                    break;
+                case "96742":
+                    plugin_name = "Moving Pictures";
+                    break;
+                case "9811":
+                    plugin_name = "MP-TV Series";
+                    break;
+                case "2600":
+                    plugin_name = "InfoService";
+                    break;
+                default:
+                    break;
+            }
+            return plugin_name;
+        }
+
+        private String findFanartTexture(String id)
+        {
+            String texture = "";
+            switch (id)
+            {
+                case "504":
+                    texture = "#fanarthandler.music.latest1.fanart1";
+                    break;
+                case "501":
+                    texture = "#fanarthandler.music.latest1.fanart1";
+                    break;
+                case "1":
+                    texture = "#fanarthandler.tvrecordings.latest1.thumb";
+                    break;
+                case "2":
+                    texture = "#fanarthandler.picture.latest1.thumb";
+                    break;
+                case "96742":
+                    texture = "#fanarthandler.movingpicture.latest1.fanart";
+                    break;
+                case "9811":
+                    texture = "#fanarthandler.tvseries.latest1.fanart";
+                    break;
+                case "2600":
+                    texture = "animations\\weather\\#infoservice.weather.today.img.big.filenamewithoutext.jpg";
+                    break;
+                default:
+                    break;
+            }
+            return texture;
+        }
+
+
     }
-
-
 }
