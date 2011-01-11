@@ -2356,10 +2356,10 @@ namespace BlackGlassEditor
 			<description>105 fanart Black cover</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>114</posX>
-			<posY>231</posY>
-			<width>232</width>
-			<height>183</height>
+			<posX>124</posX>
+			<posY>238</posY>
+			<width>211</width>
+			<height>160</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2373,10 +2373,10 @@ namespace BlackGlassEditor
 			<description>105 fanart unfocused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>114</posX>
-			<posY>231</posY>
-			<width>232</width>
-			<height>183</height>
+			<posX>124</posX>
+			<posY>238</posY>
+			<width>211</width>
+			<height>160</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2390,10 +2390,10 @@ namespace BlackGlassEditor
 			<description>105 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>114</posX>
-			<posY>231</posY>
-			<width>232</width>
-			<height>183</height>
+			<posX>124</posX>
+			<posY>238</posY>
+			<width>211</width>
+			<height>160</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2458,10 +2458,10 @@ namespace BlackGlassEditor
 			<description>106 fanart Black cover</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>342</posX>
-			<posY>270</posY>
-			<width>205</width>
-			<height>151</height>
+			<posX>352</posX>
+			<posY>277</posY>
+			<width>184</width>
+			<height>129</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2475,10 +2475,10 @@ namespace BlackGlassEditor
 			<description>106 fanart unfocused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>342</posX>
-			<posY>270</posY>
-			<width>205</width>
-			<height>151</height>
+			<posX>352</posX>
+			<posY>277</posY>
+			<width>184</width>
+			<height>129</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2492,10 +2492,10 @@ namespace BlackGlassEditor
 			<description>106 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>342</posX>
-			<posY>270</posY>
-			<width>205</width>
-			<height>151</height>
+			<posX>352</posX>
+			<posY>277</posY>
+			<width>184</width>
+			<height>129</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2560,10 +2560,10 @@ namespace BlackGlassEditor
 			<description>107 fanart Black cover</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>543</posX>
-			<posY>286</posY>
-			<width>194</width>
-			<height>137</height>
+			<posX>554</posX>
+			<posY>293</posY>
+			<width>172</width>
+			<height>114</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2577,10 +2577,10 @@ namespace BlackGlassEditor
 			<description>107 fanart unfocused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>543</posX>
-			<posY>286</posY>
-			<width>194</width>
-			<height>137</height>
+			<posX>554</posX>
+			<posY>293</posY>
+			<width>172</width>
+			<height>114</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2594,10 +2594,10 @@ namespace BlackGlassEditor
 			<description>107 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>543</posX>
-			<posY>286</posY>
-			<width>194</width>
-			<height>137</height>
+			<posX>554</posX>
+			<posY>293</posY>
+			<width>172</width>
+			<height>114</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2662,10 +2662,10 @@ namespace BlackGlassEditor
 			<description>108 fanart Black cover</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>733</posX>
-			<posY>270</posY>
-			<width>205</width>
-			<height>151</height>
+			<posX>744</posX>
+			<posY>277</posY>
+			<width>184</width>
+			<height>129</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2679,10 +2679,10 @@ namespace BlackGlassEditor
 			<description>108 fanart unfocused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>733</posX>
-			<posY>270</posY>
-			<width>205</width>
-			<height>151</height>
+			<posX>744</posX>
+			<posY>277</posY>
+			<width>184</width>
+			<height>129</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2696,10 +2696,10 @@ namespace BlackGlassEditor
 			<description>108 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>733</posX>
-			<posY>270</posY>
-			<width>205</width>
-			<height>151</height>
+			<posX>744</posX>
+			<posY>277</posY>
+			<width>184</width>
+			<height>129</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2764,10 +2764,10 @@ namespace BlackGlassEditor
 			<description>109 fanart Black cover</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>935</posX>
-			<posY>231</posY>
-			<width>232</width>
-			<height>183</height>
+			<posX>945</posX>
+			<posY>238</posY>
+			<width>211</width>
+			<height>160</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2781,10 +2781,10 @@ namespace BlackGlassEditor
 			<description>109 fanart unfocused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>935</posX>
-			<posY>231</posY>
-			<width>232</width>
-			<height>183</height>
+			<posX>945</posX>
+			<posY>238</posY>
+			<width>211</width>
+			<height>160</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2798,10 +2798,10 @@ namespace BlackGlassEditor
 			<description>109 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>935</posX>
-			<posY>231</posY>
-			<width>232</width>
-			<height>183</height>
+			<posX>945</posX>
+			<posY>238</posY>
+			<width>211</width>
+			<height>160</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2866,10 +2866,10 @@ namespace BlackGlassEditor
 			<description>110 fanart Black cover</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>126</posX>
-			<posY>76</posY>
-			<width>226</width>
-			<height>196</height>
+			<posX>137</posX>
+			<posY>83</posY>
+			<width>204</width>
+			<height>174</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2883,10 +2883,10 @@ namespace BlackGlassEditor
 			<description>110 fanart unfocused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>126</posX>
-			<posY>76</posY>
-			<width>226</width>
-			<height>196</height>
+			<posX>137</posX>
+			<posY>83</posY>
+			<width>204</width>
+			<height>174</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2900,10 +2900,10 @@ namespace BlackGlassEditor
 			<description>110 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>126</posX>
-			<posY>76</posY>
-			<width>226</width>
-			<height>196</height>
+			<posX>137</posX>
+			<posY>83</posY>
+			<width>204</width>
+			<height>174</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2968,10 +2968,10 @@ namespace BlackGlassEditor
 			<description>111 fanart Black cover</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>348</posX>
-			<posY>138</posY>
-			<width>201</width>
-			<height>154</height>
+			<posX>358</posX>
+			<posY>145</posY>
+			<width>180</width>
+			<height>132</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -2985,10 +2985,10 @@ namespace BlackGlassEditor
 			<description>111 fanart unfocused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>348</posX>
-			<posY>138</posY>
-			<width>201</width>
-			<height>154</height>
+			<posX>358</posX>
+			<posY>145</posY>
+			<width>180</width>
+			<height>132</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -3002,10 +3002,10 @@ namespace BlackGlassEditor
 			<description>111 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>348</posX>
-			<posY>138</posY>
-			<width>201</width>
-			<height>154</height>
+			<posX>358</posX>
+			<posY>145</posY>
+			<width>180</width>
+			<height>132</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -3070,10 +3070,10 @@ namespace BlackGlassEditor
 			<description>112 fanart Black cover</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>545</posX>
-			<posY>162</posY>
-			<width>190</width>
-			<height>133</height>
+			<posX>556</posX>
+			<posY>169</posY>
+			<width>168</width>
+			<height>110</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -3087,10 +3087,10 @@ namespace BlackGlassEditor
 			<description>112 fanart unfocused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>545</posX>
-			<posY>162</posY>
-			<width>190</width>
-			<height>133</height>
+			<posX>556</posX>
+			<posY>169</posY>
+			<width>168</width>
+			<height>110</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -3104,10 +3104,10 @@ namespace BlackGlassEditor
 			<description>112 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>545</posX>
-			<posY>162</posY>
-			<width>190</width>
-			<height>133</height>
+			<posX>556</posX>
+			<posY>169</posY>
+			<width>168</width>
+			<height>110</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -3172,10 +3172,10 @@ namespace BlackGlassEditor
 			<description>113 fanart Black cover</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>731</posX>
-			<posY>138</posY>
-			<width>201</width>
-			<height>154</height>
+			<posX>742</posX>
+			<posY>145</posY>
+			<width>180</width>
+			<height>132</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -3189,10 +3189,10 @@ namespace BlackGlassEditor
 			<description>113 fanart unfocused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>731</posX>
-			<posY>138</posY>
-			<width>201</width>
-			<height>154</height>
+			<posX>742</posX>
+			<posY>145</posY>
+			<width>180</width>
+			<height>132</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -3206,10 +3206,10 @@ namespace BlackGlassEditor
 			<description>113 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>731</posX>
-			<posY>138</posY>
-			<width>201</width>
-			<height>154</height>
+			<posX>742</posX>
+			<posY>145</posY>
+			<width>180</width>
+			<height>132</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -3274,10 +3274,10 @@ namespace BlackGlassEditor
 			<description>114 fanart Black cover</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>929</posX>
-			<posY>76</posY>
-			<width>225</width>
-			<height>196</height>
+			<posX>939</posX>
+			<posY>83</posY>
+			<width>205</width>
+			<height>174</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -3291,10 +3291,10 @@ namespace BlackGlassEditor
 			<description>114 fanart unfocused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>929</posX>
-			<posY>76</posY>
-			<width>225</width>
-			<height>196</height>
+			<posX>939</posX>
+			<posY>83</posY>
+			<width>205</width>
+			<height>174</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
@@ -3308,10 +3308,10 @@ namespace BlackGlassEditor
 			<description>114 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
-			<posX>929</posX>
-			<posY>76</posY>
-			<width>225</width>
-			<height>196</height>
+			<posX>939</posX>
+			<posY>83</posY>
+			<width>205</width>
+			<height>174</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
