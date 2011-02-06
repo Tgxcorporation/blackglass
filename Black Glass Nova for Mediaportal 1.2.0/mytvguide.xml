@@ -8,7 +8,27 @@
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#header.background</texture>
+			<animation effect="fade" time="1">WindowClose</animation>			
+		</control>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>10</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>!control.isvisible(32)</visible>
+		</control>
 		<import>common.window.time.xml</import>
 		<control>
 			<type>image</type>

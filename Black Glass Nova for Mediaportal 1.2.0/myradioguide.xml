@@ -8,7 +8,27 @@
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#header.background</texture>
+			<animation effect="fade" time="1">WindowClose</animation>			
+		</control>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>10</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>!control.isvisible(32)</visible>
+		</control>
 		<import>common.window.time.xml</import>
 		<control>
 			<type>image</type>
@@ -30,7 +50,7 @@
 			<colordiffuse>ffffffff</colordiffuse>
 			<texture>-</texture>
 		</control>
-		<!-- <control>
+		<control>
 			<description>Single Channel View Label</description>
 			<type>label</type>
 			<id>32</id>
@@ -54,7 +74,7 @@
 			<texture>defaultAudioBig.png</texture>
 			<centered>yes</centered>
 			<animation effect="fade" time="250">visiblechange</animation>
-		</control> -->
+		</control>
 
 		<!-- Timeheader background must be dedfined before Timeheader label template -->
 		<!-- b/c Timeheader is on the background and will be rendered first -->
@@ -178,6 +198,34 @@
 			<posX>10</posX>
 			<posY>5</posY>
 		</control>
+		<control>
+			<description>TvGroup button</description>
+			<type>button</type>
+			<id>100</id>
+			<posX>21</posX>
+			<posY>129</posY>
+			<width>45</width>
+			<height>342</height>
+			<textureNoFocus>tvguide_button_group_nofocus.png</textureNoFocus>
+			<textureFocus>tvguide_button_group_focus.png</textureFocus>
+			<label/>
+			<onleft>60</onleft>
+			<onright>6</onright>
+			<onup>6</onup>
+			<ondown>6</ondown>
+		</control>
+		<control>
+			<description>TvGroup button label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>28</posX>
+			<posY>460</posY>
+			<label>#Radio.Guide.ChangeGroup</label>
+			<textcolor>ffFFFFFF</textcolor>
+			<align>left</align>
+			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
+		</control>
 		<!-- <control>
 			<description>template for program running button</description>
 			<type>button3part</type>
@@ -227,45 +275,7 @@
 			<textureIcon>-</textureIcon>
 		</control> -->
 
-		<!-- <control>
-			<description>TvGroup button</description>
-			<type>button</type>
-			<id>100</id>
-			<posX>22</posX>
-			<posY>128</posY>
-			<width>43</width>
-			<height>343</height>
-			<textureNoFocus>tvguide_button_group_nofocus.png</textureNoFocus>
-			<textureFocus>tvguide_button_group_focus.png</textureFocus>
-			<label></label>
-			<onleft>60</onleft>
-			<onright>6</onright>
-			<onup>6</onup>
-			<ondown>6</ondown>
-		</control>
-		<control>
-			<description>TvGroup button label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>28</posX>
-			<posY>460</posY>
-			<label>#Radio.Guide.ChangeGroup</label>
-			<textcolor>90FFFFFF</textcolor>
-			<align>left</align>
-			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
-		</control>
-		<control>
-			<description>TvGroup button label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>28</posX>
-			<posY>460</posY>
-			<label>#Radio.Guide.ChangeGroup</label>
-			<textcolor>ffFFFFFF</textcolor>
-			<align>left</align>
-			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
-			<visible>control.hasfocus(100)</visible>
-		</control> -->
+		
 		<!-- INFO -->
 		<control>
 			<type>image</type>
@@ -398,7 +408,7 @@
 		
 		
 		<!-- NOT USED -->
-		<!-- <control>
+		<control>
 			<description>TV background</description>
 			<type>image</type>
 			<id>98</id>
@@ -408,7 +418,18 @@
 			<height>124</height>
 			<texture>Picture_cover.png</texture>
 			<visible>Player.HasVideo</visible>
-		</control> -->
+		</control>
+		<control>
+			<description>Guide Group Label</description>
+			<type>label</type>
+			<id>11</id>
+			<posX>2097</posX>
+			<posY>15</posY>
+			<width>1688</width>
+			<font>font14</font>
+			<align>left</align>
+			<label>#Radio.Guide.Group</label>
+		</control>
 		<control>
 			<description>record pin</description>
 			<type>image</type>
