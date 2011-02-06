@@ -2353,40 +2353,6 @@ namespace BlackGlassEditor
                         plugin_name = findFanartPluginName(textBoxid105.Text);
                         texture_name = findFanartTexture(textBoxid105.Text);
                         txt = txt + @"<control>
-			<description>105 fanart Black cover</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>124</posX>
-			<posY>238</posY>
-			<width>211</width>
-			<height>160</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask=""basichome_105_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(105)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>	
-		</control>
-        <control>
-			<description>105 fanart unfocused</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>124</posX>
-			<posY>238</posY>
-			<width>211</width>
-			<height>160</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask=""basichome_105_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(105)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>	
-		</control>
-        <control>
 			<description>105 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
@@ -2400,8 +2366,9 @@ namespace BlackGlassEditor
 			<texture mask=""basichome_105_mask.png"">" + texture_name + @"</texture>
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(105)" + plugin_trick + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>	
-		</control>
+			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"">visiblechange</animation>
+        </control>
         
         ";
                     }
@@ -2455,40 +2422,6 @@ namespace BlackGlassEditor
                         plugin_name = findFanartPluginName(textBoxid106.Text);
                         texture_name = findFanartTexture(textBoxid106.Text);
                         txt = txt + @"<control>
-			<description>106 fanart Black cover</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>352</posX>
-			<posY>277</posY>
-			<width>184</width>
-			<height>129</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask=""basichome_106_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(106)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
-        <control>
-			<description>106 fanart unfocused</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>352</posX>
-			<posY>277</posY>
-			<width>184</width>
-			<height>129</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask=""basichome_106_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(106)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>	
-		</control>
-        <control>
 			<description>106 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
@@ -2502,7 +2435,8 @@ namespace BlackGlassEditor
 			<texture mask=""basichome_106_mask.png"">" + texture_name + @"</texture>
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(106)" + plugin_trick + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>	
+			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"">visiblechange</animation>	
 		</control>
         
         ";
@@ -2557,40 +2491,6 @@ namespace BlackGlassEditor
                         plugin_name = findFanartPluginName(textBoxid107.Text);
                         texture_name = findFanartTexture(textBoxid107.Text);
                         txt = txt + @"<control>
-			<description>107 fanart Black cover</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>554</posX>
-			<posY>293</posY>
-			<width>172</width>
-			<height>114</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask=""basichome_107_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(107)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>
-        <control>
-			<description>107 fanart unfocused</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>554</posX>
-			<posY>293</posY>
-			<width>172</width>
-			<height>114</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask=""basichome_107_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(107)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>	
-		</control>
-        <control>
 			<description>107 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
@@ -2604,7 +2504,8 @@ namespace BlackGlassEditor
 			<texture mask=""basichome_107_mask.png"">" + texture_name + @"</texture>
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(107)" + plugin_trick + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>	
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"">visiblechange</animation>	
 		</control>
         
         ";
@@ -2659,40 +2560,6 @@ namespace BlackGlassEditor
                         plugin_name = findFanartPluginName(textBoxid108.Text);
                         texture_name = findFanartTexture(textBoxid108.Text);
                         txt = txt + @"<control>
-			<description>108 fanart Black cover</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>744</posX>
-			<posY>277</posY>
-			<width>184</width>
-			<height>129</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask=""basichome_108_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(108)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
-        <control>
-			<description>108 fanart unfocused</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>744</posX>
-			<posY>277</posY>
-			<width>184</width>
-			<height>129</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask=""basichome_108_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(108)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>	
-		</control>
-        <control>
 			<description>108 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
@@ -2707,6 +2574,7 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(108)" + plugin_trick + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"">visiblechange</animation>	
 		</control>
         
         ";
@@ -2761,40 +2629,6 @@ namespace BlackGlassEditor
                         plugin_name = findFanartPluginName(textBoxid109.Text);
                         texture_name = findFanartTexture(textBoxid109.Text);
                         txt = txt + @"<control>
-			<description>109 fanart Black cover</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>945</posX>
-			<posY>238</posY>
-			<width>211</width>
-			<height>160</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask=""basichome_109_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(109)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
-        <control>
-			<description>109 fanart unfocused</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>945</posX>
-			<posY>238</posY>
-			<width>211</width>
-			<height>160</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask=""basichome_109_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(109)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
-        <control>
 			<description>109 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
@@ -2809,6 +2643,7 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(109)" + plugin_trick + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"">visiblechange</animation>	
 		</control>
         
         ";
@@ -2863,40 +2698,6 @@ namespace BlackGlassEditor
                         plugin_name = findFanartPluginName(textBoxid110.Text);
                         texture_name = findFanartTexture(textBoxid110.Text);
                         txt = txt + @"<control>
-			<description>110 fanart Black cover</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>137</posX>
-			<posY>83</posY>
-			<width>204</width>
-			<height>174</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask=""basichome_110_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(110)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
-        <control>
-			<description>110 fanart unfocused</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>137</posX>
-			<posY>83</posY>
-			<width>204</width>
-			<height>174</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask=""basichome_110_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(110)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>	
-		</control>
-        <control>
 			<description>110 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
@@ -2911,6 +2712,7 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(110)" + plugin_trick + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"">visiblechange</animation>	
 		</control>
         
         ";
@@ -2965,40 +2767,6 @@ namespace BlackGlassEditor
                         plugin_name = findFanartPluginName(textBoxid111.Text);
                         texture_name = findFanartTexture(textBoxid111.Text);
                         txt = txt + @"<control>
-			<description>111 fanart Black cover</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>358</posX>
-			<posY>145</posY>
-			<width>180</width>
-			<height>132</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask=""basichome_111_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(111)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
-        <control>
-			<description>111 fanart unfocused</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>358</posX>
-			<posY>145</posY>
-			<width>180</width>
-			<height>132</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask=""basichome_111_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(111)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>	
-		</control>
-        <control>
 			<description>111 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
@@ -3013,6 +2781,7 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(111)" + plugin_trick + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"">visiblechange</animation>	
 		</control>
         
         ";
@@ -3067,40 +2836,6 @@ namespace BlackGlassEditor
                         plugin_name = findFanartPluginName(textBoxid112.Text);
                         texture_name = findFanartTexture(textBoxid112.Text);
                         txt = txt + @"<control>
-			<description>112 fanart Black cover</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>556</posX>
-			<posY>169</posY>
-			<width>168</width>
-			<height>110</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask=""basichome_112_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(112)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>
-        <control>
-			<description>112 fanart unfocused</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>556</posX>
-			<posY>169</posY>
-			<width>168</width>
-			<height>110</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask=""basichome_112_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(112)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>	
-		</control>
-        <control>
 			<description>112 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
@@ -3114,7 +2849,8 @@ namespace BlackGlassEditor
 			<texture mask=""basichome_112_mask.png"">" + texture_name + @"</texture>
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(112)" + plugin_trick + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""1250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>	
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"">visiblechange</animation>	
 		</control>
         
         ";
@@ -3169,40 +2905,6 @@ namespace BlackGlassEditor
                         plugin_name = findFanartPluginName(textBoxid113.Text);
                         texture_name = findFanartTexture(textBoxid113.Text);
                         txt = txt + @"<control>
-			<description>113 fanart Black cover</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>742</posX>
-			<posY>145</posY>
-			<width>180</width>
-			<height>132</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask=""basichome_113_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(113)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
-		</control>
-        <control>
-			<description>113 fanart unfocused</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>742</posX>
-			<posY>145</posY>
-			<width>180</width>
-			<height>132</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask=""basichome_113_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(113)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>	
-		</control>
-        <control>
 			<description>113 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
@@ -3217,6 +2919,7 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(113)" + plugin_trick + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""1167"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""83"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"">visiblechange</animation>	
 		</control>
         
         ";
@@ -3271,40 +2974,6 @@ namespace BlackGlassEditor
                         plugin_name = findFanartPluginName(textBoxid114.Text);
                         texture_name = findFanartTexture(textBoxid114.Text);
                         txt = txt + @"<control>
-			<description>114 fanart Black cover</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>939</posX>
-			<posY>83</posY>
-			<width>205</width>
-			<height>174</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask=""basichome_114_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(114)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
-		</control>
-        <control>
-			<description>114 fanart unfocused</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>939</posX>
-			<posY>83</posY>
-			<width>205</width>
-			<height>174</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask=""basichome_114_mask.png"">" + texture_name + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+!control.hasfocus(114)" + plugin_trick + @"</visible>
-			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>	
-		</control>
-        <control>
 			<description>114 fanart focused</description>
 			<type>image</type>
 			<id>0</id>
@@ -3319,6 +2988,7 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(114)" + plugin_trick + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""1083"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""167"">WindowClose</animation>
+            <animation effect=""fade"" time=""250"">visiblechange</animation>	
 		</control>
         
         ";
