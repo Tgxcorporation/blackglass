@@ -110,41 +110,15 @@
 		</control>
 		<control>
 			<type>label</type>
-			<description>Number of Sites Label</description>
+			<description>Number Of Items Label</description>
 			<id>0</id>
 			<posX>650</posX>
 			<posY>688</posY>
-			<label>#itemcount #OnlineVideos.Translation.Sites.Label</label>
+			<label>#itemcount #itemtype</label>
 			<font>font12</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)+string.equals(#OnlineVideos.state, sites)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Number of Categories Label Without Selected Index</description>
-			<id>0</id>
-			<posX>650</posX>
-			<posY>688</posY>
-			<label>#itemcount #OnlineVideos.Translation.Categories.Label</label>
-			<font>font12</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)+string.equals(#OnlineVideos.state, categories)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Number of Videos Label Without Selected Index</description>
-			<id>0</id>
-			<posX>650</posX>
-			<posY>688</posY>
-			<label>#itemcount #OnlineVideos.Translation.Videos.Label</label>
-			<font>font12</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)+string.equals(#OnlineVideos.state, videos)</visible>
+			<visible>string.equals(#itemcount)+[facadeview.list|facadeview.album|facadeview.playlist]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
@@ -431,28 +405,6 @@
 					<textYOff>7</textYOff> -->
 				</control>
 				<!-- <control>
-					<type>button</type>
-					<description>Next Page</description>
-					<id>3</id>
-					<onright>50</onright>
-					<onup>8</onup>
-					<ondown>4</ondown>
-					<label>#OnlineVideos.Translation.NextPage.Label</label>
-					<height>49</height>
-					<textYOff>7</textYOff>
-				</control>
-				<control>
-					<type>button</type>
-					<description>Previous Page</description>
-					<id>4</id>
-					<onright>50</onright>
-					<onup>3</onup>
-					<ondown>11</ondown>
-					<label>#OnlineVideos.Translation.PreviousPage.Label</label>
-					<height>49</height>
-					<textYOff>7</textYOff>
-				</control> -->
-				<control>
 					<type>button</type>
 					<description>Favorites</description>
 					<id>11</id>
