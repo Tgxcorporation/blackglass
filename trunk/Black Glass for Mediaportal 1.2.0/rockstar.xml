@@ -2,7 +2,7 @@
 <window>
 	<id>47286</id>
 	<defaultcontrol>2</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:Rockstar</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_rockstar.png</define>
@@ -15,6 +15,8 @@
 		<import>common.window.time.xml</import>
 		<import>common.facade.background.basic.xml</import>
 		<!-- <import>common.facade.itemcount.itemtype.basic.xml</import> -->
+
+
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
@@ -42,6 +44,10 @@
 					<type>playlistcontrol</type>
 					<onleft>2</onleft>
 				</control>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
 				<control>
 					<id>200</id>
 					<description>Track listing</description>
@@ -116,7 +122,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(32)|control.hasfocus(30)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(20)|control.hasfocus(32)|control.hasfocus(30)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -135,7 +141,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(32)|control.hasfocus(30)]</visible>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(20)|control.hasfocus(32)|control.hasfocus(30)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -201,15 +207,24 @@
 					<type>button</type>
 					<onright>200</onright>
 					<onup>3</onup>
-					<ondown>32</ondown>
+					<ondown>20</ondown>
 					<label>Playlists</label>
+				</control>
+				<control>
+					<id>20</id>
+					<description>Popular Songs</description>
+					<type>button</type>
+					<onright>200</onright>
+					<onup>4</onup>
+					<ondown>32</ondown>
+					<label>Popular Songs</label>
 				</control>
 				<control>
 					<id>32</id>
 					<description>Shuffle on/off button</description>
 					<type>togglebutton</type>
 					<onright>200</onright>
-					<onup>4</onup>
+					<onup>20</onup>
 					<ondown>30</ondown>
 					<label>Shuffle</label>
 				</control>
@@ -222,80 +237,215 @@
 					<label>Repeat</label>
 				</control>
 			</control>
+		</control>
+
+		<control>
+			<type>group</type>
+			<visible>string.equals(#Rockstar.IsPlaying,true)+![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(20)|control.hasfocus(32)|control.hasfocus(30)]</visible>
+			<animation effect="Fade" time="100">VisibleChange</animation>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+			<dimColor>ffffffff</dimColor>
 			<control>
-				<description>Favorite Artist</description>
-				<type>fadelabel</type>
-				<label/>
-				<id>19</id>
-				<posX>30</posX>
-				<posY>400</posY>
-				<width>335</width>
-				<font>font14</font>
-				<align>left</align>
-				<label>#Rockstar.Current.Artist</label>
-				<wrapString> : : : </wrapString>
-			</control>
-			<control>
-				<description>Favorite Vid label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>30</posX>
-				<posY>430</posY>
-				<width>335</width>
-				<font>font14</font>
-				<align>left</align>
-				<label>#Rockstar.Current.Album</label>
-			</control>
-			<control>
-				<description>Favorite Vid label</description>
-				<type>label</type>
-				<id>999</id>
-				<posX>30</posX>
-				<posY>460</posY>
-				<width>335</width>
-				<font>font14</font>
-				<align>left</align>
-				<label>#Rockstar.Current.Title</label>
-			</control>
-			<control>
-				<description>Favorite Artist</description>
-				<type>image</type>
-				<id>15</id>
-				<width>115</width>     
-				<posX>45</posX>
-				<posY>504</posY>
-				<width>114</width>
-				<height>114</height>
-				<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Current.Thumb</texture>
-				<keepaspectratio>yes</keepaspectratio>     
-				<centered>yes</centered>
-			</control>
-			<control>
-				<description>Cd Case</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>30</posX>
-				<posY>500</posY>
-				<width>132</width>
-				<height>120</height>
-				<colordiffuse>ffffffff</colordiffuse>
-				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+				<width>486</width>
+				<height>166</height>
+				<posX>-6</posX>
+				<posY>558</posY>
+				<texture>bg_button2_focus.png</texture>
+				<colordiffuse>ccffffff</colordiffuse>
+			</control> 
+			<control>
+				<description>Progress background</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>133</posX>
+				<posY>634</posY>
+				<width>320</width>
+				<height>28</height>
+				<texture>osd_progress_background2.png</texture>
+				<colordiffuse>40ffffff</colordiffuse>
+			</control>
+			<!-- <control>
+				<type>progress</type>
+				<description>track progress</description>
+				<id>0</id>
+				<posX>122</posX>
+				<posY>633</posY>
+				<width>342</width>
+				<height>28</height>
+				<label>#percentage</label>
+				<lefttexture>osd_progress_mid_overlay.png</lefttexture>
+				<midtexture>osd_progress_mid_overlay.png</midtexture>
+				<righttexture>osd_progress_mid_overlay.png</righttexture>
+				</control> -->
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>133</posX>
+				<posY>580</posY>
+				<width>320</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>133</posX>
+				<posY>610</posY>
+				<width>320</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
 			</control>
 
+
+			<control>
+				<description>music logo</description>
+				<type>image</type>
+				<id>15</id>
+				<posX>30</posX>
+				<posY>590</posY>
+				<width>100</width>
+				<height>100</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture>#Play.Current.Thumb</texture>
+			</control>
 			<control>
 				<id>0</id>
+				<type>image</type>
+				<posX>26</posX>
+				<posY>586</posY>
+				<width>107</width>
+				<height>107</height>
+				<texture>OverlayCase.png</texture>
+			</control>
+			<control>
+				<description>Info</description>
+				<type>fadelabel</type>
+				<width>300</width>
+				<height>37</height>
+				<posX>140</posX>
+				<posY>666</posY>
+				<font>font16</font>
+				<label>#Rockstar.Current.Title : : : #Rockstar.Current.Album</label>
+				<textcolor>BBFFFFFF</textcolor>
+				<id>0</id>
+				<wrapString> : : : </wrapString>
+			</control>
+			<!-- 		<control>
+			<description>Artist</description>
+			<type>fadelabel</type>
+			<width>300</width>
+			<height>37</height>
+			<posX>140</posX>
+			<posY>617</posY>
+			<font>font16</font>
+			<label>#Play.Current.Artist</label>
+			<textcolor>60FFFFFF</textcolor>
+			<id>5</id>
+		</control> -->
+
+
+			<control>
 				<description>play time label</description>
 				<type>label</type>
-				<visible/>
-				<posX>30</posX>
-				<posY>645</posY>
-				<font>font24</font>
-				<textcolor>90ffffff</textcolor>
-				<align>LEFT</align>
-				<width>335</width>
+				<id>0</id>
+				<posX>140</posX>
+				<posY>578</posY>
 				<label>#Rockstar.CurrentPlaytime</label>
-				<animation effect="Fade" time="250">VisibleChange</animation>
+				<align>left</align>
+				<font>font32</font>
+				<textcolor>60ffffff</textcolor>
+			</control> 
+			<control>
+				<description>play time label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>140</posX>
+				<posY>633</posY>
+				<label>#Rockstar.Current.Artist</label>
+				<align>left</align>
+				<font>font16</font>
+				<width>300</width>
+				<textcolor>40ffffff</textcolor>
 			</control>
+			<!-- <control>
+			<description>video preview window</description>
+			<type>videowindow</type>
+			<id>9</id>
+			<posX>30</posX>
+			<posY>590</posY>
+			<width>100</width>
+			<height>100</height>
+			<action>18</action>
+			<keepaspectratio>no</keepaspectratio>
+			<textureFocus>tv_green_border.png</textureFocus>
+			<animation effect="fade" time="100">WindowOpen</animation>
+			<animation effect="fade" time="100">WindowClose</animation>
+		</control> -->
+			<!-- <control>
+				<description>Pause logo</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>407</posX>
+				<posY>583</posY>
+				<width>49</width>
+				<height>50</height>
+				<texture>logo_pause.png</texture>
+				<animation effect="fade" time="100">visible</animation>
+			</control>
+			<control>
+				<description>FF logo</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>402</posX>
+				<posY>588</posY>
+				<width>50</width>
+				<height>40</height>
+				<texture>logo_fastforward.png</texture>
+				<animation effect="fade" time="100">visible</animation>
+			</control>
+			<control>
+				<description>RW logo</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>400</posX>
+				<posY>588</posY>
+				<width>50</width>
+				<height>40</height>
+				<texture>logo_rewind.png</texture>
+				<animation effect="fade" time="100">visible</animation>
+			</control> -->
+			<!-- <control> 
+				<description>Image</description> 
+				<type>image</type> 
+				<id>0</id> 
+				<posX>409</posX>
+				<posY>591</posY>
+				<width>14</width>
+				<height>34</height>
+				<keepaspectratio>no</keepaspectratio> 
+				<texture>#VolumeControl.ImagePeakChannel0</texture>
+				<visible>player.hasmedia+plugin.isenabled(Volume Control)+![player.rewinding|player.forwarding|player.paused]</visible>
+			</control> 
+			<control> 
+				<description>Image</description> 
+				<type>image</type> 
+				<id>0</id> 
+				<posX>429</posX>
+				<posY>591</posY>
+				<width>14</width>
+				<height>34</height>
+				<keepaspectratio>no</keepaspectratio> 
+				<texture>#VolumeControl.ImagePeakChannel1</texture>
+				<visible>player.hasmedia+plugin.isenabled(Volume Control)+![player.rewinding|player.forwarding|player.paused]</visible>
+			</control>  -->
+
 		</control>
+
 	</controls>
 </window>
