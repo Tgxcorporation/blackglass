@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<controls>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-579</posX>
+			<posY>4</posY>
+			<width>627</width>
+			<height>1071</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>84</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>!control.hasfocus(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>579</width>
+				<height>79</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Switch View</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Switch View</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>21</onup>
+					<ondown>3</ondown>
+				</control>
+				<control>
+					<description>Change Layout</description>
+					<type>button</type>
+					<id>3</id>
+					<label>Change Layout</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>20</ondown>
+				</control>
+				<control>
+					<description>Current Playlist</description>
+					<type>button</type>
+					<id>20</id>
+					<label>4555</label>
+					<action>33</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>9</ondown>
+					<onup>3</onup>
+				</control>
+				<control>
+					<description>My Playlists</description>
+					<type>button</type>
+					<id>9</id>
+					<label>983</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>4</ondown>
+					<onup>20</onup>
+				</control>
+				<control>
+					<description>Options</description>
+					<type>button</type>
+					<id>4</id>
+					<label>496</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>9</onup>
+					<ondown>5</ondown>
+				</control>
+				<control>
+					<description>Run Import</description>
+					<type>button</type>
+					<id>5</id>
+					<label>Run Import</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>66608</ondown>
+				</control>
+				<control>
+					<description>Video Settings</description>
+					<type>button</type>
+					<id>66608</id>
+					<label>Video Settings</label>
+					<hyperlink>703</hyperlink>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>10</ondown>
+					<onup>5</onup>
+				</control>
+				<control>
+					<description>Moving Pictures</description>
+					<type>button</type>
+					<id>10</id>
+					<hyperlink>96742</hyperlink>
+					<label>My Movies</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>30</ondown>
+					<onup>66608</onup>
+					<visible>plugin.isenabled(Moving Pictures)</visible>
+				</control>
+				<control>
+					<description>My Trailers</description>
+					<type>button</type>
+					<id>30</id>
+					<hyperlink>5900</hyperlink>
+					<label>5906</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>9111</ondown>
+					<onup>10</onup>
+					<visible>plugin.isenabled(My Trailers)</visible>
+				</control>
+				<control>
+					<description>SubCentral</description>
+					<type>button</type>
+					<id>9111</id>
+					<label>Check for Subtitles</label>
+					<hyperlink>84623</hyperlink>
+					<visible>plugin.isenabled(SubCentral)+control.isvisible(1239)</visible>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>66613</ondown>
+					<onup>30</onup>
+				</control>
+				<control>
+					<description>dlCentral</description>
+					<type>button</type>
+					<id>66613</id>
+					<label>Download</label>
+					<hyperlink>181966</hyperlink>
+					<onup>9111</onup>
+					<ondown>2</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(dlCentral)+control.isvisible(1239)</visible>
+				</control>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Last Online Update Value</description>
+				<label>#TVSeries.Translation.LastOnlineUpdate.Label: #TVSeries.LastOnlineUpdate</label>
+				<type>fadelabel</type>
+				<font>font11</font>
+				<posX>45</posX>
+				<posY>1020</posY>
+				<wrapString> : : : </wrapString>
+				<width>510</width>
+				<visible>![plugin.isenabled(dlCentral)+control.isvisible(1239)]</visible>
+			</control>
+		</control>
+	</controls>
+</window>

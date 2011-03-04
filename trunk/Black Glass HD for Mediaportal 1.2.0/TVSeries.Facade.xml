@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<controls>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-300</posX>
+			<posY>825</posY>
+			<width>2520</width>
+			<height>270</height>
+			<texture>gradient.png</texture>
+			<visible>facadeview.filmstrip</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-300</posX>
+			<posY>600</posY>
+			<width>2520</width>
+			<height>480</height>
+			<texture>gradient.png</texture>
+			<visible>[facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<type>listcontrol</type>
+					<subtype>album</subtype>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<visible>[facadeview.list]+[control.isvisible(1239)]+control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+				</control>
+				<control>
+					<description>graphical thumbpanel (series and/or seasons if set)</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<posX>1345</posX>
+					<posY>151</posY>
+					<width>585</width>
+					<height>855</height>
+					<!-- up/down buttons & page # -->
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<!-- Textures -->
+					<imageFolder>-</imageFolder>
+					<!-- Text -->
+					<font>font16</font>
+					<selectedColor>00ffffff</selectedColor>
+					<textcolor>ffffffff</textcolor>
+					<colordiffuse>ffffffff</colordiffuse>
+					<remoteColor>FF868686</remoteColor>
+					<!-- watched color -->
+					<downloadColor>FFFFFFFF</downloadColor>
+					<!-- not watched color (normal) -->
+					<textcolor>FFC14E4A</textcolor>
+					<!-- local file not present color -->
+					<textcolor2>FFC14E4A</textcolor2>
+					<!-- local file not present color  column 2-->
+					<textcolor3>FFC14E4A</textcolor3>
+					<!-- local file not present color column 3-->
+					<suffix>|</suffix>
+					<itemWidthBig>585</itemWidthBig>
+					<itemHeightBig>114</itemHeightBig>
+					<!-- boxes -->
+					<textureWidthBig>585</textureWidthBig>
+					<textureHeightBig>111</textureHeightBig>
+					<!-- banners -->
+					<thumbWidthBig>585</thumbWidthBig>
+					<thumbHeightBig>111</thumbHeightBig>
+					<thumbPosXBig>0</thumbPosXBig>
+					<thumbPosYBig>1</thumbPosYBig>
+					<thumbZoom>no</thumbZoom>
+					<!-- text (No banner) -->
+					<textXOff>0</textXOff>
+					<textYOff>0</textYOff>
+					<keepaspectratio>no</keepaspectratio>
+					<enableFocusZoom>no</enableFocusZoom>
+					<scrollOffset>1</scrollOffset>
+					<unfocusedAlpha>100</unfocusedAlpha>
+					<spinWidth>60</spinWidth>
+					<spinHeight>60</spinHeight>
+					<spinPosX>1777</spinPosX>
+					<spinPosY>990</spinPosY>
+					<spinAlign>Right</spinAlign>
+					<spinColor>60ffffff</spinColor>
+					<textureUp>arrow_round_up_nofocus.png</textureUp>
+					<textureDown>arrow_round_down_nofocus.png</textureDown>
+					<textureUpFocus>arrow_round_up_focus.png</textureUpFocus>
+					<textureDownFocus>arrow_round_down_focus.png</textureDownFocus>
+					<spinCanFocus>yes</spinCanFocus>
+					<visible>[facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]+control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+				</control>
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<spinPosY>-50</spinPosY>
+					<spinPosX>-50</spinPosX>
+					<posX>30</posX>
+					<posY>615</posY>
+					<width>2025</width>
+					<spinCanFocus>no</spinCanFocus>
+					<thumbWidth>225</thumbWidth>
+					<thumbHeight>322</thumbHeight>
+					<thumbPosX>33</thumbPosX>
+					<thumbPosY>6</thumbPosY>
+					<itemWidth>270</itemWidth>
+					<itemHeight>420</itemHeight>
+					<textureWidth>262</textureWidth>
+					<textureHeight>334</textureHeight>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png" />
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+					<scrollOffset>3</scrollOffset>
+					<visible>[facadeview.filmstrip]+[control.isvisible(1237)|control.isvisible(1238)]+control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+					<animation effect="fade" time="250">visible</animation>
+					<animation effect="fade" time="150">hidden</animation>
+				</control>
+				<control>
+					<description>Text List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<posX>970</posX>
+					<posX>1345</posX>
+					<width>574</width>
+					<height>885</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<textXOff>-60</textXOff>
+					<textYOff>3</textYOff>
+					<textXOff2>0</textXOff2>
+					<textYOff2>49</textYOff2>
+					<textXOff3>30</textXOff3>
+					<textYOff3>49</textYOff3>
+					<IconXOff>1947</IconXOff>
+					<IconYOff>61</IconYOff>
+					<playedColor>ff77ccff</playedColor>
+					<!-- watched -->
+					<downloadColor>ffffffff</downloadColor>
+					<!-- (normal) -->
+					<remoteColor>ffF87B72</remoteColor>
+					<!-- file not present color -->
+					<textcolor>ffffffff</textcolor>
+					<!-- not watched (normal) -->
+					<textcolor2>ffb0b0b0</textcolor2>
+					<textcolor3>ffb0b0b0</textcolor3>
+					<font2>font11</font2>
+					<font3>font11</font3>
+					<textureHeight>90</textureHeight>
+					<visible>[facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|control.isvisible(1240)]+control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+				</control>
+				<control>
+					<description>Cover Flow view</description>
+					<type>coverflow</type>
+					<colordiffuse>ffffffff</colordiffuse>
+					<dimColor>90ffffff</dimColor>
+					<id>50</id>
+					<posX>0</posX>
+					<posY>559</posY>
+					<width>1920</width>
+					<height>1080</height>
+					<onup>2</onup>
+					<onleft>2</onleft>
+					<selectedCard>0</selectedCard>
+					<cardWidth>276</cardWidth>
+					<cardHeight>390</cardHeight>
+					<angle>30</angle>
+					<sideShift>270</sideShift>
+					<sideGap>75</sideGap>
+					<sideDepth>375</sideDepth>
+					<offsetY>0</offsetY>
+					<selectedOffsetY>-60</selectedOffsetY>
+					<speed>8</speed>
+					<showFrame>yes</showFrame>
+					<frame>DVDCase_coverflow.png</frame>
+					<frameFocus>DVDCase_coverflow.png</frameFocus>
+					<frameWidth>276</frameWidth>
+					<frameHeight>390</frameHeight>
+					<spinSpeed>8</spinSpeed>
+					<font1>font14</font1>
+					<font2>font11</font2>
+					<label1/>
+					<label2/>
+					<label1YOff>405</label1YOff>
+					<label2YOff>430</label2YOff>
+					<pageSize>5</pageSize>
+					<scrollbarYOff>364</scrollbarYOff>
+					<cards flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png"/>
+					<visible>[facadeview.coverflow]+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1240)]+control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+					<subitems>
+						<subitem>
+							<![CDATA[
+							<controls>
+								<control>
+									<description>background</description>
+									<type>image</type>
+									<posX>0</posX>
+									<posY>0</posY>
+									<width>276</width>
+									<height>390</height>
+									<texture flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png">black.png</texture>
+								</control>
+								<control>
+									<description>Movie Title</description>
+									<type>fadelabel</type>
+									<id>0</id>
+									<posX>22</posX>
+									<posY>9</posY>
+									<width>225</width>
+									<label>#TVSeries.Title</label>
+									<font>font13</font>
+									<textcolor>FFFFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+									<shadowAngle>45</shadowAngle>
+									<shadowDistance>2</shadowDistance>
+									<shadowColor>FF000000</shadowColor>
+								</control>
+								<control>
+									<type>image</type>
+									<id>0</id>
+									<posX>22</posX>
+									<posY>-30</posY>
+									<width>231</width>
+									<height>79</height>
+									<texture>bg_button_nofocus.png</texture>
+								</control>
+								<control>
+									<type>imagelist</type>
+									<id>1</id>
+									<posX>22</posX>
+									<posY>61</posY>
+									<width>277</width>
+									<height>60</height>
+									<textureWidth>22</textureWidth>
+									<textureHeight>22</textureHeight>
+									<subitems>
+										<subitem>star_nofocus.png</subitem>
+										<subitem>star_focus.png</subitem>
+									</subitems>
+									<orientation>horizontal</orientation>
+									<align>left</align>
+									<imagesToDraw>10</imagesToDraw>
+									<percentage>#TVSeries.Series.Rating</percentage>
+								</control>
+								<control>
+									<description>genre</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>93</posY>
+									<width>247</width>
+									<label>#TVSeries.Subtitle</label>
+									<font>font11</font>
+									<textcolor>ffFFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								<control>
+									<description>year</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>130</posY>
+									<width>247</width>
+									<label>#TVSeries.Series.infopanelLine4Value</label>
+									<font>font11</font>
+									<textcolor>90FFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								<control>
+									<description>plot</description>
+									<type>textboxscrollup</type>
+									<posX>22</posX>
+									<posY>169</posY>
+									<width>247</width>
+									<height>102</height>
+									<label>#TVSeries.Series.Summary</label>
+									<font>font9</font>
+									<lineSpacing>2</lineSpacing>
+									<textcolor>FFFFFFFF</textcolor>
+								</control>
+							</controls>
+							]]>
+						</subitem>
+					</subitems>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

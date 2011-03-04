@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <controls>
+    <!-- these elements need condition visibility for OSD IS VISIBLE -->
+    <control>
+      <description>background up</description>
+      <id>300</id>
+      <type>image</type>
+      <posX>-15</posX>
+      <posY>0</posY>
+      <width>1950</width>
+      <height>54</height>
+      <texture>osd_progress_background2.png</texture>
+      <animation effect="fade" time="100">visiblechange</animation>
+      <visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
+    </control>
+    <control>
+      <description>Movie Name</description>
+      <id>36</id>
+      <type>fadelabel</type>
+      <width>1650</width>
+      <height>54</height>
+      <posX>15</posX>
+      <posY>7</posY>
+      <font>font14</font>
+      <label>#Play.Current.Title</label>
+      <textcolor>white</textcolor>
+      <align>left</align>
+      <animation effect="fade" time="100">visiblechange</animation>
+      <visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
+      <wrapString> : : : </wrapString>
+      <shadowAngle>45</shadowAngle>
+      <shadowDistance>1</shadowDistance>
+      <shadowColor>FF000000</shadowColor>
+    </control>
+    <control>
+      <description>Current Time Info</description>
+      <type>label</type>
+      <posX>1860</posX>
+      <posY>7</posY>
+      <id>999</id>
+      <label>#time</label>
+      <font>font14</font>
+      <textcolor>white</textcolor>
+      <align>right</align>
+      <visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
+      <animation effect="fade" time="100">visiblechange</animation>
+      <shadowAngle>45</shadowAngle>
+      <shadowDistance>1</shadowDistance>
+      <shadowColor>FF000000</shadowColor>
+    </control>
+    <control>
+      <description>time logo</description>
+      <type>image</type>
+      <id>999</id>
+      <posX>1872</posX>
+      <posY>9</posY>
+      <width>36</width>
+      <height>36</height>
+      <texture>time.png</texture>
+      <visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>progress bar background</description>
+      <type>image</type>
+      <id>999</id>
+      <posX>-15</posX>
+      <posY>1027</posY>
+      <width>1950</width>
+      <height>54</height>
+      <texture>osd_progress_background.png</texture>
+      <visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>progress bar</description>
+      <type>progress</type>
+      <id>1</id>
+      <posX>-18</posX>
+      <posY>1027</posY>
+      <width>1956</width>
+      <height>54</height>
+      <label>#play.progressbar.percentage</label>
+      <visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>Start Time Info</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>15</posX>
+      <posY>1030</posY>
+      <label>#play.progressbar.currentplaytime</label>
+      <align>left</align>
+      <font>font16</font>
+      <textcolor>white</textcolor>
+      <visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <animation effect="fade" time="100">visiblechange</animation>
+      <shadowAngle>315</shadowAngle>
+      <shadowDistance>1</shadowDistance>
+      <shadowColor>FF000000</shadowColor>
+    </control>
+    <control>
+      <description>End Time Info</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>1905</posX>
+      <posY>1030</posY>
+      <label>#play.progressbar.currentremaining</label>
+      <align>right</align>
+      <font>font16</font>
+      <textcolor>white</textcolor>
+      <visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <animation effect="fade" time="100">visiblechange</animation>
+      <shadowAngle>315</shadowAngle>
+      <shadowDistance>1</shadowDistance>
+      <shadowColor>FF000000</shadowColor>
+    </control>
+    <control>
+      <description>Time</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>982</posX>
+      <posY>1030</posY>
+      <label>#time</label>
+      <align>right</align>
+      <font>font16</font>
+      <textcolor>ffffffff</textcolor>
+      <visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+window.isosdvisible</visible>
+      <animation effect="fade" time="100">visiblechange</animation>
+      <animation effect="fade" time="100">windowopen</animation>
+      <shadowAngle>315</shadowAngle>
+      <shadowDistance>1</shadowDistance>
+      <shadowColor>FF000000</shadowColor>
+    </control>
+    <control>
+      <description>time logo</description>
+      <type>image</type>
+      <id>999</id>
+      <posX>997</posX>
+      <posY>1035</posY>
+      <width>34</width>
+      <height>34</height>
+      <texture>time.png</texture>
+      <visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+window.isosdvisible</visible>
+      <animation effect="fade" time="100">visiblechange</animation>
+      <animation effect="fade" time="100">windowopen</animation>
+    </control>
+    <!-- END OF these elements need condition visibility for OSD IS VISIBLE -->
+    <control>
+      <description>pause image</description>
+      <type>image</type>
+      <posX>847</posX>
+      <posY>1027</posY>
+      <width>223</width>
+      <height>52</height>
+      <visible>window.ispauseosdvisible+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <texture>video_paused.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>White</colordiffuse>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>2x image</description>
+      <type>image</type>
+      <posX>847</posX>
+      <posY>1027</posY>
+      <width>223</width>
+      <height>52</height>
+      <visible>player.forwarding2x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <texture>video+2x.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>White</colordiffuse>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>4x image</description>
+      <type>image</type>
+      <posX>847</posX>
+      <posY>1027</posY>
+      <width>223</width>
+      <height>52</height>
+      <visible>player.forwarding4x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <texture>video+4x.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>White</colordiffuse>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>8x image</description>
+      <type>image</type>
+      <posX>847</posX>
+      <posY>1027</posY>
+      <width>223</width>
+      <height>52</height>
+      <visible>player.forwarding8x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <texture>video+8x.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>White</colordiffuse>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>16x image</description>
+      <type>image</type>
+      <posX>847</posX>
+      <posY>1027</posY>
+      <width>223</width>
+      <height>52</height>
+      <visible>player.forwarding16x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <texture>video+16x.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>White</colordiffuse>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>32x image</description>
+      <type>image</type>
+      <posX>847</posX>
+      <posY>1027</posY>
+      <width>223</width>
+      <height>52</height>
+      <visible>player.forwarding32x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <texture>video+32x.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>White</colordiffuse>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>- 2x image</description>
+      <type>image</type>
+      <id>23</id>
+      <posX>847</posX>
+      <posY>1027</posY>
+      <width>223</width>
+      <height>52</height>
+      <visible>player.rewinding2x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <texture>video-2x.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>White</colordiffuse>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>- 4x image</description>
+      <type>image</type>
+      <id>24</id>
+      <posX>847</posX>
+      <posY>1027</posY>
+      <width>223</width>
+      <height>52</height>
+      <visible>player.rewinding4x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <texture>video-4x.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>White</colordiffuse>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>- 8x image</description>
+      <type>image</type>
+      <id>25</id>
+      <posX>847</posX>
+      <posY>1027</posY>
+      <width>223</width>
+      <height>52</height>
+      <visible>player.rewinding8x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <texture>video-8x.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>White</colordiffuse>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>- 16x image</description>
+      <type>image</type>
+      <id>26</id>
+      <posX>847</posX>
+      <posY>1027</posY>
+      <width>223</width>
+      <height>52</height>
+      <visible>player.rewinding16x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <texture>video-16x.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>White</colordiffuse>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+    <control>
+      <description>- 32x image</description>
+      <type>image</type>
+      <id>27</id>
+      <posX>847</posX>
+      <posY>1027</posY>
+      <width>223</width>
+      <height>52</height>
+      <visible>player.rewinding32x+!control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
+      <texture>video-32x.png</texture>
+      <colorkey>0</colorkey>
+      <colordiffuse>White</colordiffuse>
+      <animation effect="fade" time="100">visiblechange</animation>
+    </control>
+  </controls>
+</window>
