@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>730718</id>
+  <defaultcontrol>51</defaultcontrol>
+  <allowoverlay>control.isvisible(13371337)</allowoverlay>
+  <disabletopbar>yes</disabletopbar>
+  <define>#header.label:Grooveshark</define>
+  <define>#header.background:hover_mp grooveshark.png</define>
+  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+  <controls>
+    <import>common.window.background.xml</import>
+    <import>common.window.music.play.fanart.xml</import>
+    <import>common.window.overlay.xml</import>
+    <import>common.window.time.xml</import>
+    <control>
+      <description>DUMMY CONTROLL FOR IS PLAYING CONDITION</description>
+      <type>label</type>
+      <id>100</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1</width>
+      <visible>no</visible>
+    </control>
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <control>
+        <type>label</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>15</posY>
+        <label>#header.label</label>
+        <font>font28</font>
+        <align>left</align>
+        <textcolor>60ffffff</textcolor>
+        <!-- <visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(20)|control.hasfocus(9)]</visible>		
+				<animation effect="fade" time="250">visiblechange</animation> -->
+      </control>
+      <control>
+        <type>image</type>
+        <description>album art image</description>
+        <id>987896</id>
+        <posX>106</posX>
+        <posY>123</posY>
+        <width>468</width>
+        <height>468</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <centered>yes</centered>
+        <texture flipY="true" diffuse="Thumb_Mask.png">#mpgrooveshark.current.thumb</texture>
+        <visible>control.isvisible(100)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+        <zoom>yes</zoom>
+      </control>
+      <control>
+        <type>image</type>
+        <description>nowplaying shine</description>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>109</posY>
+        <width>540</width>
+        <height>490</height>
+        <texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+        <visible>control.isvisible(100)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <type>fadelabel</type>
+        <description>Artist label</description>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>705</posY>
+        <width>900</width>
+        <height>37</height>
+        <label>#mpgrooveshark.current.artist</label>
+        <font>font24</font>
+        <wrapString> : : : </wrapString>
+        <visible>control.isvisible(100)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <type>fadelabel</type>
+        <description>album label</description>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>787</posY>
+        <width>900</width>
+        <label>#mpgrooveshark.current.album</label>
+        <font>font18</font>
+        <align>left</align>
+        <textcolor>90ffffff</textcolor>
+        <wrapString> : : : </wrapString>
+        <visible>control.isvisible(100)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <type>fadelabel</type>
+        <description>track label</description>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>855</posY>
+        <width>900</width>
+        <height>37</height>
+        <label>#mpgrooveshark.current.title</label>
+        <font>font18</font>
+        <textcolor>ffffffff</textcolor>
+        <visible>control.isvisible(100)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>dummy video preview window required for the plugin</description>
+        <type>videowindow</type>
+        <id>99</id>
+        <posX>0</posX>
+        <posY>0</posY>
+        <width>1</width>
+        <height>1</height>
+        <textureFocus>-</textureFocus>
+        <keepaspectratio>no</keepaspectratio>
+        <centered>yes</centered>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>1011</posX>
+        <posY>78</posY>
+        <width>1197</width>
+        <height>967</height>
+        <texture>bg_facade.png</texture>
+        <colorDiffuse>ffffffff</colorDiffuse>
+      </control>
+      <control>
+        <type>fadelabel</type>
+        <description>Search</description>
+        <id>0</id>
+        <posX>1080</posX>
+        <posY>141</posY>
+        <width>795</width>
+        <label>Search: #mpgrooveshark.current.search</label>
+        <font>font22</font>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>1050</posX>
+        <posY>138</posY>
+        <width>870</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+      </control>
+      <control>
+        <description>group element</description>
+        <type>group</type>
+        <control>
+          <description>listcontrol</description>
+          <type>listcontrol</type>
+          <id>50</id>
+          <posX>1050</posX>
+          <posY>217</posY>
+          <height>330</height>
+          <width>870</width>
+          <textureHeight>67</textureHeight>
+          <textXOff>-60</textXOff>
+          <textYOff>7</textYOff>
+          <IconXOff>1500</IconXOff>
+          <textXOff2>3000</textXOff2>
+          <textYOff2>0</textYOff2>
+          <textXOff3>3000</textXOff3>
+          <textYOff3>0</textYOff3>
+          <spinAlign>Right</spinAlign>
+          <spinCanFocus>yes</spinCanFocus>
+          <spinPosY>502</spinPosY>
+          <spinPosX>1815</spinPosX>
+          <spinAlign>Right</spinAlign>
+          <spinWidth>45</spinWidth>
+          <spinHeight>45</spinHeight>
+          <ondown>51</ondown>
+          <onright>51</onright>
+          <ondown>50</ondown>
+          <!--<onup>50</onup>-->
+        </control>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>1050</posX>
+        <posY>475</posY>
+        <width>870</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+      </control>
+      <control>
+        <type>fadelabel</type>
+        <description>Playlist label</description>
+        <id>0</id>
+        <posX>1080</posX>
+        <posY>591</posY>
+        <width>795</width>
+        <label>Playlist</label>
+        <font>font22</font>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>1050</posX>
+        <posY>588</posY>
+        <width>870</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+      </control>
+      <control>
+        <description>group element</description>
+        <type>group</type>
+        <control>
+          <description>playlist listcontrol</description>
+          <type>playlistcontrol</type>
+          <id>51</id>
+          <posX>1050</posX>
+          <posY>667</posY>
+          <width>870</width>
+          <height>330</height>
+          <textureHeight>67</textureHeight>
+          <onleft>50</onleft>
+          <onright>50</onright>
+          <textXOff>-42</textXOff>
+          <IconXOff>1500</IconXOff>
+          <textYOff>7</textYOff>
+          <textXOff2>0</textXOff2>
+          <textYOff2>0</textYOff2>
+          <textXOff3>870</textXOff3>
+          <textYOff3>0</textYOff3>
+          <spinCanFocus>yes</spinCanFocus>
+          <spinPosY>952</spinPosY>
+          <spinPosX>1815</spinPosX>
+          <spinAlign>Right</spinAlign>
+          <spinWidth>45</spinWidth>
+          <spinHeight>45</spinHeight>
+          <remoteColor>ff77ccff</remoteColor>
+          <upBtnWidth>45</upBtnWidth>
+          <downBtnWidth>45</downBtnWidth>
+          <deleteBtnWidth>45</deleteBtnWidth>
+          <upBtnHeight>52</upBtnHeight>
+          <downBtnHeight>52</downBtnHeight>
+          <deleteBtnHeight>52</deleteBtnHeight>
+          <upBtnXOffset>717</upBtnXOffset>
+          <downBtnXOffset>762</downBtnXOffset>
+          <deleteBtnXOffset>807</deleteBtnXOffset>
+          <upBtnYOffset>6</upBtnYOffset>
+          <downBtnYOffset>6</downBtnYOffset>
+          <deleteBtnYOffset>6</deleteBtnYOffset>
+        </control>
+      </control>
+      <control>
+        <description>Progress background</description>
+        <type>image</type>
+        <id>117</id>
+        <posX>-15</posX>
+        <posY>1026</posY>
+        <width>1950</width>
+        <height>54</height>
+        <texture>osd_progress_background.png</texture>
+        <visible>control.isvisible(100)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <type>progress</type>
+        <description>track progress</description>
+        <id>118</id>
+        <posX>-15</posX>
+        <posY>1026</posY>
+        <width>1950</width>
+        <height>54</height>
+        <visible>control.isvisible(100)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+        <label>#mpgrooveshark.percentage</label>
+      </control>
+      <control>
+        <description>pause image</description>
+        <id>0</id>
+        <type>image</type>
+        <posX>847</posX>
+        <posY>1027</posY>
+        <width>223</width>
+        <height>52</height>
+        <visible>player.paused</visible>
+        <texture>video_paused.png</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>track progress label</description>
+        <id>0</id>
+        <posX>30</posX>
+        <posY>1030</posY>
+        <label>#mpgrooveshark.current.currentplaytime</label>
+        <align>left</align>
+        <font>font16</font>
+        <textcolor>white</textcolor>
+        <visible>control.isvisible(100)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>track duration label</description>
+        <id>0</id>
+        <posX>1905</posX>
+        <posY>1030</posY>
+        <label>#mpgrooveshark.current.duration</label>
+        <align>right</align>
+        <font>font16</font>
+        <textcolor>white</textcolor>
+        <visible>control.isvisible(100)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+    </control>
+    <!-- <control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>1</width>
+				<height>1</height>
+				<texture>black.png</texture>
+				<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>New Search Button</description>
+					<type>button</type>
+					<id>2</id>
+					<label>New Search</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>3</ondown>
+				</control>
+				<control>
+					<description>Clear Playlist</description>
+					<type>button</type>
+					<id>3</id>
+					<label>Clear Playlist</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>4</ondown>
+				</control>	
+				<control>
+					<description>Load Playlist</description>
+					<type>button</type>
+					<id>4</id>
+					<label>Load Playlist</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>5</ondown>
+				</control>	
+				<control>
+					<description>Save Playlist</description>
+					<type>button</type>
+					<id>5</id>
+					<label>Save Playlist</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>50</ondown>
+				</control>	
+			</control>
+		</control> -->
+  </controls>
+</window>

@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+  <controls>
+    <!-- Media logos [Details View] -->
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <control>
+        <description>Video Codec</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>982</posY>
+        <width>133</width>
+        <height>75</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+        <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Resolution</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>915</posX>
+        <posY>982</posY>
+        <width>133</width>
+        <height>75</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+        <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Aspect Ratio</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>1050</posX>
+        <posY>982</posY>
+        <width>133</width>
+        <height>75</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+        <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Audio Codec</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>1185</posX>
+        <posY>982</posY>
+        <width>133</width>
+        <height>75</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+        <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Audio Channels</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>1320</posX>
+        <posY>982</posY>
+        <width>133</width>
+        <height>75</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+        <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Format</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>1455</posX>
+        <posY>982</posY>
+        <width>133</width>
+        <height>75</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+        <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Subtitles</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>1590</posX>
+        <posY>982</posY>
+        <width>133</width>
+        <height>75</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+        <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <!-- Media logos [List View] -->
+      <control>
+        <description>Video Codec</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+        <visible>control.isvisible(50)+facadeview.list+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Resolution</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>127</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+        <visible>control.isvisible(50)+facadeview.list+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Aspect Ratio</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>210</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+        <visible>control.isvisible(50)+facadeview.list+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Audio Codec</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>292</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+        <visible>control.isvisible(50)+facadeview.list+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Audio Channels</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>375</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+        <visible>control.isvisible(50)+facadeview.list+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Format</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>457</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+        <visible>control.isvisible(50)+facadeview.list+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Subtitles</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>540</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+        <visible>control.isvisible(50)+facadeview.list+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <!-- Media logos [Thumbnails View] -->
+      <control>
+        <description>Video Codec</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+        <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Resolution</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>127</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+        <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Aspect Ratio</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>210</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+        <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Audio Codec</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>292</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+        <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Audio Channels</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>375</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+        <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Format</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>457</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+        <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Subtitles</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>540</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+        <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]+ !player.hasmedia</visible>
+        <animation effect="fade" time="150">hidden</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <!-- Media logos [Filmstrip View] -->
+      <control>
+        <description>Video Codec</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>678</posX>
+        <posY>1005</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+        <visible>control.isvisible(50)+facadeview.filmstrip</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Resolution</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>760</posX>
+        <posY>1005</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+        <visible>control.isvisible(50)+facadeview.filmstrip</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Aspect Ratio</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>843</posX>
+        <posY>1005</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+        <visible>control.isvisible(50)+facadeview.filmstrip</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Audio Codec</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>925</posX>
+        <posY>1005</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+        <visible>control.isvisible(50)+facadeview.filmstrip</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Audio Channels</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>1008</posX>
+        <posY>1005</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+        <visible>control.isvisible(50)+facadeview.filmstrip</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Video Format</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>1090</posX>
+        <posY>1005</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+        <visible>control.isvisible(50)+facadeview.filmstrip</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <control>
+        <description>Subtitles</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>1173</posX>
+        <posY>1005</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+        <visible>control.isvisible(50)+facadeview.filmstrip</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+    </control>
+  </controls>
+</window>
