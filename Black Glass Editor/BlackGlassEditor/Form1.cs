@@ -75,6 +75,7 @@ namespace BlackGlassEditor
             XmlNodeList name = Buttons.GetElementsByTagName("name");
             XmlNodeList plugin = Buttons.GetElementsByTagName("plugin");
             XmlNodeList fanart = Buttons.GetElementsByTagName("fanart");
+            XmlNodeList parameter = Buttons.GetElementsByTagName("parameter");
 
             comboBox100.SelectedItem = findPluginName(Int32.Parse(plugin[0].InnerText));
             comboBox101.SelectedItem = findPluginName(Int32.Parse(plugin[1].InnerText));
@@ -107,6 +108,23 @@ namespace BlackGlassEditor
             textBox112.Text = name[12].InnerText;
             textBox113.Text = name[13].InnerText;
             textBox114.Text = name[14].InnerText;
+
+            textBoxParameter100.Text = parameter[0].InnerText;
+            textBoxParameter101.Text = parameter[1].InnerText;
+            textBoxParameter102.Text = parameter[2].InnerText;
+            textBoxParameter103.Text = parameter[3].InnerText;
+            textBoxParameter104.Text = parameter[4].InnerText;
+            textBoxParameter105.Text = parameter[5].InnerText;
+            textBoxParameter106.Text = parameter[6].InnerText;
+            textBoxParameter107.Text = parameter[7].InnerText;
+            textBoxParameter108.Text = parameter[8].InnerText;
+            textBoxParameter109.Text = parameter[9].InnerText;
+            textBoxParameter110.Text = parameter[10].InnerText;
+            textBoxParameter111.Text = parameter[11].InnerText;
+            textBoxParameter112.Text = parameter[12].InnerText;
+            textBoxParameter113.Text = parameter[13].InnerText;
+            textBoxParameter114.Text = parameter[14].InnerText;
+
 
             if (plugin[0].InnerText != "0") textBoxid100.Text = plugin[0].InnerText;
             if (plugin[1].InnerText != "0") textBoxid101.Text = plugin[1].InnerText;
@@ -410,7 +428,7 @@ namespace BlackGlassEditor
 
             if (name == "100" || name == "101" || name == "102" || name == "103" || name == "104")
             {
-                ga.DrawImage(reflectedImg, new System.Drawing.Rectangle(offsetX, offsetY, img.Width, img.Height));
+                ga.DrawImage((Bitmap)Functions.SetImgOpacity(reflectedImg, 0.50f), new System.Drawing.Rectangle(offsetX, offsetY, img.Width, img.Height));
             }
             img.Dispose();
             reflectedImg.Dispose();
@@ -1388,36 +1406,42 @@ namespace BlackGlassEditor
         {
             textBox100.Text = comboBox100.Text;
             textBoxid100.Text = findPlugin(comboBox100.Text).ToString();
+            textBoxParameter100.Text = "";
             if (comboBox100.Text == "Empty Button") { textBox100.Text = ""; textBoxid100.Text = ""; };
         }
         private void comboBox101_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox101.Text = comboBox101.Text;
             textBoxid101.Text = findPlugin(comboBox101.Text).ToString();
+            textBoxParameter101.Text = "";
             if (comboBox101.Text == "Empty Button") { textBox101.Text = ""; textBoxid101.Text = ""; };
         }
         private void comboBox102_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox102.Text = comboBox102.Text;
             textBoxid102.Text = findPlugin(comboBox102.Text).ToString();
+            textBoxParameter102.Text = "";
             if (comboBox102.Text == "Empty Button") { textBox102.Text = ""; textBoxid102.Text = ""; };
         }
         private void comboBox103_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox103.Text = comboBox103.Text;
             textBoxid103.Text = findPlugin(comboBox103.Text).ToString();
+            textBoxParameter103.Text = "";
             if (comboBox103.Text == "Empty Button") { textBox103.Text = ""; textBoxid103.Text = ""; };
         }
         private void comboBox104_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox104.Text = comboBox104.Text;
             textBoxid104.Text = findPlugin(comboBox104.Text).ToString();
+            textBoxParameter104.Text = "";
             if (comboBox104.Text == "Empty Button") { textBox104.Text = ""; textBoxid104.Text = ""; };
         }
         private void comboBox105_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox105.Text = comboBox105.Text;
             textBoxid105.Text = findPlugin(comboBox105.Text).ToString();
+            textBoxParameter105.Text = "";
             if (comboBox105.Text == "Empty Button") { textBox105.Text = ""; textBoxid105.Text = ""; };
             checkBox105.Visible = false;
             checkBox105.Checked = false;
@@ -1427,6 +1451,7 @@ namespace BlackGlassEditor
         {
             textBox106.Text = comboBox106.Text;
             textBoxid106.Text = findPlugin(comboBox106.Text).ToString();
+            textBoxParameter106.Text = "";
             if (comboBox106.Text == "Empty Button") { textBox106.Text = ""; textBoxid106.Text = ""; };
             checkBox106.Visible = false;
             checkBox106.Checked = false;
@@ -1436,6 +1461,7 @@ namespace BlackGlassEditor
         {
             textBox107.Text = comboBox107.Text;
             textBoxid107.Text = findPlugin(comboBox107.Text).ToString();
+            textBoxParameter107.Text = "";
             if (comboBox107.Text == "Empty Button") { textBox107.Text = ""; textBoxid107.Text = ""; };
             checkBox107.Visible = false;
             checkBox107.Checked = false;
@@ -1445,6 +1471,7 @@ namespace BlackGlassEditor
         {
             textBox108.Text = comboBox108.Text;
             textBoxid108.Text = findPlugin(comboBox108.Text).ToString();
+            textBoxParameter108.Text = ""; 
             if (comboBox108.Text == "Empty Button") { textBox108.Text = ""; textBoxid108.Text = ""; };
             checkBox108.Visible = false;
             checkBox108.Checked = false;
@@ -1454,6 +1481,7 @@ namespace BlackGlassEditor
         {
             textBox109.Text = comboBox109.Text;
             textBoxid109.Text = findPlugin(comboBox109.Text).ToString();
+            textBoxParameter109.Text = "";
             if (comboBox109.Text == "Empty Button") { textBox109.Text = ""; textBoxid109.Text = ""; };
             checkBox109.Visible = false;
             checkBox109.Checked = false;
@@ -1463,6 +1491,7 @@ namespace BlackGlassEditor
         {
             textBox110.Text = comboBox110.Text;
             textBoxid110.Text = findPlugin(comboBox110.Text).ToString();
+            textBoxParameter110.Text = "";
             if (comboBox110.Text == "Empty Button") { textBox110.Text = ""; textBoxid110.Text = ""; };
             checkBox110.Visible = false;
             checkBox110.Checked = false;
@@ -1472,6 +1501,7 @@ namespace BlackGlassEditor
         {
             textBox111.Text = comboBox111.Text;
             textBoxid111.Text = findPlugin(comboBox111.Text).ToString();
+            textBoxParameter111.Text = "";
             if (comboBox111.Text == "Empty Button") { textBox111.Text = ""; textBoxid111.Text = ""; };
             checkBox111.Visible = false;
             checkBox111.Checked = false;
@@ -1481,6 +1511,7 @@ namespace BlackGlassEditor
         {
             textBox112.Text = comboBox112.Text;
             textBoxid112.Text = findPlugin(comboBox112.Text).ToString();
+            textBoxParameter112.Text = "";
             if (comboBox112.Text == "Empty Button") { textBox112.Text = ""; textBoxid112.Text = ""; };
             checkBox112.Visible = false;
             checkBox112.Checked = false;
@@ -1490,6 +1521,7 @@ namespace BlackGlassEditor
         {
             textBox113.Text = comboBox113.Text;
             textBoxid113.Text = findPlugin(comboBox113.Text).ToString();
+            textBoxParameter113.Text = "";
             if (comboBox113.Text == "Empty Button") { textBox113.Text = ""; textBoxid113.Text = ""; };
             checkBox113.Visible = false;
             checkBox113.Checked = false;
@@ -1499,6 +1531,7 @@ namespace BlackGlassEditor
         {
             textBox114.Text = comboBox114.Text;
             textBoxid114.Text = findPlugin(comboBox114.Text).ToString();
+            textBoxParameter114.Text = "";
             if (comboBox114.Text == "Empty Button") { textBox114.Text = ""; textBoxid114.Text = ""; };
             checkBox114.Visible = false;
             checkBox114.Checked = false;
@@ -2119,6 +2152,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox100.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid100.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter100.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("100") + @"</onleft>
 			<onright>" + findButtonRight("100") + @"</onright>
 			<onup>" + findButtonUp("100") + @"</onup>
@@ -2163,6 +2197,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox101.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid101.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter101.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("101") + @"</onleft>
 			<onright>" + findButtonRight("101") + @"</onright>
 			<onup>" + findButtonUp("101") + @"</onup>
@@ -2207,6 +2242,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox102.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid102.Text) + @"</hyperlink>
+            <hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter102.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("102") + @"</onleft>
 			<onright>" + findButtonRight("102") + @"</onright>
 			<onup>" + findButtonUp("102") + @"</onup>
@@ -2250,6 +2286,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox103.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid103.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter103.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("103") + @"</onleft>
 			<onright>" + findButtonRight("103") + @"</onright>
 			<onup>" + findButtonUp("103") + @"</onup>
@@ -2293,6 +2330,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox104.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid104.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter104.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("104") + @"</onleft>
 			<onright>" + findButtonRight("104") + @"</onright>
 			<onup>" + findButtonUp("104") + @"</onup>
@@ -2336,6 +2374,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox105.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid105.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter105.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("105") + @"</onleft>
 			<onright>" + findButtonRight("105") + @"</onright>
 			<onup>" + findButtonUp("105") + @"</onup>
@@ -2347,7 +2386,8 @@ namespace BlackGlassEditor
 		</control>
 
         ";
-                    if (checkBox105.Checked == true) {
+                    if (checkBox105.Checked == true)
+                    {
                         plugin_trick = "";
                         if (textBoxid105.Text == "2") plugin_trick = pictures_plugin_trick;
                         plugin_name = findFanartPluginName(textBoxid105.Text);
@@ -2404,6 +2444,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox106.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid106.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter106.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("106") + @"</onleft>
 			<onright>" + findButtonRight("106") + @"</onright>
 			<onup>" + findButtonUp("106") + @"</onup>
@@ -2473,6 +2514,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox107.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid107.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter107.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("107") + @"</onleft>
 			<onright>" + findButtonRight("107") + @"</onright>
 			<onup>" + findButtonUp("107") + @"</onup>
@@ -2542,6 +2584,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox108.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid108.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter108.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("108") + @"</onleft>
 			<onright>" + findButtonRight("108") + @"</onright>
 			<onup>" + findButtonUp("108") + @"</onup>
@@ -2611,6 +2654,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox109.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid109.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter109.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("109") + @"</onleft>
 			<onright>" + findButtonRight("109") + @"</onright>
 			<onup>" + findButtonUp("109") + @"</onup>
@@ -2680,6 +2724,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox110.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid110.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter110.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("110") + @"</onleft>
 			<onright>" + findButtonRight("110") + @"</onright>
 			<onup>" + findButtonUp("110") + @"</onup>
@@ -2749,6 +2794,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox111.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid111.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter111.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("111") + @"</onleft>
 			<onright>" + findButtonRight("111") + @"</onright>
 			<onup>" + findButtonUp("111") + @"</onup>
@@ -2818,6 +2864,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox112.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid112.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter112.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("112") + @"</onleft>
 			<onright>" + findButtonRight("112") + @"</onright>
 			<onup>" + findButtonUp("112") + @"</onup>
@@ -2887,6 +2934,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox113.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid113.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter113.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("113") + @"</onleft>
 			<onright>" + findButtonRight("113") + @"</onright>
 			<onup>" + findButtonUp("113") + @"</onup>
@@ -2956,6 +3004,7 @@ namespace BlackGlassEditor
 			<label>" + SecurityElement.Escape(textBox114.Text) + @"</label>
 			<textXOff>3000</textXOff>
 			<hyperlink>" + SecurityElement.Escape(textBoxid114.Text) + @"</hyperlink>
+			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter114.Text) + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft("114") + @"</onleft>
 			<onright>" + findButtonRight("114") + @"</onright>
 			<onup>" + findButtonUp("114") + @"</onup>
@@ -3122,7 +3171,8 @@ namespace BlackGlassEditor
 
                 try
                 {
-                    TextWriter tw = new StreamWriter(path);
+                    TextWriter tw = new StreamWriter(path,false,Encoding.UTF8);
+                    //TextWriter tw = new StreamWriter(path);
                     tw.Write(txt);
                     tw.Close();
                     toolStripStatusLabel1.Text = "XML File Saved Succesfully";
@@ -3171,7 +3221,7 @@ namespace BlackGlassEditor
 
                 String path = System.IO.Path.Combine(Application.StartupPath, "settings.xml");
                 // Create a new file in C:\\ dir
-                XmlTextWriter textWriter = new XmlTextWriter(path, null);
+                XmlTextWriter textWriter = new XmlTextWriter(path,Encoding.UTF8);
                 textWriter.Formatting = Formatting.Indented;
                 // Opens the document
                 textWriter.WriteStartDocument();
@@ -3192,6 +3242,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString("");
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter100.Text));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3207,6 +3260,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter101.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3224,6 +3280,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString("");
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter102.Text));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3239,6 +3298,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter103.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3256,6 +3318,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString("");
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter104.Text));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3271,6 +3336,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox105.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter105.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3288,6 +3356,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox106.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter106.Text));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3303,6 +3374,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox107.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter107.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3320,6 +3394,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox108.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter108.Text));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3335,6 +3412,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox109.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter109.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3352,6 +3432,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox110.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter110.Text));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3367,6 +3450,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox111.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter111.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3384,6 +3470,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox112.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter112.Text));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3399,6 +3488,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox113.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter113.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -3416,6 +3508,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox114.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString(SecurityElement.Escape(textBoxParameter114.Text));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -3429,6 +3524,9 @@ namespace BlackGlassEditor
                 textWriter.WriteString(BlackGlassDirClass.Path);
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString("");
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
@@ -3447,6 +3545,9 @@ namespace BlackGlassEditor
                 textWriter.WriteString(themecolor);
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString("");
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
@@ -4187,6 +4288,247 @@ namespace BlackGlassEditor
             return texture;
         }
 
+        private void buttonOptions110_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid110.Text;
+            myOptionDialog.Description = textBox110.Text;
+            myOptionDialog.Parameter = textBoxParameter110.Text;
+            myOptionDialog.Text = "Button 110 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid110.Text = myOptionDialog.Id;
+                textBox110.Text = myOptionDialog.Description;
+                textBoxParameter110.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions111_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid111.Text;
+            myOptionDialog.Description = textBox111.Text;
+            myOptionDialog.Parameter = textBoxParameter111.Text;
+            myOptionDialog.Text = "Button 111 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid111.Text = myOptionDialog.Id;
+                textBox111.Text = myOptionDialog.Description;
+                textBoxParameter111.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions112_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid112.Text;
+            myOptionDialog.Description = textBox112.Text;
+            myOptionDialog.Parameter = textBoxParameter112.Text;
+            myOptionDialog.Text = "Button 112 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid112.Text = myOptionDialog.Id;
+                textBox112.Text = myOptionDialog.Description;
+                textBoxParameter112.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions113_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid113.Text;
+            myOptionDialog.Description = textBox113.Text;
+            myOptionDialog.Parameter = textBoxParameter113.Text;
+            myOptionDialog.Text = "Button 113 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid113.Text = myOptionDialog.Id;
+                textBox113.Text = myOptionDialog.Description;
+                textBoxParameter113.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions114_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid114.Text;
+            myOptionDialog.Description = textBox114.Text;
+            myOptionDialog.Parameter = textBoxParameter114.Text;
+            myOptionDialog.Text = "Button 114 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid114.Text = myOptionDialog.Id;
+                textBox114.Text = myOptionDialog.Description;
+                textBoxParameter114.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions106_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid106.Text;
+            myOptionDialog.Description = textBox106.Text;
+            myOptionDialog.Parameter = textBoxParameter106.Text;
+            myOptionDialog.Text = "Button 106 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid106.Text = myOptionDialog.Id;
+                textBox106.Text = myOptionDialog.Description;
+                textBoxParameter106.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions107_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid107.Text;
+            myOptionDialog.Description = textBox107.Text;
+            myOptionDialog.Parameter = textBoxParameter107.Text;
+            myOptionDialog.Text = "Button 107 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid107.Text = myOptionDialog.Id;
+                textBox107.Text = myOptionDialog.Description;
+                textBoxParameter107.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions108_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid108.Text;
+            myOptionDialog.Description = textBox108.Text;
+            myOptionDialog.Parameter = textBoxParameter108.Text;
+            myOptionDialog.Text = "Button 108 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid108.Text = myOptionDialog.Id;
+                textBox108.Text = myOptionDialog.Description;
+                textBoxParameter108.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions109_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid109.Text;
+            myOptionDialog.Description = textBox109.Text;
+            myOptionDialog.Parameter = textBoxParameter109.Text;
+            myOptionDialog.Text = "Button 109 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid109.Text = myOptionDialog.Id;
+                textBox109.Text = myOptionDialog.Description;
+                textBoxParameter109.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions105_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid105.Text;
+            myOptionDialog.Description = textBox105.Text;
+            myOptionDialog.Parameter = textBoxParameter105.Text;
+            myOptionDialog.Text = "Button 105 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid105.Text = myOptionDialog.Id;
+                textBox105.Text = myOptionDialog.Description;
+                textBoxParameter105.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions104_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid104.Text;
+            myOptionDialog.Description = textBox104.Text;
+            myOptionDialog.Parameter = textBoxParameter104.Text;
+            myOptionDialog.Text = "Button 104 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid104.Text = myOptionDialog.Id;
+                textBox104.Text = myOptionDialog.Description;
+                textBoxParameter104.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions103_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid103.Text;
+            myOptionDialog.Description = textBox103.Text;
+            myOptionDialog.Parameter = textBoxParameter103.Text;
+            myOptionDialog.Text = "Button 103 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid103.Text = myOptionDialog.Id;
+                textBox103.Text = myOptionDialog.Description;
+                textBoxParameter103.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions102_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid102.Text;
+            myOptionDialog.Description = textBox102.Text;
+            myOptionDialog.Parameter = textBoxParameter102.Text;
+            myOptionDialog.Text = "Button 102 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid102.Text = myOptionDialog.Id;
+                textBox102.Text = myOptionDialog.Description;
+                textBoxParameter102.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions101_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid101.Text;
+            myOptionDialog.Description = textBox101.Text;
+            myOptionDialog.Parameter = textBoxParameter101.Text;
+            myOptionDialog.Text = "Button 101 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid101.Text = myOptionDialog.Id;
+                textBox101.Text = myOptionDialog.Description;
+                textBoxParameter101.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        private void buttonOptions100_Click(object sender, EventArgs e)
+        {
+            OptionsDialog myOptionDialog = new OptionsDialog();
+            myOptionDialog.Id = textBoxid100.Text;
+            myOptionDialog.Description = textBox100.Text;
+            myOptionDialog.Parameter = textBoxParameter100.Text;
+            myOptionDialog.Text = "Button 100 Options";
+
+            if (myOptionDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxid100.Text = myOptionDialog.Id;
+                textBox100.Text = myOptionDialog.Description;
+                textBoxParameter100.Text = myOptionDialog.Parameter;
+            }
+        }
+
+        
 
     }
 }
