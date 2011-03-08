@@ -43,169 +43,199 @@
             this.label2 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox111 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions111 = new System.Windows.Forms.Button();
+            this.textBoxParameter111 = new System.Windows.Forms.TextBox();
             this.checkBox111 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty111 = new System.Windows.Forms.Button();
             this.textBoxid111 = new System.Windows.Forms.TextBox();
             this.groupBox100 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions100 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.textBoxParameter100 = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.textBox100 = new System.Windows.Forms.TextBox();
+            this.button12 = new System.Windows.Forms.Button();
             this.buttonEmpty100 = new System.Windows.Forms.Button();
             this.textBoxid100 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox100 = new System.Windows.Forms.ComboBox();
-            this.textBox100 = new System.Windows.Forms.TextBox();
             this.groupBox105 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions105 = new System.Windows.Forms.Button();
+            this.textBoxParameter105 = new System.Windows.Forms.TextBox();
+            this.textBox105 = new System.Windows.Forms.TextBox();
             this.checkBox105 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty105 = new System.Windows.Forms.Button();
             this.textBoxid105 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox105 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonLoad105 = new System.Windows.Forms.Button();
             this.comboBox105 = new System.Windows.Forms.ComboBox();
-            this.textBox105 = new System.Windows.Forms.TextBox();
             this.buttonSave105f = new System.Windows.Forms.Button();
             this.buttonSave105u = new System.Windows.Forms.Button();
             this.groupBox110 = new System.Windows.Forms.GroupBox();
+            this.textBoxParameter110 = new System.Windows.Forms.TextBox();
+            this.textBox110 = new System.Windows.Forms.TextBox();
+            this.buttonOptions110 = new System.Windows.Forms.Button();
             this.checkBox110 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty110 = new System.Windows.Forms.Button();
             this.textBoxid110 = new System.Windows.Forms.TextBox();
             this.pictureBox110 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.buttonLoad110 = new System.Windows.Forms.Button();
             this.buttonSave110f = new System.Windows.Forms.Button();
             this.buttonSave110u = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox110 = new System.Windows.Forms.ComboBox();
-            this.textBox110 = new System.Windows.Forms.TextBox();
             this.groupBox112 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions112 = new System.Windows.Forms.Button();
+            this.textBoxParameter112 = new System.Windows.Forms.TextBox();
+            this.textBox112 = new System.Windows.Forms.TextBox();
             this.checkBox112 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty112 = new System.Windows.Forms.Button();
             this.textBoxid112 = new System.Windows.Forms.TextBox();
             this.pictureBox112 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.buttonLoad112 = new System.Windows.Forms.Button();
             this.buttonSave112f = new System.Windows.Forms.Button();
             this.buttonSave112u = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox112 = new System.Windows.Forms.ComboBox();
-            this.textBox112 = new System.Windows.Forms.TextBox();
             this.groupBox113 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions113 = new System.Windows.Forms.Button();
+            this.textBoxParameter113 = new System.Windows.Forms.TextBox();
+            this.textBox113 = new System.Windows.Forms.TextBox();
             this.checkBox113 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty113 = new System.Windows.Forms.Button();
             this.textBoxid113 = new System.Windows.Forms.TextBox();
             this.pictureBox113 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.buttonLoad113 = new System.Windows.Forms.Button();
             this.buttonSave113f = new System.Windows.Forms.Button();
             this.buttonSave113u = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox113 = new System.Windows.Forms.ComboBox();
-            this.textBox113 = new System.Windows.Forms.TextBox();
             this.groupBox114 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions114 = new System.Windows.Forms.Button();
+            this.textBoxParameter114 = new System.Windows.Forms.TextBox();
+            this.textBox114 = new System.Windows.Forms.TextBox();
             this.checkBox114 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty114 = new System.Windows.Forms.Button();
             this.textBoxid114 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.pictureBox114 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.buttonLoad114 = new System.Windows.Forms.Button();
             this.buttonSave114f = new System.Windows.Forms.Button();
             this.buttonSave114u = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox114 = new System.Windows.Forms.ComboBox();
-            this.textBox114 = new System.Windows.Forms.TextBox();
             this.groupBox106 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions106 = new System.Windows.Forms.Button();
+            this.textBoxParameter106 = new System.Windows.Forms.TextBox();
+            this.textBox106 = new System.Windows.Forms.TextBox();
             this.checkBox106 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty106 = new System.Windows.Forms.Button();
             this.textBoxid106 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.pictureBox106 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.buttonLoad106 = new System.Windows.Forms.Button();
             this.comboBox106 = new System.Windows.Forms.ComboBox();
-            this.textBox106 = new System.Windows.Forms.TextBox();
             this.buttonSave106f = new System.Windows.Forms.Button();
             this.buttonSave106u = new System.Windows.Forms.Button();
             this.groupBox107 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions107 = new System.Windows.Forms.Button();
+            this.textBoxParameter107 = new System.Windows.Forms.TextBox();
+            this.textBox107 = new System.Windows.Forms.TextBox();
             this.checkBox107 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty107 = new System.Windows.Forms.Button();
             this.textBoxid107 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.pictureBox107 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.buttonLoad107 = new System.Windows.Forms.Button();
             this.comboBox107 = new System.Windows.Forms.ComboBox();
-            this.textBox107 = new System.Windows.Forms.TextBox();
             this.buttonSave107f = new System.Windows.Forms.Button();
             this.buttonSave107u = new System.Windows.Forms.Button();
             this.groupBox108 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions108 = new System.Windows.Forms.Button();
+            this.textBoxParameter108 = new System.Windows.Forms.TextBox();
+            this.textBox108 = new System.Windows.Forms.TextBox();
             this.checkBox108 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty108 = new System.Windows.Forms.Button();
             this.textBoxid108 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.pictureBox108 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.buttonLoad108 = new System.Windows.Forms.Button();
             this.comboBox108 = new System.Windows.Forms.ComboBox();
-            this.textBox108 = new System.Windows.Forms.TextBox();
             this.buttonSave108f = new System.Windows.Forms.Button();
             this.buttonSave108u = new System.Windows.Forms.Button();
             this.groupBox109 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions109 = new System.Windows.Forms.Button();
+            this.textBoxParameter109 = new System.Windows.Forms.TextBox();
+            this.textBox109 = new System.Windows.Forms.TextBox();
             this.checkBox109 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty109 = new System.Windows.Forms.Button();
             this.textBoxid109 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.pictureBox109 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.buttonLoad109 = new System.Windows.Forms.Button();
             this.comboBox109 = new System.Windows.Forms.ComboBox();
-            this.textBox109 = new System.Windows.Forms.TextBox();
             this.buttonSave109f = new System.Windows.Forms.Button();
             this.buttonSave109u = new System.Windows.Forms.Button();
             this.groupBox101 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions101 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.textBoxParameter101 = new System.Windows.Forms.TextBox();
+            this.button15 = new System.Windows.Forms.Button();
+            this.textBox101 = new System.Windows.Forms.TextBox();
+            this.button16 = new System.Windows.Forms.Button();
             this.buttonEmpty101 = new System.Windows.Forms.Button();
             this.textBoxid101 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.pictureBox101 = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
             this.buttonLoad101 = new System.Windows.Forms.Button();
             this.comboBox101 = new System.Windows.Forms.ComboBox();
-            this.textBox101 = new System.Windows.Forms.TextBox();
             this.buttonSave101f = new System.Windows.Forms.Button();
             this.buttonSave101u = new System.Windows.Forms.Button();
             this.groupBox102 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions102 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.textBoxParameter102 = new System.Windows.Forms.TextBox();
+            this.button19 = new System.Windows.Forms.Button();
+            this.textBox102 = new System.Windows.Forms.TextBox();
+            this.button20 = new System.Windows.Forms.Button();
             this.buttonEmpty102 = new System.Windows.Forms.Button();
             this.textBoxid102 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.pictureBox102 = new System.Windows.Forms.PictureBox();
             this.label26 = new System.Windows.Forms.Label();
             this.buttonLoad102 = new System.Windows.Forms.Button();
             this.comboBox102 = new System.Windows.Forms.ComboBox();
-            this.textBox102 = new System.Windows.Forms.TextBox();
             this.buttonSave102f = new System.Windows.Forms.Button();
             this.buttonSave102u = new System.Windows.Forms.Button();
             this.groupBox103 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions103 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.textBoxParameter103 = new System.Windows.Forms.TextBox();
+            this.button23 = new System.Windows.Forms.Button();
+            this.textBox103 = new System.Windows.Forms.TextBox();
+            this.button24 = new System.Windows.Forms.Button();
             this.buttonEmpty103 = new System.Windows.Forms.Button();
             this.textBoxid103 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.pictureBox103 = new System.Windows.Forms.PictureBox();
             this.label28 = new System.Windows.Forms.Label();
             this.buttonLoad103 = new System.Windows.Forms.Button();
             this.comboBox103 = new System.Windows.Forms.ComboBox();
-            this.textBox103 = new System.Windows.Forms.TextBox();
             this.buttonSave103f = new System.Windows.Forms.Button();
             this.buttonSave103u = new System.Windows.Forms.Button();
             this.groupBox104 = new System.Windows.Forms.GroupBox();
+            this.buttonOptions104 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.textBoxParameter104 = new System.Windows.Forms.TextBox();
+            this.button27 = new System.Windows.Forms.Button();
+            this.textBox104 = new System.Windows.Forms.TextBox();
+            this.button28 = new System.Windows.Forms.Button();
             this.buttonEmpty104 = new System.Windows.Forms.Button();
             this.textBoxid104 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.pictureBox104 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
             this.buttonLoad104 = new System.Windows.Forms.Button();
             this.comboBox104 = new System.Windows.Forms.ComboBox();
-            this.textBox104 = new System.Windows.Forms.TextBox();
             this.buttonSave104f = new System.Windows.Forms.Button();
             this.buttonSave104u = new System.Windows.Forms.Button();
             this.buttonXMLButtons = new System.Windows.Forms.Button();
@@ -344,7 +374,7 @@
             // 
             this.comboBox111.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox111.FormattingEnabled = true;
-            this.comboBox111.Location = new System.Drawing.Point(6, 122);
+            this.comboBox111.Location = new System.Drawing.Point(6, 143);
             this.comboBox111.Name = "comboBox111";
             this.comboBox111.Size = new System.Drawing.Size(128, 21);
             this.comboBox111.TabIndex = 11;
@@ -353,15 +383,16 @@
             // textBox111
             // 
             this.textBox111.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox111.Location = new System.Drawing.Point(6, 147);
+            this.textBox111.Location = new System.Drawing.Point(7, 42);
             this.textBox111.Name = "textBox111";
-            this.textBox111.Size = new System.Drawing.Size(84, 21);
+            this.textBox111.Size = new System.Drawing.Size(126, 21);
             this.textBox111.TabIndex = 12;
+            this.textBox111.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(137, 125);
+            this.label2.Location = new System.Drawing.Point(6, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 16;
@@ -383,34 +414,45 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(257, 17);
             this.toolStripStatusLabel1.Text = "Welcome to Black Glass Skin Basic Home Editor";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(137, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Button Name / ID";
-            // 
             // groupBox111
             // 
+            this.groupBox111.Controls.Add(this.buttonOptions111);
+            this.groupBox111.Controls.Add(this.textBoxParameter111);
+            this.groupBox111.Controls.Add(this.textBox111);
             this.groupBox111.Controls.Add(this.checkBox111);
             this.groupBox111.Controls.Add(this.buttonEmpty111);
             this.groupBox111.Controls.Add(this.textBoxid111);
             this.groupBox111.Controls.Add(this.pictureBox111);
-            this.groupBox111.Controls.Add(this.label3);
             this.groupBox111.Controls.Add(this.buttonLoad111);
             this.groupBox111.Controls.Add(this.buttonSave111f);
             this.groupBox111.Controls.Add(this.buttonSave111u);
             this.groupBox111.Controls.Add(this.label2);
             this.groupBox111.Controls.Add(this.comboBox111);
-            this.groupBox111.Controls.Add(this.textBox111);
             this.groupBox111.Location = new System.Drawing.Point(249, 12);
             this.groupBox111.Name = "groupBox111";
             this.groupBox111.Size = new System.Drawing.Size(231, 173);
             this.groupBox111.TabIndex = 20;
             this.groupBox111.TabStop = false;
             this.groupBox111.Text = "Button ID 111";
+            // 
+            // buttonOptions111
+            // 
+            this.buttonOptions111.Location = new System.Drawing.Point(140, 142);
+            this.buttonOptions111.Name = "buttonOptions111";
+            this.buttonOptions111.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions111.TabIndex = 54;
+            this.buttonOptions111.Text = "Options";
+            this.buttonOptions111.UseVisualStyleBackColor = true;
+            this.buttonOptions111.Click += new System.EventHandler(this.buttonOptions111_Click);
+            // 
+            // textBoxParameter111
+            // 
+            this.textBoxParameter111.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter111.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter111.Name = "textBoxParameter111";
+            this.textBoxParameter111.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter111.TabIndex = 53;
+            this.textBoxParameter111.Visible = false;
             // 
             // checkBox111
             // 
@@ -438,22 +480,27 @@
             // textBoxid111
             // 
             this.textBoxid111.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid111.Location = new System.Drawing.Point(93, 147);
+            this.textBoxid111.Location = new System.Drawing.Point(92, 18);
             this.textBoxid111.Name = "textBoxid111";
             this.textBoxid111.Size = new System.Drawing.Size(41, 21);
             this.textBoxid111.TabIndex = 34;
+            this.textBoxid111.Visible = false;
             // 
             // groupBox100
             // 
             this.groupBox100.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox100.Controls.Add(this.buttonOptions100);
+            this.groupBox100.Controls.Add(this.button10);
+            this.groupBox100.Controls.Add(this.textBoxParameter100);
+            this.groupBox100.Controls.Add(this.button11);
+            this.groupBox100.Controls.Add(this.textBox100);
+            this.groupBox100.Controls.Add(this.button12);
             this.groupBox100.Controls.Add(this.buttonEmpty100);
             this.groupBox100.Controls.Add(this.textBoxid100);
-            this.groupBox100.Controls.Add(this.label1);
             this.groupBox100.Controls.Add(this.pictureBox100);
             this.groupBox100.Controls.Add(this.label4);
             this.groupBox100.Controls.Add(this.buttonLoad100);
             this.groupBox100.Controls.Add(this.comboBox100);
-            this.groupBox100.Controls.Add(this.textBox100);
             this.groupBox100.Controls.Add(this.buttonSave100f);
             this.groupBox100.Controls.Add(this.buttonSave100u);
             this.groupBox100.Location = new System.Drawing.Point(12, 364);
@@ -462,6 +509,61 @@
             this.groupBox100.TabIndex = 21;
             this.groupBox100.TabStop = false;
             this.groupBox100.Text = "Button ID 100";
+            // 
+            // buttonOptions100
+            // 
+            this.buttonOptions100.Location = new System.Drawing.Point(140, 169);
+            this.buttonOptions100.Name = "buttonOptions100";
+            this.buttonOptions100.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions100.TabIndex = 67;
+            this.buttonOptions100.Text = "Options";
+            this.buttonOptions100.UseVisualStyleBackColor = true;
+            this.buttonOptions100.Click += new System.EventHandler(this.buttonOptions100_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(140, 168);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(85, 23);
+            this.button10.TabIndex = 66;
+            this.button10.Text = "Options";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // textBoxParameter100
+            // 
+            this.textBoxParameter100.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter100.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter100.Name = "textBoxParameter100";
+            this.textBoxParameter100.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter100.TabIndex = 54;
+            this.textBoxParameter100.Visible = false;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(140, 168);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(85, 23);
+            this.button11.TabIndex = 69;
+            this.button11.Text = "Options";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // textBox100
+            // 
+            this.textBox100.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox100.Location = new System.Drawing.Point(7, 42);
+            this.textBox100.Name = "textBox100";
+            this.textBox100.Size = new System.Drawing.Size(126, 21);
+            this.textBox100.TabIndex = 23;
+            this.textBox100.Visible = false;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(140, 168);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(85, 23);
+            this.button12.TabIndex = 68;
+            this.button12.Text = "Options";
+            this.button12.UseVisualStyleBackColor = true;
             // 
             // buttonEmpty100
             // 
@@ -476,24 +578,16 @@
             // textBoxid100
             // 
             this.textBoxid100.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid100.Location = new System.Drawing.Point(93, 173);
+            this.textBoxid100.Location = new System.Drawing.Point(92, 18);
             this.textBoxid100.Name = "textBoxid100";
             this.textBoxid100.Size = new System.Drawing.Size(41, 21);
             this.textBoxid100.TabIndex = 43;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(137, 176);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Button Name / ID";
+            this.textBoxid100.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(137, 151);
+            this.label4.Location = new System.Drawing.Point(6, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 24;
@@ -503,32 +597,25 @@
             // 
             this.comboBox100.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox100.FormattingEnabled = true;
-            this.comboBox100.Location = new System.Drawing.Point(6, 148);
+            this.comboBox100.Location = new System.Drawing.Point(6, 170);
             this.comboBox100.Name = "comboBox100";
             this.comboBox100.Size = new System.Drawing.Size(128, 21);
             this.comboBox100.TabIndex = 22;
             this.comboBox100.SelectedIndexChanged += new System.EventHandler(this.comboBox100_SelectedIndexChanged);
             // 
-            // textBox100
-            // 
-            this.textBox100.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox100.Location = new System.Drawing.Point(6, 173);
-            this.textBox100.Name = "textBox100";
-            this.textBox100.Size = new System.Drawing.Size(84, 21);
-            this.textBox100.TabIndex = 23;
-            // 
             // groupBox105
             // 
             this.groupBox105.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox105.Controls.Add(this.buttonOptions105);
+            this.groupBox105.Controls.Add(this.textBoxParameter105);
+            this.groupBox105.Controls.Add(this.textBox105);
             this.groupBox105.Controls.Add(this.checkBox105);
             this.groupBox105.Controls.Add(this.buttonEmpty105);
             this.groupBox105.Controls.Add(this.textBoxid105);
-            this.groupBox105.Controls.Add(this.label5);
             this.groupBox105.Controls.Add(this.pictureBox105);
             this.groupBox105.Controls.Add(this.label6);
             this.groupBox105.Controls.Add(this.buttonLoad105);
             this.groupBox105.Controls.Add(this.comboBox105);
-            this.groupBox105.Controls.Add(this.textBox105);
             this.groupBox105.Controls.Add(this.buttonSave105f);
             this.groupBox105.Controls.Add(this.buttonSave105u);
             this.groupBox105.Location = new System.Drawing.Point(12, 191);
@@ -537,6 +624,34 @@
             this.groupBox105.TabIndex = 26;
             this.groupBox105.TabStop = false;
             this.groupBox105.Text = "Button ID 105";
+            // 
+            // buttonOptions105
+            // 
+            this.buttonOptions105.Location = new System.Drawing.Point(140, 136);
+            this.buttonOptions105.Name = "buttonOptions105";
+            this.buttonOptions105.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions105.TabIndex = 56;
+            this.buttonOptions105.Text = "Options";
+            this.buttonOptions105.UseVisualStyleBackColor = true;
+            this.buttonOptions105.Click += new System.EventHandler(this.buttonOptions105_Click);
+            // 
+            // textBoxParameter105
+            // 
+            this.textBoxParameter105.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter105.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter105.Name = "textBoxParameter105";
+            this.textBoxParameter105.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter105.TabIndex = 56;
+            this.textBoxParameter105.Visible = false;
+            // 
+            // textBox105
+            // 
+            this.textBox105.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox105.Location = new System.Drawing.Point(7, 42);
+            this.textBox105.Name = "textBox105";
+            this.textBox105.Size = new System.Drawing.Size(126, 21);
+            this.textBox105.TabIndex = 23;
+            this.textBox105.Visible = false;
             // 
             // checkBox105
             // 
@@ -564,19 +679,11 @@
             // textBoxid105
             // 
             this.textBoxid105.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid105.Location = new System.Drawing.Point(93, 141);
+            this.textBoxid105.Location = new System.Drawing.Point(92, 18);
             this.textBoxid105.Name = "textBoxid105";
             this.textBoxid105.Size = new System.Drawing.Size(41, 21);
             this.textBoxid105.TabIndex = 38;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(137, 144);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Button Name / ID";
+            this.textBoxid105.Visible = false;
             // 
             // pictureBox105
             // 
@@ -592,7 +699,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(137, 119);
+            this.label6.Location = new System.Drawing.Point(6, 121);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 24;
@@ -612,19 +719,11 @@
             // 
             this.comboBox105.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox105.FormattingEnabled = true;
-            this.comboBox105.Location = new System.Drawing.Point(6, 116);
+            this.comboBox105.Location = new System.Drawing.Point(6, 137);
             this.comboBox105.Name = "comboBox105";
             this.comboBox105.Size = new System.Drawing.Size(128, 21);
             this.comboBox105.TabIndex = 22;
             this.comboBox105.SelectedIndexChanged += new System.EventHandler(this.comboBox105_SelectedIndexChanged);
-            // 
-            // textBox105
-            // 
-            this.textBox105.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox105.Location = new System.Drawing.Point(6, 141);
-            this.textBox105.Name = "textBox105";
-            this.textBox105.Size = new System.Drawing.Size(84, 21);
-            this.textBox105.TabIndex = 23;
             // 
             // buttonSave105f
             // 
@@ -648,23 +747,52 @@
             // 
             // groupBox110
             // 
+            this.groupBox110.Controls.Add(this.textBoxParameter110);
+            this.groupBox110.Controls.Add(this.textBox110);
+            this.groupBox110.Controls.Add(this.buttonOptions110);
             this.groupBox110.Controls.Add(this.checkBox110);
             this.groupBox110.Controls.Add(this.buttonEmpty110);
             this.groupBox110.Controls.Add(this.textBoxid110);
             this.groupBox110.Controls.Add(this.pictureBox110);
-            this.groupBox110.Controls.Add(this.label7);
             this.groupBox110.Controls.Add(this.buttonLoad110);
             this.groupBox110.Controls.Add(this.buttonSave110f);
             this.groupBox110.Controls.Add(this.buttonSave110u);
             this.groupBox110.Controls.Add(this.label8);
             this.groupBox110.Controls.Add(this.comboBox110);
-            this.groupBox110.Controls.Add(this.textBox110);
             this.groupBox110.Location = new System.Drawing.Point(12, 12);
             this.groupBox110.Name = "groupBox110";
             this.groupBox110.Size = new System.Drawing.Size(231, 173);
             this.groupBox110.TabIndex = 27;
             this.groupBox110.TabStop = false;
             this.groupBox110.Text = "Button ID 110";
+            // 
+            // textBoxParameter110
+            // 
+            this.textBoxParameter110.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter110.Name = "textBoxParameter110";
+            this.textBoxParameter110.Size = new System.Drawing.Size(126, 20);
+            this.textBoxParameter110.TabIndex = 53;
+            this.textBoxParameter110.Visible = false;
+            // 
+            // textBox110
+            // 
+            this.textBox110.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox110.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox110.Location = new System.Drawing.Point(7, 42);
+            this.textBox110.Name = "textBox110";
+            this.textBox110.Size = new System.Drawing.Size(126, 21);
+            this.textBox110.TabIndex = 12;
+            this.textBox110.Visible = false;
+            // 
+            // buttonOptions110
+            // 
+            this.buttonOptions110.Location = new System.Drawing.Point(140, 142);
+            this.buttonOptions110.Name = "buttonOptions110";
+            this.buttonOptions110.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions110.TabIndex = 52;
+            this.buttonOptions110.Text = "Options";
+            this.buttonOptions110.UseVisualStyleBackColor = true;
+            this.buttonOptions110.Click += new System.EventHandler(this.buttonOptions110_Click);
             // 
             // checkBox110
             // 
@@ -692,10 +820,11 @@
             // textBoxid110
             // 
             this.textBoxid110.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid110.Location = new System.Drawing.Point(93, 147);
+            this.textBoxid110.Location = new System.Drawing.Point(92, 18);
             this.textBoxid110.Name = "textBoxid110";
             this.textBoxid110.Size = new System.Drawing.Size(41, 21);
             this.textBoxid110.TabIndex = 20;
+            this.textBoxid110.Visible = false;
             // 
             // pictureBox110
             // 
@@ -707,15 +836,6 @@
             this.pictureBox110.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox110.TabIndex = 1;
             this.pictureBox110.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(137, 150);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 13);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Button Name / ID";
             // 
             // buttonLoad110
             // 
@@ -750,7 +870,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(137, 125);
+            this.label8.Location = new System.Drawing.Point(6, 127);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(71, 13);
             this.label8.TabIndex = 16;
@@ -761,40 +881,60 @@
             this.comboBox110.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox110.DropDownWidth = 120;
             this.comboBox110.FormattingEnabled = true;
-            this.comboBox110.Location = new System.Drawing.Point(6, 122);
+            this.comboBox110.Location = new System.Drawing.Point(6, 143);
             this.comboBox110.Name = "comboBox110";
             this.comboBox110.Size = new System.Drawing.Size(128, 21);
             this.comboBox110.TabIndex = 11;
             this.comboBox110.SelectedIndexChanged += new System.EventHandler(this.comboBox110_SelectedIndexChanged);
             // 
-            // textBox110
-            // 
-            this.textBox110.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox110.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox110.Location = new System.Drawing.Point(6, 147);
-            this.textBox110.Name = "textBox110";
-            this.textBox110.Size = new System.Drawing.Size(84, 21);
-            this.textBox110.TabIndex = 12;
-            // 
             // groupBox112
             // 
+            this.groupBox112.Controls.Add(this.buttonOptions112);
+            this.groupBox112.Controls.Add(this.textBoxParameter112);
+            this.groupBox112.Controls.Add(this.textBox112);
             this.groupBox112.Controls.Add(this.checkBox112);
             this.groupBox112.Controls.Add(this.buttonEmpty112);
             this.groupBox112.Controls.Add(this.textBoxid112);
             this.groupBox112.Controls.Add(this.pictureBox112);
-            this.groupBox112.Controls.Add(this.label9);
             this.groupBox112.Controls.Add(this.buttonLoad112);
             this.groupBox112.Controls.Add(this.buttonSave112f);
             this.groupBox112.Controls.Add(this.buttonSave112u);
             this.groupBox112.Controls.Add(this.label10);
             this.groupBox112.Controls.Add(this.comboBox112);
-            this.groupBox112.Controls.Add(this.textBox112);
             this.groupBox112.Location = new System.Drawing.Point(486, 12);
             this.groupBox112.Name = "groupBox112";
             this.groupBox112.Size = new System.Drawing.Size(231, 173);
             this.groupBox112.TabIndex = 21;
             this.groupBox112.TabStop = false;
             this.groupBox112.Text = "Button ID 112";
+            // 
+            // buttonOptions112
+            // 
+            this.buttonOptions112.Location = new System.Drawing.Point(140, 142);
+            this.buttonOptions112.Name = "buttonOptions112";
+            this.buttonOptions112.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions112.TabIndex = 55;
+            this.buttonOptions112.Text = "Options";
+            this.buttonOptions112.UseVisualStyleBackColor = true;
+            this.buttonOptions112.Click += new System.EventHandler(this.buttonOptions112_Click);
+            // 
+            // textBoxParameter112
+            // 
+            this.textBoxParameter112.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter112.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter112.Name = "textBoxParameter112";
+            this.textBoxParameter112.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter112.TabIndex = 55;
+            this.textBoxParameter112.Visible = false;
+            // 
+            // textBox112
+            // 
+            this.textBox112.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox112.Location = new System.Drawing.Point(7, 42);
+            this.textBox112.Name = "textBox112";
+            this.textBox112.Size = new System.Drawing.Size(126, 21);
+            this.textBox112.TabIndex = 12;
+            this.textBox112.Visible = false;
             // 
             // checkBox112
             // 
@@ -822,10 +962,11 @@
             // textBoxid112
             // 
             this.textBoxid112.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid112.Location = new System.Drawing.Point(93, 147);
+            this.textBoxid112.Location = new System.Drawing.Point(92, 18);
             this.textBoxid112.Name = "textBoxid112";
             this.textBoxid112.Size = new System.Drawing.Size(41, 21);
             this.textBoxid112.TabIndex = 35;
+            this.textBoxid112.Visible = false;
             // 
             // pictureBox112
             // 
@@ -837,15 +978,6 @@
             this.pictureBox112.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox112.TabIndex = 1;
             this.pictureBox112.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(137, 150);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 13);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Button Name / ID";
             // 
             // buttonLoad112
             // 
@@ -880,7 +1012,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(137, 125);
+            this.label10.Location = new System.Drawing.Point(6, 127);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 13);
             this.label10.TabIndex = 16;
@@ -890,39 +1022,60 @@
             // 
             this.comboBox112.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox112.FormattingEnabled = true;
-            this.comboBox112.Location = new System.Drawing.Point(6, 122);
+            this.comboBox112.Location = new System.Drawing.Point(6, 143);
             this.comboBox112.Name = "comboBox112";
             this.comboBox112.Size = new System.Drawing.Size(128, 21);
             this.comboBox112.TabIndex = 11;
             this.comboBox112.SelectedIndexChanged += new System.EventHandler(this.comboBox112_SelectedIndexChanged);
             // 
-            // textBox112
-            // 
-            this.textBox112.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox112.Location = new System.Drawing.Point(6, 147);
-            this.textBox112.Name = "textBox112";
-            this.textBox112.Size = new System.Drawing.Size(84, 21);
-            this.textBox112.TabIndex = 12;
-            // 
             // groupBox113
             // 
+            this.groupBox113.Controls.Add(this.buttonOptions113);
+            this.groupBox113.Controls.Add(this.textBoxParameter113);
+            this.groupBox113.Controls.Add(this.textBox113);
             this.groupBox113.Controls.Add(this.checkBox113);
             this.groupBox113.Controls.Add(this.buttonEmpty113);
             this.groupBox113.Controls.Add(this.textBoxid113);
             this.groupBox113.Controls.Add(this.pictureBox113);
-            this.groupBox113.Controls.Add(this.label11);
             this.groupBox113.Controls.Add(this.buttonLoad113);
             this.groupBox113.Controls.Add(this.buttonSave113f);
             this.groupBox113.Controls.Add(this.buttonSave113u);
             this.groupBox113.Controls.Add(this.label12);
             this.groupBox113.Controls.Add(this.comboBox113);
-            this.groupBox113.Controls.Add(this.textBox113);
             this.groupBox113.Location = new System.Drawing.Point(723, 12);
             this.groupBox113.Name = "groupBox113";
             this.groupBox113.Size = new System.Drawing.Size(231, 173);
             this.groupBox113.TabIndex = 28;
             this.groupBox113.TabStop = false;
             this.groupBox113.Text = "Button ID 113";
+            // 
+            // buttonOptions113
+            // 
+            this.buttonOptions113.Location = new System.Drawing.Point(140, 142);
+            this.buttonOptions113.Name = "buttonOptions113";
+            this.buttonOptions113.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions113.TabIndex = 56;
+            this.buttonOptions113.Text = "Options";
+            this.buttonOptions113.UseVisualStyleBackColor = true;
+            this.buttonOptions113.Click += new System.EventHandler(this.buttonOptions113_Click);
+            // 
+            // textBoxParameter113
+            // 
+            this.textBoxParameter113.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter113.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter113.Name = "textBoxParameter113";
+            this.textBoxParameter113.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter113.TabIndex = 56;
+            this.textBoxParameter113.Visible = false;
+            // 
+            // textBox113
+            // 
+            this.textBox113.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox113.Location = new System.Drawing.Point(7, 42);
+            this.textBox113.Name = "textBox113";
+            this.textBox113.Size = new System.Drawing.Size(126, 21);
+            this.textBox113.TabIndex = 12;
+            this.textBox113.Visible = false;
             // 
             // checkBox113
             // 
@@ -950,10 +1103,11 @@
             // textBoxid113
             // 
             this.textBoxid113.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid113.Location = new System.Drawing.Point(93, 147);
+            this.textBoxid113.Location = new System.Drawing.Point(92, 18);
             this.textBoxid113.Name = "textBoxid113";
             this.textBoxid113.Size = new System.Drawing.Size(41, 21);
             this.textBoxid113.TabIndex = 36;
+            this.textBoxid113.Visible = false;
             // 
             // pictureBox113
             // 
@@ -965,15 +1119,6 @@
             this.pictureBox113.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox113.TabIndex = 1;
             this.pictureBox113.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(137, 150);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(91, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Button Name / ID";
             // 
             // buttonLoad113
             // 
@@ -1008,7 +1153,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(137, 125);
+            this.label12.Location = new System.Drawing.Point(6, 127);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 13);
             this.label12.TabIndex = 16;
@@ -1018,40 +1163,61 @@
             // 
             this.comboBox113.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox113.FormattingEnabled = true;
-            this.comboBox113.Location = new System.Drawing.Point(6, 122);
+            this.comboBox113.Location = new System.Drawing.Point(6, 143);
             this.comboBox113.Name = "comboBox113";
             this.comboBox113.Size = new System.Drawing.Size(128, 21);
             this.comboBox113.TabIndex = 11;
             this.comboBox113.SelectedIndexChanged += new System.EventHandler(this.comboBox113_SelectedIndexChanged);
             // 
-            // textBox113
-            // 
-            this.textBox113.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox113.Location = new System.Drawing.Point(6, 147);
-            this.textBox113.Name = "textBox113";
-            this.textBox113.Size = new System.Drawing.Size(84, 21);
-            this.textBox113.TabIndex = 12;
-            // 
             // groupBox114
             // 
+            this.groupBox114.Controls.Add(this.buttonOptions114);
+            this.groupBox114.Controls.Add(this.textBoxParameter114);
+            this.groupBox114.Controls.Add(this.textBox114);
             this.groupBox114.Controls.Add(this.checkBox114);
             this.groupBox114.Controls.Add(this.buttonEmpty114);
             this.groupBox114.Controls.Add(this.textBoxid114);
             this.groupBox114.Controls.Add(this.textBox5);
             this.groupBox114.Controls.Add(this.pictureBox114);
-            this.groupBox114.Controls.Add(this.label13);
             this.groupBox114.Controls.Add(this.buttonLoad114);
             this.groupBox114.Controls.Add(this.buttonSave114f);
             this.groupBox114.Controls.Add(this.buttonSave114u);
             this.groupBox114.Controls.Add(this.label14);
             this.groupBox114.Controls.Add(this.comboBox114);
-            this.groupBox114.Controls.Add(this.textBox114);
             this.groupBox114.Location = new System.Drawing.Point(960, 12);
             this.groupBox114.Name = "groupBox114";
             this.groupBox114.Size = new System.Drawing.Size(231, 173);
             this.groupBox114.TabIndex = 29;
             this.groupBox114.TabStop = false;
             this.groupBox114.Text = "Button ID 114";
+            // 
+            // buttonOptions114
+            // 
+            this.buttonOptions114.Location = new System.Drawing.Point(140, 142);
+            this.buttonOptions114.Name = "buttonOptions114";
+            this.buttonOptions114.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions114.TabIndex = 57;
+            this.buttonOptions114.Text = "Options";
+            this.buttonOptions114.UseVisualStyleBackColor = true;
+            this.buttonOptions114.Click += new System.EventHandler(this.buttonOptions114_Click);
+            // 
+            // textBoxParameter114
+            // 
+            this.textBoxParameter114.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter114.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter114.Name = "textBoxParameter114";
+            this.textBoxParameter114.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter114.TabIndex = 54;
+            this.textBoxParameter114.Visible = false;
+            // 
+            // textBox114
+            // 
+            this.textBox114.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox114.Location = new System.Drawing.Point(7, 42);
+            this.textBox114.Name = "textBox114";
+            this.textBox114.Size = new System.Drawing.Size(126, 21);
+            this.textBox114.TabIndex = 12;
+            this.textBox114.Visible = false;
             // 
             // checkBox114
             // 
@@ -1079,10 +1245,11 @@
             // textBoxid114
             // 
             this.textBoxid114.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid114.Location = new System.Drawing.Point(93, 147);
+            this.textBoxid114.Location = new System.Drawing.Point(92, 18);
             this.textBoxid114.Name = "textBoxid114";
             this.textBoxid114.Size = new System.Drawing.Size(41, 21);
             this.textBoxid114.TabIndex = 37;
+            this.textBoxid114.Visible = false;
             // 
             // textBox5
             // 
@@ -1103,15 +1270,6 @@
             this.pictureBox114.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox114.TabIndex = 1;
             this.pictureBox114.TabStop = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(137, 150);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 13);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "Button Name / ID";
             // 
             // buttonLoad114
             // 
@@ -1146,7 +1304,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(137, 125);
+            this.label14.Location = new System.Drawing.Point(6, 127);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(71, 13);
             this.label14.TabIndex = 16;
@@ -1156,32 +1314,25 @@
             // 
             this.comboBox114.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox114.FormattingEnabled = true;
-            this.comboBox114.Location = new System.Drawing.Point(6, 122);
+            this.comboBox114.Location = new System.Drawing.Point(6, 143);
             this.comboBox114.Name = "comboBox114";
             this.comboBox114.Size = new System.Drawing.Size(128, 21);
             this.comboBox114.TabIndex = 11;
             this.comboBox114.SelectedIndexChanged += new System.EventHandler(this.comboBox114_SelectedIndexChanged);
             // 
-            // textBox114
-            // 
-            this.textBox114.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox114.Location = new System.Drawing.Point(6, 147);
-            this.textBox114.Name = "textBox114";
-            this.textBox114.Size = new System.Drawing.Size(84, 21);
-            this.textBox114.TabIndex = 12;
-            // 
             // groupBox106
             // 
             this.groupBox106.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox106.Controls.Add(this.buttonOptions106);
+            this.groupBox106.Controls.Add(this.textBoxParameter106);
+            this.groupBox106.Controls.Add(this.textBox106);
             this.groupBox106.Controls.Add(this.checkBox106);
             this.groupBox106.Controls.Add(this.buttonEmpty106);
             this.groupBox106.Controls.Add(this.textBoxid106);
-            this.groupBox106.Controls.Add(this.label15);
             this.groupBox106.Controls.Add(this.pictureBox106);
             this.groupBox106.Controls.Add(this.label16);
             this.groupBox106.Controls.Add(this.buttonLoad106);
             this.groupBox106.Controls.Add(this.comboBox106);
-            this.groupBox106.Controls.Add(this.textBox106);
             this.groupBox106.Controls.Add(this.buttonSave106f);
             this.groupBox106.Controls.Add(this.buttonSave106u);
             this.groupBox106.Location = new System.Drawing.Point(249, 191);
@@ -1190,6 +1341,34 @@
             this.groupBox106.TabIndex = 27;
             this.groupBox106.TabStop = false;
             this.groupBox106.Text = "Button ID 106";
+            // 
+            // buttonOptions106
+            // 
+            this.buttonOptions106.Location = new System.Drawing.Point(140, 136);
+            this.buttonOptions106.Name = "buttonOptions106";
+            this.buttonOptions106.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions106.TabIndex = 57;
+            this.buttonOptions106.Text = "Options";
+            this.buttonOptions106.UseVisualStyleBackColor = true;
+            this.buttonOptions106.Click += new System.EventHandler(this.buttonOptions106_Click);
+            // 
+            // textBoxParameter106
+            // 
+            this.textBoxParameter106.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter106.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter106.Name = "textBoxParameter106";
+            this.textBoxParameter106.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter106.TabIndex = 63;
+            this.textBoxParameter106.Visible = false;
+            // 
+            // textBox106
+            // 
+            this.textBox106.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox106.Location = new System.Drawing.Point(7, 42);
+            this.textBox106.Name = "textBox106";
+            this.textBox106.Size = new System.Drawing.Size(126, 21);
+            this.textBox106.TabIndex = 23;
+            this.textBox106.Visible = false;
             // 
             // checkBox106
             // 
@@ -1217,19 +1396,11 @@
             // textBoxid106
             // 
             this.textBoxid106.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid106.Location = new System.Drawing.Point(93, 141);
+            this.textBoxid106.Location = new System.Drawing.Point(92, 18);
             this.textBoxid106.Name = "textBoxid106";
             this.textBoxid106.Size = new System.Drawing.Size(41, 21);
             this.textBoxid106.TabIndex = 39;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(137, 144);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(91, 13);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Button Name / ID";
+            this.textBoxid106.Visible = false;
             // 
             // pictureBox106
             // 
@@ -1245,7 +1416,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(137, 119);
+            this.label16.Location = new System.Drawing.Point(6, 121);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(71, 13);
             this.label16.TabIndex = 24;
@@ -1265,19 +1436,11 @@
             // 
             this.comboBox106.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox106.FormattingEnabled = true;
-            this.comboBox106.Location = new System.Drawing.Point(6, 116);
+            this.comboBox106.Location = new System.Drawing.Point(6, 137);
             this.comboBox106.Name = "comboBox106";
             this.comboBox106.Size = new System.Drawing.Size(128, 21);
             this.comboBox106.TabIndex = 22;
             this.comboBox106.SelectedIndexChanged += new System.EventHandler(this.comboBox106_SelectedIndexChanged);
-            // 
-            // textBox106
-            // 
-            this.textBox106.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox106.Location = new System.Drawing.Point(6, 141);
-            this.textBox106.Name = "textBox106";
-            this.textBox106.Size = new System.Drawing.Size(84, 21);
-            this.textBox106.TabIndex = 23;
             // 
             // buttonSave106f
             // 
@@ -1302,15 +1465,16 @@
             // groupBox107
             // 
             this.groupBox107.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox107.Controls.Add(this.buttonOptions107);
+            this.groupBox107.Controls.Add(this.textBoxParameter107);
+            this.groupBox107.Controls.Add(this.textBox107);
             this.groupBox107.Controls.Add(this.checkBox107);
             this.groupBox107.Controls.Add(this.buttonEmpty107);
             this.groupBox107.Controls.Add(this.textBoxid107);
-            this.groupBox107.Controls.Add(this.label17);
             this.groupBox107.Controls.Add(this.pictureBox107);
             this.groupBox107.Controls.Add(this.label18);
             this.groupBox107.Controls.Add(this.buttonLoad107);
             this.groupBox107.Controls.Add(this.comboBox107);
-            this.groupBox107.Controls.Add(this.textBox107);
             this.groupBox107.Controls.Add(this.buttonSave107f);
             this.groupBox107.Controls.Add(this.buttonSave107u);
             this.groupBox107.Location = new System.Drawing.Point(486, 191);
@@ -1319,6 +1483,34 @@
             this.groupBox107.TabIndex = 27;
             this.groupBox107.TabStop = false;
             this.groupBox107.Text = "Button ID 107";
+            // 
+            // buttonOptions107
+            // 
+            this.buttonOptions107.Location = new System.Drawing.Point(140, 136);
+            this.buttonOptions107.Name = "buttonOptions107";
+            this.buttonOptions107.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions107.TabIndex = 64;
+            this.buttonOptions107.Text = "Options";
+            this.buttonOptions107.UseVisualStyleBackColor = true;
+            this.buttonOptions107.Click += new System.EventHandler(this.buttonOptions107_Click);
+            // 
+            // textBoxParameter107
+            // 
+            this.textBoxParameter107.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter107.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter107.Name = "textBoxParameter107";
+            this.textBoxParameter107.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter107.TabIndex = 62;
+            this.textBoxParameter107.Visible = false;
+            // 
+            // textBox107
+            // 
+            this.textBox107.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox107.Location = new System.Drawing.Point(7, 42);
+            this.textBox107.Name = "textBox107";
+            this.textBox107.Size = new System.Drawing.Size(126, 21);
+            this.textBox107.TabIndex = 23;
+            this.textBox107.Visible = false;
             // 
             // checkBox107
             // 
@@ -1346,19 +1538,11 @@
             // textBoxid107
             // 
             this.textBoxid107.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid107.Location = new System.Drawing.Point(93, 141);
+            this.textBoxid107.Location = new System.Drawing.Point(92, 18);
             this.textBoxid107.Name = "textBoxid107";
             this.textBoxid107.Size = new System.Drawing.Size(41, 21);
             this.textBoxid107.TabIndex = 40;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(137, 144);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(91, 13);
-            this.label17.TabIndex = 25;
-            this.label17.Text = "Button Name / ID";
+            this.textBoxid107.Visible = false;
             // 
             // pictureBox107
             // 
@@ -1374,7 +1558,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(137, 119);
+            this.label18.Location = new System.Drawing.Point(6, 121);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(71, 13);
             this.label18.TabIndex = 24;
@@ -1394,19 +1578,11 @@
             // 
             this.comboBox107.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox107.FormattingEnabled = true;
-            this.comboBox107.Location = new System.Drawing.Point(6, 116);
+            this.comboBox107.Location = new System.Drawing.Point(6, 137);
             this.comboBox107.Name = "comboBox107";
             this.comboBox107.Size = new System.Drawing.Size(128, 21);
             this.comboBox107.TabIndex = 22;
             this.comboBox107.SelectedIndexChanged += new System.EventHandler(this.comboBox107_SelectedIndexChanged);
-            // 
-            // textBox107
-            // 
-            this.textBox107.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox107.Location = new System.Drawing.Point(6, 141);
-            this.textBox107.Name = "textBox107";
-            this.textBox107.Size = new System.Drawing.Size(84, 21);
-            this.textBox107.TabIndex = 23;
             // 
             // buttonSave107f
             // 
@@ -1431,15 +1607,16 @@
             // groupBox108
             // 
             this.groupBox108.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox108.Controls.Add(this.buttonOptions108);
+            this.groupBox108.Controls.Add(this.textBoxParameter108);
+            this.groupBox108.Controls.Add(this.textBox108);
             this.groupBox108.Controls.Add(this.checkBox108);
             this.groupBox108.Controls.Add(this.buttonEmpty108);
             this.groupBox108.Controls.Add(this.textBoxid108);
-            this.groupBox108.Controls.Add(this.label19);
             this.groupBox108.Controls.Add(this.pictureBox108);
             this.groupBox108.Controls.Add(this.label20);
             this.groupBox108.Controls.Add(this.buttonLoad108);
             this.groupBox108.Controls.Add(this.comboBox108);
-            this.groupBox108.Controls.Add(this.textBox108);
             this.groupBox108.Controls.Add(this.buttonSave108f);
             this.groupBox108.Controls.Add(this.buttonSave108u);
             this.groupBox108.Location = new System.Drawing.Point(723, 191);
@@ -1448,6 +1625,34 @@
             this.groupBox108.TabIndex = 27;
             this.groupBox108.TabStop = false;
             this.groupBox108.Text = "Button ID 108";
+            // 
+            // buttonOptions108
+            // 
+            this.buttonOptions108.Location = new System.Drawing.Point(140, 136);
+            this.buttonOptions108.Name = "buttonOptions108";
+            this.buttonOptions108.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions108.TabIndex = 65;
+            this.buttonOptions108.Text = "Options";
+            this.buttonOptions108.UseVisualStyleBackColor = true;
+            this.buttonOptions108.Click += new System.EventHandler(this.buttonOptions108_Click);
+            // 
+            // textBoxParameter108
+            // 
+            this.textBoxParameter108.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter108.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter108.Name = "textBoxParameter108";
+            this.textBoxParameter108.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter108.TabIndex = 61;
+            this.textBoxParameter108.Visible = false;
+            // 
+            // textBox108
+            // 
+            this.textBox108.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox108.Location = new System.Drawing.Point(7, 42);
+            this.textBox108.Name = "textBox108";
+            this.textBox108.Size = new System.Drawing.Size(126, 21);
+            this.textBox108.TabIndex = 23;
+            this.textBox108.Visible = false;
             // 
             // checkBox108
             // 
@@ -1475,19 +1680,11 @@
             // textBoxid108
             // 
             this.textBoxid108.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid108.Location = new System.Drawing.Point(93, 141);
+            this.textBoxid108.Location = new System.Drawing.Point(92, 18);
             this.textBoxid108.Name = "textBoxid108";
             this.textBoxid108.Size = new System.Drawing.Size(41, 21);
             this.textBoxid108.TabIndex = 41;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(137, 144);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(91, 13);
-            this.label19.TabIndex = 25;
-            this.label19.Text = "Button Name / ID";
+            this.textBoxid108.Visible = false;
             // 
             // pictureBox108
             // 
@@ -1503,7 +1700,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(137, 119);
+            this.label20.Location = new System.Drawing.Point(6, 121);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(71, 13);
             this.label20.TabIndex = 24;
@@ -1523,19 +1720,11 @@
             // 
             this.comboBox108.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox108.FormattingEnabled = true;
-            this.comboBox108.Location = new System.Drawing.Point(6, 116);
+            this.comboBox108.Location = new System.Drawing.Point(6, 137);
             this.comboBox108.Name = "comboBox108";
             this.comboBox108.Size = new System.Drawing.Size(128, 21);
             this.comboBox108.TabIndex = 22;
             this.comboBox108.SelectedIndexChanged += new System.EventHandler(this.comboBox108_SelectedIndexChanged);
-            // 
-            // textBox108
-            // 
-            this.textBox108.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox108.Location = new System.Drawing.Point(6, 141);
-            this.textBox108.Name = "textBox108";
-            this.textBox108.Size = new System.Drawing.Size(84, 21);
-            this.textBox108.TabIndex = 23;
             // 
             // buttonSave108f
             // 
@@ -1560,15 +1749,16 @@
             // groupBox109
             // 
             this.groupBox109.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox109.Controls.Add(this.buttonOptions109);
+            this.groupBox109.Controls.Add(this.textBoxParameter109);
+            this.groupBox109.Controls.Add(this.textBox109);
             this.groupBox109.Controls.Add(this.checkBox109);
             this.groupBox109.Controls.Add(this.buttonEmpty109);
             this.groupBox109.Controls.Add(this.textBoxid109);
-            this.groupBox109.Controls.Add(this.label21);
             this.groupBox109.Controls.Add(this.pictureBox109);
             this.groupBox109.Controls.Add(this.label22);
             this.groupBox109.Controls.Add(this.buttonLoad109);
             this.groupBox109.Controls.Add(this.comboBox109);
-            this.groupBox109.Controls.Add(this.textBox109);
             this.groupBox109.Controls.Add(this.buttonSave109f);
             this.groupBox109.Controls.Add(this.buttonSave109u);
             this.groupBox109.Location = new System.Drawing.Point(960, 191);
@@ -1577,6 +1767,34 @@
             this.groupBox109.TabIndex = 27;
             this.groupBox109.TabStop = false;
             this.groupBox109.Text = "Button ID 109";
+            // 
+            // buttonOptions109
+            // 
+            this.buttonOptions109.Location = new System.Drawing.Point(140, 136);
+            this.buttonOptions109.Name = "buttonOptions109";
+            this.buttonOptions109.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions109.TabIndex = 66;
+            this.buttonOptions109.Text = "Options";
+            this.buttonOptions109.UseVisualStyleBackColor = true;
+            this.buttonOptions109.Click += new System.EventHandler(this.buttonOptions109_Click);
+            // 
+            // textBoxParameter109
+            // 
+            this.textBoxParameter109.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter109.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter109.Name = "textBoxParameter109";
+            this.textBoxParameter109.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter109.TabIndex = 56;
+            this.textBoxParameter109.Visible = false;
+            // 
+            // textBox109
+            // 
+            this.textBox109.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox109.Location = new System.Drawing.Point(7, 42);
+            this.textBox109.Name = "textBox109";
+            this.textBox109.Size = new System.Drawing.Size(126, 21);
+            this.textBox109.TabIndex = 23;
+            this.textBox109.Visible = false;
             // 
             // checkBox109
             // 
@@ -1604,19 +1822,11 @@
             // textBoxid109
             // 
             this.textBoxid109.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid109.Location = new System.Drawing.Point(93, 141);
+            this.textBoxid109.Location = new System.Drawing.Point(92, 18);
             this.textBoxid109.Name = "textBoxid109";
             this.textBoxid109.Size = new System.Drawing.Size(41, 21);
             this.textBoxid109.TabIndex = 42;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(137, 144);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(91, 13);
-            this.label21.TabIndex = 25;
-            this.label21.Text = "Button Name / ID";
+            this.textBoxid109.Visible = false;
             // 
             // pictureBox109
             // 
@@ -1632,7 +1842,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(137, 119);
+            this.label22.Location = new System.Drawing.Point(6, 121);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(71, 13);
             this.label22.TabIndex = 24;
@@ -1652,19 +1862,11 @@
             // 
             this.comboBox109.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox109.FormattingEnabled = true;
-            this.comboBox109.Location = new System.Drawing.Point(6, 116);
+            this.comboBox109.Location = new System.Drawing.Point(6, 137);
             this.comboBox109.Name = "comboBox109";
             this.comboBox109.Size = new System.Drawing.Size(128, 21);
             this.comboBox109.TabIndex = 22;
             this.comboBox109.SelectedIndexChanged += new System.EventHandler(this.comboBox109_SelectedIndexChanged);
-            // 
-            // textBox109
-            // 
-            this.textBox109.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox109.Location = new System.Drawing.Point(6, 141);
-            this.textBox109.Name = "textBox109";
-            this.textBox109.Size = new System.Drawing.Size(84, 21);
-            this.textBox109.TabIndex = 23;
             // 
             // buttonSave109f
             // 
@@ -1689,14 +1891,18 @@
             // groupBox101
             // 
             this.groupBox101.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox101.Controls.Add(this.buttonOptions101);
+            this.groupBox101.Controls.Add(this.button14);
+            this.groupBox101.Controls.Add(this.textBoxParameter101);
+            this.groupBox101.Controls.Add(this.button15);
+            this.groupBox101.Controls.Add(this.textBox101);
+            this.groupBox101.Controls.Add(this.button16);
             this.groupBox101.Controls.Add(this.buttonEmpty101);
             this.groupBox101.Controls.Add(this.textBoxid101);
-            this.groupBox101.Controls.Add(this.label23);
             this.groupBox101.Controls.Add(this.pictureBox101);
             this.groupBox101.Controls.Add(this.label24);
             this.groupBox101.Controls.Add(this.buttonLoad101);
             this.groupBox101.Controls.Add(this.comboBox101);
-            this.groupBox101.Controls.Add(this.textBox101);
             this.groupBox101.Controls.Add(this.buttonSave101f);
             this.groupBox101.Controls.Add(this.buttonSave101u);
             this.groupBox101.Location = new System.Drawing.Point(249, 364);
@@ -1705,6 +1911,61 @@
             this.groupBox101.TabIndex = 30;
             this.groupBox101.TabStop = false;
             this.groupBox101.Text = "Button ID 101";
+            // 
+            // buttonOptions101
+            // 
+            this.buttonOptions101.Location = new System.Drawing.Point(140, 169);
+            this.buttonOptions101.Name = "buttonOptions101";
+            this.buttonOptions101.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions101.TabIndex = 71;
+            this.buttonOptions101.Text = "Options";
+            this.buttonOptions101.UseVisualStyleBackColor = true;
+            this.buttonOptions101.Click += new System.EventHandler(this.buttonOptions101_Click);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(140, 168);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(85, 23);
+            this.button14.TabIndex = 70;
+            this.button14.Text = "Options";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // textBoxParameter101
+            // 
+            this.textBoxParameter101.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter101.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter101.Name = "textBoxParameter101";
+            this.textBoxParameter101.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter101.TabIndex = 54;
+            this.textBoxParameter101.Visible = false;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(140, 168);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(85, 23);
+            this.button15.TabIndex = 73;
+            this.button15.Text = "Options";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // textBox101
+            // 
+            this.textBox101.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox101.Location = new System.Drawing.Point(7, 42);
+            this.textBox101.Name = "textBox101";
+            this.textBox101.Size = new System.Drawing.Size(126, 21);
+            this.textBox101.TabIndex = 23;
+            this.textBox101.Visible = false;
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(140, 168);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(85, 23);
+            this.button16.TabIndex = 72;
+            this.button16.Text = "Options";
+            this.button16.UseVisualStyleBackColor = true;
             // 
             // buttonEmpty101
             // 
@@ -1719,19 +1980,11 @@
             // textBoxid101
             // 
             this.textBoxid101.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid101.Location = new System.Drawing.Point(93, 173);
+            this.textBoxid101.Location = new System.Drawing.Point(92, 18);
             this.textBoxid101.Name = "textBoxid101";
             this.textBoxid101.Size = new System.Drawing.Size(41, 21);
             this.textBoxid101.TabIndex = 44;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(137, 176);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(91, 13);
-            this.label23.TabIndex = 25;
-            this.label23.Text = "Button Name / ID";
+            this.textBoxid101.Visible = false;
             // 
             // pictureBox101
             // 
@@ -1747,7 +2000,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(137, 151);
+            this.label24.Location = new System.Drawing.Point(6, 154);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(71, 13);
             this.label24.TabIndex = 24;
@@ -1767,19 +2020,11 @@
             // 
             this.comboBox101.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox101.FormattingEnabled = true;
-            this.comboBox101.Location = new System.Drawing.Point(6, 148);
+            this.comboBox101.Location = new System.Drawing.Point(6, 170);
             this.comboBox101.Name = "comboBox101";
             this.comboBox101.Size = new System.Drawing.Size(128, 21);
             this.comboBox101.TabIndex = 22;
             this.comboBox101.SelectedIndexChanged += new System.EventHandler(this.comboBox101_SelectedIndexChanged);
-            // 
-            // textBox101
-            // 
-            this.textBox101.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox101.Location = new System.Drawing.Point(6, 173);
-            this.textBox101.Name = "textBox101";
-            this.textBox101.Size = new System.Drawing.Size(84, 21);
-            this.textBox101.TabIndex = 23;
             // 
             // buttonSave101f
             // 
@@ -1804,14 +2049,18 @@
             // groupBox102
             // 
             this.groupBox102.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox102.Controls.Add(this.buttonOptions102);
+            this.groupBox102.Controls.Add(this.button18);
+            this.groupBox102.Controls.Add(this.textBoxParameter102);
+            this.groupBox102.Controls.Add(this.button19);
+            this.groupBox102.Controls.Add(this.textBox102);
+            this.groupBox102.Controls.Add(this.button20);
             this.groupBox102.Controls.Add(this.buttonEmpty102);
             this.groupBox102.Controls.Add(this.textBoxid102);
-            this.groupBox102.Controls.Add(this.label25);
             this.groupBox102.Controls.Add(this.pictureBox102);
             this.groupBox102.Controls.Add(this.label26);
             this.groupBox102.Controls.Add(this.buttonLoad102);
             this.groupBox102.Controls.Add(this.comboBox102);
-            this.groupBox102.Controls.Add(this.textBox102);
             this.groupBox102.Controls.Add(this.buttonSave102f);
             this.groupBox102.Controls.Add(this.buttonSave102u);
             this.groupBox102.Location = new System.Drawing.Point(486, 364);
@@ -1820,6 +2069,61 @@
             this.groupBox102.TabIndex = 31;
             this.groupBox102.TabStop = false;
             this.groupBox102.Text = "Button ID 102";
+            // 
+            // buttonOptions102
+            // 
+            this.buttonOptions102.Location = new System.Drawing.Point(140, 169);
+            this.buttonOptions102.Name = "buttonOptions102";
+            this.buttonOptions102.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions102.TabIndex = 75;
+            this.buttonOptions102.Text = "Options";
+            this.buttonOptions102.UseVisualStyleBackColor = true;
+            this.buttonOptions102.Click += new System.EventHandler(this.buttonOptions102_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(140, 168);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(85, 23);
+            this.button18.TabIndex = 74;
+            this.button18.Text = "Options";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // textBoxParameter102
+            // 
+            this.textBoxParameter102.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter102.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter102.Name = "textBoxParameter102";
+            this.textBoxParameter102.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter102.TabIndex = 55;
+            this.textBoxParameter102.Visible = false;
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(140, 168);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(85, 23);
+            this.button19.TabIndex = 77;
+            this.button19.Text = "Options";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
+            // textBox102
+            // 
+            this.textBox102.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox102.Location = new System.Drawing.Point(7, 42);
+            this.textBox102.Name = "textBox102";
+            this.textBox102.Size = new System.Drawing.Size(126, 21);
+            this.textBox102.TabIndex = 23;
+            this.textBox102.Visible = false;
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(140, 168);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(85, 23);
+            this.button20.TabIndex = 76;
+            this.button20.Text = "Options";
+            this.button20.UseVisualStyleBackColor = true;
             // 
             // buttonEmpty102
             // 
@@ -1834,19 +2138,11 @@
             // textBoxid102
             // 
             this.textBoxid102.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid102.Location = new System.Drawing.Point(93, 173);
+            this.textBoxid102.Location = new System.Drawing.Point(92, 18);
             this.textBoxid102.Name = "textBoxid102";
             this.textBoxid102.Size = new System.Drawing.Size(41, 21);
             this.textBoxid102.TabIndex = 45;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(137, 176);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(91, 13);
-            this.label25.TabIndex = 25;
-            this.label25.Text = "Button Name / ID";
+            this.textBoxid102.Visible = false;
             // 
             // pictureBox102
             // 
@@ -1862,7 +2158,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(137, 151);
+            this.label26.Location = new System.Drawing.Point(6, 154);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(71, 13);
             this.label26.TabIndex = 24;
@@ -1882,19 +2178,11 @@
             // 
             this.comboBox102.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox102.FormattingEnabled = true;
-            this.comboBox102.Location = new System.Drawing.Point(6, 148);
+            this.comboBox102.Location = new System.Drawing.Point(6, 170);
             this.comboBox102.Name = "comboBox102";
             this.comboBox102.Size = new System.Drawing.Size(128, 21);
             this.comboBox102.TabIndex = 22;
             this.comboBox102.SelectedIndexChanged += new System.EventHandler(this.comboBox102_SelectedIndexChanged);
-            // 
-            // textBox102
-            // 
-            this.textBox102.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox102.Location = new System.Drawing.Point(6, 173);
-            this.textBox102.Name = "textBox102";
-            this.textBox102.Size = new System.Drawing.Size(84, 21);
-            this.textBox102.TabIndex = 23;
             // 
             // buttonSave102f
             // 
@@ -1919,14 +2207,18 @@
             // groupBox103
             // 
             this.groupBox103.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox103.Controls.Add(this.buttonOptions103);
+            this.groupBox103.Controls.Add(this.button22);
+            this.groupBox103.Controls.Add(this.textBoxParameter103);
+            this.groupBox103.Controls.Add(this.button23);
+            this.groupBox103.Controls.Add(this.textBox103);
+            this.groupBox103.Controls.Add(this.button24);
             this.groupBox103.Controls.Add(this.buttonEmpty103);
             this.groupBox103.Controls.Add(this.textBoxid103);
-            this.groupBox103.Controls.Add(this.label27);
             this.groupBox103.Controls.Add(this.pictureBox103);
             this.groupBox103.Controls.Add(this.label28);
             this.groupBox103.Controls.Add(this.buttonLoad103);
             this.groupBox103.Controls.Add(this.comboBox103);
-            this.groupBox103.Controls.Add(this.textBox103);
             this.groupBox103.Controls.Add(this.buttonSave103f);
             this.groupBox103.Controls.Add(this.buttonSave103u);
             this.groupBox103.Location = new System.Drawing.Point(723, 364);
@@ -1935,6 +2227,61 @@
             this.groupBox103.TabIndex = 32;
             this.groupBox103.TabStop = false;
             this.groupBox103.Text = "Button ID 103";
+            // 
+            // buttonOptions103
+            // 
+            this.buttonOptions103.Location = new System.Drawing.Point(140, 169);
+            this.buttonOptions103.Name = "buttonOptions103";
+            this.buttonOptions103.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions103.TabIndex = 79;
+            this.buttonOptions103.Text = "Options";
+            this.buttonOptions103.UseVisualStyleBackColor = true;
+            this.buttonOptions103.Click += new System.EventHandler(this.buttonOptions103_Click);
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(140, 168);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(85, 23);
+            this.button22.TabIndex = 78;
+            this.button22.Text = "Options";
+            this.button22.UseVisualStyleBackColor = true;
+            // 
+            // textBoxParameter103
+            // 
+            this.textBoxParameter103.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter103.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter103.Name = "textBoxParameter103";
+            this.textBoxParameter103.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter103.TabIndex = 63;
+            this.textBoxParameter103.Visible = false;
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(140, 168);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(85, 23);
+            this.button23.TabIndex = 81;
+            this.button23.Text = "Options";
+            this.button23.UseVisualStyleBackColor = true;
+            // 
+            // textBox103
+            // 
+            this.textBox103.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox103.Location = new System.Drawing.Point(7, 42);
+            this.textBox103.Name = "textBox103";
+            this.textBox103.Size = new System.Drawing.Size(126, 21);
+            this.textBox103.TabIndex = 23;
+            this.textBox103.Visible = false;
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(140, 168);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(85, 23);
+            this.button24.TabIndex = 80;
+            this.button24.Text = "Options";
+            this.button24.UseVisualStyleBackColor = true;
             // 
             // buttonEmpty103
             // 
@@ -1949,19 +2296,11 @@
             // textBoxid103
             // 
             this.textBoxid103.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid103.Location = new System.Drawing.Point(93, 173);
+            this.textBoxid103.Location = new System.Drawing.Point(92, 18);
             this.textBoxid103.Name = "textBoxid103";
             this.textBoxid103.Size = new System.Drawing.Size(41, 21);
             this.textBoxid103.TabIndex = 46;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(137, 176);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(91, 13);
-            this.label27.TabIndex = 25;
-            this.label27.Text = "Button Name / ID";
+            this.textBoxid103.Visible = false;
             // 
             // pictureBox103
             // 
@@ -1977,7 +2316,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(137, 151);
+            this.label28.Location = new System.Drawing.Point(6, 154);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(71, 13);
             this.label28.TabIndex = 24;
@@ -1997,19 +2336,11 @@
             // 
             this.comboBox103.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox103.FormattingEnabled = true;
-            this.comboBox103.Location = new System.Drawing.Point(6, 148);
+            this.comboBox103.Location = new System.Drawing.Point(6, 170);
             this.comboBox103.Name = "comboBox103";
             this.comboBox103.Size = new System.Drawing.Size(128, 21);
             this.comboBox103.TabIndex = 22;
             this.comboBox103.SelectedIndexChanged += new System.EventHandler(this.comboBox103_SelectedIndexChanged);
-            // 
-            // textBox103
-            // 
-            this.textBox103.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox103.Location = new System.Drawing.Point(6, 173);
-            this.textBox103.Name = "textBox103";
-            this.textBox103.Size = new System.Drawing.Size(84, 21);
-            this.textBox103.TabIndex = 23;
             // 
             // buttonSave103f
             // 
@@ -2034,14 +2365,18 @@
             // groupBox104
             // 
             this.groupBox104.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox104.Controls.Add(this.buttonOptions104);
+            this.groupBox104.Controls.Add(this.button26);
+            this.groupBox104.Controls.Add(this.textBoxParameter104);
+            this.groupBox104.Controls.Add(this.button27);
+            this.groupBox104.Controls.Add(this.textBox104);
+            this.groupBox104.Controls.Add(this.button28);
             this.groupBox104.Controls.Add(this.buttonEmpty104);
             this.groupBox104.Controls.Add(this.textBoxid104);
-            this.groupBox104.Controls.Add(this.label29);
             this.groupBox104.Controls.Add(this.pictureBox104);
             this.groupBox104.Controls.Add(this.label30);
             this.groupBox104.Controls.Add(this.buttonLoad104);
             this.groupBox104.Controls.Add(this.comboBox104);
-            this.groupBox104.Controls.Add(this.textBox104);
             this.groupBox104.Controls.Add(this.buttonSave104f);
             this.groupBox104.Controls.Add(this.buttonSave104u);
             this.groupBox104.Location = new System.Drawing.Point(960, 364);
@@ -2050,6 +2385,61 @@
             this.groupBox104.TabIndex = 33;
             this.groupBox104.TabStop = false;
             this.groupBox104.Text = "Button ID 104";
+            // 
+            // buttonOptions104
+            // 
+            this.buttonOptions104.Location = new System.Drawing.Point(140, 169);
+            this.buttonOptions104.Name = "buttonOptions104";
+            this.buttonOptions104.Size = new System.Drawing.Size(85, 23);
+            this.buttonOptions104.TabIndex = 83;
+            this.buttonOptions104.Text = "Options";
+            this.buttonOptions104.UseVisualStyleBackColor = true;
+            this.buttonOptions104.Click += new System.EventHandler(this.buttonOptions104_Click);
+            // 
+            // button26
+            // 
+            this.button26.Location = new System.Drawing.Point(140, 169);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(85, 23);
+            this.button26.TabIndex = 82;
+            this.button26.Text = "Options";
+            this.button26.UseVisualStyleBackColor = true;
+            // 
+            // textBoxParameter104
+            // 
+            this.textBoxParameter104.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxParameter104.Location = new System.Drawing.Point(7, 66);
+            this.textBoxParameter104.Name = "textBoxParameter104";
+            this.textBoxParameter104.Size = new System.Drawing.Size(126, 21);
+            this.textBoxParameter104.TabIndex = 64;
+            this.textBoxParameter104.Visible = false;
+            // 
+            // button27
+            // 
+            this.button27.Location = new System.Drawing.Point(140, 169);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(85, 23);
+            this.button27.TabIndex = 85;
+            this.button27.Text = "Options";
+            this.button27.UseVisualStyleBackColor = true;
+            // 
+            // textBox104
+            // 
+            this.textBox104.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox104.Location = new System.Drawing.Point(7, 42);
+            this.textBox104.Name = "textBox104";
+            this.textBox104.Size = new System.Drawing.Size(126, 21);
+            this.textBox104.TabIndex = 23;
+            this.textBox104.Visible = false;
+            // 
+            // button28
+            // 
+            this.button28.Location = new System.Drawing.Point(140, 169);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(85, 23);
+            this.button28.TabIndex = 84;
+            this.button28.Text = "Options";
+            this.button28.UseVisualStyleBackColor = true;
             // 
             // buttonEmpty104
             // 
@@ -2064,19 +2454,11 @@
             // textBoxid104
             // 
             this.textBoxid104.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxid104.Location = new System.Drawing.Point(93, 173);
+            this.textBoxid104.Location = new System.Drawing.Point(92, 18);
             this.textBoxid104.Name = "textBoxid104";
             this.textBoxid104.Size = new System.Drawing.Size(41, 21);
             this.textBoxid104.TabIndex = 47;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(137, 176);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(91, 13);
-            this.label29.TabIndex = 25;
-            this.label29.Text = "Button Name / ID";
+            this.textBoxid104.Visible = false;
             // 
             // pictureBox104
             // 
@@ -2092,7 +2474,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(137, 151);
+            this.label30.Location = new System.Drawing.Point(6, 154);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(71, 13);
             this.label30.TabIndex = 24;
@@ -2112,19 +2494,11 @@
             // 
             this.comboBox104.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox104.FormattingEnabled = true;
-            this.comboBox104.Location = new System.Drawing.Point(6, 148);
+            this.comboBox104.Location = new System.Drawing.Point(6, 170);
             this.comboBox104.Name = "comboBox104";
             this.comboBox104.Size = new System.Drawing.Size(128, 21);
             this.comboBox104.TabIndex = 22;
             this.comboBox104.SelectedIndexChanged += new System.EventHandler(this.comboBox104_SelectedIndexChanged);
-            // 
-            // textBox104
-            // 
-            this.textBox104.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox104.Location = new System.Drawing.Point(6, 173);
-            this.textBox104.Name = "textBox104";
-            this.textBox104.Size = new System.Drawing.Size(84, 21);
-            this.textBox104.TabIndex = 23;
             // 
             // buttonSave104f
             // 
@@ -2349,15 +2723,12 @@
         private System.Windows.Forms.TextBox textBox111;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox111;
         private System.Windows.Forms.GroupBox groupBox100;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox100;
         private System.Windows.Forms.TextBox textBox100;
         private System.Windows.Forms.GroupBox groupBox105;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox105;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonLoad105;
@@ -2368,7 +2739,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.GroupBox groupBox110;
         private System.Windows.Forms.PictureBox pictureBox110;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonLoad110;
         private System.Windows.Forms.Button buttonSave110f;
         private System.Windows.Forms.Button buttonSave110u;
@@ -2377,7 +2747,6 @@
         private System.Windows.Forms.TextBox textBox110;
         private System.Windows.Forms.GroupBox groupBox112;
         private System.Windows.Forms.PictureBox pictureBox112;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonLoad112;
         private System.Windows.Forms.Button buttonSave112f;
         private System.Windows.Forms.Button buttonSave112u;
@@ -2386,7 +2755,6 @@
         private System.Windows.Forms.TextBox textBox112;
         private System.Windows.Forms.GroupBox groupBox113;
         private System.Windows.Forms.PictureBox pictureBox113;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button buttonLoad113;
         private System.Windows.Forms.Button buttonSave113f;
         private System.Windows.Forms.Button buttonSave113u;
@@ -2395,7 +2763,6 @@
         private System.Windows.Forms.TextBox textBox113;
         private System.Windows.Forms.GroupBox groupBox114;
         private System.Windows.Forms.PictureBox pictureBox114;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button buttonLoad114;
         private System.Windows.Forms.Button buttonSave114f;
         private System.Windows.Forms.Button buttonSave114u;
@@ -2403,7 +2770,6 @@
         private System.Windows.Forms.ComboBox comboBox114;
         private System.Windows.Forms.TextBox textBox114;
         private System.Windows.Forms.GroupBox groupBox106;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox106;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button buttonLoad106;
@@ -2412,7 +2778,6 @@
         private System.Windows.Forms.Button buttonSave106f;
         private System.Windows.Forms.Button buttonSave106u;
         private System.Windows.Forms.GroupBox groupBox107;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox107;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button buttonLoad107;
@@ -2421,7 +2786,6 @@
         private System.Windows.Forms.Button buttonSave107f;
         private System.Windows.Forms.Button buttonSave107u;
         private System.Windows.Forms.GroupBox groupBox108;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox108;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button buttonLoad108;
@@ -2430,7 +2794,6 @@
         private System.Windows.Forms.Button buttonSave108f;
         private System.Windows.Forms.Button buttonSave108u;
         private System.Windows.Forms.GroupBox groupBox109;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.PictureBox pictureBox109;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button buttonLoad109;
@@ -2439,7 +2802,6 @@
         private System.Windows.Forms.Button buttonSave109f;
         private System.Windows.Forms.Button buttonSave109u;
         private System.Windows.Forms.GroupBox groupBox101;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.PictureBox pictureBox101;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button buttonLoad101;
@@ -2448,7 +2810,6 @@
         private System.Windows.Forms.Button buttonSave101f;
         private System.Windows.Forms.Button buttonSave101u;
         private System.Windows.Forms.GroupBox groupBox102;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.PictureBox pictureBox102;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button buttonLoad102;
@@ -2457,7 +2818,6 @@
         private System.Windows.Forms.Button buttonSave102f;
         private System.Windows.Forms.Button buttonSave102u;
         private System.Windows.Forms.GroupBox groupBox103;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.PictureBox pictureBox103;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button buttonLoad103;
@@ -2466,7 +2826,6 @@
         private System.Windows.Forms.Button buttonSave103f;
         private System.Windows.Forms.Button buttonSave103u;
         private System.Windows.Forms.GroupBox groupBox104;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.PictureBox pictureBox104;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button buttonLoad104;
@@ -2524,6 +2883,51 @@
         private System.Windows.Forms.CheckBox checkBox107;
         private System.Windows.Forms.CheckBox checkBox108;
         private System.Windows.Forms.CheckBox checkBox109;
+        private System.Windows.Forms.Button buttonOptions110;
+        private System.Windows.Forms.TextBox textBoxParameter110;
+        private System.Windows.Forms.TextBox textBoxParameter111;
+        private System.Windows.Forms.Button buttonOptions111;
+        private System.Windows.Forms.TextBox textBoxParameter100;
+        private System.Windows.Forms.TextBox textBoxParameter105;
+        private System.Windows.Forms.TextBox textBoxParameter112;
+        private System.Windows.Forms.TextBox textBoxParameter113;
+        private System.Windows.Forms.TextBox textBoxParameter114;
+        private System.Windows.Forms.TextBox textBoxParameter106;
+        private System.Windows.Forms.TextBox textBoxParameter107;
+        private System.Windows.Forms.TextBox textBoxParameter108;
+        private System.Windows.Forms.TextBox textBoxParameter109;
+        private System.Windows.Forms.TextBox textBoxParameter101;
+        private System.Windows.Forms.TextBox textBoxParameter102;
+        private System.Windows.Forms.TextBox textBoxParameter103;
+        private System.Windows.Forms.TextBox textBoxParameter104;
+        private System.Windows.Forms.Button buttonOptions112;
+        private System.Windows.Forms.Button buttonOptions113;
+        private System.Windows.Forms.Button buttonOptions114;
+        private System.Windows.Forms.Button buttonOptions105;
+        private System.Windows.Forms.Button buttonOptions106;
+        private System.Windows.Forms.Button buttonOptions107;
+        private System.Windows.Forms.Button buttonOptions108;
+        private System.Windows.Forms.Button buttonOptions109;
+        private System.Windows.Forms.Button buttonOptions100;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button buttonOptions101;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button buttonOptions102;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button buttonOptions103;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button buttonOptions104;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button button28;
     }
 }
 
