@@ -12,7 +12,6 @@
 		<import>common.window.accessories.xml</import>
 		<import>common.window.time.xml</import>
 		<import>common.facade.background.xml</import>
-		<import>common.facade.itemcount.xml</import>
 		<control>
 			<id>0</id>
 			<type>image</type>
@@ -162,6 +161,18 @@
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
 				<visible>control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>665</posY>
+				<label>#TVSeries.Playlist.Count #TVSeries.Translation.Episodes.Label</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
