@@ -31,6 +31,21 @@
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
+				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>138</posX>
+				<posY>122</posY>
+				<width>133</width>
+				<height>100</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#TV.RecordedTV.thumb</texture>
+				<centered>yes</centered>
+				<zoom>no</zoom>
+				<keepaspectratio>yes</keepaspectratio>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)+string.equals(#selectedthumb,)</visible>
+				<animation effect="fade" time="150">visiblechange</animation>
+			</control>
+			<control>
 				<id>500</id>
 				<type>image</type>
 				<posX>39</posX>
@@ -80,31 +95,16 @@
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
-				<type>image</type>
-				<description>Current program channel</description>
-				<id>0</id>
-				<posX>30</posX>
-				<posY>399</posY>
-				<width>41</width>
-				<height>31</height>
-				<texture>#TV.RecordedTV.thumb</texture>
-				<centered>yes</centered>
-				<zoom>yes</zoom>
-				<keepaspectratio>yes</keepaspectratio>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
 				<type>fadelabel</type>
 				<description>Current program channel</description>
 				<id>0</id>
-				<posX>85</posX>
+				<posX>30</posX>
 				<posY>400</posY>
 				<label>#TV.RecordedTV.Channel</label>
 				<textcolor>ffffffff</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
-				<width>295</width>
+				<width>380</width>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
