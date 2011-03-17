@@ -111,6 +111,20 @@
 		<import>common.facade.recordings.xml</import>
 
 		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>73</posX>
+			<posY>488</posY>
+			<width>215</width>     
+			<height>100</height>     
+			<texture flipY="true" diffuse="Thumb_Mask.png">#TV.RecordedTV.thumb</texture>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+string.equals(#selectedthumb,)</visible>
+			<centered>yes</centered>
+			<zoom>no</zoom>
+			<keepaspectratio>yes</keepaspectratio>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
 			<description>Big Episode Thumb</description>
 			<type>image</type>
 			<id>500</id>
@@ -187,26 +201,12 @@
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>265</posX>
-			<posY>507</posY>
-			<width>46</width>
-			<height>35</height>
-			<texture>#TV.RecordedTV.thumb</texture>
-			<visible>facadeview.list|facadeview.album|facadeview.playlist</visible>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<keepaspectratio>yes</keepaspectratio>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
 			<type>fadelabel</type>
 			<description>Current program Channel</description>
 			<id>0</id>
-			<posX>320</posX>
+			<posX>265</posX>
 			<posY>510</posY>
-			<width>275</width>
+			<width>330</width>
 			<label>#TV.RecordedTV.Channel</label>
 			<textcolor>ffffffff</textcolor>
 			<visible>facadeview.list|facadeview.album|facadeview.playlist</visible>

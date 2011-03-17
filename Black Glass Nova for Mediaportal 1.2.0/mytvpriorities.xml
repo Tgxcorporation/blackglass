@@ -10,13 +10,11 @@
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.window.time.xml</import>
-		<import>common.facade.background.basic.xml</import>
+		<import>common.facade.background.xml</import>
 		<import>common.facade.itemcount.currentmodule.basic.xml</import>
 		<control>
 			<type>group</type>
 			<description>group element</description>
-			<animation effect="fade" time="250">WindowOpen</animation>
-			<animation effect="fade" time="250">WindowClose</animation>
 			<control>
 				<description>scheduler recordings listcontrol</description>
 				<type>updownlistcontrol</type>
@@ -27,7 +25,7 @@
 				<height>300</height>
 				<spinAlign>Right</spinAlign>
 				<spinCanFocus>yes</spinCanFocus>
-				<spaceBetweenItems>1</spaceBetweenItems>
+				<spaceBetweenItems>0</spaceBetweenItems>
 				<textureHeight>35</textureHeight>
 				<itemWidth>40</itemWidth>
 				<itemHeight>30</itemHeight>
@@ -50,6 +48,7 @@
 				<onright>2</onright>
 				<onup>2</onup>
 				<ondown>2</ondown>
+				<colordiffuse>ffffffff</colordiffuse>
 			</control>
 		</control>
 
@@ -61,7 +60,7 @@
 			<type>fadelabel</type>
 			<id>13</id>
 			<posX>30</posX>
-			<posY>420</posY>
+			<posY>2420</posY>
 			<width>565</width>
 			<font>font20</font>
 			<label>#TV.Scheduled.Title</label>
@@ -81,7 +80,7 @@
 			<texture>#selectedthumb</texture>
 			<visible>control.hasfocus(10)</visible>
 		</control> -->
-		<control>
+		<!-- <control>
 			<type>image</type>
 			<posX>0</posX>
 			<posY>430</posY>
@@ -89,18 +88,18 @@
 			<height>35</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-		</control>
+		</control> -->
 		<control>
 			<description>Current program time</description>
 			<type>label</type>
 			<id>14</id>
 			<posX>30</posX>
-			<posY>468</posY>
+			<posY>2468</posY>
 			<width>565</width>
 			<textcolor>90ffffff</textcolor>
 			<label>#TV.Scheduled.Time</label>
 		</control>
-		<control>
+		<!-- <control>
 			<type>image</type>
 			<posX>0</posX>
 			<posY>465</posY>
@@ -114,27 +113,27 @@
 			<type>image</type>
 			<id>0</id>
 			<posX>30</posX>
-			<posY>502</posY>
+			<posY>2502</posY>
 			<width>41</width>
 			<height>31</height>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<keepaspectratio>yes</keepaspectratio>
 			<texture>#selectedthumb</texture>
-		</control>
+		</control> -->
 
 		<control>
 			<description>genre</description>
 			<type>fadelabel</type>
 			<id>17</id>
 			<posX>90</posX>
-			<posY>503</posY>
+			<posY>2503</posY>
 			<width>320</width>
 			<label>#TV.Scheduled.Genre</label>
 			<textcolor>ffffffff</textcolor>
 			<wrapString> : : : </wrapString>
 		</control>
-		<control>
+		<!-- <control>
 			<type>image</type>
 			<posX>0</posX>
 			<posY>500</posY>
@@ -142,13 +141,13 @@
 			<height>35</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-		</control>
+		</control> -->
 		<control>
 			<description>Description1</description>
 			<type>textboxscrollup</type>
 			<id>15</id>
 			<posX>30</posX>
-			<posY>540</posY>
+			<posY>2540</posY>
 			<width>565</width>
 			<height>170</height>
 			<label>#TV.Scheduled.Description</label>
