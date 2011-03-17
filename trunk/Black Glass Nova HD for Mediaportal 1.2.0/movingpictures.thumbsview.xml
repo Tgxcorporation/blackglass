@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<!-- 
+This file should contain the list view
+-->
+<window>
+  <controls>
+    <control>
+      <description>Backdrop Overlay</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>-150</posX>
+      <posY>402</posY>
+      <width>2358</width>
+      <height>517</height>
+      <texture>bg_tvguide.png</texture>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+Control.isvisible(50)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <description>Backdrop Overlay</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>-150</posX>
+      <posY>859</posY>
+      <width>2358</width>
+      <height>525</height>
+      <texture>bg_tvguide.png</texture>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+Control.isvisible(50)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <type>textboxscrollup</type>
+      <description>Current program title</description>
+      <id>1</id>
+      <posX>75</posX>
+      <posY>897</posY>
+      <width>1770</width>
+      <font>font20</font>
+      <height>67</height>
+      <textalign>center</textalign>
+      <label>#MovingPictures.SelectedMovie.title</label>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+Control.isvisible(50)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <type>image</type>
+      <posX>0</posX>
+      <posY>907</posY>
+      <width>1920</width>
+      <height>53</height>
+      <texture>bg_facade_line_nofocus.png</texture>
+      <colordiffuse>77ffffff</colordiffuse>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+Control.isvisible(50)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <description>Subtitle value</description>
+      <type>textboxscrollup</type>
+      <id>1</id>
+      <posX>45</posX>
+      <posY>961</posY>
+      <width>1860</width>
+      <height>45</height>
+      <textalign>center</textalign>
+      <label>#MovingPictures.SelectedMovie.year     #MovingPictures.SelectedMovie.runtime.localized.short     #MovingPictures.SelectedMovie.genres     #MovingPictures.SelectedMovie.certification</label>
+      <textcolor>90FFFFFF</textcolor>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+Control.isvisible(50)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
+      <font>font16</font>
+    </control>
+    <control>
+      <type>image</type>
+      <posX>0</posX>
+      <posY>960</posY>
+      <width>1920</width>
+      <height>53</height>
+      <texture>bg_facade_line_nofocus.png</texture>
+      <colordiffuse>77ffffff</colordiffuse>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+Control.isvisible(50)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <type>imagelist</type>
+      <id>1</id>
+      <posX>1852</posX>
+      <posY>1027</posY>
+      <width>453</width>
+      <height>60</height>
+      <textureWidth>40</textureWidth>
+      <textureHeight>40</textureHeight>
+      <subitems>
+        <subitem>star_nofocus.png</subitem>
+        <subitem>star_focus.png</subitem>
+      </subitems>
+      <orientation>horizontal</orientation>
+      <align>right</align>
+      <imagesToDraw>10</imagesToDraw>
+      <percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+Control.isvisible(50)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <description>Runtime value</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>45</posX>
+      <posY>1030</posY>
+      <width>720</width>
+      <align>left</align>
+      <font>font16</font>
+      <textcolor>ffFFFFFF</textcolor>
+      <visible>[facadeview.smallicons|facadeview.largeicons]+Control.isvisible(50)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <description>Watched Icon</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>1852</posX>
+      <posY>909</posY>
+      <width>36</width>
+      <height>36</height>
+      <texture>overlaywatched.png</texture>
+      <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)+control.isvisible(9)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <description>Un-Watched Icon</description>
+      <type>image</type>
+      <id>0</id>
+      <posX>1852</posX>
+      <posY>909</posY>
+      <width>36</width>
+      <height>36</height>
+      <texture>overlayunwatched.png</texture>
+      <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)+!control.isvisible(9)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+  </controls>
+</window>

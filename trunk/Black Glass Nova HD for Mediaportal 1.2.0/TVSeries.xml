@@ -1,0 +1,1668 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>9811</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:1300</define>
+	<define>#header.background:hover_my tv series.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<!-- Import Dummy controls to handle visibility -->
+		<import>TVSeries.dummy.xml</import>
+		<!-- ********************** BACKGROUNDS************************************** -->
+		<control>
+			<description>Fanart Background #1</description>
+			<type>image</type>
+			<id>524</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>#TVSeries.Fanart.1</texture>
+			<animation effect="fade" start="0" end="100" time="3000">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="250">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="250" delay="250">Hidden</animation>
+			<!-- Do not modify the visibility for this component. It is handled by the plug-in. -->
+		</control>
+		<control>
+			<description>Fanart Background #2</description>
+			<type>image</type>
+			<id>525</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>#TVSeries.Fanart.2</texture>
+			<animation effect="fade" start="0" end="100" time="250">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="250" delay="250">Hidden</animation>
+			<!-- Do not modify the visibility for this component. It is handled by the plug-in. -->
+		</control>
+		<control>
+			<description>Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1307</posX>
+			<posY>565</posY>
+			<width>2058</width>
+			<height>750</height>
+			<texture>bg_tvguide.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>facadeview.list+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|control.isvisible(1240)]</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>1345</posX>
+			<posY>592</posY>
+			<width>574</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>facadeview.list+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|control.isvisible(1240)]+control.hasfocus(50)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>1345</posX>
+			<posY>592</posY>
+			<width>574</width>
+			<height>53</height>
+			<colordiffuse>60ffffff</colordiffuse>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<visible>facadeview.list+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|control.isvisible(1240)]+!control.hasfocus(50)</visible>
+		</control>
+		<control>
+			<description>Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-735</posX>
+			<posY>565</posY>
+			<width>2058</width>
+			<height>750</height>
+			<texture>bg_tvguide.png</texture>
+			<visible>facadeview.list+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)]</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>687</posX>
+			<posY>72</posY>
+			<width>1422</width>
+			<height>1149</height>
+			<texture>bg_facade.png</texture>
+			<visible>control.isvisible(1240)</visible>
+		</control>
+		<!-- ************************** VIEW SELECTION ***********************************-->
+		<control>
+			<type>label</type>
+			<description>cur_view</description>
+			<id>77</id>
+			<posX>45</posX>
+			<posY>81</posY>
+			<font>font14</font>
+			<!--<label>#TVSeries.CurrentView</label>
+			<visible>yes</visible>-->
+			<label>#TVSeries.SimpleCurrentView</label>
+			<visible>!control.isvisible(1239)</visible>
+		</control>
+		<!-- *****************************************  SERIES & SEASON LIST ***************************************************************** -->
+		<control>
+			<type>image</type>
+			<description>series poster ( series poster background )</description>
+			<id>46</id>
+			<posX>69</posX>
+			<posY>637</posY>
+			<width>297</width>
+			<height>420</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.SeriesPoster</texture>
+			<visible>[control.isvisible(1237)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<description>series poster ( series poster background )</description>
+			<id>46</id>
+			<posX>69</posX>
+			<posY>637</posY>
+			<width>297</width>
+			<height>420</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.SeasonPoster</texture>
+			<visible>[control.isvisible(1238)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Cover Art Glass Overlay</description>
+			<type>image</type>
+			<id>67</id>
+			<posX>30</posX>
+			<posY>630</posY>
+			<width>342</width>
+			<height>435</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Number of Files Label</description>
+			<id>1</id>
+			<posX>1357</posX>
+			<posY>1031</posY>
+			<label>#TVSeries.SeriesCount #TVSeries.Translation.Series_Plural.Label</label>
+			<font>font12</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<visible>[control.isvisible(1237)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>1</id>
+			<posX>397</posX>
+			<posY>628</posY>
+			<width>840</width>
+			<font>font22</font>
+			<label>#TVSeries.Title</label>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>373</posX>
+			<posY>645</posY>
+			<width>900</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Subtitle value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>397</posX>
+			<posY>702</posY>
+			<width>840</width>
+			<label>#TVSeries.Series.infopanelLine4Value     #TVSeries.Subtitle</label>
+			<textcolor>90FFFFFF</textcolor>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>373</posX>
+			<posY>697</posY>
+			<width>900</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>imagelist</type>
+			<id>1</id>
+			<posX>397</posX>
+			<posY>759</posY>
+			<width>453</width>
+			<height>60</height>
+			<textureWidth>33</textureWidth>
+			<textureHeight>33</textureHeight>
+			<subitems>
+				<subitem>star_nofocus.png</subitem>
+				<subitem>star_focus.png</subitem>
+			</subitems>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<imagesToDraw>10</imagesToDraw>
+			<percentage>#TVSeries.Series.Rating</percentage>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>First Aired value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1245</posX>
+			<posY>753</posY>
+			<width>1200</width>
+			<align>right</align>
+			<label>#TVSeries.Series.infopanelLine2Value</label>
+			<textcolor>ffFFFFFF</textcolor>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>373</posX>
+			<posY>748</posY>
+			<width>900</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Summary</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>397</posX>
+			<posY>805</posY>
+			<width>855</width>
+			<height>262</height>
+			<font>font14</font>
+			<textcolor>ffFFFFFF</textcolor>
+			<label>#TVSeries.Description</label>
+			<seperator>: : :</seperator>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.list</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<!-- *****************************************  SERIES & SEASON BANNERS ***************************************************************** -->
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-300</posX>
+			<posY>825</posY>
+			<width>2520</width>
+			<height>270</height>
+			<texture>gradient.png</texture>
+			<visible>facadeview.filmstrip</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-300</posX>
+			<posY>600</posY>
+			<width>2520</width>
+			<height>480</height>
+			<texture>gradient.png</texture>
+			<visible>[facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-150</posX>
+			<posY>579</posY>
+			<width>2358</width>
+			<height>330</height>
+			<texture>bg_tvguide.png</texture>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.largeicons</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-150</posX>
+			<posY>873</posY>
+			<width>2358</width>
+			<height>330</height>
+			<texture>bg_tvguide.png</texture>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.largeicons</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Current program title</description>
+			<id>1</id>
+			<posX>45</posX>
+			<posY>898</posY>
+			<width>1830</width>
+			<font>font22</font>
+			<height>67</height>
+			<textalign>center</textalign>
+			<label>#TVSeries.Title</label>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.largeicons</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>918</posY>
+			<width>1920</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Subtitle value</description>
+			<type>textboxscrollup</type>
+			<id>1</id>
+			<posX>45</posX>
+			<posY>975</posY>
+			<width>1860</width>
+			<height>45</height>
+			<textalign>center</textalign>
+			<label>#TVSeries.Subtitle</label>
+			<textcolor>90FFFFFF</textcolor>
+			<font>font16</font>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.largeicons</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>972</posY>
+			<width>1920</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>imagelist</type>
+			<id>1</id>
+			<posX>795</posX>
+			<posY>1035</posY>
+			<width>453</width>
+			<height>60</height>
+			<textureWidth>33</textureWidth>
+			<textureHeight>33</textureHeight>
+			<subitems>
+				<subitem>star_nofocus.png</subitem>
+				<subitem>star_focus.png</subitem>
+			</subitems>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<imagesToDraw>10</imagesToDraw>
+			<percentage>#TVSeries.Series.Rating</percentage>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.largeicons</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Runtime value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1890</posX>
+			<posY>1030</posY>
+			<width>1200</width>
+			<align>right</align>
+			<label>#TVSeries.Series.infopanelLine4Value</label>
+			<textcolor>ffFFFFFF</textcolor>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.largeicons</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>First Aired value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>45</posX>
+			<posY>1030</posY>
+			<width>720</width>
+			<label>#TVSeries.Series.infopanelLine2Value</label>
+			<textcolor>ffFFFFFF</textcolor>
+			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.largeicons</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<wrapString> : : : </wrapString>
+		</control>
+		<!-- <control>
+			<type>label</type>
+			<description>Number of Files Label</description>
+			<id>0</id>
+			<posX>1255</posX>
+			<posY>640</posY>
+			<label>#TVSeries.SeriesCount Series</label>
+			<font>font16</font>
+			<align>right</align>
+			<textcolor>60ffffff</textcolor>
+			<visible>[control.isvisible(1237)]+facadeview.largeicons</visible>
+		</control> -->
+		<!-- *********************** EPISODE INFO  ************************** -->
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>1</id>
+			<posX>37</posX>
+			<posY>628</posY>
+			<width>1215</width>
+			<font>font22</font>
+			<label>#TVSeries.Title</label>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>645</posY>
+			<width>1275</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Big Episode Thumb</description>
+			<type>image</type>
+			<id>67</id>
+			<posX>49</posX>
+			<posY>718</posY>
+			<width>364</width>
+			<height>204</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.EpisodeImage</texture>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>37</posX>
+			<posY>708</posY>
+			<width>387</width>
+			<height>255</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Number of Files Label</description>
+			<id>1</id>
+			<posX>1357</posX>
+			<posY>1031</posY>
+			<label>#TVSeries.FilteredEpisodeCount #TVSeries.Translation.Episodes.Label</label>
+			<font>font12</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>imagelist</type>
+			<id>1</id>
+			<posX>447</posX>
+			<posY>706</posY>
+			<width>453</width>
+			<height>60</height>
+			<textureWidth>33</textureWidth>
+			<textureHeight>33</textureHeight>
+			<subitems>
+				<subitem>star_nofocus.png</subitem>
+				<subitem>star_focus.png</subitem>
+			</subitems>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<imagesToDraw>10</imagesToDraw>
+			<percentage>#TVSeries.Episode.Rating</percentage>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>First Aired value</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>1245</posX>
+			<posY>702</posY>
+			<width>342</width>
+			<align>right</align>
+			<label>#TVSeries.Episode.FirstAired</label>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>423</posX>
+			<posY>697</posY>
+			<width>852</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Actors value</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>447</posX>
+			<posY>756</posY>
+			<width>805</width>
+			<label>#TVSeries.Series.infopanelLine6Value *** Guest Stars: #TVSeries.Episode.infopanelLine6Value ***</label>
+			<textcolor>90FFFFFF</textcolor>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<font>font14</font>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>423</posX>
+			<posY>750</posY>
+			<width>852</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Summary</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>447</posX>
+			<posY>810</posY>
+			<width>814</width>
+			<height>165</height>
+			<textcolor>ffFFFFFF</textcolor>
+			<font>font13</font>
+			<label>#TVSeries.Description</label>
+			<seperator>: : :</seperator>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>37</posX>
+			<posY>987</posY>
+			<width>330</width>
+			<label>#TVSeries.Episode.infopanelLine3Value  #TVSeries.Episode.infopanelLine2Value</label>
+			<font>font12</font>
+			<height>82</height>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>925</posY>
+			<width>1275</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Logos</description>
+			<id>66</id>
+			<posX>447</posX>
+			<posY>990</posY>
+			<width>805</width>
+			<height>75</height>
+			<texture>#TVSeries.Logos</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<visible>[control.isvisible(1239)]</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<!-- *****************************************  SERIES BANNER ( LIST LAYOUT) ***************************************************************** -->
+		<!-- <control>
+			<type>image</type>
+			<id>1</id>
+			<posX>-330</posX>
+			<posY>360</posY>
+			<width>1200</width>
+			<height>690</height>
+			<texture>bg_dialog_big.png</texture>
+			<visible>control.isvisible(1237)+facadeview.list+!control.isvisible(1242)</visible>
+		</control> -->
+		<control>
+			<description>Thumb/Cover background</description>
+			<type>image</type>
+			<id>67</id>
+			<posX>60</posX>
+			<posY>645</posY>
+			<width>675</width>
+			<height>124</height>
+			<texture>black.png</texture>
+			<colordiffuse>ccffffff</colordiffuse>
+			<visible>control.isvisible(1237)+facadeview.list+!control.isvisible(1242)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Series Banner ( series banner background )</description>
+			<id>46</id>
+			<posX>60</posX>
+			<posY>645</posY>
+			<width>675</width>
+			<height>124</height>
+			<texture>#TVSeries.SeriesBanner</texture>
+			<visible>control.isvisible(1237)+facadeview.list+!control.isvisible(1242)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<!-- *****************************************INFORMATION IN LIST VIEW***************************************************************** -->
+		<!-- <control>
+			<type>fadelabel</type>
+			<description>Title (Episode List)</description>
+			<id>640</id>
+			<posX>47</posX>
+			<posY>40</posY>
+			<width>650</width>
+			<font>font14</font>
+			<label>#TVSeries.Title</label>
+			<visible>facadeview.list</visible>
+		</control> -->
+		<control>
+			<type>textboxscrollup</type>
+			<description>Description (grouplist)</description>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>150</posY>
+			<width>532</width>
+			<height>892</height>
+			<font>font16</font>
+			<visible>facadeview.list+control.isvisible(1240)+!control.isvisible(632)</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<label>#TVSeries.Description</label>
+		</control>
+		<!-- *****************************************INFORMATION IN WIDE BANNER VIEW***************************************************************** -->
+		<!-- <control>
+			<type>fadelabel</type>
+			<description>Title (Wide Banners)</description>
+			<posX>30</posX>
+			<posY>490</posY>
+			<width>750</width>
+			<font>font28</font>
+			<align>left</align>
+			<label>#TVSeries.Title</label>
+			<visible>!facadeview.list+!control.isvisible(1242)</visible>
+		</control> 
+
+		<control>
+			<type>textboxscrollup</type>
+			<description>Description (Wide Banners)</description>
+			<id>632</id>
+			<posX>30</posX>
+			<posY>550</posY>
+			<width>790</width>
+			<height>155</height>
+			<textcolor>ffffffff</textcolor>
+			<font>font12</font>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+			<label>#TVSeries.Description</label>
+		</control>-->
+		<control>
+			<type>textboxscrollup</type>
+			<description>Description (grouplist)</description>
+			<id>0</id>
+			<posX>780</posX>
+			<posY>150</posY>
+			<width>532</width>
+			<height>892</height>
+			<font>font16</font>
+			<visible>!facadeview.list+control.isvisible(1240)+!control.isvisible(632)</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<label>#TVSeries.Description</label>
+		</control>
+		<!-- *****************************************INFORMATION IN FILMSTRIP VIEW***************************************************************** -->
+		<control>
+			<type>textboxscrollup</type>
+			<description>Current program title</description>
+			<id>640</id>
+			<posX>45</posX>
+			<posY>976</posY>
+			<width>1830</width>
+			<font>font24</font>
+			<height>67</height>
+			<textalign>center</textalign>
+			<label>#TVSeries.Title</label>
+			<visible>[facadeview.filmstrip|facadeview.coverflow]+control.isvisible(1237)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Current program title</description>
+			<id>640</id>
+			<posX>45</posX>
+			<posY>976</posY>
+			<width>1830</width>
+			<font>font24</font>
+			<height>67</height>
+			<textalign>center</textalign>
+			<label>#TVSeries.Season.SeasonLabel</label>
+			<visible>[facadeview.filmstrip|facadeview.coverflow]+control.isvisible(1238)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<!--  ***************************** LOGOS (SERIES / SEASON / EPISODE  IN LIST  LAYOUTS) ******************************** -->
+		<!-- <control>
+			<type>image</type>
+			<description>Logos</description>
+			<id>66</id>
+			<posX>330</posX>
+			<posY>374</posY>
+			<width>650</width>
+			<height>40</height>
+			<texture>#TVSeries.Logos</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<spaceBetweenItems>0</spaceBetweenItems>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1239)]</visible>
+		</control> -->
+		<!--  ***************************** LOGOS (SERIES WIDE BANNERS /FIMSTRIP LAYOUT) ******************************** -->
+		<!-- <control>
+			<type>image</type>
+			<description>Logos</description>
+			<id>66</id>
+			<posX>850</posX>
+			<posY>670</posY>
+			<width>650</width>
+			<height>40</height>
+			<texture>#TVSeries.Logos</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<spaceBetweenItems>2</spaceBetweenItems>
+			<visible>[!facadeview.list+control.isvisible(1237)]|[!facadeview.list+control.isvisible(1238)]</visible>
+		</control> -->
+		<!--  ***************************** LOGOS (GROUP LIST  LAYOUT) ******************************** -->
+		<!-- 		<control>
+			<type>image</type>
+			<description>thumb Logos ( in textlist group)</description>
+			<id>0</id>
+			<posX>420</posX>
+			<posY>670</posY>
+			<width>650</width>
+			<height>40</height>
+			<texture>#TVSeries.Logos</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<spaceBetweenItems>2</spaceBetweenItems>
+			<visible>control.isvisible(1240)</visible>
+		</control> -->
+		<!-- *********************** SERIES INFO LABELS  (WIDEBANNERS LAYOUT)************************** -->
+		<!-- <control>      
+			<type>label</type>
+			<id>0</id>
+			<posX>959</posX>
+			<posY>550</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine1Key</label>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+		</control>
+		<control>
+			<description>TVDB Series Rating Stars</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>970</posX>
+			<posY>553</posY>
+			<width>180</width>
+			<height>18</height>
+			<texture>#TVSeries.Series.RatingPath</texture>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+		</control>
+		<control>    
+			<type>label</type>
+			<id>0</id>
+			<posX>1154</posX>
+			<posY>553</posY>
+			<width>180</width>
+			<height>18</height>
+			<textcolor>90ffffff</textcolor>
+			<font>font10</font>
+			<label>#TVSeries.Series.infopanelLine1Value</label>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+		</control>
+		<control>      
+			<type>label</type>
+			<id>0</id>
+			<posX>959</posX>
+			<posY>575</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine2Key</label>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>970</posX>
+			<posY>575</posY>
+			<width>280</width>
+			<label>#TVSeries.Series.infopanelLine2Value</label>
+			<font>font12</font>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+		</control>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>959</posX>
+			<posY>600</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine3Key</label>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>970</posX>
+			<posY>600</posY>
+			<width>250</width>
+			<label>#TVSeries.Series.infopanelLine3Value</label>
+			<font>font12</font>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+		</control>
+		<control>      
+			<type>label</type>
+			<id>0</id>
+			<posX>959</posX>
+			<posY>625</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine4Key</label>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>970</posX>
+			<posY>625</posY>
+			<width>250</width>
+			<label>#TVSeries.Series.infopanelLine4Value</label>
+			<font>font12</font>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+		</control>
+		<control>      
+			<type>label</type>
+			<id>0</id>
+			<posX>959</posX>
+			<posY>650</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine5Key</label>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>970</posX>
+			<posY>650</posY>
+			<width>250</width>
+			<label>#TVSeries.Series.infopanelLine5Value</label>
+			<font>font12</font>
+			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
+		</control> -->
+		<!-- *********************** SERIES/SEASON INFO LABELS  (FILMSTRIP LAYOUT)************************** -->
+		<!-- <control>
+			<description>TVDB Series Rating Stars</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>555</posX>
+			<posY>50</posY>
+			<align>center</align>
+			<width>180</width>
+			<height>18</height>
+			<texture>#TVSeries.Series.RatingPath</texture>
+			<visible>[!facadeview.list+control.isvisible(1237)+control.isvisible(1242)]|[!facadeview.list+control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>label</type>
+			<id>0</id>
+			<posX>980</posX>
+			<posY>570</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine2Key</label>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>[!facadeview.list+control.isvisible(1237)+control.isvisible(1242)]|[!facadeview.list+control.isvisible(1238)]</visible>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>988</posX>
+			<posY>570</posY>
+			<width>280</width>
+			<label>#TVSeries.Series.infopanelLine2Value</label>
+			<font>font12</font>
+			<visible>[!facadeview.list+control.isvisible(1237)+control.isvisible(1242)]|[!facadeview.list+control.isvisible(1238)]</visible>
+		</control>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>980</posX>
+			<posY>595</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine3Key</label>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>[!facadeview.list+control.isvisible(1237)+control.isvisible(1242)]|[!facadeview.list+control.isvisible(1238)]</visible>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>988</posX>
+			<posY>595</posY>
+			<width>250</width>
+			<label>#TVSeries.Series.infopanelLine3Value</label>
+			<font>font12</font>
+			<visible>[!facadeview.list+control.isvisible(1237)+control.isvisible(1242)]|[!facadeview.list+control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>label</type>
+			<id>0</id>
+			<posX>980</posX>
+			<posY>620</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine4Key</label>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>[!facadeview.list+control.isvisible(1237)+control.isvisible(1242)]|[!facadeview.list+control.isvisible(1238)]</visible>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>988</posX>
+			<posY>620</posY>
+			<width>250</width>
+			<label>#TVSeries.Series.infopanelLine4Value</label>
+			<font>font12</font>
+			<visible>[!facadeview.list+control.isvisible(1237)+control.isvisible(1242)]|[!facadeview.list+control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>label</type>
+			<id>0</id>
+			<posX>980</posX>
+			<posY>645</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine5Key</label>
+			<align>right</align>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>[!facadeview.list+control.isvisible(1237)+control.isvisible(1242)]|[!facadeview.list+control.isvisible(1238)]</visible>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>988</posX>
+			<posY>645</posY>
+			<width>250</width>
+			<label>#TVSeries.Series.infopanelLine5Value</label>
+			<font>font12</font>
+			<visible>[!facadeview.list+control.isvisible(1237)+control.isvisible(1242)]|[!facadeview.list+control.isvisible(1238)]</visible>
+		</control> -->
+		<!-- *********************** SERIES/SEASON INFO LABELS ( LIST LAYOUT) ************************** -->
+		<!--<control>
+			<type>image</type>
+			<id>1</id>
+			<posX>330</posX>
+			<posY>117</posY>
+			<width>180</width>
+			<height>18</height>
+			<texture>#TVSeries.Series.RatingPath</texture>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control>
+		 		<control>      
+			<type>label</type>
+			<id>0</id>
+			<posX>1120</posX>
+			<posY>98</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine1Value</label>
+			<align>left</align>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>facadeview.list+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control> 
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>330</posX>
+			<posY>150</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine2Key</label>
+			<textcolor>90ffffff</textcolor>
+			<font>font12</font>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>330</posX>
+			<posY>150</posY>
+			<width>250</width>
+			<label>#TVSeries.Series.infopanelLine2Value</label>
+			<font>font12</font>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>330</posX>
+			<posY>180</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine3Key</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>330</posX>
+			<posY>180</posY>
+			<width>250</width>
+			<label>#TVSeries.Series.infopanelLine3Value</label>
+			<font>font12</font>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>330</posX>
+			<posY>210</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine4Key</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>330</posX>
+			<posY>210</posY>
+			<width>250</width>
+			<label>#TVSeries.Series.infopanelLine4Value</label>
+			<font>font12</font>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>330</posX>
+			<posY>240</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine5Key</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>330</posX>
+			<posY>240</posY>
+			<width>250</width>
+			<label>#TVSeries.Series.infopanelLine5Value</label>
+			<font>font12</font>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>330</posX>
+			<posY>270</posY>
+			<width>135</width>
+			<label>#TVSeries.Series.infopanelLine6Key</label>
+			<font>font12</font>
+			<textcolor>90ffffff</textcolor>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control>
+		<control>      
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>330</posX>
+			<posY>268</posY>
+			<width>250</width>
+			<height>80</height>
+			<textcolor>ffffffff</textcolor>
+			<font>font12</font>
+			<label>#TVSeries.Series.infopanelLine6Value</label>
+			<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+		</control>-->
+		<!--  ************** HIDDEN MENU *****************  -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-579</posX>
+			<posY>4</posY>
+			<width>627</width>
+			<height>1071</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>84</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>!control.hasfocus(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>579</width>
+				<height>79</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Switch View</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Switch View</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>21</onup>
+					<ondown>3</ondown>
+				</control>
+				<control>
+					<description>Change Layout</description>
+					<type>button</type>
+					<id>3</id>
+					<label>Change Layout</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>20</ondown>
+				</control>
+				<control>
+					<description>Current Playlist</description>
+					<type>button</type>
+					<id>20</id>
+					<label>4555</label>
+					<action>33</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>9</ondown>
+					<onup>3</onup>
+				</control>
+				<control>
+					<description>My Playlists</description>
+					<type>button</type>
+					<id>9</id>
+					<label>983</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>4</ondown>
+					<onup>20</onup>
+				</control>
+				<control>
+					<description>Options</description>
+					<type>button</type>
+					<id>4</id>
+					<label>496</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>9</onup>
+					<ondown>5</ondown>
+				</control>
+				<control>
+					<description>Run Import</description>
+					<type>button</type>
+					<id>5</id>
+					<label>Run Import</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>66608</ondown>
+				</control>
+				<control>
+					<description>Video Settings</description>
+					<type>button</type>
+					<id>66608</id>
+					<label>Video Settings</label>
+					<hyperlink>703</hyperlink>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>10</ondown>
+					<onup>5</onup>
+				</control>
+				<control>
+					<description>Moving Pictures</description>
+					<type>button</type>
+					<id>10</id>
+					<hyperlink>96742</hyperlink>
+					<label>My Movies</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>30</ondown>
+					<onup>66608</onup>
+					<visible>plugin.isenabled(Moving Pictures)</visible>
+				</control>
+				<control>
+					<description>My Trailers</description>
+					<type>button</type>
+					<id>30</id>
+					<hyperlink>5900</hyperlink>
+					<label>5906</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>9111</ondown>
+					<onup>10</onup>
+					<visible>plugin.isenabled(My Trailers)</visible>
+				</control>
+				<control>
+					<description>SubCentral</description>
+					<type>button</type>
+					<id>9111</id>
+					<label>Check for Subtitles</label>
+					<hyperlink>84623</hyperlink>
+					<visible>plugin.isenabled(SubCentral)+control.isvisible(1239)</visible>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<ondown>66613</ondown>
+					<onup>30</onup>
+				</control>
+				<control>
+					<description>dlCentral</description>
+					<type>button</type>
+					<id>66613</id>
+					<label>Download</label>
+					<hyperlink>181966</hyperlink>
+					<onup>9111</onup>
+					<ondown>2</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(dlCentral)+control.isvisible(1239)</visible>
+				</control>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Last Online Update Value</description>
+				<label>#TVSeries.Translation.LastOnlineUpdate.Label: #TVSeries.LastOnlineUpdate</label>
+				<type>fadelabel</type>
+				<font>font11</font>
+				<posX>45</posX>
+				<posY>1020</posY>
+				<wrapString> : : : </wrapString>
+				<width>510</width>
+				<visible>![plugin.isenabled(dlCentral)+control.isvisible(1239)]</visible>
+			</control>
+		</control>
+		<!-- *********************** LIST /GRAPHICAL VIEW*********************************** -->
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<id>28</id>
+			<layout>StackLayout(0, Vertical, true)</layout>
+			<posX>0</posX>
+			<posY>0</posY>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>graphical list (series and seasons if set)</description>
+					<type>listcontrol</type>
+					<subtype>album</subtype>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<posX>1050</posX>
+					<!-- 750 -->
+					<posY>255</posY>
+					<!-- 185 -->
+					<width>502</width>
+					<height>375</height>
+					<IconXOff>15</IconXOff>
+					<IconYOff>1</IconYOff>
+					<textXOff>-70</textXOff>
+					<textYOff>5</textYOff>
+					<textXOff2>574</textXOff2>
+					<textYOff2>5</textYOff2>
+					<textXOff3>574</textXOff3>
+					<textYOff3>5</textYOff3>
+					<spaceBetweenItems>3</spaceBetweenItems>
+					<remoteColor>FFa6c3e1</remoteColor>
+					<!-- Watched color -->
+					<downloadColor>d4d2d2</downloadColor>
+					<!-- not watched color (normal) -->
+					<textcolor>FF78ace0</textcolor>
+					<!-- local file not present color -->
+					<textcolor2>FF78ace0</textcolor2>
+					<!-- local file not present color  column 2-->
+					<textcolor3>FF78ace0</textcolor3>
+					<!-- local file not present color column 3-->
+					<textureFocus>tvseries_banner_focus2.png</textureFocus>
+					<textureNoFocus>osd_bg.png</textureNoFocus>
+					<spinWidth>15</spinWidth>
+					<spinHeight>15</spinHeight>
+					<spinPosX>870</spinPosX>
+					<spinPosY>510</spinPosY>
+					<spinAlign>Right</spinAlign>
+					<spinColor>ffffffff</spinColor>
+					<textureUp>1scroll-up.png</textureUp>
+					<textureDown>1scroll-down.png</textureDown>
+					<textureUpFocus>1scroll-up-focus.png</textureUpFocus>
+					<textureDownFocus>1scroll-down-focus.png</textureDownFocus>
+				</control>
+				<control>
+					<description>graphical thumbpanel (series and/or seasons if set)</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<posX>31</posX>
+					<posY>610</posY>
+					<width>1950</width>
+					<height>315</height>
+					<!-- up/down buttons & page # -->
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<!-- Text -->
+					<font>font16</font>
+					<selectedColor>00ffffff</selectedColor>
+					<textcolor>ffffffff</textcolor>
+					<colordiffuse>ffffffff</colordiffuse>
+					<remoteColor>FF868686</remoteColor>
+					<!-- watched color -->
+					<downloadColor>FFFFFFFF</downloadColor>
+					<!-- not watched color (normal) -->
+					<textcolor>FFC14E4A</textcolor>
+					<!-- local file not present color -->
+					<textcolor2>FFC14E4A</textcolor2>
+					<!-- local file not present color  column 2-->
+					<textcolor3>FFC14E4A</textcolor3>
+					<!-- local file not present color column 3-->
+					<suffix>|</suffix>
+					<itemWidthBig>628</itemWidthBig>
+					<itemHeightBig>136</itemHeightBig>
+					<!-- boxes -->
+					<textureWidthBig>619</textureWidthBig>
+					<textureHeightBig>130</textureHeightBig>
+					<!-- banners -->
+					<thumbWidthBig>598</thumbWidthBig>
+					<thumbHeightBig>109</thumbHeightBig>
+					<thumbPosXBig>10</thumbPosXBig>
+					<thumbPosYBig>10</thumbPosYBig>
+					<thumbZoom>no</thumbZoom>
+					<!-- text (No banner) -->
+					<textXOff>0</textXOff>
+					<textYOff>0</textYOff>
+					<keepaspectratio>no</keepaspectratio>
+					<enableFocusZoom>no</enableFocusZoom>
+					<unfocusedAlpha>120</unfocusedAlpha>
+					<frameNoFocus>BannerCase.png</frameNoFocus>
+					<frameFocus>BannerCase.png</frameFocus>
+					<imageFolder>-</imageFolder>
+					<imageFolderFocus>-</imageFolderFocus>
+					<spinCanFocus>no</spinCanFocus>
+					<scrollOffset>0</scrollOffset>
+					<spinPosX>4777</spinPosX>
+					<spinPosY>892</spinPosY>
+				</control>
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<spinPosY>-50</spinPosY>
+					<spinPosX>-50</spinPosX>
+					<posX>30</posX>
+					<posY>615</posY>
+					<width>2025</width>
+					<spinCanFocus>no</spinCanFocus>
+					<thumbWidth>225</thumbWidth>
+					<thumbHeight>322</thumbHeight>
+					<thumbPosX>31</thumbPosX>
+					<thumbPosY>6</thumbPosY>
+					<itemWidth>270</itemWidth>
+					<itemHeight>420</itemHeight>
+					<textureWidth>262</textureWidth>
+					<textureHeight>334</textureHeight>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder>DVDCase.png</imageFolder>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png" />
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+					<scrollOffset>3</scrollOffset>
+				</control>
+				<control>
+					<description>Text List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<posX>1345</posX>
+					<width>574</width>
+					<posY>645</posY>
+					<height>450</height>
+					<textureHeight>53</textureHeight>
+					<font>font14</font>
+					<font2>font14</font2>
+					<font3>font14</font3>
+					<spinWidth>45</spinWidth>
+					<spinHeight>45</spinHeight>
+					<spinPosX>1807</spinPosX>
+					<spinPosY>1027</spinPosY>
+					<IconXOff>3015</IconXOff>
+					<IconYOff>10</IconYOff>
+					<textXOff>-70</textXOff>
+					<textYOff>5</textYOff>
+					<textXOff2>574</textXOff2>
+					<textYOff2>5</textYOff2>
+					<textXOff3>574</textXOff3>
+					<textYOff3>5</textYOff3>
+					<playedColor>ff77ccff</playedColor>
+					<!-- watched -->
+					<downloadColor>ffffffff</downloadColor>
+					<!-- (normal) -->
+					<remoteColor>ffF87B72</remoteColor>
+					<!-- file not present color -->
+					<textcolor>ffffffff</textcolor>
+					<!-- not watched (normal) -->
+					<textcolor2>ffffffff</textcolor2>
+					<textcolor3>ffffffff</textcolor3>
+				</control>
+				<control>
+					<description>Cover Flow view</description>
+					<type>coverflow</type>
+					<colordiffuse>ffffffff</colordiffuse>
+					<dimColor>90ffffff</dimColor>
+					<id>50</id>
+					<posX>0</posX>
+					<posY>559</posY>
+					<width>1920</width>
+					<height>1080</height>
+					<onup>2</onup>
+					<onleft>2</onleft>
+					<selectedCard>0</selectedCard>
+					<cardWidth>276</cardWidth>
+					<cardHeight>390</cardHeight>
+					<angle>30</angle>
+					<sideShift>270</sideShift>
+					<sideGap>75</sideGap>
+					<sideDepth>375</sideDepth>
+					<offsetY>0</offsetY>
+					<selectedOffsetY>-60</selectedOffsetY>
+					<speed>8</speed>
+					<showFrame>yes</showFrame>
+					<frame>DVDCase_coverflow.png</frame>
+					<frameFocus>DVDCase_coverflow.png</frameFocus>
+					<frameWidth>276</frameWidth>
+					<frameHeight>390</frameHeight>
+					<spinSpeed>8</spinSpeed>
+					<font1>font14</font1>
+					<font2>font11</font2>
+					<label1/>
+					<label2/>
+					<label1YOff>405</label1YOff>
+					<label2YOff>430</label2YOff>
+					<pageSize>5</pageSize>
+					<scrollbarYOff>364</scrollbarYOff>
+					<cards flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png"/>
+					<visible>[facadeview.coverflow]+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1240)]+control.isvisible(50)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+					<subitems>
+						<subitem>
+							<![CDATA[
+							<controls>
+								<control>
+									<description>background</description>
+									<type>image</type>
+									<posX>0</posX>
+									<posY>0</posY>
+									<width>276</width>
+									<height>390</height>
+									<texture flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png">black.png</texture>
+								</control>
+								<control>
+									<description>Movie Title</description>
+									<type>fadelabel</type>
+									<id>0</id>
+									<posX>22</posX>
+									<posY>9</posY>
+									<width>225</width>
+									<label>#TVSeries.Title</label>
+									<font>font13</font>
+									<textcolor>FFFFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+									<shadowAngle>45</shadowAngle>
+									<shadowDistance>2</shadowDistance>
+									<shadowColor>FF000000</shadowColor>
+								</control>
+								<control>
+									<type>image</type>
+									<id>0</id>
+									<posX>22</posX>
+									<posY>-30</posY>
+									<width>231</width>
+									<height>79</height>
+									<texture>bg_button_nofocus.png</texture>
+								</control>
+								<control>
+									<type>imagelist</type>
+									<id>1</id>
+									<posX>22</posX>
+									<posY>61</posY>
+									<width>277</width>
+									<height>60</height>
+									<textureWidth>22</textureWidth>
+									<textureHeight>22</textureHeight>
+									<subitems>
+										<subitem>star_nofocus.png</subitem>
+										<subitem>star_focus.png</subitem>
+									</subitems>
+									<orientation>horizontal</orientation>
+									<align>left</align>
+									<imagesToDraw>10</imagesToDraw>
+									<percentage>#TVSeries.Series.Rating</percentage>
+								</control>
+								<control>
+									<description>genre</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>93</posY>
+									<width>247</width>
+									<label>#TVSeries.Subtitle</label>
+									<font>font11</font>
+									<textcolor>ffFFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								<control>
+									<description>year</description>
+									<type>fadelabel</type>
+									<posX>22</posX>
+									<posY>130</posY>
+									<width>247</width>
+									<label>#TVSeries.Series.infopanelLine4Value</label>
+									<font>font11</font>
+									<textcolor>90FFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								<control>
+									<description>plot</description>
+									<type>textboxscrollup</type>
+									<posX>22</posX>
+									<posY>169</posY>
+									<width>247</width>
+									<height>102</height>
+									<label>#TVSeries.Series.Summary</label>
+									<font>font9</font>
+									<lineSpacing>2</lineSpacing>
+									<textcolor>FFFFFFFF</textcolor>
+								</control>
+							</controls>
+							]]>
+						</subitem>
+					</subitems>
+				</control>
+			</control>
+		</control>
+		<!-- ********************** IMPORT PROCESS *************************************** -->
+		<control>
+			<description>Import Animation</description>
+			<type>animation</type>
+			<id>51</id>
+			<posX>592</posX>
+			<posY>312</posY>
+			<width>96</width>
+			<height>96</height>
+			<textures>common.waiting.1.png;common.waiting.2.png;common.waiting.3.png;common.waiting.4.png;common.waiting.5.png;common.waiting.6.png;common.waiting.7.png;common.waiting.8.png</textures>
+			<Duration>0:0:01.5</Duration>
+			<keepaspectratio>yes</keepaspectratio>
+		</control>
+		<import>common.window.time.xml</import>
+	</controls>
+</window>

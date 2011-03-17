@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<!--            :: HIDDEN MENU ::            -->
+<window>
+  <controls>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>-579</posX>
+      <posY>4</posY>
+      <width>627</width>
+      <height>1071</height>
+      <texture>bg_left.png</texture>
+      <colorDiffuse>ffffffff</colorDiffuse>
+      <visible>Control.HasFocus(50)+control.isvisible(50)+![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)|control.hasfocus(180)]</visible>
+      <animation effect="fade" time="50">WindowClose</animation>
+      <animation effect="fade" time="50">WindowOpen</animation>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>2</defaultcontrol>
+      <onexit>0</onexit>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>84</buttonwidth>
+      <buttonheight>1080</buttonheight>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <width>637</width>
+      <height>1080</height>
+      <dimColor>ffffffff</dimColor>
+      <visible>control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)|control.hasfocus(180)]</visible>
+      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+      <animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>0</posY>
+        <width>627</width>
+        <height>1080</height>
+        <texture>bg_left.png</texture>
+      </control>
+      <control>
+        <id>0</id>
+        <type>label</type>
+        <posX>45</posX>
+        <posY>52</posY>
+        <label>924</label>
+        <font>font24</font>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>71</posY>
+        <width>579</width>
+        <height>79</height>
+        <texture>bg_button_nofocus.png</texture>
+      </control>
+      <control>
+        <type>group</type>
+        <layout>StackLayout(0, Vertical, true)</layout>
+        <posX>0</posX>
+        <posY>150</posY>
+        <!--<visible>control.isvisible(50)</visible>-->
+        <animation effect="slide" tween="circle" easing="out" time="10" start="-208,0" reversible="false">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="10" end="-208,0" reversible="false">hidden</animation>
+        <control>
+          <description>Cycle View</description>
+          <type>button</type>
+          <id>2</id>
+          <label>#MovingPictures.Translation.CycleView.Label</label>
+          <onright>50</onright>
+          <onup>17</onup>
+          <ondown>3</ondown>
+        </control>
+        <control>
+          <description>Change View</description>
+          <type>button</type>
+          <id>3</id>
+          <label>#MovingPictures.Translation.ChangeView.Label ...</label>
+          <onright>50</onright>
+          <onup>2</onup>
+          <ondown>4</ondown>
+        </control>
+        <control>
+          <description>Filter By</description>
+          <type>button</type>
+          <id>4</id>
+          <label>#MovingPictures.Translation.FilterBy.Label ...</label>
+          <onright>50</onright>
+          <onup>3</onup>
+          <ondown>14</ondown>
+        </control>
+        <control>
+          <description>Sort By</description>
+          <type>button</type>
+          <id>14</id>
+          <label>#MovingPictures.Translation.SortBy.Label: #MovingPictures.Sort.Field</label>
+          <onright>50</onright>
+          <onup>4</onup>
+          <ondown>66610</ondown>
+        </control>
+        <control>
+          <description>Video Settings</description>
+          <type>button</type>
+          <id>66610</id>
+          <hyperlink>703</hyperlink>
+          <label>Video Settings</label>
+          <onup>14</onup>
+          <onright>50</onright>
+          <ondown>15</ondown>
+        </control>
+        <control>
+          <description>Parental controls</description>
+          <type>button</type>
+          <id>15</id>
+          <label>#MovingPictures.Translation.ToggleParentalLock.Label</label>
+          <onright>50</onright>
+          <onup>66610</onup>
+          <ondown>66611</ondown>
+        </control>
+        <control>
+          <description>My Trailers</description>
+          <id>66611</id>
+          <type>button</type>
+          <label>5906</label>
+          <hyperlink>5900</hyperlink>
+          <visible>plugin.isenabled(My Trailers)</visible>
+          <onup>15</onup>
+          <onright>50</onright>
+          <ondown>66612</ondown>
+        </control>
+        <control>
+          <description>SubCentral</description>
+          <id>66612</id>
+          <type>button</type>
+          <label>Check for Subtitles</label>
+          <hyperlink>84623</hyperlink>
+          <visible>plugin.isenabled(SubCentral)</visible>
+          <onup>66611</onup>
+          <onright>50</onright>
+          <ondown>180</ondown>
+        </control>
+        <control>
+          <description>dlCentral</description>
+          <type>button</type>
+          <id>180</id>
+          <label>Download</label>
+          <hyperlink>181966</hyperlink>
+          <onup>66610</onup>
+          <ondown>2</ondown>
+          <onup>66612</onup>
+          <onright>50</onright>
+          <visible>plugin.isenabled(dlCentral)</visible>
+        </control>
+      </control>
+      <control>
+        <id>0</id>
+        <type>image</type>
+        <width>24</width>
+        <height>24</height>
+        <posX>525</posX>
+        <posY>417</posY>
+        <texture>movingpictures_Sort#MovingPictures.Sort.Direction.png</texture>
+      </control>
+    </control>
+  </controls>
+</window>
