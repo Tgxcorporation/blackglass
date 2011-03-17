@@ -31,11 +31,26 @@
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
+				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>207</posX>
+				<posY>182</posY>
+				<width>205</width>
+				<height>154</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#TV.RecordedTV.thumb</texture>
+				<centered>yes</centered>
+				<zoom>no</zoom>
+				<keepaspectratio>yes</keepaspectratio>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)+string.equals(#selectedthumb,)</visible>
+				<animation effect="fade" time="150">visiblechange</animation>
+			</control>
+			<control>
 				<id>500</id>
 				<type>image</type>
-				<posX>58</posX>
-				<posY>117</posY>
-				<width>498</width>
+				<posX>60</posX>
+				<posY>118</posY>
+				<width>500</width>
 				<height>282</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
@@ -80,31 +95,16 @@
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
-				<type>image</type>
-				<description>Current program channel</description>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>598</posY>
-				<width>61</width>
-				<height>46</height>
-				<texture>#TV.RecordedTV.thumb</texture>
-				<centered>yes</centered>
-				<zoom>yes</zoom>
-				<keepaspectratio>yes</keepaspectratio>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
 				<type>fadelabel</type>
 				<description>Current program channel</description>
 				<id>0</id>
-				<posX>127</posX>
+				<posX>45</posX>
 				<posY>600</posY>
 				<label>#TV.RecordedTV.Channel</label>
 				<textcolor>ffffffff</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
-				<width>442</width>
+				<width>570</width>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
