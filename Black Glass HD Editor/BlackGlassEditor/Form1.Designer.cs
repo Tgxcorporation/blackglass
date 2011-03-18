@@ -411,7 +411,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(257, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(277, 17);
             this.toolStripStatusLabel1.Text = "Welcome to Black Glass HD Skin Basic Home Editor";
             // 
             // groupBox111
@@ -2549,7 +2549,7 @@
             this.buttonTarget.Name = "buttonTarget";
             this.buttonTarget.Size = new System.Drawing.Size(468, 25);
             this.buttonTarget.TabIndex = 44;
-            this.buttonTarget.Text = "Select Target Path";
+            this.buttonTarget.Text = "Select Skin Path";
             this.buttonTarget.UseVisualStyleBackColor = true;
             this.buttonTarget.Click += new System.EventHandler(this.buttonTarget_Click);
             // 

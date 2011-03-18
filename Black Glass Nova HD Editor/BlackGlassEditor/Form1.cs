@@ -28,10 +28,30 @@ namespace BlackGlassEditor
         {
             InitializeComponent();
 
-            string path = System.IO.Path.Combine(Application.StartupPath, "plugins.xml");
-            FileStream READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+           string path = System.IO.Path.Combine(Application.StartupPath, "BGN_plugins.xml");
+
+
             System.Xml.XmlDocument Plugins = new System.Xml.XmlDocument();
-            Plugins.Load(READER);
+
+            if (File.Exists(path))
+            {
+                FileStream pREADER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                Plugins.Load(pREADER);
+            }
+            else
+            {
+                try
+                {
+                    Plugins.Load("http://blackglass.googlecode.com/svn/trunk/Plugin%20List/BGN_plugins.xml");
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not download plugin list from Internet. Please retry later.\n\nOriginal error: " + ex.Message);
+                }
+            }
+
+
             System.Xml.XmlNodeList NodeList = Plugins.GetElementsByTagName("plugins");
 
             XmlNodeList pid = Plugins.GetElementsByTagName("id");
@@ -68,6 +88,7 @@ namespace BlackGlassEditor
             }
 
             path = System.IO.Path.Combine(Application.StartupPath, "settings.xml");
+			FileStream READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             System.Xml.XmlDocument Buttons = new System.Xml.XmlDocument();
             Buttons.Load(READER);
@@ -1944,7 +1965,7 @@ namespace BlackGlassEditor
             // MP 1.1 
             if (Directory.Exists(Environment.GetEnvironmentVariable("ALLUSERSPROFILE") + @"\Team MediaPortal\MediaPortal\skin\Black Glass Nova HD")) path = Environment.GetEnvironmentVariable("ALLUSERSPROFILE") + @"\Team MediaPortal\MediaPortal\skin\Black Glass Nova HD";
 
-            if (path == "") MessageBox.Show("Error: Could not find Black Glass Nova HD Skin. Use the 'Select Target Path' button to find it!");
+            if (path == "") MessageBox.Show("Error: Could not find Black Glass Nova HD Skin folder.\n\nUse the 'Select Skin Path' button to find it!");
 
 
             return path;
