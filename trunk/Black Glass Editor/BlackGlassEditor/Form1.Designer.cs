@@ -2549,7 +2549,7 @@
             this.buttonTarget.Name = "buttonTarget";
             this.buttonTarget.Size = new System.Drawing.Size(468, 25);
             this.buttonTarget.TabIndex = 44;
-            this.buttonTarget.Text = "Select Target Path";
+            this.buttonTarget.Text = "Select Skin Path";
             this.buttonTarget.UseVisualStyleBackColor = true;
             this.buttonTarget.Click += new System.EventHandler(this.buttonTarget_Click);
             // 

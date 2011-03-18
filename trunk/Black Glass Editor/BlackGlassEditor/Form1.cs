@@ -29,10 +29,28 @@ namespace BlackGlassEditor
         {
             InitializeComponent();
 
-            string path = System.IO.Path.Combine(Application.StartupPath, "plugins.xml");
-            FileStream READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            string path = System.IO.Path.Combine(Application.StartupPath, "BG_plugins.xml");
             System.Xml.XmlDocument Plugins = new System.Xml.XmlDocument();
-            Plugins.Load(READER);
+
+            if (File.Exists(path))
+            {
+                FileStream pREADER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                Plugins.Load(pREADER);
+            }
+            else
+            {
+                try
+                {
+                    Plugins.Load("http://blackglass.googlecode.com/svn/trunk/Plugin%20List/BG_plugins.xml");
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not download plugin list from Internet. Please retry later.\n\nOriginal error: " + ex.Message);
+                }
+            }
+
+
             System.Xml.XmlNodeList NodeList = Plugins.GetElementsByTagName("plugins");
 
             XmlNodeList pid = Plugins.GetElementsByTagName("id");
@@ -67,6 +85,8 @@ namespace BlackGlassEditor
             }
 
             path = System.IO.Path.Combine(Application.StartupPath, "settings.xml");
+            FileStream READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+
             READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             System.Xml.XmlDocument Buttons = new System.Xml.XmlDocument();
             Buttons.Load(READER);
@@ -1471,7 +1491,7 @@ namespace BlackGlassEditor
         {
             textBox108.Text = comboBox108.Text;
             textBoxid108.Text = findPlugin(comboBox108.Text).ToString();
-            textBoxParameter108.Text = ""; 
+            textBoxParameter108.Text = "";
             if (comboBox108.Text == "Empty Button") { textBox108.Text = ""; textBoxid108.Text = ""; };
             checkBox108.Visible = false;
             checkBox108.Checked = false;
@@ -1949,7 +1969,7 @@ namespace BlackGlassEditor
             // MP 1.1 
             if (Directory.Exists(Environment.GetEnvironmentVariable("ALLUSERSPROFILE") + @"\Team MediaPortal\MediaPortal\skin\Black Glass")) path = Environment.GetEnvironmentVariable("ALLUSERSPROFILE") + @"\Team MediaPortal\MediaPortal\skin\Black Glass";
 
-            if (path == "") MessageBox.Show("Error: Could not find Black Glass Skin. Use the 'Select Target Path' button to find it!");
+            if (path == "") MessageBox.Show("Error: Could not find Black Glass Skin folder.\n\nUse the 'Select Skin Path' button to find it!");
 
 
             return path;
@@ -3171,7 +3191,7 @@ namespace BlackGlassEditor
 
                 try
                 {
-                    TextWriter tw = new StreamWriter(path,false,Encoding.UTF8);
+                    TextWriter tw = new StreamWriter(path, false, Encoding.UTF8);
                     //TextWriter tw = new StreamWriter(path);
                     tw.Write(txt);
                     tw.Close();
@@ -3221,7 +3241,7 @@ namespace BlackGlassEditor
 
                 String path = System.IO.Path.Combine(Application.StartupPath, "settings.xml");
                 // Create a new file in C:\\ dir
-                XmlTextWriter textWriter = new XmlTextWriter(path,Encoding.UTF8);
+                XmlTextWriter textWriter = new XmlTextWriter(path, Encoding.UTF8);
                 textWriter.Formatting = Formatting.Indented;
                 // Opens the document
                 textWriter.WriteStartDocument();
@@ -4528,7 +4548,7 @@ namespace BlackGlassEditor
             }
         }
 
-        
+
 
     }
 }
