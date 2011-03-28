@@ -1,292 +1,313 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-  <id>9812</id>
-  <defaultcontrol>50</defaultcontrol>
-  <allowoverlay>player.hasmedia</allowoverlay>
-  <animation effect="fade" time="250">WindowOpen</animation>
-  <animation effect="fade" time="250">WindowClose</animation>
-  <define>#header.background:hover_my tv series.png</define>
-  <define>#header.label:#TVSeries.FanArt.PageTitle</define>
-  <define>#title.color:ffffffff</define>
-  <!-- Titles Color     Default: ffdedede-->
-  <define>#smalltitle.color:ffffffff</define>
-  <!-- Small Titles Color     Default: ff999999 -->
-  <define>#text.color:ffffffff</define>
-  <!-- Text Color     Default: ffffffff-->
-  <define>#default.color:ffffffff</define>
-  <!-- Normal List Color     Default: ffffffff-->
-  <define>#watched.color:ffffffff</define>
-  <!-- Watched List Color     Default: ff666666 -->
-  <define>#notpresent.color:ffffffff</define>
-  <!-- File Not Present in List Color     Default: ffef6d16 -->
-  <controls>
-    <!-- ~~~~~~~~~~~~~~~~~~~~ ALL BACKGROUNDS ~~~~~~~~~~~~~~~~~~~~ -->
-    <import>common.window.xml</import>
-    <control>
-      <description>preview</description>
-      <id>4560</id>
-      <type>image</type>
-      <posx>0</posx>
-      <posy>0</posy>
-      <width>1920</width>
-      <height>1080</height>
-      <texture>#TVSeries.FanArt.SelectedPreview</texture>
-      <visible>true</visible>
-    </control>
-    <control>
-      <id>0</id>
-      <type>image</type>
-      <posX>-300</posX>
-      <posY>825</posY>
-      <width>2520</width>
-      <height>270</height>
-      <texture>gradient.png</texture>
-      <visible>facadeview.filmstrip|facadeview.smallicons|facadeview.largeicons</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <id>0</id>
-      <type>image</type>
-      <posX>-300</posX>
-      <posY>600</posY>
-      <width>2520</width>
-      <height>480</height>
-      <texture>gradient.png</texture>
-      <visible>[facadeview.coverflow]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>THUMBS Backdrop Overlay</description>
-      <id>0</id>
-      <type>image</type>
-      <posX>-150</posX>
-      <posY>390</posY>
-      <width>2520</width>
-      <height>582</height>
-      <texture>bg_dialog_big.png</texture>
-      <visible>facadeview.smallicons|facadeview.largeicons</visible>
-    </control>
-    <!-- 		<control>
-			<type>fadelabel</type>
-			<description>Subtitle</description>
+	<id>9812</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<define>#header.label:#TVSeries.FanArt.PageTitle</define>
+	<define>#header.background:hover_my tv series.png</define>
+	<controls>
+		<import>common.window.xml</import>
+		<control>
+			<description>preview</description>
+			<id>4560</id>
+			<type>image</type>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>#TVSeries.FanArt.SelectedPreview</texture>
+			<visible>true</visible>
+		</control>
+		<control>
 			<id>0</id>
-			<posX>1150</posX>
-			<posY>5</posY>
-			<width>500</width>
-			<label>1300</label>
-			<font>font18</font>
-			<textcolor>20ffffff</textcolor>
+			<type>image</type>
+			<posX>-300</posX>
+			<posY>825</posY>
+			<width>2520</width>
+			<height>270</height>
+			<texture>gradient.png</texture>
+			<visible>facadeview.filmstrip|facadeview.smallicons|facadeview.largeicons</visible>
+			<animation effect="fade" time="150">visiblechange</animation>
+		</control>
+		<control>
+			<description>THUMBS Backdrop Overlay</description>
+			<id>0</id>
+			<type>image</type>
+			<posX>-150</posX>
+			<posY>390</posY>
+			<width>2520</width>
+			<height>582</height>
+			<texture>bg_dialog_big.png</texture>
+			<visible>facadeview.smallicons|facadeview.largeicons</visible>
+			<animation effect="fade" time="150">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>filter</description>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>81</posY>
+			<font>font10</font>
+			<label>#TVSeries.FanArt.SelectedFanartResolution</label>
+		</control>
+		<control>
+			<description>Disabled Label</description>
+			<type>label</type>
+			<label>Default:</label>
+			<id>14</id>
+			<posX>45</posX>
+			<posY>105</posY>
+			<width>120</width>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Disabled Value</description>
+			<type>label</type>
+			<label>#TVSeries.FanArt.SelectedFanartIsDisabled</label>
+			<id>0</id>
+			<posX>180</posX>
+			<posY>105</posY>
+			<font>font10</font>
+			<textcolor>ffFFFFFF</textcolor>
+		</control>
+		<control>
+			<description>Default Label</description>
+			<type>label</type>
+			<label>#TVSeries.Translation.LabelChosen.Label</label>
+			<id>15</id>
+			<posX>45</posX>
+			<posY>129</posY>
+			<width>120</width>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Default Value</description>
+			<type>label</type>
+			<label>#TVSeries.FanArt.SelectedFanartIsChosen</label>
+			<id>0</id>
+			<posX>180</posX>
+			<posY>129</posY>
+			<font>font10</font>
+			<textcolor>ffFFFFFF</textcolor>
+		</control>
+		<control>
+			<description>Status</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1875</posX>
+			<posY>30</posY>
+			<font>font16</font>
 			<align>right</align>
-		</control> -->
-    <control>
-      <description>Status</description>
-      <type>label</type>
-      <id>0</id>
-      <posX>45</posX>
-      <posY>993</posY>
-      <font>font16</font>
-      <align>left</align>
-      <label>#TVSeries.FanArt.DownloadingStatus #TVSeries.FanArt.LoadingStatus</label>
-    </control>
-    <control>
-      <description>Status</description>
-      <type>label</type>
-      <id>0</id>
-      <posX>959</posX>
-      <posY>1017</posY>
-      <font>font16</font>
-      <align>center</align>
-      <label>[#TVSeries.FanArt.SelectedFanartResolution]</label>
-    </control>
-    <control>
-      <type>group</type>
-      <description>group element</description>
-      <id>28</id>
-      <layout>StackLayout(0, Vertical, true)</layout>
-      <posX>90</posX>
-      <posY>145</posY>
-      <control>
-        <description>composite control consisting of a list control and a thumbnail panel</description>
-        <type>facadeview</type>
-        <id>50</id>
-        <control>
-          <description>Thumbnail Panel</description>
-          <type>thumbnailpanel</type>
-          <id>50</id>
-          <posX>30</posX>
-          <posY>435</posY>
-          <width>1927</width>
-          <height>630</height>
-          <scrollOffset>1</scrollOffset>
-          <onleft>2</onleft>
-          <onright>2</onright>
-          <itemWidth>237</itemWidth>
-          <itemHeight>172</itemHeight>
-          <textureWidth>216</textureWidth>
-          <textureHeight>121</textureHeight>
-          <thumbWidth>201</thumbWidth>
-          <thumbHeight>111</thumbHeight>
-          <thumbPosX>7</thumbPosX>
-          <thumbPosY>4</thumbPosY>
-          <itemWidthBig>378</itemWidthBig>
-          <itemHeightBig>255</itemHeightBig>
-          <thumbWidthBig>348</thumbWidthBig>
-          <thumbHeightBig>195</thumbHeightBig>
-          <textureWidthBig>369</textureWidthBig>
-          <textureHeightBig>208</textureHeightBig>
-          <thumbPosXBig>10</thumbPosXBig>
-          <thumbPosYBig>6</thumbPosYBig>
-          <unfocusedAlpha>120</unfocusedAlpha>
-          <hideUnfocusTexture>no</hideUnfocusTexture>
-          <renderFocusText>yes</renderFocusText>
-          <renderUnfocusText>yes</renderUnfocusText>
-          <imageFolder>-</imageFolder>
-          <imageFolderFocus>-</imageFolderFocus>
-          <thumbZoom>no</thumbZoom>
-          <enableFocusZoom>no</enableFocusZoom>
-          <textXOff>3</textXOff>
-          <textYOff>5</textYOff>
-          <spinCanFocus>no</spinCanFocus>
-          <showFrame>true</showFrame>
-          <frameNoFocus>PictureCase.png</frameNoFocus>
-          <frameFocus>PictureCase.png</frameFocus>
-          <spinWidth>45</spinWidth>
-          <spinHeight>45</spinHeight>
-          <spinPosX>1815</spinPosX>
-          <spinPosY>990</spinPosY>
-          <spinAlign>Right</spinAlign>
-          <spinColor>60ffffff</spinColor>
-        </control>
-        <control>
-          <description>Filmstrip view</description>
-          <type>filmstrip</type>
-          <dimColor>90ffffff</dimColor>
-          <id>50</id>
-          <onup>2</onup>
-          <onleft>2</onleft>
-          <posX>30</posX>
-          <posY>750</posY>
-          <width>2025</width>
-          <thumbWidth>339</thumbWidth>
-          <thumbHeight>187</thumbHeight>
-          <thumbPosX>10</thumbPosX>
-          <thumbPosY>7</thumbPosY>
-          <itemWidth>379</itemWidth>
-          <itemHeight>420</itemHeight>
-          <textureWidth>360</textureWidth>
-          <textureHeight>202</textureHeight>
-          <showFrame>no</showFrame>
-          <frame>-</frame>
-          <frameFocus>-</frameFocus>
-          <showFolder>yes</showFolder>
-          <imageFolder>PictureCase.png</imageFolder>
-          <imageFolderFocus>PictureCase.png</imageFolderFocus>
-          <thumbs flipY="true" diffuse="Thumb_Mask.png" />
-          <showBackGround>no</showBackGround>
-          <background>-</background>
-          <showInfoImage>no</showInfoImage>
-          <InfoImage>-</InfoImage>
-          <visible>facadeview.filmstrip</visible>
-          <thumbAnimation effect="slide" end="0,-7" time="200">focus</thumbAnimation>
-          <thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
-          <scrollOffset>3</scrollOffset>
-        </control>
-      </control>
-    </control>
-    <!--  ************** HIDDEN MENU *****************  -->
-    <control>
-      <type>image</type>
-      <id>0</id>
-      <posX>-579</posX>
-      <posY>4</posY>
-      <width>627</width>
-      <height>1071</height>
-      <texture>bg_left.png</texture>
-      <colorDiffuse>ffffffff</colorDiffuse>
-      <visible>![control.hasfocus(2)|control.hasfocus(12)|control.hasfocus(13)]</visible>
-      <animation effect="fade" time="50">WindowClose</animation>
-      <animation effect="fade" time="50">WindowOpen</animation>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <type>actiongroup</type>
-      <description>action menu</description>
-      <defaultcontrol>2</defaultcontrol>
-      <onexit>0</onexit>
-      <buttonX>0</buttonX>
-      <buttonY>0</buttonY>
-      <buttonwidth>84</buttonwidth>
-      <buttonheight>1080</buttonheight>
-      <textureFocus>-</textureFocus>
-      <textureNoFocus>-</textureNoFocus>
-      <width>637</width>
-      <height>1080</height>
-      <dimColor>ffffffff</dimColor>
-      <visible>control.hasfocus(2)|control.hasfocus(12)|control.hasfocus(13)</visible>
-      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-      <animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>0</posY>
-        <width>627</width>
-        <height>1080</height>
-        <texture>bg_left.png</texture>
-        <colorDiffuse>ffffffff</colorDiffuse>
-      </control>
-      <control>
-        <id>0</id>
-        <type>label</type>
-        <posX>45</posX>
-        <posY>52</posY>
-        <label>924</label>
-        <font>font24</font>
-        <align>left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>71</posY>
-        <width>579</width>
-        <height>79</height>
-        <texture>bg_button_nofocus.png</texture>
-      </control>
-      <control>
-        <type>group</type>
-        <layout>StackLayout(0, Vertical, true)</layout>
-        <posX>0</posX>
-        <posY>150</posY>
-        <control>
-          <description>Change Layout</description>
-          <type>button</type>
-          <id>2</id>
-          <label>Change Layout</label>
-          <onright>50</onright>
-        </control>
-        <control>
-          <description>Resolution Filter</description>
-          <type>button</type>
-          <id>12</id>
-          <label>Filter</label>
-          <onright>50</onright>
-        </control>
-        <control>
-          <description>Random Fanart</description>
-          <type>togglebutton</type>
-          <id>13</id>
-          <label>Random Fanart</label>
-          <onright>50</onright>
-        </control>
-      </control>
-    </control>
-  </controls>
+			<label>#TVSeries.FanArt.DownloadingStatus #TVSeries.FanArt.LoadingStatus</label>
+		</control>
+		<control>
+			<description>Status</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>976</posY>
+			<width>1830</width>
+			<font>font24</font>
+			<height>67</height>
+			<textalign>center</textalign>
+			<label>#selecteditem [#TVSeries.FanArt.SelectedFanartResolution]</label>
+		</control>
+
+
+
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<id>28</id>
+			<layout>StackLayout(0, Vertical, true)</layout>
+			<posX>90</posX>
+			<posY>145</posY>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>Thumbnail Panel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<posX>30</posX>
+					<posY>435</posY>
+					<width>1927</width>
+					<height>630</height>
+					<scrollOffset>1</scrollOffset>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<itemWidth>237</itemWidth>
+					<itemHeight>172</itemHeight>
+					<textureWidth>216</textureWidth>
+					<textureHeight>121</textureHeight>
+					<thumbWidth>201</thumbWidth>
+					<thumbHeight>111</thumbHeight>
+					<thumbPosX>7</thumbPosX>
+					<thumbPosY>4</thumbPosY>
+					<itemWidthBig>378</itemWidthBig>
+					<itemHeightBig>255</itemHeightBig>
+					<thumbWidthBig>348</thumbWidthBig>
+					<thumbHeightBig>195</thumbHeightBig>
+					<textureWidthBig>369</textureWidthBig>
+					<textureHeightBig>208</textureHeightBig>
+					<thumbPosXBig>10</thumbPosXBig>
+					<thumbPosYBig>6</thumbPosYBig>
+					<unfocusedAlpha>120</unfocusedAlpha>
+					<hideUnfocusTexture>no</hideUnfocusTexture>
+					<renderFocusText>yes</renderFocusText>
+					<renderUnfocusText>yes</renderUnfocusText>
+					<imageFolder>-</imageFolder>
+					<imageFolderFocus>-</imageFolderFocus>
+					<thumbZoom>no</thumbZoom>
+					<enableFocusZoom>no</enableFocusZoom>
+					<textXOff>3</textXOff>
+					<textYOff>5</textYOff>
+					<spinCanFocus>no</spinCanFocus>
+					<showFrame>true</showFrame>
+					<frameNoFocus>PictureCase.png</frameNoFocus>
+					<frameFocus>PictureCase.png</frameFocus>
+					<spinWidth>45</spinWidth>
+					<spinHeight>45</spinHeight>
+					<spinPosX>1815</spinPosX>
+					<spinPosY>990</spinPosY>
+					<spinAlign>Right</spinAlign>
+					<spinColor>60ffffff</spinColor>
+				</control>
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<dimColor>90ffffff</dimColor>
+					<id>50</id>
+					<onup>2</onup>
+					<onleft>2</onleft>
+					<posX>30</posX>
+					<posY>750</posY>
+					<width>2025</width>
+					<thumbWidth>339</thumbWidth>
+					<thumbHeight>187</thumbHeight>
+					<thumbPosX>10</thumbPosX>
+					<thumbPosY>7</thumbPosY>
+					<itemWidth>379</itemWidth>
+					<itemHeight>420</itemHeight>
+					<textureWidth>360</textureWidth>
+					<textureHeight>202</textureHeight>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder>PictureCase.png</imageFolder>
+					<imageFolderFocus>PictureCase.png</imageFolderFocus>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png" />
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<visible>facadeview.filmstrip</visible>
+					<thumbAnimation effect="slide" end="0,-7" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+					<scrollOffset>3</scrollOffset>
+				</control>
+			</control>
+		</control>
+		<!--  ************** HIDDEN MENU *****************  -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-579</posX>
+			<posY>4</posY>
+			<width>627</width>
+			<height>1071</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(12)|control.hasfocus(13)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>84</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>control.hasfocus(2)|control.hasfocus(12)|control.hasfocus(13)</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>579</width>
+				<height>79</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Change Layout</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Change Layout</label>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Resolution Filter</description>
+					<type>button</type>
+					<id>12</id>
+					<label>Filter</label>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Random Fanart</description>
+					<type>togglebutton</type>
+					<id>13</id>
+					<label>Random Fanart</label>
+					<onright>50</onright>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>
