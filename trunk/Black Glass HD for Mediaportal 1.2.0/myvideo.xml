@@ -1,90 +1,90 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-  <id>6</id>
-  <defaultcontrol>50</defaultcontrol>
-  <allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-  <define>#header.label:3</define>
-  <define>#useSelectedFanart:Yes</define>
-  <define>#header.background:hover_my videos.png</define>
-  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
-  <controls>
-    <import>common.window.background.xml</import>
-    <import>common.window.video.fanart.xml</import>
-    <import>common.window.overlay.xml</import>
-    <import>common.window.accessories.xml</import>
-    <import>common.window.time.xml</import>
-    <import>common.facade.background.xml</import>
-    <import>common.facade.itemcount.currentmodule.xml</import>
-    <import>common.facade.recordings.xml</import>
-    <control>
-      <type>group</type>
-      <dimColor>ffffffff</dimColor>
-      <animation effect="fade" time="150">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-      <control>
-        <type>label</type>
-        <id>0</id>
-        <posX>45</posX>
-        <posY>15</posY>
-        <label>#header.label</label>
-        <font>font28</font>
-        <align>left</align>
-        <textcolor>60ffffff</textcolor>
-        <visible>control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <id>1000</id>
-        <type>image</type>
-        <posX>58</posX>
-        <posY>117</posY>
-        <width>498</width>
-        <height>282</height>
-        <texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-        <keepaspectratio>yes</keepaspectratio>
-        <centered>yes</centered>
-        <zoom>yes</zoom>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>45</posX>
-        <posY>105</posY>
-        <width>528</width>
-        <height>349</height>
-        <texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>fadelabel</type>
-        <description>Current program title</description>
-        <id>0</id>
-        <posX>45</posX>
-        <posY>480</posY>
-        <width>540</width>
-        <font>font22</font>
-        <label>#selecteditem</label>
-        <wrapString> : : : </wrapString>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>fadelabel</type>
-        <description>Current program</description>
-        <id>0</id>
-        <posX>45</posX>
-        <posY>555</posY>
-        <label>#selecteditem2</label>
-        <textcolor>ffffffff</textcolor>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-    </control>
-    <import>myvideoHiddenMenu.xml</import>
-  </controls>
+	<id>6</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#header.label:3</define>
+	<define>#useSelectedFanart:Yes</define>
+	<define>#header.background:hover_my videos.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.video.fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.xml</import>
+		<import>common.facade.itemcount.currentmodule.xml</import>
+		<import>common.facade.recordings.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<id>1000</id>
+				<type>image</type>
+				<posX>60</posX>
+				<posY>118</posY>
+				<width>502</width>
+				<height>282</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<zoom>yes</zoom>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>105</posY>
+				<width>530</width>
+				<height>349</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>480</posY>
+				<width>540</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<wrapString> : : : </wrapString>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>555</posY>
+				<label>#selecteditem2</label>
+				<textcolor>ffffffff</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+		</control>
+		<import>myvideoHiddenMenu.xml</import>
+	</controls>
 </window>
