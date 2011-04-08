@@ -39,6 +39,91 @@
 			<textureFocus>tv_green_border.png</textureFocus>
 		</control>
 		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250">visiblechange</animation>	
+			<visible>!player.hasmedia</visible>
+			<control>
+				<description>Progress background</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>846</posX>
+				<posY>646</posY>
+				<width>413</width>
+				<height>18</height>
+				<texture>osd_progress_background.png</texture>
+			</control>
+			<control>
+				<description>progress bar</description>
+				<type>progress</type>
+				<id>20</id>
+				<posX>834</posX>
+				<posY>637</posY>
+				<width>437</width>
+				<label>#TV.View.Percentage</label>
+				<visible>yes</visible>
+				<lefttexture>osd_progress_left_dummy_tvhome.png</lefttexture>
+				<midtexture>osd_progress_mid_tvhome.png</midtexture>
+				<righttexture>-</righttexture>
+			</control>
+			<control>
+				<description>Current program time</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>851</posX>
+				<posY>647</posY>
+				<width>360</width>
+				<label>#TV.View.start</label>
+				<font>font9</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>Current program time</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1254</posX>
+				<posY>647</posY>
+				<width>360</width>
+				<label>#TV.View.stop</label>
+				<font>font9</font>
+				<align>right</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>background up</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>846</posX>
+				<posY>432</posY>
+				<width>413</width>
+				<height>18</height>
+				<texture>osd_progress_background2.png</texture>
+			</control>
+			<control>
+				<description>Current program name</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>851</posX>
+				<posY>432</posY>
+				<width>360</width>
+				<label>#TV.View.title</label>
+				<font>font9</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>Channel Image</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>985</posX>
+				<posY>497</posY>
+				<width>133</width>
+				<height>100</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture  flipY="true" diffuse="Thumb_Mask.png">#TV.View.thumb</texture>
+			</control>
+		</control>
+		<control>
 			<description>TV background</description>
 			<type>image</type>
 			<id>1</id>
@@ -73,18 +158,6 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 		</control> 
-		<control>
-			<description>Channel Image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>985</posX>
-			<posY>497</posY>
-			<width>133</width>
-			<height>100</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<texture  flipY="true" diffuse="Thumb_Mask.png">#TV.View.thumb</texture>
-		</control>
 		<control>
 			<description>Current channel</description>
 			<type>fadelabel</type>
@@ -157,50 +230,7 @@
 		</control>
 
 
-		<!-- 	<control>
-			<description>Progress background</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>700</posY>
-			<width>1220</width>
-			<height>5</height>
-			<texture>progress_background.png</texture>
-		</control>
-		<control>
-			<description>progress bar</description>
-			<type>progress</type>
-			<id>20</id>
-			<posX>17</posX>
-			<posY>700</posY>
-			<width>1243</width>
-			<label>#TV.View.Percentage</label>
-			<visible>yes</visible>
-		</control>  -->
 
-		<control>
-			<description>record pin</description>
-			<type>image</type>
-			<id>24</id>
-			<posX>503</posX>
-			<posY>1548</posY>
-			<width>30</width>
-			<height>30</height>
-			<texture>tvguide_record_button.png</texture>
-			<visible>no</visible>
-		</control>
-		<!-- <control>
-			<description>record info label</description>
-			<type>fadelabel</type>
-			<id>23</id>
-			<width>700</width>
-			<height>37</height>
-			<posX>475</posX>
-			<posY>630</posY>
-			<label>#TV.Record.channel\r#TV.Record.title\r#TV.Record.start #TV.Record.stop</label>
-			<font>font14</font>
-			<textcolor>White</textcolor>
-		</control> -->
 
 		<control>
 			<type>image</type>
@@ -253,7 +283,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#header.label</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -377,6 +408,19 @@
 					<onleft>99</onleft>
 				</control>
 			</control>
+		</control>
+
+		<!-- NOT USED -->
+		<control>
+			<description>record pin</description>
+			<type>image</type>
+			<id>24</id>
+			<posX>486</posX>
+			<posY>1644</posY>
+			<width>25</width>
+			<height>25</height>
+			<texture>tvguide_record_button.png</texture>
+			<visible>no</visible>
 		</control>
 	</controls>
 </window>
