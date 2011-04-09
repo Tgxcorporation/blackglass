@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>2901</id>
+	<defaultcontrol>220</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#play.progressbar.percentage:#percentage</define>
+	<define>#play.progressbar.currentplaytime:#currentplaytime</define>
+	<define>#play.progressbar.currentremaining:#currentremaining</define>
+	<controls>
+		<control>
+			<description>background</description>
+			<id>0</id>
+			<type>image</type>
+			<posX>149</posX>
+			<posY>444</posY>
+			<width>982</width>
+			<height>276</height>
+			<texture>bg_osd_small_bottom.png</texture>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>background</description>
+			<id>0</id>
+			<type>image</type>
+			<posX>180</posX>
+			<posY>484</posY>
+			<width>80</width>
+			<height>202</height>
+			<texture>bg_osd_small_bottom_left.png</texture>
+			<colordiffuse>a0ffffff</colordiffuse>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>background</description>
+			<id>0</id>
+			<type>image</type>
+			<posX>992</posX>
+			<posY>484</posY>
+			<width>108</width>
+			<height>202</height>
+			<texture>bg_osd_small_bottom_right.png</texture>
+			<colordiffuse>a0ffffff</colordiffuse>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>416</posX>
+			<posY>474</posY>
+			<width>577</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>288</posX>
+			<posY>495</posY>
+			<width>125</width>
+			<height>179</height>
+			<texture>#Play.Current.Thumb</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>271</posX>
+			<posY>492</posY>
+			<width>145</width>
+			<height>186</height>
+			<texture>DVDCase.png</texture>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>		
+		<control>
+			<description>Genre - Year</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>426</posX>
+			<posY>491</posY>
+			<width>560</width>
+			<!-- <label>#Play.Current.Genre  .  #Play.Current.Year</label> -->
+			<label>#Play.Current.Genre</label>
+			<align>left</align>
+			<font>font16</font>
+			<textcolor>ffffffff</textcolor>
+			<wrapString> : : : </wrapString>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+		</control>
+		<control>
+			<description>Plot</description>
+			<type>textboxscrollup</type>
+			<posX>426</posX>
+			<posY>530</posY>
+			<width>560</width>
+			<height>147</height>
+			<label>#Play.Current.Plot</label>
+			<font>font14</font>
+			<seperator>: : :</seperator>
+			<textcolor>a0FFFFFF</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">windowopen</animation>
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+
+		<import>videoOSD_mediainfo_mp102.xml</import>
+		<import>videoOSD_mediainfo_mp110rc2.xml</import>
+		<import>common.play.osd.xml</import>
+	</controls>
+</window>
