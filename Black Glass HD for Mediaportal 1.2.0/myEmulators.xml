@@ -1,495 +1,488 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-  <id>2497</id>
-  <defaultcontrol>50</defaultcontrol>
-  <allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-  <define>#header.label:Emulators</define>
-  <define>#header.background:hover_myemulators.png</define>
-  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
-  <controls>
-    <import>common.window.background.xml</import>
-    <control>
-      <description>Default Background</description>
-      <type>multiimage</type>
-      <id>0</id>
-      <posX>0</posX>
-      <posY>0</posY>
-      <width>1920</width>
-      <height>1080</height>
-      <imagepath>emulator</imagepath>
-      <timeperimage>20000</timeperimage>
-      <fadetime>250</fadetime>
-      <loop>yes</loop>
-      <randomize>True</randomize>
-      <animation effect="fade" time="250">WindowOpen</animation>
-      <animation effect="fade" time="1">WindowClose</animation>
-    </control>
-    <control>
-      <id>0</id>
-      <type>image</type>
-      <posX>0</posX>
-      <posY>0</posY>
-      <width>1920</width>
-      <height>1080</height>
-      <keepaspectratio>no</keepaspectratio>
-      <texture>Animations\emulator\#selecteditem.jpg</texture>
-      <animation effect="fade" time="250">WindowOpen</animation>
-      <animation effect="fade" time="1">WindowClose</animation>
-    </control>
-    <import>common.window.overlay.xml</import>
-    <import>common.window.accessories.xml</import>
-    <import>common.window.time.xml</import>
-    <import>common.facade.background.xml</import>
-    <import>common.facade.itemcount.xml</import>
-    <control>
-      <type>group</type>
-      <dimColor>ffffffff</dimColor>
-      <animation effect="fade" time="150">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-      <control>
-        <type>label</type>
-        <id>0</id>
-        <posX>45</posX>
-        <posY>15</posY>
-        <label>#header.label</label>
-        <font>font28</font>
-        <align>left</align>
-        <textcolor>60ffffff</textcolor>
-        <visible>control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <!-- LIST OF EMULATOR AND ROMS -->
-      <control>
-        <id>0</id>
-        <type>image</type>
-        <posX>-300</posX>
-        <posY>825</posY>
-        <width>2520</width>
-        <height>270</height>
-        <texture>gradient.png</texture>
-        <visible>facadeview.filmstrip</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <id>0</id>
-        <type>image</type>
-        <posX>-300</posX>
-        <posY>600</posY>
-        <width>2520</width>
-        <height>480</height>
-        <texture>gradient.png</texture>
-        <visible>[facadeview.coverflow]</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <description>group element</description>
-        <type>group</type>
-        <control>
-          <description>composite control consisting of a list control and a thumbnail panel</description>
-          <type>facadeview</type>
-          <id>50</id>
-          <control>
-            <description>listcontrol</description>
-            <type>listcontrol</type>
-            <id>50</id>
-            <onleft>10</onleft>
-            <onright>10</onright>
-            <scrollOffset>2</scrollOffset>
-            <!-- <textXOff>-60</textXOff> -->
-          </control>
-          <control>
-            <description>Thumbnail Panel</description>
-            <type>thumbnailpanel</type>
-            <id>50</id>
-            <onleft>10</onleft>
-            <onright>10</onright>
-            <posX>750</posX>
-            <posY>165</posY>
-            <width>1222</width>
-            <height>900</height>
-            <scrollOffset>1</scrollOffset>
-            <itemWidth>147</itemWidth>
-            <itemHeight>129</itemHeight>
-            <textureWidth>124</textureWidth>
-            <textureHeight>94</textureHeight>
-            <thumbWidth>115</thumbWidth>
-            <thumbHeight>84</thumbHeight>
-            <thumbPosX>4</thumbPosX>
-            <thumbPosY>4</thumbPosY>
-            <itemWidthBig>292</itemWidthBig>
-            <itemHeightBig>261</itemHeightBig>
-            <thumbWidthBig>265</thumbWidthBig>
-            <thumbHeightBig>199</thumbHeightBig>
-            <textureWidthBig>283</textureWidthBig>
-            <textureHeightBig>214</textureHeightBig>
-            <thumbPosXBig>9</thumbPosXBig>
-            <thumbPosYBig>7</thumbPosYBig>
-            <unfocusedAlpha>120</unfocusedAlpha>
-            <hideUnfocusTexture>no</hideUnfocusTexture>
-            <renderFocusText>yes</renderFocusText>
-            <renderUnfocusText>yes</renderUnfocusText>
-            <imageFolder>-</imageFolder>
-            <imageFolderFocus>-</imageFolderFocus>
-            <thumbZoom>no</thumbZoom>
-            <enableFocusZoom>no</enableFocusZoom>
-            <textXOff>3</textXOff>
-            <textYOff>3</textYOff>
-            <spinCanFocus>no</spinCanFocus>
-            <showFrame>true</showFrame>
-            <frameNoFocus>PictureCase.png</frameNoFocus>
-            <frameFocus>PictureCase.png</frameFocus>
-          </control>
-          <control>
-            <description>Filmstrip view</description>
-            <type>filmstrip</type>
-            <dimColor>90ffffff</dimColor>
-            <id>50</id>
-            <onleft>10</onleft>
-            <onright>50</onright>
-            <onup>10</onup>
-            <ondown>50</ondown>
-            <posX>30</posX>
-            <posY>675</posY>
-            <width>2025</width>
-            <thumbWidth>339</thumbWidth>
-            <thumbHeight>252</thumbHeight>
-            <thumbPosX>10</thumbPosX>
-            <thumbPosY>9</thumbPosY>
-            <itemWidth>379</itemWidth>
-            <itemHeight>420</itemHeight>
-            <textureWidth>360</textureWidth>
-            <textureHeight>271</textureHeight>
-            <showFrame>no</showFrame>
-            <frame>-</frame>
-            <frameFocus>-</frameFocus>
-            <showFolder>yes</showFolder>
-            <imageFolder flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</imageFolder>
-            <imageFolderFocus>PictureCase.png</imageFolderFocus>
-            <thumbs flipY="true" diffuse="Thumb_Mask.png" />
-            <showBackGround>no</showBackGround>
-            <background>-</background>
-            <showInfoImage>no</showInfoImage>
-            <InfoImage>-</InfoImage>
-            <visible>facadeview.filmstrip</visible>
-            <thumbAnimation effect="slide" end="0,-15" time="200">focus</thumbAnimation>
-            <thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
-            <scrollOffset>3</scrollOffset>
-          </control>
-        </control>
-      </control>
-      <!-- ALL THE STARS -->
-      <control>
-        <type>image</type>
-        <description>star image 1</description>
-        <id>101</id>
-        <posX>45</posX>
-        <posY>547</posY>
-        <width>33</width>
-        <height>33</height>
-        <texture />
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <description>star image 2</description>
-        <id>102</id>
-        <posX>82</posX>
-        <posY>547</posY>
-        <width>33</width>
-        <height>33</height>
-        <texture />
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <description>star image 3</description>
-        <id>103</id>
-        <posX>120</posX>
-        <posY>547</posY>
-        <width>33</width>
-        <height>33</height>
-        <texture />
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <description>star image 4</description>
-        <id>104</id>
-        <posX>157</posX>
-        <posY>547</posY>
-        <width>33</width>
-        <height>33</height>
-        <texture />
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <description>star image 5</description>
-        <id>105</id>
-        <posX>195</posX>
-        <posY>547</posY>
-        <width>33</width>
-        <height>33</height>
-        <texture />
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <description>star image 6</description>
-        <id>106</id>
-        <posX>232</posX>
-        <posY>547</posY>
-        <width>33</width>
-        <height>33</height>
-        <texture />
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <description>star image 7</description>
-        <id>107</id>
-        <posX>270</posX>
-        <posY>547</posY>
-        <width>33</width>
-        <height>33</height>
-        <texture />
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <description>star image 8</description>
-        <id>108</id>
-        <posX>307</posX>
-        <posY>547</posY>
-        <width>33</width>
-        <height>33</height>
-        <texture />
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <description>star image 9</description>
-        <id>109</id>
-        <posX>345</posX>
-        <posY>547</posY>
-        <width>33</width>
-        <height>33</height>
-        <texture />
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <description>star image 10</description>
-        <id>110</id>
-        <posX>382</posX>
-        <posY>547</posY>
-        <width>33</width>
-        <height>33</height>
-        <texture />
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <id>46</id>
-        <type>image</type>
-        <posX>60</posX>
-        <posY>118</posY>
-        <width>511</width>
-        <height>381</height>
-        <keepaspectratio>yes</keepaspectratio>
-        <texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <centered>yes</centered>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <id>1</id>
-        <posX>45</posX>
-        <posY>105</posY>
-        <width>540</width>
-        <height>409</height>
-        <texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>fadelabel</type>
-        <description>Current program title</description>
-        <id>1</id>
-        <posX>45</posX>
-        <posY>592</posY>
-        <width>540</width>
-        <font>font22</font>
-        <label>#selecteditem</label>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-        <wrapString> : : : </wrapString>
-      </control>
-      <control>
-        <type>label</type>
-        <description>Genre</description>
-        <id>42</id>
-        <posX>45</posX>
-        <posY>660</posY>
-        <textcolor>90ffffff</textcolor>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>label</type>
-        <description>Year</description>
-        <id>41</id>
-        <posX>45</posX>
-        <posY>712</posY>
-        <textcolor>90ffffff</textcolor>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <description>Description</description>
-        <type>textboxscrollup</type>
-        <id>40</id>
-        <posX>45</posX>
-        <posY>765</posY>
-        <width>532</width>
-        <height>288</height>
-        <colordiffuse>ffffffff</colordiffuse>
-        <font>font13</font>
-        <textcolor>White</textcolor>
-        <visible>!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <seperator>: : :</seperator>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-    </control>
-    <!-- SIDE BUTTONS -->
-    <control>
-      <type>image</type>
-      <id>0</id>
-      <posX>-579</posX>
-      <posY>4</posY>
-      <width>627</width>
-      <height>1071</height>
-      <texture>bg_left.png</texture>
-      <colorDiffuse>ffffffff</colorDiffuse>
-      <visible>![control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)]</visible>
-      <animation effect="fade" time="50">WindowClose</animation>
-      <animation effect="fade" time="50">WindowOpen</animation>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <type>actiongroup</type>
-      <description>action menu</description>
-      <defaultcontrol>10</defaultcontrol>
-      <onexit>0</onexit>
-      <buttonX>0</buttonX>
-      <buttonY>0</buttonY>
-      <buttonwidth>84</buttonwidth>
-      <buttonheight>1080</buttonheight>
-      <textureFocus>-</textureFocus>
-      <textureNoFocus>-</textureNoFocus>
-      <width>637</width>
-      <height>1080</height>
-      <dimColor>ffffffff</dimColor>
-      <visible>[control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)]</visible>
-      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-      <animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>0</posY>
-        <width>627</width>
-        <height>1080</height>
-        <texture>bg_left.png</texture>
-        <colorDiffuse>ffffffff</colorDiffuse>
-      </control>
-      <control>
-        <id>0</id>
-        <type>label</type>
-        <posX>45</posX>
-        <posY>52</posY>
-        <label>#header.label</label><width>500</width>
-        <font>font24</font>
-        <align>left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>71</posY>
-        <width>579</width>
-        <height>79</height>
-        <texture>bg_button_nofocus.png</texture>
-      </control>
-      <control>
-        <type>group</type>
-        <layout>StackLayout(0, Vertical, true)</layout>
-        <posX>0</posX>
-        <posY>150</posY>
-        <control>
-          <description>View-As button</description>
-          <type>button</type>
-          <id>10</id>
-          <onleft>10</onleft>
-          <onright>50</onright>
-          <onup>10</onup>
-          <ondown>11</ondown>
-        </control>
-        <control>
-          <description>Most played button</description>
-          <type>button</type>
-          <id>11</id>
-          <onleft>11</onleft>
-          <onright>50</onright>
-          <onup>10</onup>
-          <ondown>12</ondown>
-        </control>
-        <control>
-          <description>Recently played button</description>
-          <type>button</type>
-          <id>12</id>
-          <onleft>12</onleft>
-          <onright>50</onright>
-          <onup>11</onup>
-          <ondown>13</ondown>
-        </control>
-        <control>
-          <description>Top graded button</description>
-          <type>button</type>
-          <id>13</id>
-          <onleft>13</onleft>
-          <onright>50</onright>
-          <onup>12</onup>
-          <ondown>14</ondown>
-        </control>
-        <control>
-          <description>More views button</description>
-          <type>button</type>
-          <id>14</id>
-          <onleft>14</onleft>
-          <onright>50</onright>
-          <onup>13</onup>
-          <ondown>14</ondown>
-        </control>
-      </control>
-    </control>
-  </controls>
+	<id>2497</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#header.label:Emulators</define>
+	<define>#header.background:hover_myemulators.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<control>
+			<description>Default Background</description>
+			<type>multiimage</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<imagepath>emulator</imagepath>
+			<timeperimage>20000</timeperimage>
+			<fadetime>250</fadetime>
+			<loop>yes</loop>
+			<randomize>True</randomize>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="1">WindowClose</animation>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>no</keepaspectratio>
+			<texture>Animations\emulator\#selecteditem.jpg</texture>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="1">WindowClose</animation>
+		</control>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.xml</import>
+		<import>common.facade.itemcount.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<!-- LIST OF EMULATOR AND ROMS -->
+
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>-300</posX>
+				<posY>600</posY>
+				<width>2520</width>
+				<height>480</height>
+				<texture>gradient.png</texture>
+				<visible>[facadeview.coverflow|facadeview.filmstrip]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<description>composite control consisting of a list control and a thumbnail panel</description>
+					<type>facadeview</type>
+					<id>50</id>
+					<control>
+						<description>listcontrol</description>
+						<type>listcontrol</type>
+						<id>50</id>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<scrollOffset>2</scrollOffset>
+						<!-- <textXOff>-60</textXOff> -->
+					</control>
+					<control>
+						<description>Thumbnail Panel</description>
+						<type>thumbnailpanel</type>
+						<id>50</id>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<posX>750</posX>
+						<posY>165</posY>
+						<width>1222</width>
+						<height>900</height>
+						<scrollOffset>1</scrollOffset>
+						<itemWidth>147</itemWidth>
+						<itemHeight>129</itemHeight>
+						<textureWidth>124</textureWidth>
+						<textureHeight>94</textureHeight>
+						<thumbWidth>115</thumbWidth>
+						<thumbHeight>84</thumbHeight>
+						<thumbPosX>4</thumbPosX>
+						<thumbPosY>4</thumbPosY>
+						<itemWidthBig>292</itemWidthBig>
+						<itemHeightBig>261</itemHeightBig>
+						<thumbWidthBig>265</thumbWidthBig>
+						<thumbHeightBig>199</thumbHeightBig>
+						<textureWidthBig>283</textureWidthBig>
+						<textureHeightBig>214</textureHeightBig>
+						<thumbPosXBig>9</thumbPosXBig>
+						<thumbPosYBig>7</thumbPosYBig>
+						<unfocusedAlpha>120</unfocusedAlpha>
+						<hideUnfocusTexture>no</hideUnfocusTexture>
+						<renderFocusText>yes</renderFocusText>
+						<renderUnfocusText>yes</renderUnfocusText>
+						<imageFolder>-</imageFolder>
+						<imageFolderFocus>-</imageFolderFocus>
+						<thumbZoom>no</thumbZoom>
+						<enableFocusZoom>no</enableFocusZoom>
+						<textXOff>3</textXOff>
+						<textYOff>3</textYOff>
+						<spinCanFocus>no</spinCanFocus>
+						<showFrame>true</showFrame>
+						<frameNoFocus>PictureCase.png</frameNoFocus>
+						<frameFocus>PictureCase.png</frameFocus>
+					</control>
+					<control>
+						<description>Filmstrip view</description>
+						<type>filmstrip</type>
+						<dimColor>90ffffff</dimColor>
+						<id>50</id>
+						<onleft>10</onleft>
+						<onright>50</onright>
+						<onup>10</onup>
+						<ondown>50</ondown>
+						<posX>30</posX>
+						<posY>606</posY>
+						<width>1905</width>
+						<height>271</height>
+						<thumbWidth>339</thumbWidth>
+						<thumbHeight>252</thumbHeight>
+						<thumbPosX>10</thumbPosX>
+						<thumbPosY>9</thumbPosY>
+						<itemWidth>379</itemWidth>
+						<itemHeight>271</itemHeight>
+						<textureWidth>360</textureWidth>
+						<textureHeight>271</textureHeight>
+						<showFrame>no</showFrame>
+						<frame>-</frame>
+						<frameFocus>-</frameFocus>
+						<showFolder>yes</showFolder>
+						<imageFolder flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</imageFolder>
+						<imageFolderFocus>PictureCase.png</imageFolderFocus>
+						<thumbs flipY="true" diffuse="Thumb_Mask.png" />
+						<showBackGround>no</showBackGround>
+						<background>-</background>
+						<showInfoImage>no</showInfoImage>
+						<InfoImage>-</InfoImage>
+						<visible>facadeview.filmstrip</visible>
+						<thumbAnimation effect="slide" end="0,-15" time="200">focus</thumbAnimation>
+						<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+						<scrollOffset>3</scrollOffset>
+						<scrollbarYOff>317</scrollbarYOff>
+					</control>
+				</control>
+			</control>
+			<!-- ALL THE STARS -->
+			<control>
+				<type>image</type>
+				<description>star image 1</description>
+				<id>101</id>
+				<posX>45</posX>
+				<posY>547</posY>
+				<width>33</width>
+				<height>33</height>
+				<texture />
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>star image 2</description>
+				<id>102</id>
+				<posX>82</posX>
+				<posY>547</posY>
+				<width>33</width>
+				<height>33</height>
+				<texture />
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>star image 3</description>
+				<id>103</id>
+				<posX>120</posX>
+				<posY>547</posY>
+				<width>33</width>
+				<height>33</height>
+				<texture />
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>star image 4</description>
+				<id>104</id>
+				<posX>157</posX>
+				<posY>547</posY>
+				<width>33</width>
+				<height>33</height>
+				<texture />
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>star image 5</description>
+				<id>105</id>
+				<posX>195</posX>
+				<posY>547</posY>
+				<width>33</width>
+				<height>33</height>
+				<texture />
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>star image 6</description>
+				<id>106</id>
+				<posX>232</posX>
+				<posY>547</posY>
+				<width>33</width>
+				<height>33</height>
+				<texture />
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>star image 7</description>
+				<id>107</id>
+				<posX>270</posX>
+				<posY>547</posY>
+				<width>33</width>
+				<height>33</height>
+				<texture />
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>star image 8</description>
+				<id>108</id>
+				<posX>307</posX>
+				<posY>547</posY>
+				<width>33</width>
+				<height>33</height>
+				<texture />
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>star image 9</description>
+				<id>109</id>
+				<posX>345</posX>
+				<posY>547</posY>
+				<width>33</width>
+				<height>33</height>
+				<texture />
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<description>star image 10</description>
+				<id>110</id>
+				<posX>382</posX>
+				<posY>547</posY>
+				<width>33</width>
+				<height>33</height>
+				<texture />
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<id>46</id>
+				<type>image</type>
+				<posX>60</posX>
+				<posY>118</posY>
+				<width>511</width>
+				<height>381</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<centered>yes</centered>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>105</posY>
+				<width>540</width>
+				<height>409</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>592</posY>
+				<width>540</width>
+				<font>font22</font>
+				<label>#selecteditem</label>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Genre</description>
+				<id>42</id>
+				<posX>45</posX>
+				<posY>660</posY>
+				<textcolor>90ffffff</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Year</description>
+				<id>41</id>
+				<posX>45</posX>
+				<posY>712</posY>
+				<textcolor>90ffffff</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Description</description>
+				<type>textboxscrollup</type>
+				<id>40</id>
+				<posX>45</posX>
+				<posY>765</posY>
+				<width>532</width>
+				<height>288</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<font>font13</font>
+				<textcolor>White</textcolor>
+				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+		</control>
+		<!-- SIDE BUTTONS -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-579</posX>
+			<posY>4</posY>
+			<width>627</width>
+			<height>1071</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>10</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>84</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>#header.label</label>
+				<width>500</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>579</width>
+				<height>79</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>View-As button</description>
+					<type>button</type>
+					<id>10</id>
+					<onleft>10</onleft>
+					<onright>50</onright>
+					<onup>10</onup>
+					<ondown>11</ondown>
+				</control>
+				<control>
+					<description>Most played button</description>
+					<type>button</type>
+					<id>11</id>
+					<onleft>11</onleft>
+					<onright>50</onright>
+					<onup>10</onup>
+					<ondown>12</ondown>
+				</control>
+				<control>
+					<description>Recently played button</description>
+					<type>button</type>
+					<id>12</id>
+					<onleft>12</onleft>
+					<onright>50</onright>
+					<onup>11</onup>
+					<ondown>13</ondown>
+				</control>
+				<control>
+					<description>Top graded button</description>
+					<type>button</type>
+					<id>13</id>
+					<onleft>13</onleft>
+					<onright>50</onright>
+					<onup>12</onup>
+					<ondown>14</ondown>
+				</control>
+				<control>
+					<description>More views button</description>
+					<type>button</type>
+					<id>14</id>
+					<onleft>14</onleft>
+					<onright>50</onright>
+					<onup>13</onup>
+					<ondown>14</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>
