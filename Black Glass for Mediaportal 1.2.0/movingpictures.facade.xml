@@ -30,20 +30,7 @@
 				</control>
 			</control>
 		</control>
-		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>-200</posX>
-			<posY>550</posY>
-			<width>1680</width>
-			<height>180</height>
-			<texture>gradient.png</texture>
-			<visible>facadeview.filmstrip+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="150">WindowClose</animation>	
-			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">WindowClose</animation>
-		</control>
+		
 		<control>
 			<id>0</id>
 			<type>image</type>
@@ -52,7 +39,7 @@
 			<width>1680</width>
 			<height>320</height>
 			<texture>gradient.png</texture>
-			<visible>[facadeview.coverflow]+control.isvisible(50)</visible>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+control.isvisible(50)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">WindowOpen</animation>
@@ -98,15 +85,17 @@
 					<ondown>2</ondown>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<posX>8</posX>
-					<posY>380</posY>
-					<width>1350</width>
+					<posX>20</posX>
+					<posY>335</posY>
+					<width>1270</width>
+					<height>223</height>
+					<spinCanFocus>no</spinCanFocus>
 					<thumbWidth>150</thumbWidth>
 					<thumbHeight>215</thumbHeight>
 					<thumbPosX>21</thumbPosX>
 					<thumbPosY>4</thumbPosY>
-					<itemWidth>182</itemWidth>
-					<itemHeight>280</itemHeight>
+					<itemWidth>180</itemWidth>
+					<itemHeight>223</itemHeight>
 					<textureWidth>175</textureWidth>
 					<textureHeight>223</textureHeight>
 					<showFrame>no</showFrame>
@@ -123,12 +112,13 @@
 					<visible>facadeview.filmstrip</visible>
 					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
 					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
-					<scrollOffset>3</scrollOffset>
 					<visible>control.isvisible(50)</visible>
 					<animation effect="slide" tween="circle" easing="out" time="200" start="800,0" reversible="false">visible</animation>
 					<animation effect="slide" tween="circle" easing="out" time="200" end="800,0" reversible="false">hidden</animation>
 					<animation effect="fade" time="250">visible</animation>
-					<animation effect="fade" time="150">hidden</animation>	
+					<animation effect="fade" time="150">hidden</animation>
+					<scrollOffset>3</scrollOffset>
+					<scrollbarYOff>251</scrollbarYOff>
 				</control>
 				<control>
 					<description>Thumbnail Panel</description>
