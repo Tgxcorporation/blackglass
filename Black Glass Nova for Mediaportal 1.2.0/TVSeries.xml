@@ -287,25 +287,14 @@
 			<id>0</id>
 			<type>image</type>
 			<posX>-200</posX>
-			<posY>550</posY>
-			<width>1680</width>
-			<height>180</height>
-			<texture>gradient.png</texture>
-			<visible>facadeview.filmstrip</visible>
-			<animation effect="fade" time="250">visible</animation>
-		</control> 
-		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>-200</posX>
 			<posY>400</posY>
 			<width>1680</width>
 			<height>320</height>
 			<texture>gradient.png</texture>
-			<visible>[facadeview.coverflow]</visible>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-		
+
 
 
 		<control>
@@ -771,7 +760,7 @@
 			<type>textboxscrollup</type>
 			<description>Current program title</description>
 			<id>640</id>
-			<posX>30</posX>
+			<posX>38</posX>
 			<posY>651</posY>
 			<width>1220</width>
 			<font>font24</font>
@@ -785,7 +774,7 @@
 			<type>textboxscrollup</type>
 			<description>Current program title</description>
 			<id>640</id>
-			<posX>30</posX>
+			<posX>38</posX>
 			<posY>651</posY>
 			<width>1220</width>
 			<font>font24</font>
@@ -1213,6 +1202,326 @@
 
 
 
+
+
+		<!-- *********************** LIST /GRAPHICAL VIEW*********************************** -->
+
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<id>28</id>
+			<layout>StackLayout(0, Vertical, true)</layout>
+			<posX>0</posX>
+			<posY>0</posY>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>graphical list (series and seasons if set)</description>
+					<type>listcontrol</type>
+					<subtype>album</subtype>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>		
+					<posX>700</posX>
+					<!-- 750 -->
+					<posY>170</posY>
+					<!-- 185 -->
+					<width>335</width>
+					<height>250</height>
+					<IconXOff>10</IconXOff>
+					<IconYOff>1</IconYOff>
+					<spaceBetweenItems>2</spaceBetweenItems>
+					<remoteColor>FFa6c3e1</remoteColor>
+					<!-- Watched color -->
+					<downloadColor>d4d2d2</downloadColor>
+					<!-- not watched color (normal) -->
+					<textcolor>FF78ace0</textcolor>
+					<!-- local file not present color -->
+					<textcolor2>FF78ace0</textcolor2>
+					<!-- local file not present color  column 2-->
+					<textcolor3>FF78ace0</textcolor3>
+					<!-- local file not present color column 3-->
+					<textureFocus>tvseries_banner_focus2.png</textureFocus>
+					<textureNoFocus>osd_bg.png</textureNoFocus>
+					<spinWidth>10</spinWidth>
+					<spinHeight>10</spinHeight>
+					<spinPosX>580</spinPosX>
+					<spinPosY>340</spinPosY>
+					<spinAlign>Right</spinAlign>
+					<spinColor>ffffffff</spinColor>
+					<textureUp>1scroll-up.png</textureUp>
+					<textureDown>1scroll-down.png</textureDown>
+					<textureUpFocus>1scroll-up-focus.png</textureUpFocus>
+					<textureDownFocus>1scroll-down-focus.png</textureDownFocus>
+				</control>
+				<control>
+					<description>graphical thumbpanel (series and/or seasons if set)</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<posX>21</posX>
+					<posY>407</posY>
+					<width>1300</width>
+					<height>210</height>
+					<!-- up/down buttons & page # -->     
+					<onleft>2</onleft>
+					<onright>50</onright>		  
+					<!-- Text -->
+					<font>font16</font>
+					<selectedColor>00ffffff</selectedColor>
+					<textcolor>ffffffff</textcolor>
+					<colordiffuse>ffffffff</colordiffuse>
+					<remoteColor>FF868686</remoteColor>
+					<!-- watched color -->
+					<downloadColor>FFFFFFFF</downloadColor>
+					<!-- not watched color (normal) -->
+					<textcolor>FFC14E4A</textcolor>
+					<!-- local file not present color -->
+					<textcolor2>FFC14E4A</textcolor2>
+					<!-- local file not present color  column 2-->
+					<textcolor3>FFC14E4A</textcolor3>
+					<!-- local file not present color column 3-->
+					<suffix>|</suffix>		  
+					<itemWidthBig>419</itemWidthBig>
+					<itemHeightBig>91</itemHeightBig>
+					<!-- boxes -->
+					<textureWidthBig>413</textureWidthBig>
+					<textureHeightBig>87</textureHeightBig>
+					<!-- banners -->
+					<thumbWidthBig>399</thumbWidthBig>
+					<thumbHeightBig>73</thumbHeightBig>
+					<thumbPosXBig>7</thumbPosXBig>
+					<thumbPosYBig>7</thumbPosYBig>
+					<thumbZoom>no</thumbZoom>
+					<!-- text (No banner) -->
+					<textXOff>0</textXOff>
+					<textYOff>0</textYOff>
+					<keepaspectratio>no</keepaspectratio>
+					<enableFocusZoom>no</enableFocusZoom>
+					<unfocusedAlpha>120</unfocusedAlpha>     
+					<frameNoFocus>BannerCase.png</frameNoFocus> 
+					<frameFocus>BannerCase.png</frameFocus>
+					<imageFolder>-</imageFolder>
+					<imageFolderFocus>-</imageFolderFocus>
+					<spinCanFocus>no</spinCanFocus>
+					<scrollOffset>0</scrollOffset>
+					<spinPosX>3185</spinPosX>
+					<spinPosY>595</spinPosY>	
+				</control>
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<ondown>2</ondown>
+					<onup>2</onup>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<spinPosY>-50</spinPosY>
+					<spinPosX>-50</spinPosX>
+					<posX>20</posX>
+					<posY>365</posY>
+					<width>1270</width>
+					<height>223</height>
+					<spinCanFocus>no</spinCanFocus>
+					<thumbWidth>150</thumbWidth>
+					<thumbHeight>215</thumbHeight>
+					<thumbPosX>21</thumbPosX>
+					<thumbPosY>4</thumbPosY>
+					<itemWidth>180</itemWidth>
+					<itemHeight>223</itemHeight>
+					<textureWidth>175</textureWidth>
+					<textureHeight>223</textureHeight>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+					<scrollOffset>3</scrollOffset>
+					<scrollbarYOff>251</scrollbarYOff>
+				</control>
+				<control>
+					<description>Text List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<posX>897</posX>
+					<width>383</width>
+					<posY>430</posY>
+					<height>300</height>
+					<textureHeight>35</textureHeight>
+					<font>font14</font>	
+					<font2>font14</font2>	
+					<font3>font14</font3>	
+					<spinWidth>30</spinWidth>
+					<spinHeight>30</spinHeight>
+					<spinPosX>1205</spinPosX>
+					<spinPosY>683</spinPosY>
+					<IconXOff>2010</IconXOff>
+					<IconYOff>7</IconYOff>
+					<textXOff>-50</textXOff>
+					<textYOff>2</textYOff>
+					<textXOff2>383</textXOff2>
+					<textYOff2>2</textYOff2>
+					<textXOff3>383</textXOff3>
+					<textYOff3>2</textYOff3>
+					<playedColor>ff77ccff</playedColor>
+					<!-- watched -->
+					<downloadColor>ffffffff</downloadColor>
+					<!-- (normal) -->
+					<remoteColor>ffF87B72</remoteColor>
+					<!-- file not present color -->
+					<textcolor>ffffffff</textcolor>
+					<!-- not watched (normal) -->
+					<textcolor2>ffffffff</textcolor2>
+					<textcolor3>ffffffff</textcolor3>
+					<textYOff>1</textYOff>
+				</control>
+				<control>
+					<description>Cover Flow view</description>
+					<type>coverflow</type>
+					<colordiffuse>ffffffff</colordiffuse>
+					<dimColor>90ffffff</dimColor>
+					<id>50</id>
+					<posX>20</posX>
+					<posY>373</posY>
+					<width>1270</width>
+					<height>720</height>
+					<ondown>2</ondown>
+					<onup>2</onup>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<selectedCard>0</selectedCard>
+					<cardWidth>184</cardWidth>
+					<cardHeight>260</cardHeight>
+					<angle>30</angle>
+					<sideShift>180</sideShift>
+					<sideGap>50</sideGap>
+					<sideDepth>250</sideDepth>
+					<offsetY>0</offsetY>
+					<selectedOffsetY>-40</selectedOffsetY>
+					<speed>8</speed>
+					<showFrame>yes</showFrame>
+					<frame>DVDCase_coverflow.png</frame>
+					<frameFocus>DVDCase_coverflow.png</frameFocus>
+					<frameWidth>184</frameWidth>
+					<frameHeight>260</frameHeight>
+					<spinSpeed>8</spinSpeed>
+					<font1>font14</font1>
+					<font2>font11</font2>
+					<label1/>
+					<label2/>
+					<label1YOff>405</label1YOff>
+					<label2YOff>430</label2YOff>
+					<pageSize>5</pageSize>
+					<scrollbarYOff>243</scrollbarYOff>
+					<cards flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png"/>
+					<keepaspectratio>no</keepaspectratio>
+					<subitems>
+						<subitem>
+							<![CDATA[
+							<controls>
+								<control>
+									<description>background</description>
+									<type>image</type>
+									<posX>0</posX>
+									<posY>0</posY>
+									<width>184</width>
+									<height>260</height>
+									<texture flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png">black.png</texture>
+								</control>
+								<control>
+									<description>Movie Title</description>
+									<type>fadelabel</type>
+									<id>0</id>
+									<posX>15</posX>
+									<posY>6</posY>
+									<width>150</width>
+									<label>#TVSeries.Title</label>
+									<font>font13</font>
+									<textcolor>FFFFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+									<shadowAngle>45</shadowAngle>
+									<shadowDistance>2</shadowDistance>
+									<shadowColor>FF000000</shadowColor>
+								</control>
+								<control>
+									<type>image</type>
+									<id>0</id>
+									<posX>15</posX>
+									<posY>-20</posY>
+									<width>154</width>
+									<height>53</height>
+									<texture>bg_button_nofocus.png</texture>
+								</control>
+								<control>
+									<type>imagelist</type>
+									<id>1</id>
+									<posX>15</posX>
+									<posY>41</posY>
+									<width>185</width>
+									<height>40</height>
+									<textureWidth>15</textureWidth>
+									<textureHeight>15</textureHeight>
+									<subitems>
+										<subitem>star_nofocus.png</subitem>
+										<subitem>star_focus.png</subitem>
+									</subitems>
+									<orientation>horizontal</orientation>
+									<align>left</align>
+									<imagesToDraw>10</imagesToDraw>
+									<percentage>#TVSeries.Series.Rating</percentage>
+								</control>
+								<control>
+									<description>genre</description>
+									<type>fadelabel</type>
+									<posX>15</posX>
+									<posY>62</posY>
+									<width>165</width>
+									<label>#TVSeries.Subtitle</label>
+									<font>font11</font>
+									<textcolor>ffFFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								<control>
+									<description>year</description>
+									<type>fadelabel</type>
+									<posX>15</posX>
+									<posY>87</posY>
+									<width>165</width>
+									<label>#TVSeries.Series.infopanelLine4Value</label>
+									<font>font11</font>
+									<textcolor>90FFFFFF</textcolor>
+									<wrapString> : : : </wrapString>
+								</control>
+								<control>
+									<description>plot</description>
+									<type>textboxscrollup</type>
+									<posX>15</posX>
+									<posY>113</posY>
+									<width>165</width>
+									<height>70</height>
+									<label>#TVSeries.Series.Summary</label>
+									<font>font9</font>
+									<lineSpacing>2</lineSpacing>
+									<textcolor>FFFFFFFF</textcolor>
+								</control>
+							</controls>
+							]]>
+						</subitem>
+					</subitems>
+				</control>
+			</control>
+		</control>
 		<!--  ************** HIDDEN MENU *****************  -->
 		<control>
 			<type>image</type>
@@ -1265,7 +1574,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#header.label</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -1420,320 +1730,6 @@
 			</control>
 		</control>
 
-		<!-- *********************** LIST /GRAPHICAL VIEW*********************************** -->
-
-		<control>
-			<type>group</type>
-			<description>group element</description>
-			<id>28</id>
-			<layout>StackLayout(0, Vertical, true)</layout>
-			<posX>0</posX>
-			<posY>0</posY>
-			<control>
-				<description>composite control consisting of a list control and a thumbnail panel</description>
-				<type>facadeview</type>
-				<id>50</id>
-				<control>
-					<description>graphical list (series and seasons if set)</description>
-					<type>listcontrol</type>
-					<subtype>album</subtype>
-					<id>50</id>
-					<onleft>2</onleft>
-					<onright>2</onright>		
-					<posX>700</posX>
-					<!-- 750 -->
-					<posY>170</posY>
-					<!-- 185 -->
-					<width>335</width>
-					<height>250</height>
-					<IconXOff>10</IconXOff>
-					<IconYOff>1</IconYOff>
-					<spaceBetweenItems>2</spaceBetweenItems>
-					<remoteColor>FFa6c3e1</remoteColor>
-					<!-- Watched color -->
-					<downloadColor>d4d2d2</downloadColor>
-					<!-- not watched color (normal) -->
-					<textcolor>FF78ace0</textcolor>
-					<!-- local file not present color -->
-					<textcolor2>FF78ace0</textcolor2>
-					<!-- local file not present color  column 2-->
-					<textcolor3>FF78ace0</textcolor3>
-					<!-- local file not present color column 3-->
-					<textureFocus>tvseries_banner_focus2.png</textureFocus>
-					<textureNoFocus>osd_bg.png</textureNoFocus>
-					<spinWidth>10</spinWidth>
-					<spinHeight>10</spinHeight>
-					<spinPosX>580</spinPosX>
-					<spinPosY>340</spinPosY>
-					<spinAlign>Right</spinAlign>
-					<spinColor>ffffffff</spinColor>
-					<textureUp>1scroll-up.png</textureUp>
-					<textureDown>1scroll-down.png</textureDown>
-					<textureUpFocus>1scroll-up-focus.png</textureUpFocus>
-					<textureDownFocus>1scroll-down-focus.png</textureDownFocus>
-				</control>
-				<control>
-					<description>graphical thumbpanel (series and/or seasons if set)</description>
-					<type>thumbnailpanel</type>
-					<id>50</id>
-					<posX>21</posX>
-					<posY>407</posY>
-					<width>1300</width>
-					<height>210</height>
-					<!-- up/down buttons & page # -->     
-					<onleft>2</onleft>
-					<onright>50</onright>		  
-					<!-- Text -->
-					<font>font16</font>
-					<selectedColor>00ffffff</selectedColor>
-					<textcolor>ffffffff</textcolor>
-					<colordiffuse>ffffffff</colordiffuse>
-					<remoteColor>FF868686</remoteColor>
-					<!-- watched color -->
-					<downloadColor>FFFFFFFF</downloadColor>
-					<!-- not watched color (normal) -->
-					<textcolor>FFC14E4A</textcolor>
-					<!-- local file not present color -->
-					<textcolor2>FFC14E4A</textcolor2>
-					<!-- local file not present color  column 2-->
-					<textcolor3>FFC14E4A</textcolor3>
-					<!-- local file not present color column 3-->
-					<suffix>|</suffix>		  
-					<itemWidthBig>419</itemWidthBig>
-					<itemHeightBig>91</itemHeightBig>
-					<!-- boxes -->
-					<textureWidthBig>413</textureWidthBig>
-					<textureHeightBig>87</textureHeightBig>
-					<!-- banners -->
-					<thumbWidthBig>399</thumbWidthBig>
-					<thumbHeightBig>73</thumbHeightBig>
-					<thumbPosXBig>7</thumbPosXBig>
-					<thumbPosYBig>7</thumbPosYBig>
-					<thumbZoom>no</thumbZoom>
-					<!-- text (No banner) -->
-					<textXOff>0</textXOff>
-					<textYOff>0</textYOff>
-					<keepaspectratio>no</keepaspectratio>
-					<enableFocusZoom>no</enableFocusZoom>
-					<unfocusedAlpha>120</unfocusedAlpha>     
-					<frameNoFocus>BannerCase.png</frameNoFocus> 
-					<frameFocus>BannerCase.png</frameFocus>
-					<imageFolder>-</imageFolder>
-					<imageFolderFocus>-</imageFolderFocus>
-					<spinCanFocus>no</spinCanFocus>
-					<scrollOffset>0</scrollOffset>
-					<spinPosX>3185</spinPosX>
-					<spinPosY>595</spinPosY>	
-				</control>
-				<control>
-					<description>Filmstrip view</description>
-					<type>filmstrip</type>
-					<id>50</id>
-					<onup>2</onup>
-					<ondown>2</ondown>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<spinPosY>-50</spinPosY>
-					<spinPosX>-50</spinPosX>
-					<posX>20</posX>
-					<posY>410</posY>
-					<width>1350</width>
-					<spinCanFocus>no</spinCanFocus>
-					<thumbWidth>150</thumbWidth>
-					<thumbHeight>215</thumbHeight>
-					<thumbPosX>21</thumbPosX>
-					<thumbPosY>4</thumbPosY>
-					<itemWidth>180</itemWidth>
-					<itemHeight>280</itemHeight>
-					<textureWidth>175</textureWidth>
-					<textureHeight>223</textureHeight>
-					<showFrame>no</showFrame>
-					<frame>-</frame>
-					<frameFocus>-</frameFocus>
-					<showFolder>yes</showFolder>
-					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
-					<imageFolderFocus>DVDCase.png</imageFolderFocus>
-					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
-					<showBackGround>no</showBackGround>
-					<background>-</background>
-					<showInfoImage>no</showInfoImage>
-					<InfoImage>-</InfoImage>
-					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
-					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
-					<scrollOffset>3</scrollOffset>
-				</control>
-				<control>
-					<description>Text List</description>
-					<type>listcontrol</type>
-					<id>50</id>
-					<onleft>2</onleft>
-					<onright>2</onright>
-					<posX>897</posX>
-					<width>383</width>
-					<posY>430</posY>
-					<height>300</height>
-					<textureHeight>35</textureHeight>
-					<font>font14</font>	
-					<font2>font14</font2>	
-					<font3>font14</font3>	
-					<spinWidth>30</spinWidth>
-					<spinHeight>30</spinHeight>
-					<spinPosX>1205</spinPosX>
-					<spinPosY>683</spinPosY>
-					<IconXOff>2010</IconXOff>
-					<IconYOff>7</IconYOff>
-					<textXOff>-50</textXOff>
-					<textYOff>2</textYOff>
-					<textXOff2>383</textXOff2>
-					<textYOff2>2</textYOff2>
-					<textXOff3>383</textXOff3>
-					<textYOff3>2</textYOff3>
-					<playedColor>ff77ccff</playedColor>
-					<!-- watched -->
-					<downloadColor>ffffffff</downloadColor>
-					<!-- (normal) -->
-					<remoteColor>ffF87B72</remoteColor>
-					<!-- file not present color -->
-					<textcolor>ffffffff</textcolor>
-					<!-- not watched (normal) -->
-					<textcolor2>ffffffff</textcolor2>
-					<textcolor3>ffffffff</textcolor3>
-					<textYOff>1</textYOff>
-				</control>
-				<control>
-					<description>Cover Flow view</description>
-					<type>coverflow</type>
-					<colordiffuse>ffffffff</colordiffuse>
-					<dimColor>90ffffff</dimColor>
-					<id>50</id>
-					<posX>0</posX>
-					<posY>373</posY>
-					<width>1280</width>
-					<height>720</height>
-					<onup>2</onup>
-					<onleft>2</onleft>
-					<selectedCard>0</selectedCard>
-					<cardWidth>184</cardWidth>
-					<cardHeight>260</cardHeight>
-					<angle>30</angle>
-					<sideShift>180</sideShift>
-					<sideGap>50</sideGap>
-					<sideDepth>250</sideDepth>
-					<offsetY>0</offsetY>
-					<selectedOffsetY>-40</selectedOffsetY>
-					<speed>8</speed>
-					<showFrame>yes</showFrame>
-					<frame>DVDCase_coverflow.png</frame>
-					<frameFocus>DVDCase_coverflow.png</frameFocus>
-					<frameWidth>184</frameWidth>
-					<frameHeight>260</frameHeight>
-					<spinSpeed>8</spinSpeed>
-					<font1>font14</font1>
-					<font2>font11</font2>
-					<label1/>
-					<label2/>
-					<label1YOff>405</label1YOff>
-					<label2YOff>430</label2YOff>
-					<pageSize>5</pageSize>
-					<scrollbarYOff>243</scrollbarYOff>
-					<cards flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png"/>
-					<keepaspectratio>no</keepaspectratio>
-					<subitems>
-						<subitem>
-							<![CDATA[
-							<controls>
-								<control>
-									<description>background</description>
-									<type>image</type>
-									<posX>0</posX>
-									<posY>0</posY>
-									<width>184</width>
-									<height>260</height>
-									<texture flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png">black.png</texture>
-								</control>
-								<control>
-									<description>Movie Title</description>
-									<type>fadelabel</type>
-									<id>0</id>
-									<posX>15</posX>
-									<posY>6</posY>
-									<width>150</width>
-									<label>#TVSeries.Title</label>
-									<font>font13</font>
-									<textcolor>FFFFFFFF</textcolor>
-									<wrapString> : : : </wrapString>
-									<shadowAngle>45</shadowAngle>
-									<shadowDistance>2</shadowDistance>
-									<shadowColor>FF000000</shadowColor>
-								</control>
-								<control>
-									<type>image</type>
-									<id>0</id>
-									<posX>15</posX>
-									<posY>-20</posY>
-									<width>154</width>
-									<height>53</height>
-									<texture>bg_button_nofocus.png</texture>
-								</control>
-								<control>
-									<type>imagelist</type>
-									<id>1</id>
-									<posX>15</posX>
-									<posY>41</posY>
-									<width>185</width>
-									<height>40</height>
-									<textureWidth>15</textureWidth>
-									<textureHeight>15</textureHeight>
-									<subitems>
-										<subitem>star_nofocus.png</subitem>
-										<subitem>star_focus.png</subitem>
-									</subitems>
-									<orientation>horizontal</orientation>
-									<align>left</align>
-									<imagesToDraw>10</imagesToDraw>
-									<percentage>#TVSeries.Series.Rating</percentage>
-								</control>
-								<control>
-									<description>genre</description>
-									<type>fadelabel</type>
-									<posX>15</posX>
-									<posY>62</posY>
-									<width>165</width>
-									<label>#TVSeries.Subtitle</label>
-									<font>font11</font>
-									<textcolor>ffFFFFFF</textcolor>
-									<wrapString> : : : </wrapString>
-								</control>
-								<control>
-									<description>year</description>
-									<type>fadelabel</type>
-									<posX>15</posX>
-									<posY>87</posY>
-									<width>165</width>
-									<label>#TVSeries.Series.infopanelLine4Value</label>
-									<font>font11</font>
-									<textcolor>90FFFFFF</textcolor>
-									<wrapString> : : : </wrapString>
-								</control>
-								<control>
-									<description>plot</description>
-									<type>textboxscrollup</type>
-									<posX>15</posX>
-									<posY>113</posY>
-									<width>165</width>
-									<height>70</height>
-									<label>#TVSeries.Series.Summary</label>
-									<font>font9</font>
-									<lineSpacing>2</lineSpacing>
-									<textcolor>FFFFFFFF</textcolor>
-								</control>
-							</controls>
-							]]>
-						</subitem>
-					</subitems>
-				</control>
-			</control>
-		</control>
 		<!-- ********************** IMPORT PROCESS *************************************** -->
 		<control>
 			<description>Import Animation</description>
