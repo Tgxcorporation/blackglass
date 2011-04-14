@@ -91,7 +91,7 @@
 			<type>label</type>
 			<description>Title (Filmstrip)</description>
 			<id>640</id>
-			<posX>45</posX>
+			<posX>58</posX>
 			<posY>1015</posY>
 			<width>1830</width>
 			<align>center</align>
@@ -850,19 +850,6 @@
 		</control>
 		<!-- FACADES -->
 		<control>
-			<description>gradient</description>
-			<id>0</id>
-			<type>image</type>
-			<posX>-300</posX>
-			<posY>825</posY>
-			<width>2520</width>
-			<height>270</height>
-			<texture>gradient.png</texture>
-			<colordiffuse>ffffffff</colordiffuse>
-			<visible>facadeview.filmstrip+!control.isvisible(24)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
 			<id>0</id>
 			<type>image</type>
 			<posX>-300</posX>
@@ -870,7 +857,7 @@
 			<width>2520</width>
 			<height>480</height>
 			<texture>gradient.png</texture>
-			<visible>[facadeview.coverflow]+!control.isvisible(24)</visible>
+			<visible>[facadeview.coverflow|facadeview.filmstrip|facadeview.smallicons|facadeview.largeicons]+!control.isvisible(24)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -952,19 +939,21 @@
 					<description>Filmstrip view</description>
 					<type>filmstrip</type>
 					<id>50</id>
-					<scrollOffset>2</scrollOffset>
 					<onup>2</onup>
 					<onleft>2</onleft>
+					<onleft>50</onleft>
+					<onright>50</onright>
 					<posX>30</posX>
-					<posY>615</posY>
-					<width>2025</width>
+					<posY>547</posY>
+					<width>1905</width>
+					<height>334</height>
 					<spinCanFocus>no</spinCanFocus>
 					<thumbWidth>225</thumbWidth>
 					<thumbHeight>322</thumbHeight>
 					<thumbPosX>31</thumbPosX>
 					<thumbPosY>6</thumbPosY>
 					<itemWidth>270</itemWidth>
-					<itemHeight>420</itemHeight>
+					<itemHeight>334</itemHeight>
 					<textureWidth>262</textureWidth>
 					<textureHeight>334</textureHeight>
 					<showFrame>no</showFrame>
@@ -982,6 +971,7 @@
 					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
 					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
 					<scrollOffset>3</scrollOffset>
+					<scrollbarYOff>377</scrollbarYOff>
 				</control>
 			</control>
 		</control>
