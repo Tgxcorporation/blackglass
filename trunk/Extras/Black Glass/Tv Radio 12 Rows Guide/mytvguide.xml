@@ -5,7 +5,7 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:4</define>
 	<define>#header.background:hover_my tv.png</define>
-	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<controls>
 		<import>common.window.background.xml</import>
@@ -21,16 +21,17 @@
 			<font>font28</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>!control.isvisible(32)</visible>
 		</control>
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>-5</posX>
 			<posY>48</posY>
 			<width>1299</width>
 			<height>482</height>
 			<texture>bg_tvguide.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 
 		<control>
@@ -66,6 +67,7 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
 			<texture>defaultVideoBig.png</texture>
+			<centered>yes</centered>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 
@@ -146,6 +148,7 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
 			<texture>defaultVideo.png</texture>
+			<centered>yes</centered>
 		</control>
 		<control>
 			<description>channel Label template</description>
@@ -166,6 +169,8 @@
 			<label>-</label>
 			<font>font12</font>
 			<textcolor>b0ffffff</textcolor>
+			<posX>5</posX>
+			<posY>3</posY>
 		</control>
 		<control>
 			<description>vertical timeline</description>
@@ -185,6 +190,8 @@
 			<label>-</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<posX>5</posX>
+			<posY>3</posY>
 		</control>
 		<control>
 			<description>TvGroup button</description>
@@ -201,7 +208,6 @@
 			<onright>6</onright>
 			<onup>6</onup>
 			<ondown>6</ondown>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>TvGroup button label</description>
@@ -213,40 +219,39 @@
 			<textcolor>ffFFFFFF</textcolor>
 			<align>left</align>
 			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
-			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
-
 
 
 		<!-- INFO -->
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>-5</posX>
 			<posY>492</posY>
 			<width>1299</width>
 			<height>465</height>
 			<texture>bg_tvguide.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>288</posX>
 			<posY>516</posY>
 			<width>970</width>
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>288</posX>
 			<posY>548</posY>
 			<width>970</width>
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>TV preview window</description>
@@ -262,13 +267,12 @@
 		</control>
 		<control>
 			<type>image</type>
-			<id>1</id>
+			<id>0</id>
 			<posX>32</posX>
 			<posY>535</posY>
 			<width>255</width>
 			<height>168</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>Current program title</description>
@@ -279,7 +283,6 @@
 			<width>900</width>
 			<font>font22</font>
 			<label>#TV.Guide.Title</label>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>Current program time</description>
@@ -291,7 +294,6 @@
 			<font>font16</font>
 			<textcolor>90ffffff</textcolor>
 			<label>#TV.Guide.Time      #TV.Guide.Genre</label>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>Current program genre</description>
@@ -304,7 +306,6 @@
 			<align>left</align>
 			<textcolor>90ffffff</textcolor>
 			<label>#TV.Guide.Genre</label>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>Description1</description>
@@ -317,7 +318,63 @@
 			<font>font16</font>
 			<seperator>: : :</seperator>
 			<label>#TV.Guide.Description</label>
-			<animation effect="fade" time="250">WindowClose</animation>
+		</control>
+
+		<!-- GRID -->
+
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>21</posX>
+			<posY>79</posY>
+			<width>1237</width>
+			<height>46</height>
+			<texture>bg_tvguide_header.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>66</posX>
+			<posY>126</posY>
+			<width>3</width>
+			<height>358</height>
+			<texture>bg_button_vertical.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>339</posX>
+			<posY>126</posY>
+			<width>3</width>
+			<height>358</height>
+			<texture>bg_button_vertical.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+		</control>
+
+		<!-- NOT USED -->
+		<control>
+			<description>TV background</description>
+			<type>image</type>
+			<id>98</id>
+			<posX>78</posX>
+			<posY>2553</posY>
+			<width>219</width>
+			<height>124</height>
+			<texture>Picture_cover.png</texture>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control>
+			<description>Guide Group Label</description>
+			<type>label</type>
+			<id>11</id>
+			<posX>2097</posX>
+			<posY>15</posY>
+			<width>1688</width>
+			<font>font14</font>
+			<align>left</align>
+			<label>#TV.Guide.Group</label>
 		</control>
 		<control>
 			<description>record pin</description>
@@ -329,39 +386,5 @@
 			<visible>no</visible>
 		</control>
 
-		<!-- GRID -->
-
-		<control>
-			<type>image</type>
-			<posX>21</posX>
-			<posY>79</posY>
-			<width>1237</width>
-			<height>46</height>
-			<texture>bg_tvguide_header.png</texture>
-			<colordiffuse>ffffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>
-		</control>
-		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>66</posX>
-			<posY>126</posY>
-			<width>3</width>
-			<height>358</height>
-			<texture>bg_button_vertical.png</texture>
-			<colordiffuse>ffffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>
-		</control>
-		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>339</posX>
-			<posY>126</posY>
-			<width>3</width>
-			<height>358</height>
-			<texture>bg_button_vertical.png</texture>
-			<colordiffuse>ffffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>
-		</control>
 	</controls>
 </window>

@@ -5,7 +5,7 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:533</define>
 	<define>#header.background:hover_my radio.png</define>
-	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<controls>
 		<import>common.window.background.xml</import>
@@ -14,29 +14,20 @@
 		<import>common.window.time.xml</import>
 		<control>
 			<type>label</type>
-			<id>11</id>
+			<id>0</id>
 			<posX>30</posX>
 			<posY>10</posY>
 			<label>#header.label</label>
 			<font>font28</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>!control.isvisible(32)</visible>
 		</control>
-		<control>
-			<type>label</type>
-			<id>11</id>
-			<posX>30</posX>
-			<posY>10</posY>
-			<label>#header.label</label>
-			<font>font28</font>
-			<align>left</align>
-			<textcolor>60ffffff</textcolor>
-			<animation effect="fade" time="250">WindowClose</animation>
-		</control>
-		
+
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>-5</posX>
 			<posY>48</posY>
 			<width>1299</width>
@@ -54,7 +45,7 @@
 			<colordiffuse>ffffffff</colordiffuse>
 			<texture>-</texture>
 		</control>
-		<!-- <control>
+		<control>
 			<description>Single Channel View Label</description>
 			<type>label</type>
 			<id>32</id>
@@ -76,9 +67,10 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
 			<texture>defaultAudioBig.png</texture>
+			<centered>yes</centered>
 			<animation effect="fade" time="250">visiblechange</animation>
-		</control> -->
-		
+		</control>
+
 		<!-- Timeheader background must be dedfined before Timeheader label template -->
 		<!-- b/c Timeheader is on the background and will be rendered first -->
 		<control>
@@ -156,6 +148,7 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
 			<texture>defaultAudio.png</texture>
+			<centered>yes</centered>
 		</control>
 		<control>
 			<description>channel Label template</description>
@@ -176,6 +169,8 @@
 			<label>-</label>
 			<font>font12</font>
 			<textcolor>b0ffffff</textcolor>
+			<posX>5</posX>
+			<posY>3</posY>
 		</control>
 		<control>
 			<description>vertical timeline</description>
@@ -195,18 +190,20 @@
 			<label>-</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<posX>5</posX>
+			<posY>3</posY>
 		</control>
-		<!-- <control>
+		<control>
 			<description>TvGroup button</description>
 			<type>button</type>
 			<id>100</id>
-			<posX>22</posX>
-			<posY>132</posY>
-			<width>43</width>
-			<height>336</height>
+			<posX>21</posX>
+			<posY>129</posY>
+			<width>45</width>
+			<height>342</height>
 			<textureNoFocus>tvguide_button_group_nofocus.png</textureNoFocus>
 			<textureFocus>tvguide_button_group_focus.png</textureFocus>
-			<label></label>
+			<label/>
 			<onleft>60</onleft>
 			<onright>6</onright>
 			<onup>6</onup>
@@ -217,35 +214,26 @@
 			<type>label</type>
 			<id>0</id>
 			<posX>28</posX>
-			<posY>457</posY>
-			<label>#Radio.Guide.ChangeGroup</label>
-			<textcolor>90FFFFFF</textcolor>
-			<align>left</align>
-			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
-		</control>
-		<control>
-			<description>TvGroup button label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>28</posX>
-			<posY>457</posY>
+			<posY>460</posY>
 			<label>#Radio.Guide.ChangeGroup</label>
 			<textcolor>ffFFFFFF</textcolor>
 			<align>left</align>
 			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
-			<visible>control.hasfocus(100)</visible>
-		</control> -->
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
+		</control>
+
 		<!-- INFO -->
 		<control>
+			<id>0</id>
 			<type>image</type>
 			<posX>-5</posX>
 			<posY>492</posY>
 			<width>1299</width>
 			<height>465</height>
 			<texture>bg_tvguide.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
+			<id>0</id>
 			<type>image</type>
 			<posX>288</posX>
 			<posY>516</posY>
@@ -253,9 +241,9 @@
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
+			<id>0</id>
 			<type>image</type>
 			<posX>288</posX>
 			<posY>548</posY>
@@ -263,7 +251,6 @@
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>TV preview window</description>
@@ -279,13 +266,12 @@
 		</control>
 		<control>
 			<type>image</type>
-			<id>1</id>
+			<id>0</id>
 			<posX>32</posX>
 			<posY>535</posY>
 			<width>255</width>
 			<height>168</height>
 			<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>Current program title</description>
@@ -296,7 +282,6 @@
 			<width>900</width>
 			<font>font22</font>
 			<label>#Radio.Guide.Title</label>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>Current program time</description>
@@ -308,7 +293,6 @@
 			<font>font16</font>
 			<textcolor>90ffffff</textcolor>
 			<label>#Radio.Guide.Time      #Radio.Guide.Genre</label>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>Current program genre</description>
@@ -321,7 +305,6 @@
 			<align>left</align>
 			<textcolor>90ffffff</textcolor>
 			<label>#Radio.Guide.Genre</label>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<description>Description1</description>
@@ -334,26 +317,12 @@
 			<font>font16</font>
 			<seperator>: : :</seperator>
 			<label>#Radio.Guide.Description</label>
-			<animation effect="fade" time="250">WindowClose</animation>
-		</control>
-
-
-
-
-		
-		<control>
-			<description>record pin</description>
-			<type>image</type>
-			<id>31</id>
-			<posX>-1220</posX>
-			<posY>475</posY>
-			<texture>tvguide_record_button.png</texture>
-			<visible>no</visible>
 		</control>
 
 		<!-- GRID -->
 
 		<control>
+			<id>0</id>
 			<type>image</type>
 			<posX>21</posX>
 			<posY>79</posY>
@@ -361,7 +330,6 @@
 			<height>46</height>
 			<texture>bg_tvguide_header.png</texture>
 			<colordiffuse>ffffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<id>0</id>
@@ -372,7 +340,6 @@
 			<height>358</height>
 			<texture>bg_button_vertical.png</texture>
 			<colordiffuse>ffffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>
 		</control>
 		<control>
 			<id>0</id>
@@ -383,7 +350,39 @@
 			<height>358</height>
 			<texture>bg_button_vertical.png</texture>
 			<colordiffuse>ffffffff</colordiffuse>
-			<animation effect="fade" time="250">WindowClose</animation>
+		</control>
+
+		<!-- NOT USED -->
+		<control>
+			<description>TV background</description>
+			<type>image</type>
+			<id>98</id>
+			<posX>78</posX>
+			<posY>2553</posY>
+			<width>219</width>
+			<height>124</height>
+			<texture>Picture_cover.png</texture>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control>
+			<description>Guide Group Label</description>
+			<type>label</type>
+			<id>11</id>
+			<posX>2097</posX>
+			<posY>15</posY>
+			<width>1688</width>
+			<font>font14</font>
+			<align>left</align>
+			<label>#Radio.Guide.Group</label>
+		</control>
+		<control>
+			<description>record pin</description>
+			<type>image</type>
+			<id>31</id>
+			<posX>-1220</posX>
+			<posY>475</posY>
+			<texture>tvguide_record_button.png</texture>
+			<visible>no</visible>
 		</control>
 	</controls>
 </window>
