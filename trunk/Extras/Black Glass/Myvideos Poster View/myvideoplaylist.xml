@@ -2,7 +2,7 @@
 <window>
 	<id>28</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+!facadeview.filmstrip</allowoverlay>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
 	<define>#header.label:136</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_my videos.png</define>
@@ -31,7 +31,7 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(21)|control.hasfocus(22)|control.hasfocus(23)|control.hasfocus(24)|control.hasfocus(25)|control.hasfocus(9)]</visible>		
+				<visible>control.hasfocus(50)</visible>		
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -42,7 +42,7 @@
 				<width>245</width> 
 				<height>348</height> 
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<zoom>yes</zoom>
@@ -56,7 +56,7 @@
 				<width>283</width>
 				<height>360</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DvdCase.png</texture>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
@@ -70,7 +70,7 @@
 				<width>360</width>
 				<font>font22</font>
 				<label>#selecteditem</label>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -82,12 +82,25 @@
 				<posY>510</posY>
 				<label>#selecteditem2</label>
 				<textcolor>ffffffff</textcolor>
-				<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
 		</control>
 
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(21)|control.hasfocus(22)|control.hasfocus(23)|control.hasfocus(24)|control.hasfocus(25)|control.hasfocus(9)]</visible><animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -102,23 +115,14 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(21)|control.hasfocus(22)|control.hasfocus(23)|control.hasfocus(24)|control.hasfocus(25)|control.hasfocus(9)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-193,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
 			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>1</width>
-				<height>1</height>
-				<texture>black.png</texture>
-				<visible>control.hasfocus(2)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(21)|control.hasfocus(22)|control.hasfocus(23)|control.hasfocus(24)|control.hasfocus(25)|control.hasfocus(9)</visible>
-			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -134,7 +138,7 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>924</label>
+				<label>#header.label</label><width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -150,7 +154,7 @@
 			</control>
 			<control>
 				<type>group</type>
-				<layout>StackLayout</layout>
+				<layout>StackLayout(0, Vertical, true)</layout>
 				<posX>0</posX>
 				<posY>100</posY>
 				<control>
