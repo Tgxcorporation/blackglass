@@ -8,10 +8,31 @@
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#header.background</texture>
+			<animation effect="fade" time="1">WindowClose</animation>			
+		</control>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>10</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>!control.isvisible(32)</visible>
+		</control>
 		<import>common.window.time.xml</import>
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>-5</posX>
 			<posY>48</posY>
 			<width>1299</width>
@@ -51,6 +72,7 @@
 			<height>52</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
+			<centered>yes</centered>
 			<texture>defaultVideoBig.png</texture>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
@@ -132,6 +154,7 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
 			<texture>defaultVideo.png</texture>
+			<centered>yes</centered>
 		</control>
 		<control>
 			<description>channel Label template</description>
@@ -152,6 +175,8 @@
 			<label>-</label>
 			<font>font12</font>
 			<textcolor>b0ffffff</textcolor>
+			<posX>5</posX>
+			<posY>3</posY>
 		</control>
 		<control>
 			<description>vertical timeline</description>
@@ -171,6 +196,8 @@
 			<label>-</label>
 			<font>font12</font>
 			<textcolor>ffffffff</textcolor>
+			<posX>5</posX>
+			<posY>3</posY>
 		</control>
 		<control>
 			<description>TvGroup button</description>
@@ -198,13 +225,14 @@
 			<textcolor>ffFFFFFF</textcolor>
 			<align>left</align>
 			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
-
 
 
 		<!-- INFO -->
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>-5</posX>
 			<posY>492</posY>
 			<width>1299</width>
@@ -213,6 +241,7 @@
 		</control>
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>288</posX>
 			<posY>516</posY>
 			<width>970</width>
@@ -222,6 +251,7 @@
 		</control>
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>288</posX>
 			<posY>548</posY>
 			<width>970</width>
@@ -243,7 +273,7 @@
 		</control>
 		<control>
 			<type>image</type>
-			<id>1</id>
+			<id>0</id>
 			<posX>32</posX>
 			<posY>535</posY>
 			<width>255</width>
@@ -295,19 +325,12 @@
 			<seperator>: : :</seperator>
 			<label>#TV.Guide.Description</label>
 		</control>
-		<control>
-			<description>record pin</description>
-			<type>image</type>
-			<id>31</id>
-			<posX>-1220</posX>
-			<posY>475</posY>
-			<texture>tvguide_record_button.png</texture>
-			<visible>no</visible>
-		</control>
 
 		<!-- GRID -->
 
+
 		<control>
+			<id>0</id>
 			<type>image</type>
 			<posX>21</posX>
 			<posY>79</posY>
@@ -335,6 +358,40 @@
 			<height>358</height>
 			<texture>bg_button_vertical.png</texture>
 			<colordiffuse>ffffffff</colordiffuse>
+		</control>
+
+
+		<!-- NOT USED -->
+		<control>
+			<description>TV background</description>
+			<type>image</type>
+			<id>98</id>
+			<posX>78</posX>
+			<posY>2553</posY>
+			<width>219</width>
+			<height>124</height>
+			<texture>Picture_cover.png</texture>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control>
+			<description>Guide Group Label</description>
+			<type>label</type>
+			<id>11</id>
+			<posX>2097</posX>
+			<posY>15</posY>
+			<width>1688</width>
+			<font>font14</font>
+			<align>left</align>
+			<label>#TV.Guide.Group</label>
+		</control>
+		<control>
+			<description>record pin</description>
+			<type>image</type>
+			<id>31</id>
+			<posX>-1220</posX>
+			<posY>475</posY>
+			<texture>tvguide_record_button.png</texture>
+			<visible>no</visible>
 		</control>
 	</controls>
 </window>
