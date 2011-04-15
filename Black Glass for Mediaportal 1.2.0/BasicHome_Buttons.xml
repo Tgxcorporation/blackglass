@@ -600,9 +600,44 @@
 			<label>#fanarthandler.tvseries.latest1.dateAdded:     #fanarthandler.tvseries.latest1.serieName     #fanarthandler.tvseries.latest1.seasonIndexx#fanarthandler.tvseries.latest1.episodeIndex - #fanarthandler.tvseries.latest1.episodeName</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(108)+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest1.episodeName,)</visible>
+			<visible>control.isvisible(1080)+plugin.isenabled(Fanart Handler)+control.hasfocus(108)+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest1.episodeName,)</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="fade" time="150">visible</animation>
+			<!-- <animation effect="fade" time="10">hidden</animation> -->
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<description>TVSeries updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.tvseries.latest2.dateAdded:     #fanarthandler.tvseries.latest2.serieName     #fanarthandler.tvseries.latest2.seasonIndexx#fanarthandler.tvseries.latest2.episodeIndex - #fanarthandler.tvseries.latest2.episodeName</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(1081)+plugin.isenabled(Fanart Handler)+control.hasfocus(108)+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest2.episodeName,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
+			<!-- <animation effect="fade" time="150">hidden</animation> -->
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<description>TVSeries updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.tvseries.latest3.dateAdded:     #fanarthandler.tvseries.latest3.serieName     #fanarthandler.tvseries.latest3.seasonIndexx#fanarthandler.tvseries.latest3.episodeIndex - #fanarthandler.tvseries.latest3.episodeName</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(1082)+plugin.isenabled(Fanart Handler)+control.hasfocus(108)+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest3.episodeName,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
+			<!-- <animation effect="fade" time="150">hidden</animation> -->
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
@@ -818,7 +853,7 @@
 		<control>
 			<description>TV Series image</description>
 			<type>image</type>
-			<id>0</id>
+			<id>1080</id>
 			<posX>744</posX>
 			<posY>277</posY>
 			<width>184</width>
@@ -827,10 +862,50 @@
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<texture mask="basichome_108_mask.png">#fanarthandler.tvseries.latest1.fanart</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)</visible>
+			<visible>!control.isvisible(1081)+!control.isvisible(1082)+plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)</visible>
 			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="83">WindowClose</animation>
 			<animation effect="fade" time="200">visiblechange</animation>
+		</control>
+		
+		<control>
+			<description>TV Series image</description>
+			<type>image</type>
+			<id>1081</id>
+			<posX>744</posX>
+			<posY>277</posY>
+			<width>184</width>
+			<height>129</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask="basichome_108_mask.png">#fanarthandler.tvseries.latest2.fanart</texture>
+			<visible>!control.isvisible(1082)+plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)</visible>
+			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="83">WindowClose</animation>
+			<!-- <animation effect="fade" time="200" delay="2000" pulse="true" condition="control.hasfocus(108)">conditional</animation> -->
+			<animation effect="fade" time="200" delay="2500">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
+		</control>
+		
+		<control>
+			<description>TV Series image</description>
+			<type>image</type>
+			<id>1082</id>
+			<posX>744</posX>
+			<posY>277</posY>
+			<width>184</width>
+			<height>129</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask="basichome_108_mask.png">#fanarthandler.tvseries.latest3.fanart</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)</visible>
+			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="83">WindowClose</animation>
+			<!-- <animation effect="fade" time="200" delay="2000" pulse="true" condition="control.hasfocus(108)">conditional</animation> -->
+			<animation effect="fade" time="200" delay="5000">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
 		</control>
 
 
