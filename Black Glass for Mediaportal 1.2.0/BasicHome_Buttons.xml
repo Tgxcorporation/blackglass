@@ -229,7 +229,7 @@
 			<animation effect="fade" time="250" delay="83">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="167">WindowClose</animation>	
 		</control>
-		
+
 
 		<!-- ID 106 -->
 		<control>
@@ -581,12 +581,63 @@
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location</label>
+			<label>#infoservice.weather.forecast3.weekday:     #infoservice.weather.forecast3.day.humidity     #infoservice.weather.forecast3.day.condition     #infoservice.weather.location</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(InfoService)+control.hasfocus(111)+!string.equals(#infoservice.weather.today.condition,)</visible>
+			<visible>control.isvisible(11100)+plugin.isenabled(InfoService)+control.hasfocus(111)+!string.equals(#infoservice.weather.forecast3.day.condition,)</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="fade" time="150">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<description>Weather Description</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#infoservice.weather.forecast2.weekday:     #infoservice.weather.forecast2.day.humidity     #infoservice.weather.forecast2.day.condition     #infoservice.weather.location</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(11101)+plugin.isenabled(InfoService)+control.hasfocus(111)+!string.equals(#infoservice.weather.forecast2.day.condition,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<description>Weather Description</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#infoservice.weather.today.weekday:     #infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(11102)+plugin.isenabled(InfoService)+control.hasfocus(111)+!string.equals(#infoservice.weather.today.condition,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		
+		
+		
+		<control>
+			<description>TVSeries updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.tvseries.latest3.dateAdded:     #fanarthandler.tvseries.latest3.serieName     #fanarthandler.tvseries.latest3.seasonIndexx#fanarthandler.tvseries.latest3.episodeIndex - #fanarthandler.tvseries.latest3.episodeName     #fanarthandler.tvseries.latest3.runtime</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(10800)+plugin.isenabled(Fanart Handler)+control.hasfocus(108)+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest3.episodeName,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
@@ -597,13 +648,12 @@
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#fanarthandler.tvseries.latest1.dateAdded:     #fanarthandler.tvseries.latest1.serieName     #fanarthandler.tvseries.latest1.seasonIndexx#fanarthandler.tvseries.latest1.episodeIndex - #fanarthandler.tvseries.latest1.episodeName</label>
+			<label>#fanarthandler.tvseries.latest2.dateAdded:     #fanarthandler.tvseries.latest2.serieName     #fanarthandler.tvseries.latest2.seasonIndexx#fanarthandler.tvseries.latest2.episodeIndex - #fanarthandler.tvseries.latest2.episodeName     #fanarthandler.tvseries.latest2.runtime</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>control.isvisible(1080)+plugin.isenabled(Fanart Handler)+control.hasfocus(108)+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest1.episodeName,)</visible>
+			<visible>control.isvisible(10801)+plugin.isenabled(Fanart Handler)+control.hasfocus(108)+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest2.episodeName,)</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect="fade" time="150">visible</animation>
-			<!-- <animation effect="fade" time="10">hidden</animation> -->
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
@@ -614,30 +664,31 @@
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#fanarthandler.tvseries.latest2.dateAdded:     #fanarthandler.tvseries.latest2.serieName     #fanarthandler.tvseries.latest2.seasonIndexx#fanarthandler.tvseries.latest2.episodeIndex - #fanarthandler.tvseries.latest2.episodeName</label>
+			<label>#fanarthandler.tvseries.latest1.dateAdded:     #fanarthandler.tvseries.latest1.serieName     #fanarthandler.tvseries.latest1.seasonIndexx#fanarthandler.tvseries.latest1.episodeIndex - #fanarthandler.tvseries.latest1.episodeName     #fanarthandler.tvseries.latest1.runtime</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>control.isvisible(1081)+plugin.isenabled(Fanart Handler)+control.hasfocus(108)+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest2.episodeName,)</visible>
+			<visible>control.isvisible(10802)+plugin.isenabled(Fanart Handler)+control.hasfocus(108)+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest1.episodeName,)</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect="fade" time="150">visible</animation>
-			<!-- <animation effect="fade" time="150">hidden</animation> -->
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
+		
+		
+		
 		<control>
-			<description>TVSeries updates</description>
+			<description>Moving Pictures updates</description>
 			<type>label</type>
 			<id>0</id>
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#fanarthandler.tvseries.latest3.dateAdded:     #fanarthandler.tvseries.latest3.serieName     #fanarthandler.tvseries.latest3.seasonIndexx#fanarthandler.tvseries.latest3.episodeIndex - #fanarthandler.tvseries.latest3.episodeName</label>
+			<label>#fanarthandler.movingpicture.latest3.dateAdded:     #fanarthandler.movingpicture.latest3.title     #fanarthandler.movingpicture.latest3.runtime     #fanarthandler.movingpicture.latest3.genre     #fanarthandler.movingpicture.latest3.year</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>control.isvisible(1082)+plugin.isenabled(Fanart Handler)+control.hasfocus(108)+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest3.episodeName,)</visible>
+			<visible>control.isvisible(10600)+plugin.isenabled(Fanart Handler)+control.hasfocus(106)+plugin.isenabled(Moving Pictures)+!string.equals(#fanarthandler.movingpicture.latest3.title,)</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect="fade" time="150">visible</animation>
-			<!-- <animation effect="fade" time="150">hidden</animation> -->
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
@@ -648,12 +699,64 @@
 			<posX>0</posX>
 			<posY>666</posY>
 			<width>1280</width>
-			<label>#fanarthandler.movingpicture.latest1.dateAdded:     #fanarthandler.movingpicture.latest1.title     #fanarthandler.movingpicture.latest1.genre     #fanarthandler.movingpicture.latest1.year</label>
+			<label>#fanarthandler.movingpicture.latest2.dateAdded:     #fanarthandler.movingpicture.latest2.title     #fanarthandler.movingpicture.latest2.runtime     #fanarthandler.movingpicture.latest2.genre     #fanarthandler.movingpicture.latest2.year</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(106)+plugin.isenabled(Moving Pictures)+!string.equals(#fanarthandler.movingpicture.latest1.title,)</visible>
+			<visible>control.isvisible(10601)+plugin.isenabled(Fanart Handler)+control.hasfocus(106)+plugin.isenabled(Moving Pictures)+!string.equals(#fanarthandler.movingpicture.latest2.title,)</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="fade" time="150">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<description>Moving Pictures updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.movingpicture.latest1.dateAdded:     #fanarthandler.movingpicture.latest1.title     #fanarthandler.movingpicture.latest1.runtime     #fanarthandler.movingpicture.latest1.genre     #fanarthandler.movingpicture.latest1.year</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(10602)+plugin.isenabled(Fanart Handler)+control.hasfocus(106)+plugin.isenabled(Moving Pictures)+!string.equals(#fanarthandler.movingpicture.latest1.title,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		
+		
+		
+		
+		<control>
+			<description>TV updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.tvrecordings.latest3.dateAdded:     #fanarthandler.tvrecordings.latest3.title     #fanarthandler.tvrecordings.latest3.genre</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(10700)+plugin.isenabled(Fanart Handler)+control.hasfocus(107)+plugin.isenabled(TV)+!string.equals(#fanarthandler.tvrecordings.latest3.title,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<description>TV updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.tvrecordings.latest2.dateAdded:     #fanarthandler.tvrecordings.latest2.title     #fanarthandler.tvrecordings.latest2.genre</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(10701)+plugin.isenabled(Fanart Handler)+control.hasfocus(107)+plugin.isenabled(TV)+!string.equals(#fanarthandler.tvrecordings.latest2.title,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
@@ -667,9 +770,43 @@
 			<label>#fanarthandler.tvrecordings.latest1.dateAdded:     #fanarthandler.tvrecordings.latest1.title     #fanarthandler.tvrecordings.latest1.genre</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(107)+plugin.isenabled(TV)+!string.equals(#fanarthandler.tvrecordings.latest1.title,)</visible>
+			<visible>control.isvisible(10702)+plugin.isenabled(Fanart Handler)+control.hasfocus(107)+plugin.isenabled(TV)+!string.equals(#fanarthandler.tvrecordings.latest1.title,)</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="fade" time="150">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		
+		
+		<control>
+			<description>Pictures updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.picture.latest3.dateAdded:     #fanarthandler.picture.latest3.filename</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(11300)+plugin.isenabled(Fanart Handler)+control.hasfocus(113)+plugin.isenabled(Pictures)+!string.equals(#fanarthandler.picture.latest3.filename,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<description>Pictures updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.picture.latest2.dateAdded:     #fanarthandler.picture.latest2.filename</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(11301)+plugin.isenabled(Fanart Handler)+control.hasfocus(113)+plugin.isenabled(Pictures)+!string.equals(#fanarthandler.picture.latest2.filename,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
@@ -683,9 +820,44 @@
 			<label>#fanarthandler.picture.latest1.dateAdded:     #fanarthandler.picture.latest1.filename</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(113)+plugin.isenabled(Pictures)+!string.equals(#fanarthandler.picture.latest1.filename,)</visible>
+			<visible>control.isvisible(11302)+plugin.isenabled(Fanart Handler)+control.hasfocus(113)+plugin.isenabled(Pictures)+!string.equals(#fanarthandler.picture.latest1.filename,)</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="fade" time="150">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		
+		
+		
+		<control>
+			<description>Music updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.music.latest3.dateAdded:     #fanarthandler.music.latest3.artist     #fanarthandler.music.latest3.album     #fanarthandler.music.latest3.genre</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(11200)+plugin.isenabled(Fanart Handler)+control.hasfocus(112)+plugin.isenabled(Music)+!string.equals(#fanarthandler.music.latest3.album,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<description>Music updates</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>666</posY>
+			<width>1280</width>
+			<label>#fanarthandler.music.latest2.dateAdded:     #fanarthandler.music.latest2.artist     #fanarthandler.music.latest2.album     #fanarthandler.music.latest2.genre</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(11201)+plugin.isenabled(Fanart Handler)+control.hasfocus(112)+plugin.isenabled(Music)+!string.equals(#fanarthandler.music.latest2.album,)</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect="fade" time="150">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
@@ -699,9 +871,9 @@
 			<label>#fanarthandler.music.latest1.dateAdded:     #fanarthandler.music.latest1.artist     #fanarthandler.music.latest1.album     #fanarthandler.music.latest1.genre</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(112)+plugin.isenabled(Music)+!string.equals(#fanarthandler.music.latest1.album,)</visible>
+			<visible>control.isvisible(11202)+plugin.isenabled(Fanart Handler)+control.hasfocus(112)+plugin.isenabled(Music)+!string.equals(#fanarthandler.music.latest1.album,)</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect="fade" time="150">VisibleChange</animation>
+			<animation effect="fade" time="150">visible</animation>
 			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 		</control>
@@ -709,11 +881,10 @@
 
 		<!-- FANART -->
 
-
-		<!-- <control>
-			<description>Moving Pictures Black image</description>
+		<control>
+			<description>Moving Pictures image</description>
 			<type>image</type>
-			<id>0</id>
+			<id>10600</id>
 			<posX>352</posX>
 			<posY>277</posY>
 			<width>184</width>
@@ -721,16 +892,16 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask="basichome_106_mask.png">#fanarthandler.movingpicture.latest1.fanart</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(Moving Pictures)+!control.hasfocus(106)</visible>
+			<texture mask="basichome_106_mask.png">#fanarthandler.movingpicture.latest3.fanart</texture>
+			<visible>!control.isvisible(10601)+!control.isvisible(10602)+plugin.isenabled(Fanart Handler)+plugin.isenabled(Moving Pictures)+control.hasfocus(106)</visible>
 			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="83">WindowClose</animation>
+			<animation effect="fade" time="200">visiblechange</animation>
 		</control>
 		<control>
 			<description>Moving Pictures image</description>
 			<type>image</type>
-			<id>0</id>
+			<id>10601</id>
 			<posX>352</posX>
 			<posY>277</posY>
 			<width>184</width>
@@ -738,16 +909,17 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask="basichome_106_mask.png">#fanarthandler.movingpicture.latest1.fanart</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(Moving Pictures)+!control.hasfocus(106)</visible>
+			<texture mask="basichome_106_mask.png">#fanarthandler.movingpicture.latest2.fanart</texture>
+			<visible>!control.isvisible(10602)+plugin.isenabled(Fanart Handler)+plugin.isenabled(Moving Pictures)+control.hasfocus(106)</visible>
 			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="83">WindowClose</animation>
-		</control> -->
+			<animation effect="fade" time="200" delay="2500">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
+		</control>
 		<control>
 			<description>Moving Pictures image</description>
 			<type>image</type>
-			<id>0</id>
+			<id>10602</id>
 			<posX>352</posX>
 			<posY>277</posY>
 			<width>184</width>
@@ -759,14 +931,33 @@
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(Moving Pictures)+control.hasfocus(106)</visible>
 			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="83">WindowClose</animation>
+			<animation effect="fade" time="200" delay="5000">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
+		</control>
+
+
+
+		<control>
+			<description>TV image</description>
+			<type>image</type>
+			<id>10700</id>
+			<posX>554</posX>
+			<posY>293</posY>
+			<width>172</width>
+			<height>114</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask="basichome_107_mask.png">#fanarthandler.tvrecordings.latest3.thumb</texture>
+			<visible>!control.isvisible(10701)+!control.isvisible(10702)+plugin.isenabled(Fanart Handler)+plugin.isenabled(TV)+control.hasfocus(107)</visible>
+			<animation effect="fade" time="250" delay="1250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<animation effect="fade" time="200">visiblechange</animation>
 		</control>
-		
-
-		<!-- <control>
-			<description>TV Black image</description>
+		<control>
+			<description>TV image</description>
 			<type>image</type>
-			<id>0</id>
+			<id>10701</id>
 			<posX>554</posX>
 			<posY>293</posY>
 			<width>172</width>
@@ -774,33 +965,17 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask="basichome_107_mask.png">#fanarthandler.tvrecordings.latest1.thumb</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(TV)+!control.hasfocus(107)</visible>
+			<texture mask="basichome_107_mask.png">#fanarthandler.tvrecordings.latest2.thumb</texture>
+			<visible>!control.isvisible(10702)+plugin.isenabled(Fanart Handler)+plugin.isenabled(TV)+control.hasfocus(107)</visible>
 			<animation effect="fade" time="250" delay="1250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="200" delay="2500">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
 		</control>
 		<control>
 			<description>TV image</description>
 			<type>image</type>
-			<id>0</id>
-			<posX>554</posX>
-			<posY>293</posY>
-			<width>172</width>
-			<height>114</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask="basichome_107_mask.png">#fanarthandler.tvrecordings.latest1.thumb</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(TV)+!control.hasfocus(107)</visible>
-			<animation effect="fade" time="250" delay="1250">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control> -->
-		<control>
-			<description>TV image</description>
-			<type>image</type>
-			<id>0</id>
+			<id>10702</id>
 			<posX>554</posX>
 			<posY>293</posY>
 			<width>172</width>
@@ -812,86 +987,16 @@
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(TV)+control.hasfocus(107)</visible>
 			<animation effect="fade" time="250" delay="1250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<animation effect="fade" time="200">visiblechange</animation>
-		</control>
-
-
-		<!-- <control>
-			<description>TV Series Black image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>744</posX>
-			<posY>277</posY>
-			<width>184</width>
-			<height>129</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask="basichome_108_mask.png">#fanarthandler.tvseries.latest1.fanart</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)+!control.hasfocus(108)</visible>
-			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="83">WindowClose</animation>
-		</control>
-		<control>
-			<description>TV Series image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>744</posX>
-			<posY>277</posY>
-			<width>184</width>
-			<height>129</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask="basichome_108_mask.png">#fanarthandler.tvseries.latest1.fanart</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)+!control.hasfocus(108)</visible>
-			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="83">WindowClose</animation>
-		</control> -->
-		<control>
-			<description>TV Series image</description>
-			<type>image</type>
-			<id>1080</id>
-			<posX>744</posX>
-			<posY>277</posY>
-			<width>184</width>
-			<height>129</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<texture mask="basichome_108_mask.png">#fanarthandler.tvseries.latest1.fanart</texture>
-			<visible>!control.isvisible(1081)+!control.isvisible(1082)+plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)</visible>
-			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="83">WindowClose</animation>
-			<animation effect="fade" time="200">visiblechange</animation>
-		</control>
-		
-		<control>
-			<description>TV Series image</description>
-			<type>image</type>
-			<id>1081</id>
-			<posX>744</posX>
-			<posY>277</posY>
-			<width>184</width>
-			<height>129</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<texture mask="basichome_108_mask.png">#fanarthandler.tvseries.latest2.fanart</texture>
-			<visible>!control.isvisible(1082)+plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)</visible>
-			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="83">WindowClose</animation>
-			<!-- <animation effect="fade" time="200" delay="2000" pulse="true" condition="control.hasfocus(108)">conditional</animation> -->
-			<animation effect="fade" time="200" delay="2500">visible</animation>
+			<animation effect="fade" time="200" delay="5000">visible</animation>
 			<animation effect="fade" time="200">hidden</animation>
 		</control>
-		
+
+
+
 		<control>
 			<description>TV Series image</description>
 			<type>image</type>
-			<id>1082</id>
+			<id>10800</id>
 			<posX>744</posX>
 			<posY>277</posY>
 			<width>184</width>
@@ -900,19 +1005,54 @@
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<texture mask="basichome_108_mask.png">#fanarthandler.tvseries.latest3.fanart</texture>
+			<visible>!control.isvisible(10801)+!control.isvisible(10802)+plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)</visible>
+			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="83">WindowClose</animation>
+			<animation effect="fade" time="200">visiblechange</animation>
+		</control>
+		<control>
+			<description>TV Series image</description>
+			<type>image</type>
+			<id>10801</id>
+			<posX>744</posX>
+			<posY>277</posY>
+			<width>184</width>
+			<height>129</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask="basichome_108_mask.png">#fanarthandler.tvseries.latest2.fanart</texture>
+			<visible>!control.isvisible(10802)+plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)</visible>
+			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="83">WindowClose</animation>
+			<animation effect="fade" time="200" delay="2500">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
+		</control>
+		<control>
+			<description>TV Series image</description>
+			<type>image</type>
+			<id>10802</id>
+			<posX>744</posX>
+			<posY>277</posY>
+			<width>184</width>
+			<height>129</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask="basichome_108_mask.png">#fanarthandler.tvseries.latest1.fanart</texture>
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)+control.hasfocus(108)</visible>
 			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="83">WindowClose</animation>
-			<!-- <animation effect="fade" time="200" delay="2000" pulse="true" condition="control.hasfocus(108)">conditional</animation> -->
 			<animation effect="fade" time="200" delay="5000">visible</animation>
 			<animation effect="fade" time="200">hidden</animation>
 		</control>
 
 
-		<!-- <control>
-			<description>Weather Black image</description>
+
+		<control>
+			<description>Weather image</description>
 			<type>image</type>
-			<id>0</id>
+			<id>11100</id>
 			<posX>358</posX>
 			<posY>145</posY>
 			<width>180</width>
@@ -920,16 +1060,16 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask="basichome_111_mask.png">animations\weather\#infoservice.weather.today.img.big.filenamewithoutext.jpg</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(InfoService)+!control.hasfocus(111)</visible>
+			<texture mask="basichome_111_mask.png">animations\weather\#infoservice.weather.forecast3.day.img.big.filenamewithoutext.jpg</texture>
+			<visible>!control.isvisible(11101)+!control.isvisible(11102)+plugin.isenabled(Fanart Handler)+plugin.isenabled(InfoService)+control.hasfocus(111)</visible>
 			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="83">WindowClose</animation>
+			<animation effect="fade" time="200">visiblechange</animation>
 		</control>
 		<control>
 			<description>Weather image</description>
 			<type>image</type>
-			<id>0</id>
+			<id>11101</id>
 			<posX>358</posX>
 			<posY>145</posY>
 			<width>180</width>
@@ -937,16 +1077,17 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask="basichome_111_mask.png">animations\weather\#infoservice.weather.today.img.big.filenamewithoutext.jpg</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(InfoService)+!control.hasfocus(111)</visible>
+			<texture mask="basichome_111_mask.png">animations\weather\#infoservice.weather.forecast2.day.img.big.filenamewithoutext.jpg</texture>
+			<visible>!control.isvisible(11102)+plugin.isenabled(Fanart Handler)+plugin.isenabled(InfoService)+control.hasfocus(111)</visible>
 			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="83">WindowClose</animation>
-		</control> -->
+			<animation effect="fade" time="200" delay="2500">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
+		</control>
 		<control>
 			<description>Weather image</description>
 			<type>image</type>
-			<id>0</id>
+			<id>11102</id>
 			<posX>358</posX>
 			<posY>145</posY>
 			<width>180</width>
@@ -958,15 +1099,34 @@
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(InfoService)+control.hasfocus(111)</visible>
 			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="83">WindowClose</animation>
+			<animation effect="fade" time="200" delay="5000">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
+		</control>
+
+
+
+
+		<control>
+			<description>Music image</description>
+			<type>image</type>
+			<id>11200</id>
+			<posX>556</posX>
+			<posY>169</posY>
+			<width>168</width>
+			<height>110</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask="basichome_112_mask.png">#fanarthandler.music.latest3.fanart1</texture>
+			<visible>!control.isvisible(11201)+!control.isvisible(11202)+plugin.isenabled(Fanart Handler)+plugin.isenabled(Music)+control.hasfocus(112)</visible>
+			<animation effect="fade" time="250" delay="1250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			<animation effect="fade" time="200">visiblechange</animation>
 		</control>
-		
-
-
-		<!-- <control>
-			<description>Music Black image</description>
+		<control>
+			<description>Music image</description>
 			<type>image</type>
-			<id>0</id>
+			<id>11201</id>
 			<posX>556</posX>
 			<posY>169</posY>
 			<width>168</width>
@@ -974,33 +1134,17 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask="basichome_112_mask.png">#fanarthandler.music.latest1.fanart1</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(Music)+!control.hasfocus(112)</visible>
+			<texture mask="basichome_112_mask.png">#fanarthandler.music.latest2.fanart1</texture>
+			<visible>!control.isvisible(11202)+plugin.isenabled(Fanart Handler)+plugin.isenabled(Music)+control.hasfocus(112)</visible>
 			<animation effect="fade" time="250" delay="1250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="200" delay="2500">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
 		</control>
 		<control>
 			<description>Music image</description>
 			<type>image</type>
-			<id>0</id>
-			<posX>556</posX>
-			<posY>169</posY>
-			<width>168</width>
-			<height>110</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask="basichome_112_mask.png">#fanarthandler.music.latest1.fanart1</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(Music)+!control.hasfocus(112)</visible>
-			<animation effect="fade" time="250" delay="1250">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control> -->
-		<control>
-			<description>Music image</description>
-			<type>image</type>
-			<id>0</id>
+			<id>11202</id>
 			<posX>556</posX>
 			<posY>169</posY>
 			<width>168</width>
@@ -1012,15 +1156,33 @@
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(Music)+control.hasfocus(112)</visible>
 			<animation effect="fade" time="250" delay="1250">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<animation effect="fade" time="200" delay="5000">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
+		</control>
+
+
+
+		<control>
+			<description>Picture image</description>
+			<type>image</type>
+			<id>11300</id>
+			<posX>742</posX>
+			<posY>145</posY>
+			<width>180</width>
+			<height>132</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture mask="basichome_113_mask.png">#fanarthandler.picture.latest3.thumb</texture>
+			<visible>!control.isvisible(11301)+!control.isvisible(11302)+plugin.isenabled(Fanart Handler)+plugin.isenabled(Pictures)+control.hasfocus(113)+!string.contains(#fanarthandler.picture.latest3.thumb,Folder.jpg)</visible>
+			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="83">WindowClose</animation>
 			<animation effect="fade" time="200">visiblechange</animation>
 		</control>
-
-
-
-		<!-- <control>
-			<description>Picture Black image</description>
+		<control>
+			<description>Picture image</description>
 			<type>image</type>
-			<id>0</id>
+			<id>11301</id>
 			<posX>742</posX>
 			<posY>145</posY>
 			<width>180</width>
@@ -1028,33 +1190,17 @@
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<colordiffuse>ff000000</colordiffuse>
-			<texture mask="basichome_113_mask.png">#fanarthandler.picture.latest1.thumb</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(Pictures)+!control.hasfocus(113)+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)</visible>
+			<texture mask="basichome_113_mask.png">#fanarthandler.picture.latest2.thumb</texture>
+			<visible>!control.isvisible(11302)+plugin.isenabled(Fanart Handler)+plugin.isenabled(Pictures)+control.hasfocus(113)+!string.contains(#fanarthandler.picture.latest2.thumb,Folder.jpg)</visible>
 			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="83">WindowClose</animation>
+			<animation effect="fade" time="200" delay="2500">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
 		</control>
 		<control>
 			<description>Picture image</description>
 			<type>image</type>
-			<id>0</id>
-			<posX>742</posX>
-			<posY>145</posY>
-			<width>180</width>
-			<height>132</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<colordiffuse>90ffffff</colordiffuse>
-			<texture mask="basichome_113_mask.png">#fanarthandler.picture.latest1.thumb</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(Pictures)+!control.hasfocus(113)+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)</visible>
-			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="83">WindowClose</animation>
-		</control> -->
-		<control>
-			<description>Picture image</description>
-			<type>image</type>
-			<id>0</id>
+			<id>11302</id>
 			<posX>742</posX>
 			<posY>145</posY>
 			<width>180</width>
@@ -1066,7 +1212,8 @@
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(Pictures)+control.hasfocus(113)+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)</visible>
 			<animation effect="fade" time="250" delay="1167">WindowOpen</animation>
 			<animation effect="fade" time="250" delay="83">WindowClose</animation>
-			<animation effect="fade" time="200">visiblechange</animation>
+			<animation effect="fade" time="200" delay="5000">visible</animation>
+			<animation effect="fade" time="200">hidden</animation>
 		</control>
 
 	</controls>
