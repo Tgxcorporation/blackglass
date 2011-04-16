@@ -95,6 +95,7 @@ namespace BlackGlassEditor
             XmlNodeList name = Buttons.GetElementsByTagName("name");
             XmlNodeList plugin = Buttons.GetElementsByTagName("plugin");
             XmlNodeList fanart = Buttons.GetElementsByTagName("fanart");
+            XmlNodeList fanartLevels = Buttons.GetElementsByTagName("fanartLevels");
             XmlNodeList parameter = Buttons.GetElementsByTagName("parameter");
 
             comboBox100.SelectedItem = findPluginName(Int32.Parse(plugin[0].InnerText));
@@ -167,17 +168,29 @@ namespace BlackGlassEditor
             //if (fanart[2].InnerText == "True") { checkBox102.Checked = true; } else { checkBox102.Visible = false; }
             //if (fanart[3].InnerText == "True") { checkBox103.Checked = true; } else { checkBox103.Visible = false; }
             //if (fanart[4].InnerText == "True") { checkBox104.Checked = true; } else { checkBox104.Visible = false; }
-            if (fanart[5].InnerText == "True") { checkBox105.Checked = true; } else { checkBox105.Visible = false; }
-            if (fanart[6].InnerText == "True") { checkBox106.Checked = true; } else { checkBox106.Visible = false; }
-            if (fanart[7].InnerText == "True") { checkBox107.Checked = true; } else { checkBox107.Visible = false; }
-            if (fanart[8].InnerText == "True") { checkBox108.Checked = true; } else { checkBox108.Visible = false; }
-            if (fanart[9].InnerText == "True") { checkBox109.Checked = true; } else { checkBox109.Visible = false; }
-            if (fanart[10].InnerText == "True") { checkBox110.Checked = true; } else { checkBox110.Visible = false; }
-            if (fanart[11].InnerText == "True") { checkBox111.Checked = true; } else { checkBox111.Visible = false; }
-            if (fanart[12].InnerText == "True") { checkBox112.Checked = true; } else { checkBox112.Visible = false; }
-            if (fanart[13].InnerText == "True") { checkBox113.Checked = true; } else { checkBox113.Visible = false; }
-            if (fanart[14].InnerText == "True") { checkBox114.Checked = true; } else { checkBox114.Visible = false; }
+            if (fanart[5].InnerText == "True") { checkBox105.Checked = true; } else { checkBox105.Checked = false; }
+            if (fanart[6].InnerText == "True") { checkBox106.Checked = true; } else { checkBox106.Checked = false; }
+            if (fanart[7].InnerText == "True") { checkBox107.Checked = true; } else { checkBox107.Checked = false; }
+            if (fanart[8].InnerText == "True") { checkBox108.Checked = true; } else { checkBox108.Checked = false; }
+            if (fanart[9].InnerText == "True") { checkBox109.Checked = true; } else { checkBox109.Checked = false; }
+            if (fanart[10].InnerText == "True") { checkBox110.Checked = true; } else { checkBox110.Checked = false; }
+            if (fanart[11].InnerText == "True") { checkBox111.Checked = true; } else { checkBox111.Checked = false; }
+            if (fanart[12].InnerText == "True") { checkBox112.Checked = true; } else { checkBox112.Checked = false; }
+            if (fanart[13].InnerText == "True") { checkBox113.Checked = true; } else { checkBox113.Checked = false; }
+            if (fanart[14].InnerText == "True") { checkBox114.Checked = true; } else { checkBox114.Checked = false; }
 
+
+            numericUpDown105.Value = decimal.Parse(fanartLevels[5].InnerText);
+            numericUpDown106.Value = decimal.Parse(fanartLevels[6].InnerText);
+            numericUpDown107.Value = decimal.Parse(fanartLevels[7].InnerText);
+            numericUpDown108.Value = decimal.Parse(fanartLevels[8].InnerText);
+            numericUpDown109.Value = decimal.Parse(fanartLevels[9].InnerText);
+            numericUpDown110.Value = decimal.Parse(fanartLevels[10].InnerText);
+            numericUpDown111.Value = decimal.Parse(fanartLevels[11].InnerText);
+            numericUpDown112.Value = decimal.Parse(fanartLevels[12].InnerText);
+            numericUpDown113.Value = decimal.Parse(fanartLevels[13].InnerText);
+            numericUpDown114.Value = decimal.Parse(fanartLevels[14].InnerText);
+ 
 
             String ApplicationPath = Application.StartupPath;
 
@@ -1463,9 +1476,9 @@ namespace BlackGlassEditor
             textBoxid105.Text = findPlugin(comboBox105.Text).ToString();
             textBoxParameter105.Text = "";
             if (comboBox105.Text == "Empty Button") { textBox105.Text = ""; textBoxid105.Text = ""; };
-            checkBox105.Visible = false;
+            //checkBox105.Visible = false;
             checkBox105.Checked = false;
-            if (textBoxid105.Text == "504" || textBoxid105.Text == "501" || textBoxid105.Text == "96742" || textBoxid105.Text == "1" || textBoxid105.Text == "9811" || textBoxid105.Text == "2600" || textBoxid105.Text == "2") { checkBox105.Visible = true; };
+            //if (textBoxid105.Text == "504" || textBoxid105.Text == "501" || textBoxid105.Text == "96742" || textBoxid105.Text == "1" || textBoxid105.Text == "9811" || textBoxid105.Text == "2600" || textBoxid105.Text == "2") { checkBox105.Visible = true; };
         }
         private void comboBox106_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1473,9 +1486,9 @@ namespace BlackGlassEditor
             textBoxid106.Text = findPlugin(comboBox106.Text).ToString();
             textBoxParameter106.Text = "";
             if (comboBox106.Text == "Empty Button") { textBox106.Text = ""; textBoxid106.Text = ""; };
-            checkBox106.Visible = false;
+            //checkBox106.Visible = false;
             checkBox106.Checked = false;
-            if (textBoxid106.Text == "504" || textBoxid106.Text == "501" || textBoxid106.Text == "96742" || textBoxid106.Text == "1" || textBoxid106.Text == "9811" || textBoxid106.Text == "2600" || textBoxid106.Text == "2") { checkBox106.Visible = true; };
+            //if (textBoxid106.Text == "504" || textBoxid106.Text == "501" || textBoxid106.Text == "96742" || textBoxid106.Text == "1" || textBoxid106.Text == "9811" || textBoxid106.Text == "2600" || textBoxid106.Text == "2") { checkBox106.Visible = true; };
         }
         private void comboBox107_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1483,9 +1496,9 @@ namespace BlackGlassEditor
             textBoxid107.Text = findPlugin(comboBox107.Text).ToString();
             textBoxParameter107.Text = "";
             if (comboBox107.Text == "Empty Button") { textBox107.Text = ""; textBoxid107.Text = ""; };
-            checkBox107.Visible = false;
+            //checkBox107.Visible = false;
             checkBox107.Checked = false;
-            if (textBoxid107.Text == "504" || textBoxid107.Text == "501" || textBoxid107.Text == "96742" || textBoxid107.Text == "1" || textBoxid107.Text == "9811" || textBoxid107.Text == "2600" || textBoxid107.Text == "2") { checkBox107.Visible = true; };
+            //if (textBoxid107.Text == "504" || textBoxid107.Text == "501" || textBoxid107.Text == "96742" || textBoxid107.Text == "1" || textBoxid107.Text == "9811" || textBoxid107.Text == "2600" || textBoxid107.Text == "2") { checkBox107.Visible = true; };
         }
         private void comboBox108_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1493,9 +1506,9 @@ namespace BlackGlassEditor
             textBoxid108.Text = findPlugin(comboBox108.Text).ToString();
             textBoxParameter108.Text = "";
             if (comboBox108.Text == "Empty Button") { textBox108.Text = ""; textBoxid108.Text = ""; };
-            checkBox108.Visible = false;
+            //checkBox108.Visible = false;
             checkBox108.Checked = false;
-            if (textBoxid108.Text == "504" || textBoxid108.Text == "501" || textBoxid108.Text == "96742" || textBoxid108.Text == "1" || textBoxid108.Text == "9811" || textBoxid108.Text == "2600" || textBoxid108.Text == "2") { checkBox108.Visible = true; };
+            //if (textBoxid108.Text == "504" || textBoxid108.Text == "501" || textBoxid108.Text == "96742" || textBoxid108.Text == "1" || textBoxid108.Text == "9811" || textBoxid108.Text == "2600" || textBoxid108.Text == "2") { checkBox108.Visible = true; };
         }
         private void comboBox109_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1503,9 +1516,9 @@ namespace BlackGlassEditor
             textBoxid109.Text = findPlugin(comboBox109.Text).ToString();
             textBoxParameter109.Text = "";
             if (comboBox109.Text == "Empty Button") { textBox109.Text = ""; textBoxid109.Text = ""; };
-            checkBox109.Visible = false;
+            //checkBox109.Visible = false;
             checkBox109.Checked = false;
-            if (textBoxid109.Text == "504" || textBoxid109.Text == "501" || textBoxid109.Text == "96742" || textBoxid109.Text == "1" || textBoxid109.Text == "9811" || textBoxid109.Text == "2600" || textBoxid109.Text == "2") { checkBox109.Visible = true; };
+            //if (textBoxid109.Text == "504" || textBoxid109.Text == "501" || textBoxid109.Text == "96742" || textBoxid109.Text == "1" || textBoxid109.Text == "9811" || textBoxid109.Text == "2600" || textBoxid109.Text == "2") { checkBox109.Visible = true; };
         }
         private void comboBox110_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1513,9 +1526,9 @@ namespace BlackGlassEditor
             textBoxid110.Text = findPlugin(comboBox110.Text).ToString();
             textBoxParameter110.Text = "";
             if (comboBox110.Text == "Empty Button") { textBox110.Text = ""; textBoxid110.Text = ""; };
-            checkBox110.Visible = false;
+            //checkBox110.Visible = false;
             checkBox110.Checked = false;
-            if (textBoxid110.Text == "504" || textBoxid110.Text == "501" || textBoxid110.Text == "96742" || textBoxid110.Text == "1" || textBoxid110.Text == "9811" || textBoxid110.Text == "2600" || textBoxid110.Text == "2") { checkBox110.Visible = true; };
+            //if (textBoxid110.Text == "504" || textBoxid110.Text == "501" || textBoxid110.Text == "96742" || textBoxid110.Text == "1" || textBoxid110.Text == "9811" || textBoxid110.Text == "2600" || textBoxid110.Text == "2") { checkBox110.Visible = true; };
         }
         private void comboBox111_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1523,9 +1536,9 @@ namespace BlackGlassEditor
             textBoxid111.Text = findPlugin(comboBox111.Text).ToString();
             textBoxParameter111.Text = "";
             if (comboBox111.Text == "Empty Button") { textBox111.Text = ""; textBoxid111.Text = ""; };
-            checkBox111.Visible = false;
+            //checkBox111.Visible = false;
             checkBox111.Checked = false;
-            if (textBoxid111.Text == "504" || textBoxid111.Text == "501" || textBoxid111.Text == "96742" || textBoxid111.Text == "1" || textBoxid111.Text == "9811" || textBoxid111.Text == "2600" || textBoxid111.Text == "2") { checkBox111.Visible = true; };
+            //if (textBoxid111.Text == "504" || textBoxid111.Text == "501" || textBoxid111.Text == "96742" || textBoxid111.Text == "1" || textBoxid111.Text == "9811" || textBoxid111.Text == "2600" || textBoxid111.Text == "2") { checkBox111.Visible = true; };
         }
         private void comboBox112_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1533,9 +1546,9 @@ namespace BlackGlassEditor
             textBoxid112.Text = findPlugin(comboBox112.Text).ToString();
             textBoxParameter112.Text = "";
             if (comboBox112.Text == "Empty Button") { textBox112.Text = ""; textBoxid112.Text = ""; };
-            checkBox112.Visible = false;
+            //checkBox112.Visible = false;
             checkBox112.Checked = false;
-            if (textBoxid112.Text == "504" || textBoxid112.Text == "501" || textBoxid112.Text == "96742" || textBoxid112.Text == "1" || textBoxid112.Text == "9811" || textBoxid112.Text == "2600" || textBoxid112.Text == "2") { checkBox112.Visible = true; };
+            //if (textBoxid112.Text == "504" || textBoxid112.Text == "501" || textBoxid112.Text == "96742" || textBoxid112.Text == "1" || textBoxid112.Text == "9811" || textBoxid112.Text == "2600" || textBoxid112.Text == "2") { checkBox112.Visible = true; };
         }
         private void comboBox113_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1543,9 +1556,9 @@ namespace BlackGlassEditor
             textBoxid113.Text = findPlugin(comboBox113.Text).ToString();
             textBoxParameter113.Text = "";
             if (comboBox113.Text == "Empty Button") { textBox113.Text = ""; textBoxid113.Text = ""; };
-            checkBox113.Visible = false;
+            //checkBox113.Visible = false;
             checkBox113.Checked = false;
-            if (textBoxid113.Text == "504" || textBoxid113.Text == "501" || textBoxid113.Text == "96742" || textBoxid113.Text == "1" || textBoxid113.Text == "9811" || textBoxid113.Text == "2600" || textBoxid113.Text == "2") { checkBox113.Visible = true; };
+            //if (textBoxid113.Text == "504" || textBoxid113.Text == "501" || textBoxid113.Text == "96742" || textBoxid113.Text == "1" || textBoxid113.Text == "9811" || textBoxid113.Text == "2600" || textBoxid113.Text == "2") { checkBox113.Visible = true; };
         }
         private void comboBox114_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1553,9 +1566,9 @@ namespace BlackGlassEditor
             textBoxid114.Text = findPlugin(comboBox114.Text).ToString();
             textBoxParameter114.Text = "";
             if (comboBox114.Text == "Empty Button") { textBox114.Text = ""; textBoxid114.Text = ""; };
-            checkBox114.Visible = false;
+            //checkBox114.Visible = false;
             checkBox114.Checked = false;
-            if (textBoxid114.Text == "504" || textBoxid114.Text == "501" || textBoxid114.Text == "96742" || textBoxid114.Text == "1" || textBoxid114.Text == "9811" || textBoxid114.Text == "2600" || textBoxid114.Text == "2") { checkBox114.Visible = true; };
+            //if (textBoxid114.Text == "504" || textBoxid114.Text == "501" || textBoxid114.Text == "96742" || textBoxid114.Text == "1" || textBoxid114.Text == "9811" || textBoxid114.Text == "2600" || textBoxid114.Text == "2") { checkBox114.Visible = true; };
         }
 
 
@@ -3260,7 +3273,10 @@ namespace BlackGlassEditor
                 if (textBoxid100.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid100.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
-                textWriter.WriteString("");
+                textWriter.WriteString(SecurityElement.Escape(checkBox100.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown100.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter100.Text));
@@ -3279,7 +3295,10 @@ namespace BlackGlassEditor
                 if (textBoxid101.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid101.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
-                textWriter.WriteString("");
+                textWriter.WriteString(SecurityElement.Escape(checkBox101.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown101.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter101.Text));
@@ -3298,7 +3317,10 @@ namespace BlackGlassEditor
                 if (textBoxid102.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid102.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
-                textWriter.WriteString("");
+                textWriter.WriteString(SecurityElement.Escape(checkBox102.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown102.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter102.Text));
@@ -3317,7 +3339,10 @@ namespace BlackGlassEditor
                 if (textBoxid103.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid103.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
-                textWriter.WriteString("");
+                textWriter.WriteString(SecurityElement.Escape(checkBox103.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown103.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter103.Text));
@@ -3336,7 +3361,10 @@ namespace BlackGlassEditor
                 if (textBoxid104.Text != "") textWriter.WriteString(SecurityElement.Escape(textBoxid104.Text));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
-                textWriter.WriteString("");
+                textWriter.WriteString(SecurityElement.Escape(checkBox104.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown104.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter104.Text));
@@ -3357,6 +3385,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox105.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown105.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter105.Text));
                 textWriter.WriteEndElement();
@@ -3375,6 +3406,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox106.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown106.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter106.Text));
@@ -3395,6 +3429,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox107.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown107.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter107.Text));
                 textWriter.WriteEndElement();
@@ -3413,6 +3450,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox108.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown108.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter108.Text));
@@ -3433,6 +3473,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox109.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown109.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter109.Text));
                 textWriter.WriteEndElement();
@@ -3451,6 +3494,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox110.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown110.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter110.Text));
@@ -3471,6 +3517,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox111.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown111.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter111.Text));
                 textWriter.WriteEndElement();
@@ -3489,6 +3538,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox112.Checked.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown112.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter112.Text));
@@ -3509,6 +3561,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox113.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown113.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter113.Text));
                 textWriter.WriteEndElement();
@@ -3528,6 +3583,9 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox114.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown114.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter114.Text));
                 textWriter.WriteEndElement();
@@ -3545,6 +3603,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString("1");
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString("");
@@ -3566,6 +3627,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartlevels", "");
+                textWriter.WriteString("1");
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString("");
@@ -4315,12 +4379,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox110.Text;
             myOptionDialog.Parameter = textBoxParameter110.Text;
             myOptionDialog.Text = "Button 110 Options";
+            myOptionDialog.Fanart = checkBox110.Checked;
+            myOptionDialog.Levels = numericUpDown110.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid110.Text = myOptionDialog.Id;
                 textBox110.Text = myOptionDialog.Description;
                 textBoxParameter110.Text = myOptionDialog.Parameter;
+                checkBox110.Checked = myOptionDialog.Fanart;
+                numericUpDown110.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4331,12 +4400,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox111.Text;
             myOptionDialog.Parameter = textBoxParameter111.Text;
             myOptionDialog.Text = "Button 111 Options";
+            myOptionDialog.Fanart = checkBox111.Checked;
+            myOptionDialog.Levels = numericUpDown111.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid111.Text = myOptionDialog.Id;
                 textBox111.Text = myOptionDialog.Description;
                 textBoxParameter111.Text = myOptionDialog.Parameter;
+                checkBox111.Checked = myOptionDialog.Fanart;
+                numericUpDown111.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4347,12 +4421,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox112.Text;
             myOptionDialog.Parameter = textBoxParameter112.Text;
             myOptionDialog.Text = "Button 112 Options";
+            myOptionDialog.Fanart = checkBox112.Checked;
+            myOptionDialog.Levels = numericUpDown112.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid112.Text = myOptionDialog.Id;
                 textBox112.Text = myOptionDialog.Description;
                 textBoxParameter112.Text = myOptionDialog.Parameter;
+                checkBox112.Checked = myOptionDialog.Fanart;
+                numericUpDown112.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4362,6 +4441,10 @@ namespace BlackGlassEditor
             myOptionDialog.Id = textBoxid113.Text;
             myOptionDialog.Description = textBox113.Text;
             myOptionDialog.Parameter = textBoxParameter113.Text;
+            myOptionDialog.Fanart = checkBox113.Checked;
+            myOptionDialog.Levels = numericUpDown113.Value;
+            myOptionDialog.ShowFanartControls = true;
+
             myOptionDialog.Text = "Button 113 Options";
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
@@ -4369,6 +4452,8 @@ namespace BlackGlassEditor
                 textBoxid113.Text = myOptionDialog.Id;
                 textBox113.Text = myOptionDialog.Description;
                 textBoxParameter113.Text = myOptionDialog.Parameter;
+                checkBox113.Checked = myOptionDialog.Fanart;
+                numericUpDown113.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4379,12 +4464,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox114.Text;
             myOptionDialog.Parameter = textBoxParameter114.Text;
             myOptionDialog.Text = "Button 114 Options";
+            myOptionDialog.Fanart = checkBox114.Checked;
+            myOptionDialog.Levels = numericUpDown114.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid114.Text = myOptionDialog.Id;
                 textBox114.Text = myOptionDialog.Description;
-                textBoxParameter114.Text = myOptionDialog.Parameter;
+                textBoxParameter114.Text = myOptionDialog.Parameter; 
+                checkBox114.Checked = myOptionDialog.Fanart;
+                numericUpDown114.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4395,12 +4485,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox106.Text;
             myOptionDialog.Parameter = textBoxParameter106.Text;
             myOptionDialog.Text = "Button 106 Options";
+            myOptionDialog.Fanart = checkBox106.Checked;
+            myOptionDialog.Levels = numericUpDown106.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid106.Text = myOptionDialog.Id;
                 textBox106.Text = myOptionDialog.Description;
                 textBoxParameter106.Text = myOptionDialog.Parameter;
+                checkBox106.Checked = myOptionDialog.Fanart;
+                numericUpDown106.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4411,12 +4506,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox107.Text;
             myOptionDialog.Parameter = textBoxParameter107.Text;
             myOptionDialog.Text = "Button 107 Options";
+            myOptionDialog.Fanart = checkBox107.Checked;
+            myOptionDialog.Levels = numericUpDown107.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid107.Text = myOptionDialog.Id;
                 textBox107.Text = myOptionDialog.Description;
                 textBoxParameter107.Text = myOptionDialog.Parameter;
+                checkBox107.Checked = myOptionDialog.Fanart;
+                numericUpDown107.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4426,13 +4526,18 @@ namespace BlackGlassEditor
             myOptionDialog.Id = textBoxid108.Text;
             myOptionDialog.Description = textBox108.Text;
             myOptionDialog.Parameter = textBoxParameter108.Text;
-            myOptionDialog.Text = "Button 108 Options";
-
+            myOptionDialog.Text = "Button 108 Options"; 
+            myOptionDialog.Fanart = checkBox108.Checked;
+            myOptionDialog.Levels = numericUpDown108.Value;
+            myOptionDialog.ShowFanartControls = true;
+            
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid108.Text = myOptionDialog.Id;
                 textBox108.Text = myOptionDialog.Description;
                 textBoxParameter108.Text = myOptionDialog.Parameter;
+                checkBox108.Checked = myOptionDialog.Fanart;
+                numericUpDown108.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4443,12 +4548,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox109.Text;
             myOptionDialog.Parameter = textBoxParameter109.Text;
             myOptionDialog.Text = "Button 109 Options";
+            myOptionDialog.Fanart = checkBox109.Checked;
+            myOptionDialog.Levels = numericUpDown109.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid109.Text = myOptionDialog.Id;
                 textBox109.Text = myOptionDialog.Description;
                 textBoxParameter109.Text = myOptionDialog.Parameter;
+                checkBox109.Checked = myOptionDialog.Fanart;
+                numericUpDown109.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4459,12 +4569,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox105.Text;
             myOptionDialog.Parameter = textBoxParameter105.Text;
             myOptionDialog.Text = "Button 105 Options";
-
+            myOptionDialog.Fanart = checkBox105.Checked;
+            myOptionDialog.Levels = numericUpDown105.Value;
+            myOptionDialog.ShowFanartControls = true;
+            
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid105.Text = myOptionDialog.Id;
                 textBox105.Text = myOptionDialog.Description;
                 textBoxParameter105.Text = myOptionDialog.Parameter;
+                checkBox105.Checked = myOptionDialog.Fanart;
+                numericUpDown105.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4475,12 +4590,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox104.Text;
             myOptionDialog.Parameter = textBoxParameter104.Text;
             myOptionDialog.Text = "Button 104 Options";
+            myOptionDialog.Fanart = checkBox104.Checked;
+            myOptionDialog.Levels = numericUpDown104.Value;
+            myOptionDialog.ShowFanartControls = false;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid104.Text = myOptionDialog.Id;
                 textBox104.Text = myOptionDialog.Description;
                 textBoxParameter104.Text = myOptionDialog.Parameter;
+                checkBox104.Checked = myOptionDialog.Fanart;
+                numericUpDown104.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4491,12 +4611,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox103.Text;
             myOptionDialog.Parameter = textBoxParameter103.Text;
             myOptionDialog.Text = "Button 103 Options";
+            myOptionDialog.Fanart = checkBox103.Checked;
+            myOptionDialog.Levels = numericUpDown103.Value;
+            myOptionDialog.ShowFanartControls = false;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid103.Text = myOptionDialog.Id;
                 textBox103.Text = myOptionDialog.Description;
                 textBoxParameter103.Text = myOptionDialog.Parameter;
+                checkBox103.Checked = myOptionDialog.Fanart;
+                numericUpDown103.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4507,12 +4632,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox102.Text;
             myOptionDialog.Parameter = textBoxParameter102.Text;
             myOptionDialog.Text = "Button 102 Options";
+            myOptionDialog.Fanart = checkBox102.Checked;
+            myOptionDialog.Levels = numericUpDown102.Value;
+            myOptionDialog.ShowFanartControls = false;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid102.Text = myOptionDialog.Id;
                 textBox102.Text = myOptionDialog.Description;
                 textBoxParameter102.Text = myOptionDialog.Parameter;
+                checkBox102.Checked = myOptionDialog.Fanart;
+                numericUpDown102.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4523,12 +4653,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox101.Text;
             myOptionDialog.Parameter = textBoxParameter101.Text;
             myOptionDialog.Text = "Button 101 Options";
+            myOptionDialog.Fanart = checkBox101.Checked;
+            myOptionDialog.Levels = numericUpDown101.Value;
+            myOptionDialog.ShowFanartControls = false;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid101.Text = myOptionDialog.Id;
                 textBox101.Text = myOptionDialog.Description;
                 textBoxParameter101.Text = myOptionDialog.Parameter;
+                checkBox101.Checked = myOptionDialog.Fanart;
+                numericUpDown101.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4539,12 +4674,17 @@ namespace BlackGlassEditor
             myOptionDialog.Description = textBox100.Text;
             myOptionDialog.Parameter = textBoxParameter100.Text;
             myOptionDialog.Text = "Button 100 Options";
+            myOptionDialog.Fanart = checkBox100.Checked;
+            myOptionDialog.Levels = numericUpDown100.Value;
+            myOptionDialog.ShowFanartControls = false;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid100.Text = myOptionDialog.Id;
                 textBox100.Text = myOptionDialog.Description;
                 textBoxParameter100.Text = myOptionDialog.Parameter;
+                checkBox100.Checked = myOptionDialog.Fanart;
+                numericUpDown100.Value = myOptionDialog.Levels;
             }
         }
 

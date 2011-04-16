@@ -74,6 +74,7 @@
             this.buttonSave105f = new System.Windows.Forms.Button();
             this.buttonSave105u = new System.Windows.Forms.Button();
             this.groupBox110 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown110 = new System.Windows.Forms.NumericUpDown();
             this.textBoxParameter110 = new System.Windows.Forms.TextBox();
             this.textBox110 = new System.Windows.Forms.TextBox();
             this.buttonOptions110 = new System.Windows.Forms.Button();
@@ -247,6 +248,25 @@
             this.numericUpDownColor = new System.Windows.Forms.NumericUpDown();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
+            this.numericUpDown111 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown112 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown113 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown114 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown109 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown108 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown107 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown106 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown105 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown100 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox100 = new System.Windows.Forms.CheckBox();
+            this.numericUpDown101 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox101 = new System.Windows.Forms.CheckBox();
+            this.numericUpDown102 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox102 = new System.Windows.Forms.CheckBox();
+            this.numericUpDown103 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox103 = new System.Windows.Forms.CheckBox();
+            this.numericUpDown104 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox104 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox111)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox100)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -255,6 +275,7 @@
             this.groupBox105.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox105)).BeginInit();
             this.groupBox110.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown110)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox110)).BeginInit();
             this.groupBox112.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox112)).BeginInit();
@@ -279,6 +300,20 @@
             this.groupBox104.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox104)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown111)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown112)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown113)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown109)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown108)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown107)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown106)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown105)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown101)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown102)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown103)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown104)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLoad111
@@ -416,6 +451,7 @@
             // 
             // groupBox111
             // 
+            this.groupBox111.Controls.Add(this.numericUpDown111);
             this.groupBox111.Controls.Add(this.buttonOptions111);
             this.groupBox111.Controls.Add(this.textBoxParameter111);
             this.groupBox111.Controls.Add(this.textBox111);
@@ -462,10 +498,11 @@
             this.checkBox111.Location = new System.Drawing.Point(7, 96);
             this.checkBox111.Name = "checkBox111";
             this.checkBox111.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox111.Size = new System.Drawing.Size(126, 21);
+            this.checkBox111.Size = new System.Drawing.Size(84, 21);
             this.checkBox111.TabIndex = 52;
-            this.checkBox111.Text = "Fanart Enabled?";
+            this.checkBox111.Text = "Fanart?";
             this.checkBox111.UseVisualStyleBackColor = false;
+            this.checkBox111.Visible = false;
             // 
             // buttonEmpty111
             // 
@@ -489,7 +526,9 @@
             // groupBox100
             // 
             this.groupBox100.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox100.Controls.Add(this.numericUpDown100);
             this.groupBox100.Controls.Add(this.buttonOptions100);
+            this.groupBox100.Controls.Add(this.checkBox100);
             this.groupBox100.Controls.Add(this.button10);
             this.groupBox100.Controls.Add(this.textBoxParameter100);
             this.groupBox100.Controls.Add(this.button11);
@@ -606,6 +645,7 @@
             // groupBox105
             // 
             this.groupBox105.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox105.Controls.Add(this.numericUpDown105);
             this.groupBox105.Controls.Add(this.buttonOptions105);
             this.groupBox105.Controls.Add(this.textBoxParameter105);
             this.groupBox105.Controls.Add(this.textBox105);
@@ -661,10 +701,11 @@
             this.checkBox105.Location = new System.Drawing.Point(7, 90);
             this.checkBox105.Name = "checkBox105";
             this.checkBox105.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox105.Size = new System.Drawing.Size(126, 21);
+            this.checkBox105.Size = new System.Drawing.Size(84, 21);
             this.checkBox105.TabIndex = 56;
-            this.checkBox105.Text = "Fanart Enabled?";
+            this.checkBox105.Text = "Fanart?";
             this.checkBox105.UseVisualStyleBackColor = false;
+            this.checkBox105.Visible = false;
             // 
             // buttonEmpty105
             // 
@@ -747,6 +788,7 @@
             // 
             // groupBox110
             // 
+            this.groupBox110.Controls.Add(this.numericUpDown110);
             this.groupBox110.Controls.Add(this.textBoxParameter110);
             this.groupBox110.Controls.Add(this.textBox110);
             this.groupBox110.Controls.Add(this.buttonOptions110);
@@ -765,6 +807,29 @@
             this.groupBox110.TabIndex = 27;
             this.groupBox110.TabStop = false;
             this.groupBox110.Text = "Button ID 110";
+            // 
+            // numericUpDown110
+            // 
+            this.numericUpDown110.Location = new System.Drawing.Point(99, 98);
+            this.numericUpDown110.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown110.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown110.Name = "numericUpDown110";
+            this.numericUpDown110.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown110.TabIndex = 54;
+            this.numericUpDown110.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown110.Visible = false;
             // 
             // textBoxParameter110
             // 
@@ -802,10 +867,11 @@
             this.checkBox110.Location = new System.Drawing.Point(7, 96);
             this.checkBox110.Name = "checkBox110";
             this.checkBox110.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox110.Size = new System.Drawing.Size(126, 21);
+            this.checkBox110.Size = new System.Drawing.Size(84, 21);
             this.checkBox110.TabIndex = 51;
-            this.checkBox110.Text = "Fanart Enabled?";
+            this.checkBox110.Text = "Fanart?";
             this.checkBox110.UseVisualStyleBackColor = false;
+            this.checkBox110.Visible = false;
             // 
             // buttonEmpty110
             // 
@@ -889,6 +955,7 @@
             // 
             // groupBox112
             // 
+            this.groupBox112.Controls.Add(this.numericUpDown112);
             this.groupBox112.Controls.Add(this.buttonOptions112);
             this.groupBox112.Controls.Add(this.textBoxParameter112);
             this.groupBox112.Controls.Add(this.textBox112);
@@ -944,10 +1011,11 @@
             this.checkBox112.Location = new System.Drawing.Point(7, 96);
             this.checkBox112.Name = "checkBox112";
             this.checkBox112.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox112.Size = new System.Drawing.Size(126, 21);
+            this.checkBox112.Size = new System.Drawing.Size(84, 21);
             this.checkBox112.TabIndex = 53;
-            this.checkBox112.Text = "Fanart Enabled?";
+            this.checkBox112.Text = "Fanart?";
             this.checkBox112.UseVisualStyleBackColor = false;
+            this.checkBox112.Visible = false;
             // 
             // buttonEmpty112
             // 
@@ -1030,6 +1098,7 @@
             // 
             // groupBox113
             // 
+            this.groupBox113.Controls.Add(this.numericUpDown113);
             this.groupBox113.Controls.Add(this.buttonOptions113);
             this.groupBox113.Controls.Add(this.textBoxParameter113);
             this.groupBox113.Controls.Add(this.textBox113);
@@ -1085,10 +1154,11 @@
             this.checkBox113.Location = new System.Drawing.Point(7, 96);
             this.checkBox113.Name = "checkBox113";
             this.checkBox113.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox113.Size = new System.Drawing.Size(126, 21);
+            this.checkBox113.Size = new System.Drawing.Size(84, 21);
             this.checkBox113.TabIndex = 54;
-            this.checkBox113.Text = "Fanart Enabled?";
+            this.checkBox113.Text = "Fanart?";
             this.checkBox113.UseVisualStyleBackColor = false;
+            this.checkBox113.Visible = false;
             // 
             // buttonEmpty113
             // 
@@ -1171,6 +1241,7 @@
             // 
             // groupBox114
             // 
+            this.groupBox114.Controls.Add(this.numericUpDown114);
             this.groupBox114.Controls.Add(this.buttonOptions114);
             this.groupBox114.Controls.Add(this.textBoxParameter114);
             this.groupBox114.Controls.Add(this.textBox114);
@@ -1227,10 +1298,11 @@
             this.checkBox114.Location = new System.Drawing.Point(7, 96);
             this.checkBox114.Name = "checkBox114";
             this.checkBox114.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox114.Size = new System.Drawing.Size(126, 21);
+            this.checkBox114.Size = new System.Drawing.Size(87, 21);
             this.checkBox114.TabIndex = 55;
-            this.checkBox114.Text = "Fanart Enabled?";
+            this.checkBox114.Text = "Fanart ?";
             this.checkBox114.UseVisualStyleBackColor = false;
+            this.checkBox114.Visible = false;
             // 
             // buttonEmpty114
             // 
@@ -1323,6 +1395,7 @@
             // groupBox106
             // 
             this.groupBox106.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox106.Controls.Add(this.numericUpDown106);
             this.groupBox106.Controls.Add(this.buttonOptions106);
             this.groupBox106.Controls.Add(this.textBoxParameter106);
             this.groupBox106.Controls.Add(this.textBox106);
@@ -1378,10 +1451,11 @@
             this.checkBox106.Location = new System.Drawing.Point(7, 90);
             this.checkBox106.Name = "checkBox106";
             this.checkBox106.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox106.Size = new System.Drawing.Size(126, 21);
+            this.checkBox106.Size = new System.Drawing.Size(84, 21);
             this.checkBox106.TabIndex = 57;
-            this.checkBox106.Text = "Fanart Enabled?";
+            this.checkBox106.Text = "Fanart?";
             this.checkBox106.UseVisualStyleBackColor = false;
+            this.checkBox106.Visible = false;
             // 
             // buttonEmpty106
             // 
@@ -1465,6 +1539,7 @@
             // groupBox107
             // 
             this.groupBox107.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox107.Controls.Add(this.numericUpDown107);
             this.groupBox107.Controls.Add(this.buttonOptions107);
             this.groupBox107.Controls.Add(this.textBoxParameter107);
             this.groupBox107.Controls.Add(this.textBox107);
@@ -1520,10 +1595,11 @@
             this.checkBox107.Location = new System.Drawing.Point(7, 90);
             this.checkBox107.Name = "checkBox107";
             this.checkBox107.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox107.Size = new System.Drawing.Size(126, 21);
+            this.checkBox107.Size = new System.Drawing.Size(84, 21);
             this.checkBox107.TabIndex = 58;
-            this.checkBox107.Text = "Fanart Enabled?";
+            this.checkBox107.Text = "Fanart?";
             this.checkBox107.UseVisualStyleBackColor = false;
+            this.checkBox107.Visible = false;
             // 
             // buttonEmpty107
             // 
@@ -1607,6 +1683,7 @@
             // groupBox108
             // 
             this.groupBox108.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox108.Controls.Add(this.numericUpDown108);
             this.groupBox108.Controls.Add(this.buttonOptions108);
             this.groupBox108.Controls.Add(this.textBoxParameter108);
             this.groupBox108.Controls.Add(this.textBox108);
@@ -1662,10 +1739,11 @@
             this.checkBox108.Location = new System.Drawing.Point(7, 90);
             this.checkBox108.Name = "checkBox108";
             this.checkBox108.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox108.Size = new System.Drawing.Size(126, 21);
+            this.checkBox108.Size = new System.Drawing.Size(84, 21);
             this.checkBox108.TabIndex = 59;
-            this.checkBox108.Text = "Fanart Enabled?";
+            this.checkBox108.Text = "Fanart?";
             this.checkBox108.UseVisualStyleBackColor = false;
+            this.checkBox108.Visible = false;
             // 
             // buttonEmpty108
             // 
@@ -1749,6 +1827,7 @@
             // groupBox109
             // 
             this.groupBox109.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox109.Controls.Add(this.numericUpDown109);
             this.groupBox109.Controls.Add(this.buttonOptions109);
             this.groupBox109.Controls.Add(this.textBoxParameter109);
             this.groupBox109.Controls.Add(this.textBox109);
@@ -1804,10 +1883,11 @@
             this.checkBox109.Location = new System.Drawing.Point(7, 90);
             this.checkBox109.Name = "checkBox109";
             this.checkBox109.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox109.Size = new System.Drawing.Size(126, 21);
+            this.checkBox109.Size = new System.Drawing.Size(84, 21);
             this.checkBox109.TabIndex = 60;
-            this.checkBox109.Text = "Fanart Enabled?";
+            this.checkBox109.Text = "Fanart?";
             this.checkBox109.UseVisualStyleBackColor = false;
+            this.checkBox109.Visible = false;
             // 
             // buttonEmpty109
             // 
@@ -1891,7 +1971,9 @@
             // groupBox101
             // 
             this.groupBox101.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox101.Controls.Add(this.numericUpDown101);
             this.groupBox101.Controls.Add(this.buttonOptions101);
+            this.groupBox101.Controls.Add(this.checkBox101);
             this.groupBox101.Controls.Add(this.button14);
             this.groupBox101.Controls.Add(this.textBoxParameter101);
             this.groupBox101.Controls.Add(this.button15);
@@ -2049,7 +2131,9 @@
             // groupBox102
             // 
             this.groupBox102.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox102.Controls.Add(this.numericUpDown102);
             this.groupBox102.Controls.Add(this.buttonOptions102);
+            this.groupBox102.Controls.Add(this.checkBox102);
             this.groupBox102.Controls.Add(this.button18);
             this.groupBox102.Controls.Add(this.textBoxParameter102);
             this.groupBox102.Controls.Add(this.button19);
@@ -2207,7 +2291,9 @@
             // groupBox103
             // 
             this.groupBox103.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox103.Controls.Add(this.numericUpDown103);
             this.groupBox103.Controls.Add(this.buttonOptions103);
+            this.groupBox103.Controls.Add(this.checkBox103);
             this.groupBox103.Controls.Add(this.button22);
             this.groupBox103.Controls.Add(this.textBoxParameter103);
             this.groupBox103.Controls.Add(this.button23);
@@ -2365,7 +2451,9 @@
             // groupBox104
             // 
             this.groupBox104.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox104.Controls.Add(this.numericUpDown104);
             this.groupBox104.Controls.Add(this.buttonOptions104);
+            this.groupBox104.Controls.Add(this.checkBox104);
             this.groupBox104.Controls.Add(this.button26);
             this.groupBox104.Controls.Add(this.textBoxParameter104);
             this.groupBox104.Controls.Add(this.button27);
@@ -2621,6 +2709,398 @@
             this.label33.TabIndex = 50;
             this.label33.Text = "Hue Offset Value";
             // 
+            // numericUpDown111
+            // 
+            this.numericUpDown111.Location = new System.Drawing.Point(99, 98);
+            this.numericUpDown111.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown111.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown111.Name = "numericUpDown111";
+            this.numericUpDown111.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown111.TabIndex = 55;
+            this.numericUpDown111.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown111.Visible = false;
+            // 
+            // numericUpDown112
+            // 
+            this.numericUpDown112.Location = new System.Drawing.Point(99, 98);
+            this.numericUpDown112.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown112.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown112.Name = "numericUpDown112";
+            this.numericUpDown112.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown112.TabIndex = 56;
+            this.numericUpDown112.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown112.Visible = false;
+            // 
+            // numericUpDown113
+            // 
+            this.numericUpDown113.Location = new System.Drawing.Point(99, 98);
+            this.numericUpDown113.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown113.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown113.Name = "numericUpDown113";
+            this.numericUpDown113.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown113.TabIndex = 57;
+            this.numericUpDown113.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown113.Visible = false;
+            // 
+            // numericUpDown114
+            // 
+            this.numericUpDown114.Location = new System.Drawing.Point(100, 98);
+            this.numericUpDown114.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown114.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown114.Name = "numericUpDown114";
+            this.numericUpDown114.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown114.TabIndex = 56;
+            this.numericUpDown114.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown114.Visible = false;
+            // 
+            // numericUpDown109
+            // 
+            this.numericUpDown109.Location = new System.Drawing.Point(99, 92);
+            this.numericUpDown109.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown109.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown109.Name = "numericUpDown109";
+            this.numericUpDown109.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown109.TabIndex = 59;
+            this.numericUpDown109.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown109.Visible = false;
+            // 
+            // numericUpDown108
+            // 
+            this.numericUpDown108.Location = new System.Drawing.Point(99, 92);
+            this.numericUpDown108.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown108.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown108.Name = "numericUpDown108";
+            this.numericUpDown108.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown108.TabIndex = 61;
+            this.numericUpDown108.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown108.Visible = false;
+            // 
+            // numericUpDown107
+            // 
+            this.numericUpDown107.Location = new System.Drawing.Point(99, 92);
+            this.numericUpDown107.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown107.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown107.Name = "numericUpDown107";
+            this.numericUpDown107.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown107.TabIndex = 60;
+            this.numericUpDown107.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown107.Visible = false;
+            // 
+            // numericUpDown106
+            // 
+            this.numericUpDown106.Location = new System.Drawing.Point(99, 92);
+            this.numericUpDown106.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown106.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown106.Name = "numericUpDown106";
+            this.numericUpDown106.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown106.TabIndex = 58;
+            this.numericUpDown106.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown106.Visible = false;
+            // 
+            // numericUpDown105
+            // 
+            this.numericUpDown105.Location = new System.Drawing.Point(99, 92);
+            this.numericUpDown105.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown105.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown105.Name = "numericUpDown105";
+            this.numericUpDown105.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown105.TabIndex = 62;
+            this.numericUpDown105.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown105.Visible = false;
+            // 
+            // numericUpDown100
+            // 
+            this.numericUpDown100.Location = new System.Drawing.Point(99, 124);
+            this.numericUpDown100.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown100.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown100.Name = "numericUpDown100";
+            this.numericUpDown100.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown100.TabIndex = 64;
+            this.numericUpDown100.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown100.Visible = false;
+            // 
+            // checkBox100
+            // 
+            this.checkBox100.AutoSize = true;
+            this.checkBox100.BackColor = System.Drawing.Color.Black;
+            this.checkBox100.ForeColor = System.Drawing.Color.White;
+            this.checkBox100.Location = new System.Drawing.Point(7, 122);
+            this.checkBox100.Name = "checkBox100";
+            this.checkBox100.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox100.Size = new System.Drawing.Size(84, 21);
+            this.checkBox100.TabIndex = 63;
+            this.checkBox100.Text = "Fanart?";
+            this.checkBox100.UseVisualStyleBackColor = false;
+            this.checkBox100.Visible = false;
+            // 
+            // numericUpDown101
+            // 
+            this.numericUpDown101.Location = new System.Drawing.Point(99, 124);
+            this.numericUpDown101.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown101.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown101.Name = "numericUpDown101";
+            this.numericUpDown101.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown101.TabIndex = 71;
+            this.numericUpDown101.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown101.Visible = false;
+            // 
+            // checkBox101
+            // 
+            this.checkBox101.AutoSize = true;
+            this.checkBox101.BackColor = System.Drawing.Color.Black;
+            this.checkBox101.ForeColor = System.Drawing.Color.White;
+            this.checkBox101.Location = new System.Drawing.Point(7, 122);
+            this.checkBox101.Name = "checkBox101";
+            this.checkBox101.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox101.Size = new System.Drawing.Size(84, 21);
+            this.checkBox101.TabIndex = 70;
+            this.checkBox101.Text = "Fanart?";
+            this.checkBox101.UseVisualStyleBackColor = false;
+            this.checkBox101.Visible = false;
+            // 
+            // numericUpDown102
+            // 
+            this.numericUpDown102.Location = new System.Drawing.Point(99, 124);
+            this.numericUpDown102.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown102.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown102.Name = "numericUpDown102";
+            this.numericUpDown102.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown102.TabIndex = 75;
+            this.numericUpDown102.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown102.Visible = false;
+            // 
+            // checkBox102
+            // 
+            this.checkBox102.AutoSize = true;
+            this.checkBox102.BackColor = System.Drawing.Color.Black;
+            this.checkBox102.ForeColor = System.Drawing.Color.White;
+            this.checkBox102.Location = new System.Drawing.Point(7, 122);
+            this.checkBox102.Name = "checkBox102";
+            this.checkBox102.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox102.Size = new System.Drawing.Size(84, 21);
+            this.checkBox102.TabIndex = 74;
+            this.checkBox102.Text = "Fanart?";
+            this.checkBox102.UseVisualStyleBackColor = false;
+            this.checkBox102.Visible = false;
+            // 
+            // numericUpDown103
+            // 
+            this.numericUpDown103.Location = new System.Drawing.Point(99, 124);
+            this.numericUpDown103.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown103.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown103.Name = "numericUpDown103";
+            this.numericUpDown103.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown103.TabIndex = 79;
+            this.numericUpDown103.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown103.Visible = false;
+            // 
+            // checkBox103
+            // 
+            this.checkBox103.AutoSize = true;
+            this.checkBox103.BackColor = System.Drawing.Color.Black;
+            this.checkBox103.ForeColor = System.Drawing.Color.White;
+            this.checkBox103.Location = new System.Drawing.Point(7, 122);
+            this.checkBox103.Name = "checkBox103";
+            this.checkBox103.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox103.Size = new System.Drawing.Size(84, 21);
+            this.checkBox103.TabIndex = 78;
+            this.checkBox103.Text = "Fanart?";
+            this.checkBox103.UseVisualStyleBackColor = false;
+            this.checkBox103.Visible = false;
+            // 
+            // numericUpDown104
+            // 
+            this.numericUpDown104.Location = new System.Drawing.Point(99, 124);
+            this.numericUpDown104.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown104.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown104.Name = "numericUpDown104";
+            this.numericUpDown104.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown104.TabIndex = 83;
+            this.numericUpDown104.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown104.Visible = false;
+            // 
+            // checkBox104
+            // 
+            this.checkBox104.AutoSize = true;
+            this.checkBox104.BackColor = System.Drawing.Color.Black;
+            this.checkBox104.ForeColor = System.Drawing.Color.White;
+            this.checkBox104.Location = new System.Drawing.Point(7, 122);
+            this.checkBox104.Name = "checkBox104";
+            this.checkBox104.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox104.Size = new System.Drawing.Size(84, 21);
+            this.checkBox104.TabIndex = 82;
+            this.checkBox104.Text = "Fanart?";
+            this.checkBox104.UseVisualStyleBackColor = false;
+            this.checkBox104.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2667,6 +3147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox105)).EndInit();
             this.groupBox110.ResumeLayout(false);
             this.groupBox110.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown110)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox110)).EndInit();
             this.groupBox112.ResumeLayout(false);
             this.groupBox112.PerformLayout();
@@ -2702,6 +3183,20 @@
             this.groupBox104.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox104)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown111)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown112)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown113)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown109)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown108)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown107)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown106)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown105)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown101)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown102)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown103)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown104)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2928,6 +3423,26 @@
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.NumericUpDown numericUpDown110;
+        private System.Windows.Forms.NumericUpDown numericUpDown111;
+        private System.Windows.Forms.NumericUpDown numericUpDown112;
+        private System.Windows.Forms.NumericUpDown numericUpDown113;
+        private System.Windows.Forms.NumericUpDown numericUpDown109;
+        private System.Windows.Forms.NumericUpDown numericUpDown108;
+        private System.Windows.Forms.NumericUpDown numericUpDown107;
+        private System.Windows.Forms.NumericUpDown numericUpDown106;
+        private System.Windows.Forms.NumericUpDown numericUpDown105;
+        private System.Windows.Forms.NumericUpDown numericUpDown114;
+        private System.Windows.Forms.NumericUpDown numericUpDown100;
+        private System.Windows.Forms.CheckBox checkBox100;
+        private System.Windows.Forms.NumericUpDown numericUpDown101;
+        private System.Windows.Forms.CheckBox checkBox101;
+        private System.Windows.Forms.NumericUpDown numericUpDown102;
+        private System.Windows.Forms.CheckBox checkBox102;
+        private System.Windows.Forms.NumericUpDown numericUpDown103;
+        private System.Windows.Forms.CheckBox checkBox103;
+        private System.Windows.Forms.NumericUpDown numericUpDown104;
+        private System.Windows.Forms.CheckBox checkBox104;
     }
 }
 
