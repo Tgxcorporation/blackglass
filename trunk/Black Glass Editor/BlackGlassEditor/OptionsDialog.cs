@@ -55,8 +55,15 @@ namespace BlackGlassEditor
         public Boolean ShowFanartControls
         {
             //get { return mShowFanartControls; }
-            set {
-                if (value == true) { checkBoxFanart.Visible = true; numericUpDownLevels.Visible = true; labelFanart.Visible = true; if (checkBoxFanart.Checked == false) { numericUpDownLevels.Visible = false; labelFanart.Visible = false; } }
+            set
+            {
+                if (value == true)
+                {
+                    checkBoxFanart.Visible = true; numericUpDownLevels.Visible = true; labelFanart.Visible = true;
+                    if (checkBoxFanart.Checked == false) { numericUpDownLevels.Visible = false; labelFanart.Visible = false; }
+                    if (textBoxId.Text != "504" && textBoxId.Text != "501" && textBoxId.Text != "96742" && textBoxId.Text != "1" && textBoxId.Text != "9811" && textBoxId.Text != "2600" && textBoxId.Text != "2")
+                    { checkBoxFanart.Visible = false; numericUpDownLevels.Visible = false; labelFanart.Visible = false; }
+                }
                 if (value == false) { checkBoxFanart.Visible = false; numericUpDownLevels.Visible = false; labelFanart.Visible = false; }
             }
         }
