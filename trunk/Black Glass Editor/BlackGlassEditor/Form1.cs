@@ -3394,63 +3394,63 @@ namespace BlackGlassEditor
             {
                 case "100":
                     labelTextbox = SecurityElement.Escape(textBox100.Text); idTextbox = SecurityElement.Escape(textBoxid100.Text); fanartLevel = Int32.Parse(numericUpDown100.Value.ToString());
-                    delayOpen = "1083"; delayClose = "167"; posX = "100"; posY = "398"; width = "239"; height = "245";
+                    delayOpen = "83"; delayClose = "167"; posX = "100"; posY = "398"; width = "239"; height = "245";
                     break;
                 case "101":
                     labelTextbox = SecurityElement.Escape(textBox101.Text); idTextbox = SecurityElement.Escape(textBoxid101.Text); fanartLevel = Int32.Parse(numericUpDown101.Value.ToString());
-                    delayOpen = "1167"; delayClose = "83"; posX = "336"; posY = "410"; width = "209"; height = "214";
+                    delayOpen = "167"; delayClose = "83"; posX = "336"; posY = "410"; width = "209"; height = "214";
                     break;
                 case "102":
                     labelTextbox = SecurityElement.Escape(textBox102.Text); idTextbox = SecurityElement.Escape(textBoxid102.Text); fanartLevel = Int32.Parse(numericUpDown102.Value.ToString());
-                    delayOpen = "1250"; delayClose = "0"; posX = "542"; posY = "414"; width = "196"; height = "205";
+                    delayOpen = "250"; delayClose = "0"; posX = "542"; posY = "414"; width = "196"; height = "205";
                     break;
                 case "103":
                     labelTextbox = SecurityElement.Escape(textBox103.Text); idTextbox = SecurityElement.Escape(textBoxid103.Text); fanartLevel = Int32.Parse(numericUpDown103.Value.ToString());
-                    delayOpen = "1167"; delayClose = "83"; posX = "736"; posY = "410"; width = "209"; height = "215";
+                    delayOpen = "167"; delayClose = "83"; posX = "736"; posY = "410"; width = "209"; height = "215";
                     break;
                 case "104":
                     labelTextbox = SecurityElement.Escape(textBox104.Text); idTextbox = SecurityElement.Escape(textBoxid104.Text); fanartLevel = Int32.Parse(numericUpDown104.Value.ToString());
-                    delayOpen = "1083"; delayClose = "167"; posX = "941"; posY = "398"; width = "239"; height = "242";
+                    delayOpen = "83"; delayClose = "167"; posX = "941"; posY = "398"; width = "239"; height = "242";
                     break;
                 case "105":
                     labelTextbox = SecurityElement.Escape(textBox105.Text); idTextbox = SecurityElement.Escape(textBoxid105.Text); fanartLevel = Int32.Parse(numericUpDown105.Value.ToString());
-                    delayOpen = "1083"; delayClose = "167"; posX = "124"; posY = "238"; width = "211"; height = "160";
+                    delayOpen = "83"; delayClose = "167"; posX = "124"; posY = "238"; width = "211"; height = "160";
                     break;
                 case "106":
                     labelTextbox = SecurityElement.Escape(textBox106.Text); idTextbox = SecurityElement.Escape(textBoxid106.Text); fanartLevel = Int32.Parse(numericUpDown106.Value.ToString());
-                    delayOpen = "1167"; delayClose = "83"; posX = "352"; posY = "277"; width = "184"; height = "129";
+                    delayOpen = "167"; delayClose = "83"; posX = "352"; posY = "277"; width = "184"; height = "129";
                     break;
                 case "107":
                     labelTextbox = SecurityElement.Escape(textBox107.Text); idTextbox = SecurityElement.Escape(textBoxid107.Text); fanartLevel = Int32.Parse(numericUpDown107.Value.ToString());
-                    delayOpen = "1250"; delayClose = "0"; posX = "554"; posY = "293"; width = "172"; height = "114";
+                    delayOpen = "250"; delayClose = "0"; posX = "554"; posY = "293"; width = "172"; height = "114";
                     break;
                 case "108":
                     labelTextbox = SecurityElement.Escape(textBox108.Text); idTextbox = SecurityElement.Escape(textBoxid108.Text); fanartLevel = Int32.Parse(numericUpDown108.Value.ToString());
-                    delayOpen = "1167"; delayClose = "83"; posX = "744"; posY = "277"; width = "184"; height = "129";
+                    delayOpen = "167"; delayClose = "83"; posX = "744"; posY = "277"; width = "184"; height = "129";
                     break;
                 case "109":
                     labelTextbox = SecurityElement.Escape(textBox109.Text); idTextbox = SecurityElement.Escape(textBoxid109.Text); fanartLevel = Int32.Parse(numericUpDown109.Value.ToString());
-                    delayOpen = "1083"; delayClose = "167"; posX = "945"; posY = "238"; width = "211"; height = "160";
+                    delayOpen = "83"; delayClose = "167"; posX = "945"; posY = "238"; width = "211"; height = "160";
                     break;
                 case "110":
                     labelTextbox = SecurityElement.Escape(textBox110.Text); idTextbox = SecurityElement.Escape(textBoxid110.Text); fanartLevel = Int32.Parse(numericUpDown110.Value.ToString());
-                    delayOpen = "1083"; delayClose = "167"; posX = "137"; posY = "83"; width = "204"; height = "174";
+                    delayOpen = "83"; delayClose = "167"; posX = "137"; posY = "83"; width = "204"; height = "174";
                     break;
                 case "111":
                     labelTextbox = SecurityElement.Escape(textBox111.Text); idTextbox = SecurityElement.Escape(textBoxid111.Text); fanartLevel = Int32.Parse(numericUpDown111.Value.ToString());
-                    delayOpen = "1167"; delayClose = "83"; posX = "358"; posY = "145"; width = "180"; height = "132";
+                    delayOpen = "167"; delayClose = "83"; posX = "358"; posY = "145"; width = "180"; height = "132";
                     break;
                 case "112":
                     labelTextbox = SecurityElement.Escape(textBox112.Text); idTextbox = SecurityElement.Escape(textBoxid112.Text); fanartLevel = Int32.Parse(numericUpDown112.Value.ToString());
-                    delayOpen = "1250"; delayClose = "0"; posX = "556"; posY = "169"; width = "168"; height = "110";
+                    delayOpen = "250"; delayClose = "0"; posX = "556"; posY = "169"; width = "168"; height = "110";
                     break;
                 case "113":
                     labelTextbox = SecurityElement.Escape(textBox113.Text); idTextbox = SecurityElement.Escape(textBoxid113.Text); fanartLevel = Int32.Parse(numericUpDown113.Value.ToString());
-                    delayOpen = "1167"; delayClose = "83"; posX = "742"; posY = "145"; width = "180"; height = "132";
+                    delayOpen = "167"; delayClose = "83"; posX = "742"; posY = "145"; width = "180"; height = "132";
                     break;
                 case "114":
                     labelTextbox = SecurityElement.Escape(textBox114.Text); idTextbox = SecurityElement.Escape(textBoxid114.Text); fanartLevel = Int32.Parse(numericUpDown114.Value.ToString());
-                    delayOpen = "1083"; delayClose = "167"; posX = "939"; posY = "83"; width = "205"; height = "174";
+                    delayOpen = "83"; delayClose = "167"; posX = "939"; posY = "83"; width = "205"; height = "174";
                     break;
             }
 
@@ -3498,7 +3498,7 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""200"" delay=""0"">visible</animation>
+            <animation effect=""fade"" time=""200"" delay=""" + (Int32.Parse(delayOpen)+1000).ToString() + @""">visible</animation>
             <animation effect=""fade"" time=""200"">hidden</animation>
 		</control>
         <control>
@@ -3536,7 +3536,7 @@ namespace BlackGlassEditor
 			<visible>!control.isvisible(" + id + @"01)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""200"" delay=""0"">visible</animation>
+            <animation effect=""fade"" time=""200"" delay=""" + (Int32.Parse(delayOpen) + 1000).ToString() + @""">visible</animation>
             <animation effect=""fade"" time=""200"">hidden</animation>
 		</control>
         <control>
@@ -3608,7 +3608,7 @@ namespace BlackGlassEditor
 			<visible>!control.isvisible(" + id + @"01)+!control.isvisible(" + id + @"02)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""200"" delay=""0"">visible</animation>
+            <animation effect=""fade"" time=""200"" delay=""" + (Int32.Parse(delayOpen) + 1000).ToString() + @""">visible</animation>
             <animation effect=""fade"" time=""200"">hidden</animation>
 		</control>
         <control>
