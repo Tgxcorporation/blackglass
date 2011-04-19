@@ -3,7 +3,7 @@
 	<id>0</id>
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>player.hasmedia</allowoverlay>
-	<disabletopbar>no</disabletopbar>
+	<disabletopbar>yes</disabletopbar>
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<rememberLastFocusedControl>yes</rememberLastFocusedControl>
@@ -95,7 +95,7 @@
 			<height>720</height>
 			<colordiffuse>ffffffff</colordiffuse>
 			<texture>basichome_bg.jpg</texture>
-			<visible>control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)</visible>
+			<visible>[control.hasfocus(16)|control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)|control.hasfocus(20)]</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
 		<control>
@@ -114,13 +114,13 @@
 		<control>
 			<type>image</type>
 			<id>0</id>
-			<posX>-225</posX>
-			<posY>235</posY>
-			<width>250</width>
-			<height>250</height>
+			<posX>-334</posX>
+			<posY>176</posY>
+			<width>370</width>
+			<height>370</height>
 			<texture>bg_basichome_slide.png</texture>
 			<colorDiffuse>a0ffffff</colorDiffuse>
-			<visible>![control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)]</visible>
+			<visible>![control.hasfocus(16)|control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)|control.hasfocus(20)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -131,15 +131,15 @@
 			<defaultcontrol>18</defaultcontrol>
 			<onexit>103</onexit>
 			<buttonX>0</buttonX>
-			<buttonY>240</buttonY>
+			<buttonY>165</buttonY>
 			<buttonwidth>70</buttonwidth>
-			<buttonheight>240</buttonheight>
+			<buttonheight>370</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>60</width>
 			<height>200</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)]</visible>
+			<visible>[control.hasfocus(16)|control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)|control.hasfocus(20)]</visible>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-30,0" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-30,0" reversible="false">hidden</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
@@ -148,10 +148,10 @@
 			<control>
 				<type>image</type>
 				<id>0</id>
-				<posX>-165</posX>
-				<posY>235</posY>
-				<width>250</width>
-				<height>250</height>
+				<posX>-275</posX>
+				<posY>176</posY>
+				<width>370</width>
+				<height>370</height>
 				<texture>bg_basichome_slide.png</texture>
 				<colordiffuse>d0ffffff</colordiffuse>
 			</control>
@@ -161,9 +161,9 @@
 				<control>
 					<description>shutdown button</description>
 					<type>button</type>
-					<id>17</id>
+					<id>16</id>
 					<posX>10</posX>
-					<posY>285</posY>
+					<posY>235</posY>
 					<width>40</width>
 					<height>40</height>
 					<textureFocus>button_shutdown_focus.png</textureFocus>
@@ -174,6 +174,24 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>1111</onup>
+					<ondown>17</ondown>
+				</control>
+				<control>
+					<description>mute button</description>
+					<type>button</type>
+					<id>17</id>
+					<posX>1</posX>
+					<posY>278</posY>
+					<width>58</width>
+					<height>58</height>
+					<textureFocus>volume_mute.png</textureFocus>
+					<textureNoFocus>volume_mute_nf.png</textureNoFocus>
+					<label>200087</label>
+					<textXOff>3000</textXOff>
+					<action>9982</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>16</onup>
 					<ondown>18</ondown>
 				</control>
 				<control>
@@ -195,11 +213,29 @@
 					<ondown>19</ondown>
 				</control>
 				<control>
-					<description>exit button</description>
+					<description>VideoWallpaper button</description>
 					<type>button</type>
 					<id>19</id>
+					<posX>12</posX>
+					<posY>399</posY>
+					<width>36</width>
+					<height>36</height>
+					<textureFocus>button_fullscreen_focus.png</textureFocus>
+					<textureNoFocus>button_fullscreen_nofocus.png</textureNoFocus>
+					<label>Video Wallpaper</label>
+					<textXOff>3000</textXOff>
+					<action>101</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>18</onup>
+					<ondown>20</ondown>
+				</control>
+				<control>
+					<description>exit button</description>
+					<type>button</type>
+					<id>20</id>
 					<posX>10</posX>
-					<posY>400</posY>
+					<posY>455</posY>
 					<width>40</width>
 					<height>40</height>
 					<textureFocus>button_close_focus.png</textureFocus>
@@ -209,7 +245,7 @@
 					<action>97</action>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<onup>18</onup>
+					<onup>19</onup>
 					<ondown>1111</ondown>
 				</control>
 			</control>
