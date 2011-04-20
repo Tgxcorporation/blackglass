@@ -3245,6 +3245,7 @@ namespace BlackGlassEditor
         private String buildButtonXml(String id)
         {
             String labelTextbox = String.Empty;
+            String idTextbox = String.Empty;
             String labelTextboxParameter = String.Empty;
             String delayOpen = String.Empty;
             String delayClose = String.Empty;
@@ -3256,77 +3257,77 @@ namespace BlackGlassEditor
             switch (id)
             {
                 case "100":
-                    labelTextbox = SecurityElement.Escape(textBoxid100.Text);
+                    labelTextbox = SecurityElement.Escape(textBox100.Text); idTextbox = SecurityElement.Escape(textBoxid100.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter100.Text);
                     delayOpen = "83"; delayClose = "167"; posX = "100"; posY = "398"; width = "239"; height = "245";
                     break;
                 case "101":
-                    labelTextbox = SecurityElement.Escape(textBoxid101.Text);
+                    labelTextbox = SecurityElement.Escape(textBox101.Text); idTextbox = SecurityElement.Escape(textBoxid101.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter101.Text);
                     delayOpen = "167"; delayClose = "83"; posX = "336"; posY = "410"; width = "209"; height = "214";
                     break;
                 case "102":
-                    labelTextbox = SecurityElement.Escape(textBoxid102.Text);
+                    labelTextbox = SecurityElement.Escape(textBox102.Text); idTextbox = SecurityElement.Escape(textBoxid102.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter102.Text);
                     delayOpen = "250"; delayClose = "0"; posX = "542"; posY = "414"; width = "196"; height = "205";
                     break;
                 case "103":
-                    labelTextbox = SecurityElement.Escape(textBoxid103.Text);
+                    labelTextbox = SecurityElement.Escape(textBox103.Text); idTextbox = SecurityElement.Escape(textBoxid103.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter103.Text);
                     delayOpen = "167"; delayClose = "83"; posX = "736"; posY = "410"; width = "209"; height = "215";
                     break;
                 case "104":
-                    labelTextbox = SecurityElement.Escape(textBoxid104.Text);
+                    labelTextbox = SecurityElement.Escape(textBox104.Text); idTextbox = SecurityElement.Escape(textBoxid104.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter104.Text);
                     delayOpen = "83"; delayClose = "167"; posX = "941"; posY = "398"; width = "239"; height = "242";
                     break;
                 case "105":
-                    labelTextbox = SecurityElement.Escape(textBoxid105.Text);
+                    labelTextbox = SecurityElement.Escape(textBox105.Text); idTextbox = SecurityElement.Escape(textBoxid105.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter105.Text);
                     delayOpen = "83"; delayClose = "167"; posX = "114"; posY = "231"; width = "232"; height = "183";
                     break;
                 case "106":
-                    labelTextbox = SecurityElement.Escape(textBoxid106.Text);
+                    labelTextbox = SecurityElement.Escape(textBox106.Text); idTextbox = SecurityElement.Escape(textBoxid106.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter106.Text);
                     delayOpen = "167"; delayClose = "83"; posX = "342"; posY = "270"; width = "205"; height = "151";
                     break;
                 case "107":
-                    labelTextbox = SecurityElement.Escape(textBoxid107.Text);
+                    labelTextbox = SecurityElement.Escape(textBox107.Text); idTextbox = SecurityElement.Escape(textBoxid107.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter107.Text);
                     delayOpen = "250"; delayClose = "0"; posX = "543"; posY = "286"; width = "194"; height = "137";
                     break;
                 case "108":
-                    labelTextbox = SecurityElement.Escape(textBoxid108.Text);
+                    labelTextbox = SecurityElement.Escape(textBox108.Text); idTextbox = SecurityElement.Escape(textBoxid108.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter108.Text);
                     delayOpen = "167"; delayClose = "83"; posX = "733"; posY = "270"; width = "205"; height = "151";
                     break;
                 case "109":
-                    labelTextbox = SecurityElement.Escape(textBoxid109.Text);
+                    labelTextbox = SecurityElement.Escape(textBox109.Text); idTextbox = SecurityElement.Escape(textBoxid109.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter109.Text);
                     delayOpen = "83"; delayClose = "167"; posX = "935"; posY = "231"; width = "232"; height = "183";
                     break;
                 case "110":
-                    labelTextbox = SecurityElement.Escape(textBoxid110.Text);
+                    labelTextbox = SecurityElement.Escape(textBox110.Text); idTextbox = SecurityElement.Escape(textBoxid110.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter110.Text);
                     delayOpen = "83"; delayClose = "167"; posX = "126"; posY = "76"; width = "226"; height = "196";
                     break;
                 case "111":
-                    labelTextbox = SecurityElement.Escape(textBoxid111.Text);
+                    labelTextbox = SecurityElement.Escape(textBox111.Text); idTextbox = SecurityElement.Escape(textBoxid111.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter111.Text);
                     delayOpen = "167"; delayClose = "83"; posX = "348"; posY = "138"; width = "201"; height = "154";
                     break;
                 case "112":
-                    labelTextbox = SecurityElement.Escape(textBoxid112.Text);
+                    labelTextbox = SecurityElement.Escape(textBox112.Text); idTextbox = SecurityElement.Escape(textBoxid112.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter112.Text);
                     delayOpen = "250"; delayClose = "0"; posX = "545"; posY = "162"; width = "190"; height = "133";
                     break;
                 case "113":
-                    labelTextbox = SecurityElement.Escape(textBoxid113.Text);
+                    labelTextbox = SecurityElement.Escape(textBox113.Text); idTextbox = SecurityElement.Escape(textBoxid113.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter113.Text);
                     delayOpen = "167"; delayClose = "83"; posX = "731"; posY = "138"; width = "201"; height = "154";
                     break;
                 case "114":
-                    labelTextbox = SecurityElement.Escape(textBoxid114.Text);
+                    labelTextbox = SecurityElement.Escape(textBox114.Text); idTextbox = SecurityElement.Escape(textBoxid114.Text);
                     labelTextboxParameter = SecurityElement.Escape(textBoxParameter114.Text);
                     delayOpen = "83"; delayClose = "167"; posX = "929"; posY = "76"; width = "225"; height = "196";
                     break;
@@ -3344,7 +3345,7 @@ namespace BlackGlassEditor
 			<height>" + height + @"</height>
 			<label>" + labelTextbox + @"</label>
 			<textXOff>3000</textXOff>
-			<hyperlink>" + labelTextbox + @"</hyperlink>
+			<hyperlink>" + idTextbox + @"</hyperlink>
 			<hyperlinkParameter>" + labelTextboxParameter + @"</hyperlinkParameter> 
 			<onleft>" + findButtonLeft(id) + @"</onleft>
 			<onright>" + findButtonRight(id) + @"</onright>
