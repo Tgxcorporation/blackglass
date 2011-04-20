@@ -38,12 +38,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxHover = new System.Windows.Forms.TextBox();
+            this.labelFanart = new System.Windows.Forms.Label();
+            this.numericUpDownLevels = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxFanart = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevels)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOk
             // 
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOk.Location = new System.Drawing.Point(71, 130);
+            this.buttonOk.Location = new System.Drawing.Point(71, 156);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(100, 23);
             this.buttonOk.TabIndex = 0;
@@ -54,7 +58,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(200, 130);
+            this.buttonCancel.Location = new System.Drawing.Point(200, 156);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(100, 23);
             this.buttonCancel.TabIndex = 1;
@@ -125,13 +129,62 @@
             this.textBoxHover.Size = new System.Drawing.Size(254, 20);
             this.textBoxHover.TabIndex = 8;
             // 
+            // labelFanart
+            // 
+            this.labelFanart.AutoSize = true;
+            this.labelFanart.Location = new System.Drawing.Point(195, 120);
+            this.labelFanart.Name = "labelFanart";
+            this.labelFanart.Size = new System.Drawing.Size(71, 13);
+            this.labelFanart.TabIndex = 13;
+            this.labelFanart.Text = "Fanart Levels";
+            // 
+            // numericUpDownLevels
+            // 
+            this.numericUpDownLevels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownLevels.Location = new System.Drawing.Point(140, 116);
+            this.numericUpDownLevels.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDownLevels.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownLevels.Name = "numericUpDownLevels";
+            this.numericUpDownLevels.Size = new System.Drawing.Size(49, 22);
+            this.numericUpDownLevels.TabIndex = 12;
+            this.numericUpDownLevels.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // checkBoxFanart
+            // 
+            this.checkBoxFanart.AutoSize = true;
+            this.checkBoxFanart.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.checkBoxFanart.ForeColor = System.Drawing.Color.White;
+            this.checkBoxFanart.Location = new System.Drawing.Point(12, 116);
+            this.checkBoxFanart.Name = "checkBoxFanart";
+            this.checkBoxFanart.Padding = new System.Windows.Forms.Padding(4, 3, 3, 2);
+            this.checkBoxFanart.Size = new System.Drawing.Size(111, 22);
+            this.checkBoxFanart.TabIndex = 11;
+            this.checkBoxFanart.Text = "Fanart Enabled?";
+            this.checkBoxFanart.UseVisualStyleBackColor = false;
+            this.checkBoxFanart.CheckedChanged += new System.EventHandler(this.checkBoxFanart_CheckedChanged);
+            // 
             // OptionsDialog
             // 
             this.AcceptButton = this.buttonOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(371, 171);
+            this.ClientSize = new System.Drawing.Size(371, 189);
+            this.Controls.Add(this.labelFanart);
+            this.Controls.Add(this.numericUpDownLevels);
+            this.Controls.Add(this.checkBoxFanart);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxHover);
             this.Controls.Add(this.label3);
@@ -145,6 +198,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OptionsDialog";
             this.Text = "Options";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevels)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +216,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxHover;
+        private System.Windows.Forms.Label labelFanart;
+        private System.Windows.Forms.NumericUpDown numericUpDownLevels;
+        private System.Windows.Forms.CheckBox checkBoxFanart;
     }
 }
