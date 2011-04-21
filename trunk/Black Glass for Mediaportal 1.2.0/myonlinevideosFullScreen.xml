@@ -7,6 +7,8 @@
 	<define>#play.progressbar.currentplaytime:#currentplaytime</define>
 	<define>#play.progressbar.currentremaining:#currentremaining</define>
 	<controls>
+		<import>common.play.fullscreen.xml</import>
+
 		<!-- these elements need condition visibility for OSD IS VISIBLE -->
 		<control>
 			<description>background up</description>
@@ -20,6 +22,7 @@
 			<animation effect="fade" time="100">visiblechange</animation>
 			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
 		</control>
+
 		<control>
 			<description>Movie Name</description>
 			<id>36</id>
@@ -44,12 +47,13 @@
 			<type>label</type>
 			<posX>1240</posX>
 			<posY>5</posY>
+			<id>99911</id>
 			<label>#time</label>
 			<font>font14</font>
 			<textcolor>white</textcolor>
 			<align>right</align>
-			<animation effect="fade" time="100">visiblechange</animation>
 			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
 			<shadowAngle>45</shadowAngle>
 			<shadowDistance>1</shadowDistance>
 			<shadowColor>FF000000</shadowColor>
@@ -57,6 +61,7 @@
 		<control>
 			<description>time logo</description>
 			<type>image</type>
+			<id>99912</id>
 			<posX>1248</posX>
 			<posY>6</posY>
 			<width>24</width>
@@ -68,12 +73,13 @@
 		<control>
 			<description>progress bar background</description>
 			<type>image</type>
+			<id>99900</id>
 			<posX>-10</posX>
 			<posY>685</posY>
 			<width>1300</width>
 			<height>36</height>
 			<texture>osd_progress_background.png</texture>
-			<visible>!window.isosdvisible+[window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -85,13 +91,13 @@
 			<width>1304</width>
 			<height>36</height>
 			<label>#play.progressbar.percentage</label>
-			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)]+!window.isvisible(4758)</visible>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
 			<description>TV Progress Bar</description>
 			<type>tvprogress</type>
-			<id>101</id>
+			<id>100</id>
 			<posX>-20</posX>
 			<posY>685</posY>
 			<width>1320</width>
@@ -116,11 +122,14 @@
 			<label2>#TV.Record.percent3</label2>
 			<font>font13</font>
 			<textcolor>FF000000</textcolor>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
+
 		<control>
 			<description>Start Time Info</description>
 			<type>label</type>
+			<id>99901</id>
 			<posX>10</posX>
 			<posY>687</posY>
 			<label>#play.progressbar.currentplaytime</label>
@@ -133,9 +142,11 @@
 			<shadowDistance>1</shadowDistance>
 			<shadowColor>FF000000</shadowColor>
 		</control>
+
 		<control>
 			<description>End Time Info</description>
 			<type>label</type>
+			<id>99902</id>
 			<posX>1270</posX>
 			<posY>687</posY>
 			<label>#play.progressbar.currentremaining</label>
@@ -152,7 +163,7 @@
 		<control>
 			<description>Time</description>
 			<type>label</type>
-			<id>0</id>
+			<id>99921</id>
 			<posX>655</posX>
 			<posY>687</posY>
 			<label>#time</label>
@@ -170,7 +181,7 @@
 		<control>
 			<description>time logo</description>
 			<type>image</type>
-			<id>0</id>
+			<id>99922</id>
 			<posX>665</posX>
 			<posY>690</posY>
 			<width>23</width>
@@ -181,10 +192,12 @@
 			<animation effect="fade" time="100">windowopen</animation>
 			<!-- <animation effect="fade" time="100">windowclose</animation> -->
 		</control>
+
 		<!-- END OF these elements need condition visibility for OSD IS VISIBLE -->
 		<control>
 			<description>pause image</description>
 			<type>image</type>
+			<id>16</id>
 			<posX>565</posX>
 			<posY>685</posY>
 			<width>149</width>
@@ -198,6 +211,7 @@
 		<control>
 			<description>2x image</description>
 			<type>image</type>
+			<id>17</id>
 			<posX>565</posX>
 			<posY>685</posY>
 			<width>149</width>
@@ -211,6 +225,7 @@
 		<control>
 			<description>4x image</description>
 			<type>image</type>
+			<id>18</id>
 			<posX>565</posX>
 			<posY>685</posY>
 			<width>149</width>
@@ -224,6 +239,7 @@
 		<control>
 			<description>8x image</description>
 			<type>image</type>
+			<id>19</id>
 			<posX>565</posX>
 			<posY>685</posY>
 			<width>149</width>
@@ -237,6 +253,7 @@
 		<control>
 			<description>16x image</description>
 			<type>image</type>
+			<id>20</id>
 			<posX>565</posX>
 			<posY>685</posY>
 			<width>149</width>
@@ -250,6 +267,7 @@
 		<control>
 			<description>32x image</description>
 			<type>image</type>
+			<id>21</id>
 			<posX>565</posX>
 			<posY>685</posY>
 			<width>149</width>
@@ -331,7 +349,6 @@
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 
-		<import>common.play.fullscreen.xml</import>
 		<import>common.play.fullscreen.volume.xml</import>
 
 		<control>
