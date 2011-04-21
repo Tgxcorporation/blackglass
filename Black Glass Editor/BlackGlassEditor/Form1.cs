@@ -3499,8 +3499,7 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""200"" delay=""" + (Int32.Parse(delayOpen)+1000).ToString() + @""">visible</animation>
-            <animation effect=""fade"" time=""200"">hidden</animation>
+            <animation effect=""fade"" time=""100"" delay=""1000"">visible</animation>
 		</control>
         <control>
 			<description>" + id + @"00 fanart text</description>
@@ -3514,7 +3513,7 @@ namespace BlackGlassEditor
 			<font>font11</font>
 			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
@@ -3537,8 +3536,8 @@ namespace BlackGlassEditor
 			<visible>!control.isvisible(" + id + @"01)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""200"" delay=""" + (Int32.Parse(delayOpen) + 1000).ToString() + @""">visible</animation>
-            <animation effect=""fade"" time=""200"">hidden</animation>
+            <animation effect=""fade"" time=""100"" delay=""1000"">visible</animation>
+            <animation effect=""fade"" time=""100"">hidden</animation>
 		</control>
         <control>
 			<description>" + id + @"00 fanart text</description>
@@ -3552,7 +3551,7 @@ namespace BlackGlassEditor
 			<font>font11</font>
 			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
@@ -3571,8 +3570,7 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick2 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""200"" delay=""2500"">visible</animation>
-            <animation effect=""fade"" time=""200"">hidden</animation>
+            <animation effect=""fade"" time=""100"" delay=""3000"">visible</animation>
 		</control>
         <control>
 			<description>" + id + @"01 fanart text</description>
@@ -3586,7 +3584,7 @@ namespace BlackGlassEditor
 			<font>font11</font>
 			<visible>control.isvisible(" + id + @"01)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick2 + @"</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
@@ -3609,8 +3607,8 @@ namespace BlackGlassEditor
 			<visible>!control.isvisible(" + id + @"01)+!control.isvisible(" + id + @"02)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""200"" delay=""" + (Int32.Parse(delayOpen) + 1000).ToString() + @""">visible</animation>
-            <animation effect=""fade"" time=""200"">hidden</animation>
+            <animation effect=""fade"" time=""100"" delay=""1000"">visible</animation>
+            <animation effect=""fade"" time=""100"">hidden</animation>
 		</control>
         <control>
 			<description>" + id + @"00 fanart text</description>
@@ -3624,7 +3622,7 @@ namespace BlackGlassEditor
 			<font>font11</font>
 			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
@@ -3643,8 +3641,8 @@ namespace BlackGlassEditor
 			<visible>!control.isvisible(" + id + @"02)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick2 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""200"" delay=""2500"">visible</animation>
-            <animation effect=""fade"" time=""200"">hidden</animation>
+            <animation effect=""fade"" time=""100"" delay=""3000"">visible</animation>
+            <animation effect=""fade"" time=""100"">hidden</animation>
 		</control>
         <control>
 			<description>" + id + @"01 fanart text</description>
@@ -3658,7 +3656,7 @@ namespace BlackGlassEditor
 			<font>font11</font>
 			<visible>control.isvisible(" + id + @"01)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick2 + @"</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
@@ -3677,8 +3675,7 @@ namespace BlackGlassEditor
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick3 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""200"" delay=""5000"">visible</animation>
-            <animation effect=""fade"" time=""200"">hidden</animation>
+            <animation effect=""fade"" time=""100"" delay=""5000"">visible</animation>
 		</control>
         <control>
 			<description>" + id + @"02 fanart text</description>
@@ -3692,7 +3689,7 @@ namespace BlackGlassEditor
 			<font>font11</font>
 			<visible>control.isvisible(" + id + @"02)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick3 + @"</visible>
 			<textcolor>90ffffff</textcolor>
-			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
 		</control>
