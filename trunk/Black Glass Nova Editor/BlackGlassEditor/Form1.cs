@@ -3741,8 +3741,7 @@ namespace BlackGlassEditor
 			<texture>" + texture_name1 + @"</texture>
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
 			<animation effect=""fade"" time=""200"" delay=""1000"">visible</animation>
-            <animation effect=""fade"" time=""200"">hidden</animation>
-		</control>
+ 		</control>
 
         ";
 
@@ -3776,8 +3775,7 @@ namespace BlackGlassEditor
 			<zoom>yes</zoom>
 			<texture>" + texture_name2 + @"</texture>
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick2 + @"</visible>
-			<animation effect=""fade"" time=""200"" delay=""2500"">visible</animation>
-            <animation effect=""fade"" time=""200"">hidden</animation>
+			<animation effect=""fade"" time=""200"" delay=""3000"">visible</animation>
 		</control>
 
         ";
@@ -3812,7 +3810,7 @@ namespace BlackGlassEditor
 			<zoom>yes</zoom>
 			<texture>" + texture_name2 + @"</texture>
 			<visible>!control.isvisible(" + id + @"02)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick2 + @"</visible>
-			<animation effect=""fade"" time=""200"" delay=""2500"">visible</animation>
+			<animation effect=""fade"" time=""200"" delay=""3000"">visible</animation>
             <animation effect=""fade"" time=""200"">hidden</animation>
 		</control>
         <control>
@@ -3829,7 +3827,6 @@ namespace BlackGlassEditor
 			<texture>" + texture_name3+ @"</texture>
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick3 + @"</visible>
 			<animation effect=""fade"" time=""200"" delay=""5000"">visible</animation>
-            <animation effect=""fade"" time=""200"">hidden</animation>
 		</control>
         
         ";
