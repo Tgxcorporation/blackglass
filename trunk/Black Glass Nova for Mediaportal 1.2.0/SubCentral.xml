@@ -84,7 +84,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>!control.hasfocus(912)+![control.hasfocus(202)|control.hasfocus(203)|control.hasfocus(204)|control.hasfocus(205)|control.hasfocus(206)]</visible>
+			<visible>!control.isvisible(103)+![control.hasfocus(202)|control.hasfocus(203)|control.hasfocus(204)|control.hasfocus(205)|control.hasfocus(206)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -103,7 +103,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.hasfocus(912)+[control.hasfocus(202)|control.hasfocus(203)|control.hasfocus(204)|control.hasfocus(205)|control.hasfocus(206)]</visible>
+			<visible>!control.isvisible(103)+[control.hasfocus(202)|control.hasfocus(203)|control.hasfocus(204)|control.hasfocus(205)|control.hasfocus(206)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -121,7 +121,7 @@
 				<texture>bg_left.png</texture>
 				<colorDiffuse>ffffffff</colorDiffuse>
 			</control>
-			<control>
+			<!--<control>
 				<type>image</type>
 				<posX>0</posX>
 				<posY>0</posY>
@@ -130,13 +130,14 @@
 				<texture>bg_left.png</texture>
 				<colorDiffuse>ffffffff</colorDiffuse>
 				<visible>!control.hasfocus(50)+!control.hasfocus(912)</visible>
-			</control>
+			</control>-->
 			<control>
 				<type>label</type>
 				<id>1</id>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#currentmodule</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -152,8 +153,10 @@
 			<control>
 				<description>group element</description>
 				<type>group</type>
+				<!--
 				<animation effect="fade" time="450" reversible="true">visible</animation>
 				<animation effect="fade" time="450" reversible="true">hidden</animation>
+				-->
 				<posX>0</posX>
 				<posY>100</posY>
 				<layout>StackLayout(0, Vertical, true)</layout>
