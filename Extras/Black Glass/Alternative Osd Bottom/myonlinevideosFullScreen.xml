@@ -7,6 +7,8 @@
 	<define>#play.progressbar.currentplaytime:#currentplaytime</define>
 	<define>#play.progressbar.currentremaining:#currentremaining</define>
 	<controls>
+		<import>common.play.fullscreen.xml</import>
+		
 		<!-- these elements need condition visibility for OSD IS VISIBLE -->
 		
 		<control>
@@ -23,7 +25,7 @@
 		</control>
 		<control>
 			<description>progressbar background</description>
-			<id>999</id>
+			<id>99900</id>
 			<type>image</type>
 			<posX>180</posX>
 			<posY>653</posY>
@@ -31,7 +33,7 @@
 			<width>920</width>
 			<texture>bg_osd_small_progress_background.png</texture>
 			<animation effect="fade" time="100">visiblechange</animation>
-			<visible>[window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]+!window.isosdvisible</visible>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 		</control>
 		<control>
 			<description>Movie Name</description>
@@ -49,33 +51,10 @@
 			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
 		</control>
 
-		<!-- <control>
-			<description>progress bar background</description>
-			<type>image</type>
-			<posX>-10</posX>
-			<posY>685</posY>
-			<width>1300</width>
-			<height>36</height>
-			<texture>osd_progress_background.png</texture>
-			<visible>!window.isosdvisible+[window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
-			<animation effect="fade" time="100">visiblechange</animation>
-		</control>
-		<control>
-			<description>progress bar</description>
-			<type>progress</type>
-			<id>1</id>
-			<posX>-12</posX>
-			<posY>-685</posY>
-			<width>1304</width>
-			<height>36</height>
-			<label>#play.progressbar.percentage</label>
-			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)]+!window.isvisible(4758)</visible>
-			<animation effect="fade" time="100">visiblechange</animation>
-		</control> -->
 		<control>
 			<description>TV Progress Bar</description>
 			<type>tvprogress</type>
-			<id>101</id>
+			<id>100</id>
 			<posX>180</posX>
 			<posY>653</posY>
 			<height>29</height>
@@ -100,11 +79,12 @@
 			<label2>#TV.Record.percent3</label2>
 			<font>font13</font>
 			<textcolor>FF000000</textcolor>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
 			<description>Start Time Info</description>
-			<id>999</id>
+			<id>99901</id>
 			<type>label</type>
 			<posX>200</posX>
 			<posY>654</posY>
@@ -120,7 +100,7 @@
 		</control>
 		<control>
 			<description>End Time Info</description>
-			<id>999</id>
+			<id>99902</id>
 			<type>label</type>
 			<posX>1080</posX>
 			<posY>654</posY>
@@ -138,7 +118,7 @@
 		<control>
 			<description>Time</description>
 			<type>fadelabel</type>
-			<id>0</id>
+			<id>99922</id>
 			<posX>1058</posX>
 			<posY>625</posY>
 			<width>300</width>
@@ -153,7 +133,7 @@
 		<control>
 			<description>time logo</description>
 			<type>image</type>
-			<id>0</id>
+			<id>99921</id>
 			<posX>1060</posX>
 			<posY>625</posY>
 			<height>22</height>
@@ -168,7 +148,7 @@
 		<control>
 			<type>image</type>
 			<description>Time icon</description>
-			<id>999</id>
+			<id>99912</id>
 			<posX>654</posX>
 			<posY>657</posY>
 			<height>22</height>
@@ -182,7 +162,7 @@
 		<control>
 			<type>label</type>
 			<description>Time</description>
-			<id>999</id>
+			<id>99911</id>
 			<posX>652</posX>
 			<posY>657</posY>
 			<font>font12</font>
@@ -198,7 +178,7 @@
 		<!-- END OF these elements need condition visibility for OSD IS VISIBLE -->
 		<control>
 			<description>pause image</description>
-			<id>999</id>
+			<id>16</id>
 			<type>image</type>
 			<posX>580</posX>
 			<posY>654</posY>
@@ -213,6 +193,7 @@
 		<control>
 			<description>2x image</description>
 			<type>image</type>
+			<id>17</id>
 			<posX>580</posX>
 			<posY>654</posY>
 			<width>119</width>
@@ -226,6 +207,7 @@
 		<control>
 			<description>4x image</description>
 			<type>image</type>
+			<id>18</id>
 			<posX>580</posX>
 			<posY>654</posY>
 			<width>119</width>
@@ -239,6 +221,7 @@
 		<control>
 			<description>8x image</description>
 			<type>image</type>
+			<id>19</id>
 			<posX>580</posX>
 			<posY>654</posY>
 			<width>119</width>
@@ -252,6 +235,7 @@
 		<control>
 			<description>16x image</description>
 			<type>image</type>
+			<id>20</id>
 			<posX>580</posX>
 			<posY>654</posY>
 			<width>119</width>
@@ -265,6 +249,7 @@
 		<control>
 			<description>32x image</description>
 			<type>image</type>
+			<id>21</id>
 			<posX>580</posX>
 			<posY>654</posY>
 			<width>119</width>
@@ -346,7 +331,7 @@
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 
-		<import>common.play.fullscreen.xml</import>
+		<!-- <import>common.play.fullscreen.xml</import> -->
 		<import>common.play.fullscreen.volume.xml</import>
 
 		<control>
