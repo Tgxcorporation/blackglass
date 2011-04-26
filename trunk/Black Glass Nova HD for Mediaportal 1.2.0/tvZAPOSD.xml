@@ -7,6 +7,7 @@
 	<controls>
 		<control>
 			<description>background</description>
+			<id>999100</id>
 			<type>image</type>
 			<posX>0</posX>
 			<posY>660</posY>
@@ -18,6 +19,7 @@
 		</control>
 		<control>
 			<type>image</type>
+			<id>999101</id>
 			<posX>385</posX>
 			<posY>711</posY>
 			<width>1489</width>
@@ -29,6 +31,7 @@
 		</control>
 		<control>
 			<type>image</type>
+			<id>999102</id>
 			<posX>385</posX>
 			<posY>810</posY>
 			<width>1489</width>
@@ -39,22 +42,23 @@
 			<!-- <animation effect="fade" time="100">windowclose</animation> -->
 		</control>
 		<control>
+			<id>10</id>
 			<description>TV Logo</description>
 			<type>image</type>
-			<id>10</id>
 			<posX>90</posX>
 			<posY>717</posY>
 			<width>283</width>
 			<height>219</height>
 			<texture>#TV.View.thumb</texture>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
 			<animation effect="fade" time="100">windowopen</animation>
 			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
 		</control>
 		<control>
 			<description>Thumb</description>
 			<type>image</type>
+			<id>999103</id>
 			<posX>79</posX>
 			<posY>705</posY>
 			<width>306</width>
@@ -66,6 +70,7 @@
 		<control>
 			<description>progress bar background</description>
 			<type>image</type>
+			<id>999200</id>
 			<posX>-18</posX>
 			<posY>1027</posY>
 			<width>1956</width>
@@ -75,9 +80,9 @@
 			<!-- <animation effect="fade" time="100">windowclose</animation> -->
 		</control>
 		<control>
+			<id>999201</id>
 			<description>progress bar</description>
 			<type>progress</type>
-			<id>1</id>
 			<posX>-18</posX>
 			<posY>1027</posY>
 			<width>1956</width>
@@ -87,9 +92,9 @@
 			<!-- <animation effect="fade" time="100">windowclose</animation> -->
 		</control>
 		<control>
+			<id>101</id>
 			<description>Start Time Info</description>
 			<type>label</type>
-			<id>101</id>
 			<posX>420</posX>
 			<posY>814</posY>
 			<align>left</align>
@@ -167,14 +172,14 @@
 		<control>
 			<description>Time</description>
 			<type>label</type>
-			<id>0</id>
+			<id>999301</id>
+			<visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]</visible>
 			<posX>982</posX>
 			<posY>1030</posY>
 			<label>#time</label>
 			<align>right</align>
 			<font>font16</font>
 			<textcolor>ffffffff</textcolor>
-			<visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<animation effect="fade" time="100">windowopen</animation>
 			<!-- <animation effect="fade" time="100">windowclose</animation> -->
@@ -185,12 +190,13 @@
 		<control>
 			<description>time logo</description>
 			<type>image</type>
+			<id>999302</id>
+			<visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]</visible>
 			<posX>997</posX>
 			<posY>1035</posY>
 			<width>34</width>
 			<height>34</height>
 			<texture>time.png</texture>
-			<visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<animation effect="fade" time="100">windowopen</animation>
 			<!-- <animation effect="fade" time="100">windowclose</animation> -->
