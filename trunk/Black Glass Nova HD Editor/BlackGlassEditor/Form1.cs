@@ -98,7 +98,8 @@ namespace BlackGlassEditor
             XmlNodeList plugin = Buttons.GetElementsByTagName("plugin");
             XmlNodeList hover = Buttons.GetElementsByTagName("hover");
             XmlNodeList fanart = Buttons.GetElementsByTagName("fanart");
-			XmlNodeList parameter = Buttons.GetElementsByTagName("parameter");
+			XmlNodeList fanartLevels = Buttons.GetElementsByTagName("fanartLevels");
+            XmlNodeList parameter = Buttons.GetElementsByTagName("parameter");
 			
 
             comboBox100.SelectedItem = findPluginName(Int32.Parse(plugin[0].InnerText));
@@ -180,22 +181,38 @@ namespace BlackGlassEditor
             textBoxhover113.Text = hover[13].InnerText;
             textBoxhover114.Text = hover[14].InnerText;
 
-            if (fanart[0].InnerText == "True") { checkBox100.Checked = true; } else { checkBox100.Visible = false; }
-            if (fanart[1].InnerText == "True") { checkBox101.Checked = true; } else { checkBox101.Visible = false; }
-            if (fanart[2].InnerText == "True") { checkBox102.Checked = true; } else { checkBox102.Visible = false; }
-            if (fanart[3].InnerText == "True") { checkBox103.Checked = true; } else { checkBox103.Visible = false; }
-            if (fanart[4].InnerText == "True") { checkBox104.Checked = true; } else { checkBox104.Visible = false; }
-            if (fanart[5].InnerText == "True") { checkBox105.Checked = true; } else { checkBox105.Visible = false; }
-            if (fanart[6].InnerText == "True") { checkBox106.Checked = true; } else { checkBox106.Visible = false; }
-            if (fanart[7].InnerText == "True") { checkBox107.Checked = true; } else { checkBox107.Visible = false; }
-            if (fanart[8].InnerText == "True") { checkBox108.Checked = true; } else { checkBox108.Visible = false; }
-            if (fanart[9].InnerText == "True") { checkBox109.Checked = true; } else { checkBox109.Visible = false; }
-            if (fanart[10].InnerText == "True") { checkBox110.Checked = true; } else { checkBox110.Visible = false; }
-            if (fanart[11].InnerText == "True") { checkBox111.Checked = true; } else { checkBox111.Visible = false; }
-            if (fanart[12].InnerText == "True") { checkBox112.Checked = true; } else { checkBox112.Visible = false; }
-            if (fanart[13].InnerText == "True") { checkBox113.Checked = true; } else { checkBox113.Visible = false; }
-            if (fanart[14].InnerText == "True") { checkBox114.Checked = true; } else { checkBox114.Visible = false; }
 
+            if (fanart[0].InnerText == "True") { checkBox100.Checked = true; } else { checkBox100.Checked = false; }
+            if (fanart[1].InnerText == "True") { checkBox101.Checked = true; } else { checkBox101.Checked = false; }
+            if (fanart[2].InnerText == "True") { checkBox102.Checked = true; } else { checkBox102.Checked = false; }
+            if (fanart[3].InnerText == "True") { checkBox103.Checked = true; } else { checkBox103.Checked = false; }
+            if (fanart[4].InnerText == "True") { checkBox104.Checked = true; } else { checkBox104.Checked = false; }
+            if (fanart[5].InnerText == "True") { checkBox105.Checked = true; } else { checkBox105.Checked = false; }
+            if (fanart[6].InnerText == "True") { checkBox106.Checked = true; } else { checkBox106.Checked = false; }
+            if (fanart[7].InnerText == "True") { checkBox107.Checked = true; } else { checkBox107.Checked = false; }
+            if (fanart[8].InnerText == "True") { checkBox108.Checked = true; } else { checkBox108.Checked = false; }
+            if (fanart[9].InnerText == "True") { checkBox109.Checked = true; } else { checkBox109.Checked = false; }
+            if (fanart[10].InnerText == "True") { checkBox110.Checked = true; } else { checkBox110.Checked = false; }
+            if (fanart[11].InnerText == "True") { checkBox111.Checked = true; } else { checkBox111.Checked = false; }
+            if (fanart[12].InnerText == "True") { checkBox112.Checked = true; } else { checkBox112.Checked = false; }
+            if (fanart[13].InnerText == "True") { checkBox113.Checked = true; } else { checkBox113.Checked = false; }
+            if (fanart[14].InnerText == "True") { checkBox114.Checked = true; } else { checkBox114.Checked = false; }
+
+            numericUpDown100.Value = decimal.Parse(fanartLevels[0].InnerText);
+            numericUpDown101.Value = decimal.Parse(fanartLevels[1].InnerText);
+            numericUpDown102.Value = decimal.Parse(fanartLevels[2].InnerText);
+            numericUpDown103.Value = decimal.Parse(fanartLevels[3].InnerText);
+            numericUpDown104.Value = decimal.Parse(fanartLevels[4].InnerText);
+            numericUpDown105.Value = decimal.Parse(fanartLevels[5].InnerText);
+            numericUpDown106.Value = decimal.Parse(fanartLevels[6].InnerText);
+            numericUpDown107.Value = decimal.Parse(fanartLevels[7].InnerText);
+            numericUpDown108.Value = decimal.Parse(fanartLevels[8].InnerText);
+            numericUpDown109.Value = decimal.Parse(fanartLevels[9].InnerText);
+            numericUpDown110.Value = decimal.Parse(fanartLevels[10].InnerText);
+            numericUpDown111.Value = decimal.Parse(fanartLevels[11].InnerText);
+            numericUpDown112.Value = decimal.Parse(fanartLevels[12].InnerText);
+            numericUpDown113.Value = decimal.Parse(fanartLevels[13].InnerText);
+            numericUpDown114.Value = decimal.Parse(fanartLevels[14].InnerText);
 
             String ApplicationPath = Application.StartupPath;
 
@@ -1395,7 +1412,15 @@ namespace BlackGlassEditor
 
             }
 
-            img = Functions.SetImgOpacity(img, 0.70f);
+            if (focus == 1)
+            {
+                myStream = myAssembly.GetManifestResourceStream("BlackGlassEditor.Images.basichome_" + buttonRif + "_contour.png");
+                Bitmap contour = new Bitmap(myStream);
+                gfx.DrawImage(contour, new System.Drawing.Rectangle(0, 0, contour.Width, contour.Height));
+                contour.Dispose();
+            }
+
+            //img = Functions.SetImgOpacity(img, 0.70f);
 
             gfxClip.DrawImage(img, new System.Drawing.Rectangle(0, 0, img.Width, img.Height));
 
@@ -1433,9 +1458,9 @@ namespace BlackGlassEditor
             textBoxParameter100.Text = "";
             textBoxhover100.Text = findPluginHover(Int32.Parse(textBoxid100.Text));
             if (comboBox100.Text == "Empty Button") { textBox100.Text = ""; textBoxid100.Text = ""; };
-            checkBox100.Visible = false;
+            //checkBox100.Visible = false;
             checkBox100.Checked = false;
-            if (textBoxid100.Text == "504" || textBoxid100.Text == "501" || textBoxid100.Text == "96742" || textBoxid100.Text == "1" || textBoxid100.Text == "9811" || textBoxid100.Text == "2600" || textBoxid100.Text == "2") { checkBox100.Visible = true; };
+            if (textBoxid100.Text == "504" || textBoxid100.Text == "501" || textBoxid100.Text == "96742" || textBoxid100.Text == "1" || textBoxid100.Text == "9811" || textBoxid100.Text == "2600" || textBoxid100.Text == "2") { checkBox100.Checked = true; numericUpDown100.Value = 1.0m; };
         }
         private void comboBox101_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1444,9 +1469,9 @@ namespace BlackGlassEditor
             textBoxParameter101.Text = "";
             textBoxhover101.Text = findPluginHover(Int32.Parse(textBoxid101.Text));
             if (comboBox101.Text == "Empty Button") { textBox101.Text = ""; textBoxid101.Text = ""; };
-            checkBox101.Visible = false;
+            //checkBox101.Visible = false;
             checkBox101.Checked = false;
-            if (textBoxid101.Text == "504" || textBoxid101.Text == "501" || textBoxid101.Text == "96742" || textBoxid101.Text == "1" || textBoxid101.Text == "9811" || textBoxid101.Text == "2600" || textBoxid101.Text == "2") { checkBox101.Visible = true; };
+            if (textBoxid101.Text == "504" || textBoxid101.Text == "501" || textBoxid101.Text == "96742" || textBoxid101.Text == "1" || textBoxid101.Text == "9811" || textBoxid101.Text == "2600" || textBoxid101.Text == "2") { checkBox101.Checked = true; numericUpDown101.Value = 1.0m; };
         }
         private void comboBox102_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1455,9 +1480,9 @@ namespace BlackGlassEditor
             textBoxParameter102.Text = "";
             textBoxhover102.Text = findPluginHover(Int32.Parse(textBoxid102.Text));
             if (comboBox102.Text == "Empty Button") { textBox102.Text = ""; textBoxid102.Text = ""; };
-            checkBox102.Visible = false;
+            //checkBox102.Visible = false;
             checkBox102.Checked = false;
-            if (textBoxid102.Text == "504" || textBoxid102.Text == "501" || textBoxid102.Text == "96742" || textBoxid102.Text == "1" || textBoxid102.Text == "9811" || textBoxid102.Text == "2600" || textBoxid102.Text == "2") { checkBox102.Visible = true; };
+            if (textBoxid102.Text == "504" || textBoxid102.Text == "501" || textBoxid102.Text == "96742" || textBoxid102.Text == "1" || textBoxid102.Text == "9811" || textBoxid102.Text == "2600" || textBoxid102.Text == "2") { checkBox102.Checked = true; numericUpDown102.Value = 1.0m; };
         }
         private void comboBox103_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1466,9 +1491,9 @@ namespace BlackGlassEditor
             textBoxParameter103.Text = "";
             textBoxhover103.Text = findPluginHover(Int32.Parse(textBoxid103.Text));
             if (comboBox103.Text == "Empty Button") { textBox103.Text = ""; textBoxid103.Text = ""; };
-            checkBox103.Visible = false;
+            //checkBox103.Visible = false;
             checkBox103.Checked = false;
-            if (textBoxid103.Text == "504" || textBoxid103.Text == "501" || textBoxid103.Text == "96742" || textBoxid103.Text == "1" || textBoxid103.Text == "9811" || textBoxid103.Text == "2600" || textBoxid103.Text == "2") { checkBox103.Visible = true; };
+            if (textBoxid103.Text == "504" || textBoxid103.Text == "501" || textBoxid103.Text == "96742" || textBoxid103.Text == "1" || textBoxid103.Text == "9811" || textBoxid103.Text == "2600" || textBoxid103.Text == "2") { checkBox103.Checked = true; numericUpDown103.Value = 1.0m; };
         }
         private void comboBox104_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1477,9 +1502,9 @@ namespace BlackGlassEditor
             textBoxParameter104.Text = "";
             textBoxhover104.Text = findPluginHover(Int32.Parse(textBoxid104.Text));
             if (comboBox104.Text == "Empty Button") { textBox104.Text = ""; textBoxid104.Text = ""; };
-            checkBox104.Visible = false;
+            //checkBox104.Visible = false;
             checkBox104.Checked = false;
-            if (textBoxid104.Text == "504" || textBoxid104.Text == "501" || textBoxid104.Text == "96742" || textBoxid104.Text == "1" || textBoxid104.Text == "9811" || textBoxid104.Text == "2600" || textBoxid104.Text == "2") { checkBox104.Visible = true; };
+            if (textBoxid104.Text == "504" || textBoxid104.Text == "501" || textBoxid104.Text == "96742" || textBoxid104.Text == "1" || textBoxid104.Text == "9811" || textBoxid104.Text == "2600" || textBoxid104.Text == "2") { checkBox104.Checked = true; numericUpDown104.Value = 1.0m; };
         }
         private void comboBox105_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1488,9 +1513,9 @@ namespace BlackGlassEditor
             textBoxParameter105.Text = "";
             textBoxhover105.Text = findPluginHover(Int32.Parse(textBoxid105.Text));
             if (comboBox105.Text == "Empty Button") { textBox105.Text = ""; textBoxid105.Text = ""; };
-            checkBox105.Visible = false;
+            //checkBox105.Visible = false;
             checkBox105.Checked = false;
-            if (textBoxid105.Text == "504" || textBoxid105.Text == "501" || textBoxid105.Text == "96742" || textBoxid105.Text == "1" || textBoxid105.Text == "9811" || textBoxid105.Text == "2600" || textBoxid105.Text == "2") { checkBox105.Visible = true; };
+            if (textBoxid105.Text == "504" || textBoxid105.Text == "501" || textBoxid105.Text == "96742" || textBoxid105.Text == "1" || textBoxid105.Text == "9811" || textBoxid105.Text == "2600" || textBoxid105.Text == "2") { checkBox105.Checked = true; numericUpDown105.Value = 1.0m; };
         }
         private void comboBox106_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1499,9 +1524,9 @@ namespace BlackGlassEditor
             textBoxParameter106.Text = "";
             textBoxhover106.Text = findPluginHover(Int32.Parse(textBoxid106.Text));
             if (comboBox106.Text == "Empty Button") { textBox106.Text = ""; textBoxid106.Text = ""; };
-            checkBox106.Visible = false;
+            //checkBox106.Visible = false;
             checkBox106.Checked = false;
-            if (textBoxid106.Text == "504" || textBoxid106.Text == "501" || textBoxid106.Text == "96742" || textBoxid106.Text == "1" || textBoxid106.Text == "9811" || textBoxid106.Text == "2600" || textBoxid106.Text == "2") { checkBox106.Visible = true; };
+            if (textBoxid106.Text == "504" || textBoxid106.Text == "501" || textBoxid106.Text == "96742" || textBoxid106.Text == "1" || textBoxid106.Text == "9811" || textBoxid106.Text == "2600" || textBoxid106.Text == "2") { checkBox106.Checked = true; numericUpDown106.Value = 1.0m; };
         }
         private void comboBox107_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1510,9 +1535,9 @@ namespace BlackGlassEditor
             textBoxParameter107.Text = "";
             textBoxhover107.Text = findPluginHover(Int32.Parse(textBoxid107.Text));
             if (comboBox107.Text == "Empty Button") { textBox107.Text = ""; textBoxid107.Text = ""; };
-            checkBox107.Visible = false;
+            //checkBox107.Visible = false;
             checkBox107.Checked = false;
-            if (textBoxid107.Text == "504" || textBoxid107.Text == "501" || textBoxid107.Text == "96742" || textBoxid107.Text == "1" || textBoxid107.Text == "9811" || textBoxid107.Text == "2600" || textBoxid107.Text == "2") { checkBox107.Visible = true; };
+            if (textBoxid107.Text == "504" || textBoxid107.Text == "501" || textBoxid107.Text == "96742" || textBoxid107.Text == "1" || textBoxid107.Text == "9811" || textBoxid107.Text == "2600" || textBoxid107.Text == "2") { checkBox107.Checked = true; numericUpDown107.Value = 1.0m; };
         }
         private void comboBox108_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1521,9 +1546,9 @@ namespace BlackGlassEditor
             textBoxParameter108.Text = "";
             textBoxhover108.Text = findPluginHover(Int32.Parse(textBoxid108.Text));
             if (comboBox108.Text == "Empty Button") { textBox108.Text = ""; textBoxid108.Text = ""; };
-            checkBox108.Visible = false;
+            //checkBox108.Visible = false;
             checkBox108.Checked = false;
-            if (textBoxid108.Text == "504" || textBoxid108.Text == "501" || textBoxid108.Text == "96742" || textBoxid108.Text == "1" || textBoxid108.Text == "9811" || textBoxid108.Text == "2600" || textBoxid108.Text == "2") { checkBox108.Visible = true; };
+            if (textBoxid108.Text == "504" || textBoxid108.Text == "501" || textBoxid108.Text == "96742" || textBoxid108.Text == "1" || textBoxid108.Text == "9811" || textBoxid108.Text == "2600" || textBoxid108.Text == "2") { checkBox108.Checked = true; numericUpDown108.Value = 1.0m; };
         }
         private void comboBox109_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1532,9 +1557,9 @@ namespace BlackGlassEditor
             textBoxParameter109.Text = "";
             textBoxhover109.Text = findPluginHover(Int32.Parse(textBoxid109.Text));
             if (comboBox109.Text == "Empty Button") { textBox109.Text = ""; textBoxid109.Text = ""; };
-            checkBox109.Visible = false;
+            //checkBox109.Visible = false;
             checkBox109.Checked = false;
-            if (textBoxid109.Text == "504" || textBoxid109.Text == "501" || textBoxid109.Text == "96742" || textBoxid109.Text == "1" || textBoxid109.Text == "9811" || textBoxid109.Text == "2600" || textBoxid109.Text == "2") { checkBox109.Visible = true; };
+            if (textBoxid109.Text == "504" || textBoxid109.Text == "501" || textBoxid109.Text == "96742" || textBoxid109.Text == "1" || textBoxid109.Text == "9811" || textBoxid109.Text == "2600" || textBoxid109.Text == "2") { checkBox109.Checked = true; numericUpDown109.Value = 1.0m; };
         }
         private void comboBox110_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1543,9 +1568,9 @@ namespace BlackGlassEditor
             textBoxParameter110.Text = "";
             textBoxhover110.Text = findPluginHover(Int32.Parse(textBoxid110.Text));
             if (comboBox110.Text == "Empty Button") { textBox110.Text = ""; textBoxid110.Text = ""; };
-            checkBox110.Visible = false;
+            //checkBox110.Visible = false;
             checkBox110.Checked = false;
-            if (textBoxid110.Text == "504" || textBoxid110.Text == "501" || textBoxid110.Text == "96742" || textBoxid110.Text == "1" || textBoxid110.Text == "9811" || textBoxid110.Text == "2600" || textBoxid110.Text == "2") { checkBox110.Visible = true; };
+            if (textBoxid110.Text == "504" || textBoxid110.Text == "501" || textBoxid110.Text == "96742" || textBoxid110.Text == "1" || textBoxid110.Text == "9811" || textBoxid110.Text == "2600" || textBoxid110.Text == "2") { checkBox110.Checked = true; numericUpDown110.Value = 1.0m; };
         }
         private void comboBox111_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1553,10 +1578,10 @@ namespace BlackGlassEditor
             textBoxid111.Text = findPlugin(comboBox111.Text).ToString();
             textBoxParameter111.Text = "";
             textBoxhover111.Text = findPluginHover(Int32.Parse(textBoxid111.Text));
-            if (comboBox111.Text == "Empty Button") { textBox111.Text = ""; textBoxid111.Text = ""; }; 
-            checkBox111.Visible = false;
+            if (comboBox111.Text == "Empty Button") { textBox111.Text = ""; textBoxid111.Text = ""; };
+            //checkBox111.Visible = false;
             checkBox111.Checked = false;
-            if (textBoxid111.Text == "504" || textBoxid111.Text == "501" || textBoxid111.Text == "96742" || textBoxid111.Text == "1" || textBoxid111.Text == "9811" || textBoxid111.Text == "2600" || textBoxid111.Text == "2") { checkBox111.Visible = true; };
+            if (textBoxid111.Text == "504" || textBoxid111.Text == "501" || textBoxid111.Text == "96742" || textBoxid111.Text == "1" || textBoxid111.Text == "9811" || textBoxid111.Text == "2600" || textBoxid111.Text == "2") { checkBox111.Checked = true; numericUpDown111.Value = 1.0m; };
         }
         private void comboBox112_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1564,10 +1589,10 @@ namespace BlackGlassEditor
             textBoxid112.Text = findPlugin(comboBox112.Text).ToString();
             textBoxParameter112.Text = "";
             textBoxhover112.Text = findPluginHover(Int32.Parse(textBoxid112.Text));
-            if (comboBox112.Text == "Empty Button") { textBox112.Text = ""; textBoxid112.Text = ""; }; 
-            checkBox112.Visible = false;
+            if (comboBox112.Text == "Empty Button") { textBox112.Text = ""; textBoxid112.Text = ""; };
+            //checkBox112.Visible = false;
             checkBox112.Checked = false;
-            if (textBoxid112.Text == "504" || textBoxid112.Text == "501" || textBoxid112.Text == "96742" || textBoxid112.Text == "1" || textBoxid112.Text == "9811" || textBoxid112.Text == "2600" || textBoxid112.Text == "2") { checkBox112.Visible = true; };
+            if (textBoxid112.Text == "504" || textBoxid112.Text == "501" || textBoxid112.Text == "96742" || textBoxid112.Text == "1" || textBoxid112.Text == "9811" || textBoxid112.Text == "2600" || textBoxid112.Text == "2") { checkBox112.Checked = true; numericUpDown112.Value = 1.0m; };
         }
         private void comboBox113_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1575,10 +1600,10 @@ namespace BlackGlassEditor
             textBoxid113.Text = findPlugin(comboBox113.Text).ToString();
             textBoxParameter113.Text = "";
             textBoxhover113.Text = findPluginHover(Int32.Parse(textBoxid113.Text));
-            if (comboBox113.Text == "Empty Button") { textBox113.Text = ""; textBoxid113.Text = ""; }; 
-            checkBox113.Visible = false;
+            if (comboBox113.Text == "Empty Button") { textBox113.Text = ""; textBoxid113.Text = ""; };
+            //checkBox113.Visible = false;
             checkBox113.Checked = false;
-            if (textBoxid113.Text == "504" || textBoxid113.Text == "501" || textBoxid113.Text == "96742" || textBoxid113.Text == "1" || textBoxid113.Text == "9811" || textBoxid113.Text == "2600" || textBoxid113.Text == "2") { checkBox113.Visible = true; };
+            if (textBoxid113.Text == "504" || textBoxid113.Text == "501" || textBoxid113.Text == "96742" || textBoxid113.Text == "1" || textBoxid113.Text == "9811" || textBoxid113.Text == "2600" || textBoxid113.Text == "2") { checkBox113.Checked = true; numericUpDown113.Value = 1.0m; };
         }
         private void comboBox114_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1586,10 +1611,10 @@ namespace BlackGlassEditor
             textBoxid114.Text = findPlugin(comboBox114.Text).ToString();
             textBoxParameter114.Text = "";
             textBoxhover114.Text = findPluginHover(Int32.Parse(textBoxid114.Text));
-            if (comboBox114.Text == "Empty Button") { textBox114.Text = ""; textBoxid114.Text = ""; }; 
-            checkBox114.Visible = false;
+            if (comboBox114.Text == "Empty Button") { textBox114.Text = ""; textBoxid114.Text = ""; };
+            //checkBox114.Visible = false;
             checkBox114.Checked = false;
-            if (textBoxid114.Text == "504" || textBoxid114.Text == "501" || textBoxid114.Text == "96742" || textBoxid114.Text == "1" || textBoxid114.Text == "9811" || textBoxid114.Text == "2600" || textBoxid114.Text == "2") { checkBox114.Visible = true; };
+            if (textBoxid114.Text == "504" || textBoxid114.Text == "501" || textBoxid114.Text == "96742" || textBoxid114.Text == "1" || textBoxid114.Text == "9811" || textBoxid114.Text == "2600" || textBoxid114.Text == "2") { checkBox114.Checked = true; numericUpDown114.Value = 1.0m; };
         }
 
 
@@ -1763,11 +1788,11 @@ namespace BlackGlassEditor
 
                 // CREA pulsanti
 
-                Bitmap buttonImage100 = new Bitmap(buildImage(pictureBox100.Image, "100", 1));
+                Bitmap buttonImage100 = new Bitmap(buildImage(pictureBox100.Image, "100", 0));
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_100_nofocus.png", pictureBox100.Image, "100", 0);
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_100_focus.png", pictureBox100.Image, "100", 1);
 
-                Bitmap buttonImage101 = new Bitmap(buildImage(pictureBox101.Image, "101", 1));
+                Bitmap buttonImage101 = new Bitmap(buildImage(pictureBox101.Image, "101", 0));
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_101_nofocus.png", pictureBox101.Image, "101", 0);
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_101_focus.png", pictureBox101.Image, "101", 1);
 
@@ -1775,11 +1800,11 @@ namespace BlackGlassEditor
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_102_nofocus.png", pictureBox102.Image, "102", 0);
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_102_focus.png", pictureBox102.Image, "102", 1);
 
-                Bitmap buttonImage103 = new Bitmap(buildImage(pictureBox103.Image, "103", 1));
+                Bitmap buttonImage103 = new Bitmap(buildImage(pictureBox103.Image, "103", 0));
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_103_nofocus.png", pictureBox103.Image, "103", 0);
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_103_focus.png", pictureBox103.Image, "103", 1);
 
-                Bitmap buttonImage104 = new Bitmap(buildImage(pictureBox104.Image, "104", 1));
+                Bitmap buttonImage104 = new Bitmap(buildImage(pictureBox104.Image, "104", 0));
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_104_nofocus.png", pictureBox104.Image, "104", 0);
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_104_focus.png", pictureBox104.Image, "104", 1);
 
@@ -1882,16 +1907,16 @@ namespace BlackGlassEditor
                 gfx.DrawImage(buttonImage102, new System.Drawing.Rectangle(813, 666, buttonImage102.Width, buttonImage102.Height));
                 gfx.DrawImage(buttonImage103, new System.Drawing.Rectangle(1104, 660, buttonImage103.Width, buttonImage103.Height));
                 gfx.DrawImage(buttonImage104, new System.Drawing.Rectangle(1412, 642, buttonImage104.Width, buttonImage104.Height));
-                if (pictureBox105.Image != null) gfx.DrawImage(buttonImage105, new System.Drawing.Rectangle(171, 391, buttonImage105.Width, buttonImage105.Height));
-                if (pictureBox106.Image != null) gfx.DrawImage(buttonImage106, new System.Drawing.Rectangle(513, 450, buttonImage106.Width, buttonImage106.Height));
-                if (pictureBox107.Image != null) gfx.DrawImage(buttonImage107, new System.Drawing.Rectangle(814, 474, buttonImage107.Width, buttonImage107.Height));
-                if (pictureBox108.Image != null) gfx.DrawImage(buttonImage108, new System.Drawing.Rectangle(1099, 450, buttonImage108.Width, buttonImage108.Height));
-                if (pictureBox109.Image != null) gfx.DrawImage(buttonImage109, new System.Drawing.Rectangle(1403, 391, buttonImage109.Width, buttonImage109.Height));
-                if (pictureBox110.Image != null) gfx.DrawImage(buttonImage110, new System.Drawing.Rectangle(189, 159, buttonImage110.Width, buttonImage110.Height));
-                if (pictureBox111.Image != null) gfx.DrawImage(buttonImage111, new System.Drawing.Rectangle(522, 252, buttonImage111.Width, buttonImage111.Height));
-                if (pictureBox112.Image != null) gfx.DrawImage(buttonImage112, new System.Drawing.Rectangle(817, 288, buttonImage112.Width, buttonImage112.Height));
-                if (pictureBox113.Image != null) gfx.DrawImage(buttonImage113, new System.Drawing.Rectangle(1096, 252, buttonImage113.Width, buttonImage113.Height));
-                if (pictureBox114.Image != null) gfx.DrawImage(buttonImage114, new System.Drawing.Rectangle(1394, 159, buttonImage114.Width, buttonImage114.Height));
+                //if (pictureBox105.Image != null) gfx.DrawImage(buttonImage105, new System.Drawing.Rectangle(171, 391, buttonImage105.Width, buttonImage105.Height));
+                //if (pictureBox106.Image != null) gfx.DrawImage(buttonImage106, new System.Drawing.Rectangle(513, 450, buttonImage106.Width, buttonImage106.Height));
+                //if (pictureBox107.Image != null) gfx.DrawImage(buttonImage107, new System.Drawing.Rectangle(814, 474, buttonImage107.Width, buttonImage107.Height));
+                //if (pictureBox108.Image != null) gfx.DrawImage(buttonImage108, new System.Drawing.Rectangle(1099, 450, buttonImage108.Width, buttonImage108.Height));
+                //if (pictureBox109.Image != null) gfx.DrawImage(buttonImage109, new System.Drawing.Rectangle(1403, 391, buttonImage109.Width, buttonImage109.Height));
+                //if (pictureBox110.Image != null) gfx.DrawImage(buttonImage110, new System.Drawing.Rectangle(189, 159, buttonImage110.Width, buttonImage110.Height));
+                //if (pictureBox111.Image != null) gfx.DrawImage(buttonImage111, new System.Drawing.Rectangle(522, 252, buttonImage111.Width, buttonImage111.Height));
+                //if (pictureBox112.Image != null) gfx.DrawImage(buttonImage112, new System.Drawing.Rectangle(817, 288, buttonImage112.Width, buttonImage112.Height));
+                //if (pictureBox113.Image != null) gfx.DrawImage(buttonImage113, new System.Drawing.Rectangle(1096, 252, buttonImage113.Width, buttonImage113.Height));
+                //if (pictureBox114.Image != null) gfx.DrawImage(buttonImage114, new System.Drawing.Rectangle(1394, 159, buttonImage114.Width, buttonImage114.Height));
 
 
 
@@ -2016,119 +2041,6 @@ namespace BlackGlassEditor
             else
             {
 
-                String weather_button = "";
-
-                if (textBoxid100.Text == "2600") weather_button = "100";
-                if (textBoxid101.Text == "2600") weather_button = "101";
-                if (textBoxid102.Text == "2600") weather_button = "102";
-                if (textBoxid103.Text == "2600") weather_button = "103";
-                if (textBoxid104.Text == "2600") weather_button = "104";
-                if (textBoxid105.Text == "2600") weather_button = "105";
-                if (textBoxid106.Text == "2600") weather_button = "106";
-                if (textBoxid107.Text == "2600") weather_button = "107";
-                if (textBoxid108.Text == "2600") weather_button = "108";
-                if (textBoxid109.Text == "2600") weather_button = "109";
-                if (textBoxid110.Text == "2600") weather_button = "110";
-                if (textBoxid111.Text == "2600") weather_button = "111";
-                if (textBoxid112.Text == "2600") weather_button = "112";
-                if (textBoxid113.Text == "2600") weather_button = "113";
-                if (textBoxid114.Text == "2600") weather_button = "114";
-
-
-                String tvseries_button = "";
-
-                if (textBoxid100.Text == "9811") tvseries_button = "100";
-                if (textBoxid101.Text == "9811") tvseries_button = "101";
-                if (textBoxid102.Text == "9811") tvseries_button = "102";
-                if (textBoxid103.Text == "9811") tvseries_button = "103";
-                if (textBoxid104.Text == "9811") tvseries_button = "104";
-                if (textBoxid105.Text == "9811") tvseries_button = "105";
-                if (textBoxid106.Text == "9811") tvseries_button = "106";
-                if (textBoxid107.Text == "9811") tvseries_button = "107";
-                if (textBoxid108.Text == "9811") tvseries_button = "108";
-                if (textBoxid109.Text == "9811") tvseries_button = "109";
-                if (textBoxid110.Text == "9811") tvseries_button = "110";
-                if (textBoxid111.Text == "9811") tvseries_button = "111";
-                if (textBoxid112.Text == "9811") tvseries_button = "112";
-                if (textBoxid113.Text == "9811") tvseries_button = "113";
-                if (textBoxid114.Text == "9811") tvseries_button = "114";
-
-
-                String movingpictures_button = "";
-
-                if (textBoxid100.Text == "96742") movingpictures_button = "100";
-                if (textBoxid101.Text == "96742") movingpictures_button = "101";
-                if (textBoxid102.Text == "96742") movingpictures_button = "102";
-                if (textBoxid103.Text == "96742") movingpictures_button = "103";
-                if (textBoxid104.Text == "96742") movingpictures_button = "104";
-                if (textBoxid105.Text == "96742") movingpictures_button = "105";
-                if (textBoxid106.Text == "96742") movingpictures_button = "106";
-                if (textBoxid107.Text == "96742") movingpictures_button = "107";
-                if (textBoxid108.Text == "96742") movingpictures_button = "108";
-                if (textBoxid109.Text == "96742") movingpictures_button = "109";
-                if (textBoxid110.Text == "96742") movingpictures_button = "110";
-                if (textBoxid111.Text == "96742") movingpictures_button = "111";
-                if (textBoxid112.Text == "96742") movingpictures_button = "112";
-                if (textBoxid113.Text == "96742") movingpictures_button = "113";
-                if (textBoxid114.Text == "96742") movingpictures_button = "114";
-
-
-                String tv_button = "";
-
-                if (textBoxid100.Text == "1") tv_button = "100";
-                if (textBoxid101.Text == "1") tv_button = "101";
-                if (textBoxid102.Text == "1") tv_button = "102";
-                if (textBoxid103.Text == "1") tv_button = "103";
-                if (textBoxid104.Text == "1") tv_button = "104";
-                if (textBoxid105.Text == "1") tv_button = "105";
-                if (textBoxid106.Text == "1") tv_button = "106";
-                if (textBoxid107.Text == "1") tv_button = "107";
-                if (textBoxid108.Text == "1") tv_button = "108";
-                if (textBoxid109.Text == "1") tv_button = "109";
-                if (textBoxid110.Text == "1") tv_button = "110";
-                if (textBoxid111.Text == "1") tv_button = "111";
-                if (textBoxid112.Text == "1") tv_button = "112";
-                if (textBoxid113.Text == "1") tv_button = "113";
-                if (textBoxid114.Text == "1") tv_button = "114";
-
-
-                String pictures_button = "";
-
-                if (textBoxid100.Text == "2") pictures_button = "100";
-                if (textBoxid101.Text == "2") pictures_button = "101";
-                if (textBoxid102.Text == "2") pictures_button = "102";
-                if (textBoxid103.Text == "2") pictures_button = "103";
-                if (textBoxid104.Text == "2") pictures_button = "104";
-                if (textBoxid105.Text == "2") pictures_button = "105";
-                if (textBoxid106.Text == "2") pictures_button = "106";
-                if (textBoxid107.Text == "2") pictures_button = "107";
-                if (textBoxid108.Text == "2") pictures_button = "108";
-                if (textBoxid109.Text == "2") pictures_button = "109";
-                if (textBoxid110.Text == "2") pictures_button = "110";
-                if (textBoxid111.Text == "2") pictures_button = "111";
-                if (textBoxid112.Text == "2") pictures_button = "112";
-                if (textBoxid113.Text == "2") pictures_button = "113";
-                if (textBoxid114.Text == "2") pictures_button = "114";
-
-
-                String music_button = "";
-
-                if (textBoxid100.Text == "501" || textBoxid100.Text == "504") music_button = "100";
-                if (textBoxid101.Text == "501" || textBoxid101.Text == "504") music_button = "101";
-                if (textBoxid102.Text == "501" || textBoxid102.Text == "504") music_button = "102";
-                if (textBoxid103.Text == "501" || textBoxid103.Text == "504") music_button = "103";
-                if (textBoxid104.Text == "501" || textBoxid104.Text == "504") music_button = "104";
-                if (textBoxid105.Text == "501" || textBoxid105.Text == "504") music_button = "105";
-                if (textBoxid106.Text == "501" || textBoxid106.Text == "504") music_button = "106";
-                if (textBoxid107.Text == "501" || textBoxid107.Text == "504") music_button = "107";
-                if (textBoxid108.Text == "501" || textBoxid108.Text == "504") music_button = "108";
-                if (textBoxid109.Text == "501" || textBoxid109.Text == "504") music_button = "109";
-                if (textBoxid110.Text == "501" || textBoxid110.Text == "504") music_button = "110";
-                if (textBoxid111.Text == "501" || textBoxid111.Text == "504") music_button = "111";
-                if (textBoxid112.Text == "501" || textBoxid112.Text == "504") music_button = "112";
-                if (textBoxid113.Text == "501" || textBoxid113.Text == "504") music_button = "113";
-                if (textBoxid114.Text == "501" || textBoxid114.Text == "504") music_button = "114";
-
                 string txt = @"<?xml version=""1.0"" encoding=""utf-8"" standalone=""yes""?>
 <window>
   <controls>
@@ -2181,7 +2093,7 @@ namespace BlackGlassEditor
 			<type>button</type>
 			<id>1002</id>
 			<posX>939</posX>
-            <posY>937</posY>
+            <posY>625</posY>
             <width>42</width>
             <height>36</height>
 			<label>Up</label>
@@ -2240,1096 +2152,30 @@ namespace BlackGlassEditor
 
         ";
 
-                txt = txt + @"<!-- ID 100 -->
-		<control>
-			<description>100 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>150</posX>
-            <posY>642</posY>
-            <width>358</width>
-            <height>367</height>
-            <texture>basichome_100_nofocus.png</texture>
-		</control>
-		<control>
-			<description>100 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>150</posX>
-			<posY>642</posY>
-			<width>358</width>
-			<height>367</height>
-			<texture>basichome_100_focus.png</texture>
-			<visible>control.hasfocus(100)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>100 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox100.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(100)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>100 button</description>
-			<type>button</type>
-			<id>100</id>
-			<posX>150</posX>
-			<posY>642</posY>
-			<width>361</width>
-			<height>367</height>
-			<label>" + SecurityElement.Escape(textBox100.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid100.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter100.Text) + @"</hyperlinkParameter> 
-			<onleft>104</onleft>
-			<onright>101</onright>
-			";
-                if (comboBox105.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<onup>105</onup>";
-                if (comboBox105.SelectedItem.ToString() == findPluginName(0)) txt = txt + @"<onup>18</onup>";
-                txt = txt + @"
-			<ondown>1111</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-        
-        <!-- ID 101 -->
-		<control>
-			<description>101 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>504</posX>
-			<posY>660</posY>
-			<width>313</width>
-			<height>321</height>
-			<texture>basichome_101_nofocus.png</texture>
-		</control>
-		<control>
-			<description>101 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>504</posX>
-			<posY>660</posY>
-			<width>313</width>
-			<height>321</height>
-			<texture>basichome_101_focus.png</texture>
-			<visible>control.hasfocus(101)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>101 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox101.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(101)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>101 button</description>
-			<type>button</type>
-			<id>101</id>
-			<posX>502</posX>
-			<posY>660</posY>
-			<width>316</width>
-			<height>322</height>
-			<label>" + SecurityElement.Escape(textBox101.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid101.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter101.Text) + @"</hyperlinkParameter> 
-			<onleft>100</onleft>
-			<onright>102</onright>
-			";
-                if (comboBox106.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<onup>106</onup>";
-                if (comboBox106.SelectedItem.ToString() == findPluginName(0)) txt = txt + @"<onup>18</onup>";
-                txt = txt + @"
-			<ondown>1111</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-
-		<!-- ID 102 -->
-		<control>
-			<description>102 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>813</posX>
-			<posY>666</posY>
-			<width>294</width>
-			<height>307</height>
-			<texture>basichome_102_nofocus.png</texture>
-		</control>
-		<control>
-			<description>102 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>813</posX>
-			<posY>666</posY>
-			<width>294</width>
-			<height>307</height>
-			<visible>control.hasfocus(102)</visible>
-			<texture>basichome_102_focus.png</texture>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>102 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox102.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(102)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>102 button</description>
-			<type>button</type>
-			<id>102</id>
-			<posX>811</posX>
-			<posY>666</posY>
-			<width>297</width>
-			<height>307</height>
-			<label>" + SecurityElement.Escape(textBox102.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid102.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter102.Text) + @"</hyperlinkParameter> 
-			<onleft>101</onleft>
-			<onright>103</onright>
-			";
-                if (comboBox107.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<onup>107</onup>";
-                if (comboBox107.SelectedItem.ToString() == findPluginName(0)) txt = txt + @"<onup>18</onup>";
-                txt = txt + @"
-			<ondown>1111</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-
-		<!-- ID 103 -->
-		<control>
-			<description>103 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1104</posX>
-			<posY>660</posY>
-			<width>313</width>
-			<height>322</height>
-			<texture>basichome_103_nofocus.png</texture>
-		</control>
-		<control>
-			<description>103 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1104</posX>
-			<posY>660</posY>
-			<width>313</width>
-			<height>322</height>
-			<texture>basichome_103_focus.png</texture>
-			<visible>control.hasfocus(103)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>103 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox103.Text) + @"</label>
-			<font>font37</font> 
-			<align>center</align>
-			<visible>control.hasfocus(103)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>103 button</description>
-			<type>button</type>
-			<id>103</id>
-			<posX>1102</posX>
-			<posY>660</posY>
-			<width>315</width>
-			<height>322</height>
-			<label>" + SecurityElement.Escape(textBox103.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid103.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter103.Text) + @"</hyperlinkParameter> 
-			<onleft>102</onleft>
-			<onright>104</onright>
-			";
-                if (comboBox108.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<onup>108</onup>";
-                if (comboBox108.SelectedItem.ToString() == findPluginName(0)) txt = txt + @"<onup>18</onup>";
-                txt = txt + @"
-			<ondown>1111</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-
-
-		<!-- ID 104 -->
-		<control>
-			<description>104 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1412</posX>
-			<posY>642</posY>
-			<width>358</width>
-			<height>363</height>
-			<texture>basichome_104_nofocus.png</texture>
-		</control>
-		<control>
-			<description>104 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1412</posX>
-			<posY>642</posY>
-			<width>358</width>
-			<height>363</height>
-			<texture>basichome_104_focus.png</texture>
-			<visible>control.hasfocus(104)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>104 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox104.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(104)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>104 button</description>
-			<type>button</type>
-			<id>104</id>
-			<posX>1411</posX>
-			<posY>642</posY>
-			<width>361</width>
-			<height>363</height>
-			<label>" + SecurityElement.Escape(textBox104.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid104.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter104.Text) + @"</hyperlinkParameter> 
-			<onleft>103</onleft>
-			<onright>100</onright>
-			";
-                if (comboBox109.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<onup>109</onup>";
-                if (comboBox109.SelectedItem.ToString() == findPluginName(0)) txt = txt + @"<onup>18</onup>";
-                txt = txt + @"
-			<ondown>1111</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-		";
-
-                if (comboBox105.SelectedItem.ToString() != findPluginName(0))
-                {
-                    txt = txt + @"<!-- ID 105 -->
-		<control>
-			<description>105 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>171</posX>
-			<posY>391</posY>
-			<width>348</width>
-			<height>274</height>
-			<texture>basichome_105_nofocus.png</texture>
-			<visible>control.hasfocus(1000)|control.hasfocus(105)|control.hasfocus(110)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>105 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>171</posX>
-			<posY>391</posY>
-			<width>348</width>
-			<height>274</height>
-			<texture>basichome_105_focus.png</texture>
-			<visible>control.hasfocus(105)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>105 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox105.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(105)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>105 button</description>
-			<type>button</type>
-			<id>105</id>
-			<posX>169</posX>
-			<posY>391</posY>
-			<width>351</width>
-			<height>276</height>
-			<label>" + SecurityElement.Escape(textBox105.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid105.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter105.Text) + @"</hyperlinkParameter> 
-			<onleft>" + findButtonLeft("105") + @"</onleft>
-			<onright>" + findButtonRight("105") + @"</onright>
-            ";
-                    if (comboBox110.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<onup>110</onup>";
-                    if (comboBox110.SelectedItem.ToString() == findPluginName(0)) txt = txt + @"<onup>18</onup>";
-                    txt = txt + @"
-            <ondown>100</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-        ";
-                }
-
-
-                if (comboBox106.SelectedItem.ToString() != findPluginName(0))
-                {
-                    txt = txt + @"<!-- ID 106 -->
-		<control>
-			<description>106 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>513</posX>
-			<posY>450</posY>
-			<width>307</width>
-			<height>226</height>
-			<texture>basichome_106_nofocus.png</texture>
-			<visible>control.hasfocus(1001)|control.hasfocus(106)|control.hasfocus(111)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>106 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>513</posX>
-			<posY>450</posY>
-			<width>307</width>
-			<height>226</height>
-			<visible>control.hasfocus(106)</visible>
-			<texture>basichome_106_focus.png</texture>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>106 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox106.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(106)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>106 button</description>
-			<type>button</type>
-			<id>106</id>
-			<posX>511</posX>
-			<posY>450</posY>
-			<width>310</width>
-			<height>228</height>
-			<label>" + SecurityElement.Escape(textBox106.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid106.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter106.Text) + @"</hyperlinkParameter> 
-			<onleft>" + findButtonLeft("106") + @"</onleft>
-			<onright>" + findButtonRight("106") + @"</onright>
-			";
-                    if (comboBox111.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<onup>111</onup>";
-                    if (comboBox111.SelectedItem.ToString() == findPluginName(0)) txt = txt + @"<onup>18</onup>";
-                    txt = txt + @"
-			<ondown>101</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-        ";
-                }
-
-
-                if (comboBox107.SelectedItem.ToString() != findPluginName(0))
-                {
-                    txt = txt + @"<!-- ID 107 -->
-		<control>
-			<description>107 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>814</posX>
-			<posY>474</posY>
-			<width>291</width>
-			<height>205</height>
-			<texture>basichome_107_nofocus.png</texture>
-			<visible>control.hasfocus(1002)|control.hasfocus(107)|control.hasfocus(112)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>107 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>814</posX>
-			<posY>474</posY>
-			<width>291</width>
-			<height>205</height>
-			<texture>basichome_107_focus.png</texture>
-			<visible>control.hasfocus(107)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>107 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox107.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(107)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>107 button</description>
-			<type>button</type>
-			<id>107</id>
-			<posX>814</posX>
-			<posY>474</posY>
-			<width>292</width>
-			<height>207</height>
-			<label>" + SecurityElement.Escape(textBox107.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid107.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter107.Text) + @"</hyperlinkParameter> 
-			<onleft>" + findButtonLeft("107") + @"</onleft>
-			<onright>" + findButtonRight("107") + @"</onright>
-			";
-                    if (comboBox112.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<onup>112</onup>";
-                    if (comboBox112.SelectedItem.ToString() == findPluginName(0)) txt = txt + @"<onup>18</onup>";
-                    txt = txt + @"
-			<ondown>102</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-        ";
-                }
-
-
-                if (comboBox108.SelectedItem.ToString() != findPluginName(0))
-                {
-                    txt = txt + @"<!-- ID 108 -->
-		<control>
-			<description>108 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1099</posX>
-			<posY>450</posY>
-			<width>307</width>
-			<height>226</height>
-			<texture>basichome_108_nofocus.png</texture>
-			<visible>control.hasfocus(1003)|control.hasfocus(108)|control.hasfocus(113)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>108 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1099</posX>
-			<posY>450</posY>
-			<width>307</width>
-			<height>226</height>
-			<visible>control.hasfocus(108)</visible>
-			<texture>basichome_108_focus.png</texture>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>108 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox108.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(108)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>108 button</description>
-			<type>button</type>
-			<id>108</id>
-			<posX>1099</posX>
-			<posY>450</posY>
-			<width>309</width>
-			<height>228</height>
-			<label>" + SecurityElement.Escape(textBox108.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid108.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter108.Text) + @"</hyperlinkParameter> 
-			<onleft>" + findButtonLeft("108") + @"</onleft>
-			<onright>" + findButtonRight("108") + @"</onright>
-			";
-                    if (comboBox113.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<onup>113</onup>";
-                    if (comboBox113.SelectedItem.ToString() == findPluginName(0)) txt = txt + @"<onup>18</onup>";
-                    txt = txt + @"
-			<ondown>103</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-        ";
-                }
-
-
-
-                if (comboBox109.SelectedItem.ToString() != findPluginName(0))
-                {
-                    txt = txt + @"<!-- ID 109 -->
-		<control>
-			<description>109 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1403</posX>
-			<posY>391</posY>
-			<width>348</width>
-			<height>274</height>
-			<texture>basichome_109_nofocus.png</texture>
-			<visible>control.hasfocus(1004)|control.hasfocus(109)|control.hasfocus(114)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>109 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1403</posX>
-			<posY>391</posY>
-			<width>348</width>
-			<height>274</height>
-			<texture>basichome_109_focus.png</texture>
-			<visible>control.hasfocus(109)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>109 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox109.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(109)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>109 button</description>
-			<type>button</type>
-			<id>109</id>
-			<posX>1402</posX>
-			<posY>391</posY>
-			<width>351</width>
-			<height>276</height>
-			<label>" + SecurityElement.Escape(textBox109.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid109.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter109.Text) + @"</hyperlinkParameter> 
-			<onleft>" + findButtonLeft("109") + @"</onleft>
-			<onright>" + findButtonRight("109") + @"</onright>
-			";
-                    if (comboBox114.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<onup>114</onup>";
-                    if (comboBox114.SelectedItem.ToString() == findPluginName(0)) txt = txt + @"<onup>18</onup>";
-                    txt = txt + @"
-			<ondown>104</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-        ";
-                }
-
-
-
-                if (comboBox110.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<!-- ID 110 -->
-		<control>
-			<description>110 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>189</posX>
-			<posY>159</posY>
-			<width>339</width>
-			<height>294</height>
-			<texture>basichome_110_nofocus.png</texture>
-			<visible>control.hasfocus(1000)|control.hasfocus(105)|control.hasfocus(110)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>110 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>189</posX>
-			<posY>159</posY>
-			<width>339</width>
-			<height>294</height>
-			<texture>basichome_110_focus.png</texture>
-			<visible>control.hasfocus(110)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>110 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox110.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(110)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>110 button</description>
-			<type>button</type>
-			<id>110</id>
-			<posX>189</posX>
-			<posY>159</posY>
-			<width>340</width>
-			<height>295</height>
-			<label>" + SecurityElement.Escape(textBox110.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid110.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter110.Text) + @"</hyperlinkParameter> 
-			<onleft>" + findButtonLeft("110") + @"</onleft>
-			<onright>" + findButtonRight("110") + @"</onright>
-			<onup>18</onup>
-			<ondown>105</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-        ";
-
-
-
-                if (comboBox111.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<!-- ID 111 -->
-		<control>
-			<description>111 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>522</posX>
-			<posY>252</posY>
-			<width>301</width>
-			<height>231</height>
-			<texture>basichome_111_nofocus.png</texture>
-			<visible>control.hasfocus(1001)|control.hasfocus(106)|control.hasfocus(111)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>111 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>522</posX>
-			<posY>252</posY>
-			<width>301</width>
-			<height>231</height>
-			<texture>basichome_111_focus.png</texture>
-			<visible>control.hasfocus(111)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>111 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox111.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(111)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>111 button</description>
-			<type>button</type>
-			<id>111</id>
-			<posX>520</posX>
-			<posY>252</posY>
-			<width>306</width>
-			<height>237</height>
-			<label>" + SecurityElement.Escape(textBox111.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid111.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter111.Text) + @"</hyperlinkParameter> 
-			<onleft>" + findButtonLeft("111") + @"</onleft>
-			<onright>" + findButtonRight("111") + @"</onright>
-			<onup>18</onup>
-			<ondown>106</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-        ";
-
-
-
-                if (comboBox112.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<!-- ID 112 -->
-		<control>
-			<description>112 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>817</posX>
-			<posY>288</posY>
-			<width>285</width>
-			<height>199</height>
-			<texture>basichome_112_nofocus.png</texture>
-			<visible>control.hasfocus(1002)|control.hasfocus(107)|control.hasfocus(112)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>112 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>817</posX>
-			<posY>288</posY>
-			<width>285</width>
-			<height>199</height>
-			<visible>control.hasfocus(112)</visible>
-			<texture>basichome_112_focus.png</texture>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>112 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox112.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(112)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>112 button</description>
-			<type>button</type>
-			<id>112</id>
-			<posX>816</posX>
-			<posY>288</posY>
-			<width>288</width>
-			<height>201</height>
-			<label>" + SecurityElement.Escape(textBox112.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid112.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter112.Text) + @"</hyperlinkParameter> 
-			<onleft>" + findButtonLeft("112") + @"</onleft>
-			<onright>" + findButtonRight("112") + @"</onright>
-			<onup>18</onup>
-			<ondown>107</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-        ";
-
-
-
-                if (comboBox113.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<!-- ID 113 -->
-		<control>
-			<description>113 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1096</posX>
-			<posY>252</posY>
-			<width>301</width>
-			<height>231</height>
-			<texture>basichome_113_nofocus.png</texture>
-			<visible>control.hasfocus(1003)|control.hasfocus(108)|control.hasfocus(113)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>113 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1096</posX>
-			<posY>252</posY>
-			<width>301</width>
-			<height>231</height>
-			<texture>basichome_113_focus.png</texture>
-			<visible>control.hasfocus(113)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>113 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox113.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(113)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>113 button</description>
-			<type>button</type>
-			<id>113</id>
-			<posX>1095</posX>
-			<posY>252</posY>
-			<width>304</width>
-			<height>232</height>
-			<label>" + SecurityElement.Escape(textBox113.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid113.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter113.Text) + @"</hyperlinkParameter> 
-			<onleft>" + findButtonLeft("113") + @"</onleft>
-			<onright>" + findButtonRight("113") + @"</onright>
-			<onup>18</onup>
-			<ondown>108</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-        ";
-
-
-
-                if (comboBox114.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<!-- ID 114 -->
-		<control>
-			<description>114 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1394</posX>
-			<posY>159</posY>
-			<width>337</width>
-			<height>294</height>
-			<texture>basichome_114_nofocus.png</texture>
-			<visible>control.hasfocus(1004)|control.hasfocus(109)|control.hasfocus(114)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>114 hover image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>1394</posX>
-			<posY>159</posY>
-			<width>337</width>
-			<height>294</height>
-			<texture>basichome_114_focus.png</texture>
-			<visible>control.hasfocus(114)</visible>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>114 hover label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>937</posY>
-			<width>1920</width>
-			<label>" + SecurityElement.Escape(textBox114.Text) + @"</label>
-			<font>font37</font>
-			<align>center</align>
-			<visible>control.hasfocus(114)</visible>
-			<textcolor>ffffffff</textcolor>
-			<animation effect=""fade"" time=""150"">VisibleChange</animation>
-		</control>
-		<control>
-			<description>114 button</description>
-			<type>button</type>
-			<id>114</id>
-			<posX>1393</posX>
-			<posY>159</posY>
-			<width>340</width>
-			<height>295</height>
-			<label>" + SecurityElement.Escape(textBox114.Text) + @"</label>
-			<textXOff>3000</textXOff>
-			<hyperlink>" + SecurityElement.Escape(textBoxid114.Text) + @"</hyperlink>
-			<hyperlinkParameter>" + SecurityElement.Escape(textBoxParameter114.Text) + @"</hyperlinkParameter> 
-			<onleft>" + findButtonLeft("114") + @"</onleft>
-			<onright>" + findButtonRight("114") + @"</onright>
-			<onup>18</onup>
-			<ondown>109</ondown>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-		</control>
-
-        ";
-
-                txt = txt + @"<!-- SUBTITLES -->";
-
-                if (weather_button != "") txt = txt
-                 + @"
-        <control>
-			<description>Weather Description</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>999</posY>
-			<width>1920</width>
-			<label>#infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location</label>
-			<align>center</align>
-			<font>font11</font>
-			<visible>plugin.isenabled(InfoService)+control.hasfocus(" + weather_button + @")+!string.equals(#infoservice.weather.today.condition,)</visible>
-			<textcolor>90ffffff</textcolor>
-            <animation effect=""fade"" time=""150"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>";
-
-
-
-                if (tvseries_button != "") txt = txt
-                + @"
-        <control>
-			<description>TVSeries updates</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>999</posY>
-			<width>1920</width>
-			<label>#fanarthandler.tvseries.latest1.dateAdded:     #fanarthandler.tvseries.latest1.serieName     #fanarthandler.tvseries.latest1.seasonIndexx#fanarthandler.tvseries.latest1.episodeIndex - #fanarthandler.tvseries.latest1.episodeName</label>
-			<align>center</align>
-			<font>font11</font>
-			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + tvseries_button + @")+plugin.isenabled(MP-TV Series)+!string.equals(#fanarthandler.tvseries.latest1.episodeName,)</visible>
-			<textcolor>90ffffff</textcolor>
-            <animation effect=""fade"" time=""150"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>";
-
-                if (movingpictures_button != "") txt = txt
-                 + @"
-        <control>
-			<description>Moving Pictures updates</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>999</posY>
-			<width>1920</width>
-			<label>#fanarthandler.movingpicture.latest1.dateAdded:     #fanarthandler.movingpicture.latest1.title     #fanarthandler.movingpicture.latest1.genre     #fanarthandler.movingpicture.latest1.year</label>
-			<align>center</align>
-			<font>font11</font>
-			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Moving Pictures)+!string.equals(#fanarthandler.movingpicture.latest1.title,)</visible>
-			<textcolor>90ffffff</textcolor>
-            <animation effect=""fade"" time=""150"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>";
-
-                if (tv_button != "") txt = txt
-                + @"
-        <control>
-			<description>TV updates</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>999</posY>
-			<width>1920</width>
-			<label>#fanarthandler.tvrecordings.latest1.dateAdded:     #fanarthandler.tvrecordings.latest1.title     #fanarthandler.tvrecordings.latest1.genre</label>
-			<align>center</align>
-			<font>font11</font>
-			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + tv_button + @")+plugin.isenabled(TV)+!string.equals(#fanarthandler.tvrecordings.latest1.title,)</visible>
-			<textcolor>90ffffff</textcolor>
-            <animation effect=""fade"" time=""150"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>";
-
-                if (pictures_button != "") txt = txt
-                + @"
-        <control>
-			<description>Pictures updates</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>999</posY>
-			<width>1920</width>
-			<label>#fanarthandler.picture.latest1.dateAdded:     #fanarthandler.picture.latest1.filename</label>
-			<align>center</align>
-			<font>font11</font>
-			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + pictures_button + @")+plugin.isenabled(Pictures)+!string.equals(#fanarthandler.picture.latest1.filename,)</visible>
-			<textcolor>90ffffff</textcolor>
-            <animation effect=""fade"" time=""150"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>";
-
-                if (music_button != "") txt = txt
-                + @"
-        <control>
-			<description>Music updates</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>999</posY>
-			<width>1920</width>
-			<label>#fanarthandler.music.latest1.dateAdded:     #fanarthandler.music.latest1.artist     #fanarthandler.music.latest1.album</label>
-			<align>center</align>
-			<font>font11</font>
-			<visible>plugin.isenabled(Fanart Handler)+control.hasfocus(" + music_button + @")+plugin.isenabled(Music)+!string.equals(#fanarthandler.music.latest1.album,)</visible>
-			<textcolor>90ffffff</textcolor>
-            <animation effect=""fade"" time=""150"">VisibleChange</animation>
-			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
-			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
-		</control>";
-
+                txt = txt + buildHoverLabelXml("100") + buildButtonXml("100"); if (checkBox100.Checked == true) txt = txt + buildFanartTextXml("100"); 
+                txt = txt + buildHoverLabelXml("101") + buildButtonXml("101"); if (checkBox101.Checked == true) txt = txt + buildFanartTextXml("101"); 
+                txt = txt + buildHoverLabelXml("102") + buildButtonXml("102"); if (checkBox102.Checked == true) txt = txt + buildFanartTextXml("102"); 
+                txt = txt + buildHoverLabelXml("103") + buildButtonXml("103"); if (checkBox103.Checked == true) txt = txt + buildFanartTextXml("103"); 
+                txt = txt + buildHoverLabelXml("104") + buildButtonXml("104"); if (checkBox104.Checked == true) txt = txt + buildFanartTextXml("104"); 
+                if (comboBox105.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("105") + buildButtonXml("105"); if (checkBox105.Checked == true) txt = txt + buildFanartTextXml("105"); }
+                if (comboBox106.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("106") + buildButtonXml("106"); if (checkBox106.Checked == true) txt = txt + buildFanartTextXml("106"); }
+                if (comboBox107.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("107") + buildButtonXml("107"); if (checkBox107.Checked == true) txt = txt + buildFanartTextXml("107"); }
+                if (comboBox108.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("108") + buildButtonXml("108"); if (checkBox108.Checked == true) txt = txt + buildFanartTextXml("108"); }
+                if (comboBox109.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("109") + buildButtonXml("109"); if (checkBox109.Checked == true) txt = txt + buildFanartTextXml("109"); }
+                if (comboBox110.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("110") + buildButtonXml("110"); if (checkBox110.Checked == true) txt = txt + buildFanartTextXml("110"); }
+                if (comboBox111.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("111") + buildButtonXml("111"); if (checkBox111.Checked == true) txt = txt + buildFanartTextXml("111"); }
+                if (comboBox112.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("112") + buildButtonXml("112"); if (checkBox112.Checked == true) txt = txt + buildFanartTextXml("112"); }
+                if (comboBox113.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("113") + buildButtonXml("113"); if (checkBox113.Checked == true) txt = txt + buildFanartTextXml("113"); }
+                if (comboBox114.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("114") + buildButtonXml("114"); if (checkBox114.Checked == true) txt = txt + buildFanartTextXml("114"); }
                 txt = txt + @"
     </controls>
 </window>";
-
 
                 String path = BlackGlassDirClass.Path + "\\BasicHome_Buttons.xml";
 
                 try
                 {
-                    TextWriter tw = new StreamWriter(path);
+                    TextWriter tw = new StreamWriter(path, false, Encoding.UTF8);
                     tw.Write(txt);
                     tw.Close();
                     toolStripStatusLabel1.Text = "XML File Saved Succesfully";
@@ -3347,317 +2193,41 @@ namespace BlackGlassEditor
 <window>
 	<controls>
 		
-	<control>
-			<description>100 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover100.Text) + @".png</texture>
-			<visible>control.hasfocus(100)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-		<control>
-			<description>101 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover101.Text) + @".png</texture>
-			<visible>control.hasfocus(101)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-		<control>
-			<description>102 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover102.Text) + @".png</texture>
-			<visible>control.hasfocus(102)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-		<control>
-			<description>103 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover103.Text) + @".png</texture>
-			<visible>control.hasfocus(103)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-		<control>
-			<description>104 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover104.Text) + @".png</texture>
-			<visible>control.hasfocus(104)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-        ";
+    ";
+                txt = txt + buildHoverBackdropXml("100");
+                txt = txt + buildHoverBackdropXml("101");
+                txt = txt + buildHoverBackdropXml("102");
+                txt = txt + buildHoverBackdropXml("103");
+                txt = txt + buildHoverBackdropXml("104");
+                if (comboBox105.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("105");
+                if (comboBox106.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("106");
+                if (comboBox107.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("107");
+                if (comboBox108.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("108");
+                if (comboBox109.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("109");
+                if (comboBox110.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("110");
+                if (comboBox111.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("111");
+                if (comboBox112.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("112");
+                if (comboBox113.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("113");
+                if (comboBox114.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("114");
+                
+                if (checkBox100.Checked == true) txt = txt + buildFanartBackdropXml("100");
+                if (checkBox101.Checked == true) txt = txt + buildFanartBackdropXml("101");
+                if (checkBox102.Checked == true) txt = txt + buildFanartBackdropXml("102");
+                if (checkBox103.Checked == true) txt = txt + buildFanartBackdropXml("103");
+                if (checkBox104.Checked == true) txt = txt + buildFanartBackdropXml("104");
+                if (checkBox105.Checked == true) txt = txt + buildFanartBackdropXml("105");
+                if (checkBox106.Checked == true) txt = txt + buildFanartBackdropXml("106");
+                if (checkBox107.Checked == true) txt = txt + buildFanartBackdropXml("107");
+                if (checkBox108.Checked == true) txt = txt + buildFanartBackdropXml("108");
+                if (checkBox109.Checked == true) txt = txt + buildFanartBackdropXml("109");
+                if (checkBox110.Checked == true) txt = txt + buildFanartBackdropXml("110");
+                if (checkBox111.Checked == true) txt = txt + buildFanartBackdropXml("111");
+                if (checkBox112.Checked == true) txt = txt + buildFanartBackdropXml("112");
+                if (checkBox113.Checked == true) txt = txt + buildFanartBackdropXml("113");
+                if (checkBox114.Checked == true) txt = txt + buildFanartBackdropXml("114"); 
 
-                if (comboBox105.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<control>
-			<description>105 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover105.Text) + @".png</texture>
-			<visible>control.hasfocus(105)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-        ";
+                
 
-                if (comboBox106.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<control>
-			<description>106 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover106.Text) + @".png</texture>
-			<visible>control.hasfocus(106)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-        ";
-
-                if (comboBox107.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<control>
-			<description>107 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover107.Text) + @".png</texture>
-			<visible>control.hasfocus(107)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-        ";
-
-                if (comboBox108.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<control>
-			<description>108 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover108.Text) + @".png</texture>
-			<visible>control.hasfocus(108)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-        ";
-
-                if (comboBox109.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<control>
-			<description>109 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover109.Text) + @".png</texture>
-			<visible>control.hasfocus(109)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-        ";
-
-                if (comboBox110.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<control>
-			<description>110 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover110.Text) + @".png</texture>
-			<visible>control.hasfocus(110)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-        ";
-
-                if (comboBox111.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<control>
-			<description>111 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover111.Text) + @".png</texture>
-			<visible>control.hasfocus(111)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-        ";
-
-                if (comboBox112.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<control>
-			<description>112 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover112.Text) + @".png</texture>
-			<visible>control.hasfocus(112)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-        ";
-
-                if (comboBox113.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<control>
-			<description>113 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover113.Text) + @".png</texture>
-			<visible>control.hasfocus(113)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-        ";
-
-                if (comboBox114.SelectedItem.ToString() != findPluginName(0)) txt = txt + @"<control>
-			<description>114 image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>" + SecurityElement.Escape(textBoxhover114.Text) + @".png</texture>
-			<visible>control.hasfocus(114)</visible>
-			<animation effect=""fade"" time=""250"">visible</animation>
-		</control>
-        ";
-
-                if (weather_button != "" && checkCheckBoxes(weather_button)) txt = txt + @"<control>
-			<description>weather image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<texture>animations\weather\#infoservice.weather.today.img.big.filenamewithoutext.jpg</texture>
-			<visible>control.hasfocus(" + weather_button + @")+plugin.isenabled(InfoService)</visible>
-			<animation effect=""fade"" time=""150"">visible</animation>
-		</control>
-		
-	";
-
-                if (tvseries_button != "" && checkCheckBoxes(tvseries_button) == true) txt = txt + @"<control>
-			<description>TV Series image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<texture>#fanarthandler.tvseries.latest1.fanart</texture>
-			<visible>control.hasfocus(" + tvseries_button + @")+plugin.isenabled(Fanart Handler)+plugin.isenabled(MP-TV Series)</visible>
-			<animation effect=""fade"" time=""150"">visible</animation>
-		</control>
-		
-	";
-
-
-                if (movingpictures_button != "" && checkCheckBoxes(movingpictures_button) == true) txt = txt + @"<control>
-			<description>Moving Pictures image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<texture>#fanarthandler.movingpicture.latest1.fanart</texture>
-			<visible>control.hasfocus(" + movingpictures_button + @")+plugin.isenabled(Fanart Handler)+plugin.isenabled(Moving Pictures)</visible>
-			<animation effect=""fade"" time=""150"">visible</animation>
-		</control>
-		
-	";
-
-                if (tv_button != "" && checkCheckBoxes(tv_button) == true) txt = txt + @"<control>
-			<description>TV Series image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<texture>#fanarthandler.tvrecordings.latest1.thumb</texture>
-			<visible>control.hasfocus(" + tv_button + @")+plugin.isenabled(Fanart Handler)+plugin.isenabled(TV)</visible>
-			<animation effect=""fade"" time=""150"">visible</animation>
-		</control>
-		
-	";
-
-                if (pictures_button != "" && checkCheckBoxes(pictures_button) == true) txt = txt + @"<control>
-			<description>TV Series image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<texture>#fanarthandler.picture.latest1.thumb</texture>
-			<visible>control.hasfocus(" + pictures_button + @")+plugin.isenabled(Fanart Handler)+plugin.isenabled(Pictures)+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)</visible>
-			<animation effect=""fade"" time=""150"">visible</animation>
-		</control>
-		
-	";
-
-
-                if (music_button != "" && checkCheckBoxes(music_button) == true) txt = txt + @"<control>
-			<description>TV Series image</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<texture>#fanarthandler.music.latest1.fanart1</texture>
-			<visible>control.hasfocus(" + music_button + @")+plugin.isenabled(Fanart Handler)+plugin.isenabled(Music)</visible>
-			<animation effect=""fade"" time=""150"">visible</animation>
-		</control>
-		
-	";
                 txt = txt + @"</controls>
 </window>";
 
@@ -3741,10 +2311,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox100.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown100.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter100.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -3762,10 +2335,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox101.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown101.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter101.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -3783,10 +2359,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox102.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown102.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter102.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -3804,10 +2383,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox103.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown103.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter103.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -3825,10 +2407,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox104.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown104.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter104.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -3847,10 +2432,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox105.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown105.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter105.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -3869,10 +2457,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox106.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown106.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter106.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -3891,10 +2482,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox107.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown107.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter107.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -3913,10 +2507,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox108.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown108.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter108.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -3935,10 +2532,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox109.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown109.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter109.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -3957,10 +2557,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox110.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown110.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter110.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -3979,10 +2582,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox111.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown111.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter111.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -4001,10 +2607,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox112.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown112.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter112.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -4023,10 +2632,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox113.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown113.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter113.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -4045,10 +2657,13 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox114.Checked.ToString()));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDown114.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter114.Text));
                 textWriter.WriteEndElement();
-				textWriter.WriteEndElement();
+                textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
                 textWriter.WriteStartElement("Id", "");
@@ -4065,6 +2680,9 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartlevels", "");
+                textWriter.WriteString("1");
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString("");
@@ -4279,6 +2897,26 @@ namespace BlackGlassEditor
             switch (id)
             {
 
+				case "100":
+                    ButtonId = "104";
+                    break;
+                
+                case "101":
+                    ButtonId = "100";
+                    break;
+                
+                case "102":
+                    ButtonId = "101";
+                    break;
+               
+                case "103":
+                    ButtonId = "102";
+                    break;
+                
+                case "104":
+                    ButtonId = "103";
+                    break;
+               
                 case "105":
                     ButtonId = "105";
                     if (comboBox106.SelectedItem.ToString() != findPluginName(0)) ButtonId = "106";
@@ -4373,6 +3011,26 @@ namespace BlackGlassEditor
             switch (id)
             {
 
+				case "100":
+                    ButtonId = "101";
+                    break;
+
+                case "101":
+                    ButtonId = "102";
+                    break;
+
+                case "102":
+                    ButtonId = "103";
+                    break;
+
+                case "103":
+                    ButtonId = "104";
+                    break;
+
+                case "104":
+                    ButtonId = "100";
+                    break;
+                
                 case "105":
                     ButtonId = "105";
                     if (comboBox109.SelectedItem.ToString() != findPluginName(0)) ButtonId = "109";
@@ -4458,6 +3116,857 @@ namespace BlackGlassEditor
             return ButtonId;
         }
 
+        private String buildHoverLabelXml(String id)
+        {
+            String labelTextbox = String.Empty;
+            
+            switch (id)
+            {
+                case "100":
+                    labelTextbox = SecurityElement.Escape(textBox100.Text);
+                    break;
+                case "101":
+                    labelTextbox = SecurityElement.Escape(textBox101.Text);
+                    break;
+                case "102":
+                    labelTextbox = SecurityElement.Escape(textBox102.Text);
+                    break;
+                case "103":
+                    labelTextbox = SecurityElement.Escape(textBox103.Text);
+                    break;
+                case "104":
+                    labelTextbox = SecurityElement.Escape(textBox104.Text);
+                    break;
+                case "105":
+                    labelTextbox = SecurityElement.Escape(textBox105.Text);
+                    break;
+                case "106":
+                    labelTextbox = SecurityElement.Escape(textBox106.Text);
+                    break;
+                case "107":
+                    labelTextbox = SecurityElement.Escape(textBox107.Text);
+                    break;
+                case "108":
+                    labelTextbox = SecurityElement.Escape(textBox108.Text);
+                    break;
+                case "109":
+                    labelTextbox = SecurityElement.Escape(textBox109.Text);
+                    break;
+                case "110":
+                    labelTextbox = SecurityElement.Escape(textBox110.Text);
+                    break;
+                case "111":
+                    labelTextbox = SecurityElement.Escape(textBox111.Text);
+                    break;
+                case "112":
+                    labelTextbox = SecurityElement.Escape(textBox112.Text);
+                    break;
+                case "113":
+                    labelTextbox = SecurityElement.Escape(textBox113.Text);
+                    break;
+                case "114":
+                    labelTextbox = SecurityElement.Escape(textBox114.Text);
+                    break;
+            }
+
+
+            String xmloutput = @"<!-- ID " + id + @" -->
+		<control>
+			<description>" + id + @" hover label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>937</posY>
+            <width>1920</width>
+            <label>" + labelTextbox + @"</label>
+			<font>font37</font>
+			<align>center</align>
+			<visible>control.hasfocus(" + id + @")</visible>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
+		</control>";
+
+            return xmloutput;
+        }
+
+
+        private String buildButtonXml(String id)
+        {
+            String labelTextbox = String.Empty;
+            String idTextbox = String.Empty;
+            String labelTextboxParameter = String.Empty;
+            String posX = String.Empty;
+            String posY = String.Empty;
+            String width = String.Empty;
+            String height = String.Empty;
+            String condition = String.Empty;
+            String ButtonUp = String.Empty;
+            String ButtonDown = String.Empty;
+
+            switch (id)
+            {
+                case "100":
+                    labelTextbox = SecurityElement.Escape(textBox100.Text); idTextbox = SecurityElement.Escape(textBoxid100.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter100.Text);
+                    posX = "150"; posY = "642"; width = "359"; height = "368";
+                    if (comboBox105.SelectedItem.ToString() != findPluginName(0)) { ButtonUp = "105"; } else { ButtonUp = "18"; }; ButtonDown = "1111";
+                    condition = @"yes";
+                    break;
+                case "101":
+                    labelTextbox = SecurityElement.Escape(textBox101.Text); idTextbox = SecurityElement.Escape(textBoxid101.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter101.Text);
+                    posX = "503"; posY = "660"; width = "313"; height = "322";
+                    if (comboBox106.SelectedItem.ToString() != findPluginName(0)) { ButtonUp = "106"; } else { ButtonUp = "18"; }; ButtonDown = "1111";
+                    condition = @"yes";
+                    break;
+                case "102":
+                    labelTextbox = SecurityElement.Escape(textBox102.Text); idTextbox = SecurityElement.Escape(textBoxid102.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter102.Text);
+                    posX = "812"; posY = "666"; width = "295"; height = "307";
+                    if (comboBox107.SelectedItem.ToString() != findPluginName(0)) { ButtonUp = "107"; } else { ButtonUp = "18"; }; ButtonDown = "1111";
+                    condition = @"yes";
+                    break;
+                case "103":
+                    labelTextbox = SecurityElement.Escape(textBox103.Text); idTextbox = SecurityElement.Escape(textBoxid103.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter103.Text);
+                    posX = "1103"; posY = "660"; width = "314"; height = "324";
+                    if (comboBox108.SelectedItem.ToString() != findPluginName(0)) { ButtonUp = "108"; } else { ButtonUp = "18"; }; ButtonDown = "1111";
+                    condition = @"yes";
+                    break;
+                case "104":
+                    labelTextbox = SecurityElement.Escape(textBox104.Text); idTextbox = SecurityElement.Escape(textBoxid104.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter104.Text);
+                    posX = "1411"; posY = "642"; width = "359"; height = "363";
+                    if (comboBox109.SelectedItem.ToString() != findPluginName(0)) { ButtonUp = "109"; } else { ButtonUp = "18"; }; ButtonDown = "1111";
+                    condition = @"yes";
+                    break;
+                case "105":
+                    labelTextbox = SecurityElement.Escape(textBox105.Text); idTextbox = SecurityElement.Escape(textBoxid105.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter105.Text);
+                    posX = "170"; posY = "391"; width = "349"; height = "274";
+                    if (comboBox110.SelectedItem.ToString() != findPluginName(0)) { ButtonUp = "110"; } else { ButtonUp = "18"; }; ButtonDown = "100";
+                    condition = @"control.hasfocus(1000)|control.hasfocus(105)|control.hasfocus(110)";
+                    break;
+                case "106":
+                    labelTextbox = SecurityElement.Escape(textBox106.Text); idTextbox = SecurityElement.Escape(textBoxid106.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter106.Text);
+                    posX = "512"; posY = "450"; width = "307"; height = "228";
+                    if (comboBox111.SelectedItem.ToString() != findPluginName(0)) { ButtonUp = "111"; } else { ButtonUp = "18"; }; ButtonDown = "101";
+                    condition = @"control.hasfocus(1001)|control.hasfocus(106)|control.hasfocus(111)";
+                    break;
+                case "107":
+                    labelTextbox = SecurityElement.Escape(textBox107.Text); idTextbox = SecurityElement.Escape(textBoxid107.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter107.Text);
+                    posX = "814"; posY = "474"; width = "290"; height = "205";
+                    if (comboBox112.SelectedItem.ToString() != findPluginName(0)) { ButtonUp = "112"; } else { ButtonUp = "18"; }; ButtonDown = "102";
+                    condition = @"control.hasfocus(1002)|control.hasfocus(107)|control.hasfocus(112)";
+                    break;
+                case "108":
+                    labelTextbox = SecurityElement.Escape(textBox108.Text); idTextbox = SecurityElement.Escape(textBoxid108.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter108.Text);
+                    posX = "1099"; posY = "450"; width = "307"; height = "228";
+                    if (comboBox113.SelectedItem.ToString() != findPluginName(0)) { ButtonUp = "113"; } else { ButtonUp = "18"; }; ButtonDown = "103";
+                    condition = @"control.hasfocus(1003)|control.hasfocus(108)|control.hasfocus(113)";
+                    break;
+                case "109":
+                    labelTextbox = SecurityElement.Escape(textBox109.Text); idTextbox = SecurityElement.Escape(textBoxid109.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter109.Text);
+                    posX = "1402"; posY = "391"; width = "348"; height = "274";
+                    if (comboBox114.SelectedItem.ToString() != findPluginName(0)) { ButtonUp = "114"; } else { ButtonUp = "18"; }; ButtonDown = "104";
+                    condition = @"control.hasfocus(1004)|control.hasfocus(109)|control.hasfocus(114)";
+                    break;
+                case "110":
+                    labelTextbox = SecurityElement.Escape(textBox110.Text); idTextbox = SecurityElement.Escape(textBoxid110.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter110.Text);
+                    posX = "189"; posY = "159"; width = "337"; height = "295";
+                    ButtonUp = "18"; ButtonDown = "105";
+                    condition = @"control.hasfocus(1000)|control.hasfocus(105)|control.hasfocus(110)";
+                    break;
+                case "111":
+                    labelTextbox = SecurityElement.Escape(textBox111.Text); idTextbox = SecurityElement.Escape(textBoxid111.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter111.Text);
+                    posX = "521"; posY = "252"; width = "301"; height = "232";
+                    ButtonUp = "18"; ButtonDown = "106";
+                    condition = @"control.hasfocus(1001)|control.hasfocus(106)|control.hasfocus(111)";
+                    break;
+                case "112":
+                    labelTextbox = SecurityElement.Escape(textBox112.Text); idTextbox = SecurityElement.Escape(textBoxid112.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter112.Text);
+                    posX = "816"; posY = "288"; width = "285"; height = "200";
+                    ButtonUp = "18"; ButtonDown = "107";
+                    condition = @"control.hasfocus(1002)|control.hasfocus(107)|control.hasfocus(112)";
+                    break;
+                case "113":
+                    labelTextbox = SecurityElement.Escape(textBox113.Text); idTextbox = SecurityElement.Escape(textBoxid113.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter113.Text);
+                    posX = "1095"; posY = "252"; width = "302"; height = "232";
+                    ButtonUp = "18"; ButtonDown = "108";
+                    condition = @"control.hasfocus(1003)|control.hasfocus(108)|control.hasfocus(113)";
+                    break;
+                case "114":
+                    labelTextbox = SecurityElement.Escape(textBox114.Text); idTextbox = SecurityElement.Escape(textBoxid114.Text);
+                    labelTextboxParameter = SecurityElement.Escape(textBoxParameter114.Text);
+                    posX = "1393"; posY = "159"; width = "338"; height = "295";
+                    ButtonUp = "18"; ButtonDown = "109";
+                    condition = @"control.hasfocus(1004)|control.hasfocus(109)|control.hasfocus(114)";
+                    break;
+            }
+
+
+            String xmloutput = @"
+		<control>
+			<description>" + id + @" image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>" + posX + @"</posX>
+			<posY>" + posY + @"</posY>
+			<width>" + width + @"</width>
+			<height>" + height + @"</height>
+			<texture>basichome_" + id + @"_nofocus.png</texture>
+            <visible>" + condition + @"</visible>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
+		</control>
+        <control>
+			<description>" + id + @" hover image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>" + posX + @"</posX>
+			<posY>" + posY + @"</posY>
+			<width>" + width + @"</width>
+			<height>" + height + @"</height>
+			<texture>basichome_" + id + @"_focus.png</texture>
+            <visible>control.hasfocus(" + id + @")</visible>
+			<animation effect=""fade"" time=""150"">VisibleChange</animation>
+		</control>
+        <control>
+			<description>" + id + @" button</description>
+			<type>button</type>
+			<id>" + id + @"</id>
+			<posX>" + posX + @"</posX>
+			<posY>" + posY + @"</posY>
+			<width>" + width + @"</width>
+			<height>" + height + @"</height>
+			<label>" + labelTextbox + @"</label>
+			<textXOff>4500</textXOff>
+			<hyperlink>" + idTextbox + @"</hyperlink>
+			<hyperlinkParameter>" + labelTextboxParameter + @"</hyperlinkParameter> 
+			<onleft>" + findButtonLeft(id) + @"</onleft>
+			<onright>" + findButtonRight(id) + @"</onright>
+			<onup>" + ButtonUp + @"</onup>
+			<ondown>" + ButtonDown + @"</ondown>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+        </control>
+        ";
+
+            return xmloutput;
+        }
+
+
+        private String buildFanartTextXml(String id)
+        {
+            String labelTextbox = String.Empty;
+            String idTextbox = String.Empty;
+            String plugin_trick = String.Empty;
+            String pictures_plugin_trick1 = String.Empty;
+            String pictures_plugin_trick2 = String.Empty;
+            String pictures_plugin_trick3 = String.Empty;
+            String plugin_name = String.Empty;
+            String text_trick1 = String.Empty;
+            String text_trick2 = String.Empty;
+            String text_trick3 = String.Empty;
+            Int32 fanartLevel = 1;
+            String fanartLabel1 = String.Empty;
+            String fanartLabel2 = String.Empty;
+            String fanartLabel3 = String.Empty;
+
+
+            switch (id)
+            {
+                case "100":
+                    labelTextbox = SecurityElement.Escape(textBox100.Text); idTextbox = SecurityElement.Escape(textBoxid100.Text); fanartLevel = Int32.Parse(numericUpDown100.Value.ToString());
+                    break;
+                case "101":
+                    labelTextbox = SecurityElement.Escape(textBox101.Text); idTextbox = SecurityElement.Escape(textBoxid101.Text); fanartLevel = Int32.Parse(numericUpDown101.Value.ToString());
+                    break;
+                case "102":
+                    labelTextbox = SecurityElement.Escape(textBox102.Text); idTextbox = SecurityElement.Escape(textBoxid102.Text); fanartLevel = Int32.Parse(numericUpDown102.Value.ToString());
+                    break;
+                case "103":
+                    labelTextbox = SecurityElement.Escape(textBox103.Text); idTextbox = SecurityElement.Escape(textBoxid103.Text); fanartLevel = Int32.Parse(numericUpDown103.Value.ToString());
+                    break;
+                case "104":
+                    labelTextbox = SecurityElement.Escape(textBox104.Text); idTextbox = SecurityElement.Escape(textBoxid104.Text); fanartLevel = Int32.Parse(numericUpDown104.Value.ToString());
+                    break;
+                case "105":
+                    labelTextbox = SecurityElement.Escape(textBox105.Text); idTextbox = SecurityElement.Escape(textBoxid105.Text); fanartLevel = Int32.Parse(numericUpDown105.Value.ToString());
+                    break;
+                case "106":
+                    labelTextbox = SecurityElement.Escape(textBox106.Text); idTextbox = SecurityElement.Escape(textBoxid106.Text); fanartLevel = Int32.Parse(numericUpDown106.Value.ToString());
+                    break;
+                case "107":
+                    labelTextbox = SecurityElement.Escape(textBox107.Text); idTextbox = SecurityElement.Escape(textBoxid107.Text); fanartLevel = Int32.Parse(numericUpDown107.Value.ToString());
+                    break;
+                case "108":
+                    labelTextbox = SecurityElement.Escape(textBox108.Text); idTextbox = SecurityElement.Escape(textBoxid108.Text); fanartLevel = Int32.Parse(numericUpDown108.Value.ToString());
+                    break;
+                case "109":
+                    labelTextbox = SecurityElement.Escape(textBox109.Text); idTextbox = SecurityElement.Escape(textBoxid109.Text); fanartLevel = Int32.Parse(numericUpDown109.Value.ToString());
+                    break;
+                case "110":
+                    labelTextbox = SecurityElement.Escape(textBox110.Text); idTextbox = SecurityElement.Escape(textBoxid110.Text); fanartLevel = Int32.Parse(numericUpDown110.Value.ToString());
+                    break;
+                case "111":
+                    labelTextbox = SecurityElement.Escape(textBox111.Text); idTextbox = SecurityElement.Escape(textBoxid111.Text); fanartLevel = Int32.Parse(numericUpDown111.Value.ToString());
+                    break;
+                case "112":
+                    labelTextbox = SecurityElement.Escape(textBox112.Text); idTextbox = SecurityElement.Escape(textBoxid112.Text); fanartLevel = Int32.Parse(numericUpDown112.Value.ToString());
+                    break;
+                case "113":
+                    labelTextbox = SecurityElement.Escape(textBox113.Text); idTextbox = SecurityElement.Escape(textBoxid113.Text); fanartLevel = Int32.Parse(numericUpDown113.Value.ToString());
+                    break;
+                case "114":
+                    labelTextbox = SecurityElement.Escape(textBox114.Text); idTextbox = SecurityElement.Escape(textBoxid114.Text); fanartLevel = Int32.Parse(numericUpDown114.Value.ToString());
+                    break;
+            }
+
+            switch (fanartLevel)
+            {
+                case 1:
+                    pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                    text_trick1 = findTextTrick(idTextbox, "1");
+                    fanartLabel1 = findFanartLabel(idTextbox, "1");
+                    break;
+                case 2:
+                    pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest2.thumb,Folder.jpg)"; pictures_plugin_trick2 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                    text_trick1 = findTextTrick(idTextbox, "2"); text_trick2 = findTextTrick(idTextbox, "1");
+                    fanartLabel1 = findFanartLabel(idTextbox, "2"); fanartLabel2 = findFanartLabel(idTextbox, "1");
+                    break;
+                case 3:
+                    pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest3.thumb,Folder.jpg)"; pictures_plugin_trick2 = "+!string.contains(#fanarthandler.picture.latest2.thumb,Folder.jpg)"; pictures_plugin_trick3 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                    text_trick1 = findTextTrick(idTextbox, "3"); text_trick2 = findTextTrick(idTextbox, "2"); text_trick3 = findTextTrick(idTextbox, "1");
+                    fanartLabel1 = findFanartLabel(idTextbox, "3"); fanartLabel2 = findFanartLabel(idTextbox, "2"); fanartLabel3 = findFanartLabel(idTextbox, "1");
+                    break;
+            }
+
+            plugin_name = findFanartPluginName(idTextbox);
+            if (idTextbox != "2") { pictures_plugin_trick1 = String.Empty; pictures_plugin_trick2 = String.Empty; pictures_plugin_trick3 = String.Empty; }
+
+
+            String xmloutput = String.Empty;
+
+            if (fanartLevel == 1) xmloutput = @" 
+		<control>
+			<description>" + id + @"00 fanart text</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>999</posY>
+			<width>1920</width>
+			<label>" + fanartLabel1 + @"</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>
+
+        ";
+
+            if (fanartLevel == 2) xmloutput = @" 
+		<control>
+			<description>" + id + @"00 fanart text</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>999</posY>
+			<width>1920</width>
+			<label>" + fanartLabel1 + @"</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>
+       <control>
+			<description>" + id + @"01 fanart text</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>999</posY>
+			<width>1920</width>
+			<label>" + fanartLabel2 + @"</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(" + id + @"01)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick2 + @"</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>
+
+        ";
+
+            if (fanartLevel == 3) xmloutput = @" 
+		<control>
+			<description>" + id + @"00 fanart text</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>999</posY>
+			<width>1920</width>
+			<label>" + fanartLabel1 + @"</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>
+        <control>
+			<description>" + id + @"01 fanart text</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>999</posY>
+			<width>1920</width>
+			<label>" + fanartLabel2 + @"</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(" + id + @"01)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick2 + @"</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>
+        <control>
+			<description>" + id + @"02 fanart text</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>999</posY>
+			<width>1920</width>
+			<label>" + fanartLabel3 + @"</label>
+			<align>center</align>
+			<font>font11</font>
+			<visible>control.isvisible(" + id + @"02)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick3 + @"</visible>
+			<textcolor>90ffffff</textcolor>
+			<animation effect=""fade"" time=""150"">visible</animation>
+			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
+			<animation effect=""fade"" time=""250"" delay=""0"">WindowClose</animation>
+		</control>
+
+
+        ";
+
+            return xmloutput;
+        }
+
+
+        private String buildHoverBackdropXml(String id)
+        {
+            String labelTextbox = String.Empty;
+
+            switch (id)
+            {
+                case "100":
+                    labelTextbox = SecurityElement.Escape(textBoxhover100.Text);
+                    break;
+                case "101":
+                    labelTextbox = SecurityElement.Escape(textBoxhover101.Text);
+                    break;
+                case "102":
+                    labelTextbox = SecurityElement.Escape(textBoxhover102.Text);
+                    break;
+                case "103":
+                    labelTextbox = SecurityElement.Escape(textBoxhover103.Text);
+                    break;
+                case "104":
+                    labelTextbox = SecurityElement.Escape(textBoxhover104.Text);
+                    break;
+                case "105":
+                    labelTextbox = SecurityElement.Escape(textBoxhover105.Text);
+                    break;
+                case "106":
+                    labelTextbox = SecurityElement.Escape(textBoxhover106.Text);
+                    break;
+                case "107":
+                    labelTextbox = SecurityElement.Escape(textBoxhover107.Text);
+                    break;
+                case "108":
+                    labelTextbox = SecurityElement.Escape(textBoxhover108.Text);
+                    break;
+                case "109":
+                    labelTextbox = SecurityElement.Escape(textBoxhover109.Text);
+                    break;
+                case "110":
+                    labelTextbox = SecurityElement.Escape(textBoxhover110.Text);
+                    break;
+                case "111":
+                    labelTextbox = SecurityElement.Escape(textBoxhover111.Text);
+                    break;
+                case "112":
+                    labelTextbox = SecurityElement.Escape(textBoxhover112.Text);
+                    break;
+                case "113":
+                    labelTextbox = SecurityElement.Escape(textBoxhover113.Text);
+                    break;
+                case "114":
+                    labelTextbox = SecurityElement.Escape(textBoxhover114.Text);
+                    break;
+            }
+
+
+            String xmloutput = @"
+		<control>
+			<description>" + id + @" hover backdrop image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>" + labelTextbox + @".png</texture>
+            <visible>control.hasfocus(" + id + @")</visible>
+			<animation effect=""fade"" time=""250"">visible</animation>
+		</control>
+        ";
+           
+            return xmloutput;
+        }
+        
+        
+        private String buildFanartBackdropXml(String id)
+        {
+            String labelTextbox = String.Empty;
+            String idTextbox = String.Empty;
+            String plugin_trick = String.Empty;
+            String pictures_plugin_trick1 = String.Empty;
+            String pictures_plugin_trick2 = String.Empty;
+            String pictures_plugin_trick3 = String.Empty;
+            String plugin_name = String.Empty;
+            String texture_name1 = String.Empty;
+            String texture_name2 = String.Empty;
+            String texture_name3 = String.Empty;
+            Int32 fanartLevel = 1;
+            
+            switch (id)
+            {
+                case "100":
+                    labelTextbox = SecurityElement.Escape(textBox100.Text); idTextbox = SecurityElement.Escape(textBoxid100.Text); fanartLevel = Int32.Parse(numericUpDown100.Value.ToString());
+                    break;
+                case "101":
+                    labelTextbox = SecurityElement.Escape(textBox101.Text); idTextbox = SecurityElement.Escape(textBoxid101.Text); fanartLevel = Int32.Parse(numericUpDown101.Value.ToString());
+                    break;
+                case "102":
+                    labelTextbox = SecurityElement.Escape(textBox102.Text); idTextbox = SecurityElement.Escape(textBoxid102.Text); fanartLevel = Int32.Parse(numericUpDown102.Value.ToString());
+                    break;
+                case "103":
+                    labelTextbox = SecurityElement.Escape(textBox103.Text); idTextbox = SecurityElement.Escape(textBoxid103.Text); fanartLevel = Int32.Parse(numericUpDown103.Value.ToString());
+                    break;
+                case "104":
+                    labelTextbox = SecurityElement.Escape(textBox104.Text); idTextbox = SecurityElement.Escape(textBoxid104.Text); fanartLevel = Int32.Parse(numericUpDown104.Value.ToString());
+                    break;
+                case "105":
+                    labelTextbox = SecurityElement.Escape(textBox105.Text); idTextbox = SecurityElement.Escape(textBoxid105.Text); fanartLevel = Int32.Parse(numericUpDown105.Value.ToString());
+                    break;
+                case "106":
+                    labelTextbox = SecurityElement.Escape(textBox106.Text); idTextbox = SecurityElement.Escape(textBoxid106.Text); fanartLevel = Int32.Parse(numericUpDown106.Value.ToString());
+                    break;
+                case "107":
+                    labelTextbox = SecurityElement.Escape(textBox107.Text); idTextbox = SecurityElement.Escape(textBoxid107.Text); fanartLevel = Int32.Parse(numericUpDown107.Value.ToString());
+                    break;
+                case "108":
+                    labelTextbox = SecurityElement.Escape(textBox108.Text); idTextbox = SecurityElement.Escape(textBoxid108.Text); fanartLevel = Int32.Parse(numericUpDown108.Value.ToString());
+                    break;
+                case "109":
+                    labelTextbox = SecurityElement.Escape(textBox109.Text); idTextbox = SecurityElement.Escape(textBoxid109.Text); fanartLevel = Int32.Parse(numericUpDown109.Value.ToString());
+                    break;
+                case "110":
+                    labelTextbox = SecurityElement.Escape(textBox110.Text); idTextbox = SecurityElement.Escape(textBoxid110.Text); fanartLevel = Int32.Parse(numericUpDown110.Value.ToString());
+                    break;
+                case "111":
+                    labelTextbox = SecurityElement.Escape(textBox111.Text); idTextbox = SecurityElement.Escape(textBoxid111.Text); fanartLevel = Int32.Parse(numericUpDown111.Value.ToString());
+                    break;
+                case "112":
+                    labelTextbox = SecurityElement.Escape(textBox112.Text); idTextbox = SecurityElement.Escape(textBoxid112.Text); fanartLevel = Int32.Parse(numericUpDown112.Value.ToString());
+                    break;
+                case "113":
+                    labelTextbox = SecurityElement.Escape(textBox113.Text); idTextbox = SecurityElement.Escape(textBoxid113.Text); fanartLevel = Int32.Parse(numericUpDown113.Value.ToString());
+                    break;
+                case "114":
+                    labelTextbox = SecurityElement.Escape(textBox114.Text); idTextbox = SecurityElement.Escape(textBoxid114.Text); fanartLevel = Int32.Parse(numericUpDown114.Value.ToString());
+                    break;
+            }
+
+            switch (fanartLevel)
+            {
+                case 1:
+                    texture_name1 = findFanartTexture(idTextbox, fanartLevel.ToString());
+                    pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                    break;
+                case 2:
+                    texture_name1 = findFanartTexture(idTextbox, fanartLevel.ToString()); texture_name2 = findFanartTexture(idTextbox, (fanartLevel - 1).ToString());
+                    pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest2.thumb,Folder.jpg)";  pictures_plugin_trick2 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                    break;
+                case 3:
+                    texture_name1 = findFanartTexture(idTextbox, fanartLevel.ToString()); texture_name2 = findFanartTexture(idTextbox, (fanartLevel - 1).ToString()); texture_name3 = findFanartTexture(idTextbox, (fanartLevel - 2).ToString());
+                    pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest3.thumb,Folder.jpg)"; pictures_plugin_trick2 = "+!string.contains(#fanarthandler.picture.latest2.thumb,Folder.jpg)"; pictures_plugin_trick3 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                    break;
+            }
+
+            plugin_name = findFanartPluginName(idTextbox);
+            if (idTextbox != "2") { pictures_plugin_trick1 = String.Empty; pictures_plugin_trick2 = String.Empty; pictures_plugin_trick3 = String.Empty; }
+            
+            
+            String xmloutput = String.Empty;
+
+            if (fanartLevel == 1) xmloutput = @" 
+		<control>
+			<description>" + id + @"00 fanart focused</description>
+			<type>image</type>
+			<id>" + id + @"00</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>" + texture_name1 + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
+			<animation effect=""fade"" time=""200"" delay=""1000"">visible</animation>
+ 		</control>
+
+        ";
+
+            if (fanartLevel == 2) xmloutput = @" 
+		<control>
+			<description>" + id + @"00 fanart focused</description>
+			<type>image</type>
+			<id>" + id + @"00</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>" + texture_name1 + @"</texture>
+			<visible>!control.isvisible(" + id + @"01)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
+			<animation effect=""fade"" time=""200"" delay=""1000"">visible</animation>
+            <animation effect=""fade"" time=""200"">hidden</animation>
+		</control>
+        <control>
+			<description>" + id + @"01 fanart focused</description>
+			<type>image</type>
+			<id>" + id + @"01</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>" + texture_name2 + @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick2 + @"</visible>
+			<animation effect=""fade"" time=""200"" delay=""3000"">visible</animation>
+		</control>
+
+        ";
+
+            if (fanartLevel == 3) xmloutput = @" 
+		<control>
+			<description>" + id + @"00 fanart focused</description>
+			<type>image</type>
+			<id>" + id + @"00</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>" + texture_name1 + @"</texture>
+			<visible>!control.isvisible(" + id + @"01)+!control.isvisible(" + id + @"02)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
+			<animation effect=""fade"" time=""200"" delay=""1000"">visible</animation>
+            <animation effect=""fade"" time=""200"">hidden</animation>
+		</control>
+        <control>
+			<description>" + id + @"01 fanart focused</description>
+			<type>image</type>
+			<id>" + id + @"01</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>" + texture_name2 + @"</texture>
+			<visible>!control.isvisible(" + id + @"02)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick2 + @"</visible>
+			<animation effect=""fade"" time=""200"" delay=""3000"">visible</animation>
+            <animation effect=""fade"" time=""200"">hidden</animation>
+		</control>
+        <control>
+			<description>" + id + @"02 fanart focused</description>
+			<type>image</type>
+			<id>" + id + @"02</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture>" + texture_name3+ @"</texture>
+			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick3 + @"</visible>
+			<animation effect=""fade"" time=""200"" delay=""5000"">visible</animation>
+		</control>
+        
+        ";
+
+            return xmloutput;
+        }
+
+        private String findFanartPluginName(String id)
+        {
+            String plugin_name = "";
+            switch (id)
+            {
+                case "504":
+                    plugin_name = "Music";
+                    break;
+                case "501":
+                    plugin_name = "Music";
+                    break;
+                case "1":
+                    plugin_name = "TV";
+                    break;
+                case "2":
+                    plugin_name = "Pictures";
+                    break;
+                case "96742":
+                    plugin_name = "Moving Pictures";
+                    break;
+                case "9811":
+                    plugin_name = "MP-TV Series";
+                    break;
+                case "2600":
+                    plugin_name = "InfoService";
+                    break;
+                default:
+                    break;
+            }
+            return plugin_name;
+        }
+
+        private String findFanartTexture(String id, String level)
+        {
+            String texture = "";
+            switch (id)
+            {
+                case "504":
+                    texture = "#fanarthandler.music.latest" + level + ".fanart1";
+                    break;
+                case "501":
+                    texture = "#fanarthandler.music.latest" + level + ".fanart1";
+                    break;
+                case "1":
+                    texture = "#fanarthandler.tvrecordings.latest" + level + ".thumb";
+                    break;
+                case "2":
+                    texture = "#fanarthandler.picture.latest" + level + ".thumb";
+                    break;
+                case "96742":
+                    texture = "#fanarthandler.movingpicture.latest" + level + ".fanart";
+                    break;
+                case "9811":
+                    texture = "#fanarthandler.tvseries.latest" + level + ".fanart";
+                    break;
+                case "2600":
+                    if (level == "1") texture = "animations\\weather\\#infoservice.weather.today.img.big.filenamewithoutext.jpg";
+                    if (level == "2") texture = "animations\\weather\\#infoservice.weather.forecast2.day.img.big.filenamewithoutext.jpg";
+                    if (level == "3") texture = "animations\\weather\\#infoservice.weather.forecast3.day.img.big.filenamewithoutext.jpg";
+                    break;
+                default:
+                    break;
+            }
+            return texture;
+        }
+
+        private String findTextTrick(String id, String level)
+        {
+            String trick = "";
+            switch (id)
+            {
+                case "504":
+                    trick = "+!string.equals(#fanarthandler.music.latest" + level + ".album,)";
+                    break;
+                case "501":
+                    trick = "+!string.equals(#fanarthandler.music.latest" + level + ".album,)";
+                    break;
+                case "1":
+                    trick = "+!string.equals(#fanarthandler.tvrecordings.latest" + level + ".title,)";
+                    break;
+                case "2":
+                    trick = "+!string.equals(#fanarthandler.picture.latest" + level + ".filename,)";
+                    break;
+                case "96742":
+                    trick = "+!string.equals(#fanarthandler.movingpicture.latest" + level + ".title,)";
+                    break;
+                case "9811":
+                    trick = "+!string.equals(#fanarthandler.tvseries.latest" + level + ".episodeName,)";
+                    break;
+                case "2600":
+                    if (level == "1") trick = "+!string.equals(#infoservice.weather.today.condition,)";
+                    if (level == "2") trick = "+!string.equals(#infoservice.weather.forecast2.day.condition,)";
+                    if (level == "3") trick = "+!string.equals(#infoservice.weather.forecast3.day.condition,)";
+                    break;
+                default:
+                    break;
+            }
+            return trick;
+        }
+
+        private String findFanartLabel(String id, String level)
+        {
+            String FanartLabel = "";
+            switch (id)
+            {
+                case "504":
+                    FanartLabel = "#fanarthandler.music.latest" + level + ".dateAdded:     #fanarthandler.music.latest" + level + ".artist     #fanarthandler.music.latest" + level + ".album     #fanarthandler.music.latest" + level + ".genre";
+                    break;
+                case "501":
+                    FanartLabel = "#fanarthandler.music.latest" + level + ".dateAdded:     #fanarthandler.music.latest" + level + ".artist     #fanarthandler.music.latest" + level + ".album     #fanarthandler.music.latest" + level + ".genre";
+                    break;
+                case "1":
+                    FanartLabel = "#fanarthandler.tvrecordings.latest" + level + ".dateAdded:     #fanarthandler.tvrecordings.latest" + level + ".title     #fanarthandler.tvrecordings.latest" + level + ".genre";
+                    break;
+                case "2":
+                    FanartLabel = "#fanarthandler.picture.latest" + level + ".dateAdded:     #fanarthandler.picture.latest" + level + ".filename";
+                    break;
+                case "96742":
+                    FanartLabel = "#fanarthandler.movingpicture.latest" + level + ".dateAdded:     #fanarthandler.movingpicture.latest" + level + ".title     #fanarthandler.movingpicture.latest" + level + ".runtime     #fanarthandler.movingpicture.latest" + level + ".genre     #fanarthandler.movingpicture.latest" + level + ".year";
+                    break;
+                case "9811":
+                    FanartLabel = "#fanarthandler.tvseries.latest" + level + ".dateAdded:     #fanarthandler.tvseries.latest" + level + ".serieName     #fanarthandler.tvseries.latest" + level + ".seasonIndexx#fanarthandler.tvseries.latest" + level + ".episodeIndex - #fanarthandler.tvseries.latest" + level + ".episodeName     #fanarthandler.tvseries.latest" + level + ".runtime";
+                    break;
+                case "2600":
+                    if (level == "1") FanartLabel = "#infoservice.weather.today.weekday:     #infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location";
+                    if (level == "2") FanartLabel = "#infoservice.weather.forecast2.weekday:     #infoservice.weather.forecast2.day.humidity     #infoservice.weather.forecast2.day.condition     #infoservice.weather.location";
+                    if (level == "3") FanartLabel = "#infoservice.weather.forecast3.weekday:     #infoservice.weather.forecast3.day.humidity     #infoservice.weather.forecast3.day.condition     #infoservice.weather.location";
+                    break;
+                default:
+                    break;
+            }
+            return FanartLabel;
+        }
+
         private void buttonOptions110_Click(object sender, EventArgs e)
         {
             OptionsDialog myOptionDialog = new OptionsDialog();
@@ -4466,6 +3975,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter110.Text;
             myOptionDialog.Hover = textBoxhover110.Text;
             myOptionDialog.Text = "Button 110 Options";
+            myOptionDialog.Fanart = checkBox110.Checked;
+            myOptionDialog.Levels = numericUpDown110.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4473,6 +3985,8 @@ namespace BlackGlassEditor
                 textBox110.Text = myOptionDialog.Description;
                 textBoxParameter110.Text = myOptionDialog.Parameter;
                 textBoxhover110.Text = myOptionDialog.Hover;
+                checkBox110.Checked = myOptionDialog.Fanart;
+                numericUpDown110.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4484,6 +3998,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter111.Text;
             myOptionDialog.Hover = textBoxhover111.Text;
             myOptionDialog.Text = "Button 111 Options";
+            myOptionDialog.Fanart = checkBox111.Checked;
+            myOptionDialog.Levels = numericUpDown111.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4491,6 +4008,8 @@ namespace BlackGlassEditor
                 textBox111.Text = myOptionDialog.Description;
                 textBoxParameter111.Text = myOptionDialog.Parameter;
                 textBoxhover111.Text = myOptionDialog.Hover;
+                checkBox111.Checked = myOptionDialog.Fanart;
+                numericUpDown111.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4502,6 +4021,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter112.Text;
             myOptionDialog.Hover = textBoxhover112.Text;
             myOptionDialog.Text = "Button 112 Options";
+            myOptionDialog.Fanart = checkBox112.Checked;
+            myOptionDialog.Levels = numericUpDown112.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4509,6 +4031,8 @@ namespace BlackGlassEditor
                 textBox112.Text = myOptionDialog.Description;
                 textBoxParameter112.Text = myOptionDialog.Parameter;
                 textBoxhover112.Text = myOptionDialog.Hover;
+                checkBox112.Checked = myOptionDialog.Fanart;
+                numericUpDown112.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4520,6 +4044,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter113.Text;
             myOptionDialog.Hover = textBoxhover113.Text;
             myOptionDialog.Text = "Button 113 Options";
+            myOptionDialog.Fanart = checkBox113.Checked;
+            myOptionDialog.Levels = numericUpDown113.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4527,6 +4054,8 @@ namespace BlackGlassEditor
                 textBox113.Text = myOptionDialog.Description;
                 textBoxParameter113.Text = myOptionDialog.Parameter;
                 textBoxhover113.Text = myOptionDialog.Hover;
+                checkBox113.Checked = myOptionDialog.Fanart;
+                numericUpDown113.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4538,6 +4067,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter114.Text;
             myOptionDialog.Hover = textBoxhover114.Text;
             myOptionDialog.Text = "Button 114 Options";
+            myOptionDialog.Fanart = checkBox114.Checked;
+            myOptionDialog.Levels = numericUpDown114.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4545,6 +4077,8 @@ namespace BlackGlassEditor
                 textBox114.Text = myOptionDialog.Description;
                 textBoxParameter114.Text = myOptionDialog.Parameter;
                 textBoxhover114.Text = myOptionDialog.Hover;
+                checkBox114.Checked = myOptionDialog.Fanart;
+                numericUpDown114.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4556,6 +4090,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter106.Text;
             myOptionDialog.Hover = textBoxhover106.Text;
             myOptionDialog.Text = "Button 106 Options";
+            myOptionDialog.Fanart = checkBox106.Checked;
+            myOptionDialog.Levels = numericUpDown106.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4563,6 +4100,8 @@ namespace BlackGlassEditor
                 textBox106.Text = myOptionDialog.Description;
                 textBoxParameter106.Text = myOptionDialog.Parameter;
                 textBoxhover106.Text = myOptionDialog.Hover;
+                checkBox106.Checked = myOptionDialog.Fanart;
+                numericUpDown106.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4574,6 +4113,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter107.Text;
             myOptionDialog.Hover = textBoxhover107.Text;
             myOptionDialog.Text = "Button 107 Options";
+            myOptionDialog.Fanart = checkBox107.Checked;
+            myOptionDialog.Levels = numericUpDown107.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4581,6 +4123,8 @@ namespace BlackGlassEditor
                 textBox107.Text = myOptionDialog.Description;
                 textBoxParameter107.Text = myOptionDialog.Parameter;
                 textBoxhover107.Text = myOptionDialog.Hover;
+                checkBox107.Checked = myOptionDialog.Fanart;
+                numericUpDown107.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4592,6 +4136,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter108.Text;
             myOptionDialog.Hover = textBoxhover108.Text;
             myOptionDialog.Text = "Button 108 Options";
+            myOptionDialog.Fanart = checkBox108.Checked;
+            myOptionDialog.Levels = numericUpDown108.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4599,6 +4146,8 @@ namespace BlackGlassEditor
                 textBox108.Text = myOptionDialog.Description;
                 textBoxParameter108.Text = myOptionDialog.Parameter;
                 textBoxhover108.Text = myOptionDialog.Hover;
+                checkBox108.Checked = myOptionDialog.Fanart;
+                numericUpDown108.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4610,6 +4159,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter109.Text;
             myOptionDialog.Hover = textBoxhover109.Text;
             myOptionDialog.Text = "Button 109 Options";
+            myOptionDialog.Fanart = checkBox109.Checked;
+            myOptionDialog.Levels = numericUpDown109.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4617,6 +4169,8 @@ namespace BlackGlassEditor
                 textBox109.Text = myOptionDialog.Description;
                 textBoxParameter109.Text = myOptionDialog.Parameter;
                 textBoxhover109.Text = myOptionDialog.Hover;
+                checkBox109.Checked = myOptionDialog.Fanart;
+                numericUpDown109.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4628,6 +4182,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter105.Text;
             myOptionDialog.Hover = textBoxhover105.Text;
             myOptionDialog.Text = "Button 105 Options";
+            myOptionDialog.Fanart = checkBox105.Checked;
+            myOptionDialog.Levels = numericUpDown105.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4635,6 +4192,8 @@ namespace BlackGlassEditor
                 textBox105.Text = myOptionDialog.Description;
                 textBoxParameter105.Text = myOptionDialog.Parameter;
                 textBoxhover105.Text = myOptionDialog.Hover;
+                checkBox105.Checked = myOptionDialog.Fanart;
+                numericUpDown105.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4646,6 +4205,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter104.Text;
             myOptionDialog.Hover = textBoxhover104.Text;
             myOptionDialog.Text = "Button 104 Options";
+            myOptionDialog.Fanart = checkBox104.Checked;
+            myOptionDialog.Levels = numericUpDown104.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4653,6 +4215,8 @@ namespace BlackGlassEditor
                 textBox104.Text = myOptionDialog.Description;
                 textBoxParameter104.Text = myOptionDialog.Parameter;
                 textBoxhover104.Text = myOptionDialog.Hover;
+                checkBox104.Checked = myOptionDialog.Fanart;
+                numericUpDown104.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4664,6 +4228,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter103.Text;
             myOptionDialog.Hover = textBoxhover103.Text;
             myOptionDialog.Text = "Button 103 Options";
+            myOptionDialog.Fanart = checkBox103.Checked;
+            myOptionDialog.Levels = numericUpDown103.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4671,6 +4238,8 @@ namespace BlackGlassEditor
                 textBox103.Text = myOptionDialog.Description;
                 textBoxParameter103.Text = myOptionDialog.Parameter;
                 textBoxhover103.Text = myOptionDialog.Hover;
+                checkBox103.Checked = myOptionDialog.Fanart;
+                numericUpDown103.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4682,6 +4251,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter102.Text;
             myOptionDialog.Hover = textBoxhover102.Text;
             myOptionDialog.Text = "Button 102 Options";
+            myOptionDialog.Fanart = checkBox102.Checked;
+            myOptionDialog.Levels = numericUpDown102.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4689,6 +4261,8 @@ namespace BlackGlassEditor
                 textBox102.Text = myOptionDialog.Description;
                 textBoxParameter102.Text = myOptionDialog.Parameter;
                 textBoxhover102.Text = myOptionDialog.Hover;
+                checkBox102.Checked = myOptionDialog.Fanart;
+                numericUpDown102.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4700,6 +4274,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter101.Text;
             myOptionDialog.Hover = textBoxhover101.Text;
             myOptionDialog.Text = "Button 101 Options";
+            myOptionDialog.Fanart = checkBox101.Checked;
+            myOptionDialog.Levels = numericUpDown101.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4707,6 +4284,8 @@ namespace BlackGlassEditor
                 textBox101.Text = myOptionDialog.Description;
                 textBoxParameter101.Text = myOptionDialog.Parameter;
                 textBoxhover101.Text = myOptionDialog.Hover;
+                checkBox101.Checked = myOptionDialog.Fanart;
+                numericUpDown101.Value = myOptionDialog.Levels;
             }
         }
 
@@ -4718,6 +4297,9 @@ namespace BlackGlassEditor
             myOptionDialog.Parameter = textBoxParameter100.Text;
             myOptionDialog.Hover = textBoxhover100.Text;
             myOptionDialog.Text = "Button 100 Options";
+            myOptionDialog.Fanart = checkBox100.Checked;
+            myOptionDialog.Levels = numericUpDown100.Value;
+            myOptionDialog.ShowFanartControls = true;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4725,6 +4307,8 @@ namespace BlackGlassEditor
                 textBox100.Text = myOptionDialog.Description;
                 textBoxParameter100.Text = myOptionDialog.Parameter;
                 textBoxhover100.Text = myOptionDialog.Hover;
+                checkBox100.Checked = myOptionDialog.Fanart;
+                numericUpDown100.Value = myOptionDialog.Levels;
             }
         }
 
