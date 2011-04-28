@@ -1,231 +1,267 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-  <id>0</id>
-  <defaultcontrol>50</defaultcontrol>
-  <allowoverlay>player.hasmedia</allowoverlay>
-  <disabletopbar>no</disabletopbar>
-  <animation effect="fade" time="250">WindowOpen</animation>
-  <animation effect="fade" time="250">WindowClose</animation>
-  <rememberLastFocusedControl>yes</rememberLastFocusedControl>
-  <controls>
-    <control>
-      <description>background image</description>
-      <type>image</type>
-      <id>1</id>
-      <width>1920</width>
-      <height>1080</height>
-      <texture>basichome_bg.jpg</texture>
-      <animation effect="fade" time="1">WindowClose</animation>
-      <animation effect="fade" time="750">WindowOpen</animation>
-    </control>
-    <control>
-      <description>Menu</description>
-      <type>menu</type>
-      <id>50</id>
-      <posX>1416</posX>
-      <posY>207</posY>
-      <width>507</width>
-      <textcolor>ffffffff</textcolor>
-      <textColorNoFocus>60ffffff</textColorNoFocus>
-      <dimColor>ffffffff</dimColor>
-      <buttonTextXOff>20</buttonTextXOff>
-      <buttonTextYOff>10</buttonTextYOff>
-      <buttonOffset>0</buttonOffset>
-      <buttonFont>font18</buttonFont>
-      <buttonHeight>76</buttonHeight>
-      <spaceBetweenButtons>0</spaceBetweenButtons>
-      <numberOfButtons>9</numberOfButtons>
-      <textureButtonFocus>bg_button_focus.png</textureButtonFocus>
-      <textureButtonNoFocus>bg_button_nofocus.png</textureButtonNoFocus>
-      <hoverX>0</hoverX>
-      <hoverY>0</hoverY>
-      <hoverWidth>1920</hoverWidth>
-      <hoverHeight>1080</hoverHeight>
-      <hoverKeepAspectratio>no</hoverKeepAspectratio>
-      <scrollTime>90</scrollTime>
-      <scrollTimeMin>45</scrollTimeMin>
-      <textureBackground>-</textureBackground>
-      <onright>18</onright>
-      <onleft>18</onleft>
-      <scrollOffset>0</scrollOffset>
-      <animation effect="fade" time="500">VisibleChange</animation>
-    </control>
-    <control>
-      <type>image</type>
-      <posX>1416</posX>
-      <posY>126</posY>
-      <width>510</width>
-      <height>76</height>
-      <texture>bg_button_nofocus.png</texture>
-      <colordiffuse>91000000</colordiffuse>
-    </control>
-    <control>
-      <description>Rss image</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>0</posX>
-      <posY>0</posY>
-      <width>1920</width>
-      <height>1080</height>
-      <texture>hover_infoservice.png</texture>
-      <visible>control.hasfocus(1111)</visible>
-      <animation effect="fade" time="250">visible</animation>
-    </control>
-    <control>
-      <description>Twitter image</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>0</posX>
-      <posY>0</posY>
-      <width>1920</width>
-      <height>1080</height>
-      <texture>hover_twitter.png</texture>
-      <visible>control.hasfocus(1112)</visible>
-      <animation effect="fade" time="250">visible</animation>
-    </control>
-    <control>
-      <description>Extras image</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>0</posX>
-      <posY>0</posY>
-      <width>1920</width>
-      <height>1080</height>
-      <colordiffuse>ffffffff</colordiffuse>
-      <texture>basichome_bg.jpg</texture>
-      <visible>control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)</visible>
-      <animation effect="fade" time="250">visible</animation>
-    </control>
-    <control>
-      <description>Nav image</description>
-      <type>image</type>
-      <id>1</id>
-      <posX>1377</posX>
-      <posY>111</posY>
-      <width>2058</width>
-      <height>867</height>
-      <texture>bg_tvguide.png</texture>
-    </control>
-    <!-- LEFT BUTTONS -->
-    <control>
-      <type>image</type>
-      <id>0</id>
-      <posX>-337</posX>
-      <posY>352</posY>
-      <width>375</width>
-      <height>375</height>
-      <texture>bg_basichome_slide.png</texture>
-      <colorDiffuse>a0ffffff</colorDiffuse>
-      <visible>![control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)]</visible>
-      <animation effect="fade" time="50">WindowClose</animation>
-      <animation effect="fade" time="50">WindowOpen</animation>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <type>actiongroup</type>
-      <description>action menu</description>
-      <defaultcontrol>18</defaultcontrol>
-      <onexit>103</onexit>
-      <buttonX>0</buttonX>
-      <buttonY>360</buttonY>
-      <buttonwidth>105</buttonwidth>
-      <buttonheight>360</buttonheight>
-      <textureFocus>-</textureFocus>
-      <textureNoFocus>-</textureNoFocus>
-      <width>90</width>
-      <height>300</height>
-      <dimColor>ffffffff</dimColor>
-      <visible>[control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)]</visible>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-45,0" reversible="false">visible</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" end="-45,0" reversible="false">hidden</animation>
-      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-      <animation effect="fade" time="250" delay="0">WindowClose</animation>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>-247</posX>
-        <posY>352</posY>
-        <width>375</width>
-        <height>375</height>
-        <texture>bg_basichome_slide.png</texture>
-        <colordiffuse>d0ffffff</colordiffuse>
-      </control>
-      <control>
-        <description>group element</description>
-        <type>group</type>
-        <control>
-          <description>shutdown button</description>
-          <type>button</type>
-          <id>17</id>
-          <posX>15</posX>
-          <posY>427</posY>
-          <width>60</width>
-          <height>60</height>
-          <textureFocus>button_shutdown_focus.png</textureFocus>
-          <textureNoFocus>button_shutdown_nofocus.png</textureNoFocus>
-          <label>1030</label>
-          <textXOff>4500</textXOff>
-          <action>99</action>
-          <onleft>50</onleft>
-          <onright>50</onright>
-          <onup>1111</onup>
-          <ondown>18</ondown>
-        </control>
-        <control>
-          <description>home button</description>
-          <type>button</type>
-          <id>18</id>
-          <posX>15</posX>
-          <posY>510</posY>
-          <width>60</width>
-          <height>60</height>
-          <textureFocus>button_home_focus.png</textureFocus>
-          <textureNoFocus>button_home_nofocus.png</textureNoFocus>
-          <label>2143</label>
-          <textXOff>4500</textXOff>
-          <action>115</action>
-          <onleft>50</onleft>
-          <onright>50</onright>
-          <onup>17</onup>
-          <ondown>19</ondown>
-        </control>
-        <control>
-          <description>exit button</description>
-          <type>button</type>
-          <id>19</id>
-          <posX>15</posX>
-          <posY>600</posY>
-          <width>60</width>
-          <height>60</height>
-          <textureFocus>button_close_focus.png</textureFocus>
-          <textureNoFocus>button_close_nofocus.png</textureNoFocus>
-          <label>4517</label>
-          <textXOff>4500</textXOff>
-          <action>97</action>
-          <onleft>50</onleft>
-          <onright>50</onright>
-          <onup>18</onup>
-          <ondown>1111</ondown>
-        </control>
-      </control>
-    </control>
-    <!-- INFOSERVICE RSS FEED -->
-    <import>myHome_Infoservice.xml</import>
-    <!-- TIME -->
-    <import>common.window.time.xml</import>
-    <!-- FANART SCRAPER -->
-    <import>myHome_Fanart_Scraper.xml</import>
-    <control>
-      <description>New logo</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>39</posX>
-      <posY>22</posY>
-      <width>85</width>
-      <height>64</height>
-      <texture>newlogo.png</texture>
-    </control>
-  </controls>
+	<id>0</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<disabletopbar>no</disabletopbar>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<rememberLastFocusedControl>yes</rememberLastFocusedControl>
+	<controls>
+		<control>
+			<description>background image</description>
+			<type>image</type>
+			<id>1</id>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>basichome_bg.jpg</texture>
+			<animation effect="fade" time="1">WindowClose</animation>
+			<animation effect="fade" time="750">WindowOpen</animation>
+		</control>
+		<control>
+			<description>Menu</description>
+			<type>menu</type>
+			<id>50</id>
+			<posX>1416</posX>
+			<posY>207</posY>
+			<width>507</width>
+			<textcolor>ffffffff</textcolor>
+			<textColorNoFocus>60ffffff</textColorNoFocus>
+			<dimColor>ffffffff</dimColor>
+			<buttonTextXOff>20</buttonTextXOff>
+			<buttonTextYOff>10</buttonTextYOff>
+			<buttonOffset>0</buttonOffset>
+			<buttonFont>font18</buttonFont>
+			<buttonHeight>76</buttonHeight>
+			<spaceBetweenButtons>0</spaceBetweenButtons>
+			<numberOfButtons>9</numberOfButtons>
+			<textureButtonFocus>bg_button_focus.png</textureButtonFocus>
+			<textureButtonNoFocus>bg_button_nofocus.png</textureButtonNoFocus>
+			<hoverX>0</hoverX>
+			<hoverY>0</hoverY>
+			<hoverWidth>1920</hoverWidth>
+			<hoverHeight>1080</hoverHeight>
+			<hoverKeepAspectratio>no</hoverKeepAspectratio>
+			<scrollTime>90</scrollTime>
+			<scrollTimeMin>45</scrollTimeMin>
+			<textureBackground>-</textureBackground>
+			<onright>18</onright>
+			<onleft>18</onleft>
+			<scrollOffset>0</scrollOffset>
+			<animation effect="fade" time="500">VisibleChange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>1416</posX>
+			<posY>126</posY>
+			<width>510</width>
+			<height>76</height>
+			<texture>bg_button_nofocus.png</texture>
+			<colordiffuse>90999999</colordiffuse>
+		</control>
+		<control>
+			<description>Rss image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>hover_infoservice.png</texture>
+			<visible>control.hasfocus(1111)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Twitter image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>hover_twitter.png</texture>
+			<visible>control.hasfocus(1112)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Extras image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1920</width>
+			<height>1080</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<texture>basichome_bg.jpg</texture>
+			<visible>![control.hasfocus(16)|control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)|control.hasfocus(20)]</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Nav image</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>1377</posX>
+			<posY>111</posY>
+			<width>2058</width>
+			<height>867</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		<!-- LEFT BUTTONS -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-501</posX>
+			<posY>264</posY>
+			<width>555</width>
+			<height>555</height>
+			<texture>bg_basichome_slide.png</texture>
+			<colorDiffuse>a0ffffff</colorDiffuse>
+			<visible>![control.hasfocus(16)|control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)|control.hasfocus(20)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>18</defaultcontrol>
+			<onexit>103</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>247</buttonY>
+			<buttonwidth>105</buttonwidth>
+			<buttonheight>555</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>90</width>
+			<height>300</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(16)|control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)|control.hasfocus(20)]</visible>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-45,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-45,0" reversible="false">hidden</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-411</posX>
+				<posY>264</posY>
+				<width>555</width>
+				<height>555</height>
+				<texture>bg_basichome_slide.png</texture>
+				<colordiffuse>d0ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<description>shutdown button</description>
+					<type>button</type>
+					<id>16</id>
+					<posX>15</posX>
+					<posY>352</posY>
+					<width>60</width>
+					<height>60</height>
+					<textureFocus>button_shutdown_focus.png</textureFocus>
+					<textureNoFocus>button_shutdown_nofocus.png</textureNoFocus>
+					<label>1030</label>
+					<textXOff>3000</textXOff>
+					<action>99</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>1111</onup>
+					<ondown>17</ondown>
+				</control>
+				<control>
+					<description>mute button</description>
+					<type>button</type>
+					<id>17</id>
+					<posX>2</posX>
+					<posY>417</posY>
+					<width>87</width>
+					<height>87</height>
+					<textureFocus>volume_mute.png</textureFocus>
+					<textureNoFocus>volume_mute_nf.png</textureNoFocus>
+					<label>200087</label>
+					<textXOff>3000</textXOff>
+					<action>9982</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>16</onup>
+					<ondown>18</ondown>
+				</control>
+				<control>
+					<description>home button</description>
+					<type>button</type>
+					<id>18</id>
+					<posX>15</posX>
+					<posY>510</posY>
+					<width>60</width>
+					<height>60</height>
+					<textureFocus>button_home_focus.png</textureFocus>
+					<textureNoFocus>button_home_nofocus.png</textureNoFocus>
+					<label>2143</label>
+					<textXOff>4500</textXOff>
+					<action>115</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>19</ondown>
+				</control>
+				<control>
+					<description>VideoWallpaper button</description>
+					<type>button</type>
+					<id>19</id>
+					<posX>18</posX>
+					<posY>598</posY>
+					<width>54</width>
+					<height>54</height>
+					<textureFocus>button_fullscreen_focus.png</textureFocus>
+					<textureNoFocus>button_fullscreen_nofocus.png</textureNoFocus>
+					<label>Video Wallpaper</label>
+					<textXOff>3000</textXOff>
+					<action>101</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>18</onup>
+					<ondown>20</ondown>
+				</control>
+				<control>
+					<description>exit button</description>
+					<type>button</type>
+					<id>20</id>
+					<posX>15</posX>
+					<posY>682</posY>
+					<width>60</width>
+					<height>60</height>
+					<textureFocus>button_close_focus.png</textureFocus>
+					<textureNoFocus>button_close_nofocus.png</textureNoFocus>
+					<label>4517</label>
+					<textXOff>3000</textXOff>
+					<action>97</action>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>19</onup>
+					<ondown>1111</ondown>
+				</control>
+			</control>
+		</control>
+		<!-- INFOSERVICE RSS FEED -->
+		<import>myHome_Infoservice.xml</import>
+		<!-- TIME -->
+		<import>common.window.time.xml</import>
+		<!-- FANART SCRAPER -->
+		<import>myHome_Fanart_Scraper.xml</import>
+		<control>
+			<description>New logo</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>39</posX>
+			<posY>22</posY>
+			<width>85</width>
+			<height>64</height>
+			<texture>newlogo.png</texture>
+		</control>
+	</controls>
 </window>
