@@ -85,7 +85,7 @@ namespace BlackGlassEditor
             }
 
             path = System.IO.Path.Combine(Application.StartupPath, "settings.xml");
-			FileStream READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            FileStream READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             System.Xml.XmlDocument Buttons = new System.Xml.XmlDocument();
             Buttons.Load(READER);
@@ -95,7 +95,7 @@ namespace BlackGlassEditor
             XmlNodeList plugin = Buttons.GetElementsByTagName("plugin");
             XmlNodeList fanart = Buttons.GetElementsByTagName("fanart");
             XmlNodeList fanartLevels = Buttons.GetElementsByTagName("fanartLevels");
-			XmlNodeList parameter = Buttons.GetElementsByTagName("parameter");
+            XmlNodeList parameter = Buttons.GetElementsByTagName("parameter");
             comboBox100.SelectedItem = findPluginName(Int32.Parse(plugin[0].InnerText));
             comboBox101.SelectedItem = findPluginName(Int32.Parse(plugin[1].InnerText));
             comboBox102.SelectedItem = findPluginName(Int32.Parse(plugin[2].InnerText));
@@ -128,7 +128,7 @@ namespace BlackGlassEditor
             textBox113.Text = name[13].InnerText;
             textBox114.Text = name[14].InnerText;
 
-			textBoxParameter100.Text = parameter[0].InnerText;
+            textBoxParameter100.Text = parameter[0].InnerText;
             textBoxParameter101.Text = parameter[1].InnerText;
             textBoxParameter102.Text = parameter[2].InnerText;
             textBoxParameter103.Text = parameter[3].InnerText;
@@ -143,7 +143,7 @@ namespace BlackGlassEditor
             textBoxParameter112.Text = parameter[12].InnerText;
             textBoxParameter113.Text = parameter[13].InnerText;
             textBoxParameter114.Text = parameter[14].InnerText;
-  
+
             if (plugin[0].InnerText != "0") textBoxid100.Text = plugin[0].InnerText;
             if (plugin[1].InnerText != "0") textBoxid101.Text = plugin[1].InnerText;
             if (plugin[2].InnerText != "0") textBoxid102.Text = plugin[2].InnerText;
@@ -187,7 +187,7 @@ namespace BlackGlassEditor
             numericUpDown112.Value = decimal.Parse(fanartLevels[12].InnerText);
             numericUpDown113.Value = decimal.Parse(fanartLevels[13].InnerText);
             numericUpDown114.Value = decimal.Parse(fanartLevels[14].InnerText);
- 
+
 
             String ApplicationPath = Application.StartupPath;
 
@@ -452,7 +452,7 @@ namespace BlackGlassEditor
                 bottomleftX = Convert.ToInt32(bottomleftX * 1.5); bottomleftY = Convert.ToInt32(bottomleftY * 1.5);
                 bottomrightX = Convert.ToInt32(bottomrightX * 1.5); bottomrightY = Convert.ToInt32(bottomrightY * 1.5);
                 offsetX = Convert.ToInt32(offsetX * 1.5); offsetY = Convert.ToInt32(offsetY * 1.5);
-                
+
 
                 topleft = new Point(topleftX, topleftY);
                 topright = new Point(toprightX, toprightY);
@@ -1447,7 +1447,7 @@ namespace BlackGlassEditor
         {
             textBox100.Text = comboBox100.Text;
             textBoxid100.Text = findPlugin(comboBox100.Text).ToString();
-			textBoxParameter100.Text = "";
+            textBoxParameter100.Text = "";
             if (comboBox100.Text == "Empty Button") { textBox100.Text = ""; textBoxid100.Text = ""; };
         }
         private void comboBox101_SelectedIndexChanged(object sender, EventArgs e)
@@ -2069,7 +2069,7 @@ namespace BlackGlassEditor
 
                 try
                 {
-                    TextWriter tw = new StreamWriter(path,false,Encoding.UTF8);
+                    TextWriter tw = new StreamWriter(path, false, Encoding.UTF8);
                     //TextWriter tw = new StreamWriter(path);
                     tw.Write(txt);
                     tw.Close();
@@ -2119,7 +2119,7 @@ namespace BlackGlassEditor
 
                 String path = System.IO.Path.Combine(Application.StartupPath, "settings.xml");
                 // Create a new file in C:\\ dir
-                XmlTextWriter textWriter = new XmlTextWriter(path,Encoding.UTF8);
+                XmlTextWriter textWriter = new XmlTextWriter(path, Encoding.UTF8);
                 textWriter.Formatting = Formatting.Indented;
                 // Opens the document
                 textWriter.WriteStartDocument();
@@ -2245,7 +2245,7 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("fanart", "");
                 textWriter.WriteString(SecurityElement.Escape(checkBox105.Checked.ToString()));
                 textWriter.WriteEndElement();
-				textWriter.WriteStartElement("fanartLevels", "");
+                textWriter.WriteStartElement("fanartLevels", "");
                 textWriter.WriteString(SecurityElement.Escape(numericUpDown105.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
@@ -3148,7 +3148,7 @@ namespace BlackGlassEditor
             String labelTextbox = String.Empty;
             String delayOpen = String.Empty;
             String delayClose = String.Empty;
-            
+
             switch (id)
             {
                 case "100":
@@ -3326,7 +3326,7 @@ namespace BlackGlassEditor
                     break;
             }
 
-			String xmloutput = @" 
+            String xmloutput = @" 
 		<control>
 			<description>" + id + @" button</description>
 			<type>button</type>
@@ -3354,7 +3354,7 @@ namespace BlackGlassEditor
 
             return xmloutput;
         }
- 
+
 
         private String buildFanartImageXml(String id)
         {
@@ -3377,105 +3377,107 @@ namespace BlackGlassEditor
             String text_trick1 = String.Empty;
             String text_trick2 = String.Empty;
             String text_trick3 = String.Empty;
-            Int32 fanartLevel = 1;
+            Decimal fanartLevel = 1M;
             String fanartLabel1 = String.Empty;
             String fanartLabel2 = String.Empty;
             String fanartLabel3 = String.Empty;
-   
+
 
             switch (id)
             {
                 case "100":
-                    labelTextbox = SecurityElement.Escape(textBox100.Text); idTextbox = SecurityElement.Escape(textBoxid100.Text); fanartLevel = Int32.Parse(numericUpDown100.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox100.Text); idTextbox = SecurityElement.Escape(textBoxid100.Text); fanartLevel = numericUpDown100.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "100"; posY = "398"; width = "239"; height = "245";
                     break;
                 case "101":
-                    labelTextbox = SecurityElement.Escape(textBox101.Text); idTextbox = SecurityElement.Escape(textBoxid101.Text); fanartLevel = Int32.Parse(numericUpDown101.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox101.Text); idTextbox = SecurityElement.Escape(textBoxid101.Text); fanartLevel = numericUpDown101.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "336"; posY = "410"; width = "209"; height = "214";
                     break;
                 case "102":
-                    labelTextbox = SecurityElement.Escape(textBox102.Text); idTextbox = SecurityElement.Escape(textBoxid102.Text); fanartLevel = Int32.Parse(numericUpDown102.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox102.Text); idTextbox = SecurityElement.Escape(textBoxid102.Text); fanartLevel = numericUpDown102.Value;
                     delayOpen = "250"; delayClose = "0"; posX = "542"; posY = "414"; width = "196"; height = "205";
                     break;
                 case "103":
-                    labelTextbox = SecurityElement.Escape(textBox103.Text); idTextbox = SecurityElement.Escape(textBoxid103.Text); fanartLevel = Int32.Parse(numericUpDown103.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox103.Text); idTextbox = SecurityElement.Escape(textBoxid103.Text); fanartLevel = numericUpDown103.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "736"; posY = "410"; width = "209"; height = "215";
                     break;
                 case "104":
-                    labelTextbox = SecurityElement.Escape(textBox104.Text); idTextbox = SecurityElement.Escape(textBoxid104.Text); fanartLevel = Int32.Parse(numericUpDown104.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox104.Text); idTextbox = SecurityElement.Escape(textBoxid104.Text); fanartLevel = numericUpDown104.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "941"; posY = "398"; width = "239"; height = "242";
                     break;
                 case "105":
-                    labelTextbox = SecurityElement.Escape(textBox105.Text); idTextbox = SecurityElement.Escape(textBoxid105.Text); fanartLevel = Int32.Parse(numericUpDown105.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox105.Text); idTextbox = SecurityElement.Escape(textBoxid105.Text); fanartLevel = numericUpDown105.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "185"; posY = "356"; width = "319"; height = "241";
                     break;
                 case "106":
-                    labelTextbox = SecurityElement.Escape(textBox106.Text); idTextbox = SecurityElement.Escape(textBoxid106.Text); fanartLevel = Int32.Parse(numericUpDown106.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox106.Text); idTextbox = SecurityElement.Escape(textBoxid106.Text); fanartLevel = numericUpDown106.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "528"; posY = "414"; width = "277"; height = "194";
                     break;
                 case "107":
-                    labelTextbox = SecurityElement.Escape(textBox107.Text); idTextbox = SecurityElement.Escape(textBoxid107.Text); fanartLevel = Int32.Parse(numericUpDown107.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox107.Text); idTextbox = SecurityElement.Escape(textBoxid107.Text); fanartLevel = numericUpDown107.Value;
                     delayOpen = "250"; delayClose = "0"; posX = "829"; posY = "439"; width = "261"; height = "172";
                     break;
                 case "108":
-                    labelTextbox = SecurityElement.Escape(textBox108.Text); idTextbox = SecurityElement.Escape(textBoxid108.Text); fanartLevel = Int32.Parse(numericUpDown108.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox108.Text); idTextbox = SecurityElement.Escape(textBoxid108.Text); fanartLevel = numericUpDown108.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "1114"; posY = "414"; width = "278"; height = "194";
                     break;
                 case "109":
-                    labelTextbox = SecurityElement.Escape(textBox109.Text); idTextbox = SecurityElement.Escape(textBoxid109.Text); fanartLevel = Int32.Parse(numericUpDown109.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox109.Text); idTextbox = SecurityElement.Escape(textBoxid109.Text); fanartLevel = numericUpDown109.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "1417"; posY = "356"; width = "318"; height = "241";
                     break;
                 case "110":
-                    labelTextbox = SecurityElement.Escape(textBox110.Text); idTextbox = SecurityElement.Escape(textBoxid110.Text); fanartLevel = Int32.Parse(numericUpDown110.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox110.Text); idTextbox = SecurityElement.Escape(textBoxid110.Text); fanartLevel = numericUpDown110.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "203"; posY = "123"; width = "310"; height = "263";
                     break;
                 case "111":
-                    labelTextbox = SecurityElement.Escape(textBox111.Text); idTextbox = SecurityElement.Escape(textBoxid111.Text); fanartLevel = Int32.Parse(numericUpDown111.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox111.Text); idTextbox = SecurityElement.Escape(textBoxid111.Text); fanartLevel = numericUpDown111.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "537"; posY = "217"; width = "271"; height = "199";
                     break;
                 case "112":
-                    labelTextbox = SecurityElement.Escape(textBox112.Text); idTextbox = SecurityElement.Escape(textBoxid112.Text); fanartLevel = Int32.Parse(numericUpDown112.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox112.Text); idTextbox = SecurityElement.Escape(textBoxid112.Text); fanartLevel = numericUpDown112.Value;
                     delayOpen = "250"; delayClose = "0"; posX = "832"; posY = "253"; width = "254"; height = "166";
                     break;
                 case "113":
-                    labelTextbox = SecurityElement.Escape(textBox113.Text); idTextbox = SecurityElement.Escape(textBoxid113.Text); fanartLevel = Int32.Parse(numericUpDown113.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox113.Text); idTextbox = SecurityElement.Escape(textBoxid113.Text); fanartLevel = numericUpDown113.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "1111"; posY = "216"; width = "272"; height = "199";
                     break;
                 case "114":
-                    labelTextbox = SecurityElement.Escape(textBox114.Text); idTextbox = SecurityElement.Escape(textBoxid114.Text); fanartLevel = Int32.Parse(numericUpDown114.Value.ToString());
+                    labelTextbox = SecurityElement.Escape(textBox114.Text); idTextbox = SecurityElement.Escape(textBoxid114.Text); fanartLevel = numericUpDown114.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "1408"; posY = "123"; width = "308"; height = "263";
                     break;
             }
 
-            switch (fanartLevel)
+
+            if (fanartLevel == 1.0M)
             {
-                case 1:
-                    texture_name1 = findFanartTexture(idTextbox, fanartLevel.ToString());
-                    pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
-                    text_trick1 = findTextTrick(idTextbox, "1");
-                    fanartLabel1 = findFanartLabel(idTextbox, "1");
-                    break;
-                case 2:
-                    texture_name1 = findFanartTexture(idTextbox, fanartLevel.ToString()); texture_name2 = findFanartTexture(idTextbox, (fanartLevel - 1).ToString());
-                    pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest2.thumb,Folder.jpg)";  pictures_plugin_trick2 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
-                    text_trick1 = findTextTrick(idTextbox, "2"); text_trick2 = findTextTrick(idTextbox, "1"); 
-                    fanartLabel1 = findFanartLabel(idTextbox, "2"); fanartLabel2 = findFanartLabel(idTextbox, "1");
-                    break;
-                case 3:
-                    texture_name1 = findFanartTexture(idTextbox, fanartLevel.ToString()); texture_name2 = findFanartTexture(idTextbox, (fanartLevel - 1).ToString()); texture_name3 = findFanartTexture(idTextbox, (fanartLevel - 2).ToString());
-                    pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest3.thumb,Folder.jpg)"; pictures_plugin_trick2 = "+!string.contains(#fanarthandler.picture.latest2.thumb,Folder.jpg)"; pictures_plugin_trick3 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
-                    text_trick1 = findTextTrick(idTextbox, "3"); text_trick2 = findTextTrick(idTextbox, "2"); text_trick3 = findTextTrick(idTextbox, "1"); 
-                    fanartLabel1 = findFanartLabel(idTextbox, "3"); fanartLabel2 = findFanartLabel(idTextbox, "2"); fanartLabel3 = findFanartLabel(idTextbox, "1");
-                    break;
+                texture_name1 = findFanartTexture(idTextbox, "1");
+                pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                text_trick1 = findTextTrick(idTextbox, "1");
+                fanartLabel1 = findFanartLabel(idTextbox, "1");
             }
+            if (fanartLevel == 2.0M)
+            {
+                texture_name1 = findFanartTexture(idTextbox, "2"); texture_name2 = findFanartTexture(idTextbox, "1");
+                pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest2.thumb,Folder.jpg)"; pictures_plugin_trick2 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                text_trick1 = findTextTrick(idTextbox, "2"); text_trick2 = findTextTrick(idTextbox, "1");
+                fanartLabel1 = findFanartLabel(idTextbox, "2"); fanartLabel2 = findFanartLabel(idTextbox, "1");
+            }
+            if (fanartLevel == 3.0M)
+            {
+                texture_name1 = findFanartTexture(idTextbox, "3"); texture_name2 = findFanartTexture(idTextbox, "2"); texture_name3 = findFanartTexture(idTextbox, "1");
+                pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest3.thumb,Folder.jpg)"; pictures_plugin_trick2 = "+!string.contains(#fanarthandler.picture.latest2.thumb,Folder.jpg)"; pictures_plugin_trick3 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                text_trick1 = findTextTrick(idTextbox, "3"); text_trick2 = findTextTrick(idTextbox, "2"); text_trick3 = findTextTrick(idTextbox, "1");
+                fanartLabel1 = findFanartLabel(idTextbox, "3"); fanartLabel2 = findFanartLabel(idTextbox, "2"); fanartLabel3 = findFanartLabel(idTextbox, "1");
+            }
+
 
             plugin_name = findFanartPluginName(idTextbox);
             if (idTextbox != "2") { pictures_plugin_trick1 = String.Empty; pictures_plugin_trick2 = String.Empty; pictures_plugin_trick3 = String.Empty; }
-            
-            
+
+
             String xmloutput = String.Empty;
 
-            if (fanartLevel == 1) xmloutput = @" 
+            if (fanartLevel == 1.0M) xmloutput = @" 
 		<control>
 			<description>" + id + @"00 fanart focused</description>
 			<type>image</type>
@@ -3512,7 +3514,7 @@ namespace BlackGlassEditor
 
         ";
 
-            if (fanartLevel == 2) xmloutput = @" 
+            if (fanartLevel == 2.0M) xmloutput = @" 
 		<control>
 			<description>" + id + @"00 fanart focused</description>
 			<type>image</type>
@@ -3583,7 +3585,7 @@ namespace BlackGlassEditor
 
         ";
 
-            if (fanartLevel == 3) xmloutput = @" 
+            if (fanartLevel == 3.0M) xmloutput = @" 
 		<control>
 			<description>" + id + @"00 fanart focused</description>
 			<type>image</type>
@@ -3663,7 +3665,7 @@ namespace BlackGlassEditor
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<texture mask=""basichome_" + id + @"_mask.png"">" + texture_name3+ @"</texture>
+			<texture mask=""basichome_" + id + @"_mask.png"">" + texture_name3 + @"</texture>
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick3 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
@@ -3691,9 +3693,9 @@ namespace BlackGlassEditor
 
             return xmloutput;
         }
-           
 
-         private void numericUpDownColor_ValueChanged(object sender, EventArgs e)
+
+        private void numericUpDownColor_ValueChanged(object sender, EventArgs e)
         {
             radioButtonCustomColor.Checked = true;
 
@@ -3942,7 +3944,7 @@ namespace BlackGlassEditor
             {
                 textBoxid114.Text = myOptionDialog.Id;
                 textBox114.Text = myOptionDialog.Description;
-                textBoxParameter114.Text = myOptionDialog.Parameter; 
+                textBoxParameter114.Text = myOptionDialog.Parameter;
                 checkBox114.Checked = myOptionDialog.Fanart;
                 numericUpDown114.Value = myOptionDialog.Levels;
             }
@@ -3996,11 +3998,11 @@ namespace BlackGlassEditor
             myOptionDialog.Id = textBoxid108.Text;
             myOptionDialog.Description = textBox108.Text;
             myOptionDialog.Parameter = textBoxParameter108.Text;
-            myOptionDialog.Text = "Button 108 Options"; 
+            myOptionDialog.Text = "Button 108 Options";
             myOptionDialog.Fanart = checkBox108.Checked;
             myOptionDialog.Levels = numericUpDown108.Value;
             myOptionDialog.ShowFanartControls = true;
-            
+
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid108.Text = myOptionDialog.Id;
@@ -4042,7 +4044,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox105.Checked;
             myOptionDialog.Levels = numericUpDown105.Value;
             myOptionDialog.ShowFanartControls = true;
-            
+
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
                 textBoxid105.Text = myOptionDialog.Id;
