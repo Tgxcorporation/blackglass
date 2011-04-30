@@ -44,13 +44,16 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox111 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown111 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions111 = new System.Windows.Forms.Button();
             this.textBoxParameter111 = new System.Windows.Forms.TextBox();
             this.checkBox111 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty111 = new System.Windows.Forms.Button();
             this.textBoxid111 = new System.Windows.Forms.TextBox();
             this.groupBox100 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown100 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions100 = new System.Windows.Forms.Button();
+            this.checkBox100 = new System.Windows.Forms.CheckBox();
             this.button10 = new System.Windows.Forms.Button();
             this.textBoxParameter100 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
@@ -61,6 +64,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox100 = new System.Windows.Forms.ComboBox();
             this.groupBox105 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown105 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions105 = new System.Windows.Forms.Button();
             this.textBoxParameter105 = new System.Windows.Forms.TextBox();
             this.textBox105 = new System.Windows.Forms.TextBox();
@@ -88,6 +92,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox110 = new System.Windows.Forms.ComboBox();
             this.groupBox112 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown112 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions112 = new System.Windows.Forms.Button();
             this.textBoxParameter112 = new System.Windows.Forms.TextBox();
             this.textBox112 = new System.Windows.Forms.TextBox();
@@ -101,6 +106,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox112 = new System.Windows.Forms.ComboBox();
             this.groupBox113 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown113 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions113 = new System.Windows.Forms.Button();
             this.textBoxParameter113 = new System.Windows.Forms.TextBox();
             this.textBox113 = new System.Windows.Forms.TextBox();
@@ -114,6 +120,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox113 = new System.Windows.Forms.ComboBox();
             this.groupBox114 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown114 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions114 = new System.Windows.Forms.Button();
             this.textBoxParameter114 = new System.Windows.Forms.TextBox();
             this.textBox114 = new System.Windows.Forms.TextBox();
@@ -128,6 +135,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox114 = new System.Windows.Forms.ComboBox();
             this.groupBox106 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown106 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions106 = new System.Windows.Forms.Button();
             this.textBoxParameter106 = new System.Windows.Forms.TextBox();
             this.textBox106 = new System.Windows.Forms.TextBox();
@@ -141,6 +149,7 @@
             this.buttonSave106f = new System.Windows.Forms.Button();
             this.buttonSave106u = new System.Windows.Forms.Button();
             this.groupBox107 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown107 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions107 = new System.Windows.Forms.Button();
             this.textBoxParameter107 = new System.Windows.Forms.TextBox();
             this.textBox107 = new System.Windows.Forms.TextBox();
@@ -154,6 +163,7 @@
             this.buttonSave107f = new System.Windows.Forms.Button();
             this.buttonSave107u = new System.Windows.Forms.Button();
             this.groupBox108 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown108 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions108 = new System.Windows.Forms.Button();
             this.textBoxParameter108 = new System.Windows.Forms.TextBox();
             this.textBox108 = new System.Windows.Forms.TextBox();
@@ -167,6 +177,7 @@
             this.buttonSave108f = new System.Windows.Forms.Button();
             this.buttonSave108u = new System.Windows.Forms.Button();
             this.groupBox109 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown109 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions109 = new System.Windows.Forms.Button();
             this.textBoxParameter109 = new System.Windows.Forms.TextBox();
             this.textBox109 = new System.Windows.Forms.TextBox();
@@ -180,7 +191,9 @@
             this.buttonSave109f = new System.Windows.Forms.Button();
             this.buttonSave109u = new System.Windows.Forms.Button();
             this.groupBox101 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown101 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions101 = new System.Windows.Forms.Button();
+            this.checkBox101 = new System.Windows.Forms.CheckBox();
             this.button14 = new System.Windows.Forms.Button();
             this.textBoxParameter101 = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
@@ -195,7 +208,9 @@
             this.buttonSave101f = new System.Windows.Forms.Button();
             this.buttonSave101u = new System.Windows.Forms.Button();
             this.groupBox102 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown102 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions102 = new System.Windows.Forms.Button();
+            this.checkBox102 = new System.Windows.Forms.CheckBox();
             this.button18 = new System.Windows.Forms.Button();
             this.textBoxParameter102 = new System.Windows.Forms.TextBox();
             this.button19 = new System.Windows.Forms.Button();
@@ -210,7 +225,9 @@
             this.buttonSave102f = new System.Windows.Forms.Button();
             this.buttonSave102u = new System.Windows.Forms.Button();
             this.groupBox103 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown103 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions103 = new System.Windows.Forms.Button();
+            this.checkBox103 = new System.Windows.Forms.CheckBox();
             this.button22 = new System.Windows.Forms.Button();
             this.textBoxParameter103 = new System.Windows.Forms.TextBox();
             this.button23 = new System.Windows.Forms.Button();
@@ -225,7 +242,9 @@
             this.buttonSave103f = new System.Windows.Forms.Button();
             this.buttonSave103u = new System.Windows.Forms.Button();
             this.groupBox104 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown104 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions104 = new System.Windows.Forms.Button();
+            this.checkBox104 = new System.Windows.Forms.CheckBox();
             this.button26 = new System.Windows.Forms.Button();
             this.textBoxParameter104 = new System.Windows.Forms.TextBox();
             this.button27 = new System.Windows.Forms.Button();
@@ -248,72 +267,54 @@
             this.numericUpDownColor = new System.Windows.Forms.NumericUpDown();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.numericUpDown111 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown112 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown113 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown114 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown109 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown108 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown107 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown106 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown105 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown100 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox100 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown101 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox101 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown102 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox102 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown103 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox103 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown104 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox104 = new System.Windows.Forms.CheckBox();
+            this.progressBarBuild = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox111)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox100)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.groupBox111.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown111)).BeginInit();
             this.groupBox100.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).BeginInit();
             this.groupBox105.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown105)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox105)).BeginInit();
             this.groupBox110.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown110)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox110)).BeginInit();
             this.groupBox112.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown112)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox112)).BeginInit();
             this.groupBox113.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown113)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox113)).BeginInit();
             this.groupBox114.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox114)).BeginInit();
             this.groupBox106.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown106)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox106)).BeginInit();
             this.groupBox107.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown107)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox107)).BeginInit();
             this.groupBox108.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown108)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox108)).BeginInit();
             this.groupBox109.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown109)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox109)).BeginInit();
             this.groupBox101.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown101)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox101)).BeginInit();
             this.groupBox102.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown102)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox102)).BeginInit();
             this.groupBox103.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown103)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox103)).BeginInit();
             this.groupBox104.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown104)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox104)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown111)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown112)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown113)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown109)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown108)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown107)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown106)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown105)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown101)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown102)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown103)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown104)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLoad111
@@ -435,11 +436,14 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.AutoSize = false;
+            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 645);
+            this.statusStrip1.Location = new System.Drawing.Point(12, 642);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1199, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(705, 22);
+            this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 18;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -470,6 +474,29 @@
             this.groupBox111.TabIndex = 20;
             this.groupBox111.TabStop = false;
             this.groupBox111.Text = "Button ID 111";
+            // 
+            // numericUpDown111
+            // 
+            this.numericUpDown111.Location = new System.Drawing.Point(99, 98);
+            this.numericUpDown111.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown111.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown111.Name = "numericUpDown111";
+            this.numericUpDown111.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown111.TabIndex = 55;
+            this.numericUpDown111.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown111.Visible = false;
             // 
             // buttonOptions111
             // 
@@ -549,6 +576,29 @@
             this.groupBox100.TabStop = false;
             this.groupBox100.Text = "Button ID 100";
             // 
+            // numericUpDown100
+            // 
+            this.numericUpDown100.Location = new System.Drawing.Point(99, 124);
+            this.numericUpDown100.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown100.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown100.Name = "numericUpDown100";
+            this.numericUpDown100.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown100.TabIndex = 64;
+            this.numericUpDown100.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown100.Visible = false;
+            // 
             // buttonOptions100
             // 
             this.buttonOptions100.Location = new System.Drawing.Point(140, 169);
@@ -558,6 +608,20 @@
             this.buttonOptions100.Text = "Options";
             this.buttonOptions100.UseVisualStyleBackColor = true;
             this.buttonOptions100.Click += new System.EventHandler(this.buttonOptions100_Click);
+            // 
+            // checkBox100
+            // 
+            this.checkBox100.AutoSize = true;
+            this.checkBox100.BackColor = System.Drawing.Color.Black;
+            this.checkBox100.ForeColor = System.Drawing.Color.White;
+            this.checkBox100.Location = new System.Drawing.Point(7, 122);
+            this.checkBox100.Name = "checkBox100";
+            this.checkBox100.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox100.Size = new System.Drawing.Size(84, 21);
+            this.checkBox100.TabIndex = 63;
+            this.checkBox100.Text = "Fanart?";
+            this.checkBox100.UseVisualStyleBackColor = false;
+            this.checkBox100.Visible = false;
             // 
             // button10
             // 
@@ -664,6 +728,29 @@
             this.groupBox105.TabIndex = 26;
             this.groupBox105.TabStop = false;
             this.groupBox105.Text = "Button ID 105";
+            // 
+            // numericUpDown105
+            // 
+            this.numericUpDown105.Location = new System.Drawing.Point(99, 92);
+            this.numericUpDown105.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown105.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown105.Name = "numericUpDown105";
+            this.numericUpDown105.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown105.TabIndex = 62;
+            this.numericUpDown105.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown105.Visible = false;
             // 
             // buttonOptions105
             // 
@@ -975,6 +1062,29 @@
             this.groupBox112.TabStop = false;
             this.groupBox112.Text = "Button ID 112";
             // 
+            // numericUpDown112
+            // 
+            this.numericUpDown112.Location = new System.Drawing.Point(99, 98);
+            this.numericUpDown112.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown112.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown112.Name = "numericUpDown112";
+            this.numericUpDown112.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown112.TabIndex = 56;
+            this.numericUpDown112.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown112.Visible = false;
+            // 
             // buttonOptions112
             // 
             this.buttonOptions112.Location = new System.Drawing.Point(140, 142);
@@ -1117,6 +1227,29 @@
             this.groupBox113.TabIndex = 28;
             this.groupBox113.TabStop = false;
             this.groupBox113.Text = "Button ID 113";
+            // 
+            // numericUpDown113
+            // 
+            this.numericUpDown113.Location = new System.Drawing.Point(99, 98);
+            this.numericUpDown113.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown113.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown113.Name = "numericUpDown113";
+            this.numericUpDown113.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown113.TabIndex = 57;
+            this.numericUpDown113.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown113.Visible = false;
             // 
             // buttonOptions113
             // 
@@ -1261,6 +1394,29 @@
             this.groupBox114.TabIndex = 29;
             this.groupBox114.TabStop = false;
             this.groupBox114.Text = "Button ID 114";
+            // 
+            // numericUpDown114
+            // 
+            this.numericUpDown114.Location = new System.Drawing.Point(100, 98);
+            this.numericUpDown114.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown114.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown114.Name = "numericUpDown114";
+            this.numericUpDown114.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown114.TabIndex = 56;
+            this.numericUpDown114.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown114.Visible = false;
             // 
             // buttonOptions114
             // 
@@ -1415,6 +1571,29 @@
             this.groupBox106.TabStop = false;
             this.groupBox106.Text = "Button ID 106";
             // 
+            // numericUpDown106
+            // 
+            this.numericUpDown106.Location = new System.Drawing.Point(99, 92);
+            this.numericUpDown106.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown106.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown106.Name = "numericUpDown106";
+            this.numericUpDown106.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown106.TabIndex = 58;
+            this.numericUpDown106.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown106.Visible = false;
+            // 
             // buttonOptions106
             // 
             this.buttonOptions106.Location = new System.Drawing.Point(140, 136);
@@ -1558,6 +1737,29 @@
             this.groupBox107.TabIndex = 27;
             this.groupBox107.TabStop = false;
             this.groupBox107.Text = "Button ID 107";
+            // 
+            // numericUpDown107
+            // 
+            this.numericUpDown107.Location = new System.Drawing.Point(99, 92);
+            this.numericUpDown107.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown107.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown107.Name = "numericUpDown107";
+            this.numericUpDown107.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown107.TabIndex = 60;
+            this.numericUpDown107.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown107.Visible = false;
             // 
             // buttonOptions107
             // 
@@ -1703,6 +1905,29 @@
             this.groupBox108.TabStop = false;
             this.groupBox108.Text = "Button ID 108";
             // 
+            // numericUpDown108
+            // 
+            this.numericUpDown108.Location = new System.Drawing.Point(99, 92);
+            this.numericUpDown108.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown108.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown108.Name = "numericUpDown108";
+            this.numericUpDown108.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown108.TabIndex = 61;
+            this.numericUpDown108.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown108.Visible = false;
+            // 
             // buttonOptions108
             // 
             this.buttonOptions108.Location = new System.Drawing.Point(140, 136);
@@ -1846,6 +2071,29 @@
             this.groupBox109.TabIndex = 27;
             this.groupBox109.TabStop = false;
             this.groupBox109.Text = "Button ID 109";
+            // 
+            // numericUpDown109
+            // 
+            this.numericUpDown109.Location = new System.Drawing.Point(99, 92);
+            this.numericUpDown109.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown109.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown109.Name = "numericUpDown109";
+            this.numericUpDown109.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown109.TabIndex = 59;
+            this.numericUpDown109.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown109.Visible = false;
             // 
             // buttonOptions109
             // 
@@ -1994,6 +2242,29 @@
             this.groupBox101.TabStop = false;
             this.groupBox101.Text = "Button ID 101";
             // 
+            // numericUpDown101
+            // 
+            this.numericUpDown101.Location = new System.Drawing.Point(99, 124);
+            this.numericUpDown101.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown101.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown101.Name = "numericUpDown101";
+            this.numericUpDown101.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown101.TabIndex = 71;
+            this.numericUpDown101.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown101.Visible = false;
+            // 
             // buttonOptions101
             // 
             this.buttonOptions101.Location = new System.Drawing.Point(140, 169);
@@ -2003,6 +2274,20 @@
             this.buttonOptions101.Text = "Options";
             this.buttonOptions101.UseVisualStyleBackColor = true;
             this.buttonOptions101.Click += new System.EventHandler(this.buttonOptions101_Click);
+            // 
+            // checkBox101
+            // 
+            this.checkBox101.AutoSize = true;
+            this.checkBox101.BackColor = System.Drawing.Color.Black;
+            this.checkBox101.ForeColor = System.Drawing.Color.White;
+            this.checkBox101.Location = new System.Drawing.Point(7, 122);
+            this.checkBox101.Name = "checkBox101";
+            this.checkBox101.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox101.Size = new System.Drawing.Size(84, 21);
+            this.checkBox101.TabIndex = 70;
+            this.checkBox101.Text = "Fanart?";
+            this.checkBox101.UseVisualStyleBackColor = false;
+            this.checkBox101.Visible = false;
             // 
             // button14
             // 
@@ -2154,6 +2439,29 @@
             this.groupBox102.TabStop = false;
             this.groupBox102.Text = "Button ID 102";
             // 
+            // numericUpDown102
+            // 
+            this.numericUpDown102.Location = new System.Drawing.Point(99, 124);
+            this.numericUpDown102.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown102.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown102.Name = "numericUpDown102";
+            this.numericUpDown102.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown102.TabIndex = 75;
+            this.numericUpDown102.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown102.Visible = false;
+            // 
             // buttonOptions102
             // 
             this.buttonOptions102.Location = new System.Drawing.Point(140, 169);
@@ -2163,6 +2471,20 @@
             this.buttonOptions102.Text = "Options";
             this.buttonOptions102.UseVisualStyleBackColor = true;
             this.buttonOptions102.Click += new System.EventHandler(this.buttonOptions102_Click);
+            // 
+            // checkBox102
+            // 
+            this.checkBox102.AutoSize = true;
+            this.checkBox102.BackColor = System.Drawing.Color.Black;
+            this.checkBox102.ForeColor = System.Drawing.Color.White;
+            this.checkBox102.Location = new System.Drawing.Point(7, 122);
+            this.checkBox102.Name = "checkBox102";
+            this.checkBox102.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox102.Size = new System.Drawing.Size(84, 21);
+            this.checkBox102.TabIndex = 74;
+            this.checkBox102.Text = "Fanart?";
+            this.checkBox102.UseVisualStyleBackColor = false;
+            this.checkBox102.Visible = false;
             // 
             // button18
             // 
@@ -2314,6 +2636,29 @@
             this.groupBox103.TabStop = false;
             this.groupBox103.Text = "Button ID 103";
             // 
+            // numericUpDown103
+            // 
+            this.numericUpDown103.Location = new System.Drawing.Point(99, 124);
+            this.numericUpDown103.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown103.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown103.Name = "numericUpDown103";
+            this.numericUpDown103.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown103.TabIndex = 79;
+            this.numericUpDown103.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown103.Visible = false;
+            // 
             // buttonOptions103
             // 
             this.buttonOptions103.Location = new System.Drawing.Point(140, 169);
@@ -2323,6 +2668,20 @@
             this.buttonOptions103.Text = "Options";
             this.buttonOptions103.UseVisualStyleBackColor = true;
             this.buttonOptions103.Click += new System.EventHandler(this.buttonOptions103_Click);
+            // 
+            // checkBox103
+            // 
+            this.checkBox103.AutoSize = true;
+            this.checkBox103.BackColor = System.Drawing.Color.Black;
+            this.checkBox103.ForeColor = System.Drawing.Color.White;
+            this.checkBox103.Location = new System.Drawing.Point(7, 122);
+            this.checkBox103.Name = "checkBox103";
+            this.checkBox103.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox103.Size = new System.Drawing.Size(84, 21);
+            this.checkBox103.TabIndex = 78;
+            this.checkBox103.Text = "Fanart?";
+            this.checkBox103.UseVisualStyleBackColor = false;
+            this.checkBox103.Visible = false;
             // 
             // button22
             // 
@@ -2474,6 +2833,29 @@
             this.groupBox104.TabStop = false;
             this.groupBox104.Text = "Button ID 104";
             // 
+            // numericUpDown104
+            // 
+            this.numericUpDown104.Location = new System.Drawing.Point(99, 124);
+            this.numericUpDown104.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown104.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown104.Name = "numericUpDown104";
+            this.numericUpDown104.Size = new System.Drawing.Size(35, 20);
+            this.numericUpDown104.TabIndex = 83;
+            this.numericUpDown104.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown104.Visible = false;
+            // 
             // buttonOptions104
             // 
             this.buttonOptions104.Location = new System.Drawing.Point(140, 169);
@@ -2483,6 +2865,20 @@
             this.buttonOptions104.Text = "Options";
             this.buttonOptions104.UseVisualStyleBackColor = true;
             this.buttonOptions104.Click += new System.EventHandler(this.buttonOptions104_Click);
+            // 
+            // checkBox104
+            // 
+            this.checkBox104.AutoSize = true;
+            this.checkBox104.BackColor = System.Drawing.Color.Black;
+            this.checkBox104.ForeColor = System.Drawing.Color.White;
+            this.checkBox104.Location = new System.Drawing.Point(7, 122);
+            this.checkBox104.Name = "checkBox104";
+            this.checkBox104.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
+            this.checkBox104.Size = new System.Drawing.Size(84, 21);
+            this.checkBox104.TabIndex = 82;
+            this.checkBox104.Text = "Fanart?";
+            this.checkBox104.UseVisualStyleBackColor = false;
+            this.checkBox104.Visible = false;
             // 
             // button26
             // 
@@ -2709,397 +3105,12 @@
             this.label33.TabIndex = 50;
             this.label33.Text = "Hue Offset Value";
             // 
-            // numericUpDown111
+            // progressBarBuild
             // 
-            this.numericUpDown111.Location = new System.Drawing.Point(99, 98);
-            this.numericUpDown111.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown111.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown111.Name = "numericUpDown111";
-            this.numericUpDown111.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown111.TabIndex = 55;
-            this.numericUpDown111.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown111.Visible = false;
-            // 
-            // numericUpDown112
-            // 
-            this.numericUpDown112.Location = new System.Drawing.Point(99, 98);
-            this.numericUpDown112.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown112.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown112.Name = "numericUpDown112";
-            this.numericUpDown112.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown112.TabIndex = 56;
-            this.numericUpDown112.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown112.Visible = false;
-            // 
-            // numericUpDown113
-            // 
-            this.numericUpDown113.Location = new System.Drawing.Point(99, 98);
-            this.numericUpDown113.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown113.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown113.Name = "numericUpDown113";
-            this.numericUpDown113.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown113.TabIndex = 57;
-            this.numericUpDown113.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown113.Visible = false;
-            // 
-            // numericUpDown114
-            // 
-            this.numericUpDown114.Location = new System.Drawing.Point(100, 98);
-            this.numericUpDown114.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown114.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown114.Name = "numericUpDown114";
-            this.numericUpDown114.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown114.TabIndex = 56;
-            this.numericUpDown114.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown114.Visible = false;
-            // 
-            // numericUpDown109
-            // 
-            this.numericUpDown109.Location = new System.Drawing.Point(99, 92);
-            this.numericUpDown109.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown109.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown109.Name = "numericUpDown109";
-            this.numericUpDown109.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown109.TabIndex = 59;
-            this.numericUpDown109.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown109.Visible = false;
-            // 
-            // numericUpDown108
-            // 
-            this.numericUpDown108.Location = new System.Drawing.Point(99, 92);
-            this.numericUpDown108.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown108.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown108.Name = "numericUpDown108";
-            this.numericUpDown108.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown108.TabIndex = 61;
-            this.numericUpDown108.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown108.Visible = false;
-            // 
-            // numericUpDown107
-            // 
-            this.numericUpDown107.Location = new System.Drawing.Point(99, 92);
-            this.numericUpDown107.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown107.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown107.Name = "numericUpDown107";
-            this.numericUpDown107.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown107.TabIndex = 60;
-            this.numericUpDown107.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown107.Visible = false;
-            // 
-            // numericUpDown106
-            // 
-            this.numericUpDown106.Location = new System.Drawing.Point(99, 92);
-            this.numericUpDown106.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown106.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown106.Name = "numericUpDown106";
-            this.numericUpDown106.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown106.TabIndex = 58;
-            this.numericUpDown106.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown106.Visible = false;
-            // 
-            // numericUpDown105
-            // 
-            this.numericUpDown105.Location = new System.Drawing.Point(99, 92);
-            this.numericUpDown105.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown105.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown105.Name = "numericUpDown105";
-            this.numericUpDown105.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown105.TabIndex = 62;
-            this.numericUpDown105.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown105.Visible = false;
-            // 
-            // numericUpDown100
-            // 
-            this.numericUpDown100.Location = new System.Drawing.Point(99, 124);
-            this.numericUpDown100.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown100.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown100.Name = "numericUpDown100";
-            this.numericUpDown100.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown100.TabIndex = 64;
-            this.numericUpDown100.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown100.Visible = false;
-            // 
-            // checkBox100
-            // 
-            this.checkBox100.AutoSize = true;
-            this.checkBox100.BackColor = System.Drawing.Color.Black;
-            this.checkBox100.ForeColor = System.Drawing.Color.White;
-            this.checkBox100.Location = new System.Drawing.Point(7, 122);
-            this.checkBox100.Name = "checkBox100";
-            this.checkBox100.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox100.Size = new System.Drawing.Size(84, 21);
-            this.checkBox100.TabIndex = 63;
-            this.checkBox100.Text = "Fanart?";
-            this.checkBox100.UseVisualStyleBackColor = false;
-            this.checkBox100.Visible = false;
-            // 
-            // numericUpDown101
-            // 
-            this.numericUpDown101.Location = new System.Drawing.Point(99, 124);
-            this.numericUpDown101.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown101.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown101.Name = "numericUpDown101";
-            this.numericUpDown101.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown101.TabIndex = 71;
-            this.numericUpDown101.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown101.Visible = false;
-            // 
-            // checkBox101
-            // 
-            this.checkBox101.AutoSize = true;
-            this.checkBox101.BackColor = System.Drawing.Color.Black;
-            this.checkBox101.ForeColor = System.Drawing.Color.White;
-            this.checkBox101.Location = new System.Drawing.Point(7, 122);
-            this.checkBox101.Name = "checkBox101";
-            this.checkBox101.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox101.Size = new System.Drawing.Size(84, 21);
-            this.checkBox101.TabIndex = 70;
-            this.checkBox101.Text = "Fanart?";
-            this.checkBox101.UseVisualStyleBackColor = false;
-            this.checkBox101.Visible = false;
-            // 
-            // numericUpDown102
-            // 
-            this.numericUpDown102.Location = new System.Drawing.Point(99, 124);
-            this.numericUpDown102.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown102.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown102.Name = "numericUpDown102";
-            this.numericUpDown102.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown102.TabIndex = 75;
-            this.numericUpDown102.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown102.Visible = false;
-            // 
-            // checkBox102
-            // 
-            this.checkBox102.AutoSize = true;
-            this.checkBox102.BackColor = System.Drawing.Color.Black;
-            this.checkBox102.ForeColor = System.Drawing.Color.White;
-            this.checkBox102.Location = new System.Drawing.Point(7, 122);
-            this.checkBox102.Name = "checkBox102";
-            this.checkBox102.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox102.Size = new System.Drawing.Size(84, 21);
-            this.checkBox102.TabIndex = 74;
-            this.checkBox102.Text = "Fanart?";
-            this.checkBox102.UseVisualStyleBackColor = false;
-            this.checkBox102.Visible = false;
-            // 
-            // numericUpDown103
-            // 
-            this.numericUpDown103.Location = new System.Drawing.Point(99, 124);
-            this.numericUpDown103.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown103.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown103.Name = "numericUpDown103";
-            this.numericUpDown103.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown103.TabIndex = 79;
-            this.numericUpDown103.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown103.Visible = false;
-            // 
-            // checkBox103
-            // 
-            this.checkBox103.AutoSize = true;
-            this.checkBox103.BackColor = System.Drawing.Color.Black;
-            this.checkBox103.ForeColor = System.Drawing.Color.White;
-            this.checkBox103.Location = new System.Drawing.Point(7, 122);
-            this.checkBox103.Name = "checkBox103";
-            this.checkBox103.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox103.Size = new System.Drawing.Size(84, 21);
-            this.checkBox103.TabIndex = 78;
-            this.checkBox103.Text = "Fanart?";
-            this.checkBox103.UseVisualStyleBackColor = false;
-            this.checkBox103.Visible = false;
-            // 
-            // numericUpDown104
-            // 
-            this.numericUpDown104.Location = new System.Drawing.Point(99, 124);
-            this.numericUpDown104.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown104.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown104.Name = "numericUpDown104";
-            this.numericUpDown104.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown104.TabIndex = 83;
-            this.numericUpDown104.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown104.Visible = false;
-            // 
-            // checkBox104
-            // 
-            this.checkBox104.AutoSize = true;
-            this.checkBox104.BackColor = System.Drawing.Color.Black;
-            this.checkBox104.ForeColor = System.Drawing.Color.White;
-            this.checkBox104.Location = new System.Drawing.Point(7, 122);
-            this.checkBox104.Name = "checkBox104";
-            this.checkBox104.Padding = new System.Windows.Forms.Padding(11, 3, 11, 1);
-            this.checkBox104.Size = new System.Drawing.Size(84, 21);
-            this.checkBox104.TabIndex = 82;
-            this.checkBox104.Text = "Fanart?";
-            this.checkBox104.UseVisualStyleBackColor = false;
-            this.checkBox104.Visible = false;
+            this.progressBarBuild.Location = new System.Drawing.Point(724, 641);
+            this.progressBarBuild.Name = "progressBarBuild";
+            this.progressBarBuild.Size = new System.Drawing.Size(466, 23);
+            this.progressBarBuild.TabIndex = 65;
             // 
             // Form1
             // 
@@ -3108,6 +3119,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1199, 667);
+            this.Controls.Add(this.progressBarBuild);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.numericUpDownColor);
@@ -3140,10 +3152,13 @@
             this.statusStrip1.PerformLayout();
             this.groupBox111.ResumeLayout(false);
             this.groupBox111.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown111)).EndInit();
             this.groupBox100.ResumeLayout(false);
             this.groupBox100.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).EndInit();
             this.groupBox105.ResumeLayout(false);
             this.groupBox105.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown105)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox105)).EndInit();
             this.groupBox110.ResumeLayout(false);
             this.groupBox110.PerformLayout();
@@ -3151,52 +3166,49 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox110)).EndInit();
             this.groupBox112.ResumeLayout(false);
             this.groupBox112.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown112)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox112)).EndInit();
             this.groupBox113.ResumeLayout(false);
             this.groupBox113.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown113)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox113)).EndInit();
             this.groupBox114.ResumeLayout(false);
             this.groupBox114.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox114)).EndInit();
             this.groupBox106.ResumeLayout(false);
             this.groupBox106.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown106)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox106)).EndInit();
             this.groupBox107.ResumeLayout(false);
             this.groupBox107.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown107)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox107)).EndInit();
             this.groupBox108.ResumeLayout(false);
             this.groupBox108.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown108)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox108)).EndInit();
             this.groupBox109.ResumeLayout(false);
             this.groupBox109.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown109)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox109)).EndInit();
             this.groupBox101.ResumeLayout(false);
             this.groupBox101.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown101)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox101)).EndInit();
             this.groupBox102.ResumeLayout(false);
             this.groupBox102.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown102)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox102)).EndInit();
             this.groupBox103.ResumeLayout(false);
             this.groupBox103.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown103)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox103)).EndInit();
             this.groupBox104.ResumeLayout(false);
             this.groupBox104.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown104)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox104)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown111)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown112)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown113)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown109)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown108)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown107)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown106)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown105)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown101)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown102)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown103)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown104)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3443,6 +3455,7 @@
         private System.Windows.Forms.CheckBox checkBox103;
         private System.Windows.Forms.NumericUpDown numericUpDown104;
         private System.Windows.Forms.CheckBox checkBox104;
+        private System.Windows.Forms.ProgressBar progressBarBuild;
     }
 }
 
