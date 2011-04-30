@@ -29,6 +29,10 @@ namespace BlackGlassEditor
         {
             InitializeComponent();
 
+			this.Hide();
+            Splash frmSplash = new Splash();
+            frmSplash.Show();
+            frmSplash.Update();
             string path = System.IO.Path.Combine(Application.StartupPath, "BG_plugins.xml");
             System.Xml.XmlDocument Plugins = new System.Xml.XmlDocument();
 
@@ -238,7 +242,10 @@ namespace BlackGlassEditor
                 String newvalue = numericUpDownColor.Value.ToString();
                 radioButtonCustomColor.BackgroundImage = (Bitmap)im.RotateHue(float.Parse(newvalue));
             }
-        }
+			
+			frmSplash.Close();
+            this.Visible = true;
+		}
 
 
         public Bitmap formatImage(Bitmap img, String name)
@@ -1663,6 +1670,30 @@ namespace BlackGlassEditor
                 Graphics gfx = Graphics.FromImage(finalImage);
                 gfx.SmoothingMode = SmoothingMode.AntiAlias;
 
+				Int32 progressCounter = 8;
+
+                progressBarBuild.Value = 0;
+                toolStripStatusLabel1.Text = "Creating Basic Home...";
+                this.Update();
+
+                if (pictureBox100.Image != null) { progressCounter++; }
+                if (pictureBox101.Image != null) { progressCounter++; }
+                if (pictureBox102.Image != null) { progressCounter++; }
+                if (pictureBox103.Image != null) { progressCounter++; }
+                if (pictureBox104.Image != null) { progressCounter++; }
+                if (pictureBox105.Image != null) { progressCounter++; }
+                if (pictureBox106.Image != null) { progressCounter++; }
+                if (pictureBox107.Image != null) { progressCounter++; }
+                if (pictureBox108.Image != null) { progressCounter++; }
+                if (pictureBox109.Image != null) { progressCounter++; }
+                if (pictureBox110.Image != null) { progressCounter++; }
+                if (pictureBox111.Image != null) { progressCounter++; }
+                if (pictureBox112.Image != null) { progressCounter++; }
+                if (pictureBox113.Image != null) { progressCounter++; }
+                if (pictureBox114.Image != null) { progressCounter++; }
+
+                Int32 step = (Int32)(Math.Round((Decimal)(100 / progressCounter)));
+                progressBarBuild.Step = step;
 
                 // SELEZIONA COLORE THEME
 
@@ -1688,6 +1719,8 @@ namespace BlackGlassEditor
                 }
 
                 // CARICAMENTO bg.jpg
+                progressBarBuild.PerformStep();
+                
                 myStream = myAssembly.GetManifestResourceStream("BlackGlassEditor.Images." + themecolor + "_bg_down.png");
                 if (radioButtonCustomColor.Checked == true)
                 {
@@ -1722,6 +1755,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage100 = null;
                 if (pictureBox100.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage100 = new Bitmap(buildImage(pictureBox100.Image, "100", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_100_nofocus.png", pictureBox100.Image, "100", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_100_focus.png", pictureBox100.Image, "100", 1);
@@ -1730,6 +1764,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage101 = null;
                 if (pictureBox101.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage101 = new Bitmap(buildImage(pictureBox101.Image, "101", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_101_nofocus.png", pictureBox101.Image, "101", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_101_focus.png", pictureBox101.Image, "101", 1);
@@ -1738,6 +1773,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage102 = null;
                 if (pictureBox102.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage102 = new Bitmap(buildImage(pictureBox102.Image, "102", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_102_nofocus.png", pictureBox102.Image, "102", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_102_focus.png", pictureBox102.Image, "102", 1);
@@ -1746,6 +1782,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage103 = null;
                 if (pictureBox103.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage103 = new Bitmap(buildImage(pictureBox103.Image, "103", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_103_nofocus.png", pictureBox103.Image, "103", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_103_focus.png", pictureBox103.Image, "103", 1);
@@ -1754,6 +1791,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage104 = null;
                 if (pictureBox104.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage104 = new Bitmap(buildImage(pictureBox104.Image, "104", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_104_nofocus.png", pictureBox104.Image, "104", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_104_focus.png", pictureBox104.Image, "104", 1);
@@ -1762,6 +1800,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage105 = null;
                 if (pictureBox105.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage105 = new Bitmap(buildImage(pictureBox105.Image, "105", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_105_nofocus.png", pictureBox105.Image, "105", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_105_focus.png", pictureBox105.Image, "105", 1);
@@ -1769,6 +1808,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage106 = null;
                 if (pictureBox106.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage106 = new Bitmap(buildImage(pictureBox106.Image, "106", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_106_nofocus.png", pictureBox106.Image, "106", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_106_focus.png", pictureBox106.Image, "106", 1);
@@ -1776,6 +1816,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage107 = null;
                 if (pictureBox107.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage107 = new Bitmap(buildImage(pictureBox107.Image, "107", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_107_nofocus.png", pictureBox107.Image, "107", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_107_focus.png", pictureBox107.Image, "107", 1);
@@ -1783,6 +1824,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage108 = null;
                 if (pictureBox108.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage108 = new Bitmap(buildImage(pictureBox108.Image, "108", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_108_nofocus.png", pictureBox108.Image, "108", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_108_focus.png", pictureBox108.Image, "108", 1);
@@ -1790,6 +1832,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage109 = null;
                 if (pictureBox109.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage109 = new Bitmap(buildImage(pictureBox109.Image, "109", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_109_nofocus.png", pictureBox109.Image, "109", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_109_focus.png", pictureBox109.Image, "109", 1);
@@ -1797,6 +1840,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage110 = null;
                 if (pictureBox110.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage110 = new Bitmap(buildImage(pictureBox110.Image, "110", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_110_nofocus.png", pictureBox110.Image, "110", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_110_focus.png", pictureBox110.Image, "110", 1);
@@ -1804,6 +1848,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage111 = null;
                 if (pictureBox111.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage111 = new Bitmap(buildImage(pictureBox111.Image, "111", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_111_nofocus.png", pictureBox111.Image, "111", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_111_focus.png", pictureBox111.Image, "111", 1);
@@ -1811,6 +1856,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage112 = null;
                 if (pictureBox112.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage112 = new Bitmap(buildImage(pictureBox112.Image, "112", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_112_nofocus.png", pictureBox112.Image, "112", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_112_focus.png", pictureBox112.Image, "112", 1);
@@ -1818,6 +1864,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage113 = null;
                 if (pictureBox113.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage113 = new Bitmap(buildImage(pictureBox113.Image, "113", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_113_nofocus.png", pictureBox113.Image, "113", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_113_focus.png", pictureBox113.Image, "113", 1);
@@ -1825,6 +1872,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage114 = null;
                 if (pictureBox114.Image != null)
                 {
+                    progressBarBuild.PerformStep(); 
                     buttonImage114 = new Bitmap(buildImage(pictureBox114.Image, "114", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_114_nofocus.png", pictureBox114.Image, "114", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_114_focus.png", pictureBox114.Image, "114", 1);
@@ -1878,8 +1926,8 @@ namespace BlackGlassEditor
                 {
                     MessageBox.Show("Error: Could not save basichome_bg.jpg to disk. Original error: " + ex.Message);
                 }
-
-
+                
+				progressBarBuild.PerformStep(); 
                 // CREA bg_homefull.jpg 
                 gfx.DrawImage(sidebuttons, new System.Drawing.Rectangle(0, 0, 1920, 1080));
 
@@ -1900,7 +1948,7 @@ namespace BlackGlassEditor
                 if (pictureBox113.Image != null) gfx.DrawImage(buttonImage113, new System.Drawing.Rectangle(1096, 207, buttonImage113.Width, buttonImage113.Height));
                 if (pictureBox114.Image != null) gfx.DrawImage(buttonImage114, new System.Drawing.Rectangle(1393, 114, buttonImage114.Width, buttonImage114.Height));
 
-
+                progressBarBuild.PerformStep(); 
 
                 //try
                 //{
@@ -1933,7 +1981,7 @@ namespace BlackGlassEditor
                 {
                     MessageBox.Show("Error: Could not save preview.jpg to disk. Original error: " + ex.Message);
                 }
-
+                progressBarBuild.PerformStep(); 
                 //CREA splash.jpg
                 gfx.DrawImage(splash, new System.Drawing.Rectangle(0, 0, 1920, 1080));
 
@@ -1954,12 +2002,13 @@ namespace BlackGlassEditor
                 {
                     MessageBox.Show("Error: Could not save splash.jpg to disk. Original error: " + ex.Message);
                 }
-
-                saveXML();
-                saveSettings();
+                progressBarBuild.PerformStep(); 
+                saveXML(); progressBarBuild.PerformStep(); 
+                saveSettings();  progressBarBuild.PerformStep(); 
 
                 deleteBlackGlassCacheDir();
 
+				progressBarBuild.Value = 100;
                 toolStripStatusLabel1.Text = "Basic Home Creation Complete!";
                 MessageBox.Show("Basic Home Creation Complete!");
 
