@@ -28,9 +28,12 @@ namespace BlackGlassEditor
         {
             InitializeComponent();
 
-           string path = System.IO.Path.Combine(Application.StartupPath, "BGN_plugins.xml");
+            this.Hide();
+            Splash frmSplash = new Splash();
+            frmSplash.Show();
+            frmSplash.Update();
 
-
+            string path = System.IO.Path.Combine(Application.StartupPath, "BGN_plugins.xml");
             System.Xml.XmlDocument Plugins = new System.Xml.XmlDocument();
 
             if (File.Exists(path))
@@ -57,15 +60,15 @@ namespace BlackGlassEditor
             XmlNodeList pid = Plugins.GetElementsByTagName("id");
             XmlNodeList pname = Plugins.GetElementsByTagName("name");
             XmlNodeList phover = Plugins.GetElementsByTagName("hover");
-           
+
             plugins.Add(new MPplugin(0, "Empty Button", ""));
             plugins.Add(new MPplugin(99999, "Custom Plugin", "hover_custom"));
 
-            for (int i = 0; i < pid.Count; i++ )
+            for (int i = 0; i < pid.Count; i++)
             {
                 plugins.Add(new MPplugin(int.Parse(pid[i].InnerText), pname[i].InnerText, phover[i].InnerText));
             }
-            
+
 
             //Combobox plugin list
             foreach (MPplugin p in plugins)
@@ -88,7 +91,7 @@ namespace BlackGlassEditor
             }
 
             path = System.IO.Path.Combine(Application.StartupPath, "settings.xml");
-			FileStream READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            FileStream READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             READER = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             System.Xml.XmlDocument Buttons = new System.Xml.XmlDocument();
             Buttons.Load(READER);
@@ -98,9 +101,9 @@ namespace BlackGlassEditor
             XmlNodeList plugin = Buttons.GetElementsByTagName("plugin");
             XmlNodeList hover = Buttons.GetElementsByTagName("hover");
             XmlNodeList fanart = Buttons.GetElementsByTagName("fanart");
-			XmlNodeList fanartLevels = Buttons.GetElementsByTagName("fanartLevels");
+            XmlNodeList fanartLevels = Buttons.GetElementsByTagName("fanartLevels");
             XmlNodeList parameter = Buttons.GetElementsByTagName("parameter");
-			
+
 
             comboBox100.SelectedItem = findPluginName(Int32.Parse(plugin[0].InnerText));
             comboBox101.SelectedItem = findPluginName(Int32.Parse(plugin[1].InnerText));
@@ -134,7 +137,7 @@ namespace BlackGlassEditor
             textBox113.Text = name[13].InnerText;
             textBox114.Text = name[14].InnerText;
 
-			textBoxParameter100.Text = parameter[0].InnerText;
+            textBoxParameter100.Text = parameter[0].InnerText;
             textBoxParameter101.Text = parameter[1].InnerText;
             textBoxParameter102.Text = parameter[2].InnerText;
             textBoxParameter103.Text = parameter[3].InnerText;
@@ -238,6 +241,9 @@ namespace BlackGlassEditor
             if (!Directory.Exists(BlackGlassDirClass.Path)) BlackGlassDirClass.Path = findBlackGlassSkinDir();
 
             textBoxTarget.Text = BlackGlassDirClass.Path;
+
+            frmSplash.Close();
+            this.Visible = true;
         }
 
 
@@ -451,7 +457,7 @@ namespace BlackGlassEditor
                 bottomleftX = Convert.ToInt32(bottomleftX * 1.5); bottomleftY = Convert.ToInt32(bottomleftY * 1.5);
                 bottomrightX = Convert.ToInt32(bottomrightX * 1.5); bottomrightY = Convert.ToInt32(bottomrightY * 1.5);
                 offsetX = Convert.ToInt32(offsetX * 1.5); offsetY = Convert.ToInt32(offsetY * 1.5);
-                
+
 
                 topleft = new Point(topleftX, topleftY);
                 topright = new Point(toprightX, toprightY);
@@ -1767,8 +1773,31 @@ namespace BlackGlassEditor
                 Graphics gfx = Graphics.FromImage(finalImage);
                 gfx.SmoothingMode = SmoothingMode.AntiAlias;
 
+                Int32 progressCounter = 5;
+
+                progressBarBuild.Value = 0;
+                toolStripStatusLabel1.Text = "Creating Basic Home...";
+                this.Update();
 
 
+                if (pictureBox100.Image != null) { progressCounter++; }
+                if (pictureBox101.Image != null) { progressCounter++; }
+                if (pictureBox102.Image != null) { progressCounter++; }
+                if (pictureBox103.Image != null) { progressCounter++; }
+                if (pictureBox104.Image != null) { progressCounter++; }
+                if (pictureBox105.Image != null) { progressCounter++; }
+                if (pictureBox106.Image != null) { progressCounter++; }
+                if (pictureBox107.Image != null) { progressCounter++; }
+                if (pictureBox108.Image != null) { progressCounter++; }
+                if (pictureBox109.Image != null) { progressCounter++; }
+                if (pictureBox110.Image != null) { progressCounter++; }
+                if (pictureBox111.Image != null) { progressCounter++; }
+                if (pictureBox112.Image != null) { progressCounter++; }
+                if (pictureBox113.Image != null) { progressCounter++; }
+                if (pictureBox114.Image != null) { progressCounter++; }
+
+                Int32 step = (Int32)(Math.Round((Decimal)(100 / progressCounter)));
+                progressBarBuild.Step = step;
                 Assembly myAssembly = Assembly.GetExecutingAssembly();
 
                 // CARICAMENTO background
@@ -1788,22 +1817,27 @@ namespace BlackGlassEditor
 
                 // CREA pulsanti
 
+                progressBarBuild.PerformStep();
                 Bitmap buttonImage100 = new Bitmap(buildImage(pictureBox100.Image, "100", 0));
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_100_nofocus.png", pictureBox100.Image, "100", 0);
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_100_focus.png", pictureBox100.Image, "100", 1);
 
+                progressBarBuild.PerformStep();
                 Bitmap buttonImage101 = new Bitmap(buildImage(pictureBox101.Image, "101", 0));
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_101_nofocus.png", pictureBox101.Image, "101", 0);
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_101_focus.png", pictureBox101.Image, "101", 1);
 
+                progressBarBuild.PerformStep();
                 Bitmap buttonImage102 = new Bitmap(buildImage(pictureBox102.Image, "102", 1));
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_102_nofocus.png", pictureBox102.Image, "102", 0);
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_102_focus.png", pictureBox102.Image, "102", 1);
 
+                progressBarBuild.PerformStep();
                 Bitmap buttonImage103 = new Bitmap(buildImage(pictureBox103.Image, "103", 0));
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_103_nofocus.png", pictureBox103.Image, "103", 0);
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_103_focus.png", pictureBox103.Image, "103", 1);
 
+                progressBarBuild.PerformStep();
                 Bitmap buttonImage104 = new Bitmap(buildImage(pictureBox104.Image, "104", 0));
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_104_nofocus.png", pictureBox104.Image, "104", 0);
                 saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_104_focus.png", pictureBox104.Image, "104", 1);
@@ -1811,6 +1845,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage105 = null;
                 if (pictureBox105.Image != null)
                 {
+                    progressBarBuild.PerformStep();
                     buttonImage105 = new Bitmap(buildImage(pictureBox105.Image, "105", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_105_nofocus.png", pictureBox105.Image, "105", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_105_focus.png", pictureBox105.Image, "105", 1);
@@ -1818,6 +1853,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage106 = null;
                 if (pictureBox106.Image != null)
                 {
+                    progressBarBuild.PerformStep();
                     buttonImage106 = new Bitmap(buildImage(pictureBox106.Image, "106", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_106_nofocus.png", pictureBox106.Image, "106", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_106_focus.png", pictureBox106.Image, "106", 1);
@@ -1825,6 +1861,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage107 = null;
                 if (pictureBox107.Image != null)
                 {
+                    progressBarBuild.PerformStep();
                     buttonImage107 = new Bitmap(buildImage(pictureBox107.Image, "107", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_107_nofocus.png", pictureBox107.Image, "107", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_107_focus.png", pictureBox107.Image, "107", 1);
@@ -1832,6 +1869,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage108 = null;
                 if (pictureBox108.Image != null)
                 {
+                    progressBarBuild.PerformStep();
                     buttonImage108 = new Bitmap(buildImage(pictureBox108.Image, "108", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_108_nofocus.png", pictureBox108.Image, "108", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_108_focus.png", pictureBox108.Image, "108", 1);
@@ -1839,6 +1877,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage109 = null;
                 if (pictureBox109.Image != null)
                 {
+                    progressBarBuild.PerformStep();
                     buttonImage109 = new Bitmap(buildImage(pictureBox109.Image, "109", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_109_nofocus.png", pictureBox109.Image, "109", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_109_focus.png", pictureBox109.Image, "109", 1);
@@ -1846,6 +1885,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage110 = null;
                 if (pictureBox110.Image != null)
                 {
+                    progressBarBuild.PerformStep();
                     buttonImage110 = new Bitmap(buildImage(pictureBox110.Image, "110", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_110_nofocus.png", pictureBox110.Image, "110", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_110_focus.png", pictureBox110.Image, "110", 1);
@@ -1853,6 +1893,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage111 = null;
                 if (pictureBox111.Image != null)
                 {
+                    progressBarBuild.PerformStep();
                     buttonImage111 = new Bitmap(buildImage(pictureBox111.Image, "111", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_111_nofocus.png", pictureBox111.Image, "111", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_111_focus.png", pictureBox111.Image, "111", 1);
@@ -1860,6 +1901,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage112 = null;
                 if (pictureBox112.Image != null)
                 {
+                    progressBarBuild.PerformStep();
                     buttonImage112 = new Bitmap(buildImage(pictureBox112.Image, "112", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_112_nofocus.png", pictureBox112.Image, "112", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_112_focus.png", pictureBox112.Image, "112", 1);
@@ -1867,6 +1909,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage113 = null;
                 if (pictureBox113.Image != null)
                 {
+                    progressBarBuild.PerformStep();
                     buttonImage113 = new Bitmap(buildImage(pictureBox113.Image, "113", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_113_nofocus.png", pictureBox113.Image, "113", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_113_focus.png", pictureBox113.Image, "113", 1);
@@ -1874,6 +1917,7 @@ namespace BlackGlassEditor
                 Bitmap buttonImage114 = null;
                 if (pictureBox114.Image != null)
                 {
+                    progressBarBuild.PerformStep();
                     buttonImage114 = new Bitmap(buildImage(pictureBox114.Image, "114", 1));
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_114_nofocus.png", pictureBox114.Image, "114", 0);
                     saveImage(BlackGlassDirClass.Path + "\\Media\\basichome_114_focus.png", pictureBox114.Image, "114", 1);
@@ -1907,6 +1951,8 @@ namespace BlackGlassEditor
                 gfx.DrawImage(buttonImage102, new System.Drawing.Rectangle(813, 666, buttonImage102.Width, buttonImage102.Height));
                 gfx.DrawImage(buttonImage103, new System.Drawing.Rectangle(1104, 660, buttonImage103.Width, buttonImage103.Height));
                 gfx.DrawImage(buttonImage104, new System.Drawing.Rectangle(1412, 642, buttonImage104.Width, buttonImage104.Height));
+                progressBarBuild.PerformStep();
+
                 //if (pictureBox105.Image != null) gfx.DrawImage(buttonImage105, new System.Drawing.Rectangle(171, 391, buttonImage105.Width, buttonImage105.Height));
                 //if (pictureBox106.Image != null) gfx.DrawImage(buttonImage106, new System.Drawing.Rectangle(513, 450, buttonImage106.Width, buttonImage106.Height));
                 //if (pictureBox107.Image != null) gfx.DrawImage(buttonImage107, new System.Drawing.Rectangle(814, 474, buttonImage107.Width, buttonImage107.Height));
@@ -1933,6 +1979,7 @@ namespace BlackGlassEditor
                 {
                     MessageBox.Show("Error: Could not save preview.jpg to disk. Original error: " + ex.Message);
                 }
+                progressBarBuild.PerformStep();
 
                 //CREA splash.jpg
                 gfx.DrawImage(splash, new System.Drawing.Rectangle(0, 0, 1920, 1080));
@@ -1954,12 +2001,14 @@ namespace BlackGlassEditor
                 {
                     MessageBox.Show("Error: Could not save splash.jpg to disk. Original error: " + ex.Message);
                 }
+                progressBarBuild.PerformStep();
 
-                saveXML();
-                saveSettings();
+                saveXML(); progressBarBuild.PerformStep();
+                saveSettings(); progressBarBuild.PerformStep();
 
                 deleteBlackGlassCacheDir();
 
+                progressBarBuild.Value = 100;
                 toolStripStatusLabel1.Text = "Basic Home Creation Complete!";
                 MessageBox.Show("Basic Home Creation Complete!");
 
@@ -2152,11 +2201,11 @@ namespace BlackGlassEditor
 
         ";
 
-                txt = txt + buildHoverLabelXml("100") + buildButtonXml("100"); if (checkBox100.Checked == true) txt = txt + buildFanartTextXml("100"); 
-                txt = txt + buildHoverLabelXml("101") + buildButtonXml("101"); if (checkBox101.Checked == true) txt = txt + buildFanartTextXml("101"); 
-                txt = txt + buildHoverLabelXml("102") + buildButtonXml("102"); if (checkBox102.Checked == true) txt = txt + buildFanartTextXml("102"); 
-                txt = txt + buildHoverLabelXml("103") + buildButtonXml("103"); if (checkBox103.Checked == true) txt = txt + buildFanartTextXml("103"); 
-                txt = txt + buildHoverLabelXml("104") + buildButtonXml("104"); if (checkBox104.Checked == true) txt = txt + buildFanartTextXml("104"); 
+                txt = txt + buildHoverLabelXml("100") + buildButtonXml("100"); if (checkBox100.Checked == true) txt = txt + buildFanartTextXml("100");
+                txt = txt + buildHoverLabelXml("101") + buildButtonXml("101"); if (checkBox101.Checked == true) txt = txt + buildFanartTextXml("101");
+                txt = txt + buildHoverLabelXml("102") + buildButtonXml("102"); if (checkBox102.Checked == true) txt = txt + buildFanartTextXml("102");
+                txt = txt + buildHoverLabelXml("103") + buildButtonXml("103"); if (checkBox103.Checked == true) txt = txt + buildFanartTextXml("103");
+                txt = txt + buildHoverLabelXml("104") + buildButtonXml("104"); if (checkBox104.Checked == true) txt = txt + buildFanartTextXml("104");
                 if (comboBox105.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("105") + buildButtonXml("105"); if (checkBox105.Checked == true) txt = txt + buildFanartTextXml("105"); }
                 if (comboBox106.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("106") + buildButtonXml("106"); if (checkBox106.Checked == true) txt = txt + buildFanartTextXml("106"); }
                 if (comboBox107.SelectedItem.ToString() != findPluginName(0)) { txt = txt + buildHoverLabelXml("107") + buildButtonXml("107"); if (checkBox107.Checked == true) txt = txt + buildFanartTextXml("107"); }
@@ -2209,7 +2258,7 @@ namespace BlackGlassEditor
                 if (comboBox112.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("112");
                 if (comboBox113.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("113");
                 if (comboBox114.SelectedItem.ToString() != findPluginName(0)) txt = txt + buildHoverBackdropXml("114");
-                
+
                 if (checkBox100.Checked == true) txt = txt + buildFanartBackdropXml("100");
                 if (checkBox101.Checked == true) txt = txt + buildFanartBackdropXml("101");
                 if (checkBox102.Checked == true) txt = txt + buildFanartBackdropXml("102");
@@ -2224,9 +2273,9 @@ namespace BlackGlassEditor
                 if (checkBox111.Checked == true) txt = txt + buildFanartBackdropXml("111");
                 if (checkBox112.Checked == true) txt = txt + buildFanartBackdropXml("112");
                 if (checkBox113.Checked == true) txt = txt + buildFanartBackdropXml("113");
-                if (checkBox114.Checked == true) txt = txt + buildFanartBackdropXml("114"); 
+                if (checkBox114.Checked == true) txt = txt + buildFanartBackdropXml("114");
 
-                
+
 
                 txt = txt + @"</controls>
 </window>";
@@ -2235,7 +2284,7 @@ namespace BlackGlassEditor
 
                 try
                 {
-                    TextWriter tw = new StreamWriter(path,false,Encoding.UTF8);
+                    TextWriter tw = new StreamWriter(path, false, Encoding.UTF8);
                     //TextWriter tw = new StreamWriter(path);
 
                     tw.Write(txt);
@@ -2288,7 +2337,7 @@ namespace BlackGlassEditor
 
                 String path = System.IO.Path.Combine(Application.StartupPath, "settings.xml");
                 // Create a new file in C:\\ dir
-                XmlTextWriter textWriter = new XmlTextWriter(path,Encoding.UTF8);
+                XmlTextWriter textWriter = new XmlTextWriter(path, Encoding.UTF8);
                 textWriter.Formatting = Formatting.Indented;
                 // Opens the document
                 textWriter.WriteStartDocument();
@@ -2885,7 +2934,7 @@ namespace BlackGlassEditor
             if (checkBox112.Checked == true && buttonId == "112") found = true;
             if (checkBox113.Checked == true && buttonId == "113") found = true;
             if (checkBox114.Checked == true && buttonId == "114") found = true;
-            
+
             return found;
         }
 
@@ -2897,26 +2946,26 @@ namespace BlackGlassEditor
             switch (id)
             {
 
-				case "100":
+                case "100":
                     ButtonId = "104";
                     break;
-                
+
                 case "101":
                     ButtonId = "100";
                     break;
-                
+
                 case "102":
                     ButtonId = "101";
                     break;
-               
+
                 case "103":
                     ButtonId = "102";
                     break;
-                
+
                 case "104":
                     ButtonId = "103";
                     break;
-               
+
                 case "105":
                     ButtonId = "105";
                     if (comboBox106.SelectedItem.ToString() != findPluginName(0)) ButtonId = "106";
@@ -3011,7 +3060,7 @@ namespace BlackGlassEditor
             switch (id)
             {
 
-				case "100":
+                case "100":
                     ButtonId = "101";
                     break;
 
@@ -3030,7 +3079,7 @@ namespace BlackGlassEditor
                 case "104":
                     ButtonId = "100";
                     break;
-                
+
                 case "105":
                     ButtonId = "105";
                     if (comboBox109.SelectedItem.ToString() != findPluginName(0)) ButtonId = "109";
@@ -3119,7 +3168,7 @@ namespace BlackGlassEditor
         private String buildHoverLabelXml(String id)
         {
             String labelTextbox = String.Empty;
-            
+
             switch (id)
             {
                 case "100":
@@ -3635,11 +3684,11 @@ namespace BlackGlassEditor
 			<animation effect=""fade"" time=""250"">visible</animation>
 		</control>
         ";
-           
+
             return xmloutput;
         }
-        
-        
+
+
         private String buildFanartBackdropXml(String id)
         {
             String labelTextbox = String.Empty;
@@ -3653,7 +3702,7 @@ namespace BlackGlassEditor
             String texture_name2 = String.Empty;
             String texture_name3 = String.Empty;
             Decimal fanartLevel = 1M;
-            
+
             switch (id)
             {
                 case "100":
@@ -3721,8 +3770,8 @@ namespace BlackGlassEditor
 
             plugin_name = findFanartPluginName(idTextbox);
             if (idTextbox != "2") { pictures_plugin_trick1 = String.Empty; pictures_plugin_trick2 = String.Empty; pictures_plugin_trick3 = String.Empty; }
-            
-            
+
+
             String xmloutput = String.Empty;
 
             if (fanartLevel == 1.0M) xmloutput = @" 
@@ -3823,7 +3872,7 @@ namespace BlackGlassEditor
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>yes</zoom>
-			<texture>" + texture_name3+ @"</texture>
+			<texture>" + texture_name3 + @"</texture>
 			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick3 + @"</visible>
 			<animation effect=""fade"" time=""200"" delay=""5000"">visible</animation>
 		</control>
