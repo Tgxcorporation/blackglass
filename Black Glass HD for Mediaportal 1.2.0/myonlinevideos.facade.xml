@@ -19,7 +19,6 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<animation effect="fade" time="250">visiblechange</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -34,6 +33,11 @@
 					<onleft>2</onleft>
 					<onright>2</onright>
 					<scrollOffset>2</scrollOffset>
+					<visible>!String.Equals(#OnlineVideos.state,details)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">hidden</animation>
+					<animation effect="fade" time="250">visible</animation>
+					<animation effect="fade" time="150">hidden</animation>	
 				</control>
 				<control>
 					<description>Thumbnail Panel</description>
@@ -77,6 +81,11 @@
 					<frameNoFocus>PictureCase.png</frameNoFocus>
 					<frameFocus>PictureCase.png</frameFocus>
 					<keepaspectratio>yes</keepaspectratio>
+					<visible>!String.Equals(#OnlineVideos.state,details)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="1200,0" reversible="false">visible</animation>
+					<animation effect="slide" tween="circle" easing="out" time="200" end="1200,0" reversible="false">hidden</animation>
+					<animation effect="fade" time="250">visible</animation>
+					<animation effect="fade" time="150">hidden</animation>	
 				</control>
 			</control>
 		</control>

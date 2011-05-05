@@ -120,7 +120,7 @@
 				<height>382</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
+				<visible>!string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)+!string.equals(#OnlineVideos.selectedSiteUtil, IMDb)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<centered>yes</centered>
 			</control>
@@ -132,7 +132,31 @@
 				<width>540</width>
 				<height>409</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
+				<visible>!string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)+!string.equals(#OnlineVideos.selectedSiteUtil, IMDb)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>82</posX>
+				<posY>147</posY>
+				<width>277</width>
+				<height>294</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>139</posY>
+				<width>322</width>
+				<height>409</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -225,7 +249,7 @@
 			<width>637</width>
 			<height>1080</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+[control.hasfocus(2)|control.hasfocus(10)|control.hasfocus(9)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>
+			<visible>[!Control.HasFocus(50)+!control.isvisible(51)]+![string.equals(#OnlineVideos.state,details)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
