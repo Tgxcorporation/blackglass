@@ -30,7 +30,7 @@
 			<width>2520</width>
 			<height>480</height>
 			<texture>gradient.png</texture>
-			<visible>[facadeview.coverflow|facadeview.filmstrip|facadeview.smallicons|facadeview.largeicons]+!control.isvisible(51)</visible>
+			<visible>[facadeview.coverflow|facadeview.filmstrip|facadeview.smallicons|facadeview.largeicons]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -42,7 +42,7 @@
 			<width>2358</width>
 			<height>660</height>
 			<texture>bg_tvguide.png</texture>
-			<visible>[facadeview.smallicons|facadeview.largeicons]+!control.isvisible(51)</visible>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+!String.Equals(#OnlineVideos.state,details)</visible>
 		</control>
 		<control>
 			<type>textboxscrollup</type>
@@ -55,7 +55,7 @@
 			<height>67</height>
 			<textalign>center</textalign>
 			<label>#selecteditem</label>
-			<visible>[facadeview.filmstrip|facadeview.smallicons|facadeview.largeicons|facadeview.coverflow]+!control.isvisible(51)</visible>
+			<visible>[facadeview.filmstrip|facadeview.smallicons|facadeview.largeicons|facadeview.coverflow]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -67,7 +67,7 @@
 			<width>2058</width>
 			<height>750</height>
 			<texture>bg_tvguide.png</texture>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -79,7 +79,7 @@
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -92,7 +92,7 @@
 			<align>center</align>
 			<width>150</width>
 			<textcolor>White</textcolor>
-			<font>font13</font>
+			<font>font10</font>
 			<visible>string.equals(#OnlineVideos.IsBuffering, true) + !player.hasmedia</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
@@ -118,7 +118,7 @@
 			<font>font28</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<visible>!control.isvisible(24)</visible>
+			<visible>!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -130,7 +130,7 @@
 			<width>1125</width>
 			<label>#OnlineVideos.filter</label>
 			<font>font11</font>
-			<visible>!control.isvisible(24)</visible>
+			<visible>!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<wrapString> : : : </wrapString>
 		</control>
@@ -147,31 +147,7 @@
 			<width>2058</width>
 			<height>750</height>
 			<texture>bg_tvguide.png</texture>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<id>500</id>
-			<type>image</type>
-			<posX>49</posX>
-			<posY>730</posY>
-			<width>409</width>
-			<height>306</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<centered>yes</centered>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>37</posX>
-			<posY>720</posY>
-			<width>435</width>
-			<height>328</height>
-			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
@@ -183,7 +159,7 @@
 			<width>840</width>
 			<font>font22</font>
 			<label>#selecteditem</label>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 			<wrapString> : : : </wrapString>
 		</control>
@@ -196,49 +172,132 @@
 			<height>53</height>
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
-			<description>Length</description>
-			<type>fadelabel</type>
-			<id>501</id>
-			<posX>495</posX>
-			<posY>702</posY>
-			<width>397</width>
-			<label>#OnlineVideos.length</label>
-			<textcolor>90ffffff</textcolor>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<visible>!string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)+!string.equals(#OnlineVideos.selectedSiteUtil, IMDb)+[facadeview.list|facadeview.album|facadeview.playlist]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
-			<wrapString> : : : </wrapString>
+			<control>
+				<id>500</id>
+				<type>image</type>
+				<posX>49</posX>
+				<posY>730</posY>
+				<width>409</width>
+				<height>306</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>37</posX>
+				<posY>720</posY>
+				<width>435</width>
+				<height>328</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+			</control>
+			<control>
+				<description>Length</description>
+				<type>fadelabel</type>
+				<id>501</id>
+				<posX>495</posX>
+				<posY>702</posY>
+				<width>397</width>
+				<label>#OnlineVideos.length</label>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>472</posX>
+				<posY>697</posY>
+				<width>441</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>Description</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>495</posX>
+				<posY>754</posY>
+				<width>397</width>
+				<height>292</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<font>font16</font>
+				<label>#OnlineVideos.desc</label>
+				<textcolor>White</textcolor>
+				<seperator>: : :</seperator>
+			</control>
 		</control>
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>472</posX>
-			<posY>697</posY>
-			<width>441</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.list|facadeview.album|facadeview.playlist]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<description>Description</description>
-			<type>textboxscrollup</type>
-			<id>0</id>
-			<posX>495</posX>
-			<posY>754</posY>
-			<width>397</width>
-			<height>292</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<font>font16</font>
-			<label>#OnlineVideos.desc</label>
-			<textcolor>White</textcolor>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!control.isvisible(51)</visible>
-			<seperator>: : :</seperator>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>67</posX>
+				<posY>726</posY>
+				<width>222</width>
+				<height>316</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>37</posX>
+				<posY>720</posY>
+				<width>258</width>
+				<height>328</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+			</control>
+			<control>
+				<description>Length</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>319</posX>
+				<posY>702</posY>
+				<width>573</width>
+				<label>#OnlineVideos.length</label>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>297</posX>
+				<posY>697</posY>
+				<width>616</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>Description</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>319</posX>
+				<posY>754</posY>
+				<width>573</width>
+				<height>292</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<font>font16</font>
+				<label>#OnlineVideos.desc</label>
+				<textcolor>White</textcolor>
+				<seperator>: : :</seperator>
+			</control>
 		</control>
 		<!-- *** HIDDEN MENU *** -->
 		<control>
@@ -250,7 +309,7 @@
 			<height>1071</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+![control.hasfocus(2)|control.hasfocus(10)|control.hasfocus(9)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>
+			<visible>!String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+![control.hasfocus(2)|control.hasfocus(10)|control.hasfocus(9)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -269,7 +328,7 @@
 			<width>637</width>
 			<height>1080</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+[control.hasfocus(2)|control.hasfocus(10)|control.hasfocus(9)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>
+			<visible>[!Control.HasFocus(50)+!String.Equals(#OnlineVideos.state,details)]+!String.Equals(#OnlineVideos.state,details)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
