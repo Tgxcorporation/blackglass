@@ -119,7 +119,7 @@
 				<height>255</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
+				<visible>!string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)+!string.equals(#OnlineVideos.selectedSiteUtil, IMDb)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 				<centered>yes</centered>
 			</control>
@@ -131,9 +131,34 @@
 				<width>360</width>
 				<height>273</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
+				<visible>!string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)+!string.equals(#OnlineVideos.selectedSiteUtil, IMDb)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>55</posX>
+				<posY>98</posY>
+				<width>185</width>
+				<height>263</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>93</posY>
+				<width>215</width>
+				<height>273</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
 			<control>
 				<type>fadelabel</type>
 				<description>Current program title</description>
@@ -224,7 +249,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>![String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)-->]+[control.hasfocus(2)|control.hasfocus(10)|control.hasfocus(9)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)]</visible>
+			<visible>[!Control.HasFocus(50)+!control.isvisible(51)]+![string.equals(#OnlineVideos.state,details)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -246,7 +271,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#header.label</label>
+				<width>333</width>
 				<font>font24</font>
 			</control>
 			<control>
@@ -263,6 +289,7 @@
 				<layout>StackLayout(0, Vertical, true)</layout>
 				<posX>0</posX>
 				<posY>100</posY>
+
 				<control>
 					<description>View-As</description>
 					<type>button</type>
