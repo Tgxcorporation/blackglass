@@ -13,8 +13,8 @@ This file should contain the details view
 			<label>-</label>
 			<onup>6</onup>
 			<ondown>6</ondown>
-			<onleft>6</onleft>
-			<onright>6</onright>
+			<onleft>66621</onleft>
+			<onright>66621</onright>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
@@ -249,6 +249,124 @@ This file should contain the details view
 			<colordiffuse>77ffffff</colordiffuse>
 			<visible>!Control.isvisible(50)+!control.isvisible(51)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		
+		
+				
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+![control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>66621</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label><width>333</width>
+				<font>font24</font>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66621</id>
+					<type>button</type>
+					<label>IMDb Movie Trailers</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:IMDb Movie Trailers|search:#(iif(neq(#MovingPictures.SelectedMovie.imdb_id,''),#MovingPictures.SelectedMovie.imdb_id,#MovingPictures.SelectedMovie.title))|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>17</onup>
+					<onright>6</onright>
+					<ondown>66622</ondown>
+				</control>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66622</id>
+					<type>button</type>
+					<label>iTunes Movie Trailers</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:iTunes Movie Trailers|search:#MovingPictures.SelectedMovie.title|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>66621</onup>
+					<onright>6</onright>
+					<ondown>66623</ondown>
+				</control>
+				<control>
+					<description>SubCentral</description>
+					<id>66623</id>
+					<type>button</type>
+					<label>Sub Central</label>
+					<hyperlink>84623</hyperlink>
+					<visible>plugin.isenabled(SubCentral)</visible>
+					<onup>66622</onup>
+					<onright>6</onright>
+					<ondown>66624</ondown>     
+				</control>
+				<control>
+					<description>dlCentral</description>
+					<type>button</type>
+					<id>66624</id>
+					<label>Download Central</label>
+					<hyperlink>181966</hyperlink>
+					<ondown>66621</ondown>
+					<onup>66623</onup>
+					<onright>6</onright>
+					<visible>plugin.isenabled(dlCentral)</visible>
+				</control>
+			</control>
 		</control>
 	</controls>
 </window>
