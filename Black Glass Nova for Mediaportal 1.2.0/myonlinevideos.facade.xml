@@ -4,7 +4,6 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<animation effect="fade" time="250">visiblechange</animation>	
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -39,6 +38,8 @@
 					<spinPosY>685</spinPosY>
 					<PinIconXOff>625</PinIconXOff> 
 					<PinIconYOff>2</PinIconYOff>
+					<visible>!String.Equals(#OnlineVideos.state,details)</visible>
+					<animation effect="fade" time="250">visiblechange</animation>
 				</control>
 				<control>
 					<description>Thumbnail Panel</description>
@@ -87,6 +88,8 @@
 					<spinPosY>660</spinPosY>
 					<spinAlign>Right</spinAlign>
 					<spinColor>60ffffff</spinColor>
+					<visible>!String.Equals(#OnlineVideos.state,details)</visible>
+					<animation effect="fade" time="250">visiblechange</animation>
 				</control>        
 			</control>
 		</control>
