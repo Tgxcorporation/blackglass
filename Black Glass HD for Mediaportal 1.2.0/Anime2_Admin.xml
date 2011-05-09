@@ -4,11 +4,37 @@
   <id>6002</id>
   <defaultcontrol>50</defaultcontrol>
   <allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-  <define>#header.label:Admin</define>
+  <define>#header.label:Utilities</define>
   <define>#header.background:hover_my anime.png</define>
   <animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+  <animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
   <controls>
+    <!-- Import Dummy controls to handle visibility -->
+    <import>Anime2_Dummy.xml</import>
+    <import>Anime2_Notification.xml</import>
+    <!-- Specific Dummy controls to handle visibility -->
+    <control>
+      <type>label</type>
+      <description>Dummy Label showing tvdb/moviedb groups</description>
+      <id>3511</id>
+      <posX>-75</posX>
+      <posY>-50</posY>
+      <width>0</width>
+      <textcolor>d4d2d2</textcolor>
+      <font>font14</font>
+      <visible>false</visible>
+    </control>
+    <control>
+      <type>label</type>
+      <description>Dummy Label showing unlinked files</description>
+      <id>3512</id>
+      <posX>-75</posX>
+      <posY>-50</posY>
+      <width>0</width>
+      <textcolor>d4d2d2</textcolor>
+      <font>font14</font>
+      <visible>false</visible>
+    </control>
     <!-- ********************** BACKGROUNDS************************************** -->
     <import>common.window.background.xml</import>
     <import>common.window.overlay.xml</import>
@@ -20,6 +46,8 @@
       <animation effect="fade" time="150">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <visible>![control.hasfocus(101)|control.hasfocus(102)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
       <control>
         <type>label</type>
         <id>0</id>
@@ -29,114 +57,282 @@
         <font>font28</font>
         <align>left</align>
         <textcolor>60ffffff</textcolor>
-        <visible>![control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>954</posX>
-        <posY>94</posY>
-        <width>1050</width>
-        <height>600</height>
-        <texture>bg_facade.png</texture>
-      </control>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>-55</posX>
-        <posY>94</posY>
-        <width>1050</width>
-        <height>600</height>
-        <texture>bg_facade.png</texture>
-      </control>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>-155</posX>
-        <posY>709</posY>
-        <width>2700</width>
-        <height>600</height>
-        <texture>bg_facade.png</texture>
-      </control>
-      <control>
-        <id>0</id>
-        <type>image</type>
-        <posX>0</posX>
-        <posY>141</posY>
-        <width>931</width>
-        <height>79</height>
-        <texture>bg_facade_line_nofocus.png</texture>
-        <colordiffuse>77ffffff</colordiffuse>
-      </control>
-      <control>
-        <id>0</id>
-        <type>image</type>
-        <posX>0</posX>
-        <posY>186</posY>
-        <width>931</width>
-        <height>79</height>
-        <texture>bg_facade_line_nofocus.png</texture>
-        <colordiffuse>77ffffff</colordiffuse>
-      </control>
-      <control>
-        <id>0</id>
-        <type>image</type>
-        <posX>990</posX>
-        <posY>141</posY>
-        <width>931</width>
-        <height>79</height>
-        <texture>bg_facade_line_nofocus.png</texture>
-        <colordiffuse>77ffffff</colordiffuse>
-      </control>
-      <control>
-        <id>0</id>
-        <type>image</type>
-        <posX>990</posX>
-        <posY>186</posY>
-        <width>931</width>
-        <height>79</height>
-        <texture>bg_facade_line_nofocus.png</texture>
-        <colordiffuse>77ffffff</colordiffuse>
       </control>
       <control>
         <type>fadelabel</type>
         <id>0</id>
-        <posX>60</posX>
-        <posY>1035</posY>
-        <width>1350</width>
-        <font>font12</font>
+        <posX>45</posX>
+        <posY>150</posY>
+        <width>579</width>
+        <font>font16</font>
         <label>Version:   #Anime2.VersionNumber   (DB: #Anime2.DBVersionNumber)</label>
         <wrapString> : : : </wrapString>
       </control>
       <control>
         <type>fadelabel</type>
         <id>0</id>
-        <posX>450</posX>
-        <posY>1035</posY>
-        <width>450</width>
-        <font>font12</font>
+        <posX>45</posX>
+        <posY>210</posY>
+        <width>579</width>
+        <font>font14</font>
         <label>#Anime2.LatestVersionText</label>
+        <textcolor>90ffffff</textcolor>
         <wrapString> : : : </wrapString>
       </control>
+      <!--  ************** HASHER STATUS *****************  -->
       <control>
         <type>label</type>
         <id>0</id>
         <posX>45</posX>
-        <posY>139</posY>
-        <width>870</width>
+        <posY>765</posY>
+        <width>435</width>
         <align>left</align>
-        <label>Groups Without TvDB Associations</label>
-        <font>font22</font>
+        <label>HASHER QUEUE</label>
+        <textcolor>90ffffff</textcolor>
+        <font>font12</font>
+      </control>
+      <control>
+        <description>Vid Hasher Queue</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>450</posX>
+        <posY>765</posY>
+        <label>#Anime2.Utilities.HasherQueueCount</label>
+        <font>font12</font>
+        <align>Left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <description>Vid Hasher Status</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>600</posX>
+        <posY>765</posY>
+        <width>1350</width>
+        <label>#Anime2.Utilities.HasherQueueStatus</label>
+        <font>font12</font>
+        <align>Left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <!--  ************** ANIDB STATUS *****************  -->
+      <control>
+        <type>label</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>810</posY>
+        <width>435</width>
+        <align>left</align>
+        <label>ANIDB QUEUE</label>
+        <textcolor>90ffffff</textcolor>
+        <font>font12</font>
+      </control>
+      <control>
+        <description>ANIDB Queue</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>450</posX>
+        <posY>810</posY>
+        <label>#Anime2.Utilities.AniDBQueueCount</label>
+        <font>font12</font>
+        <align>Left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <description>ANIDB Status</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>600</posX>
+        <posY>810</posY>
+        <width>1350</width>
+        <label>#Anime2.Utilities.AniDBQueueStatus</label>
+        <font>font12</font>
+        <align>Left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <!--  ************** IMAGE DOWNLOAD STATUS *****************  -->
+      <control>
+        <type>label</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>855</posY>
+        <width>300</width>
+        <align>left</align>
+        <label>IMAGE QUEUE</label>
+        <textcolor>90ffffff</textcolor>
+        <font>font12</font>
+      </control>
+      <control>
+        <description>IMAGE Queue</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>450</posX>
+        <posY>855</posY>
+        <label>#Anime2.Utilities.ImageQueueCount</label>
+        <font>font12</font>
+        <align>Left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <description>IMAGE Status</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>600</posX>
+        <posY>855</posY>
+        <width>1350</width>
+        <label>#Anime2.Utilities.ImageQueueStatus</label>
+        <font>font12</font>
+        <align>Left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <!--  ************** TVDB STATUS *****************  -->
+      <control>
+        <type>label</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>900</posY>
+        <width>300</width>
+        <align>left</align>
+        <label>TVDB QUEUE</label>
+        <textcolor>90ffffff</textcolor>
+        <font>font12</font>
+      </control>
+      <control>
+        <description>TVDB Queue</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>450</posX>
+        <posY>900</posY>
+        <label>#Anime2.Utilities.TvDBQueueCount</label>
+        <font>font12</font>
+        <align>Left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <description>TVDB Status</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>600</posX>
+        <posY>900</posY>
+        <width>1350</width>
+        <label>#Anime2.Utilities.TvDBQueueStatus</label>
+        <font>font12</font>
+        <align>Left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <!--  ************** OTHER STATUS *****************  -->
+      <control>
+        <type>label</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>945</posY>
+        <width>450</width>
+        <align>left</align>
+        <label>IMPORT PROGRESS</label>
+        <textcolor>90ffffff</textcolor>
+        <font>font12</font>
+      </control>
+      <control>
+        <description>scan progress value</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>450</posX>
+        <posY>945</posY>
+        <width>1350</width>
+        <label>#Anime2.Utilities.ImportProgress</label>
+        <font>font12</font>
+        <align>Left</align>
+        <textcolor>ffffffff</textcolor>
       </control>
       <control>
         <type>label</type>
         <id>0</id>
         <posX>45</posX>
-        <posY>225</posY>
-        <label>#Anime2.MissingGroups Groups</label>
+        <posY>990</posY>
+        <width>435</width>
+        <align>left</align>
+        <label>CLEANUP PROGRESS</label>
         <textcolor>90ffffff</textcolor>
-        <font>font13</font>
+        <font>font12</font>
+      </control>
+      <control>
+        <description>cleanup status value</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>450</posX>
+        <posY>990</posY>
+        <width>1350</width>
+        <label>#Anime2.Utilities.MiscProgress</label>
+        <font>font12</font>
+        <align>Left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+    </control>
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>687</posX>
+        <posY>72</posY>
+        <width>1422</width>
+        <height>1149</height>
+        <texture>bg_facade.png</texture>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>735</posX>
+        <posY>145</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+      </control>
+      <control>
+        <type>label</type>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>142</posY>
+        <width>1125</width>
+        <align>left</align>
+        <label>Groups Without TvDB Associations</label>
+        <font>font24</font>
+        <visible>Control.IsVisible(3511)</visible>
+      </control>
+      <control>
+        <type>label</type>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>142</posY>
+        <width>1125</width>
+        <align>left</align>
+        <label>Unrecognized Files</label>
+        <font>font24</font>
+        <visible>Control.IsVisible(3512)</visible>
+      </control>
+      <control>
+        <type>label</type>
+        <id>0</id>
+        <posX>765</posX>
+        <posY>997</posY>
+        <label>#selectedindex / #Anime2.MissingGroups Groups</label>
+        <textcolor>60ffffff</textcolor>
+        <font>font16</font>
+        <visible>Control.IsVisible(3511)</visible>
+      </control>
+      <control>
+        <type>label</type>
+        <id>0</id>
+        <posX>765</posX>
+        <posY>997</posY>
+        <label>#selectedindex / #Anime2.UnrecognizedFiles Files</label>
+        <textcolor>60ffffff</textcolor>
+        <font>font16</font>
+        <visible>Control.IsVisible(3512)</visible>
       </control>
       <control>
         <description>group element</description>
@@ -149,249 +345,19 @@
             <description>listcontrol</description>
             <type>listcontrol</type>
             <id>50</id>
-            <onleft>6</onleft>
-            <onright>51</onright>
-            <posX>0</posX>
-            <posY>265</posY>
-            <width>930</width>
-            <height>424</height>
-            <spinPosY>-2200</spinPosY>
-            <spinCanFocus>no</spinCanFocus>
+            <onleft>101</onleft>
+            <onright>101</onright>
+            <posX>735</posX>
+            <posY>225</posY>
+            <width>1185</width>
+            <height>795</height>
             <textXOff>-60</textXOff>
             <textXOff2>487</textXOff2>
             <textXOff3>540</textXOff3>
-            <IconXOff>-330</IconXOff>
+            <IconXOff>-495</IconXOff>
             <IconYOff>10</IconYOff>
           </control>
         </control>
-      </control>
-      <control>
-        <type>label</type>
-        <id>0</id>
-        <posX>1035</posX>
-        <posY>139</posY>
-        <width>885</width>
-        <align>left</align>
-        <label>Unrecognized Files</label>
-        <font>font22</font>
-      </control>
-      <control>
-        <type>label</type>
-        <id>0</id>
-        <posX>1035</posX>
-        <posY>225</posY>
-        <label>#Anime2.UnrecognizedFiles Files</label>
-        <textcolor>90ffffff</textcolor>
-        <font>font12</font>
-      </control>
-      <!--  ************** HASHER STATUS *****************  -->
-      <control>
-        <type>label</type>
-        <id>101</id>
-        <posX>60</posX>
-        <posY>765</posY>
-        <width>435</width>
-        <align>left</align>
-        <label>HASHER QUEUE</label>
-        <textcolor>90ffffff</textcolor>
-        <font>font12</font>
-      </control>
-      <control>
-        <description>Vid Hasher Queue</description>
-        <type>label</type>
-        <id>102</id>
-        <posX>450</posX>
-        <posY>765</posY>
-        <label>Hash...</label>
-        <font>font12</font>
-        <align>Left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <description>Vid Hasher Status</description>
-        <type>label</type>
-        <id>104</id>
-        <posX>600</posX>
-        <posY>765</posY>
-        <width>1350</width>
-        <label>Hash...</label>
-        <font>font12</font>
-        <align>Left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <!--  ************** ANIDB STATUS *****************  -->
-      <control>
-        <type>label</type>
-        <id>111</id>
-        <posX>60</posX>
-        <posY>810</posY>
-        <width>435</width>
-        <align>left</align>
-        <label>ANIDB QUEUE</label>
-        <textcolor>90ffffff</textcolor>
-        <font>font12</font>
-      </control>
-      <control>
-        <description>ANIDB Queue</description>
-        <type>label</type>
-        <id>112</id>
-        <posX>450</posX>
-        <posY>810</posY>
-        <label>Hash...</label>
-        <font>font12</font>
-        <align>Left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <description>ANIDB Status</description>
-        <type>label</type>
-        <id>114</id>
-        <posX>600</posX>
-        <posY>810</posY>
-        <width>1350</width>
-        <label>Hash...</label>
-        <font>font12</font>
-        <align>Left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <!--  ************** IMAGE DOWNLOAD STATUS *****************  -->
-      <control>
-        <type>label</type>
-        <id>121</id>
-        <posX>60</posX>
-        <posY>855</posY>
-        <width>300</width>
-        <align>left</align>
-        <label>IMAGE QUEUE</label>
-        <textcolor>90ffffff</textcolor>
-        <font>font12</font>
-      </control>
-      <control>
-        <description>IMAGE Queue</description>
-        <type>label</type>
-        <id>122</id>
-        <posX>450</posX>
-        <posY>855</posY>
-        <label>Hash...</label>
-        <font>font12</font>
-        <align>Left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <description>IMAGE Status</description>
-        <type>label</type>
-        <id>124</id>
-        <posX>600</posX>
-        <posY>855</posY>
-        <width>1350</width>
-        <label>Hash...</label>
-        <font>font12</font>
-        <align>Left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <!--  ************** TVDB STATUS *****************  -->
-      <control>
-        <type>label</type>
-        <id>141</id>
-        <posX>60</posX>
-        <posY>900</posY>
-        <width>300</width>
-        <align>left</align>
-        <label>TVDB QUEUE</label>
-        <textcolor>90ffffff</textcolor>
-        <font>font12</font>
-      </control>
-      <control>
-        <description>TVDB Queue</description>
-        <type>label</type>
-        <id>142</id>
-        <posX>450</posX>
-        <posY>900</posY>
-        <label>Hash...</label>
-        <font>font12</font>
-        <align>Left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <description>TVDB Status</description>
-        <type>label</type>
-        <id>144</id>
-        <posX>600</posX>
-        <posY>900</posY>
-        <width>1350</width>
-        <label>Hash...</label>
-        <font>font12</font>
-        <align>Left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <!--  ************** OTHER STATUS *****************  -->
-      <control>
-        <type>label</type>
-        <id>131</id>
-        <posX>60</posX>
-        <posY>945</posY>
-        <width>450</width>
-        <align>left</align>
-        <label>IMPORT PROGRESS</label>
-        <textcolor>90ffffff</textcolor>
-        <font>font12</font>
-      </control>
-      <control>
-        <description>scan progress value</description>
-        <type>label</type>
-        <id>132</id>
-        <posX>450</posX>
-        <posY>945</posY>
-        <width>1350</width>
-        <label>Scan...</label>
-        <font>font12</font>
-        <align>Left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <type>label</type>
-        <id>133</id>
-        <posX>60</posX>
-        <posY>990</posY>
-        <width>435</width>
-        <align>left</align>
-        <label>CLEANUP PROGRESS</label>
-        <textcolor>90ffffff</textcolor>
-        <font>font12</font>
-      </control>
-      <control>
-        <description>cleanup status value</description>
-        <type>label</type>
-        <id>134</id>
-        <posX>450</posX>
-        <posY>990</posY>
-        <width>1350</width>
-        <label>Cleanup...</label>
-        <font>font12</font>
-        <align>Left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-    </control>
-    <control>
-      <description>group element</description>
-      <type>group</type>
-      <control>
-        <description>listcontrol</description>
-        <type>listcontrol</type>
-        <id>51</id>
-        <onleft>50</onleft>
-        <onright>6</onright>
-        <posX>990</posX>
-        <posY>265</posY>
-        <width>930</width>
-        <height>424</height>
-        <spinPosY>3300</spinPosY>
-        <spinCanFocus>no</spinCanFocus>
-        <textXOff>-60</textXOff>
-        <textXOff2>487</textXOff2>
-        <textXOff3>540</textXOff3>
-        <IconXOff>1995</IconXOff>
-        <IconYOff>10</IconYOff>
       </control>
     </control>
     <!--  ************** HIDDEN MENU *****************  -->
@@ -404,7 +370,7 @@
       <height>1071</height>
       <texture>bg_left.png</texture>
       <colorDiffuse>ffffffff</colorDiffuse>
-      <visible>![control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+      <visible>![control.hasfocus(101)|control.hasfocus(102)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
       <animation effect="fade" time="50">WindowClose</animation>
       <animation effect="fade" time="50">WindowOpen</animation>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -412,7 +378,7 @@
     <control>
       <type>actiongroup</type>
       <description>action menu</description>
-      <defaultcontrol>6</defaultcontrol>
+      <defaultcontrol>101</defaultcontrol>
       <onexit>0</onexit>
       <buttonX>0</buttonX>
       <buttonY>0</buttonY>
@@ -423,12 +389,12 @@
       <width>637</width>
       <height>1080</height>
       <dimColor>ffffffff</dimColor>
-      <visible>[control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+      <visible>[control.hasfocus(101)|control.hasfocus(102)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
       <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
       <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
       <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
       <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-      <animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
       <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
       <control>
@@ -446,7 +412,8 @@
         <type>label</type>
         <posX>45</posX>
         <posY>52</posY>
-        <label>#header.label</label><width>500</width>
+        <label>#header.label</label>
+        <width>499</width>
         <font>font24</font>
         <align>left</align>
         <textcolor>ffffffff</textcolor>
@@ -466,13 +433,41 @@
         <posX>0</posX>
         <posY>150</posY>
         <control>
+          <description>TvDB/MovieDB Groups</description>
+          <type>button</type>
+          <id>101</id>
+          <label>TvDB/MovieDB Groups</label>
+          <onleft>50</onleft>
+          <onright>50</onright>
+          <onup>17</onup>
+          <ondown>102</ondown>
+        </control>
+        <control>
+          <description>Unlinked Files</description>
+          <type>button</type>
+          <id>102</id>
+          <label>Unlinked Files</label>
+          <onleft>50</onleft>
+          <onright>50</onright>
+          <onup>101</onup>
+          <ondown>6</ondown>
+        </control>
+        <control>
+          <type>image</type>
+          <posX>0</posX>
+          <posY>71</posY>
+          <width>579</width>
+          <height>79</height>
+          <texture>bg_button_nofocus.png</texture>
+        </control>
+        <control>
           <description>Run Import</description>
           <type>button</type>
           <id>6</id>
           <label>Run Import</label>
           <onleft>50</onleft>
           <onright>50</onright>
-          <onup>8</onup>
+          <onup>102</onup>
           <ondown>7</ondown>
         </control>
         <control>
@@ -503,7 +498,7 @@
           <onleft>50</onleft>
           <onright>50</onright>
           <onup>8</onup>
-          <ondown>6</ondown>
+          <ondown>101</ondown>
         </control>
       </control>
     </control>

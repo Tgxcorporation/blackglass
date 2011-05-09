@@ -4,23 +4,10 @@
 	<id>6004</id>
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
-	<disabletopbar>yes</disabletopbar>
 	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
 	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
 	<define>#header.label:Posters</define>
 	<define>#header.background:hover_my anime.png</define>
-	<define>#title.color:ffffffff</define>
-	<!-- Titles Color     Default: ffdedede-->
-	<define>#smalltitle.color:ffffffff</define>
-	<!-- Small Titles Color     Default: ff999999 -->
-	<define>#text.color:ffffffff</define>
-	<!-- Text Color     Default: ffffffff-->
-	<define>#default.color:ffffffff</define>
-	<!-- Normal List Color     Default: ffffffff-->
-	<define>#watched.color:ffffffff</define>
-	<!-- Watched List Color     Default: ff666666 -->
-	<define>#notpresent.color:ffffffff</define>
-	<!-- File Not Present in List Color     Default: ffef6d16 -->
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
@@ -40,71 +27,81 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>control.hasfocus(50)</visible>
+				<visible>![control.hasfocus(2)|control.hasfocus(13)|control.hasfocus(12)|control.hasfocus(140)|control.hasfocus(141)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
-				<description>WideBanners Source Label</description>
 				<type>label</type>
+				<description>source</description>
 				<id>0</id>
-				<posX>570</posX>
-				<posY>52</posY>
-				<width>1050</width>
-				<font>font12</font>
-				<label>Source:</label>
+				<posX>45</posX>
+				<posY>81</posY>
+				<font>font10</font>
+				<label>Source</label>
 				<textcolor>90ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(13)|control.hasfocus(12)|control.hasfocus(140)|control.hasfocus(141)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
-				<description>Poster Source</description>
 				<type>label</type>
+				<description>source</description>
 				<id>0</id>
-				<posX>675</posX>
-				<posY>46</posY>
-				<width>1050</width>
-				<font>font14</font>
+				<posX>180</posX>
+				<posY>81</posY>
+				<font>font10</font>
 				<label>#Anime2.Posters.SelectedSource</label>
+				<visible>![control.hasfocus(2)|control.hasfocus(13)|control.hasfocus(12)|control.hasfocus(140)|control.hasfocus(141)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
-				<description>IsDisabled Label</description>
+				<description>Disabled Label</description>
 				<type>label</type>
+				<label>Disabled</label>
 				<id>0</id>
-				<posX>975</posX>
-				<posY>52</posY>
-				<width>1050</width>
-				<font>font12</font>
-				<label>Is Disabled:</label>
+				<posX>45</posX>
+				<posY>105</posY>
+				<width>120</width>
+				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(13)|control.hasfocus(12)|control.hasfocus(140)|control.hasfocus(141)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
-				<description>IsDisabled</description>
+				<description>Disabled Value</description>
 				<type>label</type>
-				<id>0</id>
-				<posX>1132</posX>
-				<posY>46</posY>
-				<width>1050</width>
-				<font>font14</font>
 				<label>#Anime2.Posters.SelectedPosterIsDisabled</label>
+				<id>0</id>
+				<posX>180</posX>
+				<posY>105</posY>
+				<font>font10</font>
+				<textcolor>ffFFFFFF</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(13)|control.hasfocus(12)|control.hasfocus(140)|control.hasfocus(141)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
-				<description>Is Default Label</description>
+				<description>Default Label</description>
 				<type>label</type>
+				<label>Default</label>
 				<id>0</id>
-				<posX>1282</posX>
-				<posY>52</posY>
-				<width>1050</width>
-				<font>font12</font>
-				<label>Is Default:</label>
+				<posX>45</posX>
+				<posY>129</posY>
+				<width>120</width>
+				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(13)|control.hasfocus(12)|control.hasfocus(140)|control.hasfocus(141)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
-				<description>Is Default:</description>
+				<description>Default Value</description>
 				<type>label</type>
-				<id>0</id>
-				<posX>1417</posX>
-				<posY>46</posY>
-				<width>1050</width>
-				<font>font14</font>
 				<label>#Anime2.Posters.SelectedPosterIsDefault</label>
+				<id>0</id>
+				<posX>180</posX>
+				<posY>129</posY>
+				<font>font10</font>
+				<textcolor>ffFFFFFF</textcolor>
+				<visible>![control.hasfocus(2)|control.hasfocus(13)|control.hasfocus(12)|control.hasfocus(140)|control.hasfocus(141)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<id>0</id>
@@ -129,7 +126,7 @@
 						<type>thumbnailpanel</type>
 						<id>50</id>
 						<posX>15</posX>
-						<posY>120</posY>
+						<posY>180</posY>
 						<width>1933</width>
 						<height>960</height>
 						<scrollOffset>1</scrollOffset>
@@ -144,7 +141,7 @@
 						<thumbPosX>25</thumbPosX>
 						<thumbPosY>4</thumbPosY>
 						<itemWidthBig>387</itemWidthBig>
-						<itemHeightBig>469</itemHeightBig>
+						<itemHeightBig>450</itemHeightBig>
 						<thumbWidthBig>292</thumbWidthBig>
 						<thumbHeightBig>414</thumbHeightBig>
 						<textureWidthBig>337</textureWidthBig>
@@ -177,7 +174,7 @@
 						<onleft>50</onleft>
 						<onright>50</onright>
 						<posX>30</posX>
-						<posY>547</posY>
+						<posY>630</posY>
 						<width>1905</width>
 						<height>334</height>
 						<spinCanFocus>no</spinCanFocus>
@@ -193,7 +190,7 @@
 						<frame>-</frame>
 						<frameFocus>-</frameFocus>
 						<showFolder>yes</showFolder>
-						<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
+						<imageFolder>DVDCase.png</imageFolder>
 						<imageFolderFocus>DVDCase.png</imageFolderFocus>
 						<thumbs flipY="true" diffuse="Thumb_Mask.png" />
 						<showBackGround>no</showBackGround>
@@ -204,7 +201,7 @@
 						<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
 						<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
 						<scrollOffset>3</scrollOffset>
-						<scrollbarYOff>377</scrollbarYOff>
+						<scrollbarYOff>251</scrollbarYOff>
 					</control>
 				</control>
 			</control>
@@ -219,7 +216,7 @@
 			<height>1071</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>control.hasfocus(50)</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(13)|control.hasfocus(140)|control.hasfocus(141)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -238,12 +235,12 @@
 			<width>637</width>
 			<height>1080</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>![control.hasfocus(2)|control.hasfocus(13)|control.hasfocus(140)|control.hasfocus(141)]</visible>
+			<visible>[control.hasfocus(2)|control.hasfocus(13)|control.hasfocus(140)|control.hasfocus(141)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
 			<control>
@@ -262,7 +259,7 @@
 				<posX>45</posX>
 				<posY>52</posY>
 				<label>#header.label</label>
-				<width>500</width>
+				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
