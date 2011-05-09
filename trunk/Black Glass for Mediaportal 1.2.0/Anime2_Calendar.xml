@@ -7,19 +7,6 @@
 	<define>#header.background:hover_my anime.png</define>
 	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
 	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
-	<define>#title.color:ffffffff</define>
-	<!-- Titles Color     Default: ffdedede-->
-	<define>#smalltitle.color:ffffffff</define>
-	<!-- Small Titles Color     Default: ff999999 -->
-	<define>#text.color:ffffffff</define>
-	<!-- Text Color     Default: ffffffff-->
-	<define>#default.color:ffffffff</define>
-	<!-- Normal List Color     Default: ffffffff-->
-	<define>#watched.color:ffffffff</define>
-	<!-- Watched List Color     Default: ff666666 -->
-	<define>#notpresent.color:ffffffff</define>
-	<!-- File Not Present in List Color     Default: ffef6d16 -->
-
 	<controls>
 
 		<!-- ********************** DUMMY controlS FOR VISIBILITY ************************************** -->
@@ -58,7 +45,7 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(902)]</visible>
+				<visible>![control.hasfocus(901)|control.hasfocus(902)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -396,7 +383,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(902)]</visible>
+			<visible>![control.hasfocus(901)|control.hasfocus(902)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -415,7 +402,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(902)]</visible>
+			<visible>[control.hasfocus(901)|control.hasfocus(902)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -438,7 +425,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#header.label</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -462,6 +450,15 @@
 					<type>button</type>
 					<id>902</id>
 					<label>Downloads</label>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>901</ondown>
+				</control>
+				<control>
+					<description>Collection</description>
+					<type>button</type>
+					<id>901</id>
+					<label>Collection</label>
 					<onright>50</onright>
 					<onup>902</onup>
 					<ondown>902</ondown>
