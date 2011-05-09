@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
-	<id>54537689</id>
+	<id>54537688</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<allowoverlay>player.hasmedia</allowoverlay>
 	<disabletopbar>false</disabletopbar>
 	<define>#header.label:Browse the Web - Favorites</define>
 	<define>#header.background:hover_BrowseTheWeb.png</define> 
@@ -12,7 +12,7 @@
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
 		<import>common.facade.background.xml</import>
-		<import>common.facade.pictures.xml</import>
+		<import>common.facade.video.xml</import>
 
 		<control>
 			<type>group</type>
@@ -32,7 +32,7 @@
 				<visible>![control.hasfocus(2)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
-			<control>
+			<!-- <control>
 				<description>Cover Art</description>
 				<type>image</type>
 				<id>0</id>
@@ -57,14 +57,14 @@
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
+			</control> -->
 
 			<control>
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
 				<posX>30</posX>
-				<posY>485</posY>
+				<posY>100</posY>
 				<width>420</width>
 				<font>font22</font>
 				<label>#selecteditem</label>
