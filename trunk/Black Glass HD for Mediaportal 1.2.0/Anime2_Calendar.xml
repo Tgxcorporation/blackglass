@@ -8,25 +8,13 @@
 	<define>#header.background:hover_my anime.png</define>
 	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
 	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
-	<define>#title.color:ffffffff</define>
-	<!-- Titles Color     Default: ffdedede-->
-	<define>#smalltitle.color:ffffffff</define>
-	<!-- Small Titles Color     Default: ff999999 -->
-	<define>#text.color:ffffffff</define>
-	<!-- Text Color     Default: ffffffff-->
-	<define>#default.color:ffffffff</define>
-	<!-- Normal List Color     Default: ffffffff-->
-	<define>#watched.color:ffffffff</define>
-	<!-- Watched List Color     Default: ff666666 -->
-	<define>#notpresent.color:ffffffff</define>
-	<!-- File Not Present in List Color     Default: ffef6d16 -->
 	<controls>
 		<!-- ********************** DUMMY controlS FOR VISIBILITY ************************************** -->
 		<control>
 			<type>label</type>
 			<description>Do any anime exist for the current month</description>
 			<id>1401</id>
-			<posX>-50</posX>
+			<posX>-75</posX>
 			<posY>-50</posY>
 			<width>7</width>
 			<visible>false</visible>
@@ -51,7 +39,7 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(902)]</visible>
+				<visible>![control.hasfocus(901)|control.hasfocus(902)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -83,7 +71,7 @@
 					<frame>-</frame>
 					<frameFocus>-</frameFocus>
 					<showFolder>yes</showFolder>
-					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
+					<imageFolder>DVDCase.png</imageFolder>
 					<imageFolderFocus>DVDCase.png</imageFolderFocus>
 					<thumbs flipY="true" diffuse="Thumb_Mask.png" />
 					<showBackGround>no</showBackGround>
@@ -92,7 +80,7 @@
 					<InfoImage>-</InfoImage>
 					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="110">focus</thumbAnimation>
 					<thumbAnimation effect="zoom" start="120,120" end="100,100" time="110">unfocus</thumbAnimation>
-					<showScrollbar>yes</showScrollbar>
+					<showScrollbar>no</showScrollbar>
 				</control>
 			</control>
 			<!--  ************** BUTTONS TOOLBAR *****************  -->
@@ -367,7 +355,7 @@
 			<height>1071</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(902)]</visible>
+			<visible>![control.hasfocus(901)|control.hasfocus(902)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -386,12 +374,12 @@
 			<width>637</width>
 			<height>1080</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(902)]</visible>
+			<visible>[control.hasfocus(901)|control.hasfocus(902)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
 			<control>
@@ -410,7 +398,7 @@
 				<posX>45</posX>
 				<posY>52</posY>
 				<label>#header.label</label>
-				<width>500</width>
+				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -434,6 +422,15 @@
 					<type>button</type>
 					<id>902</id>
 					<label>Downloads</label>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>901</ondown>
+				</control>
+				<control>
+					<description>Collection</description>
+					<type>button</type>
+					<id>901</id>
+					<label>Collection</label>
 					<onright>50</onright>
 					<onup>902</onup>
 					<ondown>902</ondown>
