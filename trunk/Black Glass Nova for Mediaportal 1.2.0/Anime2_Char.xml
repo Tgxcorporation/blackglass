@@ -5,14 +5,98 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:Characters</define>
 	<define>#header.background:hover_my anime.png</define>
-	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
+	<animation effect="fade" time="250">WindowOpen</animation>
 	<controls>
 
+		<!-- Dummies -->
+		<control>
+			<type>label</type>
+			<description>Dummy Label for main character poster having height  width</description>
+			<id>5681</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+			<!-- this will be true when the main character poster has a heigh greater than its width -->
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for main actor poster having height  width</description>
+			<id>5682</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+			<!-- this will be true when the main actor poster has a heigh greater than its width -->
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for secondary character poster having height  width</description>
+			<id>5683</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+			<!-- this will be true when the secondary character poster has a heigh greater than its width -->
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for series poster having height  width</description>
+			<id>5684</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+			<!-- this will be true when the series poster has a heigh greater than its width -->
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for main character exists</description>
+			<id>5691</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for main actor exists</description>
+			<id>5692</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for secondary character exists</description>
+			<id>5693</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for series exists</description>
+			<id>5694</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+		</control>
 
 		<!-- ********************** BACKGROUNDS************************************** -->
 		<import>common.window.xml</import>
-
+		<import>common.window.accessories.xml</import>	
 		<control>
 			<description>Fanart Background #1</description>
 			<type>image</type>
@@ -22,12 +106,14 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>#Anime2.Character.Fanart</texture>
-			<animation effect="fade" start="0" end="100" time="250">WindowOpen</animation>
-			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="200" delay="0">Hidden</animation>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">hidden</animation>
+			<animation effect="fade" time="1">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
+		<import>common.window.time.xml</import>
+
 		<control>
-			<description>Fanart Background #1</description>
 			<type>image</type>
 			<id>0</id>
 			<posX>0</posX>
@@ -35,13 +121,8 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>black.png</texture>
-			<colordiffuse>80ffffff</colordiffuse>
+			<colordiffuse>90ffffff</colordiffuse>
 		</control>
-
-
-
-
-
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -62,8 +143,8 @@
 			<colordiffuse>77ffffff</colordiffuse>
 		</control>
 		<control>
-			<type>group</type>
 			<description>group element</description>
+			<type>group</type>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -90,6 +171,7 @@
 		</control>
 
 
+
 		<!--  ************** CHARACTER LABELS *****************  -->
 
 
@@ -103,6 +185,7 @@
 			<font>font14</font>
 			<label>#Anime2.Character.Name</label>
 			<wrapString> : : : </wrapString>
+			<visible>Control.IsVisible(5691)</visible>
 		</control>
 
 		<control>
@@ -113,7 +196,9 @@
 			<posY>120</posY>
 			<height>350</height>
 			<width>250</width>
-			<texture>Anime/anime2_blankchar.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#Anime2.Character.PosterMainChar</texture>
+			<visible>Control.IsVisible(5691)</visible>
 		</control>
 
 
@@ -129,17 +214,20 @@
 			<font>font14</font>
 			<label>#Anime2.Actor.Name</label>
 			<wrapString> : : : </wrapString>
+			<visible>Control.IsVisible(5692)</visible>
 		</control>
 
 		<control>
 			<type>image</type>
 			<description>actor image</description>
-			<id>47</id>
+			<id>0</id>
 			<posX>640</posX>
 			<posY>120</posY>
 			<height>350</height>
 			<width>250</width>
-			<texture>Anime/anime2_blankchar.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#Anime2.Character.PosterMainActor</texture>
+			<visible>Control.IsVisible(5692)</visible>
 		</control>
 
 		<control>
@@ -162,8 +250,8 @@
 			<colordiffuse>77ffffff</colordiffuse>
 		</control>
 		<control>
-			<type>group</type>
 			<description>group element</description>
+			<type>group</type>
 			<control>
 				<description>listcontrol</description>
 				<type>listcontrol</type>
@@ -188,6 +276,20 @@
 				<textYOff>8</textYOff>
 			</control>
 		</control>
+
+		<!-- Also as Actor Name -->
+		<control>
+			<description>Actor Name</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1000</posX>
+			<posY>96</posY>
+			<textcolor>ffffffff</textcolor>
+			<font>font11</font>
+			<width>260</width>
+			<label>Also as #Anime2.Character.SeriesCharacter</label>
+			<visible>Control.IsVisible(5693)</visible>
+		</control>
 		<control>
 			<type>image</type>
 			<description>small char image</description>
@@ -196,18 +298,35 @@
 			<posY>120</posY>
 			<height>250</height>
 			<width>180</width>
-			<texture>Anime/anime2_blankchar.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#Anime2.Character.PosterSecondChar</texture>
+			<visible>Control.IsVisible(5693)</visible>
 		</control>
 
+		<!-- Series Name -->
+		<control>
+			<description>Series Name</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1000</posX>
+			<posY>396</posY>
+			<textcolor>ffffffff</textcolor>
+			<font>font11</font>
+			<width>260</width>
+			<label>in #Anime2.Character.SeriesName</label>
+			<visible>Control.IsVisible(5694)</visible>
+		</control>
 		<control>
 			<type>image</type>
 			<description>small series image</description>
 			<id>49</id>
 			<posX>1000</posX>
-			<posY>400</posY>
+			<posY>420</posY>
 			<height>250</height>
 			<width>180</width>
-			<texture>Anime/anime2_blankchar.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#Anime2.Character.PosterSeries</texture>
+			<visible>Control.IsVisible(5694)</visible>
 		</control>
 		<control>
 			<description>ANIDB Status</description>
@@ -221,7 +340,6 @@
 			<align>Left</align>
 			<textcolor>ffffffff</textcolor>
 		</control>
-
 
 		<control>
 			<type>image</type>
@@ -274,7 +392,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#header.label</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -294,10 +413,10 @@
 				<posX>0</posX>
 				<posY>100</posY>
 				<control>
-					<description>Characters</description>
+					<description>Relations</description>
 					<type>button</type>
 					<id>901</id>
-					<label>Characters</label>
+					<label>Relations</label>
 					<onright>50</onright>
 					<onup>803</onup>
 					<ondown>902</ondown>
@@ -313,7 +432,7 @@
 				</control>
 			</control>
 		</control>
-		<import>common.window.time.xml</import>
 
+		<import>Anime2_Notification.xml</import>
 	</controls>
 </window>
