@@ -6,20 +6,8 @@
   <allowoverlay>control.isvisible(13371337)</allowoverlay>
   <define>#header.label:Calendar</define>
   <define>#header.background:hover_my anime.png</define>
-  <animation effect="fade" time="250">WindowOpen</animation>
-  <animation effect="fade" time="250">WindowClose</animation>
-  <define>#title.color:ffffffff</define>
-  <!-- Titles Color     Default: ffdedede-->
-  <define>#smalltitle.color:ffffffff</define>
-  <!-- Small Titles Color     Default: ff999999 -->
-  <define>#text.color:ffffffff</define>
-  <!-- Text Color     Default: ffffffff-->
-  <define>#default.color:ffffffff</define>
-  <!-- Normal List Color     Default: ffffffff-->
-  <define>#watched.color:ffffffff</define>
-  <!-- Watched List Color     Default: ff666666 -->
-  <define>#notpresent.color:ffffffff</define>
-  <!-- File Not Present in List Color     Default: ffef6d16 -->
+  <animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
+  <animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
   <controls>
     <!-- ********************** DUMMY controlS FOR VISIBILITY ************************************** -->
     <control>
@@ -33,54 +21,52 @@
     </control>
     <!-- ********************** BACKGROUNDS************************************** -->
     <import>common.window.xml</import>
+    <import>common.window.overlay.xml</import>
+    <import>common.window.accessories.xml</import>
+    <import>common.window.time.xml</import>
     <control>
-      <id>0</id>
-      <type>image</type>
-      <posX>-300</posX>
-      <posY>540</posY>
-      <width>2520</width>
-      <height>270</height>
-      <texture>gradient.png</texture>
-    </control>
-    <control>
-      <description>composite control</description>
-      <type>facadeview</type>
-      <id>50</id>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
       <control>
-        <description>Filmstrip view</description>
-        <type>filmstrip</type>
+        <description>composite control</description>
+        <type>facadeview</type>
         <id>50</id>
-        <onup>84</onup>
-        <onleft>902</onleft>
-        <onright>902</onright>
-        <posX>30</posX>
-        <posY>465</posY>
-        <width>2025</width>
-        <spinCanFocus>no</spinCanFocus>
-        <thumbWidth>225</thumbWidth>
-        <thumbHeight>322</thumbHeight>
-        <thumbPosX>31</thumbPosX>
-        <thumbPosY>6</thumbPosY>
-        <itemWidth>270</itemWidth>
-        <itemHeight>420</itemHeight>
-        <textureWidth>262</textureWidth>
-        <textureHeight>334</textureHeight>
-        <showFrame>no</showFrame>
-        <frame>-</frame>
-        <frameFocus>-</frameFocus>
-        <showFolder>yes</showFolder>
-        <imageFolder>DVDCase.png</imageFolder>
-        <imageFolderFocus>DVDCase.png</imageFolderFocus>
-        <thumbs flipY="true" diffuse="Thumb_Mask.png" />
-        <showBackGround>no</showBackGround>
-        <background>-</background>
-        <showInfoImage>no</showInfoImage>
-        <InfoImage>-</InfoImage>
-        <visible>facadeview.filmstrip</visible>
-        <thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
-        <thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
-        <scrollOffset>3</scrollOffset>
-		<showScrollbar>no</showScrollbar>
+        <control>
+          <description>Filmstrip view</description>
+          <type>filmstrip</type>
+          <id>50</id>
+          <onup>84</onup>
+          <onleft>902</onleft>
+          <onright>902</onright>
+          <spinPosY>-50</spinPosY>
+          <spinPosX>-50</spinPosX>
+          <posX>142</posX>
+          <posY>247</posY>
+          <width>1920</width>
+          <spinCanFocus>no</spinCanFocus>
+          <thumbWidth>270</thumbWidth>
+          <thumbHeight>381</thumbHeight>
+          <thumbPosX>37</thumbPosX>
+          <thumbPosY>7</thumbPosY>
+          <itemWidth>330</itemWidth>
+          <itemHeight>420</itemHeight>
+          <textureWidth>310</textureWidth>
+          <textureHeight>394</textureHeight>
+          <showFrame>no</showFrame>
+          <frame>-</frame>
+          <frameFocus>-</frameFocus>
+          <showFolder>yes</showFolder>
+          <imageFolder>DVDCase.png</imageFolder>
+          <imageFolderFocus>DVDCase.png</imageFolderFocus>
+          <thumbs flipY="true" diffuse="Thumb_Mask.png" />
+          <showBackGround>no</showBackGround>
+          <background>-</background>
+          <showInfoImage>no</showInfoImage>
+          <InfoImage>-</InfoImage>
+          <thumbAnimation effect="zoom" start="100,100" end="120,120" time="110">focus</thumbAnimation>
+          <thumbAnimation effect="zoom" start="120,120" end="100,100" time="110">unfocus</thumbAnimation>
+          <showScrollbar>no</showScrollbar>
+        </control>
       </control>
     </control>
     <!--  ************** BUTTONS TOOLBAR *****************  -->
@@ -228,19 +214,19 @@
       <description>Backdrop Overlay</description>
       <type>image</type>
       <id>0</id>
-      <posX>-150</posX>
-      <posY>787</posY>
-      <width>2358</width>
-      <height>480</height>
-      <texture>bg_tvguide.png</texture>
+      <posX>30</posX>
+      <posY>765</posY>
+      <width>1860</width>
+      <height>678</height>
+      <texture>bg_dialog.png</texture>
     </control>
     <control>
       <description>Series Title</description>
       <type>textboxscrollup</type>
       <id>0</id>
-      <posX>37</posX>
+      <posX>105</posX>
       <posY>829</posY>
-      <width>1845</width>
+      <width>1710</width>
       <font>font20</font>
       <height>57</height>
       <textcolor>ffffffff</textcolor>
@@ -250,27 +236,27 @@
     </control>
     <control>
       <type>image</type>
-      <posX>0</posX>
+      <posX>73</posX>
       <posY>840</posY>
-      <width>1920</width>
+      <width>1773</width>
       <height>53</height>
       <texture>bg_facade_line_nofocus.png</texture>
       <colordiffuse>77ffffff</colordiffuse>
     </control>
     <control>
       <type>image</type>
-      <posX>0</posX>
+      <posX>73</posX>
       <posY>882</posY>
-      <width>1920</width>
+      <width>1773</width>
       <height>53</height>
       <texture>bg_facade_line_nofocus.png</texture>
       <colordiffuse>77ffffff</colordiffuse>
     </control>
     <control>
       <type>image</type>
-      <posX>0</posX>
+      <posX>73</posX>
       <posY>933</posY>
-      <width>1920</width>
+      <width>1773</width>
       <height>53</height>
       <texture>bg_facade_line_nofocus.png</texture>
       <colordiffuse>77ffffff</colordiffuse>
@@ -279,24 +265,23 @@
       <description>Summary</description>
       <type>textboxscrollup</type>
       <id>0</id>
-      <posX>37</posX>
+      <posX>105</posX>
       <posY>990</posY>
-      <width>1845</width>
+      <width>1710</width>
       <height>82</height>
       <textcolor>ffFFFFFF</textcolor>
       <font>font13</font>
       <visible>control.isvisible(1401)</visible>
       <seperator>: : :</seperator>
       <label>#Anime2.Calendar.Description</label>
-      <textalign>center</textalign>
     </control>
     <control>
       <type>fadelabel</type>
       <label>#Anime2.Calendar.AirDate</label>
       <id>0</id>
-      <posX>37</posX>
+      <posX>105</posX>
       <posY>840</posY>
-      <width>1845</width>
+      <width>1710</width>
       <font>font14</font>
       <align>center</align>
       <textcolor>90ffffff</textcolor>
@@ -306,9 +291,9 @@
     <control>
       <type>textboxscrollup</type>
       <label>#Anime2.Calendar.Genre</label>
-      <posX>37</posX>
+      <posX>105</posX>
       <posY>937</posY>
-      <width>1845</width>
+      <width>1710</width>
       <height>42</height>
       <font>font14</font>
       <textalign>center</textalign>
@@ -335,6 +320,18 @@
 			<onup>93</onup>
 		</control> -->
     <control>
+      <description>ANIDB Status</description>
+      <type>label</type>
+      <id>114</id>
+      <posX>285</posX>
+      <posY>690</posY>
+      <width>1350</width>
+      <label>#Anime2.Calendar.Status</label>
+      <font>font12</font>
+      <align>center</align>
+      <textcolor>ffffffff</textcolor>
+    </control>
+    <control>
       <type>image</type>
       <id>0</id>
       <posX>-579</posX>
@@ -343,7 +340,7 @@
       <height>1071</height>
       <texture>bg_left.png</texture>
       <colorDiffuse>ffffffff</colorDiffuse>
-      <visible>![control.hasfocus(902)]</visible>
+      <visible>![control.hasfocus(901)|control.hasfocus(902)]</visible>
       <animation effect="fade" time="50">WindowClose</animation>
       <animation effect="fade" time="50">WindowOpen</animation>
       <animation effect="fade" time="250">visiblechange</animation>
@@ -362,12 +359,12 @@
       <width>637</width>
       <height>1080</height>
       <dimColor>ffffffff</dimColor>
-      <visible>[control.hasfocus(902)]</visible>
+      <visible>[control.hasfocus(901)|control.hasfocus(902)]</visible>
       <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
       <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
       <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
       <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-      <animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
       <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
       <control>
@@ -385,7 +382,8 @@
         <type>label</type>
         <posX>45</posX>
         <posY>52</posY>
-        <label>#header.label</label><width>500</width>
+        <label>#header.label</label>
+        <width>499</width>
         <font>font24</font>
         <align>left</align>
         <textcolor>ffffffff</textcolor>
@@ -410,11 +408,19 @@
           <id>902</id>
           <label>Downloads</label>
           <onright>50</onright>
+          <onup>17</onup>
+          <ondown>901</ondown>
+        </control>
+        <control>
+          <description>Collection</description>
+          <type>button</type>
+          <id>901</id>
+          <label>Collection</label>
+          <onright>50</onright>
           <onup>902</onup>
           <ondown>902</ondown>
         </control>
       </control>
     </control>
-    <import>common.window.time.xml</import>
   </controls>
 </window>

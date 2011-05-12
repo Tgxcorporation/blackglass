@@ -6,10 +6,10 @@
   <allowoverlay>control.isvisible(13371337)</allowoverlay>
   <define>#header.label:Info</define>
   <define>#header.background:hover_my anime.png</define>
-  <animation effect="fade" time="250">WindowOpen</animation>
   <animation effect="fade" time="250">WindowClose</animation>
+  <animation effect="fade" time="250">WindowOpen</animation>
   <controls>
-    <!-- Dummies -->
+    <!-- ********************** DUMMY controlS FOR VISIBILITY ************************************** -->
     <control>
       <type>label</type>
       <description>Dummy Label for info page</description>
@@ -62,17 +62,7 @@
       <!-- to make a control visible only when FANART is loaded do this: <visible>control.isvisible(1501)</visible> -->
       <!-- to make a control invisible when FANART is loaded do this: <visible>!control.isvisible(1501)</visible> -->
     </control>
-    <!-- global controls -->
-    <control>
-      <description>Background</description>
-      <type>image</type>
-      <id>1</id>
-      <posX>0</posX>
-      <posY>0</posY>
-      <width>1920</width>
-      <height>1080</height>
-      <texture>bg.jpg</texture>
-    </control>
+    <import>common.window.xml</import>
     <control>
       <description>Fanart Background #1</description>
       <type>image</type>
@@ -82,159 +72,12 @@
       <width>1920</width>
       <height>1080</height>
       <texture>#Anime2.AnimeInfo.Fanart</texture>
-      <animation effect="fade" start="0" end="100" time="250">WindowOpen</animation>
-      <animation effect="fade" start="0" end="100" time="200">Visible</animation>
-      <animation effect="fade" start="100" end="0" time="200" delay="0">Hidden</animation>
+      <animation effect="fade" time="250">visible</animation>
+      <animation effect="fade" time="250" delay="250">hidden</animation>
+      <animation effect="fade" time="1">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
     </control>
-    <control>
-      <type>label</type>
-      <id>0</id>
-      <posX>45</posX>
-      <posY>15</posY>
-      <label>#header.label</label>
-      <font>font28</font>
-      <align>left</align>
-      <textcolor>60ffffff</textcolor>
-    </control>
-    <control>
-      <type>image</type>
-      <id>0</id>
-      <posX>-579</posX>
-      <posY>4</posY>
-      <width>627</width>
-      <height>1071</height>
-      <texture>bg_left.png</texture>
-      <colorDiffuse>ffffffff</colorDiffuse>
-      <visible>![control.hasfocus(801)|control.hasfocus(802)|control.hasfocus(803)|control.hasfocus(901)|control.hasfocus(902)]</visible>
-      <animation effect="fade" time="50">WindowClose</animation>
-      <animation effect="fade" time="50">WindowOpen</animation>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <type>actiongroup</type>
-      <description>action menu</description>
-      <defaultcontrol>801</defaultcontrol>
-      <onexit>0</onexit>
-      <buttonX>0</buttonX>
-      <buttonY>0</buttonY>
-      <buttonwidth>84</buttonwidth>
-      <buttonheight>1080</buttonheight>
-      <textureFocus>-</textureFocus>
-      <textureNoFocus>-</textureNoFocus>
-      <width>637</width>
-      <height>1080</height>
-      <dimColor>ffffffff</dimColor>
-      <visible>[control.hasfocus(801)|control.hasfocus(802)|control.hasfocus(803)|control.hasfocus(901)|control.hasfocus(902)]</visible>
-      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-      <animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>0</posY>
-        <width>627</width>
-        <height>1080</height>
-        <texture>bg_left.png</texture>
-        <colorDiffuse>ffffffff</colorDiffuse>
-      </control>
-      <control>
-        <id>0</id>
-        <type>label</type>
-        <posX>45</posX>
-        <posY>52</posY>
-        <label>#header.label</label><width>500</width>
-        <font>font24</font>
-        <align>left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>71</posY>
-        <width>579</width>
-        <height>79</height>
-        <texture>bg_button_nofocus.png</texture>
-      </control>
-      <control>
-        <type>group</type>
-        <layout>StackLayout(0, Vertical, true)</layout>
-        <posX>0</posX>
-        <posY>150</posY>
-        <control>
-          <description>AniDB Info</description>
-          <type>button</type>
-          <id>801</id>
-          <label>Anime Info</label>
-          <onright>50</onright>
-          <ondown>802</ondown>
-          <onup>902</onup>
-        </control>
-        <control>
-          <description>Statistics</description>
-          <type>button</type>
-          <id>802</id>
-          <label>Statistics</label>
-          <onright>50</onright>
-          <onup>801</onup>
-          <ondown>803</ondown>
-        </control>
-        <control>
-          <description>Groups</description>
-          <type>button</type>
-          <id>803</id>
-          <label>Groups</label>
-          <onright>50</onright>
-          <onup>802</onup>
-          <ondown>901</ondown>
-        </control>
-        <control>
-          <type>image</type>
-          <posX>0</posX>
-          <posY>71</posY>
-          <width>579</width>
-          <height>79</height>
-          <texture>bg_button_nofocus.png</texture>
-        </control>
-        <control>
-          <description>Characters</description>
-          <type>button</type>
-          <id>901</id>
-          <label>Characters</label>
-          <onright>50</onright>
-          <onup>803</onup>
-          <ondown>902</ondown>
-        </control>
-        <control>
-          <description>Relations</description>
-          <type>button</type>
-          <id>902</id>
-          <label>Relations</label>
-          <onright>50</onright>
-          <onup>901</onup>
-          <ondown>801</ondown>
-        </control>
-      </control>
-    </control>
-    <control>
-      <description>DUMMY BUTTON</description>
-      <type>button</type>
-      <id>50</id>
-      <posX>720</posX>
-      <posY>0</posY>
-      <width>1200</width>
-      <height>1080</height>
-      <onright>801</onright>
-      <onleft>801</onleft>
-      <textureFocus>-</textureFocus>
-      <textureNoFocus>-</textureNoFocus>
-    </control>
-    <!-- DETAILS -->
+    <import>common.window.time.xml</import>
     <control>
       <description>details background</description>
       <id>0</id>
@@ -267,8 +110,8 @@
       <textcolor>ffffffff</textcolor>
       <font>font24</font>
       <label>#Anime2.AnimeInfo.Title</label>
-      <wrapString> : : : </wrapString>
       <align>left</align>
+      <wrapString> : : : </wrapString>
     </control>
     <!-- <control>
 	  <description>Default Poster</description>
@@ -291,6 +134,7 @@
       <height>807</height>
       <texture flipY="true" diffuse="Thumb_Mask.png">#Anime2.AnimeInfo.Poster</texture>
       <visible>control.isvisible(1502)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
     </control>
     <control>
       <description>Poster frame</description>
@@ -302,6 +146,7 @@
       <height>834</height>
       <texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
       <visible>control.isvisible(1502)</visible>
+      <animation effect="fade" time="250">visiblechange</animation>
     </control>
     <!--		Pages 	-->
     <!--		Info page	-->
@@ -362,9 +207,9 @@
       <label>#Anime2.AnimeInfo.Info.OtherTitles</label>
       <align>left</align>
       <visible>control.isvisible(1500)</visible>
-      <wrapString> : : : </wrapString>
       <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
       <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      <wrapString> : : : </wrapString>
     </control>
     <control>
       <type>label</type>
@@ -930,7 +775,6 @@
       <visible>control.isvisible(1501)</visible>
       <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
       <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-      <wrapString> : : : </wrapString>
     </control>
     <control>
       <type>fadelabel</type>
@@ -1146,6 +990,143 @@
       <align>Right</align>
       <textcolor>ffffffff</textcolor>
     </control>
-    <import>common.window.time.xml</import>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>-579</posX>
+      <posY>4</posY>
+      <width>627</width>
+      <height>1071</height>
+      <texture>bg_left.png</texture>
+      <colorDiffuse>ffffffff</colorDiffuse>
+      <visible>![control.hasfocus(801)|control.hasfocus(802)|control.hasfocus(803)|control.hasfocus(901)|control.hasfocus(902)]</visible>
+      <animation effect="fade" time="50">WindowClose</animation>
+      <animation effect="fade" time="50">WindowOpen</animation>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>801</defaultcontrol>
+      <onexit>0</onexit>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>84</buttonwidth>
+      <buttonheight>1080</buttonheight>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <width>637</width>
+      <height>1080</height>
+      <dimColor>ffffffff</dimColor>
+      <visible>[control.hasfocus(801)|control.hasfocus(802)|control.hasfocus(803)|control.hasfocus(901)|control.hasfocus(902)]</visible>
+      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>0</posY>
+        <width>627</width>
+        <height>1080</height>
+        <texture>bg_left.png</texture>
+        <colorDiffuse>ffffffff</colorDiffuse>
+      </control>
+      <control>
+        <id>0</id>
+        <type>label</type>
+        <posX>45</posX>
+        <posY>52</posY>
+        <label>#header.label</label>
+        <width>499</width>
+        <font>font24</font>
+        <align>left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>71</posY>
+        <width>579</width>
+        <height>79</height>
+        <texture>bg_button_nofocus.png</texture>
+      </control>
+      <control>
+        <type>group</type>
+        <layout>StackLayout(0, Vertical, true)</layout>
+        <posX>0</posX>
+        <posY>150</posY>
+        <control>
+          <description>AniDB Info</description>
+          <type>button</type>
+          <id>801</id>
+          <label>Anime Info</label>
+          <onright>50</onright>
+          <ondown>802</ondown>
+          <onup>902</onup>
+        </control>
+        <control>
+          <description>Statistics</description>
+          <type>button</type>
+          <id>802</id>
+          <label>Statistics</label>
+          <onright>50</onright>
+          <onup>801</onup>
+          <ondown>803</ondown>
+        </control>
+        <control>
+          <description>Groups</description>
+          <type>button</type>
+          <id>803</id>
+          <label>Groups</label>
+          <onright>50</onright>
+          <onup>802</onup>
+          <ondown>901</ondown>
+        </control>
+        <control>
+          <type>image</type>
+          <width>579</width>
+          <height>79</height>
+          <texture>bg_button_nofocus.png</texture>
+        </control>
+        <control>
+          <description>Characters</description>
+          <type>button</type>
+          <id>901</id>
+          <label>Characters</label>
+          <onright>50</onright>
+          <onup>803</onup>
+          <ondown>902</ondown>
+        </control>
+        <control>
+          <description>Relations</description>
+          <type>button</type>
+          <id>902</id>
+          <label>Relations</label>
+          <onright>50</onright>
+          <onup>901</onup>
+          <ondown>801</ondown>
+        </control>
+      </control>
+    </control>
+    <control>
+      <description>DUMMY BUTTON</description>
+      <type>button</type>
+      <id>50</id>
+      <posX>720</posX>
+      <posY>0</posY>
+      <width>1200</width>
+      <height>1080</height>
+      <onright>801</onright>
+      <onleft>801</onleft>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+    </control>
+    <import>Anime2_Notification.xml</import>
   </controls>
 </window>

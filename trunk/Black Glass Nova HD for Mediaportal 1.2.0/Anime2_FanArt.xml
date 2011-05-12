@@ -1,26 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-	<id>6003</id>
+	<id>9812</id>
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
-	<disabletopbar>yes</disabletopbar>
 	<define>#header.label:Fanart</define>
 	<define>#header.background:hover_my anime.png</define>
-	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
-	<define>#title.color:ffffffff</define>
-	<!-- Titles Color     Default: ffdedede-->
-	<define>#smalltitle.color:ffffffff</define>
-	<!-- Small Titles Color     Default: ff999999 -->
-	<define>#text.color:ffffffff</define>
-	<!-- Text Color     Default: ffffffff-->
-	<define>#default.color:ffffffff</define>
-	<!-- Normal List Color     Default: ffffffff-->
-	<define>#watched.color:ffffffff</define>
-	<!-- Watched List Color     Default: ff666666 -->
-	<define>#notpresent.color:ffffffff</define>
-	<!-- File Not Present in List Color     Default: ffef6d16 -->
+	<animation effect="fade" time="250">WindowOpen</animation>
 	<controls>
 		<control>
 			<type>label</type>
@@ -32,10 +19,7 @@
 			<textcolor>d4d2d2</textcolor>
 			<font>font14</font>
 			<visible>true</visible>
-			<!-- to make a control visible only when Fullscreen preview is on do this: <visible>control.isvisible(1400)</visible> -->
-			<!-- to make a control invisible when Fullscreen preview is off do this: <visible>!control.isvisible(1400)</visible> -->
 		</control>
-		<!-- ~~~~~~~~~~~~~~~~~~~~ ALL BACKGROUNDS ~~~~~~~~~~~~~~~~~~~~ -->
 		<import>common.window.xml</import>
 		<control>
 			<description>preview</description>
@@ -47,6 +31,101 @@
 			<height>1080</height>
 			<texture>#Anime2.FanArt.SelectedPreview</texture>
 			<visible>true</visible>
+			<animation effect="fade" time="1">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-150</posX>
+			<posY>-3</posY>
+			<texture>basichome_upper_gradient.png</texture>
+			<width>2220</width>
+			<height>240</height>
+		</control>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>15</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+		</control>
+		<control>
+			<type>label</type>
+			<description>filter</description>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>81</posY>
+			<font>font10</font>
+			<label>#Anime2.FanArt.SelectedFanartResolution</label>
+		</control>
+		<control>
+			<description>Disabled Label</description>
+			<type>label</type>
+			<label>Disabled</label>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>105</posY>
+			<width>120</width>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Disabled Value</description>
+			<type>label</type>
+			<label>#Anime2.FanArt.SelectedFanartIsDisabled</label>
+			<id>0</id>
+			<posX>180</posX>
+			<posY>105</posY>
+			<font>font10</font>
+			<textcolor>ffFFFFFF</textcolor>
+		</control>
+		<control>
+			<description>Default Label</description>
+			<type>label</type>
+			<label>Chosen</label>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>129</posY>
+			<width>120</width>
+			<font>font10</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Default Value</description>
+			<type>label</type>
+			<label>#Anime2.FanArt.SelectedFanartIsChosen</label>
+			<id>0</id>
+			<posX>180</posX>
+			<posY>129</posY>
+			<font>font10</font>
+			<textcolor>ffFFFFFF</textcolor>
+		</control>
+		<control>
+			<description>Status</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>1875</posX>
+			<posY>30</posY>
+			<font>font16</font>
+			<align>right</align>
+			<label>#Anime2.FanArt.DownloadingStatus #Anime2.FanArt.LoadingStatus</label>
+		</control>
+		<control>
+			<description>Status</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>57</posX>
+			<posY>976</posY>
+			<width>1830</width>
+			<font>font24</font>
+			<height>67</height>
+			<textalign>center</textalign>
+			<label>#selecteditem [#Anime2.FanArt.SelectedFanartResolution]</label>
 		</control>
 		<control>
 			<id>0</id>
@@ -58,39 +137,109 @@
 			<texture>gradient.png</texture>
 			<visible>[facadeview.coverflow|facadeview.filmstrip|facadeview.smallicons|facadeview.largeicons]</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
 		</control>
 		<control>
-			<description>Backdrop Overlay</description>
+			<description>THUMBS Backdrop Overlay</description>
 			<id>0</id>
 			<type>image</type>
 			<posX>-150</posX>
 			<posY>390</posY>
 			<width>2520</width>
-			<height>582</height>
+			<height>577</height>
 			<texture>bg_dialog_big.png</texture>
 			<visible>facadeview.smallicons|facadeview.largeicons</visible>
+			<animation effect="fade" time="150">visiblechange</animation>
 		</control>
 		<control>
-			<description>Status</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>45</posX>
-			<posY>993</posY>
-			<font>font16</font>
-			<align>left</align>
-			<label>#Anime2.FanArt.DownloadingStatus #Anime2.FanArt.LoadingStatus</label>
-			<visible>control.isvisible(1400)</visible>
-		</control>
-		<control>
-			<description>Status</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>959</posX>
-			<posY>1017</posY>
-			<font>font16</font>
-			<align>center</align>
-			<label>[#Anime2.FanArt.SelectedFanartResolution]</label>
-			<visible>control.isvisible(1400)</visible>
+			<type>group</type>
+			<description>group element</description>
+			<id>28</id>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>Thumbnail Panel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<posX>25</posX>
+					<posY>439</posY>
+					<width>1927</width>
+					<height>660</height>
+					<scrollOffset>1</scrollOffset>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<itemWidth>189</itemWidth>
+					<itemHeight>165</itemHeight>
+					<textureWidth>184</textureWidth>
+					<textureHeight>106</textureHeight>
+					<thumbWidth>174</thumbWidth>
+					<thumbHeight>97</thumbHeight>
+					<thumbPosX>6</thumbPosX>
+					<thumbPosY>4</thumbPosY>
+					<itemWidthBig>378</itemWidthBig>
+					<itemHeightBig>244</itemHeightBig>
+					<thumbWidthBig>348</thumbWidthBig>
+					<thumbHeightBig>195</thumbHeightBig>
+					<textureWidthBig>369</textureWidthBig>
+					<textureHeightBig>208</textureHeightBig>
+					<thumbPosXBig>10</thumbPosXBig>
+					<thumbPosYBig>6</thumbPosYBig>
+					<unfocusedAlpha>120</unfocusedAlpha>
+					<hideUnfocusTexture>no</hideUnfocusTexture>
+					<renderFocusText>yes</renderFocusText>
+					<renderUnfocusText>yes</renderUnfocusText>
+					<imageFolder>-</imageFolder>
+					<imageFolderFocus>-</imageFolderFocus>
+					<thumbZoom>no</thumbZoom>
+					<enableFocusZoom>no</enableFocusZoom>
+					<textXOff>3</textXOff>
+					<textYOff>3</textYOff>
+					<spinCanFocus>no</spinCanFocus>
+					<showFrame>true</showFrame>
+					<frameNoFocus>PictureCase.png</frameNoFocus>
+					<frameFocus>PictureCase.png</frameFocus>
+				</control>
+				<control>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<dimColor>90ffffff</dimColor>
+					<id>50</id>
+					<ondown>2</ondown>
+					<onup>2</onup>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<posX>30</posX>
+					<posY>682</posY>
+					<width>1905</width>
+					<height>201</height>
+					<thumbWidth>339</thumbWidth>
+					<thumbHeight>186</thumbHeight>
+					<thumbPosX>10</thumbPosX>
+					<thumbPosY>7</thumbPosY>
+					<itemWidth>379</itemWidth>
+					<itemHeight>201</itemHeight>
+					<textureWidth>360</textureWidth>
+					<textureHeight>201</textureHeight>
+					<showFrame>no</showFrame>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder>PictureCase.png</imageFolder>
+					<imageFolderFocus>PictureCase.png</imageFolderFocus>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png" />
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<visible>facadeview.filmstrip</visible>
+					<thumbAnimation effect="slide" end="0,-9" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+					<scrollOffset>3</scrollOffset>
+					<scrollbarYOff>244</scrollbarYOff>
+				</control>
+			</control>
 		</control>
 		<!--  ************** HIDDEN MENU *****************  -->
 		<control>
@@ -126,7 +275,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
 			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
 			<control>
@@ -145,7 +294,7 @@
 				<posX>45</posX>
 				<posY>52</posY>
 				<label>#header.label</label>
-				<width>500</width>
+				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -216,101 +365,5 @@
 				</control>
 			</control>
 		</control>
-		<control>
-			<type>group</type>
-			<description>group element</description>
-			<control>
-				<description>composite control consisting of a list control and a thumbnail panel</description>
-				<type>facadeview</type>
-				<id>50</id>
-				<control>
-					<description>Thumbnail Panel</description>
-					<type>thumbnailpanel</type>
-					<id>50</id>
-					<posX>30</posX>
-					<posY>435</posY>
-					<width>1927</width>
-					<height>630</height>
-					<scrollOffset>1</scrollOffset>
-					<onleft>2</onleft>
-					<onright>2</onright>
-					<itemWidth>237</itemWidth>
-					<itemHeight>172</itemHeight>
-					<textureWidth>216</textureWidth>
-					<textureHeight>121</textureHeight>
-					<thumbWidth>201</thumbWidth>
-					<thumbHeight>111</thumbHeight>
-					<thumbPosX>7</thumbPosX>
-					<thumbPosY>4</thumbPosY>
-					<itemWidthBig>378</itemWidthBig>
-					<itemHeightBig>255</itemHeightBig>
-					<thumbWidthBig>348</thumbWidthBig>
-					<thumbHeightBig>195</thumbHeightBig>
-					<textureWidthBig>369</textureWidthBig>
-					<textureHeightBig>208</textureHeightBig>
-					<thumbPosXBig>10</thumbPosXBig>
-					<thumbPosYBig>6</thumbPosYBig>
-					<unfocusedAlpha>120</unfocusedAlpha>
-					<hideUnfocusTexture>no</hideUnfocusTexture>
-					<renderFocusText>yes</renderFocusText>
-					<renderUnfocusText>yes</renderUnfocusText>
-					<imageFolder>-</imageFolder>
-					<imageFolderFocus>-</imageFolderFocus>
-					<thumbZoom>no</thumbZoom>
-					<enableFocusZoom>no</enableFocusZoom>
-					<textXOff>3</textXOff>
-					<textYOff>5</textYOff>
-					<spinCanFocus>no</spinCanFocus>
-					<showFrame>true</showFrame>
-					<frameNoFocus>PictureCase.png</frameNoFocus>
-					<frameFocus>PictureCase.png</frameFocus>
-					<spinWidth>45</spinWidth>
-					<spinHeight>45</spinHeight>
-					<spinPosX>1815</spinPosX>
-					<spinPosY>990</spinPosY>
-					<spinAlign>Right</spinAlign>
-					<spinColor>60ffffff</spinColor>
-				</control>
-				<control>
-					<description>Filmstrip view</description>
-					<type>filmstrip</type>
-					<dimColor>90ffffff</dimColor>
-					<id>50</id>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<posX>30</posX>
-					<posY>682</posY>
-					<width>1905</width>
-					<height>201</height>
-					<thumbWidth>339</thumbWidth>
-					<thumbHeight>186</thumbHeight>
-					<thumbPosX>10</thumbPosX>
-					<thumbPosY>7</thumbPosY>
-					<itemWidth>379</itemWidth>
-					<itemHeight>201</itemHeight>
-					<textureWidth>360</textureWidth>
-					<textureHeight>201</textureHeight>
-					<showFrame>no</showFrame>
-					<showFrame>no</showFrame>
-					<frame>-</frame>
-					<frameFocus>-</frameFocus>
-					<showFolder>yes</showFolder>
-					<imageFolder>PictureCase.png</imageFolder>
-					<imageFolderFocus>PictureCase.png</imageFolderFocus>
-					<thumbs flipY="true" diffuse="Thumb_Mask.png">
-					</thumbs>
-					<showBackGround>no</showBackGround>
-					<background>-</background>
-					<showInfoImage>no</showInfoImage>
-					<InfoImage>-</InfoImage>
-					<visible>facadeview.filmstrip</visible>
-					<thumbAnimation effect="slide" end="0,-7" time="200">focus</thumbAnimation>
-					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
-					<scrollOffset>3</scrollOffset>
-					<scrollbarYOff>245</scrollbarYOff>
-				</control>
-			</control>
-		</control>
-		<import>common.window.time.xml</import>
 	</controls>
 </window>
