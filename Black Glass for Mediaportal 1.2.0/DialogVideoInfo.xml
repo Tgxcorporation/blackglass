@@ -268,7 +268,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(66621)|control.hasfocus(66622)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -287,7 +287,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)</visible>
+			<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(66621)|control.hasfocus(66622)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -388,17 +388,30 @@
 					<id>6</id>
 					<label>1010</label>
 					<onup>5</onup>
+					<ondown>66621</ondown>
+				</control>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66621</id>
+					<type>button</type>
+					<label>IMDb Movie Trailers</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:IMDb Movie Trailers|search:#title|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>6</onup>
+					<ondown>66622</ondown>
+				</control>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66622</id>
+					<type>button</type>
+					<label>iTunes Movie Trailers</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:iTunes Movie Trailers|search:#title|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>66621</onup>
 					<ondown>10</ondown>
 				</control>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>500</posY>
-				<width>385</width>
-				<height>53</height>
-				<texture>bg_button_nofocus.png</texture>
 			</control>
 			<control>
 				<description>image title:</description>
@@ -417,7 +430,7 @@
 				<id>10</id>
 				<posX>32</posX>
 				<posY>600</posY>
-				<onup>6</onup>
+				<onup>66622</onup>
 				<ondown>11</ondown>
 			</control>
 			<control>
