@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>87272</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#currentmodule:#Trakt.Translation.AccountSetup.Label</define>
+	<define>#selecteditem:#highlightedbutton</define>
+	<define>#defaultcontrol:2</define>
+	<define>#defaultcontrol.onleft:9996</define>
+	<define>#header.label:#Trakt.Translation.Account.Label</define>
+	<define>#header.background:hover_trakt.png</define>
+	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
+	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<controls>   
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<import>Trakt.Common.xml</import>    
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>Backdrop Overlay - ListView</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>865</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>898</posX>
+				<posY>47</posY>
+				<width>383</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>898</posX>
+				<posY>100</posY>
+				<dimColor>ffffffff</dimColor>
+				<control>
+					<type>button</type>
+					<description>Create New Account</description>
+					<id>2</id>
+					<label>#Trakt.Translation.CreateNewAccount.Label</label>
+					<onup>17</onup>
+					<onleft>#defaultcontrol.onleft</onleft>
+				</control>
+				<control>
+					<description>Login to Existing Account</description>
+					<type>button</type>
+					<id>3</id>
+					<label>#Trakt.Translation.LoginExistingAccount.Label</label>
+					<onleft>#defaultcontrol.onleft</onleft>
+				</control>
+				<control>
+					<description>Disconnect Current Account</description>
+					<type>button</type>
+					<id>4</id>
+					<label/>
+					<onleft>#defaultcontrol.onleft</onleft>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+		<import>Trakt.AccountDialog.xml</import>
+	</controls>
+</window>
