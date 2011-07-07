@@ -22,6 +22,8 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<visible>!string.equals(#Trakt.Settings.Account.Dialog.Visible,true)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
 			<control>
 				<description>Backdrop Overlay - ListView</description>
 				<type>image</type>
