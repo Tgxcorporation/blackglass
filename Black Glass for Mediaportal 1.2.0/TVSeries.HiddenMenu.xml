@@ -10,7 +10,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(66615)|control.hasfocus(66616)|control.hasfocus(66617)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -29,7 +29,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.hasfocus(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)]</visible>
+			<visible>!control.hasfocus(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(66615)|control.hasfocus(66616)|control.hasfocus(66617)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -52,7 +52,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#header.label</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -80,6 +81,8 @@
 					<onright>50</onright>
 					<onup>21</onup>
 					<ondown>3</ondown>
+					<height>47</height>
+					<textYOff>6</textYOff>
 				</control> 
 				<control>
 					<description>Change Layout</description>
@@ -90,6 +93,8 @@
 					<onright>50</onright>
 					<onup>2</onup>
 					<ondown>20</ondown>
+					<height>47</height>
+					<textYOff>6</textYOff>
 				</control>
 				<control>
 					<description>Current Playlist</description>
@@ -101,6 +106,8 @@
 					<onright>50</onright>
 					<ondown>9</ondown>
 					<onup>3</onup>
+					<height>47</height>
+					<textYOff>6</textYOff>
 				</control>	
 				<control>
 					<description>My Playlists</description>
@@ -111,6 +118,8 @@
 					<onright>50</onright>
 					<ondown>4</ondown>
 					<onup>20</onup>
+					<height>47</height>
+					<textYOff>6</textYOff>
 				</control>		  
 				<control>
 					<description>Options</description>
@@ -121,6 +130,8 @@
 					<onright>50</onright>
 					<onup>9</onup>
 					<ondown>5</ondown>
+					<height>47</height>
+					<textYOff>6</textYOff>
 				</control>
 				<control>
 					<description>Run Import</description>
@@ -130,42 +141,9 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>4</onup>
-					<ondown>66608</ondown>
-				</control>
-				<control>
-					<description>Video Settings</description>
-					<type>button</type>
-					<id>66608</id>
-					<label>Video Settings</label>
-					<hyperlink>703</hyperlink>			
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<ondown>10</ondown>
-					<onup>5</onup>
-				</control>
-				<control>
-					<description>Moving Pictures</description>
-					<type>button</type>
-					<id>10</id>
-					<hyperlink>96742</hyperlink>
-					<label>My Movies</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<ondown>30</ondown>
-					<onup>66608</onup>
-					<visible>plugin.isenabled(Moving Pictures)</visible>
-				</control>
-				<control>
-					<description>My Trailers</description>
-					<type>button</type>
-					<id>30</id>
-					<hyperlink>5900</hyperlink>
-					<label>5906</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
 					<ondown>9111</ondown>
-					<onup>10</onup>
-					<visible>plugin.isenabled(My Trailers)</visible>
+					<height>47</height>
+					<textYOff>6</textYOff>
 				</control>
 				<control>
 					<description>SubCentral</description>
@@ -177,7 +155,9 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<ondown>66613</ondown>
-					<onup>30</onup>
+					<onup>5</onup>
+					<height>47</height>
+					<textYOff>6</textYOff>
 				</control>
 				<control>
 					<description>dlCentral</description>
@@ -186,10 +166,68 @@
 					<label>Download Central</label>
 					<hyperlink>181966</hyperlink>
 					<onup>9111</onup>
-					<ondown>2</ondown>
+					<ondown>66614</ondown>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<visible>plugin.isenabled(dlCentral)+control.isvisible(1239)</visible>
+					<height>47</height>
+					<textYOff>6</textYOff>
+				</control>
+				<control>
+					<description>Trakt Calendar</description>
+					<type>button</type>
+					<id>66614</id>
+					<label>#Trakt.Translation.Calendar.Label</label>
+					<hyperlink>87259</hyperlink>
+					<onup>66613</onup>
+					<ondown>66615</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+					<height>47</height>
+					<textYOff>6</textYOff>
+				</control>
+				<control>
+					<description>Trakt Recommendations</description>
+					<type>button</type>
+					<id>66615</id>
+					<label>#Trakt.Translation.Recommendations.Label</label>
+					<hyperlink>87262</hyperlink>
+					<onup>66614</onup>
+					<ondown>66616</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+					<height>47</height>
+					<textYOff>6</textYOff>
+				</control>
+				<control>
+					<description>Trakt Trending</description>
+					<type>button</type>
+					<id>66616</id>
+					<label>#Trakt.Translation.Trending.Label</label>
+					<hyperlink>87265</hyperlink>
+					<onup>66615</onup>
+					<ondown>66617</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+					<height>47</height>
+					<textYOff>6</textYOff>
+				</control>
+				<control>
+					<description>Trakt Watch List</description>
+					<type>button</type>
+					<id>66617</id>
+					<label>#Trakt.Translation.WatchList.Label</label>
+					<hyperlink>87268</hyperlink>
+					<onup>66616</onup>
+					<ondown>2</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+					<height>47</height>
+					<textYOff>6</textYOff>
 				</control>
 			</control>
 
