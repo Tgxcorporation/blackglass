@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>87263</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#Fanart.1:#Trakt.RecommendedMovies.Fanart.1</define>
+	<define>#Fanart.2:#Trakt.RecommendedMovies.Fanart.2</define>
+	<define>#header.label:#Trakt.Translation.RecommendedMovies.Label</define>
+	<define>#header.background:hover_trakt.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>    
+
+		<import>common.window.xml</import>
+		<import>Trakt.Common.Fanart.xml</import>
+		<import>common.window.time.xml</import>
+		<import>Trakt.Common.Itemcount.xml</import>	
+
+
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<control>
+				<description>Backdrop Overlay - ListView</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>870</posX>
+				<posY>377</posY>
+				<width>1372</width>
+				<height>500</height>
+				<texture>bg_tvguide.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>897</posX>
+				<posY>395</posY>
+				<width>383</width>
+				<height>35</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>-490</posX>
+				<posY>377</posY>
+				<width>1372</width>
+				<height>500</height>
+				<texture>bg_tvguide.png</texture>
+			</control>
+			<control>
+				<description>fanart list</description>
+				<type>image</type>
+				<id>500</id>
+				<posX>46</posX> 
+				<posY>425</posY> 
+				<width>198</width> 
+				<height>280</height> 
+				<colordiffuse>ffffffff</colordiffuse>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<keepaspectratio>no</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<description>Highlight item</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>20</posX>
+				<posY>420</posY>
+				<width>228</width>
+				<height>290</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>265</posX>
+				<posY>419</posY>
+				<width>570</width>
+				<font>font22</font>
+				<label>#Trakt.Movie.Title</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>249</posX>
+				<posY>430</posY>
+				<width>601</width>
+				<height>35</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<label>#Trakt.Movie.Tagline</label>
+				<type>fadelabel</type>
+				<posX>265</posX>
+				<posY>468</posY>
+				<width>570</width>
+				<font>font16</font>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>249</posX>
+				<posY>465</posY>
+				<width>601</width>
+				<height>35</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<label>#Trakt.Movie.Released     #Trakt.Movie.Certification     #Trakt.Movie.Runtime mins</label>
+				<type>fadelabel</type>
+				<posX>265</posX>
+				<posY>503</posY>
+				<width>570</width>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>249</posX>
+				<posY>500</posY>
+				<width>601</width>
+				<height>35</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<label>#Trakt.Movie.Ratings.Percentage%     #Trakt.Movie.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+				<type>fadelabel</type>
+				<posX>265</posX>
+				<posY>538</posY>
+				<width>570</width>
+				<font>font16</font>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>249</posX>
+				<posY>535</posY>
+				<width>601</width>
+				<height>35</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>265</posX>
+				<posY>575</posY>
+				<width>570</width>
+				<height>130</height>
+				<textcolor>ffFFFFFF</textcolor>
+				<font>font16</font>
+				<seperator>: : :</seperator>
+				<label>#Trakt.Movie.Overview</label>
+			</control>
+		</control>
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<visible>[facadeview.smallicons|facadeview.largeicons]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>-200</posX>
+				<posY>400</posY>
+				<width>1680</width>
+				<height>320</height>
+				<texture>gradient.png</texture>
+			</control>
+			<control>
+				<description>Backdrop Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>-100</posX>
+				<posY>268</posY>
+				<width>1572</width>
+				<height>345</height>
+				<texture>bg_tvguide.png</texture>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Current program title</description>
+				<id>1</id>
+				<posX>50</posX>
+				<posY>615</posY>
+				<width>1180</width>
+				<font>font24</font>
+				<height>45</height>
+				<textalign>center</textalign>
+				<label>#Trakt.Movie.Title</label>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Current program title</description>
+				<id>1</id>
+				<posX>50</posX>
+				<posY>670</posY>
+				<width>1180</width>
+				<font>font16</font>
+				<height>45</height>
+				<textalign>center</textalign>
+				<textcolor>90FFFFFF</textcolor>
+				<label>#Trakt.Movie.Released     #Trakt.Movie.Certification     #Trakt.Movie.Runtime mins     #Trakt.Movie.Ratings.Percentage%     #Trakt.Movie.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+			</control>
+		</control>
+		
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<control>
+				<id>0</id>
+				<type>image</type>
+				<posX>-200</posX>
+				<posY>400</posY>
+				<width>1680</width>
+				<height>320</height>
+				<texture>gradient.png</texture>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Current program title</description>
+				<id>1</id>
+				<posX>50</posX>
+				<posY>615</posY>
+				<width>1180</width>
+				<font>font24</font>
+				<height>45</height>
+				<textalign>center</textalign>
+				<label>#Trakt.Movie.Title</label>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Current program title</description>
+				<id>1</id>
+				<posX>50</posX>
+				<posY>670</posY>
+				<width>1180</width>
+				<font>font16</font>
+				<height>45</height>
+				<textalign>center</textalign>
+				<textcolor>90FFFFFF</textcolor>
+				<label>#Trakt.Movie.Released     #Trakt.Movie.Certification     #Trakt.Movie.Runtime mins     #Trakt.Movie.Ratings.Percentage%     #Trakt.Movie.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<visible>control.isvisible(50)</visible>
+					<description>Movie List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<posX>897</posX>
+					<width>383</width>
+					<posY>430</posY>
+					<height>300</height>
+					<textureHeight>49</textureHeight>
+					<font>font14</font>	
+					<font2>font10</font2>	
+					<font3>font10</font3>	
+					<spinWidth>30</spinWidth>
+					<spinHeight>30</spinHeight>
+					<spinPosX>1205</spinPosX>
+					<spinPosY>683</spinPosY>
+					<IconXOff>2010</IconXOff>
+					<IconYOff>7</IconYOff>
+					<textXOff>-50</textXOff>
+					<textYOff>1</textYOff>
+					<textXOff2>0</textXOff2>
+					<textYOff2>26</textYOff2>
+					<textXOff3>10</textXOff3>
+					<textYOff3>26</textYOff3>
+					<IconXOff>1298</IconXOff>
+					<IconYOff>41</IconYOff>
+					<!-- group headers -->
+					<textcolor2>90ffffff</textcolor2>
+					<animation effect="fade" time="250">visiblechange</animation>
+				</control>
+				<control>
+					<visible>control.isvisible(50)</visible>
+					<description>Filmstrip view</description>
+					<type>filmstrip</type>
+					<id>50</id>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<posX>20</posX>
+					<posY>335</posY>
+					<width>1270</width>
+					<height>223</height>
+					<spinCanFocus>no</spinCanFocus>
+					<thumbWidth>150</thumbWidth>
+					<thumbHeight>215</thumbHeight>
+					<thumbPosX>21</thumbPosX>
+					<thumbPosY>4</thumbPosY>
+					<itemWidth>180</itemWidth>
+					<itemHeight>223</itemHeight>
+					<textureWidth>175</textureWidth>
+					<textureHeight>223</textureHeight>
+					<frame>-</frame>
+					<frameFocus>-</frameFocus>
+					<showFolder>yes</showFolder>
+					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
+					<imageFolderFocus>DVDCase.png</imageFolderFocus>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png"/>
+					<showBackGround>no</showBackGround>
+					<background>-</background>
+					<showInfoImage>no</showInfoImage>
+					<InfoImage>-</InfoImage>
+					<thumbAnimation effect="slide" end="0,-22" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
+					<scrollOffset>3</scrollOffset>
+					<animation effect="fade" time="250">visiblechange</animation>
+					<scrollbarYOff>251</scrollbarYOff>					
+				</control>
+				<control>
+					<visible>control.isvisible(50)</visible>
+					<description>Thumbnail Panel</description>
+					<type>thumbnailpanel</type>
+					<id>50</id>
+					<posX>21</posX>
+					<posY>300</posY>
+					<width>1300</width>
+					<height>320</height>
+					<scrollOffset>0</scrollOffset>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<itemWidth>114</itemWidth>
+					<itemHeight>145</itemHeight>
+					<textureWidth>110</textureWidth>
+					<textureHeight>140</textureHeight>
+					<thumbWidth>95</thumbWidth>
+					<thumbHeight>135</thumbHeight>
+					<thumbPosX>13</thumbPosX>
+					<thumbPosY>2</thumbPosY>
+					<itemWidthBig>254</itemWidthBig>
+					<itemHeightBig>313</itemHeightBig>
+					<thumbWidthBig>195</thumbWidthBig>
+					<thumbHeightBig>276</thumbHeightBig>
+					<textureWidthBig>225</textureWidthBig>
+					<textureHeightBig>285</textureHeightBig>
+					<thumbPosXBig>25</thumbPosXBig>
+					<thumbPosYBig>5</thumbPosYBig>
+					<thumbZoom>no</thumbZoom>
+					<enableFocusZoom>no</enableFocusZoom>
+					<hideUnfocusTexture>no</hideUnfocusTexture>
+					<renderFocusText>no</renderFocusText>
+					<renderUnfocusText>no</renderUnfocusText>
+					<imageFolder>-</imageFolder>
+					<imageFolderFocus>-</imageFolderFocus>
+					<textXOff>2</textXOff>
+					<textYOff>2</textYOff>
+					<spinCanFocus>no</spinCanFocus>
+					<unfocusedAlpha>120</unfocusedAlpha>
+					<showFrame>true</showFrame>
+					<frameNoFocus>DVDCase.png</frameNoFocus> 
+					<frameFocus>DVDCase.png</frameFocus>
+					<font>font16</font>
+					<spinPosX>3185</spinPosX>
+					<spinPosY>595</spinPosY>				
+					<animation effect="fade" time="250">visiblechange</animation>
+				</control>
+			</control>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>button group</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>100</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<description>View-As</description>
+					<type>button</type>
+					<id>2</id>
+					<label>-</label>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+
+	</controls>
+</window>
