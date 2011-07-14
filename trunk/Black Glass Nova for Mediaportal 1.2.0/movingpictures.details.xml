@@ -250,9 +250,9 @@ This file should contain the details view
 			<visible>!Control.isvisible(50)+!control.isvisible(51)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-		
-		
-				
+
+
+
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -262,7 +262,7 @@ This file should contain the details view
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+![control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+![control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(97258)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -281,7 +281,7 @@ This file should contain the details view
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(97258)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -303,7 +303,8 @@ This file should contain the details view
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#header.label</label>
+				<width>333</width>
 				<font>font24</font>
 			</control>
 			<control>
@@ -361,11 +362,21 @@ This file should contain the details view
 					<id>66624</id>
 					<label>Download Central</label>
 					<hyperlink>181966</hyperlink>
-					<ondown>66621</ondown>
 					<onup>66623</onup>
+					<ondown>66621</ondown>
 					<onright>6</onright>
 					<visible>plugin.isenabled(dlCentral)</visible>
 				</control>
+				<!-- <control>
+					<description>Add to Trakt Movie/Show Watch List</description>
+					<type>button</type>
+					<id>97258</id>
+					<label>#Trakt.Translation.AddToWatchList.Label</label>
+					<ondown>66621</ondown>
+					<onup>66624</onup>
+					<onright>6</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control> -->
 			</control>
 		</control>
 	</controls>
