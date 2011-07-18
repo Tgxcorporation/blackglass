@@ -1,232 +1,234 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-  <id>87270</id>
-  <defaultcontrol>50</defaultcontrol>
-  <allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-  <define>#Fanart.1:#Trakt.WatchListMovies.Fanart.1</define>
-  <define>#Fanart.2:#Trakt.WatchListMovies.Fanart.2</define>
-  <define>#header.label:#Trakt.Translation.WatchListMovies.Label | #Trakt.WatchList.CurrentUser</define>
-  <define>#header.background:hover_trakt.png</define>
-  <animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-  <animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
-  <controls>
-    <import>common.window.background.xml</import>
-    <import>Trakt.Common.Fanart.xml</import>
-    <import>common.window.overlay.xml</import>
-    <import>common.window.accessories.xml</import>
-    <import>common.window.time.xml</import>
-    <import>common.facade.background.xml</import>
-    <control>
-      <description>Itemcount Itemtype</description>
-      <type>label</type>
-      <id>0</id>
-      <posX>765</posX>
-      <posY>989</posY>
-      <label>#Trakt.Items</label>
-      <font>font16</font>
-      <textcolor>60ffffff</textcolor>
-      <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-    </control>
-    <import>common.facade.video.xml</import>
-    <control>
-      <type>group</type>
-      <dimColor>ffffffff</dimColor>
-      <animation effect="fade" time="150">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-      <control>
-        <type>label</type>
-        <id>0</id>
-        <posX>45</posX>
-        <posY>15</posY>
-        <label>#header.label</label>
-        <font>font28</font>
-        <align>left</align>
-        <textcolor>60ffffff</textcolor>
-        <visible>control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <description>fanart list</description>
-        <type>image</type>
-        <id>500</id>
-        <posX>93</posX>
-        <posY>132</posY>
-        <width>367</width>
-        <height>522</height>
-        <colordiffuse>ffffffff</colordiffuse>
-        <texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-        <keepaspectratio>no</keepaspectratio>
-        <centered>yes</centered>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <description>Highlight item</description>
-        <type>image</type>
-        <id>1</id>
-        <posX>45</posX>
-        <posY>124</posY>
-        <width>424</width>
-        <height>540</height>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50)</visible>
-        <texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>fadelabel</type>
-        <description>Current program title</description>
-        <id>0</id>
-        <posX>45</posX>
-        <posY>697</posY>
-        <width>630</width>
-        <font>font20</font>
-        <label>#Trakt.Movie.Title</label>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-        <wrapString> : : : </wrapString>
-      </control>
-      <control>
-        <description>Released</description>
-        <id>0</id>
-        <type>label</type>
-        <label>#Trakt.Movie.Released</label>
-        <posX>45</posX>
-        <posY>750</posY>
-        <textcolor>90FFFFFF</textcolor>
-        <font>font13</font>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-      <control>
-        <type>fadelabel</type>
-        <description>Rating</description>
-        <id>0</id>
-        <posX>45</posX>
-        <posY>787</posY>
-        <width>630</width>
-        <font>font13</font>
-        <label>#Trakt.Movie.Ratings.Percentage%     #Trakt.Movie.Ratings.Votes #Trakt.Translation.Votes.Label</label>
-        <visible>!string.equals(#Trakt.Movie.Ratings.Percentage,)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-        <wrapString> : : : </wrapString>
-      </control>
-      <control>
-        <description>Runtime value</description>
-        <type>fadelabel</type>
-        <id>1</id>
-        <posX>45</posX>
-        <posY>825</posY>
-        <width>630</width>
-        <label>#Trakt.Movie.Year     #Trakt.Movie.Certification     #Trakt.Movie.Runtime mins</label>
-        <textcolor>90FFFFFF</textcolor>
-        <visible>!string.equals(#Trakt.Movie.Runtime,)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50)+!string.equals(#runtime,0)+!string.equals(#year,1900)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
-        <wrapString> : : : </wrapString>
-        <font>font13</font>
-      </control>
-      <control>
-        <description>Plot value</description>
-        <type>textboxscrollup</type>
-        <id>1</id>
-        <posX>45</posX>
-        <posY>865</posY>
-        <width>630</width>
-        <height>186</height>
-        <label>#Trakt.Movie.Overview</label>
-        <font>font12</font>
-        <textcolor>FFFFFFFF</textcolor>
-        <visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50) + !player.hasmedia</visible>
-        <seperator>: : :</seperator>
-        <animation effect="fade" time="250">visiblechange</animation>
-      </control>
-    </control>
-    <control>
-      <type>image</type>
-      <id>0</id>
-      <posX>-579</posX>
-      <posY>4</posY>
-      <width>627</width>
-      <height>1071</height>
-      <texture>bg_left.png</texture>
-      <colorDiffuse>ffffffff</colorDiffuse>
-      <visible>![control.hasfocus(2)]</visible>
-      <animation effect="fade" time="50">WindowClose</animation>
-      <animation effect="fade" time="50">WindowOpen</animation>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <type>actiongroup</type>
-      <description>action menu</description>
-      <defaultcontrol>2</defaultcontrol>
-      <onexit>0</onexit>
-      <buttonX>0</buttonX>
-      <buttonY>0</buttonY>
-      <buttonwidth>84</buttonwidth>
-      <buttonheight>1080</buttonheight>
-      <textureFocus>-</textureFocus>
-      <textureNoFocus>-</textureNoFocus>
-      <width>637</width>
-      <height>1080</height>
-      <dimColor>ffffffff</dimColor>
-      <visible>[control.hasfocus(2)]</visible>
-      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-      <animation effect="slide" time="150" end="-900,0" reversible="false">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>0</posY>
-        <width>627</width>
-        <height>1080</height>
-        <texture>bg_left.png</texture>
-        <colorDiffuse>ffffffff</colorDiffuse>
-      </control>
-      <control>
-        <id>0</id>
-        <type>label</type>
-        <posX>45</posX>
-        <posY>52</posY>
-        <label>#header.label</label>
-        <width>499</width>
-        <font>font24</font>
-        <align>left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>71</posY>
-        <width>579</width>
-        <height>79</height>
-        <texture>bg_button_nofocus.png</texture>
-      </control>
-      <control>
-        <description>button group</description>
-        <type>group</type>
-        <posX>0</posX>
-        <posY>150</posY>
-        <layout>StackLayout(0, Vertical, true)</layout>
-        <control>
-          <description>View-As</description>
-          <type>button</type>
-          <id>2</id>
-          <label>-</label>
-          <onright>50</onright>
-          <onup>17</onup>
-          <ondown>2</ondown>
-        </control>
-      </control>
-    </control>
-  </controls>
+	<id>87270</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#Fanart.1:#Trakt.WatchListMovies.Fanart.1</define>
+	<define>#Fanart.2:#Trakt.WatchListMovies.Fanart.2</define>
+	<define>#header.label:#Trakt.Translation.WatchListMovies.Label | #Trakt.WatchList.CurrentUser</define>
+	<define>#header.background:hover_trakt.png</define>
+	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
+	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>Trakt.Common.Fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.xml</import>
+		<control>
+			<description>Itemcount Itemtype</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>765</posX>
+			<posY>989</posY>
+			<label>#Trakt.Items</label>
+			<font>font16</font>
+			<textcolor>60ffffff</textcolor>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+		</control>
+		<import>common.facade.video.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>fanart list</description>
+				<type>image</type>
+				<id>500</id>
+				<posX>93</posX>
+				<posY>132</posY>
+				<width>367</width>
+				<height>522</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+				<keepaspectratio>no</keepaspectratio>
+				<centered>yes</centered>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Highlight item</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>124</posY>
+				<width>424</width>
+				<height>540</height>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50)</visible>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>697</posY>
+				<width>630</width>
+				<font>font20</font>
+				<label>#Trakt.Movie.Title</label>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Released</description>
+				<id>0</id>
+				<type>label</type>
+				<label>#Trakt.Movie.Released</label>
+				<posX>45</posX>
+				<posY>750</posY>
+				<textcolor>90FFFFFF</textcolor>
+				<font>font13</font>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Rating</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>787</posY>
+				<width>630</width>
+				<font>font13</font>
+				<label>#Trakt.Movie.Ratings.Percentage%     #Trakt.Movie.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+				<visible>!string.equals(#Trakt.Movie.Ratings.Percentage,)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Runtime value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>825</posY>
+				<width>630</width>
+				<label>#Trakt.Movie.Year     #Trakt.Movie.Certification     #Trakt.Movie.Runtime mins</label>
+				<textcolor>90FFFFFF</textcolor>
+				<visible>!string.equals(#Trakt.Movie.Runtime,)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50)+!string.equals(#runtime,0)+!string.equals(#year,1900)</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+				<wrapString> : : : </wrapString>
+				<font>font13</font>
+			</control>
+			<control>
+				<description>Plot value</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>865</posY>
+				<width>630</width>
+				<height>186</height>
+				<label>#Trakt.Movie.Overview</label>
+				<font>font12</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + control.hasfocus(50) + !player.hasmedia</visible>
+				<seperator>: : :</seperator>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-579</posX>
+			<posY>4</posY>
+			<width>627</width>
+			<height>1071</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>84</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>#header.label</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>579</width>
+				<height>79</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>button group</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>150</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<description>View-As</description>
+					<type>button</type>
+					<id>2</id>
+					<label>-</label>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>
