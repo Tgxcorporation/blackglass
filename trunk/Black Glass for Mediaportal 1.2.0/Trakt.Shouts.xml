@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>87280</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#Fanart.1:#Trakt.Shout.Fanart</define>
+	<define>#Fanart.2:#Trakt.Shout.Fanart</define>
+	<define>#header.label:#Trakt.Translation.Shouts.Label - #Trakt.Shout.CurrentItem</define>
+	<define>#header.background:hover_trakt.png</define>
+	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
+	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<controls>    
+
+		<import>common.window.background.xml</import>
+		<import>Trakt.Common.Fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.accessories.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.xml</import>
+		<control>
+			<description>Itemcount Itemtype</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>510</posX>
+			<posY>665</posY>
+			<label>#Trakt.Items</label>
+			<font>font16</font>
+			<textcolor>60ffffff</textcolor>
+			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+		</control>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>listcontrol</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<scrollOffset>2</scrollOffset>
+				</control>
+			</control>
+		</control>
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>850</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>Avatar</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>36</posX>
+				<posY>81</posY>
+				<height>148</height>
+				<width>148</width>
+				<keepaspectratio>yes</keepaspectratio>
+				<zoom>yes</zoom>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#Trakt.User.AvatarFileName</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>75</posY>
+				<width>160</width>
+				<height>160</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">OverlayCase.png</texture>
+			</control> 
+			<control>
+				<type>fadelabel</type>
+				<description>Username</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>255</posY>
+				<width>420</width>
+				<font>font20</font>
+				<label>#Trakt.User.Username</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>FullName</description>
+				<id>0</id>
+				<type>fadelabel</type>
+				<label>#Trakt.User.FullName</label>
+				<posX>30</posX>
+				<posY>295</posY>
+				<textcolor>90FFFFFF</textcolor>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Gender</description>
+				<id>0</id>
+				<label>#Trakt.Translation.Age.Label: #Trakt.User.Age     #Trakt.User.Gender</label>
+				<posX>30</posX>
+				<posY>330</posY>
+				<width>420</width>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Location</description>
+				<id>0</id>
+				<label>#Trakt.User.Location</label>
+				<posX>30</posX>
+				<posY>365</posY>
+				<width>420</width>
+				<font>font16</font>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+
+
+
+
+			<control>
+				<description>Plot value</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>400</posY>
+				<width>420</width>
+				<height>292</height>
+				<label>#Trakt.Shout.Text</label>
+				<font>font16</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<seperator>: : :</seperator>
+				<visible>!player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+
+			<control>
+				<description>Plot value</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>400</posY>
+				<width>420</width>
+				<height>162</height>
+				<label>#Trakt.Shout.Text</label>
+				<font>font16</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<seperator>: : :</seperator>
+				<visible>player.hasmedia</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+		</control>
+
+
+
+
+
+	</controls>
+</window>

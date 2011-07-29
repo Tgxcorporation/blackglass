@@ -396,7 +396,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+![control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+![control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -415,7 +415,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -495,10 +495,30 @@
 					<id>66624</id>
 					<label>Download Central</label>
 					<hyperlink>181966</hyperlink>
-					<ondown>66621</ondown>
+					<ondown>97259</ondown>
 					<onup>66623</onup>
 					<onright>6</onright>
 					<visible>plugin.isenabled(dlCentral)</visible>
+				</control>
+				<control>
+					<description>Trakt Rate</description>
+					<type>button</type>
+					<id>97259</id>
+					<label>Trakt #Trakt.Translation.Rate.Label</label>
+					<onup>66624</onup>
+					<ondown>97260</ondown>
+					<onright>6</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Shouts List</description>
+					<type>button</type>
+					<id>97260</id>
+					<label>Trakt #Trakt.Translation.Shouts.Label</label>
+					<onup>97259</onup>
+					<ondown>2</ondown>
+					<onright>6</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
 				</control>
 			</control>
 		</control>
