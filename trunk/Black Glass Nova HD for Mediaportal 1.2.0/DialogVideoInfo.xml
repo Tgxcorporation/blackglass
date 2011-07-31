@@ -223,7 +223,7 @@
 			<height>1071</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(66621)|control.hasfocus(66622)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -242,7 +242,7 @@
 			<width>637</width>
 			<height>1080</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(66621)|control.hasfocus(66622)</visible>
+			<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(97259)|control.hasfocus(97260)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -343,6 +343,24 @@
 					<id>6</id>
 					<label>1010</label>
 					<onup>5</onup>
+					<ondown>97259</ondown>
+				</control>
+				<control>
+					<description>Trakt Rate Movie</description>
+					<type>button</type>
+					<id>97259</id>
+					<label>#Trakt.Translation.Rate.Label</label>
+					<visible>plugin.isenabled(Trakt)</visible>
+					<onup>6</onup>
+					<ondown>97260</ondown>
+				</control>
+				<control>
+					<description>Trakt Shouts</description>
+					<type>button</type>
+					<id>97260</id>
+					<label>#Trakt.Translation.Shouts.Label</label>
+					<visible>plugin.isenabled(Trakt)</visible>
+					<onup>97259</onup>
 					<ondown>66621</ondown>
 				</control>
 				<control>
@@ -353,7 +371,7 @@
 					<hyperlink>4755</hyperlink>
 					<hyperlinkParameter>site:IMDb Movie Trailers|search:#title|return:Locked</hyperlinkParameter>
 					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
-					<onup>6</onup>
+					<onup>97260</onup>
 					<ondown>66622</ondown>
 				</control>
 				<control>
@@ -374,7 +392,7 @@
 				<type>label</type>
 				<id>30</id>
 				<posX>45</posX>
-				<posY>858</posY>
+				<posY>964</posY>
 				<label>734</label>
 				<font>font12</font>
 				<align>left</align>
@@ -385,16 +403,18 @@
 				<type>spincontrol</type>
 				<id>10</id>
 				<posX>48</posX>
-				<posY>900</posY>
+				<posY>1006</posY>
 				<onup>66622</onup>
-				<ondown>11</ondown>
+				<ondown>2</ondown>
+				<onright>11</onright>
+				<onleft>11</onleft>
 			</control>
 			<control>
 				<description>disc:</description>
 				<type>label</type>
 				<id>100</id>
-				<posX>45</posX>
-				<posY>957</posY>
+				<posX>345</posX>
+				<posY>964</posY>
 				<label>427</label>
 				<font>font12</font>
 				<textcolor>90ffffff</textcolor>
@@ -403,10 +423,12 @@
 				<description>disc select</description>
 				<type>spincontrol</type>
 				<id>11</id>
-				<posX>48</posX>
-				<posY>999</posY>
-				<onup>10</onup>
+				<posX>348</posX>
+				<posY>1006</posY>
+				<onup>66622</onup>
 				<ondown>2</ondown>
+				<onright>10</onright>
+				<onleft>10</onleft>
 				<textcolor>FFFFFFFF</textcolor>
 				<buddycontrolid>100</buddycontrolid>
 				<showrange>no</showrange>
