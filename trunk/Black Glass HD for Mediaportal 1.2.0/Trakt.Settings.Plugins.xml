@@ -1,89 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-  <id>87273</id>
-  <defaultcontrol>2</defaultcontrol>
-  <allowoverlay>control.isvisible(13371337)</allowoverlay>
-  <define>#currentmodule:#Trakt.Translation.Plugins.Label</define>
-  <define>#selecteditem:#highlightedbutton</define>
-  <define>#defaultcontrol:2</define>
-  <define>#defaultcontrol.onleft:9996</define>
-  <define>#header.label:#Trakt.Translation.Plugins.Label</define>
-  <define>#header.background:hover_trakt.png</define>
-  <animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-  <animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
-  <controls>
-    <import>common.window.background.xml</import>
-    <import>common.window.overlay.xml</import>
-    <import>common.window.time.xml</import>
-    <import>Trakt.Common.xml</import>
-    <control>
-      <type>group</type>
-      <dimColor>ffffffff</dimColor>
-      <animation effect="fade" time="150">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-      <control>
-        <description>Backdrop Overlay - ListView</description>
-        <type>image</type>
-        <id>0</id>
-        <posX>1297</posX>
-        <posY>72</posY>
-        <width>1422</width>
-        <height>1149</height>
-        <texture>bg_facade.png</texture>
-      </control>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>1345</posX>
-        <posY>71</posY>
-        <width>574</width>
-        <height>79</height>
-        <texture>bg_facade_line_nofocus.png</texture>
-        <colordiffuse>77ffffff</colordiffuse>
-      </control>
-      <control>
-        <type>group</type>
-        <layout>StackLayout(0, Vertical, true)</layout>
-        <posX>1345</posX>
-        <posY>150</posY>
-        <dimColor>ffffffff</dimColor>
-        <control>
-          <description>MP-TVSeries</description>
-          <type>togglebutton</type>
-          <id>2</id>
-          <label>MP-TVSeries</label>
-          <onleft>2</onleft>
-          <onleft>#defaultcontrol.onleft</onleft>
-          <onup>17</onup>
-        </control>
-        <control>
-          <description>MovingPictures</description>
-          <type>togglebutton</type>
-          <id>3</id>
-          <label>Moving Pictures</label>
-          <onleft>3</onleft>
-          <onleft>#defaultcontrol.onleft</onleft>
-        </control>
-        <control>
-          <description>My Videos</description>
-          <type>togglebutton</type>
-          <id>4</id>
-          <label>My Videos</label>
-          <onleft>4</onleft>
-          <onleft>#defaultcontrol.onleft</onleft>
-        </control>
-        <control>
-          <description>My Films</description>
-          <type>togglebutton</type>
-          <id>5</id>
-          <label>My Films</label>
-          <onleft>5</onleft>
-          <onleft>#defaultcontrol.onleft</onleft>
-          <ondown>2</ondown>
-        </control>
-      </control>
-    </control>
-  </controls>
+	<id>87273</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#currentmodule:#Trakt.Translation.Plugins.Label</define>
+	<define>#selecteditem:#highlightedbutton</define>
+	<define>#defaultcontrol:2</define>
+	<define>#header.label:Trakt</define>
+	<define>#header.background:hover_trakt.png</define>
+	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
+	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>#header.label</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>579</width>
+				<height>79</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>MP-TVSeries</description>
+					<type>togglebutton</type>
+					<id>2</id>
+					<label>MP-TVSeries</label>
+					<onleft>2</onleft>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>MovingPictures</description>
+					<type>togglebutton</type>
+					<id>3</id>
+					<label>Moving Pictures</label>
+					<onleft>3</onleft>
+				</control>
+				<control>
+					<description>My Videos</description>
+					<type>togglebutton</type>
+					<id>4</id>
+					<label>My Videos</label>
+					<onleft>4</onleft>
+				</control>
+				<control>
+					<description>My Films</description>
+					<type>togglebutton</type>
+					<id>5</id>
+					<label>My Films</label>
+					<onleft>5</onleft>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>
