@@ -6,8 +6,7 @@
 	<define>#currentmodule:#Trakt.Translation.GeneralSettings.Label</define>
 	<define>#selecteditem:#highlightedbutton</define>
 	<define>#defaultcontrol:2</define>
-	<define>#defaultcontrol.onleft:9996</define>
-	<define>#header.label:#Trakt.Translation.GeneralSettings.Label</define>
+	<define>#header.label:Trakt</define>
 	<define>#header.background:hover_trakt.png</define>
 	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
 	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
@@ -15,45 +14,55 @@
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
 		<import>common.window.time.xml</import>
-		<import>Trakt.Common.xml</import>    
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
+
 			<control>
-				<description>Backdrop Overlay - ListView</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>865</posX>
-				<posY>48</posY>
-				<width>948</width>
-				<height>766</height>
-				<texture>bg_facade.png</texture>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
 			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
-				<posX>898</posX>
+				<posX>0</posX>
 				<posY>47</posY>
-				<width>383</width>
+				<width>385</width>
 				<height>53</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
+				<texture>bg_button_nofocus.png</texture>
 			</control>
+
 			<control>
 				<type>group</type>
 				<layout>StackLayout(0, Vertical, true)</layout>
-				<posX>898</posX>
+				<posX>0</posX>
 				<posY>100</posY>
-				<dimColor>ffffffff</dimColor>
 				<control>
 					<description>Download Fanart</description>
 					<type>togglebutton</type>
 					<id>2</id>
 					<label>#Trakt.Translation.DownloadFanart.Label</label>
-					<onleft>#defaultcontrol.onleft</onleft>
+					<onleft>2</onleft>
 					<textXOff>30</textXOff>
 					<textYOff>10</textYOff>
 					<font>font14</font>
@@ -65,7 +74,7 @@
 					<type>togglebutton</type>
 					<id>3</id>
 					<label>#Trakt.Translation.DownloadFullSizeFanart.Label</label>
-					<onleft>#defaultcontrol.onleft</onleft>
+					<onleft>3</onleft>
 					<textXOff>30</textXOff>
 					<textYOff>10</textYOff>
 					<font>font14</font>
@@ -77,7 +86,7 @@
 					<type>togglebutton</type>
 					<id>4</id>
 					<label>#Trakt.Translation.GetFriendRequestsOnStartup.Label</label>
-					<onleft>#defaultcontrol.onleft</onleft>
+					<onleft>4</onleft>
 					<textXOff>30</textXOff>
 					<textYOff>10</textYOff>
 					<font>font14</font>
