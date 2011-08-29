@@ -38,16 +38,27 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxHover = new System.Windows.Forms.TextBox();
-            this.labelFanart = new System.Windows.Forms.Label();
-            this.numericUpDownLevels = new System.Windows.Forms.NumericUpDown();
             this.checkBoxFanart = new System.Windows.Forms.CheckBox();
+            this.groupBoxFanart = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay1 = new System.Windows.Forms.NumericUpDown();
+            this.labelDelay3 = new System.Windows.Forms.Label();
+            this.labelDelay2 = new System.Windows.Forms.Label();
+            this.labelDelay1 = new System.Windows.Forms.Label();
+            this.numericUpDownLevels = new System.Windows.Forms.NumericUpDown();
+            this.labelFanart = new System.Windows.Forms.Label();
+            this.groupBoxFanart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevels)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOk
             // 
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOk.Location = new System.Drawing.Point(71, 156);
+            this.buttonOk.Location = new System.Drawing.Point(86, 296);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(100, 23);
             this.buttonOk.TabIndex = 0;
@@ -58,7 +69,7 @@
             // buttonCancel
             // 
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(200, 156);
+            this.buttonCancel.Location = new System.Drawing.Point(215, 296);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(100, 23);
             this.buttonCancel.TabIndex = 1;
@@ -129,19 +140,123 @@
             this.textBoxHover.Size = new System.Drawing.Size(254, 20);
             this.textBoxHover.TabIndex = 8;
             // 
-            // labelFanart
+            // checkBoxFanart
             // 
-            this.labelFanart.AutoSize = true;
-            this.labelFanart.Location = new System.Drawing.Point(195, 120);
-            this.labelFanart.Name = "labelFanart";
-            this.labelFanart.Size = new System.Drawing.Size(71, 13);
-            this.labelFanart.TabIndex = 13;
-            this.labelFanart.Text = "Fanart Levels";
+            this.checkBoxFanart.AutoSize = true;
+            this.checkBoxFanart.Location = new System.Drawing.Point(12, 116);
+            this.checkBoxFanart.Name = "checkBoxFanart";
+            this.checkBoxFanart.Padding = new System.Windows.Forms.Padding(4, 3, 3, 2);
+            this.checkBoxFanart.Size = new System.Drawing.Size(111, 22);
+            this.checkBoxFanart.TabIndex = 14;
+            this.checkBoxFanart.Text = "Fanart Enabled?";
+            this.checkBoxFanart.UseVisualStyleBackColor = false;
+            this.checkBoxFanart.CheckedChanged += new System.EventHandler(this.checkBoxFanart_CheckedChanged);
+            // 
+            // groupBoxFanart
+            // 
+            this.groupBoxFanart.Controls.Add(this.numericUpDownDelay3);
+            this.groupBoxFanart.Controls.Add(this.numericUpDownDelay2);
+            this.groupBoxFanart.Controls.Add(this.numericUpDownDelay1);
+            this.groupBoxFanart.Controls.Add(this.labelDelay3);
+            this.groupBoxFanart.Controls.Add(this.labelDelay2);
+            this.groupBoxFanart.Controls.Add(this.labelDelay1);
+            this.groupBoxFanart.Controls.Add(this.numericUpDownLevels);
+            this.groupBoxFanart.Controls.Add(this.labelFanart);
+            this.groupBoxFanart.Location = new System.Drawing.Point(14, 141);
+            this.groupBoxFanart.Name = "groupBoxFanart";
+            this.groupBoxFanart.Size = new System.Drawing.Size(380, 140);
+            this.groupBoxFanart.TabIndex = 15;
+            this.groupBoxFanart.TabStop = false;
+            this.groupBoxFanart.Text = "Fanart";
+            // 
+            // numericUpDownDelay3
+            // 
+            this.numericUpDownDelay3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3.Location = new System.Drawing.Point(6, 106);
+            this.numericUpDownDelay3.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3.Name = "numericUpDownDelay3";
+            this.numericUpDownDelay3.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3.TabIndex = 19;
+            this.numericUpDownDelay3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownDelay2
+            // 
+            this.numericUpDownDelay2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2.Location = new System.Drawing.Point(6, 78);
+            this.numericUpDownDelay2.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2.Name = "numericUpDownDelay2";
+            this.numericUpDownDelay2.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2.TabIndex = 18;
+            this.numericUpDownDelay2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownDelay1
+            // 
+            this.numericUpDownDelay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1.Location = new System.Drawing.Point(6, 50);
+            this.numericUpDownDelay1.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1.Name = "numericUpDownDelay1";
+            this.numericUpDownDelay1.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1.TabIndex = 17;
+            this.numericUpDownDelay1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
+            // labelDelay3
+            // 
+            this.labelDelay3.AutoSize = true;
+            this.labelDelay3.Location = new System.Drawing.Point(71, 110);
+            this.labelDelay3.Name = "labelDelay3";
+            this.labelDelay3.Size = new System.Drawing.Size(289, 13);
+            this.labelDelay3.TabIndex = 16;
+            this.labelDelay3.Text = "Delay in ms for the 3rd Fanart to appear after the 2nd Fanart";
+            // 
+            // labelDelay2
+            // 
+            this.labelDelay2.AutoSize = true;
+            this.labelDelay2.Location = new System.Drawing.Point(71, 82);
+            this.labelDelay2.Name = "labelDelay2";
+            this.labelDelay2.Size = new System.Drawing.Size(288, 13);
+            this.labelDelay2.TabIndex = 14;
+            this.labelDelay2.Text = "Delay in ms for the 2nd Fanart to appear after the 1st Fanart";
+            // 
+            // labelDelay1
+            // 
+            this.labelDelay1.AutoSize = true;
+            this.labelDelay1.Location = new System.Drawing.Point(71, 54);
+            this.labelDelay1.Name = "labelDelay1";
+            this.labelDelay1.Size = new System.Drawing.Size(192, 13);
+            this.labelDelay1.TabIndex = 12;
+            this.labelDelay1.Text = "Delay in ms for the 1st Fanart to appear";
             // 
             // numericUpDownLevels
             // 
             this.numericUpDownLevels.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownLevels.Location = new System.Drawing.Point(140, 116);
+            this.numericUpDownLevels.Location = new System.Drawing.Point(27, 22);
             this.numericUpDownLevels.Maximum = new decimal(new int[] {
             3,
             0,
@@ -153,27 +268,24 @@
             0,
             0});
             this.numericUpDownLevels.Name = "numericUpDownLevels";
-            this.numericUpDownLevels.Size = new System.Drawing.Size(49, 22);
-            this.numericUpDownLevels.TabIndex = 12;
+            this.numericUpDownLevels.Size = new System.Drawing.Size(38, 22);
+            this.numericUpDownLevels.TabIndex = 9;
+            this.numericUpDownLevels.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDownLevels.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.numericUpDownLevels.ValueChanged += new System.EventHandler(this.numericUpDownLevels_ValueChanged);
             // 
-            // checkBoxFanart
+            // labelFanart
             // 
-            this.checkBoxFanart.AutoSize = true;
-            this.checkBoxFanart.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBoxFanart.ForeColor = System.Drawing.Color.White;
-            this.checkBoxFanart.Location = new System.Drawing.Point(12, 116);
-            this.checkBoxFanart.Name = "checkBoxFanart";
-            this.checkBoxFanart.Padding = new System.Windows.Forms.Padding(4, 3, 3, 2);
-            this.checkBoxFanart.Size = new System.Drawing.Size(111, 22);
-            this.checkBoxFanart.TabIndex = 11;
-            this.checkBoxFanart.Text = "Fanart Enabled?";
-            this.checkBoxFanart.UseVisualStyleBackColor = false;
-            this.checkBoxFanart.CheckedChanged += new System.EventHandler(this.checkBoxFanart_CheckedChanged);
+            this.labelFanart.AutoSize = true;
+            this.labelFanart.Location = new System.Drawing.Point(71, 26);
+            this.labelFanart.Name = "labelFanart";
+            this.labelFanart.Size = new System.Drawing.Size(71, 13);
+            this.labelFanart.TabIndex = 10;
+            this.labelFanart.Text = "Fanart Levels";
             // 
             // OptionsDialog
             // 
@@ -181,10 +293,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(371, 189);
-            this.Controls.Add(this.labelFanart);
-            this.Controls.Add(this.numericUpDownLevels);
+            this.ClientSize = new System.Drawing.Size(404, 334);
             this.Controls.Add(this.checkBoxFanart);
+            this.Controls.Add(this.groupBoxFanart);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxHover);
             this.Controls.Add(this.label3);
@@ -198,6 +309,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OptionsDialog";
             this.Text = "Options";
+            this.groupBoxFanart.ResumeLayout(false);
+            this.groupBoxFanart.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevels)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -216,8 +332,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxHover;
-        private System.Windows.Forms.Label labelFanart;
-        private System.Windows.Forms.NumericUpDown numericUpDownLevels;
         private System.Windows.Forms.CheckBox checkBoxFanart;
+        private System.Windows.Forms.GroupBox groupBoxFanart;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1;
+        private System.Windows.Forms.Label labelDelay3;
+        private System.Windows.Forms.Label labelDelay2;
+        private System.Windows.Forms.Label labelDelay1;
+        private System.Windows.Forms.NumericUpDown numericUpDownLevels;
+        private System.Windows.Forms.Label labelFanart;
     }
 }
