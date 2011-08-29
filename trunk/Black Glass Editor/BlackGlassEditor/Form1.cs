@@ -104,7 +104,10 @@ namespace BlackGlassEditor
             XmlNodeList fanart = Buttons.GetElementsByTagName("fanart");
             XmlNodeList fanartLevels = Buttons.GetElementsByTagName("fanartLevels");
             XmlNodeList parameter = Buttons.GetElementsByTagName("parameter");
-
+            XmlNodeList fanartDelay1 = Buttons.GetElementsByTagName("fanartDelay1");
+            XmlNodeList fanartDelay2 = Buttons.GetElementsByTagName("fanartDelay2");
+            XmlNodeList fanartDelay3 = Buttons.GetElementsByTagName("fanartDelay3");
+            
             comboBox100.SelectedItem = findPluginName(Int32.Parse(plugin[0].InnerText));
             comboBox101.SelectedItem = findPluginName(Int32.Parse(plugin[1].InnerText));
             comboBox102.SelectedItem = findPluginName(Int32.Parse(plugin[2].InnerText));
@@ -198,7 +201,17 @@ namespace BlackGlassEditor
             numericUpDown113.Value = decimal.Parse(fanartLevels[13].InnerText);
             numericUpDown114.Value = decimal.Parse(fanartLevels[14].InnerText);
 
-
+            numericUpDownDelay1_105.Value = decimal.Parse(fanartDelay1[5].InnerText); numericUpDownDelay2_105.Value = decimal.Parse(fanartDelay2[5].InnerText); numericUpDownDelay3_105.Value = decimal.Parse(fanartDelay3[5].InnerText);
+            numericUpDownDelay1_106.Value = decimal.Parse(fanartDelay1[6].InnerText); numericUpDownDelay2_106.Value = decimal.Parse(fanartDelay2[6].InnerText); numericUpDownDelay3_106.Value = decimal.Parse(fanartDelay3[6].InnerText);
+            numericUpDownDelay1_107.Value = decimal.Parse(fanartDelay1[7].InnerText); numericUpDownDelay2_107.Value = decimal.Parse(fanartDelay2[7].InnerText); numericUpDownDelay3_107.Value = decimal.Parse(fanartDelay3[7].InnerText);
+            numericUpDownDelay1_108.Value = decimal.Parse(fanartDelay1[8].InnerText); numericUpDownDelay2_108.Value = decimal.Parse(fanartDelay2[8].InnerText); numericUpDownDelay3_108.Value = decimal.Parse(fanartDelay3[8].InnerText);
+            numericUpDownDelay1_109.Value = decimal.Parse(fanartDelay1[9].InnerText); numericUpDownDelay2_109.Value = decimal.Parse(fanartDelay2[9].InnerText); numericUpDownDelay3_109.Value = decimal.Parse(fanartDelay3[9].InnerText);
+            numericUpDownDelay1_110.Value = decimal.Parse(fanartDelay1[10].InnerText); numericUpDownDelay2_110.Value = decimal.Parse(fanartDelay2[10].InnerText); numericUpDownDelay3_110.Value = decimal.Parse(fanartDelay3[10].InnerText);
+            numericUpDownDelay1_111.Value = decimal.Parse(fanartDelay1[11].InnerText); numericUpDownDelay2_111.Value = decimal.Parse(fanartDelay2[11].InnerText); numericUpDownDelay3_111.Value = decimal.Parse(fanartDelay3[11].InnerText);
+            numericUpDownDelay1_112.Value = decimal.Parse(fanartDelay1[12].InnerText); numericUpDownDelay2_112.Value = decimal.Parse(fanartDelay2[12].InnerText); numericUpDownDelay3_112.Value = decimal.Parse(fanartDelay3[12].InnerText);
+            numericUpDownDelay1_113.Value = decimal.Parse(fanartDelay1[13].InnerText); numericUpDownDelay2_113.Value = decimal.Parse(fanartDelay2[13].InnerText); numericUpDownDelay3_113.Value = decimal.Parse(fanartDelay3[13].InnerText);
+            numericUpDownDelay1_114.Value = decimal.Parse(fanartDelay1[14].InnerText); numericUpDownDelay2_114.Value = decimal.Parse(fanartDelay2[14].InnerText); numericUpDownDelay3_114.Value = decimal.Parse(fanartDelay3[14].InnerText);
+            
             String ApplicationPath = Application.StartupPath;
 
 
@@ -2207,6 +2220,15 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter100.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_100.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_100.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_100.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2228,6 +2250,15 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter101.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_101.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_101.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_101.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -2251,6 +2282,15 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter102.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_102.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_102.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_102.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2272,6 +2312,15 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter103.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_103.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_103.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_103.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -2295,6 +2344,15 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter104.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_104.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_104.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_104.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2316,6 +2374,15 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter105.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_105.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_105.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_105.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -2339,6 +2406,15 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter106.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_106.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_106.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_106.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2360,6 +2436,15 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter107.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_107.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_107.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_107.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -2383,6 +2468,15 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter108.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_108.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_108.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_108.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2404,6 +2498,15 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter109.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_109.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_109.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_109.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -2427,6 +2530,15 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter110.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_110.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_110.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_110.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2448,6 +2560,15 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter111.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_111.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_111.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_111.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -2471,6 +2592,15 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter112.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_112.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_112.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_112.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2492,6 +2622,15 @@ namespace BlackGlassEditor
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter113.Text));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_113.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_113.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_113.Value.ToString()));
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
@@ -2515,6 +2654,15 @@ namespace BlackGlassEditor
                 textWriter.WriteStartElement("parameter", "");
                 textWriter.WriteString(SecurityElement.Escape(textBoxParameter114.Text));
                 textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay1_114.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay2_114.Value.ToString()));
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
+                textWriter.WriteString(SecurityElement.Escape(numericUpDownDelay3_114.Value.ToString()));
+                textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
 
                 textWriter.WriteStartElement("button");
@@ -2534,6 +2682,15 @@ namespace BlackGlassEditor
                 textWriter.WriteString("1");
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
                 textWriter.WriteString("");
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
@@ -2558,6 +2715,15 @@ namespace BlackGlassEditor
                 textWriter.WriteString("1");
                 textWriter.WriteEndElement();
                 textWriter.WriteStartElement("parameter", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay1", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay2", "");
+                textWriter.WriteString("");
+                textWriter.WriteEndElement();
+                textWriter.WriteStartElement("fanartDelay3", "");
                 textWriter.WriteString("");
                 textWriter.WriteEndElement();
                 textWriter.WriteEndElement();
@@ -3456,6 +3622,9 @@ namespace BlackGlassEditor
             String text_trick2 = String.Empty;
             String text_trick3 = String.Empty;
             Decimal fanartLevel = 1M;
+            Decimal fanartDelay1 = 1000M;
+            Decimal fanartDelay2 = 2000M;
+            Decimal fanartDelay3 = 2000M;
             String fanartLabel1 = String.Empty;
             String fanartLabel2 = String.Empty;
             String fanartLabel3 = String.Empty;
@@ -3466,83 +3635,98 @@ namespace BlackGlassEditor
                 case "100":
                     labelTextbox = SecurityElement.Escape(textBox100.Text); idTextbox = SecurityElement.Escape(textBoxid100.Text); fanartLevel = numericUpDown100.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "100"; posY = "398"; width = "239"; height = "245";
+                    fanartDelay1 = numericUpDownDelay1_100.Value; fanartDelay2 = numericUpDownDelay2_100.Value; fanartDelay3 = numericUpDownDelay3_100.Value;
                     break;
                 case "101":
                     labelTextbox = SecurityElement.Escape(textBox101.Text); idTextbox = SecurityElement.Escape(textBoxid101.Text); fanartLevel = numericUpDown101.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "336"; posY = "410"; width = "209"; height = "214";
+                    fanartDelay1 = numericUpDownDelay1_101.Value; fanartDelay2 = numericUpDownDelay2_101.Value; fanartDelay3 = numericUpDownDelay3_101.Value; 
                     break;
                 case "102":
                     labelTextbox = SecurityElement.Escape(textBox102.Text); idTextbox = SecurityElement.Escape(textBoxid102.Text); fanartLevel = numericUpDown102.Value;
                     delayOpen = "250"; delayClose = "0"; posX = "542"; posY = "414"; width = "196"; height = "205";
+                    fanartDelay1 = numericUpDownDelay1_102.Value; fanartDelay2 = numericUpDownDelay2_102.Value; fanartDelay3 = numericUpDownDelay3_102.Value;
                     break;
                 case "103":
                     labelTextbox = SecurityElement.Escape(textBox103.Text); idTextbox = SecurityElement.Escape(textBoxid103.Text); fanartLevel = numericUpDown103.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "736"; posY = "410"; width = "209"; height = "215";
+                    fanartDelay1 = numericUpDownDelay1_103.Value; fanartDelay2 = numericUpDownDelay2_103.Value; fanartDelay3 = numericUpDownDelay3_103.Value;
                     break;
                 case "104":
                     labelTextbox = SecurityElement.Escape(textBox104.Text); idTextbox = SecurityElement.Escape(textBoxid104.Text); fanartLevel = numericUpDown104.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "941"; posY = "398"; width = "239"; height = "242";
+                    fanartDelay1 = numericUpDownDelay1_104.Value; fanartDelay2 = numericUpDownDelay2_104.Value; fanartDelay3 = numericUpDownDelay3_104.Value;
                     break;
                 case "105":
                     labelTextbox = SecurityElement.Escape(textBox105.Text); idTextbox = SecurityElement.Escape(textBoxid105.Text); fanartLevel = numericUpDown105.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "124"; posY = "238"; width = "211"; height = "160";
+                    fanartDelay1 = numericUpDownDelay1_105.Value; fanartDelay2 = numericUpDownDelay2_105.Value; fanartDelay3 = numericUpDownDelay3_105.Value;
                     break;
                 case "106":
                     labelTextbox = SecurityElement.Escape(textBox106.Text); idTextbox = SecurityElement.Escape(textBoxid106.Text); fanartLevel = numericUpDown106.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "352"; posY = "277"; width = "184"; height = "129";
+                    fanartDelay1 = numericUpDownDelay1_106.Value; fanartDelay2 = numericUpDownDelay2_106.Value; fanartDelay3 = numericUpDownDelay3_106.Value;
                     break;
                 case "107":
                     labelTextbox = SecurityElement.Escape(textBox107.Text); idTextbox = SecurityElement.Escape(textBoxid107.Text); fanartLevel = numericUpDown107.Value;
                     delayOpen = "250"; delayClose = "0"; posX = "554"; posY = "293"; width = "172"; height = "114";
+                    fanartDelay1 = numericUpDownDelay1_107.Value; fanartDelay2 = numericUpDownDelay2_107.Value; fanartDelay3 = numericUpDownDelay3_107.Value;
                     break;
                 case "108":
                     labelTextbox = SecurityElement.Escape(textBox108.Text); idTextbox = SecurityElement.Escape(textBoxid108.Text); fanartLevel = numericUpDown108.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "744"; posY = "277"; width = "184"; height = "129";
+                    fanartDelay1 = numericUpDownDelay1_108.Value; fanartDelay2 = numericUpDownDelay2_108.Value; fanartDelay3 = numericUpDownDelay3_108.Value;
                     break;
                 case "109":
                     labelTextbox = SecurityElement.Escape(textBox109.Text); idTextbox = SecurityElement.Escape(textBoxid109.Text); fanartLevel = numericUpDown109.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "945"; posY = "238"; width = "211"; height = "160";
+                    fanartDelay1 = numericUpDownDelay1_109.Value; fanartDelay2 = numericUpDownDelay2_109.Value; fanartDelay3 = numericUpDownDelay3_109.Value;
                     break;
                 case "110":
                     labelTextbox = SecurityElement.Escape(textBox110.Text); idTextbox = SecurityElement.Escape(textBoxid110.Text); fanartLevel = numericUpDown110.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "137"; posY = "83"; width = "204"; height = "174";
+                    fanartDelay1 = numericUpDownDelay1_110.Value; fanartDelay2 = numericUpDownDelay2_110.Value; fanartDelay3 = numericUpDownDelay3_110.Value;
                     break;
                 case "111":
                     labelTextbox = SecurityElement.Escape(textBox111.Text); idTextbox = SecurityElement.Escape(textBoxid111.Text); fanartLevel = numericUpDown111.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "358"; posY = "145"; width = "180"; height = "132";
+                    fanartDelay1 = numericUpDownDelay1_111.Value; fanartDelay2 = numericUpDownDelay2_111.Value; fanartDelay3 = numericUpDownDelay3_111.Value;
                     break;
                 case "112":
                     labelTextbox = SecurityElement.Escape(textBox112.Text); idTextbox = SecurityElement.Escape(textBoxid112.Text); fanartLevel = numericUpDown112.Value;
                     delayOpen = "250"; delayClose = "0"; posX = "556"; posY = "169"; width = "168"; height = "110";
+                    fanartDelay1 = numericUpDownDelay1_112.Value; fanartDelay2 = numericUpDownDelay2_112.Value; fanartDelay3 = numericUpDownDelay3_112.Value;
                     break;
                 case "113":
                     labelTextbox = SecurityElement.Escape(textBox113.Text); idTextbox = SecurityElement.Escape(textBoxid113.Text); fanartLevel = numericUpDown113.Value;
                     delayOpen = "167"; delayClose = "83"; posX = "742"; posY = "145"; width = "180"; height = "132";
+                    fanartDelay1 = numericUpDownDelay1_113.Value; fanartDelay2 = numericUpDownDelay2_113.Value; fanartDelay3 = numericUpDownDelay3_113.Value;
                     break;
                 case "114":
                     labelTextbox = SecurityElement.Escape(textBox114.Text); idTextbox = SecurityElement.Escape(textBoxid114.Text); fanartLevel = numericUpDown114.Value;
                     delayOpen = "83"; delayClose = "167"; posX = "939"; posY = "83"; width = "205"; height = "174";
+                    fanartDelay1 = numericUpDownDelay1_114.Value; fanartDelay2 = numericUpDownDelay2_114.Value; fanartDelay3 = numericUpDownDelay3_114.Value;
                     break;
             }
 
             if (fanartLevel == 1.0M)
             {
                 texture_name1 = findFanartTexture(idTextbox, "1");
-                pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                pictures_plugin_trick1 = "+!string.contains(#latestMediaHandler.picture.latest1.thumb,Folder.jpg)";
                 text_trick1 = findTextTrick(idTextbox, "1");
                 fanartLabel1 = findFanartLabel(idTextbox, "1");
             }
             if (fanartLevel == 2.0M)
             {
                 texture_name1 = findFanartTexture(idTextbox, "2"); texture_name2 = findFanartTexture(idTextbox, "1");
-                pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest2.thumb,Folder.jpg)"; pictures_plugin_trick2 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                pictures_plugin_trick1 = "+!string.contains(#latestMediaHandler.picture.latest2.thumb,Folder.jpg)"; pictures_plugin_trick2 = "+!string.contains(#latestMediaHandler.picture.latest1.thumb,Folder.jpg)";
                 text_trick1 = findTextTrick(idTextbox, "2"); text_trick2 = findTextTrick(idTextbox, "1");
                 fanartLabel1 = findFanartLabel(idTextbox, "2"); fanartLabel2 = findFanartLabel(idTextbox, "1");
             }
             if (fanartLevel == 3.0M)
             {
                 texture_name1 = findFanartTexture(idTextbox, "3"); texture_name2 = findFanartTexture(idTextbox, "2"); texture_name3 = findFanartTexture(idTextbox, "1");
-                pictures_plugin_trick1 = "+!string.contains(#fanarthandler.picture.latest3.thumb,Folder.jpg)"; pictures_plugin_trick2 = "+!string.contains(#fanarthandler.picture.latest2.thumb,Folder.jpg)"; pictures_plugin_trick3 = "+!string.contains(#fanarthandler.picture.latest1.thumb,Folder.jpg)";
+                pictures_plugin_trick1 = "+!string.contains(#latestMediaHandler.picture.latest3.thumb,Folder.jpg)"; pictures_plugin_trick2 = "+!string.contains(#latestMediaHandler.picture.latest2.thumb,Folder.jpg)"; pictures_plugin_trick3 = "+!string.contains(#latestMediaHandler.picture.latest1.thumb,Folder.jpg)";
                 text_trick1 = findTextTrick(idTextbox, "3"); text_trick2 = findTextTrick(idTextbox, "2"); text_trick3 = findTextTrick(idTextbox, "1");
                 fanartLabel1 = findFanartLabel(idTextbox, "3"); fanartLabel2 = findFanartLabel(idTextbox, "2"); fanartLabel3 = findFanartLabel(idTextbox, "1");
             }
@@ -3566,10 +3750,10 @@ namespace BlackGlassEditor
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<texture mask=""basichome_" + id + @"_mask.png"">" + texture_name1 + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
+			<visible>plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""100"" delay=""1000"">visible</animation>
+            <animation effect=""fade"" time=""100"" delay=""" + fanartDelay1 +@""">visible</animation>
 		</control>
         <control>
 			<description>" + id + @"00 fanart text</description>
@@ -3581,7 +3765,7 @@ namespace BlackGlassEditor
 			<label>" + fanartLabel1 + @"</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
+			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
@@ -3603,10 +3787,10 @@ namespace BlackGlassEditor
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<texture mask=""basichome_" + id + @"_mask.png"">" + texture_name1 + @"</texture>
-			<visible>!control.isvisible(" + id + @"01)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
+			<visible>!control.isvisible(" + id + @"01)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""100"" delay=""1000"">visible</animation>
+            <animation effect=""fade"" time=""100"" delay=""" + fanartDelay1 + @""">visible</animation>
             <animation effect=""fade"" time=""100"">hidden</animation>
 		</control>
         <control>
@@ -3619,7 +3803,7 @@ namespace BlackGlassEditor
 			<label>" + fanartLabel1 + @"</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
+			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
@@ -3637,10 +3821,10 @@ namespace BlackGlassEditor
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<texture mask=""basichome_" + id + @"_mask.png"">" + texture_name2 + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick2 + @"</visible>
+			<visible>plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick2 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""100"" delay=""3000"">visible</animation>
+            <animation effect=""fade"" time=""100"" delay=""" + (fanartDelay1 + fanartDelay2) + @""">visible</animation>
 		</control>
         <control>
 			<description>" + id + @"01 fanart text</description>
@@ -3652,7 +3836,7 @@ namespace BlackGlassEditor
 			<label>" + fanartLabel2 + @"</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>control.isvisible(" + id + @"01)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick2 + @"</visible>
+			<visible>control.isvisible(" + id + @"01)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick2 + @"</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
@@ -3674,10 +3858,10 @@ namespace BlackGlassEditor
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<texture mask=""basichome_" + id + @"_mask.png"">" + texture_name1 + @"</texture>
-			<visible>!control.isvisible(" + id + @"01)+!control.isvisible(" + id + @"02)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
+			<visible>!control.isvisible(" + id + @"01)+!control.isvisible(" + id + @"02)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick1 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""100"" delay=""1000"">visible</animation>
+            <animation effect=""fade"" time=""100"" delay=""" + fanartDelay1 + @""">visible</animation>
             <animation effect=""fade"" time=""100"">hidden</animation>
 		</control>
         <control>
@@ -3690,7 +3874,7 @@ namespace BlackGlassEditor
 			<label>" + fanartLabel1 + @"</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
+			<visible>control.isvisible(" + id + @"00)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick1 + @"</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
@@ -3708,10 +3892,10 @@ namespace BlackGlassEditor
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<texture mask=""basichome_" + id + @"_mask.png"">" + texture_name2 + @"</texture>
-			<visible>!control.isvisible(" + id + @"02)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick2 + @"</visible>
+			<visible>!control.isvisible(" + id + @"02)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick2 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""100"" delay=""3000"">visible</animation>
+            <animation effect=""fade"" time=""100"" delay=""" + (fanartDelay1 + fanartDelay2) + @""">visible</animation>
             <animation effect=""fade"" time=""100"">hidden</animation>
 		</control>
         <control>
@@ -3724,7 +3908,7 @@ namespace BlackGlassEditor
 			<label>" + fanartLabel2 + @"</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>control.isvisible(" + id + @"01)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick2 + @"</visible>
+			<visible>control.isvisible(" + id + @"01)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick2 + @"</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
@@ -3742,10 +3926,10 @@ namespace BlackGlassEditor
 			<centered>yes</centered>
 			<zoom>yes</zoom>
 			<texture mask=""basichome_" + id + @"_mask.png"">" + texture_name3 + @"</texture>
-			<visible>plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick3 + @"</visible>
+			<visible>plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + pictures_plugin_trick3 + @"</visible>
 			<animation effect=""fade"" time=""250"" delay=""" + delayOpen + @""">WindowOpen</animation>
 			<animation effect=""fade"" time=""250"" delay=""" + delayClose + @""">WindowClose</animation>
-            <animation effect=""fade"" time=""100"" delay=""5000"">visible</animation>
+            <animation effect=""fade"" time=""100"" delay=""" + (fanartDelay1 + fanartDelay2 + fanartDelay3) + @""">visible</animation>
 		</control>
         <control>
 			<description>" + id + @"02 fanart text</description>
@@ -3757,7 +3941,7 @@ namespace BlackGlassEditor
 			<label>" + fanartLabel3 + @"</label>
 			<align>center</align>
 			<font>font11</font>
-			<visible>control.isvisible(" + id + @"02)+plugin.isenabled(Fanart Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick3 + @"</visible>
+			<visible>control.isvisible(" + id + @"02)+plugin.isenabled(Latest Media Handler)+plugin.isenabled(" + plugin_name + @")+control.hasfocus(" + id + @")" + text_trick3 + @"</visible>
 			<textcolor>90ffffff</textcolor>
 			<animation effect=""fade"" time=""100"">visible</animation>
 			<animation effect=""fade"" time=""250"" delay=""250"">WindowOpen</animation>
@@ -3824,22 +4008,22 @@ namespace BlackGlassEditor
             switch (id)
             {
                 case "504":
-                    texture = "#fanarthandler.music.latest" + level + ".fanart1";
+                    texture = "#latestMediaHandler.music.latest" + level + ".fanart1";
                     break;
                 case "501":
-                    texture = "#fanarthandler.music.latest" + level + ".fanart1";
+                    texture = "#latestMediaHandler.music.latest" + level + ".fanart1";
                     break;
                 case "1":
-                    texture = "#fanarthandler.tvrecordings.latest" + level + ".thumb";
+                    texture = "#latestMediaHandler.tvrecordings.latest" + level + ".thumb";
                     break;
                 case "2":
-                    texture = "#fanarthandler.picture.latest" + level + ".thumb";
+                    texture = "#latestMediaHandler.picture.latest" + level + ".thumb";
                     break;
                 case "96742":
-                    texture = "#fanarthandler.movingpicture.latest" + level + ".fanart";
+                    texture = "#latestMediaHandler.movingpicture.latest" + level + ".fanart";
                     break;
                 case "9811":
-                    texture = "#fanarthandler.tvseries.latest" + level + ".fanart";
+                    texture = "#latestMediaHandler.tvseries.latest" + level + ".fanart";
                     break;
                 case "2600":
                     if (level == "1") texture = "animations\\weather\\#infoservice.weather.today.img.big.filenamewithoutext.jpg";
@@ -3858,22 +4042,22 @@ namespace BlackGlassEditor
             switch (id)
             {
                 case "504":
-                    trick = "+!string.equals(#fanarthandler.music.latest" + level + ".album,)";
+                    trick = "+!string.equals(#latestMediaHandler.music.latest" + level + ".album,)";
                     break;
                 case "501":
-                    trick = "+!string.equals(#fanarthandler.music.latest" + level + ".album,)";
+                    trick = "+!string.equals(#latestMediaHandler.music.latest" + level + ".album,)";
                     break;
                 case "1":
-                    trick = "+!string.equals(#fanarthandler.tvrecordings.latest" + level + ".title,)";
+                    trick = "+!string.equals(#latestMediaHandler.tvrecordings.latest" + level + ".title,)";
                     break;
                 case "2":
-                    trick = "+!string.equals(#fanarthandler.picture.latest" + level + ".filename,)";
+                    trick = "+!string.equals(#latestMediaHandler.picture.latest" + level + ".filename,)";
                     break;
                 case "96742":
-                    trick = "+!string.equals(#fanarthandler.movingpicture.latest" + level + ".title,)";
+                    trick = "+!string.equals(#latestMediaHandler.movingpicture.latest" + level + ".title,)";
                     break;
                 case "9811":
-                    trick = "+!string.equals(#fanarthandler.tvseries.latest" + level + ".episodeName,)";
+                    trick = "+!string.equals(#latestMediaHandler.tvseries.latest" + level + ".episodeName,)";
                     break;
                 case "2600":
                     if (level == "1") trick = "+!string.equals(#infoservice.weather.today.condition,)";
@@ -3892,22 +4076,22 @@ namespace BlackGlassEditor
             switch (id)
             {
                 case "504":
-                    FanartLabel = "#fanarthandler.music.latest" + level + ".dateAdded:     #fanarthandler.music.latest" + level + ".artist     #fanarthandler.music.latest" + level + ".album     #fanarthandler.music.latest" + level + ".genre";
+                    FanartLabel = "#latestMediaHandler.music.latest" + level + ".dateAdded:     #latestMediaHandler.music.latest" + level + ".artist     #latestMediaHandler.music.latest" + level + ".album     #latestMediaHandler.music.latest" + level + ".genre";
                     break;
                 case "501":
-                    FanartLabel = "#fanarthandler.music.latest" + level + ".dateAdded:     #fanarthandler.music.latest" + level + ".artist     #fanarthandler.music.latest" + level + ".album     #fanarthandler.music.latest" + level + ".genre";
+                    FanartLabel = "#latestMediaHandler.music.latest" + level + ".dateAdded:     #latestMediaHandler.music.latest" + level + ".artist     #latestMediaHandler.music.latest" + level + ".album     #latestMediaHandler.music.latest" + level + ".genre";
                     break;
                 case "1":
-                    FanartLabel = "#fanarthandler.tvrecordings.latest" + level + ".dateAdded:     #fanarthandler.tvrecordings.latest" + level + ".title     #fanarthandler.tvrecordings.latest" + level + ".genre";
+                    FanartLabel = "#latestMediaHandler.tvrecordings.latest" + level + ".dateAdded:     #latestMediaHandler.tvrecordings.latest" + level + ".title     #latestMediaHandler.tvrecordings.latest" + level + ".genre";
                     break;
                 case "2":
-                    FanartLabel = "#fanarthandler.picture.latest" + level + ".dateAdded:     #fanarthandler.picture.latest" + level + ".filename";
+                    FanartLabel = "#latestMediaHandler.picture.latest" + level + ".dateAdded:     #latestMediaHandler.picture.latest" + level + ".filename";
                     break;
                 case "96742":
-                    FanartLabel = "#fanarthandler.movingpicture.latest" + level + ".dateAdded:     #fanarthandler.movingpicture.latest" + level + ".title     #fanarthandler.movingpicture.latest" + level + ".runtime     #fanarthandler.movingpicture.latest" + level + ".genre     #fanarthandler.movingpicture.latest" + level + ".year";
+                    FanartLabel = "#latestMediaHandler.movingpicture.latest" + level + ".dateAdded:     #latestMediaHandler.movingpicture.latest" + level + ".title     #latestMediaHandler.movingpicture.latest" + level + ".runtime mins     #latestMediaHandler.movingpicture.latest" + level + ".genre     #latestMediaHandler.movingpicture.latest" + level + ".year";
                     break;
                 case "9811":
-                    FanartLabel = "#fanarthandler.tvseries.latest" + level + ".dateAdded:     #fanarthandler.tvseries.latest" + level + ".serieName     #fanarthandler.tvseries.latest" + level + ".seasonIndexx#fanarthandler.tvseries.latest" + level + ".episodeIndex - #fanarthandler.tvseries.latest" + level + ".episodeName     #fanarthandler.tvseries.latest" + level + ".runtime";
+                    FanartLabel = "#latestMediaHandler.tvseries.latest" + level + ".dateAdded:     #latestMediaHandler.tvseries.latest" + level + ".serieName     #latestMediaHandler.tvseries.latest" + level + ".seasonIndexx#latestMediaHandler.tvseries.latest" + level + ".episodeIndex - #latestMediaHandler.tvseries.latest" + level + ".episodeName     #latestMediaHandler.tvseries.latest" + level + ".runtime mins";
                     break;
                 case "2600":
                     if (level == "1") FanartLabel = "#infoservice.weather.today.weekday:     #infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location";
@@ -3930,6 +4114,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox110.Checked;
             myOptionDialog.Levels = numericUpDown110.Value;
             myOptionDialog.ShowFanartControls = true;
+            myOptionDialog.Delay1 = numericUpDownDelay1_110.Value; myOptionDialog.Delay2 = numericUpDownDelay2_110.Value; myOptionDialog.Delay3 = numericUpDownDelay3_110.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -3938,6 +4123,7 @@ namespace BlackGlassEditor
                 textBoxParameter110.Text = myOptionDialog.Parameter;
                 checkBox110.Checked = myOptionDialog.Fanart;
                 numericUpDown110.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_110.Value = myOptionDialog.Delay1; numericUpDownDelay2_110.Value = myOptionDialog.Delay2; numericUpDownDelay3_110.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -3951,6 +4137,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox111.Checked;
             myOptionDialog.Levels = numericUpDown111.Value;
             myOptionDialog.ShowFanartControls = true;
+            myOptionDialog.Delay1 = numericUpDownDelay1_111.Value; myOptionDialog.Delay2 = numericUpDownDelay2_111.Value; myOptionDialog.Delay3 = numericUpDownDelay3_111.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -3959,6 +4146,7 @@ namespace BlackGlassEditor
                 textBoxParameter111.Text = myOptionDialog.Parameter;
                 checkBox111.Checked = myOptionDialog.Fanart;
                 numericUpDown111.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_111.Value = myOptionDialog.Delay1; numericUpDownDelay2_111.Value = myOptionDialog.Delay2; numericUpDownDelay3_111.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -3972,6 +4160,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox112.Checked;
             myOptionDialog.Levels = numericUpDown112.Value;
             myOptionDialog.ShowFanartControls = true;
+            myOptionDialog.Delay1 = numericUpDownDelay1_112.Value; myOptionDialog.Delay2 = numericUpDownDelay2_112.Value; myOptionDialog.Delay3 = numericUpDownDelay3_112.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -3980,6 +4169,7 @@ namespace BlackGlassEditor
                 textBoxParameter112.Text = myOptionDialog.Parameter;
                 checkBox112.Checked = myOptionDialog.Fanart;
                 numericUpDown112.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_112.Value = myOptionDialog.Delay1; numericUpDownDelay2_112.Value = myOptionDialog.Delay2; numericUpDownDelay3_112.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -3992,6 +4182,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox113.Checked;
             myOptionDialog.Levels = numericUpDown113.Value;
             myOptionDialog.ShowFanartControls = true;
+            myOptionDialog.Delay1 = numericUpDownDelay1_113.Value; myOptionDialog.Delay2 = numericUpDownDelay2_113.Value; myOptionDialog.Delay3 = numericUpDownDelay3_113.Value;
 
             myOptionDialog.Text = "Button 113 Options";
 
@@ -4002,6 +4193,7 @@ namespace BlackGlassEditor
                 textBoxParameter113.Text = myOptionDialog.Parameter;
                 checkBox113.Checked = myOptionDialog.Fanart;
                 numericUpDown113.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_113.Value = myOptionDialog.Delay1; numericUpDownDelay2_113.Value = myOptionDialog.Delay2; numericUpDownDelay3_113.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -4015,6 +4207,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox114.Checked;
             myOptionDialog.Levels = numericUpDown114.Value;
             myOptionDialog.ShowFanartControls = true;
+            myOptionDialog.Delay1 = numericUpDownDelay1_114.Value; myOptionDialog.Delay2 = numericUpDownDelay2_114.Value; myOptionDialog.Delay3 = numericUpDownDelay3_114.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4023,6 +4216,7 @@ namespace BlackGlassEditor
                 textBoxParameter114.Text = myOptionDialog.Parameter;
                 checkBox114.Checked = myOptionDialog.Fanart;
                 numericUpDown114.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_114.Value = myOptionDialog.Delay1; numericUpDownDelay2_114.Value = myOptionDialog.Delay2; numericUpDownDelay3_114.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -4036,6 +4230,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox106.Checked;
             myOptionDialog.Levels = numericUpDown106.Value;
             myOptionDialog.ShowFanartControls = true;
+            myOptionDialog.Delay1 = numericUpDownDelay1_106.Value; myOptionDialog.Delay2 = numericUpDownDelay2_106.Value; myOptionDialog.Delay3 = numericUpDownDelay3_106.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4044,6 +4239,7 @@ namespace BlackGlassEditor
                 textBoxParameter106.Text = myOptionDialog.Parameter;
                 checkBox106.Checked = myOptionDialog.Fanart;
                 numericUpDown106.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_106.Value = myOptionDialog.Delay1; numericUpDownDelay2_106.Value = myOptionDialog.Delay2; numericUpDownDelay3_106.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -4057,6 +4253,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox107.Checked;
             myOptionDialog.Levels = numericUpDown107.Value;
             myOptionDialog.ShowFanartControls = true;
+            myOptionDialog.Delay1 = numericUpDownDelay1_107.Value; myOptionDialog.Delay2 = numericUpDownDelay2_107.Value; myOptionDialog.Delay3 = numericUpDownDelay3_107.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4065,6 +4262,7 @@ namespace BlackGlassEditor
                 textBoxParameter107.Text = myOptionDialog.Parameter;
                 checkBox107.Checked = myOptionDialog.Fanart;
                 numericUpDown107.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_107.Value = myOptionDialog.Delay1; numericUpDownDelay2_107.Value = myOptionDialog.Delay2; numericUpDownDelay3_107.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -4078,6 +4276,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox108.Checked;
             myOptionDialog.Levels = numericUpDown108.Value;
             myOptionDialog.ShowFanartControls = true;
+            myOptionDialog.Delay1 = numericUpDownDelay1_108.Value; myOptionDialog.Delay2 = numericUpDownDelay2_108.Value; myOptionDialog.Delay3 = numericUpDownDelay3_108.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4086,6 +4285,7 @@ namespace BlackGlassEditor
                 textBoxParameter108.Text = myOptionDialog.Parameter;
                 checkBox108.Checked = myOptionDialog.Fanart;
                 numericUpDown108.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_108.Value = myOptionDialog.Delay1; numericUpDownDelay2_108.Value = myOptionDialog.Delay2; numericUpDownDelay3_108.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -4099,6 +4299,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox109.Checked;
             myOptionDialog.Levels = numericUpDown109.Value;
             myOptionDialog.ShowFanartControls = true;
+            myOptionDialog.Delay1 = numericUpDownDelay1_109.Value; myOptionDialog.Delay2 = numericUpDownDelay2_109.Value; myOptionDialog.Delay3 = numericUpDownDelay3_109.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4107,6 +4308,7 @@ namespace BlackGlassEditor
                 textBoxParameter109.Text = myOptionDialog.Parameter;
                 checkBox109.Checked = myOptionDialog.Fanart;
                 numericUpDown109.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_109.Value = myOptionDialog.Delay1; numericUpDownDelay2_109.Value = myOptionDialog.Delay2; numericUpDownDelay3_109.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -4120,6 +4322,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox105.Checked;
             myOptionDialog.Levels = numericUpDown105.Value;
             myOptionDialog.ShowFanartControls = true;
+            myOptionDialog.Delay1 = numericUpDownDelay1_105.Value; myOptionDialog.Delay2 = numericUpDownDelay2_105.Value; myOptionDialog.Delay3 = numericUpDownDelay3_105.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4128,6 +4331,7 @@ namespace BlackGlassEditor
                 textBoxParameter105.Text = myOptionDialog.Parameter;
                 checkBox105.Checked = myOptionDialog.Fanart;
                 numericUpDown105.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_105.Value = myOptionDialog.Delay1; numericUpDownDelay2_105.Value = myOptionDialog.Delay2; numericUpDownDelay3_105.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -4141,6 +4345,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox104.Checked;
             myOptionDialog.Levels = numericUpDown104.Value;
             myOptionDialog.ShowFanartControls = false;
+            myOptionDialog.Delay1 = numericUpDownDelay1_104.Value; myOptionDialog.Delay2 = numericUpDownDelay2_104.Value; myOptionDialog.Delay3 = numericUpDownDelay3_104.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4149,6 +4354,7 @@ namespace BlackGlassEditor
                 textBoxParameter104.Text = myOptionDialog.Parameter;
                 checkBox104.Checked = myOptionDialog.Fanart;
                 numericUpDown104.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_104.Value = myOptionDialog.Delay1; numericUpDownDelay2_104.Value = myOptionDialog.Delay2; numericUpDownDelay3_104.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -4162,6 +4368,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox103.Checked;
             myOptionDialog.Levels = numericUpDown103.Value;
             myOptionDialog.ShowFanartControls = false;
+            myOptionDialog.Delay1 = numericUpDownDelay1_103.Value; myOptionDialog.Delay2 = numericUpDownDelay2_103.Value; myOptionDialog.Delay3 = numericUpDownDelay3_103.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4170,6 +4377,7 @@ namespace BlackGlassEditor
                 textBoxParameter103.Text = myOptionDialog.Parameter;
                 checkBox103.Checked = myOptionDialog.Fanart;
                 numericUpDown103.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_103.Value = myOptionDialog.Delay1; numericUpDownDelay2_103.Value = myOptionDialog.Delay2; numericUpDownDelay3_103.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -4183,6 +4391,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox102.Checked;
             myOptionDialog.Levels = numericUpDown102.Value;
             myOptionDialog.ShowFanartControls = false;
+            myOptionDialog.Delay1 = numericUpDownDelay1_102.Value; myOptionDialog.Delay2 = numericUpDownDelay2_102.Value; myOptionDialog.Delay3 = numericUpDownDelay3_102.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4191,6 +4400,7 @@ namespace BlackGlassEditor
                 textBoxParameter102.Text = myOptionDialog.Parameter;
                 checkBox102.Checked = myOptionDialog.Fanart;
                 numericUpDown102.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_102.Value = myOptionDialog.Delay1; numericUpDownDelay2_102.Value = myOptionDialog.Delay2; numericUpDownDelay3_102.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -4204,6 +4414,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox101.Checked;
             myOptionDialog.Levels = numericUpDown101.Value;
             myOptionDialog.ShowFanartControls = false;
+            myOptionDialog.Delay1 = numericUpDownDelay1_101.Value; myOptionDialog.Delay2 = numericUpDownDelay2_101.Value; myOptionDialog.Delay3 = numericUpDownDelay3_101.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4212,6 +4423,7 @@ namespace BlackGlassEditor
                 textBoxParameter101.Text = myOptionDialog.Parameter;
                 checkBox101.Checked = myOptionDialog.Fanart;
                 numericUpDown101.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_101.Value = myOptionDialog.Delay1; numericUpDownDelay2_101.Value = myOptionDialog.Delay2; numericUpDownDelay3_101.Value = myOptionDialog.Delay3;
             }
         }
 
@@ -4225,6 +4437,7 @@ namespace BlackGlassEditor
             myOptionDialog.Fanart = checkBox100.Checked;
             myOptionDialog.Levels = numericUpDown100.Value;
             myOptionDialog.ShowFanartControls = false;
+            myOptionDialog.Delay1 = numericUpDownDelay1_100.Value; myOptionDialog.Delay2 = numericUpDownDelay2_100.Value; myOptionDialog.Delay3 = numericUpDownDelay3_100.Value;
 
             if (myOptionDialog.ShowDialog() == DialogResult.OK)
             {
@@ -4233,10 +4446,9 @@ namespace BlackGlassEditor
                 textBoxParameter100.Text = myOptionDialog.Parameter;
                 checkBox100.Checked = myOptionDialog.Fanart;
                 numericUpDown100.Value = myOptionDialog.Levels;
+                numericUpDownDelay1_100.Value = myOptionDialog.Delay1; numericUpDownDelay2_100.Value = myOptionDialog.Delay2; numericUpDownDelay3_100.Value = myOptionDialog.Delay3;
             }
         }
 
-
-
-    }
+  }
 }
