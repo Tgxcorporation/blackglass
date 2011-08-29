@@ -44,14 +44,20 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox111 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_111 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown111 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_111 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions111 = new System.Windows.Forms.Button();
+            this.numericUpDownDelay1_111 = new System.Windows.Forms.NumericUpDown();
             this.textBoxParameter111 = new System.Windows.Forms.TextBox();
             this.checkBox111 = new System.Windows.Forms.CheckBox();
             this.buttonEmpty111 = new System.Windows.Forms.Button();
             this.textBoxid111 = new System.Windows.Forms.TextBox();
             this.groupBox100 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_100 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_100 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown100 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay1_100 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions100 = new System.Windows.Forms.Button();
             this.checkBox100 = new System.Windows.Forms.CheckBox();
             this.button10 = new System.Windows.Forms.Button();
@@ -64,7 +70,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox100 = new System.Windows.Forms.ComboBox();
             this.groupBox105 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_105 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_105 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown105 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay1_105 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions105 = new System.Windows.Forms.Button();
             this.textBoxParameter105 = new System.Windows.Forms.TextBox();
             this.textBox105 = new System.Windows.Forms.TextBox();
@@ -78,8 +87,11 @@
             this.buttonSave105f = new System.Windows.Forms.Button();
             this.buttonSave105u = new System.Windows.Forms.Button();
             this.groupBox110 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_110 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown110 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_110 = new System.Windows.Forms.NumericUpDown();
             this.textBoxParameter110 = new System.Windows.Forms.TextBox();
+            this.numericUpDownDelay1_110 = new System.Windows.Forms.NumericUpDown();
             this.textBox110 = new System.Windows.Forms.TextBox();
             this.buttonOptions110 = new System.Windows.Forms.Button();
             this.checkBox110 = new System.Windows.Forms.CheckBox();
@@ -92,8 +104,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox110 = new System.Windows.Forms.ComboBox();
             this.groupBox112 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_112 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown112 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_112 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions112 = new System.Windows.Forms.Button();
+            this.numericUpDownDelay1_112 = new System.Windows.Forms.NumericUpDown();
             this.textBoxParameter112 = new System.Windows.Forms.TextBox();
             this.textBox112 = new System.Windows.Forms.TextBox();
             this.checkBox112 = new System.Windows.Forms.CheckBox();
@@ -106,8 +121,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox112 = new System.Windows.Forms.ComboBox();
             this.groupBox113 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_113 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown113 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_113 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions113 = new System.Windows.Forms.Button();
+            this.numericUpDownDelay1_113 = new System.Windows.Forms.NumericUpDown();
             this.textBoxParameter113 = new System.Windows.Forms.TextBox();
             this.textBox113 = new System.Windows.Forms.TextBox();
             this.checkBox113 = new System.Windows.Forms.CheckBox();
@@ -120,8 +138,11 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox113 = new System.Windows.Forms.ComboBox();
             this.groupBox114 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_114 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown114 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_114 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions114 = new System.Windows.Forms.Button();
+            this.numericUpDownDelay1_114 = new System.Windows.Forms.NumericUpDown();
             this.textBoxParameter114 = new System.Windows.Forms.TextBox();
             this.textBox114 = new System.Windows.Forms.TextBox();
             this.checkBox114 = new System.Windows.Forms.CheckBox();
@@ -135,7 +156,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox114 = new System.Windows.Forms.ComboBox();
             this.groupBox106 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_106 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_106 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown106 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay1_106 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions106 = new System.Windows.Forms.Button();
             this.textBoxParameter106 = new System.Windows.Forms.TextBox();
             this.textBox106 = new System.Windows.Forms.TextBox();
@@ -149,7 +173,10 @@
             this.buttonSave106f = new System.Windows.Forms.Button();
             this.buttonSave106u = new System.Windows.Forms.Button();
             this.groupBox107 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_107 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_107 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown107 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay1_107 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions107 = new System.Windows.Forms.Button();
             this.textBoxParameter107 = new System.Windows.Forms.TextBox();
             this.textBox107 = new System.Windows.Forms.TextBox();
@@ -163,7 +190,10 @@
             this.buttonSave107f = new System.Windows.Forms.Button();
             this.buttonSave107u = new System.Windows.Forms.Button();
             this.groupBox108 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_108 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_108 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown108 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay1_108 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions108 = new System.Windows.Forms.Button();
             this.textBoxParameter108 = new System.Windows.Forms.TextBox();
             this.textBox108 = new System.Windows.Forms.TextBox();
@@ -177,7 +207,10 @@
             this.buttonSave108f = new System.Windows.Forms.Button();
             this.buttonSave108u = new System.Windows.Forms.Button();
             this.groupBox109 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_109 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_109 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown109 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay1_109 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions109 = new System.Windows.Forms.Button();
             this.textBoxParameter109 = new System.Windows.Forms.TextBox();
             this.textBox109 = new System.Windows.Forms.TextBox();
@@ -191,7 +224,10 @@
             this.buttonSave109f = new System.Windows.Forms.Button();
             this.buttonSave109u = new System.Windows.Forms.Button();
             this.groupBox101 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_101 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_101 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown101 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay1_101 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions101 = new System.Windows.Forms.Button();
             this.checkBox101 = new System.Windows.Forms.CheckBox();
             this.button14 = new System.Windows.Forms.Button();
@@ -208,7 +244,10 @@
             this.buttonSave101f = new System.Windows.Forms.Button();
             this.buttonSave101u = new System.Windows.Forms.Button();
             this.groupBox102 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_102 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_102 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown102 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay1_102 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions102 = new System.Windows.Forms.Button();
             this.checkBox102 = new System.Windows.Forms.CheckBox();
             this.button18 = new System.Windows.Forms.Button();
@@ -225,7 +264,10 @@
             this.buttonSave102f = new System.Windows.Forms.Button();
             this.buttonSave102u = new System.Windows.Forms.Button();
             this.groupBox103 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_103 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_103 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown103 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay1_103 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions103 = new System.Windows.Forms.Button();
             this.checkBox103 = new System.Windows.Forms.CheckBox();
             this.button22 = new System.Windows.Forms.Button();
@@ -242,7 +284,10 @@
             this.buttonSave103f = new System.Windows.Forms.Button();
             this.buttonSave103u = new System.Windows.Forms.Button();
             this.groupBox104 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownDelay3_104 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay2_104 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown104 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDelay1_104 = new System.Windows.Forms.NumericUpDown();
             this.buttonOptions104 = new System.Windows.Forms.Button();
             this.checkBox104 = new System.Windows.Forms.CheckBox();
             this.button26 = new System.Windows.Forms.Button();
@@ -272,47 +317,92 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox100)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.groupBox111.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_111)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown111)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_111)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_111)).BeginInit();
             this.groupBox100.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_100)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_100)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_100)).BeginInit();
             this.groupBox105.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_105)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_105)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown105)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_105)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox105)).BeginInit();
             this.groupBox110.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_110)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown110)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_110)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_110)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox110)).BeginInit();
             this.groupBox112.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_112)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown112)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_112)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_112)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox112)).BeginInit();
             this.groupBox113.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_113)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown113)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_113)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_113)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox113)).BeginInit();
             this.groupBox114.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_114)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_114)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_114)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox114)).BeginInit();
             this.groupBox106.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_106)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_106)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown106)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_106)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox106)).BeginInit();
             this.groupBox107.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_107)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_107)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown107)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_107)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox107)).BeginInit();
             this.groupBox108.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_108)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_108)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown108)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_108)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox108)).BeginInit();
             this.groupBox109.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_109)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_109)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown109)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_109)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox109)).BeginInit();
             this.groupBox101.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_101)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_101)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown101)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_101)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox101)).BeginInit();
             this.groupBox102.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_102)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_102)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown102)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_102)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox102)).BeginInit();
             this.groupBox103.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_103)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_103)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown103)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_103)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox103)).BeginInit();
             this.groupBox104.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_104)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_104)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown104)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_104)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox104)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColor)).BeginInit();
             this.SuspendLayout();
@@ -455,8 +545,11 @@
             // 
             // groupBox111
             // 
+            this.groupBox111.Controls.Add(this.numericUpDownDelay3_111);
             this.groupBox111.Controls.Add(this.numericUpDown111);
+            this.groupBox111.Controls.Add(this.numericUpDownDelay2_111);
             this.groupBox111.Controls.Add(this.buttonOptions111);
+            this.groupBox111.Controls.Add(this.numericUpDownDelay1_111);
             this.groupBox111.Controls.Add(this.textBoxParameter111);
             this.groupBox111.Controls.Add(this.textBox111);
             this.groupBox111.Controls.Add(this.checkBox111);
@@ -474,6 +567,26 @@
             this.groupBox111.TabIndex = 20;
             this.groupBox111.TabStop = false;
             this.groupBox111.Text = "Button ID 111";
+            // 
+            // numericUpDownDelay3_111
+            // 
+            this.numericUpDownDelay3_111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_111.Location = new System.Drawing.Point(32, 75);
+            this.numericUpDownDelay3_111.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_111.Name = "numericUpDownDelay3_111";
+            this.numericUpDownDelay3_111.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_111.TabIndex = 71;
+            this.numericUpDownDelay3_111.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_111.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_111.Visible = false;
             // 
             // numericUpDown111
             // 
@@ -498,6 +611,26 @@
             0});
             this.numericUpDown111.Visible = false;
             // 
+            // numericUpDownDelay2_111
+            // 
+            this.numericUpDownDelay2_111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_111.Location = new System.Drawing.Point(32, 47);
+            this.numericUpDownDelay2_111.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_111.Name = "numericUpDownDelay2_111";
+            this.numericUpDownDelay2_111.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_111.TabIndex = 70;
+            this.numericUpDownDelay2_111.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_111.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_111.Visible = false;
+            // 
             // buttonOptions111
             // 
             this.buttonOptions111.Location = new System.Drawing.Point(140, 142);
@@ -507,6 +640,26 @@
             this.buttonOptions111.Text = "Options";
             this.buttonOptions111.UseVisualStyleBackColor = true;
             this.buttonOptions111.Click += new System.EventHandler(this.buttonOptions111_Click);
+            // 
+            // numericUpDownDelay1_111
+            // 
+            this.numericUpDownDelay1_111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_111.Location = new System.Drawing.Point(32, 19);
+            this.numericUpDownDelay1_111.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_111.Name = "numericUpDownDelay1_111";
+            this.numericUpDownDelay1_111.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_111.TabIndex = 69;
+            this.numericUpDownDelay1_111.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_111.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_111.Visible = false;
             // 
             // textBoxParameter111
             // 
@@ -553,7 +706,10 @@
             // groupBox100
             // 
             this.groupBox100.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox100.Controls.Add(this.numericUpDownDelay3_100);
+            this.groupBox100.Controls.Add(this.numericUpDownDelay2_100);
             this.groupBox100.Controls.Add(this.numericUpDown100);
+            this.groupBox100.Controls.Add(this.numericUpDownDelay1_100);
             this.groupBox100.Controls.Add(this.buttonOptions100);
             this.groupBox100.Controls.Add(this.checkBox100);
             this.groupBox100.Controls.Add(this.button10);
@@ -575,6 +731,46 @@
             this.groupBox100.TabIndex = 21;
             this.groupBox100.TabStop = false;
             this.groupBox100.Text = "Button ID 100";
+            // 
+            // numericUpDownDelay3_100
+            // 
+            this.numericUpDownDelay3_100.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_100.Location = new System.Drawing.Point(32, 103);
+            this.numericUpDownDelay3_100.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_100.Name = "numericUpDownDelay3_100";
+            this.numericUpDownDelay3_100.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_100.TabIndex = 98;
+            this.numericUpDownDelay3_100.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_100.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_100.Visible = false;
+            // 
+            // numericUpDownDelay2_100
+            // 
+            this.numericUpDownDelay2_100.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_100.Location = new System.Drawing.Point(32, 75);
+            this.numericUpDownDelay2_100.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_100.Name = "numericUpDownDelay2_100";
+            this.numericUpDownDelay2_100.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_100.TabIndex = 97;
+            this.numericUpDownDelay2_100.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_100.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_100.Visible = false;
             // 
             // numericUpDown100
             // 
@@ -598,6 +794,26 @@
             0,
             0});
             this.numericUpDown100.Visible = false;
+            // 
+            // numericUpDownDelay1_100
+            // 
+            this.numericUpDownDelay1_100.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_100.Location = new System.Drawing.Point(32, 47);
+            this.numericUpDownDelay1_100.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_100.Name = "numericUpDownDelay1_100";
+            this.numericUpDownDelay1_100.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_100.TabIndex = 96;
+            this.numericUpDownDelay1_100.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_100.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_100.Visible = false;
             // 
             // buttonOptions100
             // 
@@ -709,7 +925,10 @@
             // groupBox105
             // 
             this.groupBox105.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox105.Controls.Add(this.numericUpDownDelay3_105);
+            this.groupBox105.Controls.Add(this.numericUpDownDelay2_105);
             this.groupBox105.Controls.Add(this.numericUpDown105);
+            this.groupBox105.Controls.Add(this.numericUpDownDelay1_105);
             this.groupBox105.Controls.Add(this.buttonOptions105);
             this.groupBox105.Controls.Add(this.textBoxParameter105);
             this.groupBox105.Controls.Add(this.textBox105);
@@ -728,6 +947,46 @@
             this.groupBox105.TabIndex = 26;
             this.groupBox105.TabStop = false;
             this.groupBox105.Text = "Button ID 105";
+            // 
+            // numericUpDownDelay3_105
+            // 
+            this.numericUpDownDelay3_105.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_105.Location = new System.Drawing.Point(32, 69);
+            this.numericUpDownDelay3_105.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_105.Name = "numericUpDownDelay3_105";
+            this.numericUpDownDelay3_105.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_105.TabIndex = 71;
+            this.numericUpDownDelay3_105.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_105.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_105.Visible = false;
+            // 
+            // numericUpDownDelay2_105
+            // 
+            this.numericUpDownDelay2_105.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_105.Location = new System.Drawing.Point(32, 41);
+            this.numericUpDownDelay2_105.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_105.Name = "numericUpDownDelay2_105";
+            this.numericUpDownDelay2_105.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_105.TabIndex = 70;
+            this.numericUpDownDelay2_105.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_105.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_105.Visible = false;
             // 
             // numericUpDown105
             // 
@@ -751,6 +1010,26 @@
             0,
             0});
             this.numericUpDown105.Visible = false;
+            // 
+            // numericUpDownDelay1_105
+            // 
+            this.numericUpDownDelay1_105.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_105.Location = new System.Drawing.Point(32, 13);
+            this.numericUpDownDelay1_105.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_105.Name = "numericUpDownDelay1_105";
+            this.numericUpDownDelay1_105.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_105.TabIndex = 69;
+            this.numericUpDownDelay1_105.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_105.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_105.Visible = false;
             // 
             // buttonOptions105
             // 
@@ -875,8 +1154,11 @@
             // 
             // groupBox110
             // 
+            this.groupBox110.Controls.Add(this.numericUpDownDelay3_110);
             this.groupBox110.Controls.Add(this.numericUpDown110);
+            this.groupBox110.Controls.Add(this.numericUpDownDelay2_110);
             this.groupBox110.Controls.Add(this.textBoxParameter110);
+            this.groupBox110.Controls.Add(this.numericUpDownDelay1_110);
             this.groupBox110.Controls.Add(this.textBox110);
             this.groupBox110.Controls.Add(this.buttonOptions110);
             this.groupBox110.Controls.Add(this.checkBox110);
@@ -894,6 +1176,26 @@
             this.groupBox110.TabIndex = 27;
             this.groupBox110.TabStop = false;
             this.groupBox110.Text = "Button ID 110";
+            // 
+            // numericUpDownDelay3_110
+            // 
+            this.numericUpDownDelay3_110.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_110.Location = new System.Drawing.Point(32, 75);
+            this.numericUpDownDelay3_110.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_110.Name = "numericUpDownDelay3_110";
+            this.numericUpDownDelay3_110.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_110.TabIndex = 68;
+            this.numericUpDownDelay3_110.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_110.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_110.Visible = false;
             // 
             // numericUpDown110
             // 
@@ -918,6 +1220,26 @@
             0});
             this.numericUpDown110.Visible = false;
             // 
+            // numericUpDownDelay2_110
+            // 
+            this.numericUpDownDelay2_110.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_110.Location = new System.Drawing.Point(32, 47);
+            this.numericUpDownDelay2_110.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_110.Name = "numericUpDownDelay2_110";
+            this.numericUpDownDelay2_110.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_110.TabIndex = 67;
+            this.numericUpDownDelay2_110.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_110.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_110.Visible = false;
+            // 
             // textBoxParameter110
             // 
             this.textBoxParameter110.Location = new System.Drawing.Point(7, 66);
@@ -925,6 +1247,26 @@
             this.textBoxParameter110.Size = new System.Drawing.Size(126, 20);
             this.textBoxParameter110.TabIndex = 53;
             this.textBoxParameter110.Visible = false;
+            // 
+            // numericUpDownDelay1_110
+            // 
+            this.numericUpDownDelay1_110.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_110.Location = new System.Drawing.Point(32, 19);
+            this.numericUpDownDelay1_110.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_110.Name = "numericUpDownDelay1_110";
+            this.numericUpDownDelay1_110.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_110.TabIndex = 66;
+            this.numericUpDownDelay1_110.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_110.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_110.Visible = false;
             // 
             // textBox110
             // 
@@ -1042,8 +1384,11 @@
             // 
             // groupBox112
             // 
+            this.groupBox112.Controls.Add(this.numericUpDownDelay3_112);
             this.groupBox112.Controls.Add(this.numericUpDown112);
+            this.groupBox112.Controls.Add(this.numericUpDownDelay2_112);
             this.groupBox112.Controls.Add(this.buttonOptions112);
+            this.groupBox112.Controls.Add(this.numericUpDownDelay1_112);
             this.groupBox112.Controls.Add(this.textBoxParameter112);
             this.groupBox112.Controls.Add(this.textBox112);
             this.groupBox112.Controls.Add(this.checkBox112);
@@ -1061,6 +1406,26 @@
             this.groupBox112.TabIndex = 21;
             this.groupBox112.TabStop = false;
             this.groupBox112.Text = "Button ID 112";
+            // 
+            // numericUpDownDelay3_112
+            // 
+            this.numericUpDownDelay3_112.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_112.Location = new System.Drawing.Point(32, 75);
+            this.numericUpDownDelay3_112.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_112.Name = "numericUpDownDelay3_112";
+            this.numericUpDownDelay3_112.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_112.TabIndex = 74;
+            this.numericUpDownDelay3_112.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_112.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_112.Visible = false;
             // 
             // numericUpDown112
             // 
@@ -1085,6 +1450,26 @@
             0});
             this.numericUpDown112.Visible = false;
             // 
+            // numericUpDownDelay2_112
+            // 
+            this.numericUpDownDelay2_112.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_112.Location = new System.Drawing.Point(32, 47);
+            this.numericUpDownDelay2_112.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_112.Name = "numericUpDownDelay2_112";
+            this.numericUpDownDelay2_112.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_112.TabIndex = 73;
+            this.numericUpDownDelay2_112.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_112.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_112.Visible = false;
+            // 
             // buttonOptions112
             // 
             this.buttonOptions112.Location = new System.Drawing.Point(140, 142);
@@ -1094,6 +1479,26 @@
             this.buttonOptions112.Text = "Options";
             this.buttonOptions112.UseVisualStyleBackColor = true;
             this.buttonOptions112.Click += new System.EventHandler(this.buttonOptions112_Click);
+            // 
+            // numericUpDownDelay1_112
+            // 
+            this.numericUpDownDelay1_112.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_112.Location = new System.Drawing.Point(32, 19);
+            this.numericUpDownDelay1_112.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_112.Name = "numericUpDownDelay1_112";
+            this.numericUpDownDelay1_112.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_112.TabIndex = 72;
+            this.numericUpDownDelay1_112.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_112.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_112.Visible = false;
             // 
             // textBoxParameter112
             // 
@@ -1208,8 +1613,11 @@
             // 
             // groupBox113
             // 
+            this.groupBox113.Controls.Add(this.numericUpDownDelay3_113);
             this.groupBox113.Controls.Add(this.numericUpDown113);
+            this.groupBox113.Controls.Add(this.numericUpDownDelay2_113);
             this.groupBox113.Controls.Add(this.buttonOptions113);
+            this.groupBox113.Controls.Add(this.numericUpDownDelay1_113);
             this.groupBox113.Controls.Add(this.textBoxParameter113);
             this.groupBox113.Controls.Add(this.textBox113);
             this.groupBox113.Controls.Add(this.checkBox113);
@@ -1227,6 +1635,26 @@
             this.groupBox113.TabIndex = 28;
             this.groupBox113.TabStop = false;
             this.groupBox113.Text = "Button ID 113";
+            // 
+            // numericUpDownDelay3_113
+            // 
+            this.numericUpDownDelay3_113.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_113.Location = new System.Drawing.Point(32, 75);
+            this.numericUpDownDelay3_113.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_113.Name = "numericUpDownDelay3_113";
+            this.numericUpDownDelay3_113.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_113.TabIndex = 77;
+            this.numericUpDownDelay3_113.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_113.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_113.Visible = false;
             // 
             // numericUpDown113
             // 
@@ -1251,6 +1679,26 @@
             0});
             this.numericUpDown113.Visible = false;
             // 
+            // numericUpDownDelay2_113
+            // 
+            this.numericUpDownDelay2_113.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_113.Location = new System.Drawing.Point(32, 47);
+            this.numericUpDownDelay2_113.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_113.Name = "numericUpDownDelay2_113";
+            this.numericUpDownDelay2_113.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_113.TabIndex = 76;
+            this.numericUpDownDelay2_113.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_113.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_113.Visible = false;
+            // 
             // buttonOptions113
             // 
             this.buttonOptions113.Location = new System.Drawing.Point(140, 142);
@@ -1260,6 +1708,26 @@
             this.buttonOptions113.Text = "Options";
             this.buttonOptions113.UseVisualStyleBackColor = true;
             this.buttonOptions113.Click += new System.EventHandler(this.buttonOptions113_Click);
+            // 
+            // numericUpDownDelay1_113
+            // 
+            this.numericUpDownDelay1_113.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_113.Location = new System.Drawing.Point(32, 19);
+            this.numericUpDownDelay1_113.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_113.Name = "numericUpDownDelay1_113";
+            this.numericUpDownDelay1_113.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_113.TabIndex = 75;
+            this.numericUpDownDelay1_113.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_113.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_113.Visible = false;
             // 
             // textBoxParameter113
             // 
@@ -1374,8 +1842,11 @@
             // 
             // groupBox114
             // 
+            this.groupBox114.Controls.Add(this.numericUpDownDelay3_114);
             this.groupBox114.Controls.Add(this.numericUpDown114);
+            this.groupBox114.Controls.Add(this.numericUpDownDelay2_114);
             this.groupBox114.Controls.Add(this.buttonOptions114);
+            this.groupBox114.Controls.Add(this.numericUpDownDelay1_114);
             this.groupBox114.Controls.Add(this.textBoxParameter114);
             this.groupBox114.Controls.Add(this.textBox114);
             this.groupBox114.Controls.Add(this.checkBox114);
@@ -1394,6 +1865,26 @@
             this.groupBox114.TabIndex = 29;
             this.groupBox114.TabStop = false;
             this.groupBox114.Text = "Button ID 114";
+            // 
+            // numericUpDownDelay3_114
+            // 
+            this.numericUpDownDelay3_114.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_114.Location = new System.Drawing.Point(35, 75);
+            this.numericUpDownDelay3_114.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_114.Name = "numericUpDownDelay3_114";
+            this.numericUpDownDelay3_114.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_114.TabIndex = 80;
+            this.numericUpDownDelay3_114.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_114.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_114.Visible = false;
             // 
             // numericUpDown114
             // 
@@ -1418,6 +1909,26 @@
             0});
             this.numericUpDown114.Visible = false;
             // 
+            // numericUpDownDelay2_114
+            // 
+            this.numericUpDownDelay2_114.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_114.Location = new System.Drawing.Point(35, 47);
+            this.numericUpDownDelay2_114.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_114.Name = "numericUpDownDelay2_114";
+            this.numericUpDownDelay2_114.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_114.TabIndex = 79;
+            this.numericUpDownDelay2_114.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_114.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_114.Visible = false;
+            // 
             // buttonOptions114
             // 
             this.buttonOptions114.Location = new System.Drawing.Point(140, 142);
@@ -1427,6 +1938,26 @@
             this.buttonOptions114.Text = "Options";
             this.buttonOptions114.UseVisualStyleBackColor = true;
             this.buttonOptions114.Click += new System.EventHandler(this.buttonOptions114_Click);
+            // 
+            // numericUpDownDelay1_114
+            // 
+            this.numericUpDownDelay1_114.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_114.Location = new System.Drawing.Point(35, 19);
+            this.numericUpDownDelay1_114.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_114.Name = "numericUpDownDelay1_114";
+            this.numericUpDownDelay1_114.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_114.TabIndex = 78;
+            this.numericUpDownDelay1_114.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_114.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_114.Visible = false;
             // 
             // textBoxParameter114
             // 
@@ -1551,7 +2082,10 @@
             // groupBox106
             // 
             this.groupBox106.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox106.Controls.Add(this.numericUpDownDelay3_106);
+            this.groupBox106.Controls.Add(this.numericUpDownDelay2_106);
             this.groupBox106.Controls.Add(this.numericUpDown106);
+            this.groupBox106.Controls.Add(this.numericUpDownDelay1_106);
             this.groupBox106.Controls.Add(this.buttonOptions106);
             this.groupBox106.Controls.Add(this.textBoxParameter106);
             this.groupBox106.Controls.Add(this.textBox106);
@@ -1570,6 +2104,46 @@
             this.groupBox106.TabIndex = 27;
             this.groupBox106.TabStop = false;
             this.groupBox106.Text = "Button ID 106";
+            // 
+            // numericUpDownDelay3_106
+            // 
+            this.numericUpDownDelay3_106.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_106.Location = new System.Drawing.Point(32, 69);
+            this.numericUpDownDelay3_106.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_106.Name = "numericUpDownDelay3_106";
+            this.numericUpDownDelay3_106.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_106.TabIndex = 74;
+            this.numericUpDownDelay3_106.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_106.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_106.Visible = false;
+            // 
+            // numericUpDownDelay2_106
+            // 
+            this.numericUpDownDelay2_106.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_106.Location = new System.Drawing.Point(32, 41);
+            this.numericUpDownDelay2_106.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_106.Name = "numericUpDownDelay2_106";
+            this.numericUpDownDelay2_106.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_106.TabIndex = 73;
+            this.numericUpDownDelay2_106.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_106.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_106.Visible = false;
             // 
             // numericUpDown106
             // 
@@ -1593,6 +2167,26 @@
             0,
             0});
             this.numericUpDown106.Visible = false;
+            // 
+            // numericUpDownDelay1_106
+            // 
+            this.numericUpDownDelay1_106.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_106.Location = new System.Drawing.Point(32, 13);
+            this.numericUpDownDelay1_106.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_106.Name = "numericUpDownDelay1_106";
+            this.numericUpDownDelay1_106.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_106.TabIndex = 72;
+            this.numericUpDownDelay1_106.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_106.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_106.Visible = false;
             // 
             // buttonOptions106
             // 
@@ -1718,7 +2312,10 @@
             // groupBox107
             // 
             this.groupBox107.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox107.Controls.Add(this.numericUpDownDelay3_107);
+            this.groupBox107.Controls.Add(this.numericUpDownDelay2_107);
             this.groupBox107.Controls.Add(this.numericUpDown107);
+            this.groupBox107.Controls.Add(this.numericUpDownDelay1_107);
             this.groupBox107.Controls.Add(this.buttonOptions107);
             this.groupBox107.Controls.Add(this.textBoxParameter107);
             this.groupBox107.Controls.Add(this.textBox107);
@@ -1737,6 +2334,46 @@
             this.groupBox107.TabIndex = 27;
             this.groupBox107.TabStop = false;
             this.groupBox107.Text = "Button ID 107";
+            // 
+            // numericUpDownDelay3_107
+            // 
+            this.numericUpDownDelay3_107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_107.Location = new System.Drawing.Point(32, 69);
+            this.numericUpDownDelay3_107.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_107.Name = "numericUpDownDelay3_107";
+            this.numericUpDownDelay3_107.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_107.TabIndex = 77;
+            this.numericUpDownDelay3_107.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_107.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_107.Visible = false;
+            // 
+            // numericUpDownDelay2_107
+            // 
+            this.numericUpDownDelay2_107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_107.Location = new System.Drawing.Point(32, 41);
+            this.numericUpDownDelay2_107.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_107.Name = "numericUpDownDelay2_107";
+            this.numericUpDownDelay2_107.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_107.TabIndex = 76;
+            this.numericUpDownDelay2_107.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_107.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_107.Visible = false;
             // 
             // numericUpDown107
             // 
@@ -1760,6 +2397,26 @@
             0,
             0});
             this.numericUpDown107.Visible = false;
+            // 
+            // numericUpDownDelay1_107
+            // 
+            this.numericUpDownDelay1_107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_107.Location = new System.Drawing.Point(32, 13);
+            this.numericUpDownDelay1_107.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_107.Name = "numericUpDownDelay1_107";
+            this.numericUpDownDelay1_107.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_107.TabIndex = 75;
+            this.numericUpDownDelay1_107.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_107.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_107.Visible = false;
             // 
             // buttonOptions107
             // 
@@ -1885,7 +2542,10 @@
             // groupBox108
             // 
             this.groupBox108.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox108.Controls.Add(this.numericUpDownDelay3_108);
+            this.groupBox108.Controls.Add(this.numericUpDownDelay2_108);
             this.groupBox108.Controls.Add(this.numericUpDown108);
+            this.groupBox108.Controls.Add(this.numericUpDownDelay1_108);
             this.groupBox108.Controls.Add(this.buttonOptions108);
             this.groupBox108.Controls.Add(this.textBoxParameter108);
             this.groupBox108.Controls.Add(this.textBox108);
@@ -1904,6 +2564,46 @@
             this.groupBox108.TabIndex = 27;
             this.groupBox108.TabStop = false;
             this.groupBox108.Text = "Button ID 108";
+            // 
+            // numericUpDownDelay3_108
+            // 
+            this.numericUpDownDelay3_108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_108.Location = new System.Drawing.Point(32, 69);
+            this.numericUpDownDelay3_108.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_108.Name = "numericUpDownDelay3_108";
+            this.numericUpDownDelay3_108.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_108.TabIndex = 80;
+            this.numericUpDownDelay3_108.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_108.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_108.Visible = false;
+            // 
+            // numericUpDownDelay2_108
+            // 
+            this.numericUpDownDelay2_108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_108.Location = new System.Drawing.Point(32, 41);
+            this.numericUpDownDelay2_108.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_108.Name = "numericUpDownDelay2_108";
+            this.numericUpDownDelay2_108.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_108.TabIndex = 79;
+            this.numericUpDownDelay2_108.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_108.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_108.Visible = false;
             // 
             // numericUpDown108
             // 
@@ -1927,6 +2627,26 @@
             0,
             0});
             this.numericUpDown108.Visible = false;
+            // 
+            // numericUpDownDelay1_108
+            // 
+            this.numericUpDownDelay1_108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_108.Location = new System.Drawing.Point(32, 13);
+            this.numericUpDownDelay1_108.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_108.Name = "numericUpDownDelay1_108";
+            this.numericUpDownDelay1_108.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_108.TabIndex = 78;
+            this.numericUpDownDelay1_108.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_108.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_108.Visible = false;
             // 
             // buttonOptions108
             // 
@@ -2052,7 +2772,10 @@
             // groupBox109
             // 
             this.groupBox109.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox109.Controls.Add(this.numericUpDownDelay3_109);
+            this.groupBox109.Controls.Add(this.numericUpDownDelay2_109);
             this.groupBox109.Controls.Add(this.numericUpDown109);
+            this.groupBox109.Controls.Add(this.numericUpDownDelay1_109);
             this.groupBox109.Controls.Add(this.buttonOptions109);
             this.groupBox109.Controls.Add(this.textBoxParameter109);
             this.groupBox109.Controls.Add(this.textBox109);
@@ -2071,6 +2794,46 @@
             this.groupBox109.TabIndex = 27;
             this.groupBox109.TabStop = false;
             this.groupBox109.Text = "Button ID 109";
+            // 
+            // numericUpDownDelay3_109
+            // 
+            this.numericUpDownDelay3_109.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_109.Location = new System.Drawing.Point(32, 69);
+            this.numericUpDownDelay3_109.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_109.Name = "numericUpDownDelay3_109";
+            this.numericUpDownDelay3_109.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_109.TabIndex = 83;
+            this.numericUpDownDelay3_109.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_109.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_109.Visible = false;
+            // 
+            // numericUpDownDelay2_109
+            // 
+            this.numericUpDownDelay2_109.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_109.Location = new System.Drawing.Point(32, 41);
+            this.numericUpDownDelay2_109.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_109.Name = "numericUpDownDelay2_109";
+            this.numericUpDownDelay2_109.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_109.TabIndex = 82;
+            this.numericUpDownDelay2_109.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_109.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_109.Visible = false;
             // 
             // numericUpDown109
             // 
@@ -2094,6 +2857,26 @@
             0,
             0});
             this.numericUpDown109.Visible = false;
+            // 
+            // numericUpDownDelay1_109
+            // 
+            this.numericUpDownDelay1_109.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_109.Location = new System.Drawing.Point(32, 13);
+            this.numericUpDownDelay1_109.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_109.Name = "numericUpDownDelay1_109";
+            this.numericUpDownDelay1_109.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_109.TabIndex = 81;
+            this.numericUpDownDelay1_109.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_109.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_109.Visible = false;
             // 
             // buttonOptions109
             // 
@@ -2219,7 +3002,10 @@
             // groupBox101
             // 
             this.groupBox101.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox101.Controls.Add(this.numericUpDownDelay3_101);
+            this.groupBox101.Controls.Add(this.numericUpDownDelay2_101);
             this.groupBox101.Controls.Add(this.numericUpDown101);
+            this.groupBox101.Controls.Add(this.numericUpDownDelay1_101);
             this.groupBox101.Controls.Add(this.buttonOptions101);
             this.groupBox101.Controls.Add(this.checkBox101);
             this.groupBox101.Controls.Add(this.button14);
@@ -2241,6 +3027,46 @@
             this.groupBox101.TabIndex = 30;
             this.groupBox101.TabStop = false;
             this.groupBox101.Text = "Button ID 101";
+            // 
+            // numericUpDownDelay3_101
+            // 
+            this.numericUpDownDelay3_101.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_101.Location = new System.Drawing.Point(32, 103);
+            this.numericUpDownDelay3_101.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_101.Name = "numericUpDownDelay3_101";
+            this.numericUpDownDelay3_101.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_101.TabIndex = 95;
+            this.numericUpDownDelay3_101.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_101.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_101.Visible = false;
+            // 
+            // numericUpDownDelay2_101
+            // 
+            this.numericUpDownDelay2_101.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_101.Location = new System.Drawing.Point(32, 75);
+            this.numericUpDownDelay2_101.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_101.Name = "numericUpDownDelay2_101";
+            this.numericUpDownDelay2_101.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_101.TabIndex = 94;
+            this.numericUpDownDelay2_101.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_101.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_101.Visible = false;
             // 
             // numericUpDown101
             // 
@@ -2264,6 +3090,26 @@
             0,
             0});
             this.numericUpDown101.Visible = false;
+            // 
+            // numericUpDownDelay1_101
+            // 
+            this.numericUpDownDelay1_101.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_101.Location = new System.Drawing.Point(32, 47);
+            this.numericUpDownDelay1_101.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_101.Name = "numericUpDownDelay1_101";
+            this.numericUpDownDelay1_101.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_101.TabIndex = 93;
+            this.numericUpDownDelay1_101.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_101.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_101.Visible = false;
             // 
             // buttonOptions101
             // 
@@ -2416,7 +3262,10 @@
             // groupBox102
             // 
             this.groupBox102.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox102.Controls.Add(this.numericUpDownDelay3_102);
+            this.groupBox102.Controls.Add(this.numericUpDownDelay2_102);
             this.groupBox102.Controls.Add(this.numericUpDown102);
+            this.groupBox102.Controls.Add(this.numericUpDownDelay1_102);
             this.groupBox102.Controls.Add(this.buttonOptions102);
             this.groupBox102.Controls.Add(this.checkBox102);
             this.groupBox102.Controls.Add(this.button18);
@@ -2438,6 +3287,46 @@
             this.groupBox102.TabIndex = 31;
             this.groupBox102.TabStop = false;
             this.groupBox102.Text = "Button ID 102";
+            // 
+            // numericUpDownDelay3_102
+            // 
+            this.numericUpDownDelay3_102.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_102.Location = new System.Drawing.Point(32, 103);
+            this.numericUpDownDelay3_102.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_102.Name = "numericUpDownDelay3_102";
+            this.numericUpDownDelay3_102.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_102.TabIndex = 92;
+            this.numericUpDownDelay3_102.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_102.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_102.Visible = false;
+            // 
+            // numericUpDownDelay2_102
+            // 
+            this.numericUpDownDelay2_102.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_102.Location = new System.Drawing.Point(32, 75);
+            this.numericUpDownDelay2_102.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_102.Name = "numericUpDownDelay2_102";
+            this.numericUpDownDelay2_102.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_102.TabIndex = 91;
+            this.numericUpDownDelay2_102.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_102.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_102.Visible = false;
             // 
             // numericUpDown102
             // 
@@ -2461,6 +3350,26 @@
             0,
             0});
             this.numericUpDown102.Visible = false;
+            // 
+            // numericUpDownDelay1_102
+            // 
+            this.numericUpDownDelay1_102.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_102.Location = new System.Drawing.Point(32, 47);
+            this.numericUpDownDelay1_102.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_102.Name = "numericUpDownDelay1_102";
+            this.numericUpDownDelay1_102.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_102.TabIndex = 90;
+            this.numericUpDownDelay1_102.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_102.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_102.Visible = false;
             // 
             // buttonOptions102
             // 
@@ -2613,7 +3522,10 @@
             // groupBox103
             // 
             this.groupBox103.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox103.Controls.Add(this.numericUpDownDelay3_103);
+            this.groupBox103.Controls.Add(this.numericUpDownDelay2_103);
             this.groupBox103.Controls.Add(this.numericUpDown103);
+            this.groupBox103.Controls.Add(this.numericUpDownDelay1_103);
             this.groupBox103.Controls.Add(this.buttonOptions103);
             this.groupBox103.Controls.Add(this.checkBox103);
             this.groupBox103.Controls.Add(this.button22);
@@ -2635,6 +3547,46 @@
             this.groupBox103.TabIndex = 32;
             this.groupBox103.TabStop = false;
             this.groupBox103.Text = "Button ID 103";
+            // 
+            // numericUpDownDelay3_103
+            // 
+            this.numericUpDownDelay3_103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_103.Location = new System.Drawing.Point(32, 103);
+            this.numericUpDownDelay3_103.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_103.Name = "numericUpDownDelay3_103";
+            this.numericUpDownDelay3_103.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_103.TabIndex = 89;
+            this.numericUpDownDelay3_103.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_103.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_103.Visible = false;
+            // 
+            // numericUpDownDelay2_103
+            // 
+            this.numericUpDownDelay2_103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_103.Location = new System.Drawing.Point(32, 75);
+            this.numericUpDownDelay2_103.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_103.Name = "numericUpDownDelay2_103";
+            this.numericUpDownDelay2_103.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_103.TabIndex = 88;
+            this.numericUpDownDelay2_103.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_103.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_103.Visible = false;
             // 
             // numericUpDown103
             // 
@@ -2658,6 +3610,26 @@
             0,
             0});
             this.numericUpDown103.Visible = false;
+            // 
+            // numericUpDownDelay1_103
+            // 
+            this.numericUpDownDelay1_103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_103.Location = new System.Drawing.Point(32, 47);
+            this.numericUpDownDelay1_103.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_103.Name = "numericUpDownDelay1_103";
+            this.numericUpDownDelay1_103.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_103.TabIndex = 87;
+            this.numericUpDownDelay1_103.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_103.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_103.Visible = false;
             // 
             // buttonOptions103
             // 
@@ -2810,7 +3782,10 @@
             // groupBox104
             // 
             this.groupBox104.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox104.Controls.Add(this.numericUpDownDelay3_104);
+            this.groupBox104.Controls.Add(this.numericUpDownDelay2_104);
             this.groupBox104.Controls.Add(this.numericUpDown104);
+            this.groupBox104.Controls.Add(this.numericUpDownDelay1_104);
             this.groupBox104.Controls.Add(this.buttonOptions104);
             this.groupBox104.Controls.Add(this.checkBox104);
             this.groupBox104.Controls.Add(this.button26);
@@ -2832,6 +3807,46 @@
             this.groupBox104.TabIndex = 33;
             this.groupBox104.TabStop = false;
             this.groupBox104.Text = "Button ID 104";
+            // 
+            // numericUpDownDelay3_104
+            // 
+            this.numericUpDownDelay3_104.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay3_104.Location = new System.Drawing.Point(32, 103);
+            this.numericUpDownDelay3_104.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_104.Name = "numericUpDownDelay3_104";
+            this.numericUpDownDelay3_104.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay3_104.TabIndex = 86;
+            this.numericUpDownDelay3_104.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay3_104.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay3_104.Visible = false;
+            // 
+            // numericUpDownDelay2_104
+            // 
+            this.numericUpDownDelay2_104.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay2_104.Location = new System.Drawing.Point(32, 75);
+            this.numericUpDownDelay2_104.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_104.Name = "numericUpDownDelay2_104";
+            this.numericUpDownDelay2_104.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay2_104.TabIndex = 85;
+            this.numericUpDownDelay2_104.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay2_104.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay2_104.Visible = false;
             // 
             // numericUpDown104
             // 
@@ -2855,6 +3870,26 @@
             0,
             0});
             this.numericUpDown104.Visible = false;
+            // 
+            // numericUpDownDelay1_104
+            // 
+            this.numericUpDownDelay1_104.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownDelay1_104.Location = new System.Drawing.Point(32, 47);
+            this.numericUpDownDelay1_104.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_104.Name = "numericUpDownDelay1_104";
+            this.numericUpDownDelay1_104.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDownDelay1_104.TabIndex = 84;
+            this.numericUpDownDelay1_104.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownDelay1_104.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownDelay1_104.Visible = false;
             // 
             // buttonOptions104
             // 
@@ -3152,61 +4187,106 @@
             this.statusStrip1.PerformLayout();
             this.groupBox111.ResumeLayout(false);
             this.groupBox111.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_111)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown111)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_111)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_111)).EndInit();
             this.groupBox100.ResumeLayout(false);
             this.groupBox100.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_100)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_100)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_100)).EndInit();
             this.groupBox105.ResumeLayout(false);
             this.groupBox105.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_105)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_105)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown105)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_105)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox105)).EndInit();
             this.groupBox110.ResumeLayout(false);
             this.groupBox110.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_110)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown110)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_110)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_110)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox110)).EndInit();
             this.groupBox112.ResumeLayout(false);
             this.groupBox112.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_112)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown112)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_112)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_112)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox112)).EndInit();
             this.groupBox113.ResumeLayout(false);
             this.groupBox113.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_113)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown113)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_113)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_113)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox113)).EndInit();
             this.groupBox114.ResumeLayout(false);
             this.groupBox114.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_114)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_114)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_114)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox114)).EndInit();
             this.groupBox106.ResumeLayout(false);
             this.groupBox106.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_106)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_106)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown106)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_106)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox106)).EndInit();
             this.groupBox107.ResumeLayout(false);
             this.groupBox107.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_107)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_107)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown107)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_107)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox107)).EndInit();
             this.groupBox108.ResumeLayout(false);
             this.groupBox108.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_108)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_108)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown108)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_108)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox108)).EndInit();
             this.groupBox109.ResumeLayout(false);
             this.groupBox109.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_109)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_109)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown109)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_109)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox109)).EndInit();
             this.groupBox101.ResumeLayout(false);
             this.groupBox101.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_101)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_101)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown101)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_101)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox101)).EndInit();
             this.groupBox102.ResumeLayout(false);
             this.groupBox102.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_102)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_102)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown102)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_102)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox102)).EndInit();
             this.groupBox103.ResumeLayout(false);
             this.groupBox103.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_103)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_103)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown103)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_103)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox103)).EndInit();
             this.groupBox104.ResumeLayout(false);
             this.groupBox104.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay3_104)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay2_104)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown104)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDelay1_104)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox104)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColor)).EndInit();
             this.ResumeLayout(false);
@@ -3456,6 +4536,51 @@
         private System.Windows.Forms.NumericUpDown numericUpDown104;
         private System.Windows.Forms.CheckBox checkBox104;
         private System.Windows.Forms.ProgressBar progressBarBuild;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_111;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_111;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_111;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_105;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_105;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_105;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_110;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_110;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_110;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_112;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_112;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_112;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_113;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_113;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_113;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_114;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_114;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_114;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_107;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_107;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_107;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_106;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_106;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_106;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_108;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_108;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_108;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_109;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_109;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_109;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_104;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_104;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_104;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_103;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_103;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_103;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_102;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_102;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_102;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_101;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_101;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_101;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay3_100;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay2_100;
+        private System.Windows.Forms.NumericUpDown numericUpDownDelay1_100;
     }
 }
 
