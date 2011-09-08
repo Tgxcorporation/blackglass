@@ -77,7 +77,7 @@
 				<width>570</width>
 				<height>807</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#thumb</texture>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -89,7 +89,7 @@
 				<width>655</width>
 				<height>834</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -244,6 +244,52 @@
 				<font>font18</font>
 				<seperator>: : :</seperator>
 			</control>
+			<control>
+				<description>image title:</description>
+				<type>label</type>
+				<id>30</id>
+				<posX>45</posX>
+				<posY>964</posY>
+				<label>734</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>spin control</description>
+				<type>spincontrol</type>
+				<id>10</id>
+				<posX>48</posX>
+				<posY>1006</posY>
+				<onup>66622</onup>
+				<ondown>2</ondown>
+				<onright>11</onright>
+				<onleft>11</onleft>
+			</control>
+			<control>
+				<description>disc:</description>
+				<type>label</type>
+				<id>100</id>
+				<posX>345</posX>
+				<posY>964</posY>
+				<label>427</label>
+				<font>font12</font>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>disc select</description>
+				<type>spincontrol</type>
+				<id>11</id>
+				<posX>348</posX>
+				<posY>1006</posY>
+				<onup>66622</onup>
+				<ondown>2</ondown>
+				<onright>10</onright>
+				<onleft>10</onleft>
+				<textcolor>FFFFFFFF</textcolor>
+				<buddycontrolid>100</buddycontrolid>
+				<showrange>no</showrange>
+			</control>
 		</control>
 		<control>
 			<type>image</type>
@@ -254,7 +300,7 @@
 			<height>1071</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -273,7 +319,7 @@
 			<width>637</width>
 			<height>1080</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(97259)|control.hasfocus(97260)</visible>
+			<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(97259)|control.hasfocus(97260)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -414,56 +460,22 @@
 					<hyperlinkParameter>site:iTunes Movie Trailers|search:#title|return:Locked</hyperlinkParameter>
 					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
 					<onup>66621</onup>
+					<ondown>66623</ondown>
+				</control>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66623</id>
+					<type>button</type>
+					<label>Youtube</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:YouTube|search:#title|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>66622</onup>
 					<ondown>10</ondown>
 				</control>
 			</control>
 
-			<control>
-				<description>image title:</description>
-				<type>label</type>
-				<id>30</id>
-				<posX>45</posX>
-				<posY>964</posY>
-				<label>734</label>
-				<font>font12</font>
-				<align>left</align>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>spin control</description>
-				<type>spincontrol</type>
-				<id>10</id>
-				<posX>48</posX>
-				<posY>1006</posY>
-				<onup>66622</onup>
-				<ondown>2</ondown>
-				<onright>11</onright>
-				<onleft>11</onleft>
-			</control>
-			<control>
-				<description>disc:</description>
-				<type>label</type>
-				<id>100</id>
-				<posX>345</posX>
-				<posY>964</posY>
-				<label>427</label>
-				<font>font12</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>disc select</description>
-				<type>spincontrol</type>
-				<id>11</id>
-				<posX>348</posX>
-				<posY>1006</posY>
-				<onup>66622</onup>
-				<ondown>2</ondown>
-				<onright>10</onright>
-				<onleft>10</onleft>
-				<textcolor>FFFFFFFF</textcolor>
-				<buddycontrolid>100</buddycontrolid>
-				<showrange>no</showrange>
-			</control>
+			
 		</control>
 	</controls>
 </window>
