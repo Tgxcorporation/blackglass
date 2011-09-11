@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-	<id>510</id>
+	<id>30886</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<allowoverlay>player.hasmedia</allowoverlay>
 	<define>#header.label:Global Search</define>
+	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_search music.png</define>
 	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
 	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
@@ -30,7 +31,7 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>control.hasfocus(50)</visible>
+				<visible>![control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)|control.hasfocus(15)]</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -42,47 +43,64 @@
 				<height>1149</height>
 				<texture>bg_facade.png</texture>
 			</control>
-			<!-- 	<control>
-			<type>label</type>
-			<id>31</id>
-			<posX>908</posX>
-			<posY>312</posY>
-			<label>Rating</label>
-			<font>font12</font>
-		</control> -->
 			<control>
 				<type>image</type>
-				<description>album art image</description>
+				<posX>735</posX>
+				<posY>145</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>image</type>
+				<description>artist art image</description>
 				<id>7</id>
-				<posX>841</posX>
-				<posY>175</posY>
+				<posX>106</posX>
+				<posY>123</posY>
 				<width>468</width>
 				<height>468</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
-				<texture flipY="true" diffuse="Thumb_Mask.png">-</texture>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#GlobalSearch.Music.Details.CoverArt</texture>
+				<visible>![control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)|control.hasfocus(15)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<description>Cd Case</description>
-				<id>0</id>
 				<type>image</type>
-				<posX>780</posX>
-				<posY>162</posY>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>109</posY>
 				<width>540</width>
 				<height>490</height>
 				<colordiffuse>ffffffff</colordiffuse>
 				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+				<visible>![control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)|control.hasfocus(15)]</visible>
+				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Title label</description>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>780</posX>
+				<posY>142</posY>
+				<label>#GlobalSearch.Music.Details.Artist - #GlobalSearch.Music.Details.Title</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>1125</width>
 			</control>
 			<control>
 				<description>Rating Value</description>
 				<type>imagelist</type>
 				<id>1337</id>
-				<posX>1362</posX>
-				<posY>180</posY>
+				<posX>780</posX>
+				<posY>247</posY>
 				<width>172</width>
 				<height>19</height>
-				<textureWidth>36</textureWidth>
-				<textureHeight>36</textureHeight>
+				<textureWidth>40</textureWidth>
+				<textureHeight>40</textureHeight>
 				<subitems>
 					<subitem>star_nofocus.png</subitem>
 					<subitem>star_focus.png</subitem>
@@ -90,109 +108,134 @@
 				<orientation>horizontal</orientation>
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
-				<percentage>#Play.Current.Rating</percentage>
+				<percentage>#GlobalSearch.Music.Details.Rating</percentage>
 			</control>
 			<control>
 				<type>label</type>
 				<id>25</id>
-				<posX>1362</posX>
-				<posY>225</posY>
-				<label>Artist</label>
+				<posX>780</posX>
+				<posY>330</posY>
+				<label>#(string.rtrim(L(171),':'))</label>
 				<textcolor>90ffffff</textcolor>
 				<font>font12</font>
 			</control>
 			<control>
 				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1362</posX>
-				<posY>255</posY>
-				<label>#artist</label>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>360</posY>
+				<label>#GlobalSearch.Music.Details.Artist</label>
 				<textcolor>ffffffff</textcolor>
-				<font>font12</font>
+				<font>font14</font>
+				<width>510</width>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
 				<type>label</type>
 				<id>26</id>
-				<posX>1362</posX>
-				<posY>300</posY>
-				<label>Album</label>
+				<posX>780</posX>
+				<posY>435</posY>
+				<label>#(string.rtrim(L(170),':'))</label>
 				<textcolor>90ffffff</textcolor>
 				<font>font12</font>
 			</control>
 			<control>
 				<type>fadelabel</type>
 				<id>2</id>
-				<posX>1362</posX>
-				<posY>330</posY>
-				<label>#album</label>
+				<posX>780</posX>
+				<posY>465</posY>
+				<label>#GlobalSearch.Music.Details.Album</label>
 				<textcolor>ffffffff</textcolor>
-				<font>font12</font>
+				<font>font14</font>
+				<width>510</width>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
 				<type>label</type>
 				<id>27</id>
-				<posX>1362</posX>
-				<posY>375</posY>
-				<label>Songname</label>
+				<posX>780</posX>
+				<posY>540</posY>
+				<label>179</label>
 				<textcolor>90ffffff</textcolor>
 				<font>font12</font>
 			</control>
 			<control>
 				<type>fadelabel</type>
 				<id>3</id>
-				<posX>1362</posX>
-				<posY>405</posY>
-				<label>#songname</label>
+				<posX>780</posX>
+				<posY>570</posY>
+				<label>#GlobalSearch.Music.Details.Title</label>
 				<textcolor>ffffffff</textcolor>
+				<font>font14</font>
+				<width>510</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Label Duration</description>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>645</posY>
+				<label>180</label>
+				<textcolor>90ffffff</textcolor>
 				<font>font12</font>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>9</id>
+				<posX>780</posX>
+				<posY>675</posY>
+				<label>#GlobalSearch.Music.Details.Duration</label>
+				<font>font14</font>
+				<width>510</width>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
 				<type>label</type>
 				<id>28</id>
-				<posX>1362</posX>
-				<posY>450</posY>
-				<label>Genre</label>
+				<posX>780</posX>
+				<posY>750</posY>
+				<label>#(string.rtrim(L(174),':'))</label>
 				<textcolor>90ffffff</textcolor>
 				<font>font12</font>
 			</control>
 			<control>
 				<type>fadelabel</type>
 				<id>4</id>
-				<posX>1362</posX>
-				<posY>480</posY>
-				<label>#genre</label>
+				<posX>780</posX>
+				<posY>780</posY>
+				<label>#GlobalSearch.Music.Details.Genre</label>
 				<textcolor>ffffffff</textcolor>
-				<font>font12</font>
+				<font>font14</font>
+				<width>510</width>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
 				<type>label</type>
 				<id>29</id>
-				<posX>1362</posX>
-				<posY>525</posY>
-				<label>Year</label>
+				<posX>780</posX>
+				<posY>855</posY>
+				<label>#(string.rtrim(L(172),':'))</label>
 				<textcolor>90ffffff</textcolor>
 				<font>font12</font>
 			</control>
 			<control>
 				<type>fadelabel</type>
 				<id>5</id>
-				<posX>1362</posX>
-				<posY>555</posY>
-				<label>#year</label>
+				<posX>780</posX>
+				<posY>885</posY>
+				<label>#GlobalSearch.Music.Details.Year</label>
 				<textcolor>ffffffff</textcolor>
-				<font>font12</font>
+				<font>font14</font>
+				<width>510</width>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
 				<type>label</type>
 				<id>30</id>
 				<posX>1362</posX>
-				<posY>600</posY>
-				<label>Filename</label>
+				<posY>330</posY>
+				<label>863</label>
 				<textcolor>90ffffff</textcolor>
 				<font>font12</font>
 			</control>
@@ -200,54 +243,18 @@
 				<type>fadelabel</type>
 				<id>6</id>
 				<posX>1362</posX>
-				<posY>630</posY>
-				<label>#filename</label>
+				<posY>360</posY>
+				<label>#GlobalSearch.Music.Details.FileName</label>
 				<textcolor>ffffffff</textcolor>
-				<font>font12</font>
+				<font>font14</font>
 				<width>510</width>
 				<wrapString> : : : </wrapString>
-			</control>
-			<control>
-				<id>0</id>
-				<type>label</type>
-				<posX>1362</posX>
-				<posY>675</posY>
-				<label>Duration</label>
-				<textcolor>90ffffff</textcolor>
-				<font>font12</font>
-			</control>
-			<control>
-				<type>fadelabel</type>
-				<id>9</id>
-				<posX>1362</posX>
-				<posY>705</posY>
-				<label>#duration</label>
-				<textcolor>ffffffff</textcolor>
-				<font>font12</font>
-			</control>
-			<control>
-				<type>label</type>
-				<id>35</id>
-				<posX>1362</posX>
-				<posY>750</posY>
-				<label>Playcount</label>
-				<textcolor>90ffffff</textcolor>
-				<font>font12</font>
-			</control>
-			<control>
-				<type>fadelabel</type>
-				<id>8</id>
-				<posX>1362</posX>
-				<posY>780</posY>
-				<label>#tp</label>
-				<textcolor>ffffffff</textcolor>
-				<font>font12</font>
 			</control>
 			<control>
 				<type>label</type>
 				<id>37</id>
 				<posX>1362</posX>
-				<posY>825</posY>
+				<posY>435</posY>
 				<label>Last played</label>
 				<textcolor>90ffffff</textcolor>
 				<font>font12</font>
@@ -256,10 +263,74 @@
 				<type>fadelabel</type>
 				<id>10</id>
 				<posX>1362</posX>
-				<posY>855</posY>
-				<label>#last_played</label>
+				<posY>465</posY>
+				<label>#GlobalSearch.Music.Details.DateTimePlayed</label>
 				<textcolor>ffffffff</textcolor>
+				<width>510</width>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>label</type>
+				<id>35</id>
+				<posX>1362</posX>
+				<posY>540</posY>
+				<label>Playcount</label>
+				<textcolor>90ffffff</textcolor>
 				<font>font12</font>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>8</id>
+				<posX>1362</posX>
+				<posY>570</posY>
+				<label>#GlobalSearch.Music.Details.TimesPlayed</label>
+				<textcolor>ffffffff</textcolor>
+				<width>510</width>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Audio Codec</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1362</posX>
+				<posY>645</posY>
+				<label>6001</label>
+				<textcolor>90ffffff</textcolor>
+				<font>font12</font>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1362</posX>
+				<posY>675</posY>
+				<label>#GlobalSearch.Music.Details.Codec</label>
+				<textcolor>ffffffff</textcolor>
+				<width>510</width>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Bit-Rate</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1362</posX>
+				<posY>750</posY>
+				<label>990</label>
+				<textcolor>90ffffff</textcolor>
+				<font>font12</font>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1362</posX>
+				<posY>780</posY>
+				<label>#GlobalSearch.Music.Details.BitRatebps (#GlobalSearch.Music.Details.BitRateMode), #GlobalSearch.Music.Details.SampleRateFormatted</label>
+				<textcolor>ffffffff</textcolor>
+				<width>510</width>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
 			</control>
 		</control>
 		<control>
