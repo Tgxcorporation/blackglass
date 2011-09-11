@@ -34,7 +34,7 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 		</control> 
-		<control>
+<!-- 		<control>
 			<type>label</type>
 			<description>Number of Files Label</description>
 			<id>0</id>
@@ -44,7 +44,7 @@
 			<font>font12</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-		</control>
+		</control> -->
 		<import>common.facade.music.xml</import>
 		
 		<control>
@@ -110,7 +110,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(7)|control.hasfocus(6)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(997)|control.hasfocus(998)|control.hasfocus(999)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(7)|control.hasfocus(6)|control.hasfocus(10)|control.hasfocus(3)|control.hasfocus(999)|control.hasfocus(9)|control.hasfocus(8)|control.hasfocus(997)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -129,7 +129,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(2)|control.hasfocus(7)|control.hasfocus(6)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(997)|control.hasfocus(998)|control.hasfocus(999)]</visible>
+			<visible>[control.hasfocus(2)|control.hasfocus(7)|control.hasfocus(6)|control.hasfocus(10)|control.hasfocus(3)|control.hasfocus(999)|control.hasfocus(9)|control.hasfocus(8)|control.hasfocus(997)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -152,7 +152,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#header.label</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -172,51 +173,50 @@
 				<posX>0</posX>
 				<posY>100</posY>
 				<control>
-					<description>Search phrase to use</description>
 					<type>button</type>
+					<description>Search Phrase Button</description>
 					<id>2</id>
-					<label>Search phrase</label>
+					<label>#GlobalSearch.Translation.SearchPhrase.Label</label>
+					<onright>50</onright>
 					<onup>17</onup>
 					<ondown>7</ondown>
-				</control>	  
+				</control>
 				<control>
-					<description>Last searches</description>
 					<type>button</type>
+					<description>Search History</description>
 					<id>7</id>
-					<label>Search history</label>
+					<label>#GlobalSearch.Translation.SearchHistory.Label</label>
+					<onright>50</onright>
 					<onup>2</onup>
 					<ondown>6</ondown>
 				</control>
 				<control>
-					<description>Search fields (Song, Album, Artist, etc.)</description>
 					<type>button</type>
+					<description>Search Fields</description>
 					<id>6</id>
-					<label>Search fields</label>
-					<ondown>3</ondown>
+					<label>#GlobalSearch.Translation.SearchFields.Label</label>
+					<onright>50</onright>
 					<onup>7</onup>
+					<ondown>10</ondown>
 				</control>
 				<control>
-					<description>Case sensitivity</description>
-					<type>togglebutton</type>
-					<id>3</id>
-					<label>Case sensitive</label>
-					<ondown>5</ondown>
+					<type>button</type>
+					<description>Search Type</description>
+					<id>10</id>
+					<label>#GlobalSearch.Translation.SearchType.Label</label>
+					<onright>50</onright>
 					<onup>6</onup>
+					<ondown>3</ondown>
 				</control>
 				<control>
-					<description>Search type (start, contain, end)</description>
-					<type>selectbutton</type>
-					<id>5</id>
-					<label>Search type</label>
+					<type>togglebutton</type>
+					<description>Case Sensitivity</description>
+					<id>3</id>
+					<label>#GlobalSearch.Translation.CaseSensitive.Label</label>
+					<onleft>3</onleft>
+					<onright>50</onright>
+					<onup>10</onup>
 					<ondown>999</ondown>
-					<onup>3</onup>
-					<subitems>
-						<subitem>Equals</subitem>
-						<subitem>Starts with</subitem>
-						<subitem>Contains</subitem>
-						<subitem>Ends with</subitem>
-					</subitems>
-					<selected>2</selected>
 				</control>
 				<control>
 					<description>Current Playlist</description>
@@ -224,7 +224,7 @@
 					<id>999</id>
 					<label>4555</label>
 					<hyperlink>500</hyperlink>
-					<onup>5</onup>
+					<onup>3</onup>
 					<ondown>9</ondown>
 				</control>
 				<control>
