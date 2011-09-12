@@ -114,6 +114,233 @@
 			<animation effect="fade" time="100">windowopen</animation>
 			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
 		</control>
+		<control>
+			<description>progressbar background</description>
+			<id>999231</id>
+			<type>image</type>
+			<posX>270</posX>
+			<posY>980</posY>
+			<height>41</height>
+			<width>1379</width>
+			<texture>bg_osd_small_progress_background.png</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>TV Progress Bar</description>
+			<type>tvprogress</type>
+			<id>999954</id>
+			<posX>270</posX>
+			<posY>980</posY>
+			<height>42</height>
+			<width>1345</width>
+			<toptexture>-</toptexture>
+			<TextureOffsetY>27</TextureOffsetY>
+			<bottomtexture>-</bottomtexture>
+			<texturetick>-</texturetick>
+			<lefttexture>osd_small_progress_left_blue.png</lefttexture>
+			<midtexture>-</midtexture>
+			<righttexture>-</righttexture>
+			<logotexture>-</logotexture>
+			<fillbackgroundtexture>-</fillbackgroundtexture>
+			<fillbgxoff>-3</fillbgxoff>
+			<fillbgyoff>0</fillbgyoff>
+			<filltexture1>osd_small_progress_mid_blue.png</filltexture1>
+			<filltexture2>osd_small_progress_mid_red.png</filltexture2>
+			<filltexture3>osd_small_progress_mid_green.png</filltexture3>
+			<fillheight>42</fillheight>
+			<label>#percentage</label>
+			<label1>#percentage</label1>
+			<label2>#TV.Record.percent3</label2>
+			<font>font13</font>
+			<textcolor>FF000000</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<description>Time icon</description>
+			<id>99922</id>
+			<posX>981</posX>
+			<posY>985</posY>
+			<height>33</height>
+			<width>33</width>
+			<texture>time.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+			<visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Time</description>
+			<id>99921</id>
+			<posX>978</posX>
+			<posY>985</posY>
+			<font>font12</font>
+			<align>right</align>
+			<label>#time</label>
+			<textcolor>ffffffff</textcolor>
+			<visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]</visible>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">windowopen</animation>
+			<shadowAngle>315</shadowAngle>
+			<shadowDistance>1</shadowDistance>
+			<shadowColor>FF000000</shadowColor>
+		</control>
+		<!-- END OF these elements need condition visibility for OSD IS VISIBLE -->
+		<control>
+			<description>pause image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>870</posX>
+			<posY>981</posY>
+			<width>180</width>
+			<height>40</height>
+			<visible>window.ispauseosdvisible+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<texture>video_paused.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>2x image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>870</posX>
+			<posY>980</posY>
+			<width>178</width>
+			<height>42</height>
+			<visible>player.forwarding2x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<texture>video+2x.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>4x image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>870</posX>
+			<posY>980</posY>
+			<width>178</width>
+			<height>42</height>
+			<visible>player.forwarding4x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<texture>video+4x.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>8x image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>870</posX>
+			<posY>980</posY>
+			<width>178</width>
+			<height>42</height>
+			<visible>player.forwarding8x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<texture>video+8x.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>16x image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>870</posX>
+			<posY>980</posY>
+			<width>178</width>
+			<height>42</height>
+			<visible>player.forwarding16x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<texture>video+16x.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>32x image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>870</posX>
+			<posY>980</posY>
+			<width>178</width>
+			<height>42</height>
+			<visible>player.forwarding32x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<texture>video+32x.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>- 2x image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>870</posX>
+			<posY>980</posY>
+			<width>178</width>
+			<height>42</height>
+			<visible>player.rewinding2x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<texture>video-2x.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>- 4x image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>870</posX>
+			<posY>980</posY>
+			<width>178</width>
+			<height>42</height>
+			<visible>player.rewinding4x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<texture>video-4x.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>- 8x image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>870</posX>
+			<posY>980</posY>
+			<width>178</width>
+			<height>42</height>
+			<visible>player.rewinding8x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<texture>video-8x.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>- 16x image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>870</posX>
+			<posY>980</posY>
+			<width>178</width>
+			<height>42</height>
+			<visible>player.rewinding16x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<texture>video-16x.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
+		<control>
+			<description>- 32x image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>870</posX>
+			<posY>980</posY>
+			<width>178</width>
+			<height>42</height>
+			<visible>player.rewinding32x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<texture>video-32x.png</texture>
+			<colorkey>0</colorkey>
+			<colordiffuse>White</colordiffuse>
+			<animation effect="fade" time="100">visiblechange</animation>
+		</control>
 		<import>videoOSD_mediainfo_mp110rc2.xml</import>
 		<import>common.play.osd.xml</import>
 	</controls>

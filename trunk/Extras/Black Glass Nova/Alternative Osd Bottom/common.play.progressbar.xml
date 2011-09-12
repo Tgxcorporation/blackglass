@@ -24,7 +24,7 @@
 			<width>920</width>
 			<texture>bg_osd_small_progress_background.png</texture>
 			<animation effect="fade" time="100">visiblechange</animation>
-			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+[window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 		</control>
 		<control>
 			<description>progress bar</description>
@@ -39,7 +39,7 @@
 			<midtexture>osd_small_progress_mid_blue.png</midtexture>
 			<righttexture>-</righttexture>
 			<label>#play.progressbar.percentage</label>
-			<visible>[window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+[window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -81,41 +81,12 @@
 			<font>font12</font>
 			<align>right</align>
 			<label>#time</label>
-			<textcolor>47ffffff</textcolor>
+			<textcolor>77ffffff</textcolor>
 			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		
-		<control>
-			<type>image</type>
-			<description>Time icon</description>
-			<id>99922</id>
-			<posX>654</posX>
-			<posY>657</posY>
-			<height>22</height>
-			<width>22</width>
-			<texture>time.png</texture>
-			<colordiffuse>ffffffff</colordiffuse>
-			<visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+window.isosdvisible</visible>
-			<animation effect="fade" time="100">visiblechange</animation>
-		</control>
-
-		<control>
-			<type>label</type>
-			<description>Time</description>
-			<id>99921</id>
-			<posX>652</posX>
-			<posY>657</posY>
-			<font>font12</font>
-			<align>right</align>
-			<label>#time</label>
-			<textcolor>ffffffff</textcolor>
-			<visible>![player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+window.isosdvisible</visible>
-			<animation effect="fade" time="100">visiblechange</animation>
-			<shadowAngle>315</shadowAngle>
-			<shadowDistance>1</shadowDistance>
-			<shadowColor>FF000000</shadowColor>
-		</control>
+		
 		<control>
 			<description>Start Time Info</description>
 			<id>99901</id>
@@ -163,7 +134,7 @@
 			<posY>654</posY>
 			<width>120</width>
 			<height>27</height>
-			<visible>window.ispauseosdvisible+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+window.ispauseosdvisible+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video_paused.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
@@ -177,7 +148,7 @@
 			<posY>654</posY>
 			<width>119</width>
 			<height>28</height>
-			<visible>player.forwarding2x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+player.forwarding2x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video+2x.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
@@ -191,7 +162,7 @@
 			<posY>654</posY>
 			<width>119</width>
 			<height>28</height>
-			<visible>player.forwarding4x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+player.forwarding4x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video+4x.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
@@ -205,7 +176,7 @@
 			<posY>654</posY>
 			<width>119</width>
 			<height>28</height>
-			<visible>player.forwarding8x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+player.forwarding8x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video+8x.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
@@ -219,7 +190,7 @@
 			<posY>654</posY>
 			<width>119</width>
 			<height>28</height>
-			<visible>player.forwarding16x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+player.forwarding16x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video+16x.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
@@ -233,7 +204,7 @@
 			<posY>654</posY>
 			<width>119</width>
 			<height>28</height>
-			<visible>player.forwarding32x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+player.forwarding32x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video+32x.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
@@ -247,7 +218,7 @@
 			<posY>654</posY>
 			<width>119</width>
 			<height>28</height>
-			<visible>player.rewinding2x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+player.rewinding2x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video-2x.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
@@ -261,7 +232,7 @@
 			<posY>654</posY>
 			<width>119</width>
 			<height>28</height>
-			<visible>player.rewinding4x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+player.rewinding4x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video-4x.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
@@ -275,7 +246,7 @@
 			<posY>654</posY>
 			<width>119</width>
 			<height>28</height>
-			<visible>player.rewinding8x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+player.rewinding8x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video-8x.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
@@ -289,7 +260,7 @@
 			<posY>654</posY>
 			<width>119</width>
 			<height>28</height>
-			<visible>player.rewinding16x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+player.rewinding16x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video-16x.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
@@ -303,7 +274,7 @@
 			<posY>654</posY>
 			<width>119</width>
 			<height>28</height>
-			<visible>player.rewinding32x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
+			<visible>!window.isosdvisible+player.rewinding32x+![control.isvisible(10)|control.isvisible(11)|control.isvisible(12)]</visible>
 			<texture>video-32x.png</texture>
 			<colorkey>0</colorkey>
 			<colordiffuse>White</colordiffuse>
