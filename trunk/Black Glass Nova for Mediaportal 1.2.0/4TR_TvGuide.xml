@@ -9,7 +9,27 @@
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#header.background</texture>
+			<animation effect="fade" time="1">WindowClose</animation>			
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<width>850</width>
+			<wrapString> : : : </wrapString>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>10</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+		</control>
 		<import>common.window.time.xml</import>
 		<control>
 			<type>image</type>
@@ -35,26 +55,29 @@
 			<description>Single Channel View Label</description>
 			<type>label</type>
 			<id>32</id>
-			<posX>150</posX>
-			<posY>10</posY>
-			<font>font28</font>
+			<posX>26</posX>
+			<posY>399</posY>
+			<font>font18</font>
 			<align>left</align>
 			<textcolor>60FFFFFF</textcolor>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Single Channel View Image</description>
 			<type>image</type>
 			<id>33</id>
-			<posX>67</posX>
-			<posY>10</posY>
+			<posX>21</posX>
+			<posY>426</posY>
 			<width>70</width>
-			<height>52</height>
+			<height>44</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
-			<centered>yes</centered>
 			<texture>defaultVideoBig.png</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<align>left</align>
+			<valign>top</valign>
+			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
 
 		<!-- Timeheader background must be dedfined before Timeheader label template -->
