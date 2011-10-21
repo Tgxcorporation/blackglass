@@ -9,10 +9,31 @@
 	<animation effect="fade" time="250">WindowOpen</animation>
 	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
-		<import>common.window.xml</import>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>#header.background</texture>
+			<animation effect="fade" time="1">WindowClose</animation>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<width>1275</width>
+			<wrapString> : : : </wrapString>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>15</posY>
+			<label>#header.label</label>
+			<font>font28</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+		</control>
 		<import>common.window.time.xml</import>
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>-7</posX>
 			<posY>72</posY>
 			<width>1948</width>
@@ -34,26 +55,28 @@
 			<description>Single Channel View Label</description>
 			<type>label</type>
 			<id>32</id>
-			<posX>225</posX>
-			<posY>15</posY>
-			<font>font28</font>
+			<posX>40</posX>
+			<posY>595</posY>
+			<font>font18</font>
 			<align>left</align>
 			<textcolor>60FFFFFF</textcolor>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Single Channel View Image</description>
 			<type>image</type>
 			<id>33</id>
-			<posX>100</posX>
-			<posY>15</posY>
+			<posX>13</posX>
+			<posY>620</posY>
 			<width>105</width>
-			<height>78</height>
+			<height>68</height>
 			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
 			<zoom>no</zoom>
-			<texture>defaultAudioBig.png</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<centered>yes</centered>
+			<texture>DefaultMyradioBig.png</texture>
+			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
 		<!-- Timeheader background must be dedfined before Timeheader label template -->
 		<!-- b/c Timeheader is on the background and will be rendered first -->
@@ -131,7 +154,7 @@
 			<height>52</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
-			<texture>defaultAudio.png</texture>
+			<texture>DefaultMyradio.png</texture>
 			<centered>yes</centered>
 		</control>
 		<control>
