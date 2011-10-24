@@ -63,7 +63,16 @@
 			<font>font12</font>
 			<visible>control.isvisible(54)</visible>
 		</control>
-
+		<control>
+			<description>Section Summary</description>
+			<type>label</type>
+			<id>55</id>
+			<posX>30</posX>
+			<posY>65</posY>
+			<label>#HTPCInfo.SectionName</label>
+			<font>font12</font>
+			<visible>control.isvisible(55)</visible>
+		</control>
 
 
 
@@ -71,7 +80,9 @@
 		<import>HTPCInfoOverview.xml</import>
 		<import>HTPCInfoDetails.xml</import>
 		<import>HTPCInfoGauges.xml</import>
-		
+		<!-- <import>HTPCInfoProgressbars.xml</import> -->
+		<import>HTPCInfoSummary.xml</import>
+
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -81,7 +92,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -100,7 +111,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -123,7 +134,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#header.label</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -210,8 +222,17 @@
 					<id>7</id>
 					<label>Wake On LAN</label>
 					<onup>5</onup>
-					<ondown>6</ondown>
+					<ondown>10</ondown>
 					<onright>5051</onright>
+				</control>
+				<control>
+					<description>Create Restore Point</description>
+					<type>button</type>
+					<id>10</id>
+					<label>Create Restore Point</label>
+					<onup>9</onup>
+					<ondown>6</ondown>
+					<width>160</width>
 				</control>
 
 			</control>
