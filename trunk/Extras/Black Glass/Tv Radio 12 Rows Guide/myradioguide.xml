@@ -5,13 +5,11 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:533</define>
 	<define>#header.background:hover_my radio.png</define>
-	<animation effect="fade" time="250">WindowClose</animation>
-	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="slide" tween="circle" easing="out" time="200" start="1280,0" reversible="false">WindowOpen</animation>
+	<animation effect="slide" tween="circle" time="150" end="1500,0" reversible="false">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>		
-		<import>common.window.accessories.xml</import>
-		<import>common.window.time.xml</import>
 		<control>
 			<type>fadelabel</type>
 			<width>850</width>
@@ -23,10 +21,8 @@
 			<font>font28</font>
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<visible>!control.isvisible(32)</visible>
 		</control>
-
+		<import>common.window.time.stripped.xml</import>
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -51,26 +47,29 @@
 			<description>Single Channel View Label</description>
 			<type>label</type>
 			<id>32</id>
-			<posX>150</posX>
-			<posY>10</posY>
-			<font>font28</font>
+			<posX>26</posX>
+			<posY>414</posY>
+			<font>font18</font>
 			<align>left</align>
 			<textcolor>60FFFFFF</textcolor>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Single Channel View Image</description>
 			<type>image</type>
 			<id>33</id>
-			<posX>67</posX>
-			<posY>10</posY>
+			<posX>21</posX>
+			<posY>440</posY>
 			<width>70</width>
-			<height>52</height>
+			<height>44</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
-			<texture>defaultAudioBig.png</texture>
-			<centered>yes</centered>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<texture>DefaultMyradioBig.png</texture>
+			<align>left</align>
+			<valign>top</valign>
+			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
 
 		<!-- Timeheader background must be dedfined before Timeheader label template -->
@@ -149,7 +148,7 @@
 			<height>26</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
-			<texture>defaultAudio.png</texture>
+			<texture>DefaultMyradio.png</texture>
 			<centered>yes</centered>
 		</control>
 		<control>
