@@ -5,19 +5,17 @@
 	<allowoverlay>player.hasmedia</allowoverlay>
 	<define>#header.label:#burner_title</define>
 	<define>#header.background:hover_my burner.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
-		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(4)|control.hasfocus(7)]">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>850</width>
@@ -29,8 +27,41 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(4)|control.hasfocus(7)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control> 
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#infoservice.weather.today.temp     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>15</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
 			</control>
 			<control>
 				<id>1</id>
@@ -145,7 +176,7 @@
 				<shadowColor>FF000000</shadowColor>
 				<animation effect="Fade" time="250">VisibleChange</animation>
 			</control>
-			
+
 			<control>
 				<id>50</id>
 				<description>CD Detail Panel</description>
@@ -176,7 +207,6 @@
 					<ondown>2</ondown>
 					<height>312</height>
 					<spinPosY>387</spinPosY>
-					<animation effect="Fade" time="250">VisibleChange</animation>
 				</control>
 			</control>
 			<control>
@@ -219,7 +249,7 @@
 			<height>720</height>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<onexit>0</onexit>
 			<defaultcontrol>2</defaultcontrol>

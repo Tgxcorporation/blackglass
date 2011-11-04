@@ -5,8 +5,7 @@
 	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
 	<define>#header.label:#MovingPictures.Settings.HomeScreenName</define>
 	<define>#header.background:hover_moving pictures.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 
 	<!-- 
 	This set of defines are read by the plug-in and used to determine aspects of it's behavior. These
@@ -136,126 +135,16 @@
 		</control>
 
 		<import>common.window.overlay.xml</import>
-		<import>common.window.time.xml</import>
-
-		
-		<!-- VIEWS -->
+		<import>movingpictures.topbar.xml</import>
+		<import>movingpictures.facade.xml</import>
+		<import>common.facade.dummy.xml</import>
 		<import>movingpictures.listview.xml</import>
 		<import>movingpictures.thumbsview.xml</import>
 		<import>movingpictures.filmstripview.xml</import>
 		<import>movingpictures.coverflowview.xml</import>
-
 		<import>movingpictures.details.xml</import>
-		<import>movingpictures.facade.xml</import>
-		<!-- <import>movingpictures.overlay.xml</import> -->
-		<import>movingpictures.mediainfo.xml</import>
 		<import>movingpictures.hiddenmenu.xml</import>
-
-		<!-- Top Bar controls -->
-
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="fade" time="150">WindowClose</animation>	
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<control>
-				<type>fadelabel</type>
-				<width>850</width>
-				<wrapString> : : : </wrapString>
-				<id>0</id>
-				<posX>30</posX>
-				<posY>5</posY>
-				<label>#header.label</label>
-				<font>font28</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)|control.hasfocus(180)|control.hasfocus(66614)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-
-			<control>
-				<description>Parental controls Lock Indicator</description>
-				<type>image</type>
-				<id>16</id>
-				<posX>32</posX>
-				<posY>58</posY>
-				<width>20</width>
-				<height>20</height>
-				<texture>lock2.png</texture>
-				<visible>[control.isvisible(50)|control.isvisible(51)]+![control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)|control.hasfocus(180)|control.hasfocus(66614)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)]]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>Current Category</description>
-				<type>label</type>
-				<id>9916</id>
-				<posX>30</posX>
-				<posY>56</posY>
-				<font>font13</font>
-				<width>900</width>
-				<label>#MovingPictures.CurrentNode.name</label>
-				<visible>!control.isvisible(16)+[[control.isvisible(50)|control.isvisible(51)]+!control.isvisible(17)]+![control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)|control.hasfocus(180)|control.hasfocus(66614)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)]]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>Current Category / Filter</description>
-				<type>label</type>
-				<id>9917</id>
-				<posX>30</posX>
-				<posY>56</posY>
-				<font>font13</font>
-				<width>900</width>
-				<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
-				<visible>!control.isvisible(16)+[[control.isvisible(50)|control.isvisible(51)]+control.isvisible(17)]+![control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)|control.hasfocus(180)|control.hasfocus(66614)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)]]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>Current Category</description>
-				<type>label</type>
-				<id>9918</id>
-				<posX>60</posX>
-				<posY>56</posY>
-				<font>font13</font>
-				<width>870</width>
-				<label>#MovingPictures.CurrentNode.name</label>
-				<visible>control.isvisible(16)+[[control.isvisible(50)|control.isvisible(51)]+!control.isvisible(17)]+![control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)|control.hasfocus(180)|control.hasfocus(66614)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)]]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>Current Category / Filter</description>
-				<type>label</type>
-				<id>9919</id>
-				<posX>60</posX>
-				<posY>56</posY>
-				<font>font13</font>
-				<width>870</width>
-				<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
-				<visible>control.isvisible(16)+[[control.isvisible(50)|control.isvisible(51)]+control.isvisible(17)]+![control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(14)|control.hasfocus(15)|control.hasfocus(66610)|control.hasfocus(66611)|control.hasfocus(66612)|control.hasfocus(180)|control.hasfocus(66614)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)]]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-		</control>
-
-
-		<!-- Dim background when movie starts -->
-		<!-- This is to provide feedback to the user something is happening when there are long pauses before playback -->
-
-
-
-
-		<control>
-			<description>Playing Animation</description>
-			<type>animation</type>
-			<id>0</id>
-			<posX>592</posX>
-			<posY>312</posY>
-			<width>96</width>
-			<height>96</height>
-			<textures>common.waiting.1.png;common.waiting.2.png;common.waiting.3.png;common.waiting.4.png;common.waiting.5.png;common.waiting.6.png;common.waiting.7.png;common.waiting.8.png</textures>
-			<Duration>0:0:01.5</Duration>
-			<keepaspectratio>yes</keepaspectratio>		
-			<visible>control.isvisible(18)+!control.isvisible(50)+!control.isvisible(51)</visible>
-		</control>			
+		
 
 		<control>
 			<description>Working Animation</description>

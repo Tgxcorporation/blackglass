@@ -6,141 +6,53 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:605</define>
 	<define>#header.background:hover_my tv.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
-		<import>common.window.time.xml</import>
-
-		<control>
-			<description>video window</description>
-			<type>videowindow</type>
-			<id>99</id>
-			<posX>487</posX>
-			<posY>113</posY>
-			<width>739</width>
-			<height>414</height>
-			<onleft>2</onleft>
-			<onright>2</onright>
-			<action>18</action>
-			<textureFocus>tv_green_border.png</textureFocus>	
-			<animation effect="fade" time="250" delay="150">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="fade" time="250" delay="150">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-			<animation effect="fade" time="250">visiblechange</animation>	
-			<visible>!player.hasmedia</visible>
-			<control>
-				<description>Progress background</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>486</posX>
-				<posY>493</posY>
-				<width>739</width>
-				<texture>osd_progress_background.png</texture>
-			</control>
-			<control>
-				<description>progress bar</description>
-				<type>progress</type>
-				<id>20</id>
-				<posX>474</posX>
-				<posY>493</posY>
-				<width>763</width>
-				<label>#TV.View.Percentage</label>
-			</control>  
-			<control>
-				<description>Current program time</description>
-				<type>label</type>
-				<id>1</id>
-				<posX>496</posX>
-				<posY>498</posY>
-				<width>360</width>
-				<label>#TV.View.start</label>
-				<font>font14</font>
-				<textcolor>ffffffff</textcolor>
-				<shadowAngle>315</shadowAngle>
-				<shadowDistance>1</shadowDistance>
-				<shadowColor>FF000000</shadowColor>
-			</control>
-			<control>
-				<description>Current program time</description>
-				<type>label</type>
-				<id>1</id>
-				<posX>1215</posX>
-				<posY>498</posY>
-				<width>360</width>
-				<label>#TV.View.stop</label>
-				<font>font14</font>
-				<align>right</align>
-				<textcolor>ffffffff</textcolor>
-				<shadowAngle>315</shadowAngle>
-				<shadowDistance>1</shadowDistance>
-				<shadowColor>FF000000</shadowColor>
-			</control>
-			<control>
-				<description>Channel Image</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>790</posX>
-				<posY>270</posY>
-				<width>133</width>
-				<height>100</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<centered>yes</centered>
-				<texture flipY="true" diffuse="Thumb_Mask.png">#TV.View.thumb</texture>
-			</control>
-			<control>
-				<description>background up</description>
-				<id>0</id>
-				<type>image</type>
-				<posX>486</posX>
-				<posY>113</posY>
-				<width>739</width>
-				<texture>osd_progress_background2.png</texture>
-			</control>
-			<control>
-				<description>Current program name</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>496</posX>
-				<posY>118</posY>
-				<width>719</width>
-				<label>#TV.View.title</label>
-				<font>font14</font>
-				<textcolor>ffffffff</textcolor>
-				<shadowAngle>45</shadowAngle>
-				<shadowDistance>1</shadowDistance>
-				<shadowColor>FF000000</shadowColor>
-			</control>
-		</control>
-		<control>
-			<description>TV background</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>440</posX>
-			<posY>70</posY>
-			<width>828</width>
-			<height>562</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<texture>TVCase.png</texture>
-			<animation effect="fade" time="250" delay="150">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
-
-
 
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false" condition="!player.hasmedia">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false" condition="!player.hasmedia">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="[control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(3)|control.hasfocus(14)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(1313)]">conditional</animation>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control> 
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#infoservice.weather.today.temp     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>15</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
 			<control>
 				<type>fadelabel</type>
 				<width>850</width>
@@ -152,8 +64,6 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>control.hasfocus(99)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<description>REAL Current program title</description>
@@ -165,8 +75,6 @@
 				<font>font22</font>
 				<label>#TV.View.title</label>
 				<textcolor>FFFFFFFF</textcolor>
-				<visible>control.hasfocus(99)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control> 
 			<control>
@@ -180,8 +88,6 @@
 				<label>#TV.View.channel</label>
 				<align>left</align>
 				<textcolor>90ffffff</textcolor>
-				<visible>control.hasfocus(99)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -193,8 +99,6 @@
 				<width>360</width>
 				<label>#TV.View.start - #TV.View.stop</label>
 				<textcolor>ffffffff</textcolor>
-				<visible>control.hasfocus(99)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -205,8 +109,6 @@
 				<posY>205</posY>
 				<label>#TV.Search.Genre</label>
 				<textcolor>90ffffff</textcolor>
-				<visible>control.hasfocus(99)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<description>Description1</description>
@@ -219,10 +121,127 @@
 				<label>#TV.View.description</label>
 				<font>font16</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<visible>control.hasfocus(99)</visible>
 				<seperator>: : :</seperator>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+			<control>
+				<description>video window</description>
+				<type>videowindow</type>
+				<id>99</id>
+				<posX>486</posX>
+				<posY>113</posY>
+				<width>740</width>
+				<height>414</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<action>18</action>
+				<textureFocus>tv_green_border.png</textureFocus>	
+				<animation effect="fade" time="250" delay="150">WindowOpen</animation>
+				<animation effect="fade" time="250" delay="0">WindowClose</animation>
+				<animation effect="fade" time="250" delay="150">visible</animation>
+				<visible>![control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(3)|control.hasfocus(14)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(1313)]</visible>
+			</control>
+			<control>
+				<description>TV background</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>440</posX>
+				<posY>70</posY>
+				<width>828</width>
+				<height>562</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<texture>TVCase.png</texture>
+				<animation effect="fade" time="250" delay="150">WindowOpen</animation>
+				<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			</control>
+			<control>
+				<type>group</type>
+				<dimColor>ffffffff</dimColor>
+				<visible>!player.hasmedia</visible>
+				<animation effect="fade" time="250" delay="0">visiblechange</animation>
+				<control>
+					<description>Progress background</description>
+					<type>image</type>
+					<id>1</id>
+					<posX>486</posX>
+					<posY>493</posY>
+					<width>739</width>
+					<texture>osd_progress_background.png</texture>
+				</control>
+				<control>
+					<description>progress bar</description>
+					<type>progress</type>
+					<id>20</id>
+					<posX>474</posX>
+					<posY>493</posY>
+					<width>763</width>
+					<label>#TV.View.Percentage</label>
+				</control>  
+				<control>
+					<description>Current program time</description>
+					<type>label</type>
+					<id>1</id>
+					<posX>496</posX>
+					<posY>498</posY>
+					<width>360</width>
+					<label>#TV.View.start</label>
+					<font>font14</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowAngle>315</shadowAngle>
+					<shadowDistance>1</shadowDistance>
+					<shadowColor>FF000000</shadowColor>
+				</control>
+				<control>
+					<description>Current program time</description>
+					<type>label</type>
+					<id>1</id>
+					<posX>1215</posX>
+					<posY>498</posY>
+					<width>360</width>
+					<label>#TV.View.stop</label>
+					<font>font14</font>
+					<align>right</align>
+					<textcolor>ffffffff</textcolor>
+					<shadowAngle>315</shadowAngle>
+					<shadowDistance>1</shadowDistance>
+					<shadowColor>FF000000</shadowColor>
+				</control>
+				<control>
+					<description>Channel Image</description>
+					<type>image</type>
+					<id>1</id>
+					<posX>790</posX>
+					<posY>270</posY>
+					<width>133</width>
+					<height>100</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<centered>yes</centered>
+					<texture flipY="true" diffuse="Thumb_Mask.png">#TV.View.thumb</texture>
+				</control>
+				<control>
+					<description>background up</description>
+					<id>0</id>
+					<type>image</type>
+					<posX>486</posX>
+					<posY>113</posY>
+					<width>739</width>
+					<texture>osd_progress_background2.png</texture>
+				</control>
+				<control>
+					<description>Current program name</description>
+					<type>fadelabel</type>
+					<id>1</id>
+					<posX>496</posX>
+					<posY>118</posY>
+					<width>719</width>
+					<label>#TV.View.title</label>
+					<font>font14</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowAngle>45</shadowAngle>
+					<shadowDistance>1</shadowDistance>
+					<shadowColor>FF000000</shadowColor>
+				</control>
+			</control>
+
 		</control>
 
 
@@ -237,7 +256,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(3)|control.hasfocus(14)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(12)|control.hasfocus(13)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(3)|control.hasfocus(14)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(1313)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -256,7 +275,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(3)|control.hasfocus(14)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(12)|control.hasfocus(13)]</visible>
+			<visible>[control.hasfocus(2)|control.hasfocus(11)|control.hasfocus(3)|control.hasfocus(14)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(1313)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -279,7 +298,7 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label>
+				<label>924</label>
 				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
@@ -399,13 +418,40 @@
 					<id>13</id>
 					<label>1441</label>
 					<onup>14</onup>
+					<ondown>1313</ondown>
+					<onright>99</onright>
+					<onleft>99</onleft>
+				</control>
+				<control>
+					<description>TvWishList</description>
+					<type>button</type>
+					<id>1313</id>
+					<label>TvWishList</label>
+					<hyperlink>70943675</hyperlink>
+					<onup>13</onup>
 					<ondown>2</ondown>
 					<onright>99</onright>
 					<onleft>99</onleft>
+					<visible>plugin.isenabled(TvWishListMP)</visible>
 				</control>
 			</control>
 		</control>
 
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>51</id>
+			<posX>1180</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
 
 		<!-- NOT USED -->
 		<control>

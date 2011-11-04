@@ -5,8 +5,7 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:Calendar</define>
 	<define>#header.background:hover_my anime.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 
 		<!-- ********************** DUMMY controlS FOR VISIBILITY ************************************** -->
@@ -26,8 +25,6 @@
 
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
-		<import>common.window.time.xml</import>
 
 
 		<control>
@@ -36,6 +33,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="[control.hasfocus(901)|control.hasfocus(902)]">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>850</width>
@@ -47,8 +45,41 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(901)|control.hasfocus(902)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control> 
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#infoservice.weather.today.temp     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>15</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
 			</control>
 			<control>
 				<description>composite control</description>
@@ -397,7 +428,7 @@
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
@@ -427,7 +458,7 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label>
+				<label>924</label>
 				<width>333</width>
 				<font>font24</font>
 				<align>left</align>

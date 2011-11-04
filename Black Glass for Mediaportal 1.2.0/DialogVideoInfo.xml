@@ -1,20 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
 	<id>2003</id>
-	<defaultcontrol>22</defaultcontrol>
+	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:#view</define>
 	<define>#header.background:hover_my videos.png</define>
 	<define>#useSelectedFanart:Yes</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.video.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
-		<import>common.window.time.xml</import>
-
 
 		<control>
 			<type>group</type>
@@ -22,6 +18,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="![control.hasfocus(50)|control.hasfocus(10)|control.hasfocus(11)]">conditional</animation>
 
 			<control>
 				<type>fadelabel</type>
@@ -34,8 +31,6 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -48,10 +43,43 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(97259)|control.hasfocus(97260)]+string.equals(#view,)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>string.equals(#view,)</visible>
 			</control>
-
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control> 
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#infoservice.weather.today.temp     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>15</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
 			<control>
 				<description>details background</description>
 				<id>0</id>
@@ -81,8 +109,6 @@
 				<width>380</width>
 				<height>538</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#thumb</texture>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -94,8 +120,6 @@
 				<width>437</width>
 				<height>556</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 
@@ -261,7 +285,7 @@
 				<font>font18</font>
 				<seperator>: : :</seperator>
 			</control>
-			
+
 			<control>
 				<description>image title:</description>
 				<type>label</type>
@@ -308,6 +332,22 @@
 				<buddycontrolid>100</buddycontrolid>
 				<showrange>no</showrange>
 			</control>
+			<control>
+				<description>DUMMY BUTTON</description>
+				<type>button</type>
+				<id>50</id>
+				<posX>480</posX>
+				<posY>0</posY>
+				<width>800</width>
+				<height>600</height>
+				<label/>
+				<onright>10</onright>
+				<onleft>2</onleft>
+				<ondown>10</ondown>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<!-- <scrollWrapString/> -->
+			</control>
 		</control>
 
 		<control>
@@ -319,7 +359,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
+			<visible>[control.hasfocus(50)|control.hasfocus(10)|control.hasfocus(11)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -331,14 +371,14 @@
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(97259)|control.hasfocus(97260)</visible>
+			<visible>![control.hasfocus(50)|control.hasfocus(10)|control.hasfocus(11)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -361,22 +401,10 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label>
+				<label>924</label>
 				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-			</control>
-			<control>
-				<id>0</id>
-				<type>label</type>
-				<posX>30</posX>
-				<posY>35</posY>
-				<label>3</label>
-				<width>333</width>
-				<font>font24</font>
-				<align>left</align>
-				<visible>string.equals(#view,)</visible>
 				<textcolor>ffffffff</textcolor>
 			</control>
 			<control>
@@ -400,6 +428,7 @@
 					<label>208</label>
 					<onup>17</onup>
 					<ondown>3</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Plot</description>
@@ -408,6 +437,7 @@
 					<label>207</label>
 					<onup>2</onup>
 					<ondown>7</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>User review</description>
@@ -416,6 +446,7 @@
 					<label>183</label>
 					<onup>3</onup>
 					<ondown>4</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Cast</description>
@@ -424,6 +455,7 @@
 					<label>206</label>
 					<onup>7</onup>
 					<ondown>5</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Refresh</description>
@@ -432,6 +464,7 @@
 					<label>184</label>
 					<onup>4</onup>
 					<ondown>6</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Watched</description>
@@ -440,6 +473,7 @@
 					<label>1010</label>
 					<onup>5</onup>
 					<ondown>97259</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Trakt Rate Movie</description>
@@ -449,6 +483,7 @@
 					<visible>plugin.isenabled(Trakt)</visible>
 					<onup>6</onup>
 					<ondown>97260</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Trakt Shouts</description>
@@ -458,6 +493,7 @@
 					<visible>plugin.isenabled(Trakt)</visible>
 					<onup>97259</onup>
 					<ondown>66621</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Onlinevideos Trailers</description>
@@ -469,6 +505,7 @@
 					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
 					<onup>97260</onup>
 					<ondown>66622</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Onlinevideos Trailers</description>
@@ -480,6 +517,7 @@
 					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
 					<onup>66621</onup>
 					<ondown>66623</ondown>
+					<onright>50</onright>
 				</control>
 				<control>
 					<description>Onlinevideos Trailers</description>
@@ -491,9 +529,10 @@
 					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
 					<onup>66622</onup>
 					<ondown>10</ondown>
+					<onright>50</onright>
 				</control>
 			</control>
-			
+
 		</control>
 
 

@@ -13,10 +13,11 @@
 			<textalign>center</textalign>
 			<label>#TVSeries.Title</label>
 			<visible>[facadeview.filmstrip|facadeview.coverflow]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="373,0" condition="!control.hasfocus(50)">conditional</animation>
 		</control>
 	</controls>
 </window>

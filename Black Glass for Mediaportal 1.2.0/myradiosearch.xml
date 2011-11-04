@@ -6,21 +6,38 @@
 	<disabletopbar>no</disabletopbar>
 	<define>#header.label:137</define>
 	<define>#header.background:hover_my radio.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
-		<import>common.window.time.xml</import>
-		<import>common.facade.background.basic.xml</import>
-		<import>common.facade.itemcount.currentmodule.basic.xml</import>
 
 		<control>
-			<type>group</type>
 			<description>group element</description>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="191,0" condition="![control.hasfocus(11)|control.hasfocus(10)]">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>47</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
 			<control>
 				<description>listcontrol</description>
 				<type>listcontrol</type>
@@ -32,14 +49,32 @@
 				<textcolor>FFFFFFFF</textcolor>
 			</control>
 			<control>
-				<description>scheduler recordings listcontrol</description>
-				<type>listcontrol</type>
-				<id>11</id>
-				<onleft>10</onleft>
-				<onright>2</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<description>scheduler recordings listcontrol</description>
+					<type>listcontrol</type>
+					<id>11</id>
+					<onleft>10</onleft>
+					<onright>2</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+				</control>
 			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<description>Itemcount Itemtype</description>
+					<type>label</type>
+					<id>0</id>
+					<posX>510</posX>
+					<posY>665</posY>
+					<label>#itemcount #(L(507))</label>
+					<font>font16</font>
+					<textcolor>60ffffff</textcolor>
+				</control>
+			</control>			
 		</control>
 
 		<control>
@@ -48,6 +83,42 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="![control.hasfocus(11)|control.hasfocus(10)]">conditional</animation>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control> 
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#infoservice.weather.today.temp     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>15</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
 			<control>
 				<type>fadelabel</type>
 				<width>850</width>
@@ -59,8 +130,6 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(20)|control.hasfocus(7)|control.hasfocus(19)|control.hasfocus(21)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -73,8 +142,6 @@
 				<font>font22</font>
 				<label>#selecteditem</label>
 				<textcolor>FFFFFFFF</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 				<wrapString> : : : </wrapString>
 			</control> 
 			<control>
@@ -88,8 +155,6 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<texture>#selectedthumb</texture>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -103,8 +168,6 @@
 				<label>#Radio.Search.Channel</label>
 				<align>left</align>
 				<textcolor>90ffffff</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -115,8 +178,6 @@
 				<posY>168</posY>
 				<label>#Radio.Search.Time</label>
 				<textcolor>ffffffff</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -127,8 +188,6 @@
 				<posY>205</posY>
 				<label>#Radio.Search.Genre</label>
 				<textcolor>90ffffff</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
 			<control>
@@ -142,9 +201,9 @@
 				<label>#Radio.Search.Description</label>
 				<font>font16</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]+player.hasmedia</visible>
+				<visible>player.hasmedia</visible>
 				<seperator>: : :</seperator>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="-400,0">visible</animation>
 			</control>
 			<control>
 				<description>Description1</description>
@@ -157,9 +216,9 @@
 				<label>#Radio.Search.Description</label>
 				<font>font16</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<visible>control.isvisible(16)+[control.hasfocus(11)|control.hasfocus(10)]+!player.hasmedia</visible>
+				<visible>!player.hasmedia</visible>
 				<seperator>: : :</seperator>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="-400,0">visible</animation>
 			</control>
 
 		</control>
@@ -173,7 +232,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(20)|control.hasfocus(7)|control.hasfocus(19)|control.hasfocus(21)]</visible>
+			<visible>[control.hasfocus(10)|control.hasfocus(11)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -185,7 +244,7 @@
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
@@ -213,7 +272,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>924</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>

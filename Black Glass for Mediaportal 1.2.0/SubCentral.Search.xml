@@ -10,10 +10,71 @@
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<visible>Control.isvisible(102)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>850</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control> 
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#infoservice.weather.today.temp     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>15</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>Media tags</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>56</posY>
+				<font>font11</font>
+				<width>420</width>
+				<label>#SubCentral.Translation.MediaTags.Label: #SubCentral.Search.Files.Tags</label>
+				<wrapString> : : : </wrapString>
+				<animation effect="fade" time="150">visible</animation>
+				<visible>!string.contains(#SubCentral.Search.Files.Tags,SubCentral.Search.Files.Tags)+!string.equals(#SubCentral.Search.Files.Tags,)+!string.equals(#SubCentral.Search.Files.Tags, )+!string.equals(#SubCentral.Search.Files.Tags,  )]</visible>
+			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -42,7 +103,6 @@
 				<posY>665</posY>
 				<label>#itemcount</label>
 				<font>font16</font>
-				<label>#itemcount</label>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
 			</control>
@@ -77,6 +137,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
 			<control>
 				<description>Cover Art</description>
 				<type>image</type>
@@ -87,8 +148,8 @@
 				<width>245</width> 
 				<height>348</height> 
 				<texture flipY="true" diffuse="Thumb_Mask.png">#SubCentral.Search.Media.Thumb</texture>
-				<visible>Control.isvisible(102)+ control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>Control.isvisible(102)</visible>
+				<animation effect="fade" time="250">visible</animation>
 			</control>
 			<control>
 				<description>Cover Art Glass Overlay</description>
@@ -99,8 +160,8 @@
 				<width>283</width>
 				<height>360</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-				<visible>Control.isvisible(102)+ control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>Control.isvisible(102)</visible>
+				<animation effect="fade" time="250">visible</animation>
 			</control>
 
 			<control>
@@ -112,8 +173,8 @@
 				<label>#SubCentral.Search.Media.Title</label>
 				<font>font22</font>
 				<wrapString> : : : </wrapString>
-				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,NONE)+ control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,NONE)</visible>
+				<animation effect="fade" time="250">visible</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -124,8 +185,8 @@
 				<label>#SubCentral.Search.Media.TitleWithYear</label>
 				<font>font22</font>
 				<wrapString> : : : </wrapString>
-				<visible>Control.isvisible(102)+[String.Equals(#SubCentral.Search.SearchType.Type,MOVIE)|String.Equals(#SubCentral.Search.SearchType.Type,IMDb)]+ control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>Control.isvisible(102)+[String.Equals(#SubCentral.Search.SearchType.Type,MOVIE)|String.Equals(#SubCentral.Search.SearchType.Type,IMDb)]</visible>
+				<animation effect="fade" time="250">visible</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -136,8 +197,8 @@
 				<label>#SubCentral.Search.Media.TitleWithSE</label>
 				<font>font22</font>
 				<wrapString> : : : </wrapString>
-				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,TVSHOW)+ control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,TVSHOW)</visible>
+				<animation effect="fade" time="250">visible</animation>
 			</control>
 
 			<control>
@@ -150,8 +211,8 @@
 				<label>#SubCentral.Search.Source.Text</label>
 				<wrapString> : : : </wrapString>
 				<textcolor>90ffffff</textcolor>
-				<visible>Control.isvisible(102)+ control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>Control.isvisible(102)</visible>
+				<animation effect="fade" time="250">visible</animation>
 			</control>
 
 			<control>
@@ -163,8 +224,8 @@
 				<label>#SubCentral.Search.SearchType.Text</label>
 				<font>font16</font>
 				<wrapString> : : : </wrapString>
-				<visible>Control.isvisible(102)+!String.Equals(#SubCentral.Search.SearchType.Type,NONE)+ control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>Control.isvisible(102)+!String.Equals(#SubCentral.Search.SearchType.Type,NONE)</visible>
+				<animation effect="fade" time="250">visible</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -175,9 +236,9 @@
 				<label>#SubCentral.Search.SearchType.Text</label>
 				<font>font16</font>
 				<wrapString> : : : </wrapString>
-				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,NONE)+ control.hasfocus(50)</visible>
-				<textcolor>ffF87B72</textcolor>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,NONE)</visible>
+				<textcolor>#ColorOffline</textcolor>
+				<animation effect="fade" time="250">visible</animation>
 			</control>
 
 			<control>
@@ -189,9 +250,9 @@
 				<label>#SubCentral.Search.Media.IMDb.ID.Text</label>
 				<font>font16</font>
 				<wrapString> : : : </wrapString>
-				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,IMDb)+ control.hasfocus(50)</visible>
+				<visible>Control.isvisible(102)+String.Equals(#SubCentral.Search.SearchType.Type,IMDb)</visible>
 				<textcolor>90ffffff</textcolor>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<animation effect="fade" time="250">visible</animation>
 			</control>
 
 			<control>
@@ -206,8 +267,142 @@
 				<font>font14</font>
 				<label>#SubCentral.Search.Files.AllNames</label>
 				<seperator>: : :</seperator>
-				<visible>Control.isvisible(102)+ control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>Control.isvisible(102)</visible>
+				<animation effect="fade" time="250">visible</animation>
+			</control>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>control.isvisible(102)+control.hasfocus(50)</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>202</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>385</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>control.isvisible(102)+!control.hasfocus(50)</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<!--<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+				<visible>!control.hasfocus(50)+!control.hasfocus(912)</visible>
+			</control>-->
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#currentmodule</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>100</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<description>Cancel Button</description>
+					<type>button</type>
+					<id>202</id>
+					<label>Cancel</label>
+					<onup>201</onup>
+					<ondown>203</ondown>
+					<onleft>202</onleft>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Languages Button</description>
+					<type>button</type>
+					<id>203</id>
+					<label>Languages</label>
+					<onup>202</onup>
+					<ondown>204</ondown>
+					<onleft>203</onleft>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Modify Search Button</description>
+					<type>button</type>
+					<id>204</id>
+					<label>Modify search</label>
+					<onup>203</onup>
+					<ondown>206</ondown>
+					<onleft>204</onleft>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Delete Subtitles Button</description>
+					<type>button</type>
+					<id>206</id>
+					<label>Delete subtitles</label>
+					<onup>204</onup>
+					<ondown>205</ondown>
+					<onleft>206</onleft>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Sort</description>
+					<type>sortbutton</type>
+					<id>205</id>
+					<label>Sort</label>
+					<onup>206</onup>
+					<ondown>202</ondown>
+					<onleft>205</onleft>
+					<onright>50</onright>
+				</control>
 			</control>
 		</control>
 

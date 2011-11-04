@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<controls>
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<visible>control.isvisible(53)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(5051)">conditional</animation>
+			<!-- *** Section Summary *** -->
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<posX>408</posX>
+				<posY>-25</posY>
+				<width>948</width>
+				<height>790</height>
+				<texture>bg_facade.png</texture>
+				<visible>control.isvisible(53)</visible>
+			</control>
+			<!-- *** Processor Gauge *** -->
+			<control>
+				<description>Processor Gauge</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>470</posX>
+				<posY>40</posY>
+				<width>145</width>
+				<height>130</height>
+				<texture>#HTPCInfo.ProcessorGauge</texture>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+
+			<!-- *** Label Processor Gauge *** -->
+			<control>
+				<description>Processor Gauge Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>470</posX>
+				<posY>185</posY>
+				<width>145</width>
+				<label>#HTPCInfo.ProcessorCount processor core(s)</label>
+				<align>center</align>
+				<font>font12</font>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+
+			<!-- *** Processor Usage *** -->
+			<control>
+				<description>Processor Usage Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>66</posY>
+				<width>190</width>
+				<label>Usage</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+			<control>
+				<description>Processor Usage</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>65</posY>
+				<width>430</width>
+				<label>#HTPCInfo.ProcessorUsage% (CPU) / #HTPCInfo.GPUSensorUsage0% (GPU)</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+
+			<!-- *** Label Core Info *** -->
+			<control>
+				<description>Core Info Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>91</posY>
+				<width>190</width>
+				<label>Processor</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+			<control>
+				<description>Core Info</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>90</posY>
+				<width>430</width>
+				<label>#HTPCInfo.SensorTemperatureCPU / #HTPCInfo.SensorVoltageCPU / #HTPCInfo.SensorFanCPU0 / #HTPCInfo.ProcessorCurrentClock</label>
+				<align>left</align>
+				<font>font12</font>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+
+			<!-- *** Label Graphic Info *** -->
+			<control>
+				<description>Graphic Card Info Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>225</posY>
+				<label>Graphic Card</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+			<control>
+				<description>Graphic Card Info</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>224</posY>
+				<width>430</width>
+				<label>#HTPCInfo.GPUSensorTemperature0 / #HTPCInfo.GPUSensorVoltage0 / #HTPCInfo.GPUSensorFan0 / #HTPCInfo.GPUSensorClock0</label>
+				<font>font12</font>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+
+			<!-- *** Label Uptime Info *** -->
+			<control>
+				<description>Uptime Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>325</posY>
+				<label>Uptime</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+			<control>
+				<description>Uptime Value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>324</posY>
+				<width>430</width>
+				<label>#HTPCInfo.Uptime</label>
+				<font>font12</font>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+
+			<!-- *** Label Energy Consumption Info *** -->
+			<control>
+				<description>Energy Consumption Label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>830</posX>
+				<posY>355</posY>
+				<label>Energy Consumption</label>
+				<align>right</align>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+			<control>
+				<description>Energy Consumption Value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>840</posX>
+				<posY>355</posY>
+				<width>430</width>
+				<label>#HTPCInfo.EnergyConsumptionPower (#HTPCInfo.EnergyConsumptionCost)</label>
+				<font>font12</font>
+				<visible>control.IsVisible(53)</visible>
+			</control>
+		</control>
+
+	</controls>
+</window>

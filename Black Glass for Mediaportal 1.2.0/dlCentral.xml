@@ -5,8 +5,7 @@
 	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
 	<define>#header.label:#dlCentral.Header.Label</define>
 	<define>#header.background:hover_dlCentral.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<!-- 
 		This is the main subcentral skin file and should contain all screen elements that are common
@@ -54,32 +53,7 @@
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.time.xml</import>
-
-
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="fade" time="250">WindowOpen</animation>	
-			<animation effect="fade" time="150">WindowClose</animation>	
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<control>
-				<type>fadelabel</type>
-				<width>850</width>
-				<wrapString> : : : </wrapString>
-				<id>0</id>
-				<posX>30</posX>
-				<posY>10</posY>
-				<label>#header.label</label>
-				<font>font28</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(202)|control.hasfocus(203)|control.hasfocus(205)|control.hasfocus(204)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-		</control>
-
+		
 
 		<import>dlCentral.Main.xml</import>
 		<import>dlCentral.Search.xml</import>
