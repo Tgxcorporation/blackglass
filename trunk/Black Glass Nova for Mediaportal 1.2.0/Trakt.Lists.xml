@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>87275</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:#Trakt.Translation.Lists.Label</define>
+	<define>#header.background:hover_trakt.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>    
+		<import>common.window.xml</import>
+		<!-- <import>Trakt.Common.Fanart.xml</import> -->
+		<import>common.window.time.xml</import>
+		<import>Trakt.Common.Itemcount.xml</import>	
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+
+			<control>
+				<description>Backdrop Overlay - ListView</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>870</posX>
+				<posY>377</posY>
+				<width>1372</width>
+				<height>500</height>
+				<texture>bg_tvguide.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>897</posX>
+				<posY>395</posY>
+				<width>383</width>
+				<height>35</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>54</posY>
+				<font>font14</font>
+				<label>#Trakt.Lists.CurrentUser</label>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>Plot value</description>
+				<type>textboxscrollup</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>150</posY>
+				<width>420</width>
+				<height>354</height>
+				<label>#Trakt.List.Description</label>
+				<font>font16</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<seperator>: : :</seperator>
+			</control>
+
+		</control>
+
+
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>Movie List</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<posX>897</posX>
+					<width>383</width>
+					<posY>430</posY>
+					<height>300</height>
+					<textureHeight>49</textureHeight>
+					<font>font14</font>	
+					<font2>font10</font2>	
+					<font3>font10</font3>	
+					<spinWidth>30</spinWidth>
+					<spinHeight>30</spinHeight>
+					<spinPosX>1205</spinPosX>
+					<spinPosY>683</spinPosY>
+					<IconXOff>2010</IconXOff>
+					<IconYOff>7</IconYOff>
+					<textXOff>-50</textXOff>
+					<textYOff>1</textYOff>
+					<textXOff2>0</textXOff2>
+					<textYOff2>26</textYOff2>
+					<textXOff3>10</textXOff3>
+					<textYOff3>26</textYOff3>
+					<IconXOff>1298</IconXOff>
+					<IconYOff>41</IconYOff>
+					<!-- group headers -->
+					<textcolor2>90ffffff</textcolor2>
+				</control>
+			</control>
+		</control>
+
+
+	</controls>
+</window>
