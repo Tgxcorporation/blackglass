@@ -5,8 +5,7 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:HTPC Info</define>
 	<define>#header.background:hover_htpcinfo.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>		
@@ -28,8 +27,6 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<!-- *** Sections *** -->
 			<control>
@@ -82,6 +79,16 @@
 				<font>font12</font>
 				<visible>control.isvisible(54)</visible>
 			</control>
+			<control>
+				<description>Section Summary</description>
+				<type>label</type>
+				<id>55</id>
+				<posX>30</posX>
+				<posY>65</posY>
+				<label>#HTPCInfo.SectionName</label>
+				<font>font12</font>
+				<visible>control.isvisible(55)</visible>
+			</control>
 		</control>
 
 
@@ -92,6 +99,8 @@
 		<import>HTPCInfoOverview.xml</import>
 		<import>HTPCInfoDetails.xml</import>
 		<import>HTPCInfoGauges.xml</import>
+		<!-- <import>HTPCInfoProgressbars.xml</import> -->
+		<import>HTPCInfoSummary.xml</import>
 
 		<control>
 			<type>image</type>
@@ -102,7 +111,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
+			<visible>control.hasfocus(5051)</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -114,14 +123,14 @@
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
+			<visible>!control.hasfocus(5051)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -144,7 +153,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>924</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -211,7 +221,7 @@
 					<description>Safely remove hardware</description>
 					<type>button</type>
 					<id>9</id>
-					<label>Safely remove hardware</label>
+					<label>Safely remove</label>
 					<onup>4</onup>
 					<ondown>5</ondown>
 					<onright>5051</onright>
@@ -231,8 +241,17 @@
 					<id>7</id>
 					<label>Wake On LAN</label>
 					<onup>5</onup>
-					<ondown>6</ondown>
+					<ondown>10</ondown>
 					<onright>5051</onright>
+				</control>
+				<control>
+					<description>Create Restore Point</description>
+					<type>button</type>
+					<id>10</id>
+					<label>Create Restore Point</label>
+					<onup>9</onup>
+					<ondown>6</ondown>
+					<width>160</width>
 				</control>
 
 			</control>

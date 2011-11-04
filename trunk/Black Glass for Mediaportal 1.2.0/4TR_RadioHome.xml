@@ -5,63 +5,53 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:666</define>
 	<define>#header.background:hover_my radio.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
-		<import>common.window.time.xml</import>
 
-
-		<control>
-			<description>video window</description>
-			<type>videowindow</type>
-			<id>99</id>
-			<posX>487</posX>
-			<posY>113</posY>
-			<width>739</width>
-			<height>414</height>
-			<onleft>2</onleft>
-			<onright>2</onright>
-			<action>18</action>
-			<textureFocus>tv_green_border.png</textureFocus>
-			<animation effect="fade" time="250" delay="150">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="125">WindowClose</animation>
-		</control>
-		<control>
-			<description>TV background</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>440</posX>
-			<posY>70</posY>
-			<width>828</width>
-			<height>562</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<texture>TVCase.png</texture>
-			<animation effect="fade" time="250" delay="150">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="125">WindowClose</animation>
-		</control>
-		<control>
-			<description>Channel Image</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>790</posX>
-			<posY>270</posY>
-			<width>133</width>
-			<height>100</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#Radio.View.thumb</texture>
-			<animation effect="fade" time="250" delay="300">WindowOpen</animation>
-			<animation effect="fade" time="250" delay="0">WindowClose</animation>
-		</control>
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false" condition="!player.hasmedia">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false" condition="!player.hasmedia">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]">conditional</animation>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control> 
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#infoservice.weather.today.temp     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>15</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
 			<control>
 				<type>fadelabel</type>
 				<width>850</width>
@@ -73,69 +63,186 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>control.hasfocus(99)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
-				<description>Current program title</description>
+				<description>REAL Current program title</description>
 				<type>fadelabel</type>
 				<id>13</id>
 				<posX>30</posX>
-				<posY>130</posY>
-				<width>410</width>
+				<posY>75</posY>
+				<width>360</width>
+				<font>font22</font>
 				<label>#Radio.View.title</label>
-				<font>font20</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<wrapString> : : : </wrapString>
+			</control> 
+			<control>
+				<description>Current channel</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>118</posY>
+				<width>360</width>
+				<font>font22</font>
+				<label>#Radio.View.channel</label>
 				<align>left</align>
-				<textcolor>White</textcolor>
-				<width>350</width>
-				<visible>control.hasfocus(99)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Current program time</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>168</posY>
+				<width>360</width>
+				<label>#Radio.View.start - #Radio.View.stop</label>
+				<textcolor>ffffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>genre</description>
+				<type>label</type>
+				<id>17</id>
+				<posX>30</posX>
+				<posY>205</posY>
+				<label>#Radio.Search.Genre</label>
+				<textcolor>90ffffff</textcolor>
 			</control>
 			<control>
 				<description>Description1</description>
 				<type>textboxscrollup</type>
 				<id>15</id>
 				<posX>30</posX>
-				<posY>230</posY>
-				<width>350</width>
-				<height>330</height>
+				<posY>240</posY>
+				<width>360</width>
+				<height>443</height>
 				<label>#Radio.View.description</label>
 				<font>font16</font>
-				<textcolor>White</textcolor>
-				<visible>control.hasfocus(99)</visible>
+				<textcolor>FFFFFFFF</textcolor>
 				<seperator>: : :</seperator>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
-				<description>Play info label</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>30</posX>
-				<posY>88</posY>
-				<width>360</width>
-				<label>#Radio.View.channel</label>
-				<font>font20</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-				<visible>control.hasfocus(99)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<description>video window</description>
+				<type>videowindow</type>
+				<id>99</id>
+				<posX>486</posX>
+				<posY>113</posY>
+				<width>740</width>
+				<height>414</height>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<action>18</action>
+				<textureFocus>tv_green_border.png</textureFocus>	
+				<animation effect="fade" time="250" delay="150">WindowOpen</animation>
+				<animation effect="fade" time="250" delay="0">WindowClose</animation>
+				<animation effect="fade" time="250" delay="150">visible</animation>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
 			</control>
 			<control>
-				<description>Play info label</description>
-				<type>fadelabel</type>
+				<description>TV background</description>
+				<type>image</type>
 				<id>1</id>
-				<width>350</width>
-				<height>50</height>
-				<posX>30</posX>
-				<posY>180</posY>
-				<label>#Radio.View.start - #Radio.View.stop</label>
-				<align>left</align>
-				<font>font20</font>
-				<textcolor>90ffffff</textcolor>
-				<visible>control.hasfocus(99)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<posX>440</posX>
+				<posY>70</posY>
+				<width>828</width>
+				<height>562</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<texture>TVCase.png</texture>
+				<animation effect="fade" time="250" delay="150">WindowOpen</animation>
+				<animation effect="fade" time="250" delay="0">WindowClose</animation>
 			</control>
+			<control>
+				<type>group</type>
+				<dimColor>ffffffff</dimColor>
+				<visible>!player.hasmedia</visible>
+				<animation effect="fade" time="250" delay="0">visiblechange</animation>
+				<control>
+					<description>Progress background</description>
+					<type>image</type>
+					<id>1</id>
+					<posX>486</posX>
+					<posY>493</posY>
+					<width>739</width>
+					<texture>osd_progress_background.png</texture>
+				</control>
+				<control>
+					<description>progress bar</description>
+					<type>progress</type>
+					<id>20</id>
+					<posX>474</posX>
+					<posY>493</posY>
+					<width>763</width>
+					<label>#Radio.View.Percentage</label>
+				</control>  
+				<control>
+					<description>Current program time</description>
+					<type>label</type>
+					<id>1</id>
+					<posX>496</posX>
+					<posY>498</posY>
+					<width>360</width>
+					<label>#Radio.View.start</label>
+					<font>font14</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowAngle>315</shadowAngle>
+					<shadowDistance>1</shadowDistance>
+					<shadowColor>FF000000</shadowColor>
+				</control>
+				<control>
+					<description>Current program time</description>
+					<type>label</type>
+					<id>1</id>
+					<posX>1215</posX>
+					<posY>498</posY>
+					<width>360</width>
+					<label>#Radio.View.stop</label>
+					<font>font14</font>
+					<align>right</align>
+					<textcolor>ffffffff</textcolor>
+					<shadowAngle>315</shadowAngle>
+					<shadowDistance>1</shadowDistance>
+					<shadowColor>FF000000</shadowColor>
+				</control>
+				<control>
+					<description>Channel Image</description>
+					<type>image</type>
+					<id>1</id>
+					<posX>790</posX>
+					<posY>270</posY>
+					<width>133</width>
+					<height>100</height>
+					<keepaspectratio>yes</keepaspectratio>
+					<centered>yes</centered>
+					<texture flipY="true" diffuse="Thumb_Mask.png">#Radio.View.thumb</texture>
+				</control>
+				<control>
+					<description>background up</description>
+					<id>0</id>
+					<type>image</type>
+					<posX>486</posX>
+					<posY>113</posY>
+					<width>739</width>
+					<texture>osd_progress_background2.png</texture>
+				</control>
+				<control>
+					<description>Current program name</description>
+					<type>fadelabel</type>
+					<id>1</id>
+					<posX>496</posX>
+					<posY>118</posY>
+					<width>719</width>
+					<label>#Radio.View.title</label>
+					<font>font14</font>
+					<textcolor>ffffffff</textcolor>
+					<shadowAngle>45</shadowAngle>
+					<shadowDistance>1</shadowDistance>
+					<shadowColor>FF000000</shadowColor>
+				</control>
+			</control>
+
 		</control>
+
 
 		<control>
 			<type>image</type>
@@ -146,7 +253,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -165,7 +272,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -188,7 +295,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>924</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -213,7 +321,7 @@
 					<type>button</type>
 					<id>2</id>
 					<label>TV Guide</label>
-					<onup>8</onup>
+					<onup>17</onup>
 					<ondown>3</ondown>
 				</control>
 				<control>
@@ -266,93 +374,38 @@
 					<onup>7</onup>
 					<ondown>2</ondown>
 				</control>
-				<!--<control>
-        <description>Schedules</description>
-        <type>button</type>
-        <id>6</id>
-        <label>Schedules</label>
-        <onup>5</onup>
-        <ondown>2</ondown>
-      </control>-->
-
 			</control>
 		</control>
 
 
 		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>51</id>
+			<posX>1180</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
+		
+		<!-- NOT USED -->
+
+		<control>
 			<description>record pin</description>
 			<type>image</type>
 			<id>24</id>
-			<posX>2462</posX>
-			<posY>531</posY>
+			<posX>1460</posX>
+			<posY>529</posY>
 			<texture>tvguide_record_button.png</texture>
-			<visible>no</visible>
+			<visible>no</visible>			
 		</control>
 
-		<!--  <control>
-      <description>Channel label</description>
-      <type>label</type>
-      <id>13</id>
-      <posX>205</posX>
-      <posY>575</posY>
-      <label>602</label>
-      <font>font13</font>
-      <align>left</align>
-      <textcolor>FFB2D4F5</textcolor>
-      <animation effect="fade" time="250">WindowOpen</animation>
-      <animation effect="fade" time="250">WindowClose</animation>
-    </control> -->
-
-		<!--  <control>
-      <description>Progress background</description>
-      <type>image</type>
-      <id>1</id>
-      <posX>533</posX>
-      <posY>471</posY>
-      <width>622</width>
-      <height>30</height>
-      <texture>osd_progress_background.png</texture>
-      <animation effect="fade" time="250">WindowOpen</animation>
-      <animation effect="fade" time="250">WindowClose</animation>
-    </control>
-    <control>
-      <description>progress bar</description>
-      <type>progress</type>
-      <id>20</id>
-      <posX>527</posX>
-      <posY>472</posY>
-      <width>640</width>
-      <height>31</height>
-      <label>#Radio.View.Percentage</label>
-      <visible>yes</visible>
-      <animation effect="fade" time="250">WindowOpen</animation>
-      <animation effect="fade" time="250">WindowClose</animation>
-    </control>
-    <control>
-      <type>label</type>
-      <description>track progress label</description>
-      <id>0</id>
-      <posX>1155</posX>
-      <posY>531</posY>
-      <label>#currentplaytime</label>
-      <font>font14</font>
-      <align>left</align>
-      <textcolor>80ffffff</textcolor>
-      <animation effect="fade" time="250">WindowOpen</animation>
-    </control> -->
-		<!--     <control>
-      <description>rectangle</description>
-      <type>image</type>
-      <id>21</id>
-      <posX>85</posX>
-      <posY>420</posY>
-      <width>90</width>
-      <height>90</height>
-      <texture>tv_background.png</texture>
-      <colorkey>0</colorkey>
-      <colordiffuse>White</colordiffuse>
-      <animation effect="fade" time="250">WindowOpen</animation>
-      <animation effect="fade" time="250">WindowClose</animation>
-    </control> -->
+	
 	</controls>
 </window>

@@ -6,24 +6,35 @@
 	<define>#header.label:YouTube.fm</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_youtubefm.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.music.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
-		<!-- <import>common.window.accessories.xml</import> -->
 		<import>common.window.time.xml</import>
-		<import>common.facade.background.xml</import>
-		<import>common.facade.itemcount.xml</import>
 		<import>common.facade.pictures.xml</import>
+		<import>common.facade.dummy.xml</import>  
+
+
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>850</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
 			<control>
 				<type>fadelabel</type>
 				<id>100</id>
@@ -35,8 +46,7 @@
 				<textcolor>White</textcolor>
 				<width>400</width>
 				<wrapString> : : : </wrapString>
-				<visible>control.hasfocus(50)</visible>		
-				<animation effect="fade" time="250">visiblechange</animation>
+				<animation effect="fade" time="250">visible</animation>
 			</control>
 
 
@@ -49,8 +59,8 @@
 				<height>255</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[control.hasfocus(50)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 				<centered>yes</centered>
 			</control>
 			<control>
@@ -61,8 +71,8 @@
 				<width>360</width>
 				<height>273</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[control.hasfocus(50)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 			<control>
 				<type>imagelist</type>
@@ -81,8 +91,8 @@
 				<align>left</align>
 				<imagesToDraw>5</imagesToDraw>
 				<percentage>#Youtube.fm.Curent.Video.Rating</percentage>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[control.hasfocus(50)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control> 
 			<control>
 				<type>fadelabel</type>
@@ -93,34 +103,10 @@
 				<width>360</width>
 				<font>font22</font>
 				<label>#selecteditem</label>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[control.hasfocus(50)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<!-- 		<control>
-			<description>title2</description>
-			<type>label</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>465</posY>
-			<width>350</width>
-			<label>#Youtube.fm.Current.Video.PublishDate</label>
-			<textcolor>90ffffff</textcolor>
-			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[control.hasfocus(50)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control> 
-		<control>
-			<description>title2</description>
-			<type>fadelabel</type>
-			<id>1</id>
-			<posX>30</posX>
-			<posY>500</posY>
-			<width>350</width>
-			<label>Published by #Youtube.fm.Curent.Video.Autor</label>
-			<textcolor>ffffffff</textcolor>
-			<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[control.hasfocus(50)]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>-->
 			<control>
 				<description>title2</description>
 				<type>fadelabel</type>
@@ -128,40 +114,29 @@
 				<posX>30</posX>
 				<posY>465</posY>
 				<width>350</width>
-				<label>Loved by #Youtube.fm.Curent.Video.FavoriteCount Users</label>
+				<label>#selecteditem2</label>
 				<textcolor>90ffffff</textcolor>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[control.hasfocus(50)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
-				<description>title2</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>30</posX>
-				<posY>500</posY>
-				<width>350</width>
-				<label>Viewed by #Youtube.fm.Curent.Video.ViewCount Users</label>
-				<textcolor>ffffffff</textcolor>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[control.hasfocus(50)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-				<wrapString> : : : </wrapString>
+				<type>textboxscrollup</type>
+				<description>Selected item Label</description>
+				<id>0</id>
+				<posX>38</posX>
+				<posY>651</posY>
+				<width>1220</width>
+				<font>font24</font>
+				<height>45</height>
+				<textalign>center</textalign>
+				<label>#selecteditem</label>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+				<animation effect="fade" time="150">WindowClose</animation>	
 			</control>
 		</control>
-		<!-- 		<control>
-			<description>Description</description>
-			<type>textboxscrollup</type>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>470</posY>
-			<width>355</width>
-			<height>225</height>
-			<colordiffuse>ffffffff</colordiffuse>
-			<font>font14</font>
-			<label>#OnlineVideos.desc</label>
-			<textcolor>White</textcolor>
-			<visible>[facadeview.list|facadeview.album]+[control.hasfocus(50)]</visible>
-		</control> -->
+
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -171,7 +146,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(106)]</visible>
+			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -183,14 +158,14 @@
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(106)]</visible>
+			<visible>!control.hasfocus(50)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -213,7 +188,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>924</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -233,22 +209,13 @@
 				<posX>0</posX>
 				<posY>100</posY>
 				<control>
-					<description>Home</description>
-					<type>button</type>
-					<id>2</id>
-					<label>Views</label>
-					<onright>50</onright>
-					<onup>106</onup>
-					<ondown>5</ondown>
-				</control>
-				<control>
 					<description>Search Button</description>
 					<type>button</type>
 					<id>5</id>
 					<label>Search</label>
 					<onright>50</onright>
 					<ondown>6</ondown>
-					<onup>2</onup>
+					<onup>17</onup>
 				</control>
 				<control>
 					<description>Search History</description>
@@ -266,6 +233,15 @@
 					<label/>
 					<onright>50</onright>
 					<onup>6</onup>
+					<ondown>2</ondown>
+				</control>
+				<control>
+					<description>Home</description>
+					<type>button</type>
+					<id>2</id>
+					<label>Views</label>
+					<onright>50</onright>
+					<onup>3</onup>
 					<ondown>7</ondown>
 				</control>
 				<control>
@@ -274,7 +250,7 @@
 					<id>7</id>
 					<label>Playlist</label>
 					<onright>50</onright>
-					<onup>3</onup>
+					<onup>2</onup>
 					<ondown>8</ondown>
 				</control>
 				<control>

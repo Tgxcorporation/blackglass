@@ -5,8 +5,7 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_score center.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 
@@ -87,7 +86,7 @@
 		</control>
 
 		<import>common.window.overlay.xml</import>		
-		<import>common.window.time.xml</import>
+		<import>common.window.time.basic.xml</import>
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
@@ -154,73 +153,61 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<control>
-				<type>fadelabel</type>
-				<width>850</width>
-				<wrapString> : : : </wrapString>
-				<id>0</id>
-				<posX>30</posX>
-				<posY>10</posY>
-				<label>#header.label</label>
-				<font>font28</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-			</control>
-			<control>
-				<description>Current Category</description>
-				<type>image</type>
+				<description>Live Status</description>
+				<type>label</type>
 				<posX>465</posX>
 				<posY>10</posY>
-				<width>50</width>
-				<height>50</height>
-				<texture>#ScoreCenter.CatIco</texture>
-				<keepaspectratio>yes</keepaspectratio>
-				<centered>yes</centered>
+				<width>200</width>
+				<font>font12</font>
+				<label>#ScoreCenter.Live</label>
 			</control>
 			<control>
-				<description>Current League Image</description>
+				<description>Current Image1</description>
 				<type>image</type>
-				<posX>525</posX>
-				<posY>10</posY>
-				<width>50</width>
-				<height>50</height>
-				<texture>#ScoreCenter.LIco</texture>
+				<posX>465</posX>
+				<posY>38</posY>
+				<width>25</width>
+				<height>25</height>
+				<texture>#ScoreCenter.Ico1</texture>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 			</control>
 			<control>
-				<description>Current Score Image</description>
+				<description>Current Image2</description>
+				<type>image</type>
+				<posX>505</posX>
+				<posY>38</posY>
+				<width>25</width>
+				<height>25</height>
+				<texture>#ScoreCenter.Ico2</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<description>Current Image3</description>
+				<type>image</type>
+				<posX>545</posX>
+				<posY>38</posY>
+				<width>25</width>
+				<height>25</height>
+				<texture>#ScoreCenter.Ico3</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<description>Current Image4</description>
 				<type>image</type>
 				<posX>585</posX>
-				<posY>10</posY>
-				<width>50</width>
-				<height>50</height>
-				<texture>#ScoreCenter.ScoreIco</texture>
+				<posY>38</posY>
+				<width>25</width>
+				<height>25</height>
+				<texture>#ScoreCenter.Ico4</texture>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 			</control>
 
-			<!--
-    <control>
-      <description>Current Category</description>
-      <type>label</type>
-      <posX>10</posX>
-      <posY>70</posY>
-      <label>#ScoreCenter.Category</label>
-      <font>font14</font>
-      <align>left</align>
-      <textcolor>ffffffff</textcolor>
-    </control>
-    <control>
-      <description>Current League</description>
-      <type>label</type>
-      <posX>10</posX>
-      <posY>100</posY>
-      <label>#ScoreCenter.League</label>
-      <font>font14</font>
-      <align>left</align>
-      <textcolor>ffffffff</textcolor>
-    </control>
-    -->
+
+
 			<control>
 				<type>image</type>
 				<posX>408</posX>
@@ -248,7 +235,7 @@
 				<font>font20</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
-				<width>750</width>
+				<width>680</width>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>

@@ -2,15 +2,13 @@
 <window>
 	<id>5000</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<allowoverlay>player.hasmedia</allowoverlay>
 	<define>#header.label:#MyAlarm.Translation.Alarm.Label</define>
 	<define>#header.background:hover_my alarm.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
 		<import>common.window.time.xml</import>
 
 
@@ -53,6 +51,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>850</width>
@@ -64,8 +63,6 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<!--Time Controls-->
 			<control>
@@ -77,7 +74,7 @@
 				<wrapString> : : : </wrapString>
 				<font>font18</font>
 				<label>#MyAlarm.Translation.AlarmEnabled.Label</label>
-				<visible>control.isvisible(61)+!control.isvisible(64)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>control.isvisible(61)+!control.isvisible(64)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -89,7 +86,7 @@
 				<wrapString> : : : </wrapString>
 				<font>font18</font>
 				<label>#MyAlarm.Translation.AlarmEnabled.Label (#MyAlarm.Translation.SnoozeActive.Label @ #MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime)</label>
-				<visible>control.isvisible(61)+control.isvisible(64)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>control.isvisible(61)+control.isvisible(64)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
@@ -102,7 +99,7 @@
 				<wrapString> : : : </wrapString>
 				<font>font18</font>
 				<label>#MyAlarm.Translation.AlarmDisabled.Label</label>
-				<visible>!control.isvisible(61)+!control.isvisible(64)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>!control.isvisible(61)+!control.isvisible(64)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -114,7 +111,7 @@
 				<wrapString> : : : </wrapString>
 				<font>font18</font>
 				<label>#MyAlarm.Translation.AlarmDisabled.Label (#MyAlarm.Translation.SnoozeActive.Label @ #MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime)</label>
-				<visible>!control.isvisible(61)+control.isvisible(64)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>!control.isvisible(61)+control.isvisible(64)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
@@ -130,7 +127,7 @@
 				<font>font18</font>
 				<textcolor>90ffffff</textcolor>
 				<label>#MyAlarm.Translation.AlarmTime.Label: #MyAlarm.SelectedAlarm.Time.shorttime</label>
-				<visible>control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
@@ -145,7 +142,7 @@
 				<wrapString> : : : </wrapString>
 				<font>font18</font>
 				<label>#MyAlarm.Translation.AlarmDate.Label: #MyAlarm.SelectedAlarm.Time.shortdate</label>
-				<visible>!control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>!control.isvisible(62)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
@@ -160,7 +157,7 @@
 				<wrapString> : : : </wrapString>
 				<font>font18</font>
 				<label>#MyAlarm.Translation.EnabledOnTheseDays.Label: #MyAlarm.SelectedAlarm.Mon.ShortLocalized #MyAlarm.SelectedAlarm.Tue.ShortLocalized #MyAlarm.SelectedAlarm.Wed.ShortLocalized #MyAlarm.SelectedAlarm.Thu.ShortLocalized #MyAlarm.SelectedAlarm.Fri.ShortLocalized #MyAlarm.SelectedAlarm.Sat.ShortLocalized #MyAlarm.SelectedAlarm.Sun.ShortLocalized</label>
-				<visible>control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>control.isvisible(62)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<!-- 		<control>
@@ -244,7 +241,7 @@
 				<font>font18</font>
 				<textcolor>90ffffff</textcolor>
 				<label>#MyAlarm.Translation.MediaType.Label: #MyAlarm.SelectedAlarm.MediaType.localized</label>
-				<visible>!control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>!control.isvisible(62)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<!-- 		<control>
@@ -267,7 +264,7 @@
 				<width>685</width>
 				<wrapString> : : : </wrapString>
 				<font>font18</font>
-				<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,File)+!control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,File)+!control.isvisible(62)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -280,7 +277,7 @@
 				<width>685</width>
 				<wrapString> : : : </wrapString>
 				<font>font18</font>
-				<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Playlist)+!control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Playlist)+!control.isvisible(62)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -294,7 +291,7 @@
 				<height>112</height>
 				<seperator>: : :</seperator>
 				<font>font18</font>
-				<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Message)+!control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Message)+!control.isvisible(62)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
@@ -309,7 +306,7 @@
 				<font>font18</font>
 				<label>#MyAlarm.Translation.MediaType.Label: #MyAlarm.SelectedAlarm.MediaType.localized</label>
 				<textcolor>90ffffff</textcolor>
-				<visible>control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>control.isvisible(62)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<!-- <control>
@@ -333,7 +330,7 @@
 				<wrapString> : : : </wrapString>
 				<font>font18</font>
 				<label>#MyAlarm.SelectedAlarm.Sound</label>
-				<visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,File)+control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,File)+control.isvisible(62)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -346,7 +343,7 @@
 				<wrapString> : : : </wrapString>
 				<font>font18</font>
 				<label>#MyAlarm.SelectedAlarm.Playlist</label>
-				<visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,Playlist)+control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,Playlist)+control.isvisible(62)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -360,7 +357,7 @@
 				<seperator>: : :</seperator>
 				<font>font18</font>
 				<label>#MyAlarm.SelectedAlarm.Message</label>
-				<visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,Message)+control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
+				<visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,Message)+control.isvisible(62)+control.isvisible(63)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
@@ -427,7 +424,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
+			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -439,14 +436,14 @@
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(2)|control.hasfocus(4)]</visible>
+			<visible>!control.hasfocus(50)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -469,7 +466,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>924</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>

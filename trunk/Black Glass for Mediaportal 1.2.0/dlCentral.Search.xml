@@ -9,6 +9,54 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>850</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control> 
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#infoservice.weather.today.temp     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>15</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -34,7 +82,6 @@
 				<id>0</id>
 				<posX>510</posX>
 				<posY>665</posY>
-				<label>#itemcount</label>
 				<font>font16</font>
 				<label>#itemcount</label>
 				<align>left</align>
@@ -81,6 +128,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
 			<control>
 				<description>Cover Art</description>
 				<type>image</type>
@@ -91,7 +139,7 @@
 				<width>245</width> 
 				<height>348</height> 
 				<texture flipY="true" diffuse="Thumb_Mask.png">#dlCentral.Search.Media.Thumb</texture>
-				<visible>Control.isvisible(102)+ control.hasfocus(50)</visible>
+				<visible>Control.isvisible(102)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -103,7 +151,7 @@
 				<width>283</width>
 				<height>360</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-				<visible>Control.isvisible(102)+ control.hasfocus(50)</visible>
+				<visible>Control.isvisible(102)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
@@ -114,7 +162,7 @@
 				<id>0</id>
 				<description>TVSeries Media Title</description>
 				<type>fadelabel</type>
-				<visible>control.isvisible(102)+string.equals(#dlCentral.Search.SearchType.Type,TVSHOW)+ control.hasfocus(50)</visible>
+				<visible>control.isvisible(102)+string.equals(#dlCentral.Search.SearchType.Type,TVSHOW)</visible>
 				<posX>30</posX>
 				<posY>460</posY>
 				<width>420</width>
@@ -127,7 +175,7 @@
 				<id>0</id>
 				<description>Media File(s)</description>
 				<type>fadelabel</type>
-				<visible>control.isvisible(102)+string.equals(#dlCentral.Search.SearchType.Type,TVSHOW)+ control.hasfocus(50)</visible>
+				<visible>control.isvisible(102)+string.equals(#dlCentral.Search.SearchType.Type,TVSHOW)</visible>
 				<posX>30</posX>
 				<posY>505</posY>
 				<width>420</width>

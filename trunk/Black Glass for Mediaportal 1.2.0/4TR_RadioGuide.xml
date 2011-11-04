@@ -5,13 +5,11 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:533</define>
 	<define>#header.background:hover_my radio.png</define>
-	<animation effect="fade" time="250">WindowClose</animation>
-	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="slide" tween="circle" easing="out" time="200" start="1280,0" reversible="false">WindowOpen</animation>
+	<animation effect="slide" tween="circle" time="150" end="1500,0" reversible="false">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
-		<import>common.window.time.xml</import>
 		<control>
 			<type>fadelabel</type>
 			<width>850</width>
@@ -24,8 +22,10 @@
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
 		</control>
+		<import>common.window.time.stripped.xml</import>
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>-5</posX>
 			<posY>48</posY>
 			<width>1299</width>
@@ -47,26 +47,29 @@
 			<description>Single Channel View Label</description>
 			<type>label</type>
 			<id>32</id>
-			<posX>450</posX>
-			<posY>10</posY>
-			<font>font28</font>
+			<posX>26</posX>
+			<posY>399</posY>
+			<font>font18</font>
 			<align>left</align>
 			<textcolor>60FFFFFF</textcolor>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Single Channel View Image</description>
 			<type>image</type>
 			<id>33</id>
-			<posX>367</posX>
-			<posY>10</posY>
+			<posX>21</posX>
+			<posY>426</posY>
 			<width>70</width>
-			<height>52</height>
+			<height>44</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
-			<centered>yes</centered>
-			<texture>defaultAudioBig.png</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<texture>DefaultMyradioBig.png</texture>
+			<align>left</align>
+			<valign>top</valign>
+			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
 		<!-- Timeheader background must be dedfined before Timeheader label template -->
 		<!-- b/c Timeheader is on the background and will be rendered first -->
@@ -144,7 +147,7 @@
 			<height>35</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
-			<texture>defaultAudio.png</texture>
+			<texture>DefaultMyradio.png</texture>
 			<centered>yes</centered>
 		</control>
 		<control>
@@ -190,17 +193,17 @@
 			<posX>10</posX>
 			<posY>5</posY>
 		</control>
-		<!-- <control>
+		<control>
 			<description>TvGroup button</description>
 			<type>button</type>
 			<id>100</id>
-			<posX>22</posX>
-			<posY>128</posY>
-			<width>43</width>
-			<height>343</height>
+			<posX>21</posX>
+			<posY>129</posY>
+			<width>45</width>
+			<height>342</height>
 			<textureNoFocus>tvguide_button_group_nofocus.png</textureNoFocus>
 			<textureFocus>tvguide_button_group_focus.png</textureFocus>
-			<label></label>
+			<label/>
 			<onleft>60</onleft>
 			<onright>6</onright>
 			<onup>6</onup>
@@ -213,23 +216,11 @@
 			<posX>28</posX>
 			<posY>460</posY>
 			<label>#Radio.Guide.ChangeGroup</label>
-			<textcolor>90FFFFFF</textcolor>
-			<align>left</align>
-			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
-		</control>
-		<control>
-			<description>TvGroup button label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>28</posX>
-			<posY>460</posY>
-			<label>#Radio.Guide.ChangeGroup</label>
 			<textcolor>ffFFFFFF</textcolor>
 			<align>left</align>
 			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
 			<animation effect="rotate" end="90" time="0">WindowClose</animation>
-			<visible>control.hasfocus(100)</visible>
-		</control> -->
+		</control>
 
 		<!-- <control>
 			<description>template for program running button</description>

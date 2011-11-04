@@ -10,17 +10,110 @@
 			<height>320</height>
 			<texture>gradient.png</texture>
 			<visible>[facadeview.coverflow|facadeview.filmstrip]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="150">WindowOpen</animation>
 			<animation effect="fade" time="150">WindowClose</animation>	
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>group element</description>
 			<type>group</type>
+			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="191,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.list+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>47</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>facadeview.list+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+				<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>47</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.playlist+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>47</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>facadeview.playlist+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.album+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>47</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>facadeview.album+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -32,11 +125,8 @@
 					<onleft>2</onleft>
 					<onright>2</onright>
 					<scrollOffset>2</scrollOffset>
-					<visible>!String.Equals(#OnlineVideos.state,details)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="400,0" reversible="false">visible</animation>
-					<animation effect="slide" tween="circle" easing="out" time="200" end="400,0" reversible="false">hidden</animation>
-					<animation effect="fade" time="250">visible</animation>
-					<animation effect="fade" time="150">hidden</animation>	
+					<visible>control.isvisible(745381)+!String.Equals(#OnlineVideos.state,details)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 				</control>
 				<control>
 					<description>Thumbnail Panel</description>
@@ -80,12 +170,57 @@
 					<frameNoFocus>PictureCase.png</frameNoFocus> 
 					<frameFocus>PictureCase.png</frameFocus> 	
 					<keepaspectratio>yes</keepaspectratio>
-					<visible>!String.Equals(#OnlineVideos.state,details)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="800,0" reversible="false">visible</animation>
-					<animation effect="slide" tween="circle" easing="out" time="200" end="800,0" reversible="false">hidden</animation>
-					<animation effect="fade" time="250">visible</animation>
-					<animation effect="fade" time="150">hidden</animation>	
+					<visible>[control.isvisible(745382)|control.isvisible(745383)]+!String.Equals(#OnlineVideos.state,details)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 				</control>     
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>665</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>665</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>facadeview.album+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>665</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>facadeview.playlist+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>665</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 			</control>
 		</control>
 	</controls>

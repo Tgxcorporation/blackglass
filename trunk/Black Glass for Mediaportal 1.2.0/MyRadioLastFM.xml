@@ -7,14 +7,11 @@
 	<define>#selecteditem:#Play.Current.Lastfm.CurrentStream</define>
 	<define>#usePlayFanart:Yes</define>
 	<define>#header.background:hover_LastFmRadio.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.music.play.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
-		<import>common.window.time.xml</import>
 		<control>
 			<description>Progress background</description>
 			<type>image</type>
@@ -90,6 +87,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(123)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>850</width>
@@ -101,8 +99,41 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>		
-				<animation effect="fade" time="250">visiblechange</animation>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control> 
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#infoservice.weather.today.temp     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(InfoService)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>15</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -115,8 +146,6 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Current.ArtistThumb</texture>
-				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 				<zoom>yes</zoom>
 			</control>
 			<control>
@@ -128,8 +157,6 @@
 				<width>360</width>
 				<height>327</height>
 				<colordiffuse>ffffffff</colordiffuse>
-				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
 			</control>
 			<control>
@@ -142,7 +169,7 @@
 				<font>font22</font>
 				<label>#Play.Current.Title</label>
 				<wrapString> : : : </wrapString>
-				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+				<visible>player.hasmedia</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
@@ -154,152 +181,126 @@
 				<label>#Play.Current.Artist : : : #Play.Current.Album</label>
 				<textcolor>ffffffff</textcolor>
 				<wrapString> : : : </wrapString>
-				<visible>player.hasmedia+![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+				<visible>player.hasmedia</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 		</control>
 
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>459</posX>
-			<posY>52</posY>
-			<width>900</width>
-			<height>645</height>
-			<texture>bg_facade.png</texture>
-			<visible>player.hasmedia</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>490</posX>
-			<posY>92</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>player.hasmedia</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>490</posX>
-			<posY>537</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>player.hasmedia</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>image</type>
-			<posX>490</posX>
-			<posY>498</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>player.hasmedia</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
 			<type>group</type>
-			<description>group element</description>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<visible>player.hasmedia</visible>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(123)">conditional</animation>
 			<control>
-				<type>listcontrol</type>
-				<description>current playlist control</description>
-				<posY>145</posY>
-				<id>123</id>
-				<onleft>10</onleft>
-				<onright>123</onright>
-				<height>460</height>
+				<type>image</type>
+				<id>0</id>
+				<posX>459</posX>
+				<posY>52</posY>
+				<width>900</width>
+				<height>645</height>
+				<texture>bg_facade.png</texture>
 			</control>
-		</control>
-		<control>
-			<type>label</type>
-			<description>Similar Track</description>
-			<posX>500</posX>
-			<posY>94</posY>
-			<width>350</width>
-			<label>33011</label>
-			<font>font22</font>
-			<visible>player.hasmedia</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>similar hint</description>
-			<id>443</id>
-			<posX>500</posX>
-			<posY>557</posY>
-			<label>34039</label>
-			<font>font14</font>
-			<align>left</align>
-			<visible>control.hastext(444)+player.hasmedia</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>        
-		<control>
-			<type>textbox</type>
-			<description>Similar artists box</description>
-			<id>444</id>
-			<posX>500</posX>
-			<posY>596</posY>
-			<width>373</width>
-			<label>#Play.Current.Lastfm.SimilarArtists</label>
-			<font>font12</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-			<visible>player.hasmedia</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>label</type>
-			<description>tag hint</description>
-			<id>332</id>
-			<posX>896</posX>
-			<posY>557</posY>
-			<label>34041</label>
-			<font>font14</font>
-			<align>left</align>
-			<visible>control.hastext(333)+player.hasmedia</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>         
-		<control>
-			<type>textbox</type>
-			<description>Track tags box</description>
-			<id>333</id>
-			<posX>896</posX>
-			<posY>596</posY>
-			<width>353</width>
-			<label>#Play.Current.Lastfm.TrackTags</label>
-			<font>font12</font>
-			<align>left</align>
-			<textcolor>90ffffff</textcolor>
-			<visible>player.hasmedia</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<posX>490</posX>
+				<posY>92</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>490</posX>
+				<posY>537</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>490</posX>
+				<posY>498</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<control>
+					<id>123</id>
+					<type>listcontrol</type>
+					<description>current playlist control</description>
+					<posY>145</posY>
+					<onleft>10</onleft>
+					<onright>123</onright>
+					<height>460</height>
+				</control>
+			</control>
+			<control>
+				<type>label</type>
+				<description>Similar Track</description>
+				<posX>500</posX>
+				<posY>94</posY>
+				<width>350</width>
+				<label>33011</label>
+				<font>font22</font>
+			</control>
+			<control>
+				<type>label</type>
+				<description>similar hint</description>
+				<id>443</id>
+				<posX>500</posX>
+				<posY>557</posY>
+				<label>34039</label>
+				<font>font14</font>
+				<align>left</align>
+				<visible>control.hastext(444)+player.hasmedia</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			</control>        
+			<control>
+				<type>textbox</type>
+				<description>Similar artists box</description>
+				<id>444</id>
+				<posX>500</posX>
+				<posY>596</posY>
+				<width>373</width>
+				<label>#Play.Current.Lastfm.SimilarArtists</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<type>label</type>
+				<description>tag hint</description>
+				<id>332</id>
+				<posX>896</posX>
+				<posY>557</posY>
+				<label>34041</label>
+				<font>font14</font>
+				<align>left</align>
+				<visible>control.hastext(333)+player.hasmedia</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			</control>         
+			<control>
+				<type>textbox</type>
+				<description>Track tags box</description>
+				<id>333</id>
+				<posX>896</posX>
+				<posY>596</posY>
+				<width>353</width>
+				<label>#Play.Current.Lastfm.TrackTags</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+				<visible>player.hasmedia</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visiblechange</animation>
+			</control>
 		</control>
 
 
@@ -312,7 +313,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+			<visible>control.hasfocus(123)</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -324,14 +325,14 @@
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>control.hasfocus(10)|control.hasfocus(15)|control.hasfocus(20)|control.hasfocus(30)|control.hasfocus(35)|control.hasfocus(40)|control.hasfocus(13)|control.hasfocus(14)</visible>
+			<visible>!control.hasfocus(123)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -354,7 +355,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>924</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>

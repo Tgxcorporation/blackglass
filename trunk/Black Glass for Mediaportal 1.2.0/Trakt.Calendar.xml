@@ -2,21 +2,18 @@
 <window>
 	<id>87259</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<allowoverlay>player.hasmedia</allowoverlay>
 	<define>#header.label:#Trakt.CurrentView</define>
 	<define>#Fanart.1:#Trakt.Calendar.Fanart.1</define>
 	<define>#Fanart.2:#Trakt.Calendar.Fanart.2</define>
 	<define>#header.background:hover_trakt.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 
 		<import>common.window.background.xml</import>
 		<import>Trakt.Common.Fanart.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
 		<import>common.window.time.xml</import>
-		<import>Trakt.Common.Itemcount.xml</import>	
 
 		<control>
 			<type>group</type>
@@ -24,6 +21,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>850</width>
@@ -35,8 +33,6 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<description>Backdrop Overlay - ListView</description>
@@ -66,9 +62,9 @@
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150" delay="100">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
 
 			<control>
 				<description>details background</description>
@@ -216,43 +212,37 @@
 				<colordiffuse>77ffffff</colordiffuse>
 			</control>
 
-
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>415</posY>
+				<width>800</width>
+				<height>200</height>
+				<font>font16</font>
+				<visible>!player.hasmedia+!string.equals(#Trakt.Episode.Overview,)</visible>
+				<seperator>: : :</seperator>
+				<label>#Trakt.Episode.Overview</label>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>415</posY>
+				<width>800</width>
+				<height>135</height>
+				<font>font16</font>
+				<visible>player.hasmedia+!string.equals(#Trakt.Episode.Overview,)</visible>
+				<seperator>: : :</seperator>
+				<label>#Trakt.Episode.Overview</label>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
+			</control>	
 		</control>
 
-		<control>
-			<type>textboxscrollup</type>
-			<description>Description (Episode / Season / Series Lists)</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>415</posY>
-			<width>800</width>
-			<height>200</height>
-			<font>font16</font>
-			<visible>!player.hasmedia+!string.equals(#Trakt.Episode.Overview,)</visible>
-			<seperator>: : :</seperator>
-			<label>#Trakt.Episode.Overview</label>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>textboxscrollup</type>
-			<description>Description (Episode / Season / Series Lists)</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>415</posY>
-			<width>800</width>
-			<height>135</height>
-			<font>font16</font>
-			<visible>player.hasmedia+!string.equals(#Trakt.Episode.Overview,)</visible>
-			<seperator>: : :</seperator>
-			<label>#Trakt.Episode.Overview</label>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">WindowClose</animation>
-		</control>	
+
 
 		<control>
 			<type>group</type>
@@ -260,6 +250,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -282,11 +273,11 @@
 					<textYOff3>15</textYOff3>
 					<IconXOff>1298</IconXOff>
 					<IconYOff>41</IconYOff>
-					<playedColor>ff77ccff</playedColor>
+					<playedColor>#ColorPlayed</playedColor>
 					<!-- watched -->
 					<downloadColor>ffffffff</downloadColor>
 					<!-- (normal) -->
-					<remoteColor>ffF87B72</remoteColor>
+					<remoteColor>#ColorOffline</remoteColor>
 					<!-- file not present color -->
 					<textcolor>ffffffff</textcolor>
 					<!-- not watched (normal) -->
@@ -296,6 +287,17 @@
 					<font3>font12</font3>
 					<textureHeight>53</textureHeight>
 				</control>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>915</posX>
+				<posY>665</posY>
+				<label>#Trakt.Items</label>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
 			</control>
 		</control>
 
@@ -309,7 +311,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)]</visible>
+			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -321,14 +323,14 @@
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(2)|control.hasfocus(3)]</visible>
+			<visible>!control.hasfocus(50)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -351,7 +353,7 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label>
+				<label>924</label>
 				<width>333</width>
 				<font>font24</font>
 				<align>left</align>

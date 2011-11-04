@@ -8,44 +8,8 @@
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<control>
-				<description>Backdrop Overlay - ListView</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>865</posX>
-				<posY>48</posY>
-				<width>948</width>
-				<height>766</height>
-				<texture>bg_facade.png</texture>
-				<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|control.isvisible(1240)]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>898</posX>
-				<posY>40</posY>
-				<width>383</width>
-				<height>60</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-				<visible>[facadeview.largeicons|facadeview.list]+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|control.isvisible(1240)]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
-			</control>
-			<control>
-				<type>image</type>
-				<posX>897</posX>
-				<posY>581</posY>
-				<width>383</width>
-				<height>53</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-				<visible>[facadeview.largeicons]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">visible</animation>
-				<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> -->
-			</control>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
+
 			<control>
 				<type>image</type>
 				<description>season poster</description>
@@ -55,9 +19,8 @@
 				<width>245</width> 
 				<height>348</height> 
 				<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.SeasonPoster</texture>
-				<visible>control.hasfocus(50)+control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="200">visible</animation>
-				<animation effect="fade" time="250" delay="0">hidden</animation>
+				<visible>control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 
 			<control>
@@ -69,9 +32,8 @@
 				<width>245</width> 
 				<height>348</height> 
 				<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.SeriesPoster</texture>
-				<visible>control.hasfocus(50)+control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="200">visible</animation>
-				<animation effect="fade" time="250" delay="0">hidden</animation>
+				<visible>control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 
 			<control>
@@ -83,75 +45,9 @@
 				<width>283</width>
 				<height>360</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-				<visible>control.hasfocus(50)+[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="200">visible</animation>
-				<animation effect="fade" time="250" delay="0">hidden</animation>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
-
-
-
-
-			<!-- Watched Icons for Series Poster View and Season View in List Layout and Wide Banners -->
-			<!-- <control>
-            <description>Watched Icon Background</description>
-            <type>image</type>
-            <id>0</id>
-            <posX>256</posX>
-            <posY>284</posY>
-            <width>32</width>
-            <height>39</height>
-            <texture>overlaywubg.png</texture>
-            <visible>[[control.isvisible(1237)+control.isvisible(1242)]|control.isvisible(1238)]+facadeview.list+[Control.HasThumb(61)|Control.HasThumb(62)]</visible>
-			<animation effect="fade" time="250">WindowClose</animation>
-        </control>
-        <control>
-            <description>Season Watched Icon</description>
-            <type>image</type>
-            <id>0</id>
-            <posX>263</posX>
-            <posY>289</posY>
-            <width>20</width>
-            <height>20</height>
-            <texture>tvseries_Watched.png</texture>
-            <visible>[[control.isvisible(1237)+control.isvisible(1242)]|control.isvisible(1238)]+facadeview.list+control.isvisible(1243)+control.isvisible(1244)+[Control.HasThumb(61)|Control.HasThumb(62)]</visible>
-			<animation effect="fade" time="250">WindowClose</animation>
-		</control>
-        <control>
-            <description>Un-Watched Icon</description>
-            <type>image</type>
-            <id>0</id>
-            <posX>263</posX>
-            <posY>289</posY>
-            <width>20</width>
-            <height>20</height>
-            <texture>tvseries_UnWatched.png</texture>
-            <visible>[[control.isvisible(1237)+control.isvisible(1242)]|control.isvisible(1238)]+facadeview.list+!control.isvisible(1243)+control.isvisible(1244)+[Control.HasThumb(61)|Control.HasThumb(62)]</visible>
-			<animation effect="fade" time="250">WindowClose</animation>
-        </control>
-        <control>
-            <description>Not Available and Watched Icon</description>
-            <type>image</type>
-            <id>0</id>
-            <posX>263</posX>
-            <posY>289</posY>
-            <width>20</width>
-            <height>20</height>
-            <texture>tvseries_WatchedNA.png</texture>
-            <visible>[[control.isvisible(1237)+control.isvisible(1242)]|control.isvisible(1238)]+facadeview.list+control.isvisible(1243)+!control.isvisible(1244)+[Control.HasThumb(61)|Control.HasThumb(62)]</visible>
-			<animation effect="fade" time="250">WindowClose</animation>
-        </control>
-        <control>
-            <description>Not Available and Un-Watched Icon</description>
-            <type>image</type>
-            <id>0</id>
-            <posX>263</posX>
-            <posY>289</posY>
-            <width>20</width>
-            <height>20</height>
-            <texture>tvseries_UnWatchedNA.png</texture>
-            <visible>[[control.isvisible(1237)+control.isvisible(1242)]|control.isvisible(1238)]+facadeview.list+!control.isvisible(1243)+!control.isvisible(1244)+[Control.HasThumb(61)|Control.HasThumb(62)]</visible>
-			<animation effect="fade" time="250">WindowClose</animation>
-        </control> -->
 
 			<control>
 				<type>imagelist</type>
@@ -170,9 +66,8 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#TVSeries.Series.Rating</percentage>
-				<visible>control.hasfocus(50)+[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="200">visible</animation>
-				<animation effect="fade" time="250" delay="0">hidden</animation>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 
 			<control>
@@ -184,9 +79,8 @@
 				<width>800</width>
 				<font>font22</font>
 				<label>#TVSeries.Title</label>
-				<visible>control.hasfocus(50)+[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="200">visible</animation>
-				<animation effect="fade" time="250" delay="0">hidden</animation>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -198,9 +92,8 @@
 				<width>800</width>
 				<label>#TVSeries.Series.infopanelLine4Value     #TVSeries.Subtitle</label>
 				<textcolor>90FFFFFF</textcolor>
-				<visible>control.hasfocus(50)+[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="200">visible</animation>
-				<animation effect="fade" time="250" delay="0">hidden</animation>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 			<control>
 				<description>Summary</description>
@@ -214,52 +107,10 @@
 				<font>font14</font>
 				<!-- <label>#TVSeries.Description</label> -->
 				<label>#TVSeries.Series.Summary</label>
-				<visible>!player.hasmedia+control.hasfocus(50)+[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<visible>!player.hasmedia+[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 				<seperator>: : :</seperator>
-				<animation effect="fade" time="250" delay="200">visible</animation>
-				<animation effect="fade" time="250" delay="0">hidden</animation>
 			</control>
 		</control>
-
-
-
-
-
-		<!--    <control>
-            <description>Series Title</description>
-            <type>label</type>
-            <id>0</id>
-            <posX>310</posX>
-            <posY>247</posY>
-            <width>900</width>
-            <font>font18</font>
-            <label>#TVSeries.Series.Pretty_Name</label>
-            <textcolor>ffFFFFFF</textcolor>           
-            <visible>[control.isvisible(1237)+control.isvisible(1242)]+facadeview.list</visible>
-			<animation effect="fade" time="250">WindowClose</animation>
-        </control>
-				
-
-		<control>
-            <description>Season Title</description>
-            <type>label</type>
-            <id>0</id>
-            <posX>310</posX>
-            <posY>247</posY>
-            <width>900</width>
-            <font>font18</font>
-            <label>#TVSeries.Series.Pretty_Name #TVSeries.Season.SeasonLabel</label>
-            <textcolor>ffFFFFFF</textcolor>           
-            <visible>control.isvisible(1238)+facadeview.list</visible>
-        </control> -->
-
-
-
-
-
-
-
-
-
 	</controls>
 </window>

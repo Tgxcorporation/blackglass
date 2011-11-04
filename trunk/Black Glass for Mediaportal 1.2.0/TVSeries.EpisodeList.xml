@@ -6,9 +6,9 @@
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150" delay="100">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)+control.isvisible(1239)">conditional</animation>
 			<visible>control.isvisible(1239)</visible>
 			<control>
 				<description>details background</description>
@@ -64,7 +64,6 @@
 				<height>152</height>     
 				<keepaspectratio>yes</keepaspectratio>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.EpisodeImage</texture>
-				<animation effect="fade" time="250" delay="133">visible</animation>
 				<centered>yes</centered>
 				<zoom>yes</zoom>
 			</control> 
@@ -218,70 +217,72 @@
 				<colordiffuse>77ffffff</colordiffuse>
 			</control>
 		</control>
+
 		<control>
-			<type>textboxscrollup</type>
-			<description>Description (Episode / Season / Series Lists)</description>
-			<id>631</id>
-			<posX>30</posX>
-			<posY>415</posY>
-			<width>800</width>
-			<height>200</height>
-			<font>font16</font>
-			<visible>control.isvisible(1239)+!player.hasmedia</visible>
-			<animation effect="fade" time="250" delay="200">visible</animation>
-			<seperator>: : :</seperator>
-			<label>#TVSeries.Description</label>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<type>textboxscrollup</type>
-			<description>Description (Episode / Season / Series Lists)</description>
-			<id>631</id>
-			<posX>30</posX>
-			<posY>415</posY>
-			<width>800</width>
-			<height>135</height>
-			<font>font16</font>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150" delay="100">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)+control.isvisible(1239)">conditional</animation>
 			<visible>control.isvisible(1239)+player.hasmedia</visible>
-			<animation effect="fade" time="250" delay="200">visible</animation>
-			<seperator>: : :</seperator>
-			<label>#TVSeries.Description</label>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
-		</control>			
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-438</posX>
-			<posY>584</posY>
-			<width>1280</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>!player.hasmedia+control.isvisible(1239)</visible>
-			<animation effect="fade" time="250">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>415</posY>
+				<width>800</width>
+				<height>135</height>
+				<font>font16</font>
+				<seperator>: : :</seperator>
+				<label>#TVSeries.Description</label>
+			</control>
 		</control>
+
 		<control>
-			<type>image</type>
-			<description>Logos</description>
-			<id>66</id>
-			<posX>30</posX>
-			<posY>654</posY>
-			<width>800</width>
-			<height>50</height>
-			<texture>#TVSeries.Logos</texture>
-			<keepaspectratio>yes</keepaspectratio>
-			<visible>!player.hasmedia+control.isvisible(1239)</visible>
-			<animation effect="fade" time="250" delay="266">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-900,0" reversible="false">WindowClose</animation>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150" delay="100">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)+control.isvisible(1239)">conditional</animation>
+			<visible>control.isvisible(1239)+!player.hasmedia</visible>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>415</posY>
+				<width>800</width>
+				<height>200</height>
+				<font>font16</font>
+				<seperator>: : :</seperator>
+				<label>#TVSeries.Description</label>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-438</posX>
+				<posY>584</posY>
+				<width>1280</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>image</type>
+				<description>Logos</description>
+				<id>66</id>
+				<posX>30</posX>
+				<posY>654</posY>
+				<width>800</width>
+				<height>50</height>
+				<texture>#TVSeries.Logos</texture>
+				<keepaspectratio>yes</keepaspectratio>
+			</control>
 		</control>
 
 	</controls>

@@ -1,12 +1,12 @@
 <window>
 	<controls>	
-
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>850</width>
@@ -18,8 +18,6 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>label</type>
@@ -29,67 +27,9 @@
 				<posY>54</posY>
 				<font>font14</font>
 				<label>#TVSeries.SimpleCurrentView</label>
-				<visible>!control.isvisible(1239)+![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
-				<animation effect="fade" time="150" delay="0">visiblechange</animation>
-			</control>
-
-
-			<!-- MEDIA COUNTS -->		
-			<control>
-				<type>label</type>
-				<description>Number of Files Label</description>
-				<id>0</id>
-				<posX>915</posX>
-				<posY>665</posY>
-				<label>#TVSeries.FilteredEpisodeCount #TVSeries.Translation.Episodes.Label</label>
-				<font>font16</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-				<visible>control.isvisible(1239)+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="100">visible</animation>
-			</control>
-			<control>
-				<type>label</type>
-				<description>Number of Files Label</description>
-				<id>0</id>
-				<posX>915</posX>
-				<posY>665</posY>
-				<label>#TVSeries.Series.EpisodeCount #TVSeries.Translation.Episodes.Label</label>
-				<font>font16</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-				<visible>control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="100">visible</animation>
-			</control>	
-
-			<control>
-				<type>label</type>
-				<description>Number of Files Label</description>
-				<id>0</id>
-				<posX>915</posX>
-				<posY>665</posY>
-				<label>#TVSeries.SeriesCount #TVSeries.Translation.Series_Plural.Label</label>
-				<font>font16</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-				<visible>control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="100">visible</animation>
-			</control>
-
-
-			<control>
-				<description>Group Count</description>
-				<type>label</type>
-				<label>#TVSeries.GroupCount #TVSeries.Translation.Groups.Label</label>
-				<id>0</id>
-				<posX>915</posX>
-				<posY>665</posY>
-				<font>font16</font>
-				<textcolor>60FFFFFF</textcolor>
-				<visible>control.isvisible(1240)</visible>			
-				<animation effect="fade" time="250" delay="100">visible</animation>
+				<visible>!control.isvisible(1239)</visible>
+				<animation effect="fade" time="150" delay="0">visible</animation>
 			</control>
 		</control>
-
 	</controls>
 </window>

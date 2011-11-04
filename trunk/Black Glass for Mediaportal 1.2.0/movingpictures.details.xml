@@ -13,76 +13,21 @@
 			<onright>66621</onright>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
+			<posX>480</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
 			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
 		</control>
+
+
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-
-
-			<!--            :: MAIN DETAILS ::            -->
-
-			<control>
-				<description>details background</description>
-				<id>0</id>
-				<type>image</type>
-				<posX>458</posX>
-				<posY>48</posY>
-				<width>948</width>
-				<height>766</height>
-				<texture>bg_facade.png</texture>
-				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
-			</control>
-			<control>
-				<type>image</type>
-				<posX>490</posX>
-				<posY>97</posY>
-				<width>790</width>
-				<height>53</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
-			</control>
-			<control>
-				<type>image</type>
-				<posX>490</posX>
-				<posY>338</posY>
-				<width>790</width>
-				<height>53</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
-			</control> 
-			<control>
-				<type>image</type>
-				<posX>492</posX>
-				<posY>587</posY>
-				<width>790</width>
-				<height>53</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
-			</control>
-
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(6)+[!control.isvisible(50)]">conditional</animation>
 
 			<control>
 				<description>Cover Art</description>
@@ -92,12 +37,12 @@
 				<posY>81</posY>
 				<width>380</width>
 				<height>538</height>
+				<zoom>yes</zoom>
+				<keepaspectratio>yes</keepaspectratio>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#MovingPictures.Coverart</texture>
 				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+				<animation effect="fade" time="150">hidden</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 
 			<control>
@@ -110,62 +55,9 @@
 				<height>556</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+				<animation effect="fade" time="150">hidden</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
-
-			<control>
-				<description>Watched Icon Background</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>422</posX>
-				<posY>122</posY>
-				<width>40</width>
-				<height>50</height>
-				<texture>overlaywubg.png</texture>
-				<colordiffuse>b0ffffff</colordiffuse>
-				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
-				<animation effect="fade" time="150" delay="200">visible</animation>
-				<animation effect="fade" time="50">hidden</animation>
-				<!-- <animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>  -->
-			</control>
-			<control>
-				<description>Watched Icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>427</posX>
-				<posY>127</posY>
-				<width>30</width>
-				<height>30</height>
-				<texture>overlaywatched.png</texture>
-				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+control.isvisible(9)</visible>
-				<animation effect="fade" time="150" delay="200">visible</animation>
-				<animation effect="fade" time="50">hidden</animation>
-				<!-- <animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>  -->
-			</control>
-			<control>
-				<description>Un-Watched Icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>427</posX>
-				<posY>127</posY>
-				<width>30</width>
-				<height>30</height>
-				<texture>overlayunwatched.png</texture>
-				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+!control.isvisible(9)</visible>
-				<animation effect="fade" time="150" delay="200">visible</animation>
-				<animation effect="fade" time="50">hidden</animation>
-				<!-- <animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>  -->
-			</control>
-
 
 			<control>
 				<description>Cover Art</description>
@@ -175,12 +67,12 @@
 				<posY>81</posY>
 				<width>332</width>
 				<height>469</height>
+				<zoom>yes</zoom>
+				<keepaspectratio>yes</keepaspectratio>
 				<texture>#MovingPictures.Coverart</texture>
 				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
 				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 
 			<control>
@@ -193,61 +85,134 @@
 				<height>486</height>
 				<texture>DVDCase.png</texture>
 				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
 				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 
 			<control>
 				<description>Watched Icon Background</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>368</posX>
-				<posY>113</posY>
+				<posX>422</posX>
+				<posY>122</posY>
 				<width>40</width>
 				<height>50</height>
 				<texture>overlaywubg.png</texture>
 				<colordiffuse>b0ffffff</colordiffuse>
-				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
-				<animation effect="fade" time="150" delay="200">visible</animation>
-				<animation effect="fade" time="50">hidden</animation>
-				<!-- <animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>  -->
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 			<control>
 				<description>Watched Icon</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>373</posX>
-				<posY>118</posY>
+				<posX>428</posX>
+				<posY>128</posY>
 				<width>30</width>
 				<height>30</height>
 				<texture>overlaywatched.png</texture>
-				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+control.isvisible(9)</visible>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+control.isvisible(9)</visible>
 				<animation effect="fade" time="150" delay="200">visible</animation>
 				<animation effect="fade" time="50">hidden</animation>
-				<!-- <animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>  -->
 			</control>
 			<control>
 				<description>Un-Watched Icon</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>373</posX>
-				<posY>118</posY>
+				<posX>428</posX>
+				<posY>128</posY>
 				<width>30</width>
 				<height>30</height>
 				<texture>overlayunwatched.png</texture>
+				<colordiffuse>#ColorAvailable</colordiffuse>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+!control.isvisible(9)</visible>
+				<animation effect="fade" time="150" delay="200">visible</animation>
+				<animation effect="fade" time="50">hidden</animation>
+			</control>
+
+
+			<control>
+				<description>Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>374</posX>
+				<posY>119</posY>
+				<width>30</width>
+				<height>30</height>
+				<texture>overlaywatched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+control.isvisible(9)</visible>
+				<animation effect="fade" time="150" delay="200">visible</animation>
+				<animation effect="fade" time="50">hidden</animation>
+			</control>
+			<control>
+				<description>Un-Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>374</posX>
+				<posY>119</posY>
+				<width>30</width>
+				<height>30</height>
+				<texture>overlayunwatched.png</texture>
+				<colordiffuse>#ColorAvailable</colordiffuse>
 				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+!control.isvisible(9)</visible>
 				<animation effect="fade" time="150" delay="200">visible</animation>
 				<animation effect="fade" time="50">hidden</animation>
-				<!-- <animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>  -->
 			</control>
+		</control>
+
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(6)+[!control.isvisible(50)]">conditional</animation>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+
+			<!--            :: MAIN DETAILS ::            -->
+
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>490</posX>
+				<posY>97</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>490</posX>
+				<posY>338</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>492</posX>
+				<posY>587</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
 
 			<!-- Details Box -->
 
@@ -262,11 +227,6 @@
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
 				<width>750</width>
-				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 				<wrapString> : : : </wrapString>
 			</control>
 
@@ -288,11 +248,6 @@
 				<align>left</align>
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
-				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 			</control>	
 
 			<control>
@@ -304,11 +259,6 @@
 				<posY>200</posY>
 				<width>750</width>
 				<font>font16</font>
-				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 				<wrapString> : : : </wrapString>
 			</control>
 
@@ -322,11 +272,6 @@
 				<width>750</width>
 				<font>font18</font>
 				<textcolor>90ffffff</textcolor>
-				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 				<wrapString> : : : </wrapString>
 			</control>
 
@@ -340,11 +285,6 @@
 				<width>750</width>
 				<font>font18</font>
 				<textcolor>ffFFFFFF</textcolor>
-				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 				<wrapString> : : : </wrapString>
 			</control>
 
@@ -360,11 +300,6 @@
 				<height>70</height>
 				<textcolor>90FFFFFF</textcolor>
 				<seperator>: : :</seperator>
-				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
 			</control>
 
 			<control>
@@ -379,11 +314,92 @@
 				<font>font18</font>
 				<label>#MovingPictures.SelectedMovie.summary</label>
 				<seperator>: : :</seperator>
-				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-				<!-- <animation effect="fade" time="250">visiblechange</animation> -->
-				<animation effect="fade" time="150">hidden</animation>	
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-				<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation> 
+			</control>
+
+
+			<!-- Media logos [Details View] -->
+			<control>
+				<description>Video Codec</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>520</posX>
+				<posY>655</posY>
+				<width>89</width>
+				<height>50</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+			</control>
+
+			<control>
+				<description>Video Resolution</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>610</posX>
+				<posY>655</posY>
+				<width>89</width>
+				<height>50</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+			</control>
+
+			<control>
+				<description>Video Aspect Ratio</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>700</posX>
+				<posY>655</posY>
+				<width>89</width>
+				<height>50</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+			</control>
+
+			<control>
+				<description>Audio Codec</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>790</posX>
+				<posY>655</posY>
+				<width>89</width>
+				<height>50</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+			</control>
+
+			<control>
+				<description>Audio Channels</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>880</posX>
+				<posY>655</posY>
+				<width>89</width>
+				<height>50</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+			</control>
+
+			<control>
+				<description>Video Format</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>970</posX>
+				<posY>655</posY>
+				<width>89</width>
+				<height>50</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+			</control>
+
+			<control>
+				<description>Subtitles</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1060</posX>
+				<posY>655</posY>
+				<width>89</width>
+				<height>50</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
 			</control>
 		</control>
 
@@ -396,7 +412,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+![control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(6)</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -408,14 +424,14 @@
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>385</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(6)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -437,7 +453,7 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label>
+				<label>924</label>
 				<width>333</width>
 				<font>font24</font>
 			</control>
@@ -518,6 +534,16 @@
 					<id>97258</id>
 					<label>#Trakt.Translation.AddToWatchList.Label</label>
 					<onup>66624</onup>
+					<ondown>97261</ondown>
+					<onright>6</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Add to Custom List</description>
+					<type>button</type>
+					<id>97261</id>
+					<label>#Trakt.Translation.AddToList.Label</label>
+					<onup>97258</onup>
 					<ondown>97259</ondown>
 					<onright>6</onright>
 					<visible>plugin.isenabled(Trakt)</visible>
@@ -527,7 +553,7 @@
 					<type>button</type>
 					<id>97259</id>
 					<label>Trakt #Trakt.Translation.Rate.Label</label>
-					<onup>97258</onup>
+					<onup>97261</onup>
 					<ondown>97260</ondown>
 					<onright>6</onright>
 					<visible>plugin.isenabled(Trakt)</visible>
@@ -544,6 +570,23 @@
 				</control>
 			</control>
 		</control>
+
+		<!-- Dim background when movie starts -->
+		<!-- This is to provide feedback to the user something is happening when there are long pauses before playback -->
+
+		<control>
+			<description>Playing Animation</description>
+			<type>animation</type>
+			<id>0</id>
+			<posX>592</posX>
+			<posY>312</posY>
+			<width>96</width>
+			<height>96</height>
+			<textures>common.waiting.1.png;common.waiting.2.png;common.waiting.3.png;common.waiting.4.png;common.waiting.5.png;common.waiting.6.png;common.waiting.7.png;common.waiting.8.png</textures>
+			<Duration>0:0:01.5</Duration>
+			<keepaspectratio>yes</keepaspectratio>		
+			<visible>control.isvisible(18)+!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control>	
 
 	</controls>
 </window>

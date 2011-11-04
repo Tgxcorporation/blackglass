@@ -8,7 +8,7 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">hidden</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(5051)">conditional</animation>
 			<control>
 				<id>1</id>
 				<type>image</type>
@@ -17,6 +17,7 @@
 				<width>948</width>
 				<height>790</height>
 				<texture>bg_facade.png</texture>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<!-- *** Graphic Devices *** -->
 			<control>
@@ -29,6 +30,7 @@
 				<height>32</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>HTPCInfo/htpcinfo_device.png</texture>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Devices</description>
@@ -38,6 +40,7 @@
 				<posY>30</posY>
 				<label>Devices</label>
 				<font>font14</font>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Graphic Device Name</description>
@@ -48,6 +51,7 @@
 				<label>Graphic (#HTPCInfo.DisplayDeviceCount):</label>
 				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Graphic Device Value</description>
@@ -59,6 +63,7 @@
 				<label>#HTPCInfo.DisplayDevice1Description (Driver version #HTPCInfo.DisplayDevice1DriverVersion)</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 
 			<!-- *** TV Devices *** -->
@@ -71,6 +76,7 @@
 				<label>TV (#HTPCInfo.TVDeviceCount):</label>
 				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>TV device Value</description>
@@ -82,6 +88,7 @@
 				<label>#HTPCInfo.TVDevice1Name (#HTPCInfo.TVDevice1Type), #HTPCInfo.TVDevice1Enabled on TVServer #HTPCInfo.TVServerIPAddress</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>TV device Value</description>
@@ -93,6 +100,7 @@
 				<label>#HTPCInfo.TVDevice2Name (#HTPCInfo.TVDevice2Type), #HTPCInfo.TVDevice2Enabled</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>TV device Value</description>
@@ -104,6 +112,7 @@
 				<label>#HTPCInfo.TVDevice3Name (#HTPCInfo.TVDevice3Type), #HTPCInfo.TVDevice3Enabled</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 
 			<!-- *** Keyboard Devices *** -->
@@ -116,6 +125,7 @@
 				<label>Keyboard (#HTPCInfo.KeyboardDeviceCount):</label>
 				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Keyboard Device Value</description>
@@ -127,6 +137,7 @@
 				<label>#HTPCInfo.KeyboardDevice1Name</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 
 			<!-- *** Pointing Devices *** -->
@@ -139,6 +150,7 @@
 				<label>Pointing (#HTPCInfo.PointingDeviceCount):</label>
 				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Pointing Device Value</description>
@@ -150,6 +162,7 @@
 				<label>#HTPCInfo.PointingDevice1Name (#HTPCInfo.PointingDevice1Manufacturer)</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 
 			<!-- *** Sound Devices *** -->
@@ -162,6 +175,7 @@
 				<label>Sound (#HTPCInfo.SoundDeviceCount):</label>
 				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Sound Device Value</description>
@@ -173,6 +187,7 @@
 				<label>#HTPCInfo.SoundDevice1Name (#HTPCInfo.SoundDevice1Manufacturer)</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Sound Device Value</description>
@@ -184,6 +199,7 @@
 				<label>#HTPCInfo.SoundDevice2Name (#HTPCInfo.SoundDevice2Manufacturer)</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 
 
@@ -197,6 +213,7 @@
 				<label>Network (#HTPCInfo.NetworkDeviceCount):</label>
 				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Network Device Value</description>
@@ -208,6 +225,7 @@
 				<label>#HTPCInfo.NetworkDevice1Description (#HTPCInfo.NetworkDevice1Manufacturer) #HTPCInfo.NetworkDevice1Type</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Network Device Value</description>
@@ -219,6 +237,7 @@
 				<label>#HTPCInfo.NetworkDevice2Description (#HTPCInfo.NetworkDevice2Manufacturer) #HTPCInfo.NetworkDevice2Type</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 
 			<!-- *** Drive Devices *** -->
@@ -231,6 +250,7 @@
 				<label>Disk Drives (#HTPCInfo.DriveCount):</label>
 				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Drive Device Value</description>
@@ -242,6 +262,7 @@
 				<label>#HTPCInfo.Drive1Model, Interface #HTPCInfo.Drive1InterfaceType, #HTPCInfo.Drive1PartitionCount partition(s)</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Drive Device Value</description>
@@ -253,6 +274,7 @@
 				<label>#HTPCInfo.Drive2Model, Interface #HTPCInfo.Drive2InterfaceType, #HTPCInfo.Drive2PartitionCount partition(s)</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Drive Device Value</description>
@@ -264,6 +286,7 @@
 				<label>#HTPCInfo.Drive3Model, Interface #HTPCInfo.Drive3InterfaceType, #HTPCInfo.Drive3PartitionCount partition(s)</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Drive Device Value</description>
@@ -275,6 +298,7 @@
 				<label>#HTPCInfo.Drive4Model, Interface #HTPCInfo.Drive4InterfaceType, #HTPCInfo.Drive4PartitionCount partition(s)</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 
 			<!-- *** Optical Drive *** -->
@@ -287,6 +311,7 @@
 				<label>Optical Drives (#HTPCInfo.OpticalDriveCount):</label>
 				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Optical Device Value</description>
@@ -298,6 +323,7 @@
 				<label>#HTPCInfo.OpticalDrive1Description (#HTPCInfo.OpticalDrive1Type)</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Optical Device Value</description>
@@ -309,6 +335,7 @@
 				<label>#HTPCInfo.OpticalDrive2Description (#HTPCInfo.OpticalDrive2Type)</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 
 			<!-- *** Clients *** -->
@@ -322,6 +349,7 @@
 				<height>32</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>HTPCInfo/htpcinfo_client.png</texture>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Clients</description>
@@ -331,6 +359,7 @@
 				<posY>395</posY>
 				<label>Clients</label>
 				<font>font14</font>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Client Name</description>
@@ -341,6 +370,7 @@
 				<label>Clients (#HTPCInfo.TVClientCount):</label>
 				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Client Value</description>
@@ -352,6 +382,7 @@
 				<label>#HTPCInfo.TVClient1Name (#HTPCInfo.TVClient1IPAddress), #HTPCInfo.TVClient1Stream (active #HTPCInfo.TVClient1Active)</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Client Value</description>
@@ -362,6 +393,7 @@
 				<font>font12</font>
 				<label>#HTPCInfo.TVClient2Name (#HTPCInfo.TVClient2IPAddress), #HTPCInfo.TVClient2Stream (active #HTPCInfo.TVClient2Active)</label>
 				<width>650</width>
+				<visible>control.isvisible(51)</visible>
 				<wrapString> : : : </wrapString>
 			</control>
 
@@ -376,6 +408,7 @@
 				<height>32</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>HTPCInfo/htpcinfo_codec.png</texture>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Codecs</description>
@@ -385,6 +418,7 @@
 				<posY>480</posY>
 				<label>Codecs</label>
 				<font>font14</font>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Codec Name</description>
@@ -395,6 +429,7 @@
 				<label>Codecs (#HTPCInfo.CodecCount):</label>
 				<font>font10</font>
 				<textcolor>90ffffff</textcolor>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Codec Value</description>
@@ -406,6 +441,7 @@
 				<label>#HTPCInfo.Codec1Description (#HTPCInfo.Codec1Manufacturer) Version #HTPCInfo.Codec1Version</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Codec Value</description>
@@ -417,6 +453,7 @@
 				<label>#HTPCInfo.Codec2Description (#HTPCInfo.Codec2Manufacturer) Version #HTPCInfo.Codec2Version</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Codec Value</description>
@@ -428,6 +465,7 @@
 				<label>#HTPCInfo.Codec3Description (#HTPCInfo.Codec3Manufacturer) Version #HTPCInfo.Codec3Version</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 			<control>
 				<description>Codec Value</description>
@@ -439,6 +477,7 @@
 				<label>#HTPCInfo.Codec4Description (#HTPCInfo.Codec4Manufacturer) Version #HTPCInfo.Codec4Version</label>
 				<width>650</width>
 				<wrapString> : : : </wrapString>
+				<visible>control.isvisible(51)</visible>
 			</control>
 		</control>
 	</controls>
