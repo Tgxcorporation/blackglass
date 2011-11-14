@@ -368,17 +368,17 @@
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
-			<onexit>0</onexit>
-			<buttonX>0</buttonX>
+			<onexit>66621</onexit>
+			<buttonX>30</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>385</buttonwidth>
+			<buttonwidth>355</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>![control.hasfocus(50)|control.hasfocus(10)|control.hasfocus(11)]</visible>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -408,25 +408,26 @@
 				<textcolor>ffffffff</textcolor>
 			</control>
 			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>47</posY>
-				<width>385</width>
-				<height>53</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
-			<control>
 				<type>group</type>
 				<layout>StackLayout(0, Vertical, true)</layout>
 				<posX>0</posX>
-				<posY>100</posY>
+				<posY>47</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>47</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>bg_button_nofocus.png</texture>
+				</control>
 				<control>
 					<description>Play Button</description>
 					<type>button</type>
 					<id>2</id>
 					<label>208</label>
-					<onup>17</onup>
+					<onup>66621</onup>
+					<onleft>66621</onleft>
 					<ondown>3</ondown>
 					<onright>50</onright>
 				</control>
@@ -438,6 +439,7 @@
 					<onup>2</onup>
 					<ondown>7</ondown>
 					<onright>50</onright>
+					<onleft>66621</onleft>
 				</control>
 				<control>
 					<description>User review</description>
@@ -447,6 +449,7 @@
 					<onup>3</onup>
 					<ondown>4</ondown>
 					<onright>50</onright>
+					<onleft>66621</onleft>
 				</control>
 				<control>
 					<description>Cast</description>
@@ -456,6 +459,7 @@
 					<onup>7</onup>
 					<ondown>5</ondown>
 					<onright>50</onright>
+					<onleft>66621</onleft>
 				</control>
 				<control>
 					<description>Refresh</description>
@@ -465,6 +469,7 @@
 					<onup>4</onup>
 					<ondown>6</ondown>
 					<onright>50</onright>
+					<onleft>66621</onleft>
 				</control>
 				<control>
 					<description>Watched</description>
@@ -472,28 +477,81 @@
 					<id>6</id>
 					<label>1010</label>
 					<onup>5</onup>
-					<ondown>97259</ondown>
-					<onright>50</onright>
-				</control>
-				<control>
-					<description>Trakt Rate Movie</description>
-					<type>button</type>
-					<id>97259</id>
-					<label>#Trakt.Translation.Rate.Label</label>
-					<visible>plugin.isenabled(Trakt)</visible>
-					<onup>6</onup>
-					<ondown>97260</ondown>
-					<onright>50</onright>
-				</control>
-				<control>
-					<description>Trakt Shouts</description>
-					<type>button</type>
-					<id>97260</id>
-					<label>#Trakt.Translation.Shouts.Label</label>
-					<visible>plugin.isenabled(Trakt)</visible>
-					<onup>97259</onup>
 					<ondown>66621</ondown>
 					<onright>50</onright>
+					<onleft>66621</onleft>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>600</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>arrow_menu_left.png</texture>
+				</control>
+			</control>
+		</control>
+
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>66621</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>30</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)|control.hasfocus(97261)|control.hasfocus(97262)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+
+
+
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>47</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>47</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>bg_button_nofocus.png</texture>
 				</control>
 				<control>
 					<description>Onlinevideos Trailers</description>
@@ -503,8 +561,9 @@
 					<hyperlink>4755</hyperlink>
 					<hyperlinkParameter>site:IMDb Movie Trailers|search:#title|return:Locked</hyperlinkParameter>
 					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
-					<onup>97260</onup>
+					<onup>6</onup>
 					<ondown>66622</ondown>
+					<onleft>2</onleft>
 					<onright>50</onright>
 				</control>
 				<control>
@@ -517,6 +576,7 @@
 					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
 					<onup>66621</onup>
 					<ondown>66623</ondown>
+					<onleft>2</onleft>
 					<onright>50</onright>
 				</control>
 				<control>
@@ -528,8 +588,73 @@
 					<hyperlinkParameter>site:YouTube|search:#title|return:Locked</hyperlinkParameter>
 					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
 					<onup>66622</onup>
-					<ondown>10</ondown>
+					<ondown>97258</ondown>
+					<onleft>2</onleft>
 					<onright>50</onright>
+				</control>
+				<control>
+					<description>Add to Trakt Movie/Show Watch List</description>
+					<type>button</type>
+					<id>97258</id>
+					<label>#Trakt.Translation.AddToWatchList.Label</label>
+					<onup>66623</onup>
+					<ondown>97261</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Add to Custom List</description>
+					<type>button</type>
+					<id>97261</id>
+					<label>#Trakt.Translation.AddToList.Label</label>
+					<onup>97258</onup>
+					<ondown>97259</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Rate</description>
+					<type>button</type>
+					<id>97259</id>
+					<label>Trakt #Trakt.Translation.Rate.Label</label>
+					<onup>97261</onup>
+					<ondown>97260</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Shouts List</description>
+					<type>button</type>
+					<id>97260</id>
+					<label>Trakt #Trakt.Translation.Shouts.Label</label>
+					<onup>97259</onup>
+					<ondown>97262</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Related Movies</description>
+					<type>button</type>
+					<id>97262</id>
+					<label>#Trakt.Translation.RelatedMovies.Label</label>
+					<onup>97260</onup>
+					<ondown>2</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>600</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>arrow_menu_left.png</texture>
 				</control>
 			</control>
 
