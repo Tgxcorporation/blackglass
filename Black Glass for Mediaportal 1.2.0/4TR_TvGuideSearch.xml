@@ -91,7 +91,7 @@
 				<label>#date</label>
 				<align>right</align>
 				<font>font11</font>
-				<visible>!plugin.isenabled(InfoService)</visible>
+				<visible>!plugin.isenabled(InfoService)|[plugin.isenabled(InfoService)+!string.equals(#infoservice.weather.enabled,true)]</visible>
 				<textcolor>aaffffff</textcolor>
 			</control> 
 			<control>
@@ -103,7 +103,7 @@
 				<label>#infoservice.weather.today.temp     #date</label>
 				<align>right</align>
 				<font>font11</font>
-				<visible>plugin.isenabled(InfoService)</visible>
+				<visible>plugin.isenabled(InfoService)+string.equals(#infoservice.weather.enabled,true)</visible>
 				<textcolor>aaffffff</textcolor>
 			</control>
 			<control>
