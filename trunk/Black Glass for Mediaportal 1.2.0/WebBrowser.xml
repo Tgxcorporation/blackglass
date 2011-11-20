@@ -45,7 +45,7 @@
 			<label>#date</label>
 			<align>right</align>
 			<font>font10</font>
-			<visible>!plugin.isenabled(InfoService)</visible>
+			<visible>!plugin.isenabled(InfoService)|[plugin.isenabled(InfoService)+!string.equals(#infoservice.weather.enabled,true)]</visible>
 			<textcolor>aaffffff</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
@@ -59,7 +59,7 @@
 			<label>#infoservice.weather.today.temp     #date</label>
 			<align>right</align>
 			<font>font10</font>
-			<visible>plugin.isenabled(InfoService)</visible>
+			<visible>plugin.isenabled(InfoService)+string.equals(#infoservice.weather.enabled,true)</visible>
 			<textcolor>aaffffff</textcolor>
 			<animation effect="fade" time="250">WindowClose</animation>
 			<animation effect="fade" time="250">WindowOpen</animation>
