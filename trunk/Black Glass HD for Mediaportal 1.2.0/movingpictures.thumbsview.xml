@@ -11,6 +11,9 @@ This file should contain the list view
       <animation effect="fade" time="150">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+      <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)</visible>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
       <control>
         <type>image</type>
         <id>0</id>
@@ -19,10 +22,6 @@ This file should contain the list view
         <width>1422</width>
         <height>1149</height>
         <texture>bg_facade.png</texture>
-        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
       </control>
       <control>
         <type>image</type>
@@ -33,25 +32,6 @@ This file should contain the list view
         <height>79</height>
         <texture>bg_facade_line_nofocus.png</texture>
         <colordiffuse>77ffffff</colordiffuse>
-        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
-      </control>
-      <control>
-        <type>label</type>
-        <description>Number of Files Label</description>
-        <id>0</id>
-        <posX>765</posX>
-        <posY>989</posY>
-        <label>#MovingPictures.general.filteredmoviecount #MovingPictures.Translation.Movies.Label</label>
-        <font>font16</font>
-        <align>left</align>
-        <textcolor>60ffffff</textcolor>
-        <visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
       </control>
       <control>
         <description>Cover Art</description>
@@ -63,10 +43,6 @@ This file should contain the list view
         <width>367</width>
         <height>522</height>
         <texture flipY="true" diffuse="Thumb_Mask.png">#MovingPictures.Coverart</texture>
-        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
       </control>
       <control>
         <description>Cover Art Glass Overlay</description>
@@ -77,10 +53,6 @@ This file should contain the list view
         <width>424</width>
         <height>540</height>
         <texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
       </control>
       <control>
         <description>Watched Icon Background</description>
@@ -92,38 +64,6 @@ This file should contain the list view
         <height>60</height>
         <colordiffuse>b0ffffff</colordiffuse>
         <texture>overlaywubg.png</texture>
-        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)+ control.isvisible(50)</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
-      </control>
-      <control>
-        <description>Watched Icon</description>
-        <type>image</type>
-        <id>0</id>
-        <posX>423</posX>
-        <posY>169</posY>
-        <width>36</width>
-        <height>36</height>
-        <texture>overlaywatched.png</texture>
-        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)+control.isvisible(9)+ control.isvisible(50)</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
-      </control>
-      <control>
-        <description>Un-Watched Icon</description>
-        <type>image</type>
-        <id>0</id>
-        <posX>423</posX>
-        <posY>169</posY>
-        <width>36</width>
-        <height>36</height>
-        <texture>overlayunwatched.png</texture>
-        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)+!control.isvisible(9)+ control.isvisible(50)</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
       </control>
       <control>
         <type>imagelist</type>
@@ -142,10 +82,6 @@ This file should contain the list view
         <align>left</align>
         <imagesToDraw>10</imagesToDraw>
         <percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
-        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
       </control>
       <control>
         <type>fadelabel</type>
@@ -156,10 +92,6 @@ This file should contain the list view
         <width>630</width>
         <font>font22</font>
         <label>#MovingPictures.SelectedMovie.title</label>
-        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
         <wrapString> : : : </wrapString>
       </control>
       <control>
@@ -171,12 +103,52 @@ This file should contain the list view
         <width>630</width>
         <label>#MovingPictures.SelectedMovie.genres</label>
         <textcolor>90FFFFFF</textcolor>
-        <visible>[facadeview.largeicons|facadeview.smallicons] + control.isvisible(50)</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
         <wrapString> : : : </wrapString>
       </control>
+    </control>
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+      <control>
+        <description>Watched Icon</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>423</posX>
+        <posY>171</posY>
+        <width>36</width>
+        <height>36</height>
+        <texture>overlaywatched.png</texture>
+        <colordiffuse>#ColorPlayed</colordiffuse>
+        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)+control.isvisible(9)</visible>
+        <animation effect="fade" delay="250" time="150">visible</animation>
+      </control>
+      <control>
+        <description>Un-Watched Icon</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>423</posX>
+        <posY>171</posY>
+        <width>36</width>
+        <height>36</height>
+        <texture>overlayunwatched.png</texture>
+        <colordiffuse>#ColorAvailable</colordiffuse>
+        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)+!control.isvisible(9)</visible>
+        <animation effect="fade" delay="250" time="150">visible</animation>
+      </control>
+    </control>
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+      <visible>[facadeview.largeicons|facadeview.smallicons] + control.isvisible(50) + !player.hasmedia</visible>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
       <control>
         <description>Runtime value</description>
         <type>fadelabel</type>
@@ -186,10 +158,6 @@ This file should contain the list view
         <width>630</width>
         <label>#MovingPictures.SelectedMovie.year     #MovingPictures.SelectedMovie.runtime.localized.long     #MovingPictures.SelectedMovie.certification</label>
         <textcolor>90FFFFFF</textcolor>
-        <visible>[facadeview.largeicons|facadeview.smallicons] + control.isvisible(50) + !player.hasmedia</visible>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
         <wrapString> : : : </wrapString>
       </control>
       <control>
@@ -203,11 +171,84 @@ This file should contain the list view
         <font>font12</font>
         <textcolor>ffFFFFFF</textcolor>
         <label>#MovingPictures.SelectedMovie.summary</label>
-        <visible>[facadeview.largeicons|facadeview.smallicons]+control.isvisible(50)+!player.hasmedia</visible>
-        <seperator>: : :</seperator>
-        <animation effect="fade" time="150">hidden</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-        <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      </control>
+      <!-- Media logos [Thumbnails View] -->
+      <control>
+        <description>Video Codec</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+      </control>
+      <control>
+        <description>Video Resolution</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>127</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+      </control>
+      <control>
+        <description>Video Aspect Ratio</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>210</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+      </control>
+      <control>
+        <description>Audio Codec</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>292</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+      </control>
+      <control>
+        <description>Audio Channels</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>375</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+      </control>
+      <control>
+        <description>Video Format</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>457</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+      </control>
+      <control>
+        <description>Subtitles</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>540</posX>
+        <posY>1012</posY>
+        <width>133</width>
+        <height>51</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
       </control>
     </control>
   </controls>

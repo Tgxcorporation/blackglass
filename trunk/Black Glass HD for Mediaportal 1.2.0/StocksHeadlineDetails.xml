@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+    <!-- *** Headline Ticker *** -->
+    <control>
+      <description>Headline</description>
+      <type>fadelabel</type>
+      <id>0</id>
+      <posX>615</posX>
+      <posY>180</posY>
+      <width>1305</width>
+      <font>font18bold</font>
+      <label>#Stocks.HeadlineTicker</label>
+      <visible>string.equals(#Stocks.Type,Headline)+!string.equals(#Stocks.HeadlineTicker, )</visible>
+    </control>
+    <!-- *** Headline Ticker Separator *** -->
+    <control>
+      <description>Headline Ticker Separator</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>615</posX>
+      <posY>217</posY>
+      <width>1320</width>
+      <label>____________________________________________________________________________________________________________</label>
+      <textcolor>ff808080</textcolor>
+      <visible>string.equals(#Stocks.Type,Headline)+!string.equals(#Stocks.HeadlineTicker, )</visible>
+    </control>
+    <!-- *** Headline Item List *** -->
+    <control>
+      <description>listcontrol</description>
+      <type>listcontrol</type>
+      <id>100</id>
+      <posY>330</posY>
+      <height>525</height>
+      <onleft>2</onleft>
+      <font>font12</font>
+      <IconXOff>19</IconXOff>
+      <IconYOff>19</IconYOff>
+      <visible>string.equals(#Stocks.Type,Headline)+string.equals(#Stocks.View,List)</visible>
+    </control>
+    <!-- *** Headline Item Separator *** -->
+    <control>
+      <description>Separator</description>
+      <type>label</type>
+      <id>0</id>
+      <posX>615</posX>
+      <posY>865</posY>
+      <width>1320</width>
+      <label>____________________________________________________________________________________________________________</label>
+      <textcolor>ff808080</textcolor>
+      <visible>string.equals(#Stocks.Type,Headline)+string.equals(#Stocks.View,List)</visible>
+    </control>
+    <!-- *** Headline Item Properties *** -->
+    <control>
+      <description>Headline Item Description</description>
+      <type>textbox</type>
+      <id>0</id>
+      <posX>615</posX>
+      <posY>900</posY>
+      <width>900</width>
+      <height>180</height>
+      <label>#Stocks.HeadlineItemDescription</label>
+      <font>font10</font>
+      <visible>string.equals(#Stocks.Type,Headline)+string.equals(#Stocks.View,List)+!string.equals(#Stocks.HeadlineItemDescription,)</visible>
+    </control>
+  </controls>
+</window>

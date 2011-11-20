@@ -1,138 +1,168 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-	<controls>
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
-			<visible>String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)--></visible>
-			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>627</width>
-				<height>1080</height>
-				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
-			</control>
-
-			<control>
-				<type>label</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>52</posY>
-				<label>5906</label>
-				<width>525</width>
-				<font>font24</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>71</posY>
-				<width>579</width>
-				<height>79</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
-			<control>
-				<type>group</type>
-				<description>group element</description>
-				<control>
-					<description>videolist</description>
-					<type>listcontrol</type>
-					<id>51</id>
-					<posX>0</posX>
-					<posY>150</posY>
-					<width>579</width>
-					<height>885</height>
-					<textXOff>-45</textXOff>
-					<spinPosX>-700</spinPosX>
-					<spinPosY>-677</spinPosY>
-					<IconXOff>-100</IconXOff>
-					<IconYOff>10</IconYOff>
-					<onup>51</onup>
-					<ondown>51</ondown>
-					<onright>51</onright>
-					<onleft>51</onleft>
-					<spinPosX>435</spinPosX>
-					<spinPosY>978</spinPosY>
-					<spinCanFocus>yes</spinCanFocus>
-				</control>
-			</control>
-		</control>
-
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<visible>String.Equals(#OnlineVideos.state,details)<!--+String.Equals(#OnlineVideos.selectedSiteUtil,ITMovieTrailers)--></visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
-			<control>
-				<id>0</id>
-				<type>image</type>
-				<posX>687</posX>
-				<posY>72</posY>
-				<width>1422</width>
-				<height>1149</height>
-				<texture>bg_facade.png</texture>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>735</posX>
-				<posY>145</posY>
-				<width>1185</width>
-				<height>79</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-			<control>
-				<description>Trailer Poster</description>
-				<type>image</type>
-				<id>24</id>
-				<posX>819</posX>
-				<posY>247</posY>
-				<width>300</width>
-				<height>423</height>
-				<texture flipY="true" diffuse="Thumb_Mask.png">#OnlineVideos.Details.Poster</texture>
-				<keepaspectratio>no</keepaspectratio>
-			</control>
-			<control>
-				<description>Highlight item</description>
-				<type>image</type>
-				<id>23</id>
-				<posX>780</posX>
-				<posY>240</posY>
-				<width>345</width>
-				<height>438</height>
-				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-			</control>
-			<control>
-				<description>Title label</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>780</posX>
-				<posY>142</posY>
-				<label>#header.label</label>
-				<font>font24</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-				<width>1125</width>
-				<wrapString> : : : </wrapString>
-			</control>
-			<!-- <control>
+  <controls>
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="-289,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="-289,0" reversible="false">WindowClose</animation>
+      <visible>String.Equals(#OnlineVideos.state,details)</visible>
+      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>0</posY>
+        <width>627</width>
+        <height>1080</height>
+        <texture>bg_left.png</texture>
+        <colorDiffuse>ffffffff</colorDiffuse>
+      </control>
+      <control>
+        <type>label</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>52</posY>
+        <label>5906</label>
+        <width>525</width>
+        <font>font24</font>
+        <align>left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>71</posY>
+        <width>579</width>
+        <height>79</height>
+        <texture>bg_button_nofocus.png</texture>
+      </control>
+      <control>
+        <type>group</type>
+        <description>group element</description>
+        <control>
+          <description>videolist</description>
+          <type>listcontrol</type>
+          <id>51</id>
+          <posX>0</posX>
+          <posY>150</posY>
+          <width>577</width>
+          <height>885</height>
+          <textXOff>-45</textXOff>
+          <spinPosX>-700</spinPosX>
+          <spinPosY>-677</spinPosY>
+          <IconXOff>-150</IconXOff>
+          <IconYOff>10</IconYOff>
+          <onup>51</onup>
+          <ondown>51</ondown>
+          <onright>51</onright>
+          <onleft>51</onleft>
+          <spinPosX>435</spinPosX>
+          <spinPosY>978</spinPosY>
+          <spinCanFocus>yes</spinCanFocus>
+        </control>
+      </control>
+    </control>
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <visible>String.Equals(#OnlineVideos.state,details)</visible>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+      <control>
+        <description>Date</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>1887</posX>
+        <posY>63</posY>
+        <label>#date</label>
+        <align>right</align>
+        <font>font11</font>
+        <visible>!plugin.isenabled(InfoService)</visible>
+        <textcolor>aaffffff</textcolor>
+      </control>
+      <control>
+        <description>Date</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>1887</posX>
+        <posY>63</posY>
+        <label>#infoservice.weather.today.temp     #date</label>
+        <align>right</align>
+        <font>font11</font>
+        <visible>plugin.isenabled(InfoService)</visible>
+        <textcolor>aaffffff</textcolor>
+      </control>
+      <control>
+        <description>Time</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>1887</posX>
+        <posY>22</posY>
+        <label>#time</label>
+        <align>right</align>
+        <font>font16</font>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <id>0</id>
+        <type>image</type>
+        <posX>687</posX>
+        <posY>72</posY>
+        <width>1422</width>
+        <height>1149</height>
+        <texture>bg_facade.png</texture>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>735</posX>
+        <posY>145</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+      </control>
+      <control>
+        <description>Trailer Poster</description>
+        <type>image</type>
+        <id>24</id>
+        <posX>819</posX>
+        <posY>247</posY>
+        <width>300</width>
+        <height>423</height>
+        <texture flipY="true" diffuse="Thumb_Mask.png">#OnlineVideos.Details.Poster</texture>
+        <keepaspectratio>no</keepaspectratio>
+      </control>
+      <control>
+        <description>Highlight item</description>
+        <type>image</type>
+        <id>23</id>
+        <posX>780</posX>
+        <posY>240</posY>
+        <width>345</width>
+        <height>438</height>
+        <texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+      </control>
+      <control>
+        <description>Title label</description>
+        <type>fadelabel</type>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>142</posY>
+        <label>#header.label</label>
+        <font>font24</font>
+        <align>left</align>
+        <textcolor>ffffffff</textcolor>
+        <width>1125</width>
+        <wrapString> : : : </wrapString>
+      </control>
+      <!-- <control>
 			<type>label</type>
 			<description>Year txt</description>
 			<id>54</id>
@@ -142,32 +172,31 @@
 			<visible>no</visible>
 			<textcolor>90ffffff</textcolor>
 		</control> -->
-			<control>
-				<description>Genre value</description>
-				<type>fadelabel</type>
-				<id>57</id>
-				<posX>1170</posX>
-				<posY>255</posY>
-				<width>705</width>
-				<visible>no</visible>
-				<label>#OnlineVideos.Details.Genres</label>
-				<font>font18</font>
-				<wrapString> : : : </wrapString>
-			</control>
-
-			<control>
-				<description>Date Value</description>
-				<type>fadelabel</type>
-				<id>55</id>
-				<posX>1170</posX>
-				<posY>330</posY>
-				<label>#OnlineVideos.Translation.DateOfRelease.Label: #OnlineVideos.Details.ReleaseDate</label>
-				<textcolor>90FFFFFF</textcolor>
-				<font>font18</font>
-				<width>720</width>
-				<wrapString> : : : </wrapString>
-			</control>
-			<!-- <control>
+      <control>
+        <description>Genre value</description>
+        <type>fadelabel</type>
+        <id>57</id>
+        <posX>1170</posX>
+        <posY>255</posY>
+        <width>705</width>
+        <visible>no</visible>
+        <label>#OnlineVideos.Details.Genres</label>
+        <font>font18</font>
+        <wrapString> : : : </wrapString>
+      </control>
+      <control>
+        <description>Date Value</description>
+        <type>fadelabel</type>
+        <id>55</id>
+        <posX>1170</posX>
+        <posY>330</posY>
+        <label>#OnlineVideos.Translation.DateOfRelease.Label: #OnlineVideos.Details.ReleaseDate</label>
+        <textcolor>90FFFFFF</textcolor>
+        <font>font18</font>
+        <width>720</width>
+        <wrapString> : : : </wrapString>
+      </control>
+      <!-- <control>
 			<type>label</type>
 			<description>Genre txt</description>
 			<id>56</id>
@@ -177,35 +206,31 @@
 			<visible>no</visible>
 			<textcolor>90ffffff</textcolor>
 		</control> -->
-
-
-
-			<control>
-				<description>Director Value</description>
-				<type>fadelabel</type>
-				<id>58</id>
-				<posX>1170</posX>
-				<posY>405</posY>
-				<label>#OnlineVideos.Translation.Directors.Label: #OnlineVideos.Details.Directors</label>
-				<textcolor>ffFFFFFF</textcolor>
-				<font>font18</font>
-				<width>720</width>
-			</control>
-			<control>
-				<description>Actors value</description>
-				<type>textboxscrollup</type>
-				<id>53</id>
-				<posX>1170</posX>
-				<posY>480</posY>
-				<width>720</width>
-				<label>#OnlineVideos.Details.Actors</label>
-				<font>font16</font>
-				<textcolor>90FFFFFF</textcolor>
-				<seperator>: : :</seperator>
-				<height>202</height>
-			</control>
-
-			<!-- 		<control>
+      <control>
+        <description>Director Value</description>
+        <type>fadelabel</type>
+        <id>58</id>
+        <posX>1170</posX>
+        <posY>405</posY>
+        <label>#OnlineVideos.Translation.Directors.Label: #OnlineVideos.Details.Directors</label>
+        <textcolor>ffFFFFFF</textcolor>
+        <font>font18</font>
+        <width>720</width>
+      </control>
+      <control>
+        <description>Actors value</description>
+        <type>textboxscrollup</type>
+        <id>53</id>
+        <posX>1170</posX>
+        <posY>480</posY>
+        <width>720</width>
+        <label>#OnlineVideos.Details.Actors</label>
+        <font>font16</font>
+        <textcolor>90FFFFFF</textcolor>
+        <seperator>: : :</seperator>
+        <height>202</height>
+      </control>
+      <!-- 		<control>
 			<type>label</type>
 			<description>Plot txt</description>
 			<id>58</id>
@@ -215,30 +240,28 @@
 			<label>203</label>
 			<textcolor>90ffffff</textcolor>
 		</control> -->
-			<control>
-				<type>image</type>
-				<id>56</id>
-				<posX>735</posX>
-				<posY>633</posY>
-				<width>1185</width>
-				<height>79</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-
-
-			<control>
-				<description>Plot value</description>
-				<type>textboxscrollup</type>
-				<id>59</id>
-				<posX>780</posX>
-				<posY>750</posY>
-				<width>1125</width>
-				<height>285</height>
-				<font>font18</font>
-				<label>#OnlineVideos.Details.Plot</label>
-				<seperator>: : :</seperator>
-			</control>
-		</control>
-	</controls>
+      <control>
+        <type>image</type>
+        <id>56</id>
+        <posX>735</posX>
+        <posY>633</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+      </control>
+      <control>
+        <description>Plot value</description>
+        <type>textboxscrollup</type>
+        <id>59</id>
+        <posX>780</posX>
+        <posY>750</posY>
+        <width>1125</width>
+        <height>285</height>
+        <font>font18</font>
+        <label>#OnlineVideos.Details.Plot</label>
+        <seperator>: : :</seperator>
+      </control>
+    </control>
+  </controls>
 </window>

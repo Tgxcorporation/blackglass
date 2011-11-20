@@ -1,1308 +1,226 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-	<id>7973</id>
-	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-	<define>#header.label:Stocks &amp; Indices</define>
-	<define>#header.background:hover_stocks.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
-	<controls>
-		<import>common.window.background.xml</import>
-		<import>common.window.overlay.xml</import>
-		<import>common.window.time.xml</import>
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<control>
-				<type>fadelabel</type>
-				<width>1275</width>
-				<wrapString> : : : </wrapString>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>15</posY>
-				<label>#header.label</label>
-				<font>font28</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<!-- *** Provider Info *** -->
-			<control>
-				<description>Provider Info</description>
-				<type>label</type>
-				<id>1</id>
-				<posX>45</posX>
-				<posY>127</posY>
-				<label>Provided by Yahoo! Finance</label>
-				<font>font12</font>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>Provider Info</description>
-				<type>label</type>
-				<id>1</id>
-				<posX>45</posX>
-				<posY>157</posY>
-				<label>Quotes are delayed</label>
-				<font>font12</font>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>687</posX>
-				<posY>72</posY>
-				<width>1422</width>
-				<height>1149</height>
-				<texture>bg_facade.png</texture>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>735</posX>
-				<posY>145</posY>
-				<width>1185</width>
-				<height>79</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>735</posX>
-				<posY>250</posY>
-				<width>1185</width>
-				<height>79</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-			<!-- *** Type (Indices, Stocks, Currencies) *** -->
-			<control>
-				<description>Type</description>
-				<id>1</id>
-				<type>label</type>
-				<posX>765</posX>
-				<posY>138</posY>
-				<font>font28</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-				<width>1125</width>
-				<label>#Stocks.Action</label>
-			</control>
-			<!-- *** TopIndex 0 *** -->
-			<control>
-				<description>TopIndex Indicator 0</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>751</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopIndex0Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Index)</visible>
-			</control>
-			<control>
-				<description>TopIndex Name 0</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>810</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopIndex0Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Index)</visible>
-			</control>
-			<control>
-				<description>TopIndex Last 0</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>810</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopIndex0Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Index)</visible>
-			</control>
-			<!-- *** TopIndex 1 *** -->
-			<control>
-				<description>TopIndex Indicator 1</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>1132</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopIndex1Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Index)</visible>
-			</control>
-			<control>
-				<description>TopIndex Name 1</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1191</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopIndex1Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Index)</visible>
-			</control>
-			<control>
-				<description>TopIndex Last 1</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1191</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopIndex1Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Index)</visible>
-			</control>
-			<!-- *** TopIndex 2 *** -->
-			<control>
-				<description>TopIndex Indicator 2</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>1515</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopIndex2Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Index)</visible>
-			</control>
-			<control>
-				<description>TopIndex Name 2</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1573</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopIndex2Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Index)</visible>
-			</control>
-			<control>
-				<description>TopIndex Last 2</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1573</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopIndex2Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Index)</visible>
-			</control>
-			<!-- *** Index Item List *** -->
-			<control>
-				<type>group</type>
-				<control>
-					<description>listcontrol</description>
-					<type>listcontrol</type>
-					<id>50</id>
-					<onleft>2</onleft>
-					<posY>330</posY>
-					<height>765</height>
-					<visible>string.equals(#Stocks.Type,Index)</visible>
-					<itemWidth>48</itemWidth>
-					<itemHeight>48</itemHeight>
-					<IconXOff>15</IconXOff>
-					<IconYOff>15</IconYOff>
-				</control>
-			</control>
-			<!-- *** Index Item Properties *** -->
-			<control>
-				<type>group</type>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-				<dimColor>ffffffff</dimColor>
-				<control>
-					<description>Index Item Name</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>240</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemName</label>
-					<font>font22</font>
-					<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)</visible>
-				</control>
-				<control>
-					<description>Index Item Date/Time</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>345</posY>
-					<label>#Stocks.ListItemDate #Stocks.ListItemTime</label>
-					<width>579</width>
-					<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)</visible>
-				</control>
-				<control>
-					<description>Index Item Last</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>405</posY>
-					<width>579</width>
-					<font>font12</font>
-					<textcolor>90ffffff</textcolor>
-					<label>Current Value:</label>
-					<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)+!string.equals(#Stocks.ListItemLast,)</visible>
-				</control>
-				<control>
-					<description>Index Item Last</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>435</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemLast</label>
-					<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)+!string.equals(#Stocks.ListItemLast,)</visible>
-				</control>
-				<control>
-					<description>Index Item Change</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>495</posY>
-					<textcolor>90ffffff</textcolor>
-					<width>579</width>
-					<font>font12</font>
-					<label>Change:</label>
-					<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)+!string.equals(#Stocks.ListItemChange,)</visible>
-				</control>
-				<control>
-					<description>Index Item Change</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>525</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemChange (#Stocks.ListItemPercentChange)</label>
-					<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)+!string.equals(#Stocks.ListItemChange,)</visible>
-				</control>
-				<control>
-					<description>Index Item Open</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>585</posY>
-					<width>579</width>
-					<font>font12</font>
-					<label>Close Value:</label>
-					<textcolor>90ffffff</textcolor>
-					<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)+!string.equals(#Stocks.ListItemOpen,)</visible>
-				</control>
-				<control>
-					<description>Index Item Open</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>615</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemClose, Open Value: #Stocks.ListItemOpen</label>
-					<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)+!string.equals(#Stocks.ListItemOpen,)</visible>
-				</control>
-				<control>
-					<description>Index Item Low/High</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>675</posY>
-					<width>579</width>
-					<font>font12</font>
-					<textcolor>90ffffff</textcolor>
-					<label>Lowest/Highest Value:</label>
-					<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)+!string.equals(#Stocks.ListItemLow,)</visible>
-				</control>
-				<control>
-					<description>Index Item Low/High</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>705</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemLow/#Stocks.ListItemHigh</label>
-					<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)+!string.equals(#Stocks.ListItemLow,)</visible>
-				</control>
-			</control>
-			<!-- *** TopStock 0 *** -->
-			<control>
-				<description>TopStock Indicator 0</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>751</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopStock0Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Stock)</visible>
-			</control>
-			<control>
-				<description>TopStock Name 0</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>810</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopStock0Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Stock)</visible>
-			</control>
-			<control>
-				<description>TopStock Last 0</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>810</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopStock0Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Stock)</visible>
-			</control>
-			<!-- *** TopStock 1 *** -->
-			<control>
-				<description>TopStock Indicator 1</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>1132</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopStock1Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Stock)</visible>
-			</control>
-			<control>
-				<description>TopStock Name 1</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1191</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopStock1Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Stock)</visible>
-			</control>
-			<control>
-				<description>TopStock Last 1</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1191</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopStock1Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Stock)</visible>
-			</control>
-			<!-- *** TopStock 2 *** -->
-			<control>
-				<description>TopStock Indicator 2</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>1515</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopStock2Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Stock)</visible>
-			</control>
-			<control>
-				<description>TopStock Name 2</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1573</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopStock2Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Stock)</visible>
-			</control>
-			<control>
-				<description>TopStock Last 2</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1573</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopStock2Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Stock)</visible>
-			</control>
-			<control>
-				<type>group</type>
-				<control>
-					<description>listcontrol</description>
-					<type>listcontrol</type>
-					<id>60</id>
-					<onleft>2</onleft>
-					<posY>330</posY>
-					<height>765</height>
-					<visible>string.equals(#Stocks.Type,Stock)</visible>
-					<itemWidth>48</itemWidth>
-					<itemHeight>48</itemHeight>
-					<IconXOff>15</IconXOff>
-					<IconYOff>15</IconYOff>
-				</control>
-			</control>
-			<!-- *** Stock Item Properties *** -->
-			<control>
-				<type>group</type>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-				<dimColor>ffffffff</dimColor>
-				<control>
-					<description>Stock Item Name</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>240</posY>
-					<width>579</width>
-					<font>font22</font>
-					<label>#Stocks.ListItemName</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)</visible>
-				</control>
-				<control>
-					<description>Stocks Item Date/Time</description>
-					<type>label</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>345</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemDate #Stocks.ListItemTime</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)</visible>
-				</control>
-				<control>
-					<description>Stock Item Last</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>405</posY>
-					<width>579</width>
-					<font>font12</font>
-					<textcolor>90ffffff</textcolor>
-					<label>Current Value:</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)+!string.equals(#Stocks.ListItemLast,)</visible>
-				</control>
-				<control>
-					<description>Stock Item Last</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>435</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemLast</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)+!string.equals(#Stocks.ListItemLast,)</visible>
-				</control>
-				<control>
-					<description>Stock Item Change</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>495</posY>
-					<textcolor>90ffffff</textcolor>
-					<width>579</width>
-					<font>font12</font>
-					<label>Change:</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)+!string.equals(#Stocks.ListItemChange,)</visible>
-				</control>
-				<control>
-					<description>Stock Item Change</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>525</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemChange (#Stocks.ListItemPercentChange)</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)+!string.equals(#Stocks.ListItemChange,)</visible>
-				</control>
-				<control>
-					<description>Stock Item Open</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>585</posY>
-					<textcolor>90ffffff</textcolor>
-					<width>579</width>
-					<font>font12</font>
-					<label>Close Value:</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)+!string.equals(#Stocks.ListItemOpen,)</visible>
-				</control>
-				<control>
-					<description>Stock Item Open</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>615</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemClose, Open Value: #Stocks.ListItemOpen</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)+!string.equals(#Stocks.ListItemOpen,)</visible>
-				</control>
-				<control>
-					<description>Stock Item Low/High</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>675</posY>
-					<width>579</width>
-					<font>font12</font>
-					<textcolor>90ffffff</textcolor>
-					<label>Lowest/Highest Value:</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)+!string.equals(#Stocks.ListItemLow,)</visible>
-				</control>
-				<control>
-					<description>Stock Item Low/High</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>705</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemLow/#Stocks.ListItemHigh</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)+!string.equals(#Stocks.ListItemLow,)</visible>
-				</control>
-				<control>
-					<description>Stock Item Market</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>765</posY>
-					<width>579</width>
-					<font>font12</font>
-					<textcolor>90ffffff</textcolor>
-					<label>Market Capital:</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)+!string.equals(#Stocks.ListItemCapital,)</visible>
-				</control>
-				<control>
-					<description>Stock Item Market</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>795</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemCapital (Volume: #Stocks.ListItemVolume, Ratio: #Stocks.ListItemRatio)</label>
-					<visible>string.equals(#Stocks.StockListSelectable,true)+string.equals(#Stocks.Type,Stock)+!string.equals(#Stocks.ListItemCapital,)</visible>
-				</control>
-			</control>
-			<!-- *** TopFund 0 *** -->
-			<control>
-				<description>TopFund Indicator 0</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>751</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopFund0Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Fund)</visible>
-			</control>
-			<control>
-				<description>TopFund Name 0</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>810</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopFund0Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Fund)</visible>
-			</control>
-			<control>
-				<description>TopFund Last 0</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>810</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopFund0Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Fund)</visible>
-			</control>
-			<!-- *** TopFund 1 *** -->
-			<control>
-				<description>TopFund Indicator 1</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>1132</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopFund1Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Fund)</visible>
-			</control>
-			<control>
-				<description>TopFund Name 1</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1191</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopFund1Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Fund)</visible>
-			</control>
-			<control>
-				<description>TopFund Last 1</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1191</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopFund1Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Fund)</visible>
-			</control>
-			<!-- *** TopFund 2 *** -->
-			<control>
-				<description>TopFund Indicator 2</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>1515</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopFund2Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Fund)</visible>
-			</control>
-			<control>
-				<description>TopFund Name 2</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1573</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopFund2Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Fund)</visible>
-			</control>
-			<control>
-				<description>TopFund Last 2</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1573</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopFund2Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Fund)</visible>
-			</control>
-			<control>
-				<type>group</type>
-				<control>
-					<description>listcontrol</description>
-					<type>listcontrol</type>
-					<id>70</id>
-					<onleft>2</onleft>
-					<posY>330</posY>
-					<height>765</height>
-					<visible>string.equals(#Stocks.Type,Fund)</visible>
-					<itemWidth>48</itemWidth>
-					<itemHeight>48</itemHeight>
-					<IconXOff>15</IconXOff>
-					<IconYOff>15</IconYOff>
-				</control>
-			</control>
-			<!-- *** TopPortfolio 0 *** -->
-			<control>
-				<description>TopPortfolio Indicator 0</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>751</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopPortfolio0Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Portfolio)</visible>
-			</control>
-			<control>
-				<description>TopPortfolio Name 0</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>810</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopPortfolio0Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Portfolio)</visible>
-			</control>
-			<control>
-				<description>TopPortfolio Last 0</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>810</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopPortfolio0Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Portfolio)</visible>
-			</control>
-			<!-- *** TopPortfolio 1 *** -->
-			<control>
-				<description>TopPortfolio Indicator 1</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>1132</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopPortfolio1Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Portfolio)</visible>
-			</control>
-			<control>
-				<description>TopPortfolio Name 1</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1191</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopPortfolio1Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Portfolio)</visible>
-			</control>
-			<control>
-				<description>TopPortfolio Last 1</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1191</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopPortfolio1Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Portfolio)</visible>
-			</control>
-			<!-- *** TopPortfolio 2 *** -->
-			<control>
-				<description>TopPortfolio Indicator 2</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>1515</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopPortfolio2Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Portfolio)</visible>
-			</control>
-			<control>
-				<description>TopPortfolio Name 2</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1573</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopPortfolio2Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Portfolio)</visible>
-			</control>
-			<control>
-				<description>TopPortfolio Last 2</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1573</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopPortfolio2Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Portfolio)</visible>
-			</control>
-			<control>
-				<type>group</type>
-				<control>
-					<description>listcontrol</description>
-					<type>listcontrol</type>
-					<id>80</id>
-					<onleft>2</onleft>
-					<posY>330</posY>
-					<height>765</height>
-					<visible>string.equals(#Stocks.Type,Portfolio)</visible>
-					<itemWidth>48</itemWidth>
-					<itemHeight>48</itemHeight>
-					<IconXOff>15</IconXOff>
-					<IconYOff>15</IconYOff>
-				</control>
-			</control>
-			<control>
-				<type>group</type>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-				<dimColor>ffffffff</dimColor>
-				<!-- *** Portfolio Item Properties *** -->
-				<control>
-					<description>Portfolio Item Name</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>240</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemName</label>
-					<font>font22</font>
-					<visible>string.equals(#Stocks.PortfolioListSelectable,true)+string.equals(#Stocks.Type,Portfolio)</visible>
-				</control>
-				<control>
-					<description>Portfolio Summary</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>345</posY>
-					<label>#Stocks.Summary</label>
-					<width>579</width>
-					<visible>string.equals(#Stocks.Type,Portfolio)</visible>
-				</control>
-				<control>
-					<description>Portfolio Item Last</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>405</posY>
-					<width>579</width>
-					<font>font12</font>
-					<textcolor>90ffffff</textcolor>
-					<label>Current Value:</label>
-					<visible>string.equals(#Stocks.PortfolioListSelectable,true)+string.equals(#Stocks.Type,Portfolio)+!string.equals(#Stocks.ListItemLast,)</visible>
-				</control>
-				<control>
-					<description>Portfolio Item Last</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>435</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemLast</label>
-					<visible>string.equals(#Stocks.PortfolioListSelectable,true)+string.equals(#Stocks.Type,Portfolio)+!string.equals(#Stocks.ListItemLast,)</visible>
-				</control>
-				<control>
-					<description>Portfolio Item Change</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>495</posY>
-					<textcolor>90ffffff</textcolor>
-					<width>579</width>
-					<font>font12</font>
-					<label>Change:</label>
-					<visible>string.equals(#Stocks.PortfolioListSelectable,true)+string.equals(#Stocks.Type,Portfolio)+!string.equals(#Stocks.ListItemChange,)</visible>
-				</control>
-				<control>
-					<description>Portfolio Item Change</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>525</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemChange (#Stocks.ListItemPercentChange)</label>
-					<visible>string.equals(#Stocks.PortfolioListSelectable,true)+string.equals(#Stocks.Type,Portfolio)+!string.equals(#Stocks.ListItemChange,)</visible>
-				</control>
-				<control>
-					<description>Portfolio Item Open</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>585</posY>
-					<width>579</width>
-					<font>font12</font>
-					<textcolor>90ffffff</textcolor>
-					<label>Close value:</label>
-					<visible>string.equals(#Stocks.PortfolioListSelectable,true)+string.equals(#Stocks.Type,Portfolio)+!string.equals(#Stocks.ListItemOpen,)</visible>
-				</control>
-				<control>
-					<description>Portfolio Item Open</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>615</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemClose, Open Value: #Stocks.ListItemOpen</label>
-					<visible>string.equals(#Stocks.PortfolioListSelectable,true)+string.equals(#Stocks.Type,Portfolio)+!string.equals(#Stocks.ListItemOpen,)</visible>
-				</control>
-				<control>
-					<description>Portfolio Item Low/High</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>675</posY>
-					<width>579</width>
-					<font>font12</font>
-					<textcolor>90ffffff</textcolor>
-					<label>Lowest/Highest Value:</label>
-					<visible>string.equals(#Stocks.PortfolioListSelectable,true)+string.equals(#Stocks.Type,Portfolio)+!string.equals(#Stocks.ListItemLow,)</visible>
-				</control>
-				<control>
-					<description>Portfolio Item Low/High</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>705</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemLow/#Stocks.ListItemHigh</label>
-					<visible>string.equals(#Stocks.PortfolioListSelectable,true)+string.equals(#Stocks.Type,Portfolio)+!string.equals(#Stocks.ListItemLow,)</visible>
-				</control>
-				<control>
-					<description>Portfolio Item Market</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>765</posY>
-					<width>579</width>
-					<font>font12</font>
-					<textcolor>90ffffff</textcolor>
-					<label>Market Capital:</label>
-					<visible>string.equals(#Stocks.PortfolioListSelectable,true)+string.equals(#Stocks.Type,Portfolio)+!string.equals(#Stocks.ListItemCapital,)</visible>
-				</control>
-				<control>
-					<description>Portfolio Item Market</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>795</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemCapital (Volume: #Stocks.ListItemVolume, Ratio: #Stocks.ListItemRatio)</label>
-					<visible>string.equals(#Stocks.PortfolioListSelectable,true)+string.equals(#Stocks.Type,Portfolio)+!string.equals(#Stocks.ListItemCapital,)</visible>
-				</control>
-			</control>
-			<!-- *** TopCurrency 0 *** -->
-			<control>
-				<description>TopCurrency Indicator 0</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>751</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopCurrency0Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Currency)</visible>
-			</control>
-			<control>
-				<description>TopCurrency Name 0</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>810</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopCurrency0Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Currency)</visible>
-			</control>
-			<control>
-				<description>TopCurrency Last 0</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>810</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopCurrency0Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Currency)</visible>
-			</control>
-			<!-- *** TopCurrency 1 *** -->
-			<control>
-				<description>TopCurrency Indicator 1</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>1132</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopCurrency1Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Currency)</visible>
-			</control>
-			<control>
-				<description>TopCurrency Name 1</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1191</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopCurrency1Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Currency)</visible>
-			</control>
-			<control>
-				<description>TopCurrency Last 1</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1191</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopCurrency1Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Currency)</visible>
-			</control>
-			<!-- *** TopCurrency 2 *** -->
-			<control>
-				<description>TopCurrency Indicator 2</description>
-				<type>image</type>
-				<id>1</id>
-				<posX>1515</posX>
-				<posY>262</posY>
-				<width>48</width>
-				<height>48</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#Stocks.TopCurrency2Indicator</texture>
-				<visible>string.equals(#Stocks.Type,Currency)</visible>
-			</control>
-			<control>
-				<description>TopCurrency Name 2</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1573</posX>
-				<posY>232</posY>
-				<width>345</width>
-				<height>25</height>
-				<align>left</align>
-				<label>#Stocks.TopCurrency2Name</label>
-				<font>font11</font>
-				<visible>string.equals(#Stocks.Type,Currency)</visible>
-			</control>
-			<control>
-				<description>TopCurrency Last 2</description>
-				<type>fadelabel</type>
-				<id>1</id>
-				<posX>1573</posX>
-				<posY>255</posY>
-				<width>345</width>
-				<height>52</height>
-				<align>left</align>
-				<label>#Stocks.TopCurrency2Last</label>
-				<font>font24</font>
-				<textcolor>b0ffffff</textcolor>
-				<visible>string.equals(#Stocks.Type,Currency)</visible>
-			</control>
-			<control>
-				<type>group</type>
-				<control>
-					<description>listcontrol</description>
-					<type>listcontrol</type>
-					<id>90</id>
-					<onleft>2</onleft>
-					<posY>330</posY>
-					<height>765</height>
-					<visible>string.equals(#Stocks.Type,Currency)</visible>
-					<itemWidth>48</itemWidth>
-					<itemHeight>48</itemHeight>
-					<IconXOff>15</IconXOff>
-					<IconYOff>15</IconYOff>
-				</control>
-			</control>
-			<!-- *** Currency Item Properties *** -->
-			<control>
-				<type>group</type>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-				<dimColor>ffffffff</dimColor>
-				<control>
-					<description>Currency Item Name</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>240</posY>
-					<width>579</width>
-					<label>#Stocks.ListItemName</label>
-					<visible>string.equals(#Stocks.CurrencyListSelectable,true)+string.equals(#Stocks.Type,Currency)</visible>
-				</control>
-				<control>
-					<description>Currency Item Date/Time</description>
-					<type>fadelabel</type>
-					<id>0</id>
-					<posX>45</posX>
-					<posY>345</posY>
-					<label>#Stocks.ListItemDate #Stocks.ListItemTime</label>
-					<width>579</width>
-					<visible>string.equals(#Stocks.CurrencyListSelectable,true)+string.equals(#Stocks.Type,Currency)</visible>
-				</control>
-			</control>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-579</posX>
-			<posY>4</posY>
-			<width>627</width>
-			<height>1071</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)]</visible>
-			<animation effect="fade" time="50">WindowClose</animation>
-			<animation effect="fade" time="50">WindowOpen</animation>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>actiongroup</type>
-			<description>action menu</description>
-			<defaultcontrol>2</defaultcontrol>
-			<onexit>0</onexit>
-			<buttonX>0</buttonX>
-			<buttonY>0</buttonY>
-			<buttonwidth>84</buttonwidth>
-			<buttonheight>1080</buttonheight>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<width>637</width>
-			<height>1080</height>
-			<dimColor>ffffffff</dimColor>
-			<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)</visible>
-			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>627</width>
-				<height>1080</height>
-				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
-			</control>
-			<control>
-				<id>0</id>
-				<type>label</type>
-				<posX>45</posX>
-				<posY>52</posY>
-				<label>#header.label</label>
-				<width>500</width>
-				<font>font24</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>71</posY>
-				<width>579</width>
-				<height>79</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
-			<control>
-				<type>group</type>
-				<layout>StackLayout(0, Vertical, true)</layout>
-				<posX>0</posX>
-				<posY>150</posY>
-				<control>
-					<description>Switch</description>
-					<type>button</type>
-					<id>2</id>
-					<label>Switch</label>
-					<onup>17</onup>
-					<ondown>3</ondown>
-				</control>
-				<control>
-					<description>Portfolio Password</description>
-					<type>button</type>
-					<id>3</id>
-					<label>Portfolio Password</label>
-					<onup>2</onup>
-					<ondown>4</ondown>
-				</control>
-				<control>
-					<description>Refresh</description>
-					<type>button</type>
-					<id>4</id>
-					<label>Refresh</label>
-					<onup>3</onup>
-					<ondown>2</ondown>
-				</control>
-			</control>
-		</control>
-		<control>
+  <id>7973</id>
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+  <define>#header.label:Stocks &amp; Indices</define>
+  <define>#header.background:hover_stocks.png</define>
+  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+  <controls>
+    <import>common.window.background.xml</import>
+    <import>common.window.overlay.xml</import>
+    <import>common.window.time.xml</import>
+    <import>StocksIndexDetails.xml</import>
+    <import>StocksStockDetails.xml</import>
+    <import>StocksFundDetails.xml</import>
+    <import>StocksPortfolioDetails.xml</import>
+    <import>StocksCurrencyDetails.xml</import>
+    <import>StocksHeadlineDetails.xml</import>
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(4)]">conditional</animation>
+      <control>
+        <type>fadelabel</type>
+        <width>1275</width>
+        <wrapString> : : : </wrapString>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>15</posY>
+        <label>#header.label</label>
+        <font>font28</font>
+        <align>left</align>
+        <textcolor>60ffffff</textcolor>
+      </control>
+      <!-- *** Provider Info *** -->
+      <control>
+        <description>Provider Info</description>
+        <type>label</type>
+        <id>1</id>
+        <posX>45</posX>
+        <posY>127</posY>
+        <label>Provided by Yahoo! Finance</label>
+        <font>font12</font>
+      </control>
+      <control>
+        <description>Provider Info</description>
+        <type>label</type>
+        <id>1</id>
+        <posX>45</posX>
+        <posY>157</posY>
+        <label>Quotes are delayed</label>
+        <font>font12</font>
+      </control>
+      <control>
+        <description>Refresh Time</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>187</posY>
+        <label>#Stocks.Time</label>
+        <font>font12</font>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>687</posX>
+        <posY>72</posY>
+        <width>1422</width>
+        <height>1149</height>
+        <texture>bg_facade.png</texture>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>735</posX>
+        <posY>145</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>735</posX>
+        <posY>250</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+      </control>
+      <!-- *** Type (Indices, Stocks, Currencies) *** -->
+      <control>
+        <description>Type</description>
+        <id>1</id>
+        <type>label</type>
+        <posX>765</posX>
+        <posY>138</posY>
+        <font>font28</font>
+        <align>left</align>
+        <textcolor>ffffffff</textcolor>
+        <width>1125</width>
+        <label>#Stocks.Action</label>
+      </control>
+    </control>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>-579</posX>
+      <posY>4</posY>
+      <width>627</width>
+      <height>1071</height>
+      <texture>bg_left.png</texture>
+      <colorDiffuse>ffffffff</colorDiffuse>
+      <visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)]</visible>
+      <animation effect="fade" time="50">WindowClose</animation>
+      <animation effect="fade" time="50">WindowOpen</animation>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>2</defaultcontrol>
+      <onexit>0</onexit>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>577</buttonwidth>
+      <buttonheight>1080</buttonheight>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <width>637</width>
+      <height>1080</height>
+      <dimColor>ffffffff</dimColor>
+      <visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)</visible>
+      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>0</posY>
+        <width>627</width>
+        <height>1080</height>
+        <texture>bg_left.png</texture>
+        <colorDiffuse>ffffffff</colorDiffuse>
+      </control>
+      <control>
+        <id>0</id>
+        <type>label</type>
+        <posX>45</posX>
+        <posY>52</posY>
+        <label>924</label>
+        <width>499</width>
+        <font>font24</font>
+        <align>left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>71</posY>
+        <width>579</width>
+        <height>79</height>
+        <texture>bg_button_nofocus.png</texture>
+      </control>
+      <control>
+        <type>group</type>
+        <layout>StackLayout(0, Vertical, true)</layout>
+        <posX>0</posX>
+        <posY>150</posY>
+        <control>
+          <description>Switch</description>
+          <type>button</type>
+          <id>2</id>
+          <label>Switch</label>
+          <onup>5</onup>
+          <ondown>3</ondown>
+        </control>
+        <control>
+          <description>View</description>
+          <type>button</type>
+          <id>3</id>
+          <label>View</label>
+          <onup>2</onup>
+          <ondown>4</ondown>
+        </control>
+        <control>
+          <description>Portfolio Password</description>
+          <type>button</type>
+          <id>4</id>
+          <label>Portfolio Password</label>
+          <onup>3</onup>
+          <ondown>5</ondown>
+        </control>
+        <control>
+          <description>Refresh</description>
+          <type>button</type>
+          <id>5</id>
+          <label>Refresh</label>
+          <onup>4</onup>
+          <ondown>2</ondown>
+        </control>
+      </control>
+    </control>
+    <!-- <control>
 			<description>DUMMY BUTTON</description>
 			<type>button</type>
 			<id>51</id>
-			<posX>720</posX>
+			<posX>480</posX>
 			<posY>0</posY>
-			<width>1200</width>
-			<height>1080</height>
+			<width>800</width>
+			<height>720</height>
+			<label/>
 			<onright>2</onright>
 			<onleft>2</onleft>
 			<textureFocus>-</textureFocus>
@@ -1313,10 +231,11 @@
 			<description>DUMMY BUTTON</description>
 			<type>button</type>
 			<id>61</id>
-			<posX>720</posX>
+			<posX>480</posX>
 			<posY>0</posY>
-			<width>1200</width>
-			<height>1080</height>
+			<width>800</width>
+			<height>720</height>
+			<label/>
 			<onright>2</onright>
 			<onleft>2</onleft>
 			<textureFocus>-</textureFocus>
@@ -1327,10 +246,11 @@
 			<description>DUMMY BUTTON</description>
 			<type>button</type>
 			<id>71</id>
-			<posX>720</posX>
+			<posX>480</posX>
 			<posY>0</posY>
-			<width>1200</width>
-			<height>1080</height>
+			<width>800</width>
+			<height>720</height>
+			<label/>
 			<onright>2</onright>
 			<onleft>2</onleft>
 			<textureFocus>-</textureFocus>
@@ -1341,10 +261,11 @@
 			<description>DUMMY BUTTON</description>
 			<type>button</type>
 			<id>81</id>
-			<posX>720</posX>
+			<posX>480</posX>
 			<posY>0</posY>
-			<width>1200</width>
-			<height>1080</height>
+			<width>800</width>
+			<height>720</height>
+			<label/>
 			<onright>2</onright>
 			<onleft>2</onleft>
 			<textureFocus>-</textureFocus>
@@ -1355,15 +276,16 @@
 			<description>DUMMY BUTTON</description>
 			<type>button</type>
 			<id>91</id>
-			<posX>720</posX>
+			<posX>480</posX>
 			<posY>0</posY>
-			<width>1200</width>
-			<height>1080</height>
+			<width>800</width>
+			<height>720</height>
+			<label/>
 			<onright>2</onright>
 			<onleft>2</onleft>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<visible>!string.equals(#Stocks.CurrencyListSelectable,true)+string.equals(#Stocks.Type,Currency)</visible>
-		</control>
-	</controls>
+		</control> -->
+  </controls>
 </window>

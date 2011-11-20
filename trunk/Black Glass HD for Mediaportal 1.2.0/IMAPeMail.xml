@@ -3,10 +3,9 @@
 <window>
   <id>330099</id>
   <defaultcontrol>50</defaultcontrol>
-  <allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+  <allowoverlay>player.hasmedia</allowoverlay>
   <define>#header.background:hover_email.png</define>
-  <animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
   <controls>
     <import>common.window.background.xml</import>
     <import>common.window.overlay.xml</import>
@@ -17,6 +16,7 @@
       <animation effect="fade" time="150">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
       <control>
         <type>label</type>
         <id>0</id>
@@ -26,20 +26,16 @@
         <font>font22</font>
         <align>left</align>
         <textcolor>60ffffff</textcolor>
-        <visible>!control.hasfocus(52)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
       </control>
       <control>
         <description>Account</description>
         <type>label</type>
-        <id>0</id>
+        <id>68</id>
         <posX>45</posX>
         <posY>66</posY>
         <font>font13</font>
         <textcolor>ffffffff</textcolor>
         <label>#account</label>
-        <visible>control.hasfocus(50)</visible>
-        <animation effect="fade" time="250">visiblechange</animation>
       </control>
       <control>
         <type>image</type>
@@ -86,7 +82,15 @@
           <!-- <ondown>52</ondown> -->
         </control>
       </control>
-      <!-- DETAILS -->
+    </control>
+    <!-- DETAILS -->
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
       <control>
         <type>image</type>
         <id>1001</id>
@@ -95,8 +99,9 @@
         <width>1422</width>
         <height>1149</height>
         <texture>bg_facade.png</texture>
-        <visible>control.isvisible(60)+!control.hasfocus(52)</visible>
-        <animation effect="fade" time="250" reversible="true">visiblechange</animation>
+        <visible>control.isvisible(60)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="-1050,0">hidden</animation>
       </control>
       <control>
         <description>email Subject</description>
@@ -108,9 +113,10 @@
         <font>font24</font>
         <textcolor>ffFFFFFF</textcolor>
         <label>#subject</label>
-        <visible>control.isvisible(60)+!control.hasfocus(52)</visible>
-        <animation effect="fade" time="250" reversible="true">visiblechange</animation>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(60)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="-1050,0">hidden</animation>
       </control>
       <control>
         <id>0</id>
@@ -121,8 +127,9 @@
         <height>79</height>
         <texture>bg_facade_line_nofocus.png</texture>
         <colordiffuse>77ffffff</colordiffuse>
-        <visible>control.isvisible(60)+!control.hasfocus(52)</visible>
-        <animation effect="fade" time="250" reversible="true">visiblechange</animation>
+        <visible>control.isvisible(60)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="-1050,0">hidden</animation>
       </control>
       <control>
         <description>From</description>
@@ -134,8 +141,9 @@
         <width>856</width>
         <font>font16</font>
         <textcolor>90FFFFFF</textcolor>
-        <visible>control.isvisible(60)+!control.hasfocus(52)</visible>
-        <animation effect="fade" time="250" reversible="true">visiblechange</animation>
+        <visible>control.isvisible(60)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="-1050,0">hidden</animation>
       </control>
       <control>
         <id>0</id>
@@ -146,8 +154,9 @@
         <height>79</height>
         <texture>bg_facade_line_nofocus.png</texture>
         <colordiffuse>77ffffff</colordiffuse>
-        <visible>control.isvisible(60)+!control.hasfocus(52)</visible>
-        <animation effect="fade" time="250" reversible="true">visiblechange</animation>
+        <visible>control.isvisible(60)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="-1050,0">hidden</animation>
       </control>
       <control>
         <description>email Date</description>
@@ -158,9 +167,10 @@
         <width>856</width>
         <font>font16</font>
         <textcolor>ffffffff</textcolor>
-        <visible>control.isvisible(60)+!control.hasfocus(52)</visible>
         <label>#detaildate</label>
-        <animation effect="fade" time="250" reversible="true">visiblechange</animation>
+        <visible>control.isvisible(60)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="-1050,0">hidden</animation>
       </control>
       <control>
         <id>0</id>
@@ -171,8 +181,9 @@
         <height>79</height>
         <texture>bg_facade_line_nofocus.png</texture>
         <colordiffuse>77ffffff</colordiffuse>
-        <visible>control.isvisible(60)+!control.hasfocus(52)</visible>
-        <animation effect="fade" time="250" reversible="true">visiblechange</animation>
+        <visible>control.isvisible(60)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="-1050,0">hidden</animation>
       </control>
       <control>
         <description>Body</description>
@@ -184,10 +195,11 @@
         <height>697</height>
         <textcolor>ffFFFFFF</textcolor>
         <font>font13</font>
-        <visible>control.isvisible(60)+!control.hasfocus(52)</visible>
         <seperator>: : :</seperator>
         <label>#detailsummary</label>
-        <animation effect="fade" time="250" reversible="true">visiblechange</animation>
+        <visible>control.isvisible(60)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="-1050,0">visible</animation>
+        <animation effect="slide" tween="circle" easing="out" time="200" end="-1050,0">hidden</animation>
       </control>
     </control>
     <!--            :: MENU ::            -->
@@ -212,7 +224,7 @@
       <onexit>0</onexit>
       <buttonX>0</buttonX>
       <buttonY>0</buttonY>
-      <buttonwidth>84</buttonwidth>
+      <buttonwidth>577</buttonwidth>
       <buttonheight>1080</buttonheight>
       <textureFocus>-</textureFocus>
       <textureNoFocus>-</textureNoFocus>
@@ -224,7 +236,7 @@
       <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
       <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
       <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-      <animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
       <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
       <control>
@@ -267,7 +279,7 @@
           <id>52</id>
           <posX>15</posX>
           <posY>150</posY>
-          <width>579</width>
+          <width>577</width>
           <onright>50</onright>
           <textXOff>-7</textXOff>
           <spinPosX>420</spinPosX>

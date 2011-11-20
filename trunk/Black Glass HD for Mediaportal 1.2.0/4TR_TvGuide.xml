@@ -6,13 +6,11 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:4</define>
 	<define>#header.background:hover_my tv.png</define>
-	<animation effect="fade" time="250">WindowClose</animation>
-	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="slide" tween="circle" easing="out" time="200" start="1920,0" reversible="false">WindowOpen</animation>
+	<animation effect="slide" tween="circle" time="150" end="2250,0" reversible="false">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
-		<import>common.window.time.xml</import>
 		<control>
 			<type>fadelabel</type>
 			<width>1275</width>
@@ -25,8 +23,10 @@
 			<align>left</align>
 			<textcolor>60ffffff</textcolor>
 		</control>
+		<import>common.window.time.stripped.xml</import>
 		<control>
 			<type>image</type>
+			<id>0</id>
 			<posX>-7</posX>
 			<posY>72</posY>
 			<width>1948</width>
@@ -48,26 +48,28 @@
 			<description>Single Channel View Label</description>
 			<type>label</type>
 			<id>32</id>
-			<posX>225</posX>
-			<posY>15</posY>
-			<font>font28</font>
+			<posX>40</posX>
+			<posY>595</posY>
+			<font>font18</font>
 			<align>left</align>
 			<textcolor>60FFFFFF</textcolor>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
 		<control>
 			<description>Single Channel View Image</description>
 			<type>image</type>
 			<id>33</id>
-			<posX>100</posX>
-			<posY>15</posY>
+			<posX>13</posX>
+			<posY>620</posY>
 			<width>105</width>
-			<height>78</height>
+			<height>68</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
 			<centered>yes</centered>
 			<texture>defaultVideoBig.png</texture>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
 		<!-- Timeheader background must be dedfined before Timeheader label template -->
 		<!-- b/c Timeheader is on the background and will be rendered first -->
@@ -286,7 +288,6 @@
 		</control>
 		<control>
 			<type>image</type>
-
 			<posX>432</posX>
 			<posY>822</posY>
 			<width>1455</width>
@@ -309,7 +310,6 @@
 		<control>
 			<type>image</type>
 			<id>98</id>
-
 			<posX>48</posX>
 			<posY>802</posY>
 			<width>382</width>
@@ -365,7 +365,7 @@
 			<description>record pin</description>
 			<type>image</type>
 			<id>31</id>
-			<posX>-1220</posX>
+			<posX>-1830</posX>
 			<posY>712</posY>
 			<texture>tvguide_record_button.png</texture>
 			<visible>no</visible>
@@ -400,37 +400,6 @@
 			<texture>bg_button_vertical.png</texture>
 			<colordiffuse>ffffffff</colordiffuse>
 		</control>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	</controls>
 </window>
