@@ -3,22 +3,105 @@
 <window>
 	<controls>
 		<control>
-			<type>label</type>
-			<description>Title (Filmstrip)</description>
-			<id>640</id>
-			<posX>57</posX>
-			<posY>960</posY>
-			<width>1830</width>
-			<align>center</align>
-			<font>font24</font>
-			<label>#MovingPictures.SelectedMovie.title</label>
-			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]</visible>
-			<animation effect="fade" time="150">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+			<type>group</type>
+			<description>group element</description>
 			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
+			<dimColor>ffffffff</dimColor>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Title (Filmstrip)</description>
+				<id>640</id>
+				<posX>57</posX>
+				<posY>922</posY>
+				<width>1830</width>
+				<textalign>center</textalign>
+				<font>font24</font>
+				<height>67</height>
+				<label>#MovingPictures.SelectedMovie.title</label>
+			</control>
+			<!-- Media logos [Filmstrip & Coverflow View] -->
+			<control>
+				<description>Video Codec</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>690</posX>
+				<posY>1005</posY>
+				<width>133</width>
+				<height>51</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+			</control>
+			<control>
+				<description>Video Resolution</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>772</posX>
+				<posY>1005</posY>
+				<width>133</width>
+				<height>51</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+			</control>
+			<control>
+				<description>Video Aspect Ratio</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>855</posX>
+				<posY>1005</posY>
+				<width>133</width>
+				<height>51</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+			</control>
+			<control>
+				<description>Audio Codec</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>937</posX>
+				<posY>1005</posY>
+				<width>133</width>
+				<height>51</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+			</control>
+			<control>
+				<description>Audio Channels</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1020</posX>
+				<posY>1005</posY>
+				<width>133</width>
+				<height>51</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+			</control>
+			<control>
+				<description>Video Format</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1102</posX>
+				<posY>1005</posY>
+				<width>133</width>
+				<height>51</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+			</control>
+			<control>
+				<description>Subtitles</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1185</posX>
+				<posY>1005</posY>
+				<width>133</width>
+				<height>51</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+			</control>
 		</control>
 	</controls>
 </window>

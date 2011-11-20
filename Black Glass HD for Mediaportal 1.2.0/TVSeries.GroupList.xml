@@ -1,69 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8"-->
 <window>
-	<controls>
-		<control>
-			<type>image</type>
-			<posX>687</posX>
-			<posY>72</posY>
-			<width>1422</width>
-			<height>1149</height>
-			<texture>bg_facade.png</texture>
-			<visible>[facadeview.list]+[control.isvisible(1240)]</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-			<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation> -->
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-		</control>
-		<!-- 
-		<control>
-			<description>Selected Category Label</description>
-			<type>fadelabel</type>
-			<id>0</id>
-			<posX>40</posX>
-			<posY>260</posY>
-			<width>900</width>
-			<label>#selecteditem #TVSeries.Translation.Series_Plural.Label</label>
-			<font>font16</font>
-			<textcolor>White</textcolor>			
-			<visible>control.isvisible(1240)+facadeview.list</visible>
-			<animation effect="fade" time="250">WindowClose</animation>
-		</control> -->
-		<control>
-			<description>Shows in this Group</description>
-			<type>textboxscrollup</type>
-			<id>631</id>
-			<posX>765</posX>
-			<posY>145</posY>
-			<width>532</width>
-			<height>918</height>
-			<font>font16</font>
-			<seperator>: : :</seperator>
-			<textcolor>ffffffff</textcolor>
-			<label>#TVSeries.Description</label>
-			<visible>control.isvisible(1240)+facadeview.list</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-			<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation> -->
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<description>Shows in this Group</description>
-			<type>textboxscrollup</type>
-			<id>631</id>
-			<posX>765</posX>
-			<posY>145</posY>
-			<width>532</width>
-			<height>918</height>
-			<font>font16</font>
-			<seperator>: : :</seperator>
-			<textcolor>ffffffff</textcolor>
-			<label>#TVSeries.Description</label>
-			<visible>control.isvisible(1240)+facadeview.smallicons</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
-			<!-- <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation> -->
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-		</control>
-	</controls>
+  <controls>
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+      <control>
+        <description>Shows in this Group</description>
+        <type>textboxscrollup</type>
+        <id>631</id>
+        <posX>765</posX>
+        <posY>145</posY>
+        <width>532</width>
+        <height>918</height>
+        <font>font16</font>
+        <seperator>: : :</seperator>
+        <textcolor>ffffffff</textcolor>
+        <label>#TVSeries.Description</label>
+        <visible>control.isvisible(1240)+facadeview.list</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+      </control>
+      <control>
+        <description>Shows in this Group</description>
+        <type>textboxscrollup</type>
+        <id>631</id>
+        <posX>765</posX>
+        <posY>145</posY>
+        <width>532</width>
+        <height>918</height>
+        <font>font16</font>
+        <seperator>: : :</seperator>
+        <textcolor>ffffffff</textcolor>
+        <label>#TVSeries.Description</label>
+        <visible>control.isvisible(1240)+facadeview.smallicons</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+      </control>
+    </control>
+  </controls>
 </window>

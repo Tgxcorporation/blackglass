@@ -10,19 +10,111 @@
 			<width>2520</width>
 			<height>480</height>
 			<texture>gradient.png</texture>
-			<visible>[facadeview.coverflow|facadeview.filmstrip]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>[facadeview.filmstrip|facadeview.coverflow]+control.isvisible(50)</visible>
+			<animation effect="fade" time="250">visible</animation>
 			<animation effect="fade" time="150">WindowOpen</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
 		</control>
 		<control>
 			<description>group element</description>
 			<type>group</type>
+			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.playlist+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>facadeview.playlist+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+				<visible>facadeview.album+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>735</posX>
+				<posY>71</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>facadeview.album+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -34,6 +126,8 @@
 					<onleft>2</onleft>
 					<onright>2</onright>
 					<scrollOffset>2</scrollOffset>
+					<visible>control.isvisible(745381)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 				</control>
 				<control>
 					<description>album view listcontrol</description>
@@ -52,6 +146,8 @@
 					<ondown>2</ondown>
 					<textureFocus>bg_facade2_line_focus.png</textureFocus>
 					<textureNoFocus>bg_facade2_line_nofocus.png</textureNoFocus>
+					<visible>control.isvisible(745387)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 				</control>
 				<control>
 					<description>Thumbnail Panel</description>
@@ -94,6 +190,8 @@
 					<showFrame>true</showFrame>
 					<frameNoFocus>PictureCase.png</frameNoFocus>
 					<frameFocus>PictureCase.png</frameFocus>
+					<visible>control.isvisible(745382)|control.isvisible(745383)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 				</control>
 				<control>
 					<description>Filmstrip view</description>
@@ -120,18 +218,19 @@
 					<frame>-</frame>
 					<frameFocus>-</frameFocus>
 					<showFolder>yes</showFolder>
-					<imageFolder flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</imageFolder>
+					<imageFolder>PictureCase.png</imageFolder>
 					<imageFolderFocus>PictureCase.png</imageFolderFocus>
 					<thumbs flipY="true" diffuse="Thumb_Mask.png" />
 					<showBackGround>no</showBackGround>
 					<background>-</background>
 					<showInfoImage>no</showInfoImage>
 					<InfoImage>-</InfoImage>
-					<visible>facadeview.filmstrip</visible>
-					<thumbAnimation effect="slide" end="0,-15" time="200">focus</thumbAnimation>
+					<thumbAnimation effect="slide" end="0,-23" time="200">focus</thumbAnimation>
 					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
 					<scrollOffset>3</scrollOffset>
-					<scrollbarYOff>317</scrollbarYOff>
+					<scrollbarYOff>316</scrollbarYOff>
+					<visible>control.isvisible(745384)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				</control>
 				<control>
 					<description>Cover Flow view</description>
@@ -139,7 +238,7 @@
 					<colordiffuse>ffffffff</colordiffuse>
 					<dimColor>90ffffff</dimColor>
 					<id>50</id>
-					<posX>30</posX>
+					<posX>45</posX>
 					<posY>442</posY>
 					<width>1905</width>
 					<height>1080</height>
@@ -155,7 +254,7 @@
 					<sideGap>75</sideGap>
 					<sideDepth>375</sideDepth>
 					<offsetY>0</offsetY>
-					<selectedOffsetY>-22</selectedOffsetY>
+					<selectedOffsetY>-15</selectedOffsetY>
 					<speed>8</speed>
 					<showFrame>yes</showFrame>
 					<frame>PictureCase_coverflow.png</frame>
@@ -165,14 +264,13 @@
 					<spinSpeed>8</spinSpeed>
 					<font1>font14</font1>
 					<font2>font11</font2>
-					<label1/>
-					<label2/>
-					<label1YOff>335</label1YOff>
-					<label2YOff>360</label2YOff>
+					<label1YOff>502</label1YOff>
+					<label2YOff>540</label2YOff>
 					<pageSize>5</pageSize>
-					<!-- <visible>facadeview.coverflow</visible> -->
 					<scrollbarYOff>481</scrollbarYOff>
 					<cards flipY="yes" diffuse="Thumb_Mask.png" mask="PictureCase_coverflow_mask.png"/>
+					<visible>control.isvisible(745385)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 					<subitems>
 						<subitem>
 							<![CDATA[
@@ -237,12 +335,62 @@
 					<id>50</id>
 					<onleft>2</onleft>
 					<onright>2</onright>
-					<itemWidth>60</itemWidth>
-					<itemHeight>60</itemHeight>
-					<IconXOff>0</IconXOff>
-					<IconYOff>7</IconYOff>
+					<IconXOff>15</IconXOff>
+					<IconYOff>10</IconYOff>
+					<itemWidth>73</itemWidth>
+					<itemHeight>55</itemHeight>
 					<scrollOffset>2</scrollOffset>
+					<visible>control.isvisible(745386)</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 				</control>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>facadeview.list+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>facadeview.album+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>facadeview.playlist+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 		</control>
 	</controls>

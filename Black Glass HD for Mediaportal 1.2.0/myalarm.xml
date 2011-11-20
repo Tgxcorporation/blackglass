@@ -1,153 +1,150 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-	<id>5000</id>
-	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-	<define>#header.label:#MyAlarm.Translation.Alarm.Label</define>
-	<define>#header.background:hover_my alarm.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
-	<controls>
-		<import>common.window.background.xml</import>
-		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
-		<import>common.window.time.xml</import>
-		<!--Dummy Labels for conditional visibility-->
-		<control>
-			<description>CurrentAlarm.Enabled</description>
-			<type>label</type>
-			<id>61</id>
-			<visible>string.equals(#MyAlarm.SelectedAlarm.Enabled,True)</visible>
-		</control>
-		<control>
-			<description>CurrentAlarm.Recurring</description>
-			<type>label</type>
-			<id>62</id>
-			<visible>string.equals(#MyAlarm.SelectedAlarm.Recurring,True)</visible>
-		</control>
-		<control>
-			<description>CurrentAlarm.Selected</description>
-			<type>label</type>
-			<id>63</id>
-			<visible>!String.Contains(#MyAlarm.SelectedAlarm.Time.shorttime,MyAlarm.SelectedAlarm.Time.shorttime)+!String.Equals(#MyAlarm.SelectedAlarm.Time.shorttime,)+!String.Equals(#MyAlarm.SelectedAlarm.Time.shorttime, )+!String.Equals(#MyAlarm.SelectedAlarm.Time.shorttime,  )</visible>
-		</control>
-		<control>
-			<description>CurrentAlarm.Snoozed</description>
-			<type>label</type>
-			<id>64</id>
-			<visible>!String.Contains(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime,MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime)+!String.Equals(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime,)+!String.Equals(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime, )+!String.Equals(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime,  )</visible>
-		</control>
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<control>
-				<type>fadelabel</type>
-				<width>1275</width>
-				<wrapString> : : : </wrapString>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>15</posY>
-				<label>#header.label</label>
-				<font>font28</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-				<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<!--Time Controls-->
-			<control>
-				<description>enabled alarm</description>
-				<type>fadelabel</type>
-				<posX>45</posX>
-				<posY>150</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<label>#MyAlarm.Translation.AlarmEnabled.Label</label>
-				<visible>control.isvisible(61)+!control.isvisible(64)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>enabled alarm</description>
-				<type>fadelabel</type>
-				<posX>45</posX>
-				<posY>150</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<label>#MyAlarm.Translation.AlarmEnabled.Label (#MyAlarm.Translation.SnoozeActive.Label @ #MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime)</label>
-				<visible>control.isvisible(61)+control.isvisible(64)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>disabled alarm</description>
-				<type>fadelabel</type>
-				<posX>45</posX>
-				<posY>150</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<label>#MyAlarm.Translation.AlarmDisabled.Label</label>
-				<visible>!control.isvisible(61)+!control.isvisible(64)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>disabled alarm</description>
-				<type>fadelabel</type>
-				<posX>45</posX>
-				<posY>150</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<label>#MyAlarm.Translation.AlarmDisabled.Label (#MyAlarm.Translation.SnoozeActive.Label @ #MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime)</label>
-				<visible>!control.isvisible(61)+control.isvisible(64)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<!--Time Controls-->
-			<control>
-				<description>Time</description>
-				<type>fadelabel</type>
-				<posX>45</posX>
-				<posY>210</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<textcolor>90ffffff</textcolor>
-				<label>#MyAlarm.Translation.AlarmTime.Label: #MyAlarm.SelectedAlarm.Time.shorttime</label>
-				<visible>control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<!--Date controls for OnceAlarm-->
-			<control>
-				<description>Date</description>
-				<type>fadelabel</type>
-				<posX>45</posX>
-				<posY>270</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<label>#MyAlarm.Translation.AlarmDate.Label: #MyAlarm.SelectedAlarm.Time.shortdate</label>
-				<visible>!control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<!--Day controls for RecurringAlarm-->
-			<control>
-				<description>Enabled Days</description>
-				<type>fadelabel</type>
-				<posX>45</posX>
-				<posY>270</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<label>#MyAlarm.Translation.EnabledOnTheseDays.Label: #MyAlarm.SelectedAlarm.Mon.ShortLocalized #MyAlarm.SelectedAlarm.Tue.ShortLocalized #MyAlarm.SelectedAlarm.Wed.ShortLocalized #MyAlarm.SelectedAlarm.Thu.ShortLocalized #MyAlarm.SelectedAlarm.Fri.ShortLocalized #MyAlarm.SelectedAlarm.Sat.ShortLocalized #MyAlarm.SelectedAlarm.Sun.ShortLocalized</label>
-				<visible>control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<!-- 		<control>
+  <id>5000</id>
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>player.hasmedia</allowoverlay>
+  <define>#header.label:#MyAlarm.Translation.Alarm.Label</define>
+  <define>#header.background:hover_my alarm.png</define>
+  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+  <controls>
+    <import>common.window.background.xml</import>
+    <import>common.window.overlay.xml</import>
+    <import>common.window.time.xml</import>
+    <!--Dummy Labels for conditional visibility-->
+    <control>
+      <description>CurrentAlarm.Enabled</description>
+      <type>label</type>
+      <id>61</id>
+      <visible>string.equals(#MyAlarm.SelectedAlarm.Enabled,True)</visible>
+    </control>
+    <control>
+      <description>CurrentAlarm.Recurring</description>
+      <type>label</type>
+      <id>62</id>
+      <visible>string.equals(#MyAlarm.SelectedAlarm.Recurring,True)</visible>
+    </control>
+    <control>
+      <description>CurrentAlarm.Selected</description>
+      <type>label</type>
+      <id>63</id>
+      <visible>!String.Contains(#MyAlarm.SelectedAlarm.Time.shorttime,MyAlarm.SelectedAlarm.Time.shorttime)+!String.Equals(#MyAlarm.SelectedAlarm.Time.shorttime,)+!String.Equals(#MyAlarm.SelectedAlarm.Time.shorttime, )+!String.Equals(#MyAlarm.SelectedAlarm.Time.shorttime,  )</visible>
+    </control>
+    <control>
+      <description>CurrentAlarm.Snoozed</description>
+      <type>label</type>
+      <id>64</id>
+      <visible>!String.Contains(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime,MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime)+!String.Equals(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime,)+!String.Equals(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime, )+!String.Equals(#MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime,  )</visible>
+    </control>
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+      <control>
+        <type>fadelabel</type>
+        <width>1275</width>
+        <wrapString> : : : </wrapString>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>15</posY>
+        <label>#header.label</label>
+        <font>font28</font>
+        <align>left</align>
+        <textcolor>60ffffff</textcolor>
+      </control>
+      <!--Time Controls-->
+      <control>
+        <description>enabled alarm</description>
+        <type>fadelabel</type>
+        <posX>45</posX>
+        <posY>150</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <label>#MyAlarm.Translation.AlarmEnabled.Label</label>
+        <visible>control.isvisible(61)+!control.isvisible(64)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>enabled alarm</description>
+        <type>fadelabel</type>
+        <posX>45</posX>
+        <posY>150</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <label>#MyAlarm.Translation.AlarmEnabled.Label (#MyAlarm.Translation.SnoozeActive.Label @ #MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime)</label>
+        <visible>control.isvisible(61)+control.isvisible(64)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>disabled alarm</description>
+        <type>fadelabel</type>
+        <posX>45</posX>
+        <posY>150</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <label>#MyAlarm.Translation.AlarmDisabled.Label</label>
+        <visible>!control.isvisible(61)+!control.isvisible(64)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>disabled alarm</description>
+        <type>fadelabel</type>
+        <posX>45</posX>
+        <posY>150</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <label>#MyAlarm.Translation.AlarmDisabled.Label (#MyAlarm.Translation.SnoozeActive.Label @ #MyAlarm.SelectedAlarm.SnoozeAlarmTime.shorttime)</label>
+        <visible>!control.isvisible(61)+control.isvisible(64)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!--Time Controls-->
+      <control>
+        <description>Time</description>
+        <type>fadelabel</type>
+        <posX>45</posX>
+        <posY>210</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <textcolor>90ffffff</textcolor>
+        <label>#MyAlarm.Translation.AlarmTime.Label: #MyAlarm.SelectedAlarm.Time.shorttime</label>
+        <visible>control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!--Date controls for OnceAlarm-->
+      <control>
+        <description>Date</description>
+        <type>fadelabel</type>
+        <posX>45</posX>
+        <posY>270</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <label>#MyAlarm.Translation.AlarmDate.Label: #MyAlarm.SelectedAlarm.Time.shortdate</label>
+        <visible>!control.isvisible(62)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!--Day controls for RecurringAlarm-->
+      <control>
+        <description>Enabled Days</description>
+        <type>fadelabel</type>
+        <posX>45</posX>
+        <posY>270</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <label>#MyAlarm.Translation.EnabledOnTheseDays.Label: #MyAlarm.SelectedAlarm.Mon.ShortLocalized #MyAlarm.SelectedAlarm.Tue.ShortLocalized #MyAlarm.SelectedAlarm.Wed.ShortLocalized #MyAlarm.SelectedAlarm.Thu.ShortLocalized #MyAlarm.SelectedAlarm.Fri.ShortLocalized #MyAlarm.SelectedAlarm.Sat.ShortLocalized #MyAlarm.SelectedAlarm.Sun.ShortLocalized</label>
+        <visible>control.isvisible(62)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- 		<control>
 			<description>Alarm Days</description>
 			<type>fadelabel</type>
 			<posX>30</posX>
@@ -157,7 +154,7 @@
 			<label>#MyAlarm.SelectedAlarm.Mon.ShortLocalized #MyAlarm.SelectedAlarm.Tue.ShortLocalized #MyAlarm.SelectedAlarm.Wed.ShortLocalized #MyAlarm.SelectedAlarm.Thu.ShortLocalized #MyAlarm.SelectedAlarm.Fri.ShortLocalized #MyAlarm.SelectedAlarm.Sat.ShortLocalized #MyAlarm.SelectedAlarm.Sun.ShortLocalized</label>
 			<visible>control.isvisible(62)+control.isvisible(63)</visible>
 		</control> -->
-			<!--<control>
+      <!--<control>
 			<description>Monday</description>
 			<type>label</type>
 			<posX>30</posX>
@@ -213,21 +210,21 @@
 			<label>#MyAlarm.SelectedAlarm.Sun.ShortLocalized</label>
 			<visible>control.isvisible(62)+control.isvisible(63)</visible>
 		</control> -->
-			<!--media type-->
-			<control>
-				<description>Media Type</description>
-				<type>fadelabel</type>
-				<posX>45</posX>
-				<posY>510</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<textcolor>90ffffff</textcolor>
-				<label>#MyAlarm.Translation.MediaType.Label: #MyAlarm.SelectedAlarm.MediaType.localized</label>
-				<visible>!control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<!-- 		<control>
+      <!--media type-->
+      <control>
+        <description>Media Type</description>
+        <type>fadelabel</type>
+        <posX>45</posX>
+        <posY>510</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <textcolor>90ffffff</textcolor>
+        <label>#MyAlarm.Translation.MediaType.Label: #MyAlarm.SelectedAlarm.MediaType.localized</label>
+        <visible>!control.isvisible(62)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- 		<control>
 			<description>Media Type</description>
 			<type>fadelabel</type>
 			<posX>30</posX>
@@ -237,61 +234,61 @@
 			<label>#MyAlarm.SelectedAlarm.MediaType.localized</label>
 			<visible>!control.isvisible(62)+control.isvisible(63)</visible>
 		</control> -->
-			<control>
-				<description>Media Type File</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<label>#MyAlarm.SelectedAlarm.Sound</label>
-				<posX>45</posX>
-				<posY>570</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,File)+!control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>Media Type Playlist</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<label>#MyAlarm.SelectedAlarm.Playlist</label>
-				<posX>45</posX>
-				<posY>570</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Playlist)+!control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>Media Type Message</description>
-				<type>textboxscrollup</type>
-				<id>0</id>
-				<label>#MyAlarm.SelectedAlarm.Message</label>
-				<posX>45</posX>
-				<posY>570</posY>
-				<width>1027</width>
-				<height>168</height>
-				<seperator>: : :</seperator>
-				<font>font18</font>
-				<visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Message)+!control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>Media Type / Recurring</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>510</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<label>#MyAlarm.Translation.MediaType.Label: #MyAlarm.SelectedAlarm.MediaType.localized</label>
-				<textcolor>90ffffff</textcolor>
-				<visible>control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<!-- <control>
+      <control>
+        <description>Media Type File</description>
+        <type>fadelabel</type>
+        <id>0</id>
+        <label>#MyAlarm.SelectedAlarm.Sound</label>
+        <posX>45</posX>
+        <posY>570</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,File)+!control.isvisible(62)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Media Type Playlist</description>
+        <type>fadelabel</type>
+        <id>0</id>
+        <label>#MyAlarm.SelectedAlarm.Playlist</label>
+        <posX>45</posX>
+        <posY>570</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Playlist)+!control.isvisible(62)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Media Type Message</description>
+        <type>textboxscrollup</type>
+        <id>0</id>
+        <label>#MyAlarm.SelectedAlarm.Message</label>
+        <posX>45</posX>
+        <posY>570</posY>
+        <width>1027</width>
+        <height>168</height>
+        <seperator>: : :</seperator>
+        <font>font18</font>
+        <visible>string.equals(#MyAlarm.SelectedAlarm.MediaType.id,Message)+!control.isvisible(62)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Media Type / Recurring</description>
+        <type>fadelabel</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>510</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <label>#MyAlarm.Translation.MediaType.Label: #MyAlarm.SelectedAlarm.MediaType.localized</label>
+        <textcolor>90ffffff</textcolor>
+        <visible>control.isvisible(62)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!-- <control>
 			<description>Alarm Media Type / Recurring</description>
 			<type>fadelabel</type>
 			<id>0</id>
@@ -302,180 +299,180 @@
 			<label></label>
 			<visible>control.isvisible(62)+control.isvisible(63)</visible>
 		</control> -->
-			<control>
-				<description>Media Type Sound / Recurring</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>570</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<label>#MyAlarm.SelectedAlarm.Sound</label>
-				<visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,File)+control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>Media Type Playlist / Recurring</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>570</posY>
-				<width>1027</width>
-				<wrapString> : : : </wrapString>
-				<font>font18</font>
-				<label>#MyAlarm.SelectedAlarm.Playlist</label>
-				<visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,Playlist)+control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<description>Media Type Message / Recurring</description>
-				<type>textboxscrollup</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>570</posY>
-				<width>1027</width>
-				<height>168</height>
-				<seperator>: : :</seperator>
-				<font>font18</font>
-				<label>#MyAlarm.SelectedAlarm.Message</label>
-				<visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,Message)+control.isvisible(62)+control.isvisible(63)+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>1137</posX>
-				<posY>72</posY>
-				<width>1422</width>
-				<height>1149</height>
-				<texture>bg_facade.png</texture>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>1185</posX>
-				<posY>70</posY>
-				<width>1185</width>
-				<height>79</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-			<control>
-				<type>label</type>
-				<description>Number of Files Label</description>
-				<id>0</id>
-				<posX>1215</posX>
-				<posY>989</posY>
-				<label>#itemcount</label>
-				<font>font16</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-			</control>
-			<control>
-				<description>group element</description>
-				<type>group</type>
-				<control>
-					<description>composite control consisting of a list control and a thumbnail panel</description>
-					<type>facadeview</type>
-					<id>50</id>
-					<control>
-						<description>listcontrol</description>
-						<type>listcontrol</type>
-						<id>50</id>
-						<onleft>2</onleft>
-						<onright>2</onright>
-						<scrollOffset>2</scrollOffset>
-						<textXOff>-40</textXOff>
-						<posX>1185</posX>
-						<height>420</height>
-					</control>
-				</control>
-			</control>
-		</control>
-		<!--Button group on the left-->
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-579</posX>
-			<posY>4</posY>
-			<width>627</width>
-			<height>1071</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(4)]</visible>
-			<animation effect="fade" time="50">WindowClose</animation>
-			<animation effect="fade" time="50">WindowOpen</animation>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>actiongroup</type>
-			<description>action menu</description>
-			<defaultcontrol>2</defaultcontrol>
-			<onexit>0</onexit>
-			<buttonX>0</buttonX>
-			<buttonY>0</buttonY>
-			<buttonwidth>84</buttonwidth>
-			<buttonheight>1080</buttonheight>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<width>637</width>
-			<height>1080</height>
-			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(2)|control.hasfocus(4)]</visible>
-			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>627</width>
-				<height>1080</height>
-				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
-			</control>
-			<control>
-				<id>0</id>
-				<type>label</type>
-				<posX>45</posX>
-				<posY>52</posY>
-				<label>#header.label</label>
-				<width>500</width>
-				<font>font24</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>70</posY>
-				<width>579</width>
-				<height>79</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
-			<control>
-				<type>group</type>
-				<layout>StackLayout(0, Vertical, true)</layout>
-				<posX>0</posX>
-				<posY>150</posY>
-				<control>
-					<description>New button</description>
-					<type>button</type>
-					<id>2</id>
-					<label>#MyAlarm.Translation.NewAlarm.Label</label>
-					<onup>17</onup>
-					<ondown>4</ondown>
-					<onright>50</onright>
-					<onleft>2</onleft>
-				</control>
-				<!--
+      <control>
+        <description>Media Type Sound / Recurring</description>
+        <type>fadelabel</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>570</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <label>#MyAlarm.SelectedAlarm.Sound</label>
+        <visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,File)+control.isvisible(62)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Media Type Playlist / Recurring</description>
+        <type>fadelabel</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>570</posY>
+        <width>1027</width>
+        <wrapString> : : : </wrapString>
+        <font>font18</font>
+        <label>#MyAlarm.SelectedAlarm.Playlist</label>
+        <visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,Playlist)+control.isvisible(62)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Media Type Message / Recurring</description>
+        <type>textboxscrollup</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>570</posY>
+        <width>1027</width>
+        <height>168</height>
+        <seperator>: : :</seperator>
+        <font>font18</font>
+        <label>#MyAlarm.SelectedAlarm.Message</label>
+        <visible>String.Equals(#MyAlarm.SelectedAlarm.MediaType.id,Message)+control.isvisible(62)+control.isvisible(63)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>1137</posX>
+        <posY>72</posY>
+        <width>1422</width>
+        <height>1149</height>
+        <texture>bg_facade.png</texture>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>1185</posX>
+        <posY>71</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Number of Files Label</description>
+        <id>0</id>
+        <posX>1215</posX>
+        <posY>989</posY>
+        <label>#itemcount</label>
+        <font>font16</font>
+        <align>left</align>
+        <textcolor>60ffffff</textcolor>
+      </control>
+      <control>
+        <description>group element</description>
+        <type>group</type>
+        <control>
+          <description>composite control consisting of a list control and a thumbnail panel</description>
+          <type>facadeview</type>
+          <id>50</id>
+          <control>
+            <description>listcontrol</description>
+            <type>listcontrol</type>
+            <id>50</id>
+            <onleft>2</onleft>
+            <onright>2</onright>
+            <scrollOffset>2</scrollOffset>
+            <textXOff>-60</textXOff>
+            <posX>1185</posX>
+            <height>420</height>
+          </control>
+        </control>
+      </control>
+    </control>
+    <!--Button group on the left-->
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>-579</posX>
+      <posY>4</posY>
+      <width>627</width>
+      <height>1071</height>
+      <texture>bg_left.png</texture>
+      <colorDiffuse>ffffffff</colorDiffuse>
+      <visible>control.hasfocus(50)</visible>
+      <animation effect="fade" time="50">WindowClose</animation>
+      <animation effect="fade" time="50">WindowOpen</animation>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>2</defaultcontrol>
+      <onexit>0</onexit>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>577</buttonwidth>
+      <buttonheight>1080</buttonheight>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <width>637</width>
+      <height>1080</height>
+      <dimColor>ffffffff</dimColor>
+      <visible>!control.hasfocus(50)</visible>
+      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>0</posY>
+        <width>627</width>
+        <height>1080</height>
+        <texture>bg_left.png</texture>
+        <colorDiffuse>ffffffff</colorDiffuse>
+      </control>
+      <control>
+        <id>0</id>
+        <type>label</type>
+        <posX>45</posX>
+        <posY>52</posY>
+        <label>924</label>
+        <width>499</width>
+        <font>font24</font>
+        <align>left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>71</posY>
+        <width>579</width>
+        <height>79</height>
+        <texture>bg_button_nofocus.png</texture>
+      </control>
+      <control>
+        <type>group</type>
+        <layout>StackLayout(0, Vertical, true)</layout>
+        <posX>0</posX>
+        <posY>150</posY>
+        <control>
+          <description>New button</description>
+          <type>button</type>
+          <id>2</id>
+          <label>#MyAlarm.Translation.NewAlarm.Label</label>
+          <onup>17</onup>
+          <ondown>4</ondown>
+          <onright>50</onright>
+          <onleft>2</onleft>
+        </control>
+        <!--
           not implemented yet in myalarm screen
           
           <control>
@@ -490,19 +487,19 @@
             <onright>50</onright>
           </control>
           -->
-				<control>
-					<description>Delete button</description>
-					<type>button</type>
-					<id>4</id>
-					<posX>90</posX>
-					<posY>145</posY>
-					<label>#MyAlarm.Translation.DeleteAlarm.Label</label>
-					<onup>2</onup>
-					<ondown>2</ondown>
-					<onright>50</onright>
-					<onleft>4</onleft>
-				</control>
-			</control>
-		</control>
-	</controls>
+        <control>
+          <description>Delete button</description>
+          <type>button</type>
+          <id>4</id>
+          <posX>90</posX>
+          <posY>145</posY>
+          <label>#MyAlarm.Translation.DeleteAlarm.Label</label>
+          <onup>2</onup>
+          <ondown>2</ondown>
+          <onright>50</onright>
+          <onleft>4</onleft>
+        </control>
+      </control>
+    </control>
+  </controls>
 </window>

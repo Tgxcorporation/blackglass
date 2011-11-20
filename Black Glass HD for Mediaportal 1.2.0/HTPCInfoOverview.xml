@@ -4,12 +4,12 @@
   <controls>
     <control>
       <type>group</type>
-      <visible>control.isvisible(50)</visible>
       <dimColor>ffffffff</dimColor>
+      <visible>control.isvisible(50)</visible>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(5051)">conditional</animation>
       <control>
         <id>1</id>
         <type>image</type>
@@ -18,6 +18,7 @@
         <width>1422</width>
         <height>1185</height>
         <texture>bg_facade.png</texture>
+        <visible>control.isvisible(50)</visible>
       </control>
       <!-- *** HTPC Machine Info *** -->
       <control>
@@ -61,9 +62,9 @@
         <posY>82</posY>
         <font>font12</font>
         <label>#HTPCInfo.MachineName</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>Model</description>
@@ -84,9 +85,9 @@
         <posY>112</posY>
         <font>font12</font>
         <label>#HTPCInfo.Model (#HTPCInfo.MotherboardManufacturer), #HTPCInfo.SystemType</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>BIOS</description>
@@ -107,9 +108,9 @@
         <posY>142</posY>
         <font>font12</font>
         <label>#HTPCInfo.BIOSManufacturer, #HTPCInfo.BIOSDescription</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>Processor</description>
@@ -130,9 +131,9 @@
         <posY>172</posY>
         <font>font12</font>
         <label>#HTPCInfo.ProcessorCount Processor(s) (#HTPCInfo.ProcessorManufacturer), #HTPCInfo.ProcessorDescription</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>User Name</description>
@@ -153,9 +154,9 @@
         <posY>202</posY>
         <font>font12</font>
         <label>#HTPCInfo.UserName (#HTPCInfo.UserDomainName)</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <!-- *** OS Information *** -->
       <control>
@@ -199,9 +200,9 @@
         <posY>300</posY>
         <font>font12</font>
         <label>#HTPCInfo.OSDescription (#HTPCInfo.OSVersionName)</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <!-- *** System Information *** -->
       <control>
@@ -245,9 +246,9 @@
         <posY>397</posY>
         <font>font12</font>
         <label>#HTPCInfo.Uptime</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>CPU Usage</description>
@@ -268,9 +269,9 @@
         <posY>427</posY>
         <font>font12</font>
         <label>#HTPCInfo.ProcessorUsage%</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>Memory Usage</description>
@@ -291,9 +292,9 @@
         <posY>457</posY>
         <font>font12</font>
         <label>#HTPCInfo.MemoryAvailable / #HTPCInfo.MemoryPhysical (#HTPCInfo.PagefileUsed Pagefile Usage)</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>Disk Usage</description>
@@ -314,9 +315,9 @@
         <posY>487</posY>
         <font>font12</font>
         <label>#HTPCInfo.Drive1Name #HTPCInfo.Drive1Size - #HTPCInfo.Drive1PercentUsedSpace%  /  #HTPCInfo.Drive2Name #HTPCInfo.Drive2Size - #HTPCInfo.Drive2PercentUsedSpace%</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>Disk Usage Value</description>
@@ -326,9 +327,9 @@
         <posY>517</posY>
         <font>font12</font>
         <label>#HTPCInfo.Drive3Name #HTPCInfo.Drive3Size - #HTPCInfo.Drive3PercentUsedSpace%  /  #HTPCInfo.Drive4Name #HTPCInfo.Drive4Size - #HTPCInfo.Drive4PercentUsedSpace%</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>Disk Usage Value</description>
@@ -338,9 +339,9 @@
         <posY>547</posY>
         <font>font12</font>
         <label>#HTPCInfo.DiskRead read / #HTPCInfo.DiskWrite write</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <!-- *** Sensor Informations *** -->
       <control>
@@ -385,9 +386,9 @@
         <font>font12</font>
         <!-- <label>#HTPCInfo.SensorTemperatureSystem (Mainboard), #HTPCInfo.SensorTemperatureCPU (CPU), #HTPCInfo.SensorTemperatureCore0 (Core 0), #HTPCInfo.SensorTemperatureCore1 (Core 1), #HTPCInfo.SensorTemperatureAUX (AUX)</label> -->
         <label>#HTPCInfo.SensorTemperature0, #HTPCInfo.SensorTemperature1, #HTPCInfo.SensorTemperature2, #HTPCInfo.SensorTemperature3, #HTPCInfo.SensorTemperature4, #HTPCInfo.SensorTemperature5</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>Fan Sensors</description>
@@ -409,9 +410,9 @@
         <font>font12</font>
         <label>#HTPCInfo.SensorFan0, #HTPCInfo.SensorFan1, #HTPCInfo.SensorFan2</label>
         <!-- <label>#HTPCInfo.SensorFanChassis (Chassis), #HTPCInfo.SensorFanCPU0 (CPU), #HTPCInfo.SensorFanAUX0 (AUX)</label> -->
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>Voltage Sensors</description>
@@ -433,9 +434,9 @@
         <font>font12</font>
         <label>#HTPCInfo.SensorVoltage0, #HTPCInfo.SensorVoltage1, #HTPCInfo.SensorVoltage2</label>
         <!-- <label>#HTPCInfo.SensorVoltageMainboard (Mainboard), #HTPCInfo.SensorVoltageCPU (CPU), #HTPCInfo.SensorVoltageAVcc (AVcc +3,3V)</label> -->
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <!-- *** Network Information *** -->
       <control>
@@ -479,9 +480,9 @@
         <posY>802</posY>
         <font>font12</font>
         <label>#HTPCInfo.NetworkWorkgroup, Server Mode #HTPCInfo.NetworkServerModeIsEnabled</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>Internal/External IP</description>
@@ -502,9 +503,9 @@
         <posY>832</posY>
         <font>font12</font>
         <label>#HTPCInfo.NetworkIPv4Address1 / #HTPCInfo.NetworkExternalIPAddress (IPv6 support #HTPCInfo.NetworkIPv6Enabled)</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>Network Traffic</description>
@@ -525,9 +526,9 @@
         <posY>862</posY>
         <font>font12</font>
         <label>#HTPCInfo.NetworkSent sent / #HTPCInfo.NetworkReceived received</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <!-- *** TV Card Information *** -->
       <control>
@@ -571,9 +572,9 @@
         <posY>960</posY>
         <font>font12</font>
         <label>#HTPCInfo.TVDevice1Name (#HTPCInfo.TVDevice1Type), #HTPCInfo.TVDevice1Enabled on #HTPCInfo.TVServerIPAddress</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>TVCard Signal Quality</description>
@@ -594,9 +595,9 @@
         <posY>990</posY>
         <font>font12</font>
         <label>#HTPCInfo.TVDevice1SignalQuality</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
       <control>
         <description>TVCard Signal Level</description>
@@ -617,9 +618,9 @@
         <posY>1020</posY>
         <font>font12</font>
         <label>#HTPCInfo.TVDevice1SignalLevel</label>
-        <visible>control.isvisible(50)</visible>
         <width>930</width>
         <wrapString> : : : </wrapString>
+        <visible>control.isvisible(50)</visible>
       </control>
     </control>
   </controls>

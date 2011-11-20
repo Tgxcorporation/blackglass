@@ -1,93 +1,228 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-	<controls>
-		<control>
-			<id>0</id>
-			<type>image</type>
-			<posX>-300</posX>
-			<posY>600</posY>
-			<width>2520</width>
-			<height>480</height>
-			<texture>gradient.png</texture>
-			<visible>[facadeview.coverflow|facadeview.filmstrip]</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-		</control>
-		<control>
-			<description>group element</description>
-			<type>group</type>
-			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<control>
-				<description>composite control consisting of a list control and a thumbnail panel</description>
-				<type>facadeview</type>
-				<id>50</id>
-				<control>
-					<description>listcontrol</description>
-					<type>listcontrol</type>
-					<id>50</id>
-					<onleft>2</onleft>
-					<onright>2</onright>
-					<scrollOffset>2</scrollOffset>
-					<visible>!String.Equals(#OnlineVideos.state,details)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">visible</animation>
-					<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">hidden</animation>
-					<animation effect="fade" time="250">visible</animation>
-					<animation effect="fade" time="150">hidden</animation>	
-				</control>
-				<control>
-					<description>Thumbnail Panel</description>
-					<type>thumbnailpanel</type>
-					<id>50</id>
-					<onleft>2</onleft>
-					<onright>2</onright>
-					<posX>750</posX>
-					<posY>165</posY>
-					<width>1222</width>
-					<height>900</height>
-					<scrollOffset>1</scrollOffset>
-					<itemWidth>147</itemWidth>
-					<itemHeight>129</itemHeight>
-					<textureWidth>124</textureWidth>
-					<textureHeight>94</textureHeight>
-					<thumbWidth>115</thumbWidth>
-					<thumbHeight>84</thumbHeight>
-					<thumbPosX>4</thumbPosX>
-					<thumbPosY>4</thumbPosY>
-					<itemWidthBig>292</itemWidthBig>
-					<itemHeightBig>261</itemHeightBig>
-					<thumbWidthBig>265</thumbWidthBig>
-					<thumbHeightBig>199</thumbHeightBig>
-					<textureWidthBig>283</textureWidthBig>
-					<textureHeightBig>214</textureHeightBig>
-					<thumbPosXBig>9</thumbPosXBig>
-					<thumbPosYBig>7</thumbPosYBig>
-					<unfocusedAlpha>120</unfocusedAlpha>
-					<hideUnfocusTexture>no</hideUnfocusTexture>
-					<renderFocusText>yes</renderFocusText>
-					<renderUnfocusText>yes</renderUnfocusText>
-					<imageFolder>-</imageFolder>
-					<imageFolderFocus>-</imageFolderFocus>
-					<thumbZoom>no</thumbZoom>
-					<enableFocusZoom>no</enableFocusZoom>
-					<textXOff>3</textXOff>
-					<textYOff>3</textYOff>
-					<spinCanFocus>no</spinCanFocus>
-					<showFrame>true</showFrame>
-					<frameNoFocus>PictureCase.png</frameNoFocus>
-					<frameFocus>PictureCase.png</frameFocus>
-					<keepaspectratio>yes</keepaspectratio>
-					<visible>!String.Equals(#OnlineVideos.state,details)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="1200,0" reversible="false">visible</animation>
-					<animation effect="slide" tween="circle" easing="out" time="200" end="1200,0" reversible="false">hidden</animation>
-					<animation effect="fade" time="250">visible</animation>
-					<animation effect="fade" time="150">hidden</animation>	
-				</control>
-			</control>
-		</control>
-	</controls>
+  <controls>
+    <control>
+      <id>0</id>
+      <type>image</type>
+      <posX>-300</posX>
+      <posY>600</posY>
+      <width>2520</width>
+      <height>480</height>
+      <texture>gradient.png</texture>
+      <visible>[facadeview.coverflow|facadeview.filmstrip]+!String.Equals(#OnlineVideos.state,details)</visible>
+      <animation effect="fade" time="250">visible</animation>
+      <animation effect="fade" time="150">WindowOpen</animation>
+      <animation effect="fade" time="150">WindowClose</animation>
+    </control>
+    <control>
+      <description>group element</description>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>687</posX>
+        <posY>72</posY>
+        <width>1422</width>
+        <height>1149</height>
+        <texture>bg_facade.png</texture>
+        <visible>facadeview.list+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>735</posX>
+        <posY>71</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+        <visible>facadeview.list+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>687</posX>
+        <posY>72</posY>
+        <width>1422</width>
+        <height>1149</height>
+        <texture>bg_facade.png</texture>
+        <visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>735</posX>
+        <posY>71</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+        <visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>687</posX>
+        <posY>72</posY>
+        <width>1422</width>
+        <height>1149</height>
+        <texture>bg_facade.png</texture>
+        <visible>facadeview.playlist+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>735</posX>
+        <posY>71</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+        <visible>facadeview.playlist+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>687</posX>
+        <posY>72</posY>
+        <width>1422</width>
+        <height>1149</height>
+        <texture>bg_facade.png</texture>
+        <visible>facadeview.album+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>735</posX>
+        <posY>71</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+        <visible>facadeview.album+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+      </control>
+      <control>
+        <description>composite control consisting of a list control and a thumbnail panel</description>
+        <type>facadeview</type>
+        <id>50</id>
+        <control>
+          <description>listcontrol</description>
+          <type>listcontrol</type>
+          <id>50</id>
+          <onleft>2</onleft>
+          <onright>2</onright>
+          <scrollOffset>2</scrollOffset>
+          <visible>control.isvisible(745381)+!String.Equals(#OnlineVideos.state,details)</visible>
+          <animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+        </control>
+        <control>
+          <description>Thumbnail Panel</description>
+          <type>thumbnailpanel</type>
+          <id>50</id>
+          <onleft>2</onleft>
+          <onright>2</onright>
+          <posX>750</posX>
+          <posY>165</posY>
+          <width>1222</width>
+          <height>900</height>
+          <scrollOffset>1</scrollOffset>
+          <itemWidth>147</itemWidth>
+          <itemHeight>129</itemHeight>
+          <textureWidth>124</textureWidth>
+          <textureHeight>94</textureHeight>
+          <thumbWidth>115</thumbWidth>
+          <thumbHeight>84</thumbHeight>
+          <thumbPosX>4</thumbPosX>
+          <thumbPosY>4</thumbPosY>
+          <itemWidthBig>292</itemWidthBig>
+          <itemHeightBig>261</itemHeightBig>
+          <thumbWidthBig>265</thumbWidthBig>
+          <thumbHeightBig>199</thumbHeightBig>
+          <textureWidthBig>283</textureWidthBig>
+          <textureHeightBig>214</textureHeightBig>
+          <thumbPosXBig>9</thumbPosXBig>
+          <thumbPosYBig>7</thumbPosYBig>
+          <unfocusedAlpha>120</unfocusedAlpha>
+          <hideUnfocusTexture>no</hideUnfocusTexture>
+          <renderFocusText>yes</renderFocusText>
+          <renderUnfocusText>yes</renderUnfocusText>
+          <imageFolder>-</imageFolder>
+          <imageFolderFocus>-</imageFolderFocus>
+          <thumbZoom>no</thumbZoom>
+          <enableFocusZoom>no</enableFocusZoom>
+          <textXOff>3</textXOff>
+          <textYOff>3</textYOff>
+          <spinCanFocus>no</spinCanFocus>
+          <showFrame>true</showFrame>
+          <frameNoFocus>PictureCase.png</frameNoFocus>
+          <frameFocus>PictureCase.png</frameFocus>
+          <keepaspectratio>yes</keepaspectratio>
+          <visible>[control.isvisible(745382)|control.isvisible(745383)]+!String.Equals(#OnlineVideos.state,details)</visible>
+          <animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+        </control>
+      </control>
+      <control>
+        <description>Itemcount Itemtype</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>765</posX>
+        <posY>989</posY>
+        <label>#itemcount #(L(507))</label>
+        <font>font16</font>
+        <textcolor>60ffffff</textcolor>
+        <visible>facadeview.list+control.isvisible(50)+!String.Equals(#OnlineVideos.state,details)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+      </control>
+      <control>
+        <description>Itemcount Itemtype</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>765</posX>
+        <posY>989</posY>
+        <label>#itemcount #(L(507))</label>
+        <font>font16</font>
+        <textcolor>60ffffff</textcolor>
+        <visible>facadeview.album+control.isvisible(50)+!String.Equals(#OnlineVideos.state,details)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+      </control>
+      <control>
+        <description>Itemcount Itemtype</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>765</posX>
+        <posY>989</posY>
+        <label>#itemcount #(L(507))</label>
+        <font>font16</font>
+        <textcolor>60ffffff</textcolor>
+        <visible>facadeview.playlist+control.isvisible(50)+!String.Equals(#OnlineVideos.state,details)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+      </control>
+      <control>
+        <description>Itemcount Itemtype</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>765</posX>
+        <posY>989</posY>
+        <label>#itemcount #(L(507))</label>
+        <font>font16</font>
+        <textcolor>60ffffff</textcolor>
+        <visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+!String.Equals(#OnlineVideos.state,details)</visible>
+        <animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+      </control>
+    </control>
+  </controls>
 </window>
