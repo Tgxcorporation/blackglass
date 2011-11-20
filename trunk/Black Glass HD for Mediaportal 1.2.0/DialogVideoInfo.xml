@@ -1,156 +1,156 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-  <id>2003</id>
-  <defaultcontrol>50</defaultcontrol>
-  <allowoverlay>control.isvisible(13371337)</allowoverlay>
-  <define>#header.label:#view</define>
-  <define>#header.background:hover_my videos.png</define>
-  <define>#useSelectedFanart:Yes</define>
-  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
-  <controls>
-    <import>common.window.background.xml</import>
-    <import>common.window.video.fanart.xml</import>
-    <import>common.window.overlay.xml</import>
-    <control>
-      <type>group</type>
-      <dimColor>ffffffff</dimColor>
-      <animation effect="fade" time="150">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
-      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="![control.hasfocus(50)|control.hasfocus(10)|control.hasfocus(11)]">conditional</animation>
-      <control>
-        <type>fadelabel</type>
-        <width>1275</width>
-        <wrapString> : : : </wrapString>
-        <id>0</id>
-        <posX>45</posX>
-        <posY>15</posY>
-        <label>#header.label</label>
-        <font>font28</font>
-        <align>left</align>
-        <textcolor>60ffffff</textcolor>
-      </control>
-      <control>
-        <type>fadelabel</type>
-        <width>1275</width>
-        <wrapString> : : : </wrapString>
-        <id>0</id>
-        <posX>45</posX>
-        <posY>15</posY>
-        <label>3</label>
-        <font>font28</font>
-        <align>left</align>
-        <textcolor>60ffffff</textcolor>
-        <visible>string.equals(#view,)</visible>
-      </control>
-      <control>
-        <description>Date</description>
-        <type>label</type>
-        <id>0</id>
-        <posX>1887</posX>
-        <posY>63</posY>
-        <label>#date</label>
-        <align>right</align>
-        <font>font11</font>
-        <visible>!plugin.isenabled(InfoService)</visible>
-        <textcolor>aaffffff</textcolor>
-      </control>
-      <control>
-        <description>Date</description>
-        <type>label</type>
-        <id>0</id>
-        <posX>1887</posX>
-        <posY>63</posY>
-        <label>#infoservice.weather.today.temp     #date</label>
-        <align>right</align>
-        <font>font11</font>
-        <visible>plugin.isenabled(InfoService)</visible>
-        <textcolor>aaffffff</textcolor>
-      </control>
-      <control>
-        <description>Time</description>
-        <type>label</type>
-        <id>0</id>
-        <posX>1887</posX>
-        <posY>22</posY>
-        <label>#time</label>
-        <align>right</align>
-        <font>font16</font>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <description>details background</description>
-        <id>0</id>
-        <type>image</type>
-        <posX>687</posX>
-        <posY>72</posY>
-        <width>1422</width>
-        <height>1149</height>
-        <texture>bg_facade.png</texture>
-      </control>
-      <control>
-        <type>image</type>
-        <posX>735</posX>
-        <posY>145</posY>
-        <width>1185</width>
-        <height>79</height>
-        <texture>bg_facade_line_nofocus.png</texture>
-        <colordiffuse>77ffffff</colordiffuse>
-      </control>
-      <control>
-        <description>Cover Art</description>
-        <type>image</type>
-        <id>21</id>
-        <posX>118</posX>
-        <posY>121</posY>
-        <width>570</width>
-        <height>807</height>
-        <texture flipY="true" diffuse="Thumb_Mask.png">#thumb</texture>
-      </control>
-      <control>
-        <description>Cover Art Glass Overlay</description>
-        <type>image</type>
-        <id>0</id>
-        <posX>45</posX>
-        <posY>108</posY>
-        <width>655</width>
-        <height>834</height>
-        <texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
-      </control>
-      <control>
-        <description>Movie Title value</description>
-        <id>1</id>
-        <type>fadelabel</type>
-        <posX>780</posX>
-        <posY>142</posY>
-        <label>#title</label>
-        <font>font24</font>
-        <align>left</align>
-        <textcolor>ffffffff</textcolor>
-        <width>1110</width>
-        <wrapString> : : : </wrapString>
-      </control>
-      <control>
-        <type>imagelist</type>
-        <id>1</id>
-        <posX>780</posX>
-        <posY>247</posY>
-        <width>172</width>
-        <height>19</height>
-        <textureWidth>40</textureWidth>
-        <textureHeight>40</textureHeight>
-        <subitems>
-          <subitem>star_nofocus.png</subitem>
-          <subitem>star_focus.png</subitem>
-        </subitems>
-        <orientation>horizontal</orientation>
-        <align>left</align>
-        <imagesToDraw>10</imagesToDraw>
-        <percentage>#rating</percentage>
-        <imagesToDraw>10</imagesToDraw>
-      </control>
-      <!-- <control>
+	<id>2003</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:#view</define>
+	<define>#header.background:hover_my videos.png</define>
+	<define>#useSelectedFanart:Yes</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.video.fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="![control.hasfocus(50)|control.hasfocus(10)|control.hasfocus(11)]">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>3</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<visible>string.equals(#view,)</visible>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(InfoService)|[plugin.isenabled(InfoService)+!string.equals(#infoservice.weather.enabled,true)]</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#infoservice.weather.today.temp     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(InfoService)+string.equals(#infoservice.weather.enabled,true)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>22</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>735</posX>
+				<posY>145</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>Cover Art</description>
+				<type>image</type>
+				<id>21</id>
+				<posX>118</posX>
+				<posY>121</posY>
+				<width>570</width>
+				<height>807</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#thumb</texture>
+			</control>
+			<control>
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>108</posY>
+				<width>655</width>
+				<height>834</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+			</control>
+			<control>
+				<description>Movie Title value</description>
+				<id>1</id>
+				<type>fadelabel</type>
+				<posX>780</posX>
+				<posY>142</posY>
+				<label>#title</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>1110</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>imagelist</type>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>247</posY>
+				<width>172</width>
+				<height>19</height>
+				<textureWidth>40</textureWidth>
+				<textureHeight>40</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#rating</percentage>
+				<imagesToDraw>10</imagesToDraw>
+			</control>
+			<!-- <control>
 				<description>Votes txt</description>
 				<type>label</type>
 				<id>1</id>
@@ -170,471 +170,471 @@
 				<font>font14</font>
 				<textcolor>FFFFFFFF</textcolor>
 			</control> -->
-      <control>
-        <description>Genre txt</description>
-        <type>fadelabel</type>
-        <id>1</id>
-        <posX>780</posX>
-        <posY>300</posY>
-        <width>1110</width>
-        <label>#genre</label>
-        <font>font16</font>
-        <wrapString> : : : </wrapString>
-      </control>
-      <control>
-        <description>Year value</description>
-        <type>fadelabel</type>
-        <id>1</id>
-        <posX>780</posX>
-        <posY>352</posY>
-        <width>1110</width>
-        <font>font18</font>
-        <textcolor>90ffffff</textcolor>
-        <label>#year     #runtime mins</label>
-        <wrapString> : : : </wrapString>
-      </control>
-      <control>
-        <description>Director value</description>
-        <type>fadelabel</type>
-        <id>1</id>
-        <posX>780</posX>
-        <posY>412</posY>
-        <width>1110</width>
-        <font>font18</font>
-        <textcolor>ffFFFFFF</textcolor>
-        <label>Directed by #director</label>
-        <wrapString> : : : </wrapString>
-      </control>
-      <control>
-        <description>Rating value</description>
-        <type>fadelabel</type>
-        <id>1</id>
-        <posX>780</posX>
-        <posY>472</posY>
-        <width>1110</width>
-        <font>font16</font>
-        <textcolor>90FFFFFF</textcolor>
-        <label>#mpaarating</label>
-        <wrapString> : : : </wrapString>
-      </control>
-      <control>
-        <type>image</type>
-        <posX>735</posX>
-        <posY>465</posY>
-        <width>1185</width>
-        <height>79</height>
-        <texture>bg_facade_line_nofocus.png</texture>
-        <colordiffuse>77ffffff</colordiffuse>
-      </control>
-      <control>
-        <description>Plot value</description>
-        <type>textboxscrollup</type>
-        <id>20</id>
-        <posX>780</posX>
-        <posY>565</posY>
-        <width>1110</width>
-        <height>447</height>
-        <textcolor>ffFFFFFF</textcolor>
-        <font>font18</font>
-        <seperator>: : :</seperator>
-        <label>#plot</label>
-      </control>
-      <control>
-        <description>textarea</description>
-        <type>textbox</type>
-        <id>22</id>
-        <posX>780</posX>
-        <posY>565</posY>
-        <width>1110</width>
-        <height>477</height>
-        <textcolor>ffFFFFFF</textcolor>
-        <font>font18</font>
-        <onleft>2</onleft>
-        <onright>2</onright>
-        <onup>2</onup>
-        <ondown>2</ondown>
-        <label>#cast</label>
-        <spinPosX>1686</spinPosX>
-        <spinPosY>978</spinPosY>
-      </control>
-      <control>
-        <description>Review value</description>
-        <type>textboxscrollup</type>
-        <id>23</id>
-        <posX>780</posX>
-        <posY>565</posY>
-        <width>1110</width>
-        <height>447</height>
-        <label>#userreview</label>
-        <textcolor>ffFFFFFF</textcolor>
-        <font>font18</font>
-        <seperator>: : :</seperator>
-      </control>
-      <control>
-        <description>image title:</description>
-        <type>label</type>
-        <id>30</id>
-        <posX>45</posX>
-        <posY>964</posY>
-        <label>734</label>
-        <font>font12</font>
-        <align>left</align>
-        <textcolor>90ffffff</textcolor>
-      </control>
-      <control>
-        <description>spin control</description>
-        <type>spincontrol</type>
-        <id>10</id>
-        <posX>48</posX>
-        <posY>1006</posY>
-        <onup>66622</onup>
-        <ondown>2</ondown>
-        <onleft>11</onleft>
-        <onright>11</onright>
-      </control>
-      <control>
-        <description>disc:</description>
-        <type>label</type>
-        <id>100</id>
-        <posX>345</posX>
-        <posY>964</posY>
-        <label>427</label>
-        <font>font12</font>
-        <textcolor>90ffffff</textcolor>
-      </control>
-      <control>
-        <description>disc select</description>
-        <type>spincontrol</type>
-        <id>11</id>
-        <posX>348</posX>
-        <posY>1006</posY>
-        <onup>66622</onup>
-        <ondown>2</ondown>
-        <onleft>10</onleft>
-        <onright>10</onright>
-        <textcolor>FFFFFFFF</textcolor>
-        <buddycontrolid>100</buddycontrolid>
-        <showrange>no</showrange>
-      </control>
-      <control>
-        <description>DUMMY BUTTON</description>
-        <type>button</type>
-        <id>50</id>
-        <posX>720</posX>
-        <posY>0</posY>
-        <width>1200</width>
-        <height>900</height>
-        <onright>10</onright>
-        <onleft>2</onleft>
-        <ondown>10</ondown>
-        <textureFocus>-</textureFocus>
-        <textureNoFocus>-</textureNoFocus>
-        <!-- <scrollWrapString/> -->
-      </control>
-    </control>
-    <control>
-      <type>image</type>
-      <id>0</id>
-      <posX>-579</posX>
-      <posY>4</posY>
-      <width>627</width>
-      <height>1071</height>
-      <texture>bg_left.png</texture>
-      <colorDiffuse>ffffffff</colorDiffuse>
-      <visible>[control.hasfocus(50)|control.hasfocus(10)|control.hasfocus(11)]</visible>
-      <animation effect="fade" time="50">WindowClose</animation>
-      <animation effect="fade" time="50">WindowOpen</animation>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <type>actiongroup</type>
-      <description>action menu</description>
-      <defaultcontrol>2</defaultcontrol>
-      <onexit>66621</onexit>
-      <buttonX>45</buttonX>
-      <buttonY>0</buttonY>
-      <buttonwidth>532</buttonwidth>
-      <buttonheight>1080</buttonheight>
-      <textureFocus>-</textureFocus>
-      <textureNoFocus>-</textureNoFocus>
-      <width>637</width>
-      <height>1080</height>
-      <dimColor>ffffffff</dimColor>
-      <visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
-      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>0</posY>
-        <width>627</width>
-        <height>1080</height>
-        <texture>bg_left.png</texture>
-        <colorDiffuse>ffffffff</colorDiffuse>
-      </control>
-      <control>
-        <id>0</id>
-        <type>label</type>
-        <posX>45</posX>
-        <posY>52</posY>
-        <label>924</label>
-        <width>499</width>
-        <font>font24</font>
-        <align>left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <type>group</type>
-        <layout>StackLayout(0, Vertical, true)</layout>
-        <posX>0</posX>
-        <posY>71</posY>
-        <control>
-          <type>image</type>
-          <id>0</id>
-          <posX>0</posX>
-          <posY>71</posY>
-          <width>579</width>
-          <height>79</height>
-          <texture>bg_button_nofocus.png</texture>
-        </control>
-        <control>
-          <description>Play Button</description>
-          <type>button</type>
-          <id>2</id>
-          <label>208</label>
-          <onup>66621</onup>
-          <onleft>66621</onleft>
-          <ondown>3</ondown>
-          <onright>50</onright>
-        </control>
-        <control>
-          <description>Plot</description>
-          <type>togglebutton</type>
-          <id>3</id>
-          <label>207</label>
-          <onup>2</onup>
-          <ondown>7</ondown>
-          <onright>50</onright>
-          <onleft>66621</onleft>
-        </control>
-        <control>
-          <description>User review</description>
-          <type>togglebutton</type>
-          <id>7</id>
-          <label>183</label>
-          <onup>3</onup>
-          <ondown>4</ondown>
-          <onright>50</onright>
-          <onleft>66621</onleft>
-        </control>
-        <control>
-          <description>Cast</description>
-          <type>togglebutton</type>
-          <id>4</id>
-          <label>206</label>
-          <onup>7</onup>
-          <ondown>5</ondown>
-          <onright>50</onright>
-          <onleft>66621</onleft>
-        </control>
-        <control>
-          <description>Refresh</description>
-          <type>button</type>
-          <id>5</id>
-          <label>184</label>
-          <onup>4</onup>
-          <ondown>6</ondown>
-          <onright>50</onright>
-          <onleft>66621</onleft>
-        </control>
-        <control>
-          <description>Watched</description>
-          <type>togglebutton</type>
-          <id>6</id>
-          <label>1010</label>
-          <onup>5</onup>
-          <ondown>66621</ondown>
-          <onright>50</onright>
-          <onleft>66621</onleft>
-        </control>
-        <control>
-          <type>image</type>
-          <id>0</id>
-          <posX>0</posX>
-          <posY>900</posY>
-          <width>577</width>
-          <height>79</height>
-          <texture>arrow_menu_left.png</texture>
-        </control>
-      </control>
-    </control>
-    <control>
-      <type>actiongroup</type>
-      <description>action menu</description>
-      <defaultcontrol>66621</defaultcontrol>
-      <onexit>0</onexit>
-      <buttonX>0</buttonX>
-      <buttonY>0</buttonY>
-      <buttonwidth>45</buttonwidth>
-      <buttonheight>1080</buttonheight>
-      <textureFocus>-</textureFocus>
-      <textureNoFocus>-</textureNoFocus>
-      <width>637</width>
-      <height>1080</height>
-      <dimColor>ffffffff</dimColor>
-      <visible>[control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)|control.hasfocus(97261)|control.hasfocus(97262)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]</visible>
-      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>0</posY>
-        <width>627</width>
-        <height>1080</height>
-        <texture>bg_left.png</texture>
-        <colorDiffuse>ffffffff</colorDiffuse>
-      </control>
-      <control>
-        <id>0</id>
-        <type>label</type>
-        <posX>45</posX>
-        <posY>52</posY>
-        <label>924</label>
-        <width>499</width>
-        <font>font24</font>
-        <align>left</align>
-        <textcolor>ffffffff</textcolor>
-      </control>
-      <control>
-        <type>group</type>
-        <layout>StackLayout(0, Vertical, true)</layout>
-        <posX>0</posX>
-        <posY>71</posY>
-        <control>
-          <type>image</type>
-          <id>0</id>
-          <posX>0</posX>
-          <posY>71</posY>
-          <width>579</width>
-          <height>79</height>
-          <texture>bg_button_nofocus.png</texture>
-        </control>
-        <control>
-          <description>Onlinevideos Trailers</description>
-          <id>66621</id>
-          <type>button</type>
-          <label>IMDb Movie Trailers</label>
-          <hyperlink>4755</hyperlink>
-          <hyperlinkParameter>site:IMDb Movie Trailers|search:#title|return:Locked</hyperlinkParameter>
-          <!-- <visible>plugin.isenabled(Online Videos)</visible> -->
-          <onup>6</onup>
-          <ondown>66622</ondown>
-          <onleft>2</onleft>
-          <onright>50</onright>
-        </control>
-        <control>
-          <description>Onlinevideos Trailers</description>
-          <id>66622</id>
-          <type>button</type>
-          <label>iTunes Movie Trailers</label>
-          <hyperlink>4755</hyperlink>
-          <hyperlinkParameter>site:iTunes Movie Trailers|search:#title|return:Locked</hyperlinkParameter>
-          <!-- <visible>plugin.isenabled(Online Videos)</visible> -->
-          <onup>66621</onup>
-          <ondown>66623</ondown>
-          <onleft>2</onleft>
-          <onright>50</onright>
-        </control>
-        <control>
-          <description>Onlinevideos Trailers</description>
-          <id>66623</id>
-          <type>button</type>
-          <label>Youtube</label>
-          <hyperlink>4755</hyperlink>
-          <hyperlinkParameter>site:YouTube|search:#title|return:Locked</hyperlinkParameter>
-          <!-- <visible>plugin.isenabled(Online Videos)</visible> -->
-          <onup>66622</onup>
-          <ondown>97258</ondown>
-          <onleft>2</onleft>
-          <onright>50</onright>
-        </control>
-        <control>
-          <description>Add to Trakt Movie/Show Watch List</description>
-          <type>button</type>
-          <id>97258</id>
-          <label>#Trakt.Translation.AddToWatchList.Label</label>
-          <onup>66623</onup>
-          <ondown>97261</ondown>
-          <onleft>2</onleft>
-          <onright>50</onright>
-          <visible>plugin.isenabled(Trakt)</visible>
-        </control>
-        <control>
-          <description>Trakt Add to Custom List</description>
-          <type>button</type>
-          <id>97261</id>
-          <label>#Trakt.Translation.AddToList.Label</label>
-          <onup>97258</onup>
-          <ondown>97259</ondown>
-          <onleft>2</onleft>
-          <onright>50</onright>
-          <visible>plugin.isenabled(Trakt)</visible>
-        </control>
-        <control>
-          <description>Trakt Rate</description>
-          <type>button</type>
-          <id>97259</id>
-          <label>Trakt #Trakt.Translation.Rate.Label</label>
-          <onup>97261</onup>
-          <ondown>97260</ondown>
-          <onleft>2</onleft>
-          <onright>50</onright>
-          <visible>plugin.isenabled(Trakt)</visible>
-        </control>
-        <control>
-          <description>Trakt Shouts List</description>
-          <type>button</type>
-          <id>97260</id>
-          <label>Trakt #Trakt.Translation.Shouts.Label</label>
-          <onup>97259</onup>
-          <ondown>97262</ondown>
-          <onleft>2</onleft>
-          <onright>50</onright>
-          <visible>plugin.isenabled(Trakt)</visible>
-        </control>
-        <control>
-          <description>Trakt Related Movies</description>
-          <type>button</type>
-          <id>97262</id>
-          <label>#Trakt.Translation.RelatedMovies.Label</label>
-          <onup>97260</onup>
-          <ondown>2</ondown>
-          <onleft>2</onleft>
-          <onright>50</onright>
-          <visible>plugin.isenabled(Trakt)</visible>
-        </control>
-        <control>
-          <type>image</type>
-          <id>0</id>
-          <posX>0</posX>
-          <posY>900</posY>
-          <width>577</width>
-          <height>79</height>
-          <texture>arrow_menu_left.png</texture>
-        </control>
-      </control>
-    </control>
-  </controls>
+			<control>
+				<description>Genre txt</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>300</posY>
+				<width>1110</width>
+				<label>#genre</label>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Year value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>352</posY>
+				<width>1110</width>
+				<font>font18</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#year     #runtime mins</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Director value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>412</posY>
+				<width>1110</width>
+				<font>font18</font>
+				<textcolor>ffFFFFFF</textcolor>
+				<label>Directed by #director</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Rating value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>780</posX>
+				<posY>472</posY>
+				<width>1110</width>
+				<font>font16</font>
+				<textcolor>90FFFFFF</textcolor>
+				<label>#mpaarating</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>735</posX>
+				<posY>465</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>Plot value</description>
+				<type>textboxscrollup</type>
+				<id>20</id>
+				<posX>780</posX>
+				<posY>565</posY>
+				<width>1110</width>
+				<height>447</height>
+				<textcolor>ffFFFFFF</textcolor>
+				<font>font18</font>
+				<seperator>: : :</seperator>
+				<label>#plot</label>
+			</control>
+			<control>
+				<description>textarea</description>
+				<type>textbox</type>
+				<id>22</id>
+				<posX>780</posX>
+				<posY>565</posY>
+				<width>1110</width>
+				<height>477</height>
+				<textcolor>ffFFFFFF</textcolor>
+				<font>font18</font>
+				<onleft>2</onleft>
+				<onright>2</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+				<label>#cast</label>
+				<spinPosX>1686</spinPosX>
+				<spinPosY>978</spinPosY>
+			</control>
+			<control>
+				<description>Review value</description>
+				<type>textboxscrollup</type>
+				<id>23</id>
+				<posX>780</posX>
+				<posY>565</posY>
+				<width>1110</width>
+				<height>447</height>
+				<label>#userreview</label>
+				<textcolor>ffFFFFFF</textcolor>
+				<font>font18</font>
+				<seperator>: : :</seperator>
+			</control>
+			<control>
+				<description>image title:</description>
+				<type>label</type>
+				<id>30</id>
+				<posX>45</posX>
+				<posY>964</posY>
+				<label>734</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>spin control</description>
+				<type>spincontrol</type>
+				<id>10</id>
+				<posX>48</posX>
+				<posY>1006</posY>
+				<onup>66622</onup>
+				<ondown>2</ondown>
+				<onleft>11</onleft>
+				<onright>11</onright>
+			</control>
+			<control>
+				<description>disc:</description>
+				<type>label</type>
+				<id>100</id>
+				<posX>345</posX>
+				<posY>964</posY>
+				<label>427</label>
+				<font>font12</font>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>disc select</description>
+				<type>spincontrol</type>
+				<id>11</id>
+				<posX>348</posX>
+				<posY>1006</posY>
+				<onup>66622</onup>
+				<ondown>2</ondown>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<textcolor>FFFFFFFF</textcolor>
+				<buddycontrolid>100</buddycontrolid>
+				<showrange>no</showrange>
+			</control>
+			<control>
+				<description>DUMMY BUTTON</description>
+				<type>button</type>
+				<id>50</id>
+				<posX>720</posX>
+				<posY>0</posY>
+				<width>1200</width>
+				<height>900</height>
+				<onright>10</onright>
+				<onleft>2</onleft>
+				<ondown>10</ondown>
+				<textureFocus>-</textureFocus>
+				<textureNoFocus>-</textureNoFocus>
+				<!-- <scrollWrapString/> -->
+			</control>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-579</posX>
+			<posY>4</posY>
+			<width>627</width>
+			<height>1071</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>[control.hasfocus(50)|control.hasfocus(10)|control.hasfocus(11)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>66621</onexit>
+			<buttonX>45</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>532</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>71</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>71</posY>
+					<width>579</width>
+					<height>79</height>
+					<texture>bg_button_nofocus.png</texture>
+				</control>
+				<control>
+					<description>Play Button</description>
+					<type>button</type>
+					<id>2</id>
+					<label>208</label>
+					<onup>66621</onup>
+					<onleft>66621</onleft>
+					<ondown>3</ondown>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Plot</description>
+					<type>togglebutton</type>
+					<id>3</id>
+					<label>207</label>
+					<onup>2</onup>
+					<ondown>7</ondown>
+					<onright>50</onright>
+					<onleft>66621</onleft>
+				</control>
+				<control>
+					<description>User review</description>
+					<type>togglebutton</type>
+					<id>7</id>
+					<label>183</label>
+					<onup>3</onup>
+					<ondown>4</ondown>
+					<onright>50</onright>
+					<onleft>66621</onleft>
+				</control>
+				<control>
+					<description>Cast</description>
+					<type>togglebutton</type>
+					<id>4</id>
+					<label>206</label>
+					<onup>7</onup>
+					<ondown>5</ondown>
+					<onright>50</onright>
+					<onleft>66621</onleft>
+				</control>
+				<control>
+					<description>Refresh</description>
+					<type>button</type>
+					<id>5</id>
+					<label>184</label>
+					<onup>4</onup>
+					<ondown>6</ondown>
+					<onright>50</onright>
+					<onleft>66621</onleft>
+				</control>
+				<control>
+					<description>Watched</description>
+					<type>togglebutton</type>
+					<id>6</id>
+					<label>1010</label>
+					<onup>5</onup>
+					<ondown>66621</ondown>
+					<onright>50</onright>
+					<onleft>66621</onleft>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>900</posY>
+					<width>577</width>
+					<height>79</height>
+					<texture>arrow_menu_left.png</texture>
+				</control>
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>66621</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>45</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)|control.hasfocus(97261)|control.hasfocus(97262)|control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>71</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>71</posY>
+					<width>579</width>
+					<height>79</height>
+					<texture>bg_button_nofocus.png</texture>
+				</control>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66621</id>
+					<type>button</type>
+					<label>IMDb Movie Trailers</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:IMDb Movie Trailers|search:#title|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>6</onup>
+					<ondown>66622</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66622</id>
+					<type>button</type>
+					<label>iTunes Movie Trailers</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:iTunes Movie Trailers|search:#title|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>66621</onup>
+					<ondown>66623</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66623</id>
+					<type>button</type>
+					<label>Youtube</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:YouTube|search:#title|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>66622</onup>
+					<ondown>97258</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+				</control>
+				<control>
+					<description>Add to Trakt Movie/Show Watch List</description>
+					<type>button</type>
+					<id>97258</id>
+					<label>#Trakt.Translation.AddToWatchList.Label</label>
+					<onup>66623</onup>
+					<ondown>97261</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Add to Custom List</description>
+					<type>button</type>
+					<id>97261</id>
+					<label>#Trakt.Translation.AddToList.Label</label>
+					<onup>97258</onup>
+					<ondown>97259</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Rate</description>
+					<type>button</type>
+					<id>97259</id>
+					<label>Trakt #Trakt.Translation.Rate.Label</label>
+					<onup>97261</onup>
+					<ondown>97260</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Shouts List</description>
+					<type>button</type>
+					<id>97260</id>
+					<label>Trakt #Trakt.Translation.Shouts.Label</label>
+					<onup>97259</onup>
+					<ondown>97262</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Related Movies</description>
+					<type>button</type>
+					<id>97262</id>
+					<label>#Trakt.Translation.RelatedMovies.Label</label>
+					<onup>97260</onup>
+					<ondown>2</ondown>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>900</posY>
+					<width>577</width>
+					<height>79</height>
+					<texture>arrow_menu_left.png</texture>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>
