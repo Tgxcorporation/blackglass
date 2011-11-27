@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<allowoverlay>yes</allowoverlay>
 	<controls>
-
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(4)]">conditional</animation>
 			<!-- *** TopIndex 0 *** -->
 			<control>
 				<description>TopIndex Indicator 0</description>
@@ -143,25 +141,12 @@
 					<onleft>2</onleft>
 					<posY>220</posY>
 					<height>510</height>
-					<visible>string.equals(#Stocks.Type,Index)</visible>
+					<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,List)</visible>
 					<itemWidth>32</itemWidth>
 					<itemHeight>32</itemHeight>
 					<IconXOff>10</IconXOff>
 					<IconYOff>10</IconYOff>
 				</control>
-			</control>
-
-			<!-- *** Index Item Separator *** -->
-			<control>
-				<description>Index Separator</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>410</posX>
-				<posY>577</posY>
-				<width>880</width>
-				<label>____________________________________________________________________________________________________________</label>
-				<textcolor>ff808080</textcolor>
-				<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,List)</visible>
 			</control>
 
 			<!-- *** Index Item Properties *** -->
@@ -174,7 +159,8 @@
 				<width>385</width>
 				<label>#Stocks.ListItemName</label>
 				<font>font22</font>
-				</control>
+				<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,List)</visible>
+			</control>
 			<control>
 				<description>Index Item Date/Time</description>
 				<type>label</type>
@@ -194,7 +180,7 @@
 				<width>385</width>
 				<font>font12</font>
 				<textcolor>90ffffff</textcolor>
-				<label>Current Value: #Stocks.ListItemLast</label>
+				<label>Current Value:</label>
 				<visible>string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,List)+!string.equals(#Stocks.ListItemLast,)</visible>
 			</control>
 			<control>
@@ -236,6 +222,7 @@
 				<id>0</id>
 				<posX>30</posX>
 				<posY>390</posY>
+				<textcolor>90ffffff</textcolor>
 				<width>385</width>
 				<font>font12</font>
 				<label>Close Value:</label>
@@ -279,20 +266,20 @@
 				<description>Index Item Chart Background</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>450</posX>
-				<posY>220</posY>
-				<width>340</width>
-				<height>260</height>
-				<keepaspectratio>no</keepaspectratio>
-				<texture>background_images.png</texture>
+				<posX>500</posX>
+				<posY>160</posY>
+				<width>390</width>
+				<height>265</height>
+				<texture>TvCase.png</texture>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)+control.hasthumb(55)</visible>
 			</control>
 			<control>
 				<description>Index Item Chart Name</description>
 				<type>label</type>
 				<id>0</id>
-				<posX>485</posX>
-				<posY>250</posY>
+				<posX>522</posX>
+				<posY>380</posY>
+				<font>font12</font>
 				<label>#Stocks.Index0Name (#Stocks.Index0ChartRange)</label>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)+control.hasthumb(55)</visible>
 			</control>
@@ -300,9 +287,10 @@
 				<description>Index Item Chart</description>
 				<type>image</type>
 				<id>55</id>
-				<posX>480</posX>
-				<posY>275</posY>
-				<width>280</width>
+				<posX>522</posX>
+				<posY>181</posY>
+				<width>347</width>
+				<height>195</height>
 				<texture>#Stocks.Index0Chart</texture>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)</visible>
 			</control>
@@ -312,20 +300,21 @@
 				<description>Index Item Chart Background</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>830</posX>
-				<posY>220</posY>
-				<width>340</width>
-				<height>260</height>
+				<posX>885</posX>
+				<posY>160</posY>
+				<width>390</width>
+				<height>265</height>
 				<keepaspectratio>no</keepaspectratio>
-				<texture>background_images.png</texture>
+				<texture>TvCase.png</texture>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)+control.hasthumb(56)</visible>
 			</control>
 			<control>
 				<description>Index Item Chart Name</description>
 				<type>label</type>
 				<id>0</id>
-				<posX>865</posX>
-				<posY>250</posY>
+				<posX>907</posX>
+				<posY>380</posY>
+				<font>font12</font>
 				<label>#Stocks.Index1Name (#Stocks.Index1ChartRange)</label>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)+control.hasthumb(56)</visible>
 			</control>
@@ -333,9 +322,10 @@
 				<description>Index Item Chart</description>
 				<type>image</type>
 				<id>56</id>
-				<posX>860</posX>
-				<posY>275</posY>
-				<width>280</width>
+				<posX>907</posX>
+				<posY>181</posY>
+				<width>347</width>
+				<height>195</height>
 				<texture>#Stocks.Index1Chart</texture>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)</visible>
 			</control>
@@ -345,20 +335,21 @@
 				<description>Index Item Chart Background</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>450</posX>
-				<posY>450</posY>
-				<width>340</width>
-				<height>260</height>
+				<posX>500</posX>
+				<posY>440</posY>
+				<width>390</width>
+				<height>265</height>
 				<keepaspectratio>no</keepaspectratio>
-				<texture>background_images.png</texture>
+				<texture>TvCase.png</texture>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)+control.hasthumb(57)</visible>
 			</control>
 			<control>
 				<description>Index Item Chart Name</description>
 				<type>label</type>
 				<id>0</id>
-				<posX>485</posX>
-				<posY>480</posY>
+				<posX>522</posX>
+				<posY>660</posY>
+				<font>font12</font>
 				<label>#Stocks.Index2Name (#Stocks.Index2ChartRange)</label>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)+control.hasthumb(57)</visible>
 			</control>
@@ -366,9 +357,10 @@
 				<description>Index Item Chart</description>
 				<type>image</type>
 				<id>57</id>
-				<posX>480</posX>
-				<posY>505</posY>
-				<width>280</width>
+				<posX>522</posX>
+				<posY>461</posY>
+				<width>347</width>
+				<height>195</height>
 				<texture>#Stocks.Index2Chart</texture>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)</visible>
 			</control>
@@ -378,31 +370,33 @@
 				<description>Index Item Chart Background</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>830</posX>
-				<posY>450</posY>
-				<width>340</width>
-				<height>260</height>
+				<posX>885</posX>
+				<posY>440</posY>
+				<width>390</width>
+				<height>265</height>
 				<keepaspectratio>no</keepaspectratio>
-				<texture>background_images.png</texture>
+				<texture>TvCase.png</texture>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)+control.hasthumb(58)</visible>
 			</control>
 			<control>
 				<description>Index Item Chart Name</description>
 				<type>label</type>
 				<id>0</id>
-				<posX>865</posX>
-				<posY>480</posY>
-				<label>#Stocks.Index6Name (#Stocks.Index6ChartRange)</label>
+				<posX>907</posX>
+				<posY>660</posY>
+				<font>font12</font>
+				<label>#Stocks.Index3Name (#Stocks.Index3ChartRange)</label>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)+control.hasthumb(58)</visible>
 			</control>
 			<control>
 				<description>Index Item Chart</description>
 				<type>image</type>
 				<id>58</id>
-				<posX>860</posX>
-				<posY>505</posY>
-				<width>280</width>
-				<texture>#Stocks.Index6Chart</texture>
+				<posX>907</posX>
+				<posY>461</posY>
+				<width>347</width>
+				<height>195</height>
+				<texture>#Stocks.Index3Chart</texture>
 				<visible>string.equals(#Stocks.Type,Index)+string.equals(#Stocks.View,Chart)</visible>
 			</control>
 		</control>

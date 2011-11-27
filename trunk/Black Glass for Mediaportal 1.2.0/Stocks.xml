@@ -12,12 +12,6 @@
 		<import>common.window.time.xml</import>
 
 
-		<import>StocksIndexDetails.xml</import>
-		<import>StocksStockDetails.xml</import>
-		<import>StocksFundDetails.xml</import>
-		<import>StocksPortfolioDetails.xml</import>
-		<import>StocksCurrencyDetails.xml</import>
-		<import>StocksHeadlineDetails.xml</import>
 
 		<control>
 			<type>group</type>
@@ -95,6 +89,7 @@
 				<height>53</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
+				<visible>!string.equals(#Stocks.View,Chart)+!string.equals(#Stocks.Type,Headline)</visible>
 			</control>
 
 
@@ -115,6 +110,12 @@
 		</control>
 
 
+		<import>StocksIndexDetails.xml</import>
+		<import>StocksStockDetails.xml</import>
+		<import>StocksFundDetails.xml</import>
+		<import>StocksPortfolioDetails.xml</import>
+		<import>StocksCurrencyDetails.xml</import>
+		<import>StocksHeadlineDetails.xml</import>
 
 
 
@@ -223,22 +224,21 @@
 				</control>
 			</control>
 		</control>
-		<!-- <control>
+		<control>
 			<description>DUMMY BUTTON</description>
 			<type>button</type>
 			<id>51</id>
 			<posX>480</posX>
 			<posY>0</posY>
-			<width>800</width>
+			<width>100</width>
 			<height>720</height>
 			<label/>
-			<onright>2</onright>
 			<onleft>2</onleft>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
-			<visible>!string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)</visible>
+			<!-- <visible>!string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)</visible> -->
 		</control>
-		<control>
+		<!-- <control>
 			<description>DUMMY BUTTON</description>
 			<type>button</type>
 			<id>61</id>
