@@ -5,7 +5,6 @@ This file should contain the details view
 <window>
 	<controls>
 
-
 		<control>
 			<description>PLAY Button</description>
 			<type>button</type>
@@ -17,9 +16,12 @@ This file should contain the details view
 			<onright>66621</onright>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
+			<posX>480</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
 			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
 		</control>
-
 
 		<!-- Details Box -->
 
@@ -262,7 +264,7 @@ This file should contain the details view
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+![control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)|control.hasfocus(97261)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+![control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)|control.hasfocus(97261)|control.hasfocus(97262)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -271,17 +273,17 @@ This file should contain the details view
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>66621</defaultcontrol>
-			<onexit>0</onexit>
+			<onexit>2</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>56</buttonwidth>
+			<buttonwidth>100</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)|control.hasfocus(97261)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)|control.hasfocus(97261)|control.hasfocus(97262)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -303,7 +305,8 @@ This file should contain the details view
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#header.label</label>
+				<width>333</width>
 				<font>font24</font>
 			</control>
 			<control>
@@ -413,11 +416,38 @@ This file should contain the details view
 					<id>97260</id>
 					<label>Trakt #Trakt.Translation.Shouts.Label</label>
 					<onup>97259</onup>
-					<ondown>2</ondown>
+					<ondown>97262</ondown>
+					<onright>6</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Related Movies</description>
+					<type>button</type>
+					<id>97262</id>
+					<label>#Trakt.Translation.RelatedMovies.Label</label>
+					<onup>97260</onup>
+					<ondown>66621</ondown>
 					<onright>6</onright>
 					<visible>plugin.isenabled(Trakt)</visible>
 				</control>
 			</control>
 		</control>
+		
+		<!-- Dim background when movie starts -->
+		<!-- This is to provide feedback to the user something is happening when there are long pauses before playback -->
+
+		<control>
+			<description>Playing Animation</description>
+			<type>animation</type>
+			<id>0</id>
+			<posX>592</posX>
+			<posY>312</posY>
+			<width>96</width>
+			<height>96</height>
+			<textures>common.waiting.1.png;common.waiting.2.png;common.waiting.3.png;common.waiting.4.png;common.waiting.5.png;common.waiting.6.png;common.waiting.7.png;common.waiting.8.png</textures>
+			<Duration>0:0:01.5</Duration>
+			<keepaspectratio>yes</keepaspectratio>		
+			<visible>control.isvisible(18)+!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control>	
 	</controls>
 </window>
