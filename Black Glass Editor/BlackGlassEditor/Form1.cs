@@ -1500,7 +1500,7 @@ namespace BlackGlassEditor
             if (comboBox105.Text == "Empty Button") { textBox105.Text = ""; textBoxid105.Text = ""; };
             //checkBox105.Visible = false;
             checkBox105.Checked = false;
-            if (textBoxid105.Text == "504" || textBoxid105.Text == "501" || textBoxid105.Text == "96742" || textBoxid105.Text == "1" || textBoxid105.Text == "9811" || textBoxid105.Text == "2600" || textBoxid105.Text == "2") { checkBox105.Checked = true; numericUpDown105.Value = 1.0m; };
+            if (textBoxid105.Text == "504" || textBoxid105.Text == "501" || textBoxid105.Text == "96742" || textBoxid105.Text == "1" || textBoxid105.Text == "9811" || textBoxid105.Text == "7977" || textBoxid105.Text == "2") { checkBox105.Checked = true; numericUpDown105.Value = 1.0m; };
         }
         private void comboBox106_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1510,7 +1510,7 @@ namespace BlackGlassEditor
             if (comboBox106.Text == "Empty Button") { textBox106.Text = ""; textBoxid106.Text = ""; };
             //checkBox106.Visible = false;
             checkBox106.Checked = false;
-            if (textBoxid106.Text == "504" || textBoxid106.Text == "501" || textBoxid106.Text == "96742" || textBoxid106.Text == "1" || textBoxid106.Text == "9811" || textBoxid106.Text == "2600" || textBoxid106.Text == "2") { checkBox106.Checked = true; numericUpDown106.Value = 1.0m; };
+            if (textBoxid106.Text == "504" || textBoxid106.Text == "501" || textBoxid106.Text == "96742" || textBoxid106.Text == "1" || textBoxid106.Text == "9811" || textBoxid106.Text == "7977" || textBoxid106.Text == "2") { checkBox106.Checked = true; numericUpDown106.Value = 1.0m; };
         }
         private void comboBox107_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1520,7 +1520,7 @@ namespace BlackGlassEditor
             if (comboBox107.Text == "Empty Button") { textBox107.Text = ""; textBoxid107.Text = ""; };
             //checkBox107.Visible = false;
             checkBox107.Checked = false;
-            if (textBoxid107.Text == "504" || textBoxid107.Text == "501" || textBoxid107.Text == "96742" || textBoxid107.Text == "1" || textBoxid107.Text == "9811" || textBoxid107.Text == "2600" || textBoxid107.Text == "2") { checkBox107.Checked = true; numericUpDown107.Value = 1.0m; };
+            if (textBoxid107.Text == "504" || textBoxid107.Text == "501" || textBoxid107.Text == "96742" || textBoxid107.Text == "1" || textBoxid107.Text == "9811" || textBoxid107.Text == "7977" || textBoxid107.Text == "2") { checkBox107.Checked = true; numericUpDown107.Value = 1.0m; };
         }
         private void comboBox108_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1530,7 +1530,7 @@ namespace BlackGlassEditor
             if (comboBox108.Text == "Empty Button") { textBox108.Text = ""; textBoxid108.Text = ""; };
             //checkBox108.Visible = false;
             checkBox108.Checked = false;
-            if (textBoxid108.Text == "504" || textBoxid108.Text == "501" || textBoxid108.Text == "96742" || textBoxid108.Text == "1" || textBoxid108.Text == "9811" || textBoxid108.Text == "2600" || textBoxid108.Text == "2") { checkBox108.Checked = true; numericUpDown108.Value = 1.0m; };
+            if (textBoxid108.Text == "504" || textBoxid108.Text == "501" || textBoxid108.Text == "96742" || textBoxid108.Text == "1" || textBoxid108.Text == "9811" || textBoxid108.Text == "7977" || textBoxid108.Text == "2") { checkBox108.Checked = true; numericUpDown108.Value = 1.0m; };
         }
         private void comboBox109_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1540,7 +1540,7 @@ namespace BlackGlassEditor
             if (comboBox109.Text == "Empty Button") { textBox109.Text = ""; textBoxid109.Text = ""; };
             //checkBox109.Visible = false;
             checkBox109.Checked = false;
-            if (textBoxid109.Text == "504" || textBoxid109.Text == "501" || textBoxid109.Text == "96742" || textBoxid109.Text == "1" || textBoxid109.Text == "9811" || textBoxid109.Text == "2600" || textBoxid109.Text == "2") { checkBox109.Checked = true; numericUpDown109.Value = 1.0m; };
+            if (textBoxid109.Text == "504" || textBoxid109.Text == "501" || textBoxid109.Text == "96742" || textBoxid109.Text == "1" || textBoxid109.Text == "9811" || textBoxid109.Text == "7977" || textBoxid109.Text == "2") { checkBox109.Checked = true; numericUpDown109.Value = 1.0m; };
         }
         private void comboBox110_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1550,7 +1550,7 @@ namespace BlackGlassEditor
             if (comboBox110.Text == "Empty Button") { textBox110.Text = ""; textBoxid110.Text = ""; };
             //checkBox110.Visible = false;
             checkBox110.Checked = false;
-            if (textBoxid110.Text == "504" || textBoxid110.Text == "501" || textBoxid110.Text == "96742" || textBoxid110.Text == "1" || textBoxid110.Text == "9811" || textBoxid110.Text == "2600" || textBoxid110.Text == "2") { checkBox110.Checked = true; numericUpDown110.Value = 1.0m; };
+            if (textBoxid110.Text == "504" || textBoxid110.Text == "501" || textBoxid110.Text == "96742" || textBoxid110.Text == "1" || textBoxid110.Text == "9811" || textBoxid110.Text == "7977" || textBoxid110.Text == "2") { checkBox110.Checked = true; numericUpDown110.Value = 1.0m; };
         }
         private void comboBox111_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1560,7 +1560,7 @@ namespace BlackGlassEditor
             if (comboBox111.Text == "Empty Button") { textBox111.Text = ""; textBoxid111.Text = ""; };
             //checkBox111.Visible = false;
             checkBox111.Checked = false;
-            if (textBoxid111.Text == "504" || textBoxid111.Text == "501" || textBoxid111.Text == "96742" || textBoxid111.Text == "1" || textBoxid111.Text == "9811" || textBoxid111.Text == "2600" || textBoxid111.Text == "2") { checkBox111.Checked = true; numericUpDown111.Value = 1.0m; };
+            if (textBoxid111.Text == "504" || textBoxid111.Text == "501" || textBoxid111.Text == "96742" || textBoxid111.Text == "1" || textBoxid111.Text == "9811" || textBoxid111.Text == "7977" || textBoxid111.Text == "2") { checkBox111.Checked = true; numericUpDown111.Value = 1.0m; };
         }
         private void comboBox112_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1570,7 +1570,7 @@ namespace BlackGlassEditor
             if (comboBox112.Text == "Empty Button") { textBox112.Text = ""; textBoxid112.Text = ""; };
             //checkBox112.Visible = false;
             checkBox112.Checked = false;
-            if (textBoxid112.Text == "504" || textBoxid112.Text == "501" || textBoxid112.Text == "96742" || textBoxid112.Text == "1" || textBoxid112.Text == "9811" || textBoxid112.Text == "2600" || textBoxid112.Text == "2") { checkBox112.Checked = true; numericUpDown112.Value = 1.0m; };
+            if (textBoxid112.Text == "504" || textBoxid112.Text == "501" || textBoxid112.Text == "96742" || textBoxid112.Text == "1" || textBoxid112.Text == "9811" || textBoxid112.Text == "7977" || textBoxid112.Text == "2") { checkBox112.Checked = true; numericUpDown112.Value = 1.0m; };
         }
         private void comboBox113_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1580,7 +1580,7 @@ namespace BlackGlassEditor
             if (comboBox113.Text == "Empty Button") { textBox113.Text = ""; textBoxid113.Text = ""; };
             //checkBox113.Visible = false;
             checkBox113.Checked = false;
-            if (textBoxid113.Text == "504" || textBoxid113.Text == "501" || textBoxid113.Text == "96742" || textBoxid113.Text == "1" || textBoxid113.Text == "9811" || textBoxid113.Text == "2600" || textBoxid113.Text == "2") { checkBox113.Checked = true; numericUpDown113.Value = 1.0m; };
+            if (textBoxid113.Text == "504" || textBoxid113.Text == "501" || textBoxid113.Text == "96742" || textBoxid113.Text == "1" || textBoxid113.Text == "9811" || textBoxid113.Text == "7977" || textBoxid113.Text == "2") { checkBox113.Checked = true; numericUpDown113.Value = 1.0m; };
         }
         private void comboBox114_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1590,7 +1590,7 @@ namespace BlackGlassEditor
             if (comboBox114.Text == "Empty Button") { textBox114.Text = ""; textBoxid114.Text = ""; };
             //checkBox114.Visible = false;
             checkBox114.Checked = false;
-            if (textBoxid114.Text == "504" || textBoxid114.Text == "501" || textBoxid114.Text == "96742" || textBoxid114.Text == "1" || textBoxid114.Text == "9811" || textBoxid114.Text == "2600" || textBoxid114.Text == "2") { checkBox114.Checked = true; numericUpDown114.Value = 1.0m; };
+            if (textBoxid114.Text == "504" || textBoxid114.Text == "501" || textBoxid114.Text == "96742" || textBoxid114.Text == "1" || textBoxid114.Text == "9811" || textBoxid114.Text == "7977" || textBoxid114.Text == "2") { checkBox114.Checked = true; numericUpDown114.Value = 1.0m; };
         }
 
 
@@ -3993,8 +3993,8 @@ namespace BlackGlassEditor
                 case "9811":
                     plugin_name = "MP-TV Series";
                     break;
-                case "2600":
-                    plugin_name = "InfoService";
+                case "7977":
+                    plugin_name = "World Weather";
                     break;
                 default:
                     break;
@@ -4025,10 +4025,10 @@ namespace BlackGlassEditor
                 case "9811":
                     texture = "#latestMediaHandler.tvseries.latest" + level + ".fanart";
                     break;
-                case "2600":
-                    if (level == "1") texture = "animations\\weather\\#infoservice.weather.today.img.big.filenamewithoutext.jpg";
-                    if (level == "2") texture = "animations\\weather\\#infoservice.weather.forecast2.day.img.big.filenamewithoutext.jpg";
-                    if (level == "3") texture = "animations\\weather\\#infoservice.weather.forecast3.day.img.big.filenamewithoutext.jpg";
+                case "7977":
+                    if (level == "1") texture = "animations\\weather\\#WorldWeather.TodayIconNumber.jpg";
+                    if (level == "2") texture = "animations\\weather\\#WorldWeather.ForecastDay0IconNumber.jpg";
+                    if (level == "3") texture = "animations\\weather\\#WorldWeather.ForecastDay1IconNumber.jpg";
                     break;
                 default:
                     break;
@@ -4059,10 +4059,10 @@ namespace BlackGlassEditor
                 case "9811":
                     trick = "+!string.equals(#latestMediaHandler.tvseries.latest" + level + ".episodeName,)";
                     break;
-                case "2600":
-                    if (level == "1") trick = "+!string.equals(#infoservice.weather.today.condition,)";
-                    if (level == "2") trick = "+!string.equals(#infoservice.weather.forecast2.day.condition,)";
-                    if (level == "3") trick = "+!string.equals(#infoservice.weather.forecast3.day.condition,)";
+                case "7977":
+                    if (level == "1") trick = "+!string.equals(#WorldWeather.TodayCondition,)";
+                    if (level == "2") trick = "+!string.equals(#WorldWeather.ForecastDay0Condition,)";
+                    if (level == "3") trick = "+!string.equals(#WorldWeather.ForecastDay1Condition,)";
                     break;
                 default:
                     break;
@@ -4093,10 +4093,10 @@ namespace BlackGlassEditor
                 case "9811":
                     FanartLabel = "#latestMediaHandler.tvseries.latest" + level + ".dateAdded:     #latestMediaHandler.tvseries.latest" + level + ".serieName     #latestMediaHandler.tvseries.latest" + level + ".seasonIndexx#latestMediaHandler.tvseries.latest" + level + ".episodeIndex - #latestMediaHandler.tvseries.latest" + level + ".episodeName     #latestMediaHandler.tvseries.latest" + level + ".runtime mins";
                     break;
-                case "2600":
-                    if (level == "1") FanartLabel = "#infoservice.weather.today.weekday:     #infoservice.weather.today.temp     #infoservice.weather.today.humidity     #infoservice.weather.today.condition     #infoservice.weather.location";
-                    if (level == "2") FanartLabel = "#infoservice.weather.forecast2.weekday:     #infoservice.weather.forecast2.day.humidity     #infoservice.weather.forecast2.day.condition     #infoservice.weather.location";
-                    if (level == "3") FanartLabel = "#infoservice.weather.forecast3.weekday:     #infoservice.weather.forecast3.day.humidity     #infoservice.weather.forecast3.day.condition     #infoservice.weather.location";
+                case "7977":
+                    if (level == "1") FanartLabel = "#WorldWeather.RefreshTime     #WorldWeather.Location     #WorldWeather.TodayCondition     #WorldWeather.TodayTemperature     #WorldWeather.TodayWind     #WorldWeather.TodayHumidity";
+                    if (level == "2") FanartLabel = "#WorldWeather.ForecastDay0Day     #WorldWeather.Location     #WorldWeather.ForecastDay0Condition     #WorldWeather.ForecastDay0Low     #WorldWeather.ForecastDay0High";
+                    if (level == "3") FanartLabel = "#WorldWeather.ForecastDay1Day     #WorldWeather.Location     #WorldWeather.ForecastDay1Condition     #WorldWeather.ForecastDay1Low     #WorldWeather.ForecastDay1High";
                     break;
                 default:
                     break;
