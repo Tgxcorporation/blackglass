@@ -1,241 +1,240 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8"-->
 <window>
-  <allowoverlay>yes</allowoverlay>
   <controls>
-    <!-- *** TopCurrency 0 *** -->
-    <control>
-      <description>TopCurrency Indicator 0</description>
-      <type>image</type>
-      <id>1</id>
-      <posX>751</posX>
-      <posY>262</posY>
-      <width>48</width>
-      <height>48</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>#Stocks.TopCurrency0Indicator</texture>
-      <visible>string.equals(#Stocks.Type,Currency)</visible>
-    </control>
-    <control>
-      <description>TopCurrency Name 0</description>
-      <type>fadelabel</type>
-      <id>1</id>
-      <posX>810</posX>
-      <posY>232</posY>
-      <width>345</width>
-      <height>25</height>
-      <align>left</align>
-      <label>#Stocks.TopCurrency0Name</label>
-      <font>font11</font>
-      <visible>string.equals(#Stocks.Type,Currency)</visible>
-    </control>
-    <control>
-      <description>TopCurrency Last 0</description>
-      <type>fadelabel</type>
-      <id>1</id>
-      <posX>810</posX>
-      <posY>255</posY>
-      <width>345</width>
-      <height>52</height>
-      <align>left</align>
-      <label>#Stocks.TopCurrency0Last</label>
-      <font>font24</font>
-      <textcolor>b0ffffff</textcolor>
-      <visible>string.equals(#Stocks.Type,Currency)</visible>
-    </control>
-    <!-- *** TopCurrency 1 *** -->
-    <control>
-      <description>TopCurrency Indicator 1</description>
-      <type>image</type>
-      <id>1</id>
-      <posX>1132</posX>
-      <posY>262</posY>
-      <width>48</width>
-      <height>48</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>#Stocks.TopCurrency1Indicator</texture>
-      <visible>string.equals(#Stocks.Type,Currency)</visible>
-    </control>
-    <control>
-      <description>TopCurrency Name 1</description>
-      <type>fadelabel</type>
-      <id>1</id>
-      <posX>1191</posX>
-      <posY>232</posY>
-      <width>345</width>
-      <height>25</height>
-      <align>left</align>
-      <label>#Stocks.TopCurrency1Name</label>
-      <font>font11</font>
-      <visible>string.equals(#Stocks.Type,Currency)</visible>
-    </control>
-    <control>
-      <description>TopCurrency Last 1</description>
-      <type>fadelabel</type>
-      <id>1</id>
-      <posX>1191</posX>
-      <posY>255</posY>
-      <width>345</width>
-      <height>52</height>
-      <align>left</align>
-      <label>#Stocks.TopCurrency1Last</label>
-      <font>font24</font>
-      <textcolor>b0ffffff</textcolor>
-      <visible>string.equals(#Stocks.Type,Currency)</visible>
-    </control>
-    <!-- *** TopCurrency 2 *** -->
-    <control>
-      <description>TopCurrency Indicator 2</description>
-      <type>image</type>
-      <id>1</id>
-      <posX>1515</posX>
-      <posY>262</posY>
-      <width>48</width>
-      <height>48</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>#Stocks.TopCurrency2Indicator</texture>
-      <visible>string.equals(#Stocks.Type,Currency)</visible>
-    </control>
-    <control>
-      <description>TopCurrency Name 2</description>
-      <type>fadelabel</type>
-      <id>1</id>
-      <posX>1573</posX>
-      <posY>232</posY>
-      <width>345</width>
-      <height>25</height>
-      <align>left</align>
-      <label>#Stocks.TopCurrency2Name</label>
-      <font>font11</font>
-      <visible>string.equals(#Stocks.Type,Currency)</visible>
-    </control>
-    <control>
-      <description>TopCurrency Last 2</description>
-      <type>fadelabel</type>
-      <id>1</id>
-      <posX>1573</posX>
-      <posY>255</posY>
-      <width>345</width>
-      <height>52</height>
-      <align>left</align>
-      <label>#Stocks.TopCurrency2Last</label>
-      <font>font24</font>
-      <textcolor>b0ffffff</textcolor>
-      <visible>string.equals(#Stocks.Type,Currency)</visible>
-    </control>
-    <!-- *** Currency Item List *** -->
     <control>
       <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="289,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(4)]">conditional</animation>
+      <!-- *** TopCurrency 0 *** -->
       <control>
-        <description>listcontrol</description>
-        <type>listcontrol</type>
-        <id>90</id>
-        <onleft>2</onleft>
-        <posY>330</posY>
-        <height>765</height>
-        <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,List)</visible>
-        <itemWidth>48</itemWidth>
-        <itemHeight>48</itemHeight>
-        <IconXOff>15</IconXOff>
-        <IconYOff>15</IconYOff>
+        <description>TopCurrency Indicator 0</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>751</posX>
+        <posY>262</posY>
+        <width>48</width>
+        <height>48</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>#Stocks.TopCurrency0Indicator</texture>
+        <visible>string.equals(#Stocks.Type,Currency)</visible>
       </control>
-    </control>
-    <!-- *** Currency Item Separator *** -->
-    <control>
-      <description>Separator</description>
-      <type>label</type>
-      <id>0</id>
-      <posX>615</posX>
-      <posY>865</posY>
-      <width>1320</width>
-      <label>____________________________________________________________________________________________________________</label>
-      <textcolor>ff808080</textcolor>
-      <visible>string.equals(#Stocks.CurrencyListSelectable,true)+string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,List)</visible>
-    </control>
-    <!-- *** Currency Item Properties *** -->
-    <control>
-      <description>Currency Item Name</description>
-      <type>fadelabel</type>
-      <id>0</id>
-      <posX>45</posX>
-      <posY>240</posY>
-      <width>577</width>
-      <label>#Stocks.ListItemName</label>
-      <visible>string.equals(#Stocks.CurrencyListSelectable,true)+string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,List)</visible>
-    </control>
-    <control>
-      <description>Currency Item Date/Time</description>
-      <type>fadelabel</type>
-      <id>0</id>
-      <posX>45</posX>
-      <posY>345</posY>
-      <label>#Stocks.ListItemDate #Stocks.ListItemTime</label>
-      <width>577</width>
-      <visible>string.equals(#Stocks.CurrencyListSelectable,true)+string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,List)</visible>
-    </control>
-    <!-- *** Currency Item Chart 1 *** -->
-    <control>
-      <description>Currency Item Chart Background</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>675</posX>
-      <posY>330</posY>
-      <width>510</width>
-      <height>390</height>
-      <keepaspectratio>no</keepaspectratio>
-      <texture>background_images.png</texture>
-      <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)+control.hasthumb(95)</visible>
-    </control>
-    <control>
-      <description>Currency Item Chart Name</description>
-      <type>label</type>
-      <id>0</id>
-      <posX>727</posX>
-      <posY>375</posY>
-      <label>#Stocks.Currency0Name (#Stocks.Currency0ChartRange)</label>
-      <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)+control.hasthumb(95)</visible>
-    </control>
-    <control>
-      <description>Currency Item Chart</description>
-      <type>image</type>
-      <id>95</id>
-      <posX>720</posX>
-      <posY>412</posY>
-      <width>420</width>
-      <texture>#Stocks.Currency0Chart</texture>
-      <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)</visible>
-    </control>
-    <!-- *** Currency Item Chart 2 *** -->
-    <control>
-      <description>Currency Item Chart Background</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>1245</posX>
-      <posY>330</posY>
-      <width>510</width>
-      <height>390</height>
-      <keepaspectratio>no</keepaspectratio>
-      <texture>background_images.png</texture>
-      <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)+control.hasthumb(96)</visible>
-    </control>
-    <control>
-      <description>Currency Item Chart Name</description>
-      <type>label</type>
-      <id>0</id>
-      <posX>1297</posX>
-      <posY>375</posY>
-      <label>#Stocks.Currency5Name (#Stocks.Currency5ChartRange)</label>
-      <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)+control.hasthumb(96)</visible>
-    </control>
-    <control>
-      <description>Currency Item Chart</description>
-      <type>image</type>
-      <id>96</id>
-      <posX>1290</posX>
-      <posY>412</posY>
-      <width>420</width>
-      <texture>#Stocks.Currency5Chart</texture>
-      <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)</visible>
+      <control>
+        <description>TopCurrency Name 0</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>810</posX>
+        <posY>232</posY>
+        <width>345</width>
+        <height>25</height>
+        <align>left</align>
+        <label>#Stocks.TopCurrency0Name</label>
+        <font>font11</font>
+        <visible>string.equals(#Stocks.Type,Currency)</visible>
+      </control>
+      <control>
+        <description>TopCurrency Last 0</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>810</posX>
+        <posY>255</posY>
+        <width>345</width>
+        <height>52</height>
+        <align>left</align>
+        <label>#Stocks.TopCurrency0Last</label>
+        <font>font24</font>
+        <textcolor>b0ffffff</textcolor>
+        <visible>string.equals(#Stocks.Type,Currency)</visible>
+      </control>
+      <!-- *** TopCurrency 1 *** -->
+      <control>
+        <description>TopCurrency Indicator 1</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>1132</posX>
+        <posY>262</posY>
+        <width>48</width>
+        <height>48</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>#Stocks.TopCurrency1Indicator</texture>
+        <visible>string.equals(#Stocks.Type,Currency)</visible>
+      </control>
+      <control>
+        <description>TopCurrency Name 1</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>1191</posX>
+        <posY>232</posY>
+        <width>345</width>
+        <height>25</height>
+        <align>left</align>
+        <label>#Stocks.TopCurrency1Name</label>
+        <font>font11</font>
+        <visible>string.equals(#Stocks.Type,Currency)</visible>
+      </control>
+      <control>
+        <description>TopCurrency Last 1</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>1191</posX>
+        <posY>255</posY>
+        <width>345</width>
+        <height>52</height>
+        <align>left</align>
+        <label>#Stocks.TopCurrency1Last</label>
+        <font>font24</font>
+        <textcolor>b0ffffff</textcolor>
+        <visible>string.equals(#Stocks.Type,Currency)</visible>
+      </control>
+      <!-- *** TopCurrency 2 *** -->
+      <control>
+        <description>TopCurrency Indicator 2</description>
+        <type>image</type>
+        <id>1</id>
+        <posX>1515</posX>
+        <posY>262</posY>
+        <width>48</width>
+        <height>48</height>
+        <keepaspectratio>yes</keepaspectratio>
+        <texture>#Stocks.TopCurrency2Indicator</texture>
+        <visible>string.equals(#Stocks.Type,Currency)</visible>
+      </control>
+      <control>
+        <description>TopCurrency Name 2</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>1573</posX>
+        <posY>232</posY>
+        <width>345</width>
+        <height>25</height>
+        <align>left</align>
+        <label>#Stocks.TopCurrency2Name</label>
+        <font>font11</font>
+        <visible>string.equals(#Stocks.Type,Currency)</visible>
+      </control>
+      <control>
+        <description>TopCurrency Last 2</description>
+        <type>fadelabel</type>
+        <id>1</id>
+        <posX>1573</posX>
+        <posY>255</posY>
+        <width>345</width>
+        <height>52</height>
+        <align>left</align>
+        <label>#Stocks.TopCurrency2Last</label>
+        <font>font24</font>
+        <textcolor>b0ffffff</textcolor>
+        <visible>string.equals(#Stocks.Type,Currency)</visible>
+      </control>
+      <!-- *** Currency Item List *** -->
+      <control>
+        <type>group</type>
+        <control>
+          <description>listcontrol</description>
+          <type>listcontrol</type>
+          <id>90</id>
+          <onleft>2</onleft>
+          <posY>330</posY>
+          <height>765</height>
+          <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,List)</visible>
+          <itemWidth>48</itemWidth>
+          <itemHeight>48</itemHeight>
+          <IconXOff>15</IconXOff>
+          <IconYOff>15</IconYOff>
+		  <spinPosY>998</spinPosY>
+        </control>
+      </control>
+      <!-- *** Currency Item Properties *** -->
+      <control>
+        <description>Currency Item Name</description>
+        <type>fadelabel</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>240</posY>
+        <width>577</width>
+        <label>#Stocks.ListItemName</label>
+        <visible>string.equals(#Stocks.CurrencyListSelectable,true)+string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,List)</visible>
+      </control>
+      <control>
+        <description>Currency Item Date/Time</description>
+        <type>fadelabel</type>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>345</posY>
+        <label>#Stocks.ListItemDate #Stocks.ListItemTime</label>
+        <width>577</width>
+        <visible>string.equals(#Stocks.CurrencyListSelectable,true)+string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,List)</visible>
+      </control>
+      <!-- *** Currency Item Chart 1 *** -->
+      <control>
+        <description>Currency Item Chart Background</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>750</posX>
+        <posY>240</posY>
+        <width>585</width>
+        <height>397</height>
+        <texture>TvCase.png</texture>
+        <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)+control.hasthumb(95)</visible>
+      </control>
+      <control>
+        <description>Currency Item Chart Name</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>783</posX>
+        <posY>570</posY>
+        <font>font12</font>
+        <label>#Stocks.Currency0Name (#Stocks.Currency0ChartRange)</label>
+        <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)+control.hasthumb(95)</visible>
+      </control>
+      <control>
+        <description>Currency Item Chart</description>
+        <type>image</type>
+        <id>95</id>
+        <posX>783</posX>
+        <posY>271</posY>
+        <width>520</width>
+        <height>292</height>
+        <texture>#Stocks.Currency0Chart</texture>
+        <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)</visible>
+      </control>
+      <!-- *** Currency Item Chart 2 *** -->
+      <control>
+        <description>Currency Item Chart Background</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>1327</posX>
+        <posY>240</posY>
+        <width>585</width>
+        <height>397</height>
+        <keepaspectratio>no</keepaspectratio>
+        <texture>TvCase.png</texture>
+        <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)+control.hasthumb(96)</visible>
+      </control>
+      <control>
+        <description>Currency Item Chart Name</description>
+        <type>label</type>
+        <id>0</id>
+        <posX>1360</posX>
+        <posY>570</posY>
+        <font>font12</font>
+        <label>#Stocks.Currency1Name (#Stocks.Currency1ChartRange)</label>
+        <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)+control.hasthumb(96)</visible>
+      </control>
+      <control>
+        <description>Currency Item Chart</description>
+        <type>image</type>
+        <id>96</id>
+        <posX>1360</posX>
+        <posY>271</posY>
+        <width>520</width>
+        <height>292</height>
+        <texture>#Stocks.Currency1Chart</texture>
+        <visible>string.equals(#Stocks.Type,Currency)+string.equals(#Stocks.View,Chart)</visible>
+      </control>
     </control>
   </controls>
 </window>

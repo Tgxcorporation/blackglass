@@ -11,19 +11,13 @@
     <import>common.window.background.xml</import>
     <import>common.window.overlay.xml</import>
     <import>common.window.time.xml</import>
-    <import>StocksIndexDetails.xml</import>
-    <import>StocksStockDetails.xml</import>
-    <import>StocksFundDetails.xml</import>
-    <import>StocksPortfolioDetails.xml</import>
-    <import>StocksCurrencyDetails.xml</import>
-    <import>StocksHeadlineDetails.xml</import>
     <control>
       <type>group</type>
       <dimColor>ffffffff</dimColor>
       <animation effect="fade" time="150">WindowClose</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
       <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(4)]">conditional</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="289,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(4)]">conditional</animation>
       <control>
         <type>fadelabel</type>
         <width>1275</width>
@@ -92,6 +86,7 @@
         <height>79</height>
         <texture>bg_facade_line_nofocus.png</texture>
         <colordiffuse>77ffffff</colordiffuse>
+        <visible>!string.equals(#Stocks.View,Chart)+!string.equals(#Stocks.Type,Headline)</visible>
       </control>
       <!-- *** Type (Indices, Stocks, Currencies) *** -->
       <control>
@@ -107,6 +102,12 @@
         <label>#Stocks.Action</label>
       </control>
     </control>
+    <import>StocksIndexDetails.xml</import>
+    <import>StocksStockDetails.xml</import>
+    <import>StocksFundDetails.xml</import>
+    <import>StocksPortfolioDetails.xml</import>
+    <import>StocksCurrencyDetails.xml</import>
+    <import>StocksHeadlineDetails.xml</import>
     <control>
       <type>image</type>
       <id>0</id>
@@ -212,22 +213,20 @@
         </control>
       </control>
     </control>
+    <control>
+      <description>DUMMY BUTTON</description>
+      <type>button</type>
+      <id>51</id>
+      <posX>720</posX>
+      <posY>0</posY>
+      <width>150</width>
+      <height>1080</height>
+      <onleft>2</onleft>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <!-- <visible>!string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)</visible> -->
+    </control>
     <!-- <control>
-			<description>DUMMY BUTTON</description>
-			<type>button</type>
-			<id>51</id>
-			<posX>480</posX>
-			<posY>0</posY>
-			<width>800</width>
-			<height>720</height>
-			<label/>
-			<onright>2</onright>
-			<onleft>2</onleft>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<visible>!string.equals(#Stocks.IndexListSelectable,true)+string.equals(#Stocks.Type,Index)</visible>
-		</control>
-		<control>
 			<description>DUMMY BUTTON</description>
 			<type>button</type>
 			<id>61</id>
