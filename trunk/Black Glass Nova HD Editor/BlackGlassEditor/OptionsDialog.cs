@@ -89,7 +89,7 @@ namespace BlackGlassEditor
                 {
                     checkBoxFanart.Visible = true; groupBoxFanart.Visible = true; 
                     if (checkBoxFanart.Checked == false) { groupBoxFanart.Visible = false; }
-                    if (textBoxId.Text != "504" && textBoxId.Text != "501" && textBoxId.Text != "96742" && textBoxId.Text != "1" && textBoxId.Text != "9811" && textBoxId.Text != "2600" && textBoxId.Text != "2")
+                    if (textBoxId.Text != "504" && textBoxId.Text != "501" && textBoxId.Text != "96742" && textBoxId.Text != "1" && textBoxId.Text != "9811" && textBoxId.Text != "7977" && textBoxId.Text != "2")
                     {  groupBoxFanart.Visible = false; checkBoxFanart.Visible = false; }
                 }
                 if (value == false) { groupBoxFanart.Visible = false; }
