@@ -7,23 +7,21 @@
 	<define>#header.label:3</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_my videos.png</define>
-	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
-	<animation effect="fade" time="250" start="0" end="100">WindowOpen</animation>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.video.fanart.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.accessories.xml</import>
 		<import>common.window.time.xml</import>
-		<import>common.facade.background.xml</import>
-		<import>common.facade.itemcount.currentmodule.xml</import>
 		<import>common.facade.video.xml</import>
+		<import>common.facade.dummy.xml</import>
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="289,0" condition="!control.hasfocus(50)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>1275</width>
@@ -35,13 +33,11 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
-				<visible>control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<id>1000</id>
 				<type>image</type>
-				<posX>94</posX>
+				<posX>93</posX>
 				<posY>117</posY>
 				<width>367</width>
 				<height>522</height>
@@ -49,8 +45,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<zoom>yes</zoom>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
 			<control>
 				<type>image</type>
@@ -60,8 +56,8 @@
 				<width>424</width>
 				<height>540</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DvdCase.png</texture>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -73,8 +69,8 @@
 				<font>font22</font>
 				<label>#selecteditem</label>
 				<wrapString> : : : </wrapString>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -84,8 +80,23 @@
 				<posY>765</posY>
 				<label>#selecteditem2</label>
 				<textcolor>ffffffff</textcolor>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Selected item Label</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>976</posY>
+				<width>1830</width>
+				<font>font24</font>
+				<height>67</height>
+				<textalign>center</textalign>
+				<label>#selecteditem</label>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+				<animation effect="fade" time="150">WindowClose</animation>
 			</control>
 		</control>
 		<import>myvideoHiddenMenu.xml</import>
