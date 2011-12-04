@@ -16,7 +16,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="!player.hasmedia">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false" condition="!player.hasmedia">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]">conditional</animation>
 			<control>
 				<description>Date</description>
 				<type>label</type>
@@ -137,7 +137,7 @@
 				<animation effect="fade" time="250" delay="150">WindowOpen</animation>
 				<animation effect="fade" time="250" delay="0">WindowClose</animation>
 				<animation effect="fade" time="250" delay="150">visible</animation>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]</visible>
 			</control>
 			<control>
 				<description>TV background</description>
@@ -250,7 +250,7 @@
 			<height>1071</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -269,7 +269,7 @@
 			<width>637</width>
 			<height>1080</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -320,6 +320,7 @@
 					<onup>17</onup>
 					<ondown>3</ondown>
 					<onright>99</onright>
+					<onleft>99</onleft>
 				</control>
 				<control>
 					<description>Search TVGuide</description>
@@ -329,6 +330,7 @@
 					<onup>2</onup>
 					<ondown>4</ondown>
 					<onright>99</onright>
+					<onleft>99</onleft>
 				</control>
 				<control>
 					<description>Recordings</description>
@@ -338,6 +340,7 @@
 					<onup>3</onup>
 					<ondown>5</ondown>
 					<onright>99</onright>
+					<onleft>99</onleft>
 				</control>
 				<control>
 					<description>Channel button</description>
@@ -347,6 +350,7 @@
 					<onup>4</onup>
 					<ondown>6</ondown>
 					<onright>99</onright>
+					<onleft>99</onleft>
 				</control>
 				<control>
 					<description>TV On/Off button</description>
@@ -356,6 +360,7 @@
 					<onup>5</onup>
 					<ondown>7</ondown>
 					<onright>99</onright>
+					<onleft>99</onleft>
 				</control>
 				<control>
 					<description>UpcomingPrograms</description>
@@ -365,6 +370,7 @@
 					<onup>6</onup>
 					<ondown>8</ondown>
 					<onright>99</onright>
+					<onleft>99</onleft>
 				</control>
 				<control>
 					<description>ActiveRecordings</description>
@@ -381,8 +387,21 @@
 					<id>9</id>
 					<label>Teletext</label>
 					<onup>8</onup>
+					<ondown>1313</ondown>
+					<onright>99</onright>
+					<onleft>99</onleft>
+				</control>
+				<control>
+					<description>TvWishList</description>
+					<type>button</type>
+					<id>1313</id>
+					<label>TvWishList</label>
+					<hyperlink>70943672</hyperlink>
+					<onup>9</onup>
 					<ondown>2</ondown>
 					<onright>99</onright>
+					<onleft>99</onleft>
+					<visible>plugin.isenabled(TvWishListMP)</visible>
 				</control>
 				<!--<control>
         <description>Schedules</description>
