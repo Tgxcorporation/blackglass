@@ -507,6 +507,7 @@
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
+			<visible>control.isvisible(24)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -522,7 +523,6 @@
 				<height>720</height>
 				<texture>bg_left.png</texture>
 				<colorDiffuse>ffffffff</colorDiffuse>
-				<visible>control.isvisible(24)</visible>
 			</control>
 
 			<control>
@@ -535,7 +535,6 @@
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
-				<visible>control.isvisible(24)</visible>
 			</control> 
 			<control>
 				<type>image</type>
@@ -544,7 +543,6 @@
 				<width>385</width>
 				<height>53</height>
 				<texture>bg_button_nofocus.png</texture>
-				<visible>control.isvisible(24)</visible>
 			</control>
 			<control>
 				<description>group element</description>
@@ -552,7 +550,6 @@
 				<posX>0</posX>
 				<posY>100</posY>
 				<dimColor>ffffffff</dimColor>
-				<visible>control.isvisible(24)</visible>
 				<layout>StackLayout(0, Vertical, true)</layout>
 				<control>
 					<type>button</type>
@@ -563,7 +560,6 @@
 					<ondown>41</ondown>
 					<onleft>40</onleft>
 					<onright>40</onright>
-					<visible>control.isvisible(24)</visible>
 				</control>
 				<control>
 					<type>button</type>
@@ -574,7 +570,6 @@
 					<ondown>42</ondown>
 					<onleft>41</onleft>
 					<onright>41</onright>	
-					<visible>control.isvisible(24)</visible>					
 				</control>
 				<control>
 					<type>button</type>
@@ -585,7 +580,6 @@
 					<ondown>43</ondown>
 					<onleft>42</onleft>
 					<onright>42</onright>
-					<visible>control.isvisible(24)</visible>					
 				</control>
 				<control>
 					<type>button</type>
@@ -596,7 +590,6 @@
 					<ondown>40</ondown>
 					<onleft>43</onleft>
 					<onright>43</onright>	  
-					<visible>control.isvisible(24)</visible>					
 				</control>
 			</control>
 		</control>
@@ -883,8 +876,6 @@
 					<width>383</width>
 					<onleft>2</onleft>
 					<onright>2</onright>
-					<visible>control.isvisible(745381)+!control.isvisible(24)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 				</control>
 				<control>
 					<description>Thumbnail Panel</description>
@@ -927,8 +918,6 @@
 					<showFrame>true</showFrame>
 					<frameNoFocus>DVDCase.png</frameNoFocus> 
 					<frameFocus>DVDCase.png</frameFocus> 
-					<visible>[control.isvisible(745382)|control.isvisible(745383)]+!control.isvisible(24)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 				</control>
 				<control>
 					<description>Filmstrip view</description>
@@ -967,8 +956,6 @@
 					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
 					<scrollOffset>3</scrollOffset>
 					<scrollbarYOff>251</scrollbarYOff>
-					<visible>control.isvisible(745384)+!control.isvisible(24)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 				</control>
 				<control>
 					<description>Cover Flow view</description>
@@ -1008,8 +995,6 @@
 					<label2YOff>430</label2YOff>
 					<pageSize>5</pageSize>
 					<scrollbarYOff>243</scrollbarYOff>
-					<visible>control.isvisible(745385)+!control.isvisible(24)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 					<cards flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png"/>
 					<keepaspectratio>no</keepaspectratio>
 					<subitems>
@@ -1139,7 +1124,7 @@
 					</subitems>
 				</control>				
 			</control>
-			<control>
+			<!-- <control>
 				<type>label</type>
 				<description>dummy listcontrol</description>
 				<id>745381</id>
@@ -1187,7 +1172,7 @@
 				<id>745387</id>
 				<label>-</label>
 				<visible>facadeview.album</visible>
-			</control>
+			</control> -->
 		</control>
 
 
@@ -1209,7 +1194,7 @@
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
-			<defaultcontrol>3</defaultcontrol>
+			<defaultcontrol>2</defaultcontrol>
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
