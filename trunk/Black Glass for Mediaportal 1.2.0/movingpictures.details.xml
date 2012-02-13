@@ -278,7 +278,7 @@
 			<control>
 				<description>Directors</description>
 				<type>fadelabel</type>
-				<label>Directed by #MovingPictures.SelectedMovie.directors</label>
+				<label>#MovingPictures.Translation.Director.Label: #MovingPictures.SelectedMovie.directors</label>
 				<id>0</id>
 				<posX>520</posX>
 				<posY>275</posY>
@@ -291,7 +291,7 @@
 			<control>
 				<description>actors</description>
 				<type>textboxscrollup</type>
-				<label>#MovingPictures.SelectedMovie.actors</label>
+				<label>#MovingPictures.Translation.Actors.Label: #MovingPictures.SelectedMovie.actors</label>
 				<id>0</id>
 				<posX>520</posX>
 				<posY>313</posY>
@@ -400,6 +400,42 @@
 				<height>50</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+			</control>
+			
+			<control>
+				<description>Fps</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1150</posX>
+				<posY>655</posY>
+				<width>89</width>
+				<height>50</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\empty.png</texture>
+			</control>
+			
+			<control>
+				<description>Fps label</description>
+				<id>0</id>
+				<type>label</type>
+				<posX>1150</posX>
+				<posY>676</posY>
+				<!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
+				<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
+				<font>font11</font>
+				<align>center</align>
+				<width>73</width>
+			</control>
+			<control>
+				<description>Fps label</description>
+				<id>0</id>
+				<type>label</type>
+				<posX>1150</posX>
+				<posY>690</posY>
+				<label>fps</label>
+				<font>font7</font>
+				<align>center</align>
+				<width>73</width>
 			</control>
 		</control>
 
