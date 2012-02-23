@@ -1,528 +1,534 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8"-->
 <window>
-  <controls>
-    <!-- Media logos [Details View] -->
-    <control>
-      <description>Video Codec</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>397</posX>
-      <posY>990</posY>
-      <width>133</width>
-      <height>75</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
-      <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Resolution</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>532</posX>
-      <posY>990</posY>
-      <width>133</width>
-      <height>75</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
-      <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Aspect Ratio</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>667</posX>
-      <posY>990</posY>
-      <width>133</width>
-      <height>75</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
-      <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Audio Codec</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>802</posX>
-      <posY>990</posY>
-      <width>133</width>
-      <height>75</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
-      <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Audio Channels</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>937</posX>
-      <posY>990</posY>
-      <width>133</width>
-      <height>75</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
-      <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Format</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>1072</posX>
-      <posY>990</posY>
-      <width>133</width>
-      <height>75</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
-      <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Subtitles</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>1207</posX>
-      <posY>990</posY>
-      <width>133</width>
-      <height>75</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
-      <visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Fps</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>1342</posX>
-      <posY>990</posY>
-      <width>133</width>
-      <height>75</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\empty.png</texture>
-    </control>
-    <control>
-      <description>Fps label</description>
-      <id>0</id>
-      <type>label</type>
-      <posX>1342</posX>
-      <posY>1021</posY>
-      <!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
-      <label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
-      <font>font11</font>
-      <align>center</align>
-      <width>109</width>
-    </control>
-    <control>
-      <description>Fps label</description>
-      <id>0</id>
-      <type>label</type>
-      <posX>1342</posX>
-      <posY>1042</posY>
-      <label>fps</label>
-      <font>font7</font>
-      <align>center</align>
-      <width>109</width>
-    </control>
-    <!-- Media logos [List View] -->
-    <control>
-      <description>Video Codec</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>397</posX>
-      <posY>1012</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
-      <visible>control.isvisible(50)+facadeview.list</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Resolution</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>480</posX>
-      <posY>1012</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
-      <visible>control.isvisible(50)+facadeview.list</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Aspect Ratio</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>562</posX>
-      <posY>1012</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
-      <visible>control.isvisible(50)+facadeview.list</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Audio Codec</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>645</posX>
-      <posY>1012</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
-      <visible>control.isvisible(50)+facadeview.list</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Audio Channels</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>727</posX>
-      <posY>1012</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
-      <visible>control.isvisible(50)+facadeview.list</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Format</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>810</posX>
-      <posY>1012</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
-      <visible>control.isvisible(50)+facadeview.list</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Subtitles</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>892</posX>
-      <posY>1012</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
-      <visible>control.isvisible(50)+facadeview.list</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Fps</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>975</posX>
-      <posY>1012</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\empty.png</texture>
-      <visible>control.isvisible(50)+facadeview.list</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Fps label</description>
-      <id>0</id>
-      <type>label</type>
-      <posX>975</posX>
-      <posY>1029</posY>
-      <!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
-      <label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
-      <font>font8</font>
-      <align>center</align>
-      <width>75</width>
-      <visible>control.isvisible(50)+facadeview.list</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Fps label</description>
-      <id>0</id>
-      <type>label</type>
-      <posX>975</posX>
-      <posY>1048</posY>
-      <label>fps</label>
-      <font>font7</font>
-      <align>center</align>
-      <width>75</width>
-      <visible>control.isvisible(50)+facadeview.list</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <!-- Media logos [Thumbnails View] -->
-    <control>
-      <description>Video Codec</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>649</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
-      <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Resolution</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>732</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
-      <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Aspect Ratio</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>814</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
-      <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Audio Codec</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>897</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
-      <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Audio Channels</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>979</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
-      <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Format</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>1062</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
-      <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Subtitles</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>1144</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
-      <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Fps</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>1227</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\empty.png</texture>
-      <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Fps label</description>
-      <id>0</id>
-      <type>label</type>
-      <posX>1227</posX>
-      <posY>1033</posY>
-      <!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
-      <label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
-      <font>font8</font>
-      <align>center</align>
-      <width>75</width>
-      <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Fps label</description>
-      <id>0</id>
-      <type>label</type>
-      <posX>1227</posX>
-      <posY>1053</posY>
-      <label>fps</label>
-      <font>font7</font>
-      <align>center</align>
-      <width>75</width>
-      <visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <!-- Media logos [Filmstrip & Coverflow View] -->
-    <control>
-      <description>Video Codec</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>649</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
-      <visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Resolution</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>732</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
-      <visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Aspect Ratio</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>814</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
-      <visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Audio Codec</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>897</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
-      <visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Audio Channels</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>979</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
-      <visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Video Format</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>1062</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
-      <visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Subtitles</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>1144</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
-      <visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Fps</description>
-      <type>image</type>
-      <id>0</id>
-      <posX>1227</posX>
-      <posY>1017</posY>
-      <width>133</width>
-      <height>51</height>
-      <keepaspectratio>yes</keepaspectratio>
-      <texture>Logos\empty.png</texture>
-      <visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Fps label</description>
-      <id>0</id>
-      <type>label</type>
-      <posX>1227</posX>
-      <posY>1033</posY>
-      <!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
-      <label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
-      <font>font8</font>
-      <align>center</align>
-      <width>75</width>
-      <visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <description>Fps label</description>
-      <id>0</id>
-      <type>label</type>
-      <posX>1227</posX>
-      <posY>1053</posY>
-      <label>fps</label>
-      <font>font7</font>
-      <align>center</align>
-      <width>75</width>
-      <visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-  </controls>
+	<controls>
+		<!-- Media logos [Details View] -->
+		<control>
+			<description>Video Codec</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>397</posX>
+			<posY>990</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Resolution</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>532</posX>
+			<posY>990</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Aspect Ratio</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>667</posX>
+			<posY>990</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Audio Codec</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>802</posX>
+			<posY>990</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Audio Channels</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>937</posX>
+			<posY>990</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Format</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1072</posX>
+			<posY>990</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Subtitles</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1207</posX>
+			<posY>990</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1342</posX>
+			<posY>990</posY>
+			<width>133</width>
+			<height>75</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\empty.png</texture>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>1342</posX>
+			<posY>1021</posY>
+			<!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
+			<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
+			<font>font11</font>
+			<align>center</align>
+			<width>109</width>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>1342</posX>
+			<posY>1042</posY>
+			<label>fps</label>
+			<font>font7</font>
+			<align>center</align>
+			<width>109</width>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<!-- Media logos [List View] -->
+		<control>
+			<description>Video Codec</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>397</posX>
+			<posY>1012</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+			<visible>control.isvisible(50)+facadeview.list</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Resolution</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>480</posX>
+			<posY>1012</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+			<visible>control.isvisible(50)+facadeview.list</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Aspect Ratio</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>562</posX>
+			<posY>1012</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+			<visible>control.isvisible(50)+facadeview.list</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Audio Codec</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>645</posX>
+			<posY>1012</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+			<visible>control.isvisible(50)+facadeview.list</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Audio Channels</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>727</posX>
+			<posY>1012</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+			<visible>control.isvisible(50)+facadeview.list</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Format</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>810</posX>
+			<posY>1012</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+			<visible>control.isvisible(50)+facadeview.list</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Subtitles</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>892</posX>
+			<posY>1012</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+			<visible>control.isvisible(50)+facadeview.list</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>975</posX>
+			<posY>1012</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\empty.png</texture>
+			<visible>control.isvisible(50)+facadeview.list</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>975</posX>
+			<posY>1029</posY>
+			<!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
+			<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
+			<font>font8</font>
+			<align>center</align>
+			<width>75</width>
+			<visible>control.isvisible(50)+facadeview.list</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>975</posX>
+			<posY>1048</posY>
+			<label>fps</label>
+			<font>font7</font>
+			<align>center</align>
+			<width>75</width>
+			<visible>control.isvisible(50)+facadeview.list</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<!-- Media logos [Thumbnails View] -->
+		<control>
+			<description>Video Codec</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>649</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+			<visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Resolution</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>732</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+			<visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Aspect Ratio</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>814</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+			<visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Audio Codec</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>897</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+			<visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Audio Channels</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>979</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+			<visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Format</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1062</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+			<visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Subtitles</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1144</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+			<visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1227</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\empty.png</texture>
+			<visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>1227</posX>
+			<posY>1033</posY>
+			<!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
+			<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
+			<font>font8</font>
+			<align>center</align>
+			<width>75</width>
+			<visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>1227</posX>
+			<posY>1053</posY>
+			<label>fps</label>
+			<font>font7</font>
+			<align>center</align>
+			<width>75</width>
+			<visible>control.isvisible(50)+[facadeview.smallicons|facadeview.largeicons]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<!-- Media logos [Filmstrip & Coverflow View] -->
+		<control>
+			<description>Video Codec</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>649</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+			<visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Resolution</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>732</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+			<visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Aspect Ratio</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>814</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+			<visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Audio Codec</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>897</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+			<visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Audio Channels</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>979</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+			<visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Video Format</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1062</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+			<visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Subtitles</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1144</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+			<visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>1227</posX>
+			<posY>1017</posY>
+			<width>133</width>
+			<height>51</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>Logos\empty.png</texture>
+			<visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>1227</posX>
+			<posY>1033</posY>
+			<!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
+			<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
+			<font>font8</font>
+			<align>center</align>
+			<width>75</width>
+			<visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Fps label</description>
+			<id>0</id>
+			<type>label</type>
+			<posX>1227</posX>
+			<posY>1053</posY>
+			<label>fps</label>
+			<font>font7</font>
+			<align>center</align>
+			<width>75</width>
+			<visible>control.isvisible(50)+[facadeview.filmstrip|facadeview.coverflow]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+	</controls>
 </window>
