@@ -184,7 +184,7 @@
 			<posX>397</posX>
 			<posY>702</posY>
 			<width>840</width>
-			<label>#TVSeries.Series.infopanelLine4Value     #TVSeries.Subtitle</label>
+			<label>#TVSeries.Series.RuntimeMin     #TVSeries.Subtitle</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.list</visible>
 			<animation effect="fade" time="250">visible</animation>
@@ -225,11 +225,12 @@
 			<type>label</type>
 			<id>1</id>
 			<posX>1245</posX>
-			<posY>753</posY>
+			<posY>757</posY>
 			<width>1200</width>
 			<align>right</align>
-			<label>#TVSeries.Series.infopanelLine2Value</label>
+			<label>#TVSeries.Series.AiredStatus</label>
 			<textcolor>ffFFFFFF</textcolor>
+			<font>font14</font>
 			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.list</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
@@ -374,7 +375,7 @@
 			<posY>1030</posY>
 			<width>1200</width>
 			<align>right</align>
-			<label>#TVSeries.Series.infopanelLine4Value</label>
+			<label>#TVSeries.Series.RuntimeMin</label>
 			<textcolor>ffFFFFFF</textcolor>
 			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.largeicons</visible>
 			<animation effect="fade" time="250">visible</animation>
@@ -386,7 +387,7 @@
 			<posX>45</posX>
 			<posY>1030</posY>
 			<width>720</width>
-			<label>#TVSeries.Series.infopanelLine2Value</label>
+			<label>#TVSeries.Series.AiredStatus</label>
 			<textcolor>ffFFFFFF</textcolor>
 			<visible>[control.isvisible(1237)|control.isvisible(1238)]+facadeview.largeicons</visible>
 			<animation effect="fade" time="250">visible</animation>
@@ -456,6 +457,71 @@
 			<animation effect="fade" time="250">visible</animation>
 		</control>
 		<control>
+			<description>Episode Watched Icon Background</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>367</posX>
+			<posY>724</posY>
+			<width>48</width>
+			<height>58</height>
+			<colordiffuse>b0ffffff</colordiffuse>
+			<texture>overlaywubg.png</texture>
+			<visible>control.isvisible(1239)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Episode Watched Icon</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>376</posX>
+			<posY>730</posY>
+			<width>36</width>
+			<height>36</height>
+			<texture>overlaywatched.png</texture>
+			<colordiffuse>#ColorPlayed</colordiffuse>
+			<visible>control.isvisible(1239)+control.isvisible(1243)+control.isvisible(1244)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Episode Un-Watched Icon</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>376</posX>
+			<posY>730</posY>
+			<width>36</width>
+			<height>36</height>
+			<texture>overlayunwatched.png</texture>
+			<colordiffuse>#ColorAvailable</colordiffuse>
+			<visible>control.isvisible(1239)+!control.isvisible(1243)+control.isvisible(1244)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Episode Not Available and Watched Icon</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>376</posX>
+			<posY>730</posY>
+			<width>36</width>
+			<height>36</height>
+			<texture>overlaywatched.png</texture>
+			<colordiffuse>#ColorUnavailable</colordiffuse>
+			<visible>control.isvisible(1239)+control.isvisible(1243)+!control.isvisible(1244)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
+			<description>Episode Not Available and Un-Watched Icon</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>376</posX>
+			<posY>730</posY>
+			<width>36</width>
+			<height>36</height>
+			<texture>overlayunwatched.png</texture>
+			<colordiffuse>#ColorUnavailable</colordiffuse>
+			<visible>control.isvisible(1239)+!control.isvisible(1243)+!control.isvisible(1244)</visible>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<control>
 			<type>label</type>
 			<description>Number of Files Label</description>
 			<id>1</id>
@@ -490,13 +556,14 @@
 		</control>
 		<control>
 			<description>First Aired value</description>
-			<type>label</type>
+			<type>fadelabel</type>
 			<id>1</id>
 			<posX>1245</posX>
-			<posY>702</posY>
-			<width>342</width>
+			<posY>705</posY>
+			<width>435</width>
 			<align>right</align>
-			<label>#TVSeries.Episode.FirstAired</label>
+			<font>font14</font>
+			<label>#TVSeries.Episode.FirstAired     #TVSeries.Episode.PlayTime</label>
 			<visible>control.isvisible(1239)</visible>
 			<animation effect="fade" time="250">visible</animation>
 		</control>
@@ -517,8 +584,9 @@
 			<id>1</id>
 			<posX>447</posX>
 			<posY>756</posY>
+
 			<width>805</width>
-			<label>#TVSeries.Series.infopanelLine6Value *** Guest Stars: #TVSeries.Episode.infopanelLine6Value ***</label>
+			<label>#TVSeries.Episode.ActorsKey #TVSeries.Episode.ActorsValue *** #TVSeries.Episode.GueststarKey #TVSeries.Episode.GueststarValue ***</label>
 			<textcolor>90FFFFFF</textcolor>
 			<visible>control.isvisible(1239)</visible>
 			<animation effect="fade" time="250">visible</animation>
@@ -557,7 +625,7 @@
 			<posX>37</posX>
 			<posY>987</posY>
 			<width>330</width>
-			<label>#TVSeries.Episode.infopanelLine3Value  #TVSeries.Episode.infopanelLine2Value</label>
+			<label>#TVSeries.Episode.VideoinfoValue     #TVSeries.Episode.FilesizeValue</label>
 			<font>font12</font>
 			<height>82</height>
 			<visible>control.isvisible(1239)</visible>
@@ -832,10 +900,13 @@
 					<description>Filmstrip view</description>
 					<type>filmstrip</type>
 					<id>50</id>
+
 					<onup>2</onup>
 					<onleft>2</onleft>
 					<onleft>50</onleft>
 					<onright>50</onright>
+
+
 					<posX>30</posX>
 					<posY>547</posY>
 					<width>1905</width>
@@ -901,6 +972,7 @@
 					<!-- not watched (normal) -->
 					<textcolor2>ffffffff</textcolor2>
 					<textcolor3>ffffffff</textcolor3>
+
 				</control>
 				<control>
 					<description>Cover Flow view</description>
@@ -960,6 +1032,8 @@
 									<type>fadelabel</type>
 									<id>0</id>
 									<posX>22</posX>
+
+
 									<posY>9</posY>
 									<width>225</width>
 									<label>#TVSeries.Title</label>
@@ -975,6 +1049,9 @@
 									<id>0</id>
 									<posX>22</posX>
 									<posY>-30</posY>
+
+
+
 									<width>231</width>
 									<height>79</height>
 									<texture>bg_button_nofocus.png</texture>
@@ -984,6 +1061,9 @@
 									<id>1</id>
 									<posX>22</posX>
 									<posY>61</posY>
+
+
+
 									<width>277</width>
 									<height>60</height>
 									<textureWidth>22</textureWidth>
@@ -1002,6 +1082,8 @@
 									<type>fadelabel</type>
 									<posX>22</posX>
 									<posY>93</posY>
+
+
 									<width>247</width>
 									<label>#TVSeries.Subtitle</label>
 									<font>font11</font>
@@ -1013,8 +1095,10 @@
 									<type>fadelabel</type>
 									<posX>22</posX>
 									<posY>130</posY>
+
+
 									<width>247</width>
-									<label>#TVSeries.Series.infopanelLine4Value</label>
+									<label>#TVSeries.Series.RuntimeMin</label>
 									<font>font11</font>
 									<textcolor>90FFFFFF</textcolor>
 									<wrapString> : : : </wrapString>
@@ -1024,6 +1108,8 @@
 									<type>textboxscrollup</type>
 									<posX>22</posX>
 									<posY>169</posY>
+
+
 									<width>247</width>
 									<height>102</height>
 									<label>#TVSeries.Series.Summary</label>

@@ -59,7 +59,7 @@
 				<![CDATA[SeasonWatchedAndUnWatched]]>
 			</item1>
 			<item2>
-				<![CDATA[Season <Season.SeasonIndex>]]></item2>
+				<![CDATA[Trans(Season) <Season.SeasonIndex>]]></item2>
 			<item3>
 				<![CDATA[SeasonEpisodeCount]]>
 			</item3>
@@ -76,32 +76,23 @@
 	</views>
 	<formatting import="true">
 		<![CDATA[<Enabled>1<Format><Episode.Rating><FormatAs>Eval(Round(<Episode.Rating>))
-<Enabled>1<Format><Episode.infopanelLine1Key><FormatAs><Series.Pretty_Name>
-<Enabled>1<Format><Episode.infopanelLine1Value><FormatAs>(My Rating: <Episode.myRating>)
-<Enabled>1<Format><Episode.infopanelLine2Key><FormatAs>File Size:
-<Enabled>1<Format><Episode.infopanelLine2Value><FormatAs><Episode.FileSize>
-<Enabled>1<Format><Episode.infopanelLine3Key><FormatAs>Video Info:
-<Enabled>1<Format><Episode.infopanelLine3Value><FormatAs><Episode.videoWidth>x<Episode.videoHeight> (Eval(Round(<Episode.VideoAspectRatio>*100)/100)) Eval(Round(<Episode.VideoFrameRate>*1000)/1000)fps
-<Enabled>1<Format><Episode.infopanelLine4Key><FormatAs>Director:
-<Enabled>1<Format><Episode.infopanelLine4Value><FormatAs><Episode.Director>
-<Enabled>1<Format><Episode.infopanelLine5Key><FormatAs>Writer:
-<Enabled>1<Format><Episode.infopanelLine5Value><FormatAs><Episode.Writer>
-<Enabled>1<Format><Episode.infopanelLine6Key><FormatAs>Guest Stars:
-<Enabled>1<Format><Episode.infopanelLine6Value><FormatAs><Episode.GuestStars>
-<Enabled>1<Format><Episode.SeasonLabel><FormatAs>Season <Episode.SeasonIndex>
-<Enabled>1<Format><Season.SeasonLabel><FormatAs>Season <Season.SeasonIndex>
-<Enabled>1<Format><Series.infopanelLine1Key><FormatAs>Rating:
-<Enabled>1<Format><Series.infopanelLine1Value><FormatAs>(MY RATING: <Series.myRating>)
-<Enabled>1<Format><Series.infopanelLine2Key><FormatAs>First Aired:
-<Enabled>1<Format><Series.infopanelLine2Value><FormatAs><Series.FirstAired> (<Series.Status>)
-<Enabled>1<Format><Series.infopanelLine3Key><FormatAs>Genre:
-<Enabled>1<Format><Series.infopanelLine3Value><FormatAs><Series.Genre>
-<Enabled>1<Format><Series.infopanelLine4Key><FormatAs>Runtime:
-<Enabled>1<Format><Series.infopanelLine4Value><FormatAs><Series.Runtime> min
-<Enabled>1<Format><Series.infopanelLine5Key><FormatAs>Network:
-<Enabled>1<Format><Series.infopanelLine5Value><FormatAs><Series.Network>
-<Enabled>1<Format><Series.infopanelLine6Key><FormatAs>Actors:
-<Enabled>1<Format><Series.infopanelLine6Value><FormatAs><Series.Actors>
+<Enabled>1<Format><Episode.PlayTime><FormatAs><Episode.PrettyLocalPlaytime> min
+<Enabled>1<Format><Episode.FilesizeKey><FormatAs>Trans(File Size):
+<Enabled>1<Format><Episode.FilesizeValue><FormatAs><Episode.FileSize>
+<Enabled>1<Format><Episode.VideoinfoKey><FormatAs>Trans(Video Info):
+<Enabled>1<Format><Episode.VideoinfoValue><FormatAs><Episode.videoWidth>x<Episode.videoHeight> (Eval(Round(<Episode.VideoAspectRatio>*100)/100))    Eval(Round(<Episode.VideoFrameRate>*1000)/1000) fps
+<Enabled>1<Format><Episode.DirectorKey><FormatAs>Trans(Director):
+<Enabled>1<Format><Episode.DirectorValue><FormatAs><Episode.Director>
+<Enabled>1<Format><Episode.WriterKey><FormatAs>Trans(Writer):
+<Enabled>1<Format><Episode.WriterValue><FormatAs><Episode.Writer>
+<Enabled>1<Format><Episode.ActorsKey><FormatAs>Trans(Actors):
+<Enabled>1<Format><Episode.ActorsValue><FormatAs><Series.Actors>
+<Enabled>1<Format><Episode.GueststarKey><FormatAs>Trans(GuestStars):
+<Enabled>1<Format><Episode.GueststarValue><FormatAs><Episode.GuestStars>
+<Enabled>1<Format><Episode.SeasonLabel><FormatAs>Trans(Season) <Episode.SeasonIndex>
+<Enabled>1<Format><Season.SeasonLabel><FormatAs>Trans(Season) <Season.SeasonIndex>
+<Enabled>1<Format><Series.RuntimeMin><FormatAs><Series.Runtime> Trans(Minutes)
+<Enabled>1<Format><Series.AiredStatus><FormatAs><Series.FirstAired> (Trans(AiredStatus<Series.Status>))
 <Enabled>1<Format>x () fps<FormatAs>N / A
 <Enabled>1<Format>0 bytes<FormatAs>N / A
 <Enabled>1<Format>(MY RATING: )<FormatAs> 
@@ -119,8 +110,8 @@
 <Enabled>1<Format>A_AAC<FormatAs>AAC
 <Enabled>1<Format>A_AC3<FormatAs>AC3
 <Enabled>1<Format><Series.Rating><FormatAs>Eval(Round(<Series.Rating>))
-<Enabled>1<Format>SeriesEpisodeCount<FormatAs><Series.EpisodeCount> Episodes
-<Enabled>1<Format>SeasonEpisodeCount<FormatAs><Season.EpisodeCount> Episodes
+<Enabled>1<Format>SeriesEpisodeCount<FormatAs><Series.EpisodeCount> Trans(Episodes)
+<Enabled>1<Format>SeasonEpisodeCount<FormatAs><Season.EpisodeCount> Trans(Episodes)
 <Enabled>1<Format>SeriesWatchedAndUnWatched<FormatAs>Eval(PrettyNumber100(<Series.EpisodesUnWatched>))        Eval(PrettyNumber100(<Series.EpisodeCount>-<Series.EpisodesUnWatched>))
 <Enabled>1<Format>SeasonWatchedAndUnWatched<FormatAs>Eval(PrettyNumber10(<Season.EpisodesUnWatched>))          Eval(PrettyNumber10(<Season.EpisodeCount>-<Season.EpisodesUnWatched>))
 <Enabled>1<Format>SMALLSPACE<FormatAs> ]]>
