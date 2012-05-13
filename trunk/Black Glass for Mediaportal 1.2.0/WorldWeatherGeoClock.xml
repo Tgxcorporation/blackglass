@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(5050)">conditional</animation>
+			<visible>string.equals(#WorldWeather.View,GeoClock)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-75</posX>
+				<posY>48</posY>
+				<width>1650</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>97</posY>
+				<width>1280</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>location label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>68</posY>
+				<width>1280</width>
+				<font>font22</font>
+				<align>center</align>
+				<textcolor>ffffffff</textcolor>
+				<label>#WorldWeather.TranslationGeoClock</label>
+			</control>
+			
+			<control>
+				<description>Starry sky image</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>230</posX>
+				<posY>160</posY>
+				<width>820</width>
+				<height>540</height>
+				<texture>videocase.png</texture>
+			</control>
+			<control>
+				<description>GeoClock image</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>253</posX>
+				<posY>180</posY>
+				<width>777</width>
+				<height>436</height>
+				<keepaspectratio>no</keepaspectratio>
+				<texture>#WorldWeather.ImageGeoClock</texture>
+			</control>
+		</control>
+	</controls>
+</window>
