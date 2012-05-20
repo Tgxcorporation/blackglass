@@ -1,810 +1,221 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
-	<id>7977</id>
-	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia</allowoverlay>
-	<define>#header.label:8</define>
-	<define>#header.background:hover_worldweather.png</define>
-	<animation effect="fade" time="250">WindowOpen</animation>
-	<animation effect="fade" time="250">WindowClose</animation>
-	<controls>
-		<import>common.window.xml</import>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>0</posX>
-			<posY>0</posY>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>animations\weather\#WorldWeather.TodayIconNumber.jpg</texture>
-			<visible>plugin.isenabled(World Weather)</visible>
-			<animation effect="fade" time="250">visible</animation>
-		</control>
-		<import>common.window.time.xml</import>
-		<!-- 		<control>
-			<type>label</type>
-			<description>cur_view</description>
-			<id>0</id>
-			<posX>30</posX>
-			<posY>54</posY>
-			<font>font14</font>
-			<label>Weather data provided by Google</label>
-		</control> -->
-		<!-- Right PANEL -->
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<visible>string.equals(#WorldWeather.View,Condition)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<control>
-				<description>Backdrop Overlay</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>703</posX>
-				<posY>615</posY>
-				<width>2058</width>
-				<height>750</height>
-				<texture>bg_tvguide.png</texture>
-			</control>
-			<control>
-				<type>fadelabel</type>
-				<description>Current location</description>
-				<id>0</id>
-				<posX>772</posX>
-				<posY>672</posY>
-				<width>1192</width>
-				<font>font20</font>
-				<width>1102</width>
-				<label>#WorldWeather.Location</label>
-			</control>
-			<control>
-				<description>update time label</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>772</posX>
-				<posY>727</posY>
-				<label>#(L(397)): #WorldWeather.RefreshTime #WorldWeather.RefreshDate</label>
-				<font>font10</font>
-				<textcolor>90ffffff</textcolor>
-				<align>left</align>
-				<width>1102</width>
-			</control>
-			<control>
-				<type>image</type>
-				<posX>742</posX>
-				<posY>711</posY>
-				<width>1275</width>
-				<height>52</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-			<control>
-				<description>current weather icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>825</posX>
-				<posY>780</posY>
-				<texture>#WorldWeather.TodayIconImage</texture>
-				<width>192</width>
-				<height>192</height>
-			</control>
-			<control>
-				<description>current condition label</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>765</posX>
-				<posY>930</posY>
-				<label>#WorldWeather.TodayCondition</label>
-				<font>font14</font>
-				<width>312</width>
-				<align>center</align>
-				<textcolor>ffffffff</textcolor>
-			</control>
-			<control>
-				<description>Current Temp static label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1305</posX>
-				<posY>780</posY>
-				<label>401</label>
-				<font>font12</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>current feels like static label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1305</posX>
-				<posY>816</posY>
-				<label>-</label>
-				<font>font12</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>current UV Index static label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1305</posX>
-				<posY>816</posY>
-				<label>-</label>
-				<font>font12</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>current wind static label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1305</posX>
-				<posY>852</posY>
-				<label>404</label>
-				<font>font12</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>current moonphase static label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1305</posX>
-				<posY>888</posY>
-				<label>Moonphase</label>
-				<font>font12</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>current humidity static label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1305</posX>
-				<posY>924</posY>
-				<label>406</label>
-				<font>font12</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>sun rise static label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1305</posX>
-				<posY>960</posY>
-				<label>744</label>
-				<font>font12</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>sun set static label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1305</posX>
-				<posY>996</posY>
-				<label>745</label>
-				<font>font12</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>current temp label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1650</posX>
-				<posY>780</posY>
-				<label>#WorldWeather.TodayTemperature</label>
-				<font>font12</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>current feels like label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1650</posX>
-				<posY>780</posY>
-				<label>-</label>
-				<font>font12</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>current UV Index label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1650</posX>
-				<posY>816</posY>
-				<label>-</label>
-				<font>font12</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>current wind label</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>1650</posX>
-				<posY>852</posY>
-				<label>#WorldWeather.TodayWind</label>
-				<font>font12</font>
-				<width>240</width>
-				<textcolor>White</textcolor>
-				<wrapString> : : : </wrapString>
-			</control>
-			<control>
-				<description>current moonphase label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1650</posX>
-				<posY>888</posY>
-				<label>#WorldWeather.LocationMoonPhase</label>
-				<font>font12</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>current humidity label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1650</posX>
-				<posY>924</posY>
-				<label>#WorldWeather.TodayHumidity</label>
-				<font>font12</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>sun rise label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1650</posX>
-				<posY>960</posY>
-				<label>#WorldWeather.LocationSunriseTime</label>
-				<font>font12</font>
-				<textcolor>white</textcolor>
-			</control>
-			<control>
-				<description>sun set label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1650</posX>
-				<posY>996</posY>
-				<label>#WorldWeather.LocationSunsetTime</label>
-				<font>font12</font>
-				<textcolor>white</textcolor>
-			</control>
-			<!-- LEFT PANEL -->
-			<control>
-				<description>Backdrop Overlay</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>-1333</posX>
-				<posY>615</posY>
-				<width>2058</width>
-				<height>750</height>
-				<texture>bg_tvguide.png</texture>
-			</control>
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>636</posY>
-				<width>670</width>
-				<height>52</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-			<control>
-				<description>day 0 label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>705</posY>
-				<width>225</width>
-				<label>6030</label>
-				<font>font14</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>day 0 Hi label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>300</posX>
-				<posY>705</posY>
-				<label>#WorldWeather.TodayTemperature</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 0 low label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>427</posX>
-				<posY>705</posY>
-				<label>-</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 0 general weather label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>760</posX>
-				<posY>1350</posY>
-				<label>-</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 0 icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>555</posX>
-				<posY>685</posY>
-				<texture>#WorldWeather.TodayIconImage</texture>
-				<width>75</width>
-				<height>75</height>
-			</control>
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>711</posY>
-				<width>675</width>
-				<height>52</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-			<control>
-				<description>day 1 label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>780</posY>
-				<label>#WorldWeather.ForecastDay0Date</label>
-				<font>font14</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>day 1 Hi label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>300</posX>
-				<posY>780</posY>
-				<label>#WorldWeather.ForecastDay0High</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 1 low label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>427</posX>
-				<posY>780</posY>
-				<label>#WorldWeather.ForecastDay0Low</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 1 general weather label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1003</posX>
-				<posY>1350</posY>
-				<label>-</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 1 icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>555</posX>
-				<posY>760</posY>
-				<texture>#WorldWeather.ForecastDay0IconImage</texture>
-				<width>75</width>
-				<height>75</height>
-			</control>
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>786</posY>
-				<width>675</width>
-				<height>52</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-			<control>
-				<description>day 2 label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>855</posY>
-				<label>#WorldWeather.ForecastDay1Date</label>
-				<font>font14</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>day 2 Hi label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>300</posX>
-				<posY>855</posY>
-				<label>#WorldWeather.ForecastDay1High</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 2 low label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>427</posX>
-				<posY>855</posY>
-				<label>#WorldWeather.ForecastDay1Low</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 2 general weather label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1252</posX>
-				<posY>1350</posY>
-				<label>-</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 2 icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>555</posX>
-				<posY>835</posY>
-				<texture>#WorldWeather.ForecastDay1IconImage</texture>
-				<width>75</width>
-				<height>75</height>
-			</control>
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>861</posY>
-				<width>675</width>
-				<height>52</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-			<control>
-				<description>day 3 label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>930</posY>
-				<label>#WorldWeather.ForecastDay2Date</label>
-				<font>font14</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>day 3 Hi label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>300</posX>
-				<posY>930</posY>
-				<label>#WorldWeather.ForecastDay2High</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 3 low label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>427</posX>
-				<posY>930</posY>
-				<label>#WorldWeather.ForecastDay2Low</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 3 general weather label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1500</posX>
-				<posY>1350</posY>
-				<label>-</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 3 icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>555</posX>
-				<posY>910</posY>
-				<texture>#WorldWeather.ForecastDay2IconImage</texture>
-				<width>75</width>
-				<height>75</height>
-			</control>
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>936</posY>
-				<width>675</width>
-				<height>52</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-			<control>
-				<description>day 4 label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>1005</posY>
-				<label>#WorldWeather.ForecastDay3Date</label>
-				<font>font14</font>
-				<textcolor>90ffffff</textcolor>
-			</control>
-			<control>
-				<description>day 4 Hi label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>300</posX>
-				<posY>1005</posY>
-				<label>#WorldWeather.ForecastDay3High</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 4 low label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>427</posX>
-				<posY>1005</posY>
-				<label>#WorldWeather.ForecastDay3Low</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 4 general weather label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>1749</posX>
-				<posY>1350</posY>
-				<label>-</label>
-				<font>font14</font>
-				<textcolor>White</textcolor>
-			</control>
-			<control>
-				<description>day 4 icon</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>555</posX>
-				<posY>985</posY>
-				<width>75</width>
-				<height>75</height>
-				<texture>#WorldWeather.ForecastDay3IconImage</texture>
-			</control>
-			<control>
-				<type>image</type>
-				<posX>0</posX>
-				<posY>1011</posY>
-				<width>675</width>
-				<height>52</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-		</control>
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<visible>string.equals(#WorldWeather.View,Image)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>687</posX>
-				<posY>72</posY>
-				<width>1422</width>
-				<height>1149</height>
-				<texture>bg_facade.png</texture>
-			</control>
-			<!-- *** Satellite Image *** -->
-			<control>
-				<description>Satellite image</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>765</posX>
-				<posY>150</posY>
-				<width>532</width>
-				<height>420</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#WorldWeather.ImageSatellite</texture>
-			</control>
-			<!-- *** Satellite Precipitation Image *** -->
-			<control>
-				<description>Satellite image</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1342</posX>
-				<posY>150</posY>
-				<width>532</width>
-				<height>420</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#WorldWeather.ImagePrecipitation</texture>
-			</control>
-			<!-- *** Satellite Temperature Image *** -->
-			<control>
-				<description>Satellite image</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>765</posX>
-				<posY>630</posY>
-				<width>532</width>
-				<height>420</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#WorldWeather.ImageTemperature</texture>
-			</control>
-			<!-- *** Satellite Wind Image *** -->
-			<control>
-				<description>Satellite image</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1342</posX>
-				<posY>630</posY>
-				<width>532</width>
-				<height>420</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>#WorldWeather.ImageWind</texture>
-			</control>
-		</control>
-		<control>
-			<type>group</type>
-			<dimColor>ffffffff</dimColor>
-			<visible>string.equals(#WorldWeather.View,GeoClock)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>687</posX>
-				<posY>72</posY>
-				<width>1422</width>
-				<height>1149</height>
-				<texture>bg_facade.png</texture>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>735</posX>
-				<posY>145</posY>
-				<width>1260</width>
-				<height>79</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-			</control>
-			<control>
-				<description>Satellite label</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>765</posX>
-				<posY>144</posY>
-				<label>#(L(744)) / #(L(745))  -  #WorldWeather.Location</label>
-				<font>font22</font>
-				<align>left</align>
-				<width>1125</width>
-				<textcolor>ffffffff</textcolor>
-			</control>
-			<control>
-				<description>GeoClock image</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>765</posX>
-				<posY>240</posY>
-				<width>1125</width>
-				<height>825</height>
-				<texture>#WorldWeather.ImageGeoClock</texture>
-				<keepaspectratio>no</keepaspectratio>
-			</control>
-		</control>
-		<!-- HIDDEN MENU -->
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-579</posX>
-			<posY>4</posY>
-			<width>627</width>
-			<height>1071</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>control.hasfocus(50)</visible>
-			<animation effect="fade" time="50">WindowClose</animation>
-			<animation effect="fade" time="50">WindowOpen</animation>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
-			<type>actiongroup</type>
-			<description>action menu</description>
-			<defaultcontrol>2</defaultcontrol>
-			<onexit>0</onexit>
-			<buttonX>0</buttonX>
-			<buttonY>0</buttonY>
-			<buttonwidth>579</buttonwidth>
-			<buttonheight>1080</buttonheight>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<width>637</width>
-			<height>1080</height>
-			<dimColor>ffffffff</dimColor>
-			<visible>!control.hasfocus(50)</visible>
-			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>0</posY>
-				<width>627</width>
-				<height>1080</height>
-				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
-			</control>
-			<control>
-				<id>0</id>
-				<type>label</type>
-				<posX>45</posX>
-				<posY>52</posY>
-				<label>#header.label</label>
-				<width>499</width>
-				<font>font24</font>
-				<align>left</align>
-				<textcolor>ffffffff</textcolor>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>71</posY>
-				<width>579</width>
-				<height>79</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
-			<control>
-				<type>group</type>
-				<layout>StackLayout(0, Vertical, true)</layout>
-				<posX>0</posX>
-				<posY>150</posY>
-				<control>
-					<description>Display</description>
-					<type>button</type>
-					<id>2</id>
-					<label>Switch View</label>
-					<onup>17</onup>
-					<ondown>3</ondown>
-					<onright>50</onright>
-				</control>
-				<control>
-					<description>Location</description>
-					<type>button</type>
-					<id>3</id>
-					<label>Location</label>
-					<onup>2</onup>
-					<ondown>4</ondown>
-					<onright>50</onright>
-				</control>
-				<control>
-					<description>Refresh</description>
-					<type>button</type>
-					<id>4</id>
-					<label>Refresh</label>
-					<onup>3</onup>
-					<ondown>2</ondown>
-					<onright>50</onright>
-				</control>
-			</control>
-		</control>
-		<control>
-			<description>DUMMY BUTTON</description>
-			<type>button</type>
-			<id>50</id>
-			<posX>720</posX>
-			<posY>0</posY>
-			<width>1200</width>
-			<height>1080</height>
-			<onright>2</onright>
-			<onleft>2</onleft>
-			<textureFocus>-</textureFocus>
-			<textureNoFocus>-</textureNoFocus>
-			<!-- <scrollWrapString/> -->
-		</control>
-	</controls>
+  <id>7977</id>
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>player.hasmedia</allowoverlay>
+  <define>#header.label:World Weather</define>
+  <define>#header.background:hover_worldweather.png</define>
+  <animation effect="fade" time="250">WindowOpen</animation>
+  <animation effect="fade" time="250">WindowClose</animation>
+  <controls>
+    <import>common.window.xml</import>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>animations\weather\#WorldWeather.TodayIconNumber.jpg</texture>
+      <visible>plugin.isenabled(World Weather)</visible>
+      <animation effect="fade" time="250">visible</animation>
+    </control>
+    <import>common.window.time.xml</import>
+    <import>WorldWeatherNormalCondition.xml</import>
+    <import>WorldWeatherHourCondition.xml</import>
+    <import>WorldWeatherGraphicCondition.xml</import>
+    <import>WorldWeatherGeoClock.xml</import>
+    <import>WorldWeatherHolidays.xml</import>
+    <import>WorldWeatherImage.xml</import>
+    <import>WorldWeatherAstronomy.xml</import>
+    <!-- HIDDEN MENU -->
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>-579</posX>
+      <posY>4</posY>
+      <width>627</width>
+      <height>1071</height>
+      <texture>bg_left.png</texture>
+      <colorDiffuse>ffffffff</colorDiffuse>
+      <visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)|control.hasfocus(15)]</visible>
+      <animation effect="fade" time="50">WindowClose</animation>
+      <animation effect="fade" time="50">WindowOpen</animation>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>2</defaultcontrol>
+      <onexit>0</onexit>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>45</buttonwidth>
+      <buttonheight>1080</buttonheight>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <width>600</width>
+      <height>1080</height>
+      <dimColor>ffffffff</dimColor>
+      <visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)|control.hasfocus(15)]</visible>
+      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>0</posY>
+        <width>627</width>
+        <height>1080</height>
+        <texture>bg_left.png</texture>
+        <colorDiffuse>ffffffff</colorDiffuse>
+      </control>
+      <control>
+        <id>0</id>
+        <type>label</type>
+        <posX>45</posX>
+        <posY>52</posY>
+        <label>#header.label</label>
+        <width>499</width>
+        <font>font24</font>
+        <align>left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>71</posY>
+        <width>579</width>
+        <height>79</height>
+        <texture>bg_button_nofocus.png</texture>
+      </control>
+      <control>
+        <type>group</type>
+        <layout>StackLayout(0, Vertical, true)</layout>
+        <posX>0</posX>
+        <posY>150</posY>
+        <control>
+          <description>Display</description>
+          <type>button</type>
+          <id>2</id>
+          <onup>17</onup>
+          <ondown>5</ondown>
+          <onright>5050</onright>
+          <label>-</label>
+        </control>
+        <control>
+          <description>View</description>
+          <type>button</type>
+          <id>5</id>
+          <onright>5050</onright>
+          <onup>2</onup>
+          <ondown>3</ondown>
+          <label>-</label>
+        </control>
+        <control>
+          <description>Location</description>
+          <type>button</type>
+          <id>3</id>
+          <onright>5050</onright>
+          <onup>5</onup>
+          <ondown>4</ondown>
+          <label>-</label>
+        </control>
+        <control>
+          <description>Browser Map</description>
+          <type>button</type>
+          <id>4</id>
+          <onup>3</onup>
+          <ondown>9</ondown>
+          <onright>5050</onright>
+          <label>-</label>
+        </control>
+        <control>
+          <description>Refresh</description>
+          <type>button</type>
+          <id>9</id>
+          <onright>5050</onright>
+          <ondown>10</ondown>
+          <onup>4</onup>
+          <label>-</label>
+        </control>
+        <control>
+          <description>Satellite image 0</description>
+          <type>button</type>
+          <id>10</id>
+          <onup>9</onup>
+          <ondown>11</ondown>
+          <label>#WorldWeather.ImageWeather0Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather0Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+        </control>
+        <control>
+          <description>Satellite image 1</description>
+          <type>button</type>
+          <id>11</id>
+          <label>#WorldWeather.ImageWeather1Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather1Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+          <onup>10</onup>
+          <ondown>12</ondown>
+        </control>
+        <control>
+          <description>Satellite image 2</description>
+          <type>button</type>
+          <id>12</id>
+          <onup>11</onup>
+          <ondown>13</ondown>
+          <label>#WorldWeather.ImageWeather2Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather2Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+        </control>
+        <control>
+          <description>Satellite image 3</description>
+          <type>button</type>
+          <id>13</id>
+          <onup>12</onup>
+          <ondown>14</ondown>
+          <label>#WorldWeather.ImageWeather3Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather3Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+        </control>
+        <control>
+          <description>Satellite image 4</description>
+          <type>button</type>
+          <id>14</id>
+          <onup>13</onup>
+          <ondown>15</ondown>
+          <label>#WorldWeather.ImageWeather4Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather4Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+        </control>
+        <control>
+          <description>Satellite image 5</description>
+          <type>button</type>
+          <id>15</id>
+          <onup>14</onup>
+          <ondown>2</ondown>
+          <label>#WorldWeather.ImageWeather5Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather5Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+        </control>
+      </control>
+    </control>
+    <control>
+      <description>DUMMY BUTTON</description>
+      <type>button</type>
+      <id>5050</id>
+      <posX>45</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <onright>50</onright>
+      <onleft>2</onleft>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <visible>!string.equals(#WorldWeather.View,Image)</visible>
+      <!-- <scrollWrapString/> -->
+    </control>
+  </controls>
 </window>
