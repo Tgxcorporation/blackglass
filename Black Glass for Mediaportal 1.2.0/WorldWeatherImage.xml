@@ -20,7 +20,7 @@
 				<width>1650</width>
 				<height>766</height>
 				<texture>bg_facade.png</texture>
-				<visible>![facadeview.filmstrip|facadeview.coverflow]</visible>
+				<visible>string.equals(#WorldWeather.ImageView,Flat)</visible>
 			</control>
 			<control>
 				<type>image</type>
@@ -31,7 +31,28 @@
 				<height>53</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>![facadeview.filmstrip|facadeview.coverflow]</visible>
+				<visible>string.equals(#WorldWeather.ImageView,Flat)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-75</posX>
+				<posY>48</posY>
+				<width>1650</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+				<visible>![facadeview.filmstrip|facadeview.coverflow]+!string.equals(#WorldWeather.ImageView,Flat)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>97</posY>
+				<width>1280</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>![facadeview.filmstrip|facadeview.coverflow]+!string.equals(#WorldWeather.ImageView,Flat)</visible>
 			</control>
 			<control>
 				<description>location label</description>
@@ -57,7 +78,7 @@
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
 				<label>1</label>
-				<visible>![facadeview.filmstrip|facadeview.coverflow]+string.equals(#WorldWeather.ImageView,Flat)</visible>
+				<visible>string.equals(#WorldWeather.ImageView,Flat)</visible>
 			</control>
 
 
@@ -145,10 +166,10 @@
 				<visible>control.hasfocus(15)+string.equals(#WorldWeather.ImageView,Flat)</visible>
 				<animation effect="fade" time="300">visiblechange</animation>
 			</control>
-			
-			
-			
-			
+
+
+
+
 			<control>
 				<description>Starry sky image</description>
 				<type>image</type>
@@ -158,7 +179,7 @@
 				<width>710</width>
 				<height>540</height>
 				<texture>picturecase.png</texture>
-				<visible>![facadeview.filmstrip|facadeview.coverflow]+string.equals(#WorldWeather.ImageView,Flat)</visible>
+				<visible>string.equals(#WorldWeather.ImageView,Flat)</visible>
 			</control>
 			<control>
 				<id>0</id>
