@@ -81,11 +81,13 @@
 				<control>
 					<description>Released</description>
 					<id>0</id>
-					<type>label</type>
-					<label>#Trakt.Movie.Released</label>
+					<type>fadelabel</type>
+					<label>#Trakt.Movie.Released     #Trakt.Movie.Genres</label>
 					<posX>45</posX>
 					<posY>750</posY>
+					<width>630</width>
 					<textcolor>90FFFFFF</textcolor>
+					<wrapString> : : : </wrapString>
 					<font>font13</font>
 				</control>
 				<control>
@@ -128,7 +130,7 @@
 			<control>
 				<type>group</type>
 				<dimColor>ffffffff</dimColor>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+!string.equals(#Trakt.List.ItemType,movie)</visible>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[string.equals(#Trakt.List.ItemType,show)|string.equals(#Trakt.List.ItemType,season)]</visible>
 				<animation effect="fade" time="250" delay="0">visible</animation>
 				<control>
 					<type>fadelabel</type>
@@ -144,11 +146,13 @@
 				<control>
 					<description>Released</description>
 					<id>0</id>
-					<type>label</type>
-					<label>#Trakt.Show.FirstAired</label>
+					<type>fadelabel</type>
+					<label>#Trakt.Show.FirstAired     #Trakt.Show.Genres</label>
 					<posX>45</posX>
 					<posY>750</posY>
+					<width>630</width>
 					<textcolor>90FFFFFF</textcolor>
+					<wrapString> : : : </wrapString>
 					<font>font13</font>
 				</control>
 				<control>
@@ -183,6 +187,71 @@
 					<width>630</width>
 					<height>186</height>
 					<label>#Trakt.Show.Overview</label>
+					<font>font12</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<seperator>: : :</seperator>
+				</control>
+			</control>
+			<control>
+				<type>group</type>
+				<dimColor>ffffffff</dimColor>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#Trakt.List.ItemType,episode)</visible>
+				<animation effect="fade" time="250" delay="0">visible</animation>
+				<control>
+					<type>fadelabel</type>
+					<description>Current program title</description>
+					<id>0</id>
+					<posX>45</posX>
+					<posY>697</posY>
+					<width>630</width>
+					<font>font20</font>
+					<label>#Trakt.Show.Title</label>
+					<wrapString> : : : </wrapString>
+				</control>
+				<control>
+					<description>Released</description>
+					<id>0</id>
+					<type>fadelabel</type>
+					<label>#Trakt.Show.FirstAired     #Trakt.Show.Genres</label>
+					<posX>45</posX>
+					<posY>750</posY>
+					<width>630</width>
+					<textcolor>90FFFFFF</textcolor>
+					<wrapString> : : : </wrapString>
+					<font>font13</font>
+				</control>
+				<control>
+					<type>fadelabel</type>
+					<description>Rating</description>
+					<id>0</id>
+					<posX>45</posX>
+					<posY>787</posY>
+					<width>630</width>
+					<font>font13</font>
+					<label>#Trakt.Episode.Ratings.Percentage%     #Trakt.Episode.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+					<wrapString> : : : </wrapString>
+				</control>
+				<control>
+					<description>Runtime value</description>
+					<type>fadelabel</type>
+					<id>1</id>
+					<posX>45</posX>
+					<posY>825</posY>
+					<width>630</width>
+					<label>#Trakt.Show.Year     #Trakt.Show.Certification     #Trakt.Show.Runtime mins</label>
+					<textcolor>90FFFFFF</textcolor>
+					<wrapString> : : : </wrapString>
+					<font>font13</font>
+				</control>
+				<control>
+					<description>Plot value</description>
+					<type>textboxscrollup</type>
+					<id>1</id>
+					<posX>45</posX>
+					<posY>865</posY>
+					<width>630</width>
+					<height>186</height>
+					<label>#Trakt.Episode.Overview</label>
 					<font>font12</font>
 					<textcolor>FFFFFFFF</textcolor>
 					<seperator>: : :</seperator>
