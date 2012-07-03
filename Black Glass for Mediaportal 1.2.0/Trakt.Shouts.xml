@@ -11,7 +11,18 @@
 	<controls>    
 
 		<import>common.window.background.xml</import>
-		<import>Trakt.Common.Fanart.xml</import>
+		<control>
+			<description>Fanart Background #1</description>
+			<type>image</type>
+			<id>60</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#Trakt.Shout.Fanart</texture>
+			<animation effect="fade" time="1">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
 		<import>common.window.overlay.xml</import>
 		<import>common.window.time.xml</import>
 		<control>
@@ -97,7 +108,8 @@
 				<width>148</width>
 				<keepaspectratio>yes</keepaspectratio>
 				<zoom>yes</zoom>
-				<texture flipY="true" diffuse="Thumb_Mask.png">#Trakt.User.AvatarFileName</texture>
+				<!-- <texture flipY="true" diffuse="Thumb_Mask.png">#Trakt.User.AvatarFileName</texture> -->
+				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
 			</control>
 			<control>
 				<type>image</type>
