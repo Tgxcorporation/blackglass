@@ -145,12 +145,13 @@
 			</control>
 			<control>
 				<id>0</id>
-				<label>#Trakt.Movie.Ratings.Percentage%     #Trakt.Movie.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+				<label>#Trakt.Movie.Released     #Trakt.Movie.Certification     #Trakt.Movie.Runtime mins     #Trakt.Movie.Ratings.Percentage% (#Trakt.Movie.Ratings.Votes #Trakt.Translation.Votes.Label)</label>
 				<type>fadelabel</type>
 				<posX>397</posX>
-				<posY>807</posY>
+				<posY>808</posY>
 				<width>855</width>
-				<font>font16</font>
+				<font>font14</font>
+
 				<textcolor>90ffffff</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
@@ -272,7 +273,7 @@
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
-			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!string.equals(#Trakt.List.ItemType,movie)</visible>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+[string.equals(#Trakt.List.ItemType,season)|string.equals(#Trakt.List.ItemType,show)]</visible>
 			<animation effect="fade" time="250" delay="0">visiblechange</animation>
 			<control>
 				<type>fadelabel</type>
@@ -302,7 +303,7 @@
 				<posX>397</posX>
 				<posY>702</posY>
 				<width>855</width>
-				<label>#Trakt.Show.FirstAired     #Trakt.Show.Certification     #Trakt.Show.Runtime mins</label>
+				<label>#Trakt.Show.Genres</label>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -320,9 +321,10 @@
 				<description>Rating</description>
 				<id>0</id>
 				<posX>397</posX>
-				<posY>754</posY>
+				<posY>756</posY>
 				<width>855</width>
-				<label>#Trakt.Show.Ratings.Percentage%     #Trakt.Show.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+				<label>#Trakt.Show.FirstAired     #Trakt.Show.Certification     #Trakt.Show.Runtime mins     #Trakt.Show.Ratings.Percentage% (#Trakt.Show.Ratings.Votes #Trakt.Translation.Votes.Label)</label>
+				<font>font14</font>
 				<wrapString> : : : </wrapString>
 				<textcolor>90ffffff</textcolor>
 			</control>
@@ -438,6 +440,89 @@
 				<textalign>center</textalign>
 				<textcolor>90FFFFFF</textcolor>
 				<label>#Trakt.Show.FirstAired     #Trakt.Show.Certification     #Trakt.Show.Runtime mins     #Trakt.Show.Ratings.Percentage%     #Trakt.Show.Ratings.Votes #Trakt.Translation.Votes.Label</label>
+			</control>
+		</control>
+		<!-- EPISODES -->
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+[string.equals(#Trakt.List.ItemType,episode)]</visible>
+			<animation effect="fade" time="250" delay="0">visiblechange</animation>
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>0</id>
+				<posX>397</posX>
+				<posY>628</posY>
+				<width>855</width>
+				<font>font22</font>
+				<label>#Trakt.Show.Title</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>373</posX>
+				<posY>645</posY>
+				<width>901</width>
+				<height>52</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>First Aired value</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>397</posX>
+				<posY>702</posY>
+				<width>855</width>
+				<label>#Trakt.Show.Genres</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>373</posX>
+				<posY>697</posY>
+				<width>901</width>
+				<height>52</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>Rating</description>
+				<id>0</id>
+				<posX>397</posX>
+				<posY>756</posY>
+				<width>855</width>
+				<label>#Trakt.Episode.FirstAired     #Trakt.Show.Certification     #Trakt.Show.Runtime mins     #Trakt.Episode.Ratings.Percentage% (#Trakt.Episode.Ratings.Votes #Trakt.Translation.Votes.Label)</label>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>373</posX>
+				<posY>750</posY>
+				<width>901</width>
+				<height>52</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>Plot value</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>397</posX>
+				<posY>810</posY>
+				<width>855</width>
+				<height>240</height>
+				<label>#Trakt.Episode.Overview</label>
+				<font>font16</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<seperator>: : :</seperator>
 			</control>
 		</control>
 		<control>
