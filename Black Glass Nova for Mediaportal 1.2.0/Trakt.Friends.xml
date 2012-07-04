@@ -268,7 +268,18 @@
 				<height>170</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
 			</control> 
-
+			<control>      
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>33</posX>
+				<posY>658</posY>
+				<width>243</width>
+				<label>#Trakt.Episode.Ratings.Percentage% (#Trakt.Episode.Ratings.Votes #Trakt.Translation.Votes.Label)</label>
+				<font>font14</font>
+				<height>55</height>
+				<textalign>left</textalign>
+				<visible>!string.equals(#Trakt.Episode.Ratings.Percentage,)</visible>
+			</control>
 
 			<control>
 				<id>0</id>
@@ -414,16 +425,16 @@
 			</control>
 			<control>
 				<id>0</id>
-				<label>#Trakt.Movie.Released     #Trakt.Movie.Certification     #Trakt.Movie.Runtime mins</label>
+				<label>#Trakt.Movie.Released     #Trakt.Movie.Certification     #Trakt.Movie.Runtime mins     #Trakt.Movie.Ratings.Percentage% (#Trakt.Movie.Ratings.Votes #Trakt.Translation.Votes.Label)</label>
 				<type>fadelabel</type>
 				<posX>265</posX>
-				<posY>503</posY>
+				<posY>504</posY>
 				<width>570</width>
-				<font>font16</font>
+				<font>font14</font>
 				<textcolor>90ffffff</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
-				<control>
+			<control>
 				<type>image</type>
 				<id>0</id>
 				<posX>249</posX>
