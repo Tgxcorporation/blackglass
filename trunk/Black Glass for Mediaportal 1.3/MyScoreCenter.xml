@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>42000</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#useSelectedFanart:Yes</define>
+	<define>#header.background:hover_score center.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+
+
+
+		<!-- backdrop matching current sport -->
+		<control>
+			<description>backdrop</description>
+			<type>image</type>
+			<id>30</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#ScoreCenter.bd.jpg</texture>
+			<animation effect="fade" time="1">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<control>
+			<description>DUMMY CONTROLL FOR FANART VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>91919291</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+		</control>
+
+		<control>
+			<description>DUMMY CONTROLL FOR FANART VISIBILITY CONDITION</description>
+			<type>label</type>
+			<id>91919292</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+		</control>
+
+		<control>
+			<description>DUMMY CONTROLL FOR FANART AVAILABILITY CONDITION</description>
+			<type>label</type>
+			<id>91919293</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1</width>
+		</control>
+
+
+		<control>
+			<description>FANART IMAGE 1</description>
+			<id>897688</id>
+			<type>image</type>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#fanarthandler.scorecenter.backdrop1.selected</texture>
+			<visible>plugin.isenabled(Fanart Handler)+control.isvisible(91919291)+control.isvisible(91919293)</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">hidden</animation>
+			<animation effect="fade" time="1">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<control>
+			<description>FANART IMAGE 2</description>
+			<id>897689</id>
+			<type>image</type>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#fanarthandler.scorecenter.backdrop2.selected</texture>
+			<visible>plugin.isenabled(Fanart Handler)+control.isvisible(91919292)+control.isvisible(91919293)</visible>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">hidden</animation>
+			<animation effect="fade" time="1">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+
+		<import>common.window.overlay.xml</import>		
+		<import>common.window.time.basic.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+
+			<control>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>34</posY>
+				<label>Score Center</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control> 
+			<control>
+				<type>image</type>
+				<posX>0</posX>
+				<posY>45</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<description>group element</description>
+				<control>
+					<description>Scores</description>
+					<type>listcontrol</type>
+					<id>10</id>
+					<posX>0</posX>
+					<posY>98</posY>
+					<width>385</width>
+					<height>650</height>
+					<textYOff>6</textYOff>
+					<textvisible2>no</textvisible2>
+					<textvisible3>no</textvisible3>
+					<keepaspectratio>yes</keepaspectratio>
+					<spinPosX>-510</spinPosX>
+					<spinPosY>650</spinPosY>
+					<onright>40</onright>
+					<font>font18</font>
+					<spinCanFocus>no</spinCanFocus>
+				</control>
+			</control>
+		</control>
+
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>live icon</description>
+				<type>image</type>
+				<visible>yes</visible>
+				<posX>465</posX>
+				<posY>8</posY>
+				<width>25</width>
+				<height>25</height>
+				<texture>#ScoreCenter.LiveIcon</texture>
+				<animation effect="fade" start="0" end="100" time="2000" tween="linear" pulse="true" reversible="false" condition="string.equals(#ScoreCenter.LiveOn,1)">Conditional</animation>
+			</control>
+			<control>
+				<id>60</id>
+				<description>Live Status</description>
+				<type>label</type>
+				<posX>500</posX>
+				<posY>10</posY>
+				<width>200</width>
+				<font>font12</font>
+				<label>#ScoreCenter.Live</label>
+			</control>
+			<control>
+				<description>Current Image1</description>
+				<type>image</type>
+				<posX>465</posX>
+				<posY>38</posY>
+				<width>25</width>
+				<height>25</height>
+				<texture>#ScoreCenter.Ico1</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<description>Current Image2</description>
+				<type>image</type>
+				<posX>505</posX>
+				<posY>38</posY>
+				<width>25</width>
+				<height>25</height>
+				<texture>#ScoreCenter.Ico2</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<description>Current Image3</description>
+				<type>image</type>
+				<posX>545</posX>
+				<posY>38</posY>
+				<width>25</width>
+				<height>25</height>
+				<texture>#ScoreCenter.Ico3</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+			<control>
+				<description>Current Image4</description>
+				<type>image</type>
+				<posX>585</posX>
+				<posY>38</posY>
+				<width>25</width>
+				<height>25</height>
+				<texture>#ScoreCenter.Ico4</texture>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+			</control>
+
+
+
+			<control>
+				<type>image</type>
+				<posX>408</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>440</posX>
+				<posY>97</posY>
+				<width>840</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>Current Results</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>465</posX>
+				<posY>89</posY>
+				<label>#ScoreCenter.Results</label>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>680</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<description>source</description>
+				<id>0</id>
+				<posX>465</posX>
+				<posY>123</posY>
+				<width>750</width>
+				<label>#ScoreCenter.Source</label>
+				<font>font10</font>
+				<textcolor>90ffffff</textcolor>
+				<align>left</align>
+				<wrapString> : : : </wrapString>
+			</control>
+
+
+
+
+			<!-- This control defines the area and the format (font and color)
+    in which the score will be displayed -->
+			<control>
+				<description>Results</description>
+				<type>textboxscrollup</type>
+				<id>20</id>
+				<posX>465</posX>
+				<posY>170</posY>
+				<visible>yes</visible>
+				<width>800</width>
+				<height>500</height>
+				<font>font12</font>
+			</control>
+
+			<control>
+				<description>Next Button</description>
+				<type>button</type>
+				<id>40</id>
+				<posX>1118</posX>
+				<posY>87</posY>
+				<width>150</width>
+				<label>Next</label>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<textureFocus>bg_button2_focus.png</textureFocus>
+				<textureNoFocus>bg_button2_nofocus.png</textureNoFocus>
+				<textalign>center</textalign>
+				<textXOff>0</textXOff>
+				<textYOff>3</textYOff>
+				<height>60</height>
+			</control>
+		</control>
+	</controls>
+</window>
