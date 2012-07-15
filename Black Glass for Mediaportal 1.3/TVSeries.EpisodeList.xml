@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window> 
+	<controls>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150" delay="100">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)+control.isvisible(1239)">conditional</animation>
+			<visible>control.isvisible(1239)</visible>
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>-73</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>92</posY>
+				<label>#TVSeries.Title</label>
+				<font>font20</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>800</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>128</posY>
+				<label>#TVSeries.Series.Pretty_Name     #TVSeries.Subtitle</label>
+				<font>font13</font>
+				<align>left</align>
+				<textcolor>90ffffff</textcolor>
+				<width>790</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-438</posX>
+				<posY>107</posY>
+				<width>1280</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>Big Episode Thumb</description>
+				<type>image</type>
+				<id>67</id>
+				<posX>39</posX>
+				<posY>186</posY>
+				<width>270</width>     
+				<height>152</height>     
+				<keepaspectratio>yes</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.EpisodeImage</texture>
+				<centered>yes</centered>
+				<zoom>yes</zoom>
+			</control> 
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>180</posY>
+				<width>285</width>
+				<height>188</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
+			</control> 
+
+			<control>
+				<description>Episode Watched Icon Background</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>276</posX>
+				<posY>195</posY>
+				<width>32</width>
+				<height>40</height>
+				<colordiffuse>b0ffffff</colordiffuse>
+				<texture>overlaywubg.png</texture>
+			</control>
+
+
+
+			<control>
+				<type>imagelist</type>
+				<id>0</id>
+				<posX>340</posX>
+				<posY>175</posY>
+				<width>302</width>
+				<height>40</height>
+				<textureWidth>27</textureWidth>
+				<textureHeight>27</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#TVSeries.Episode.Rating</percentage>
+			</control>
+
+			<control>      
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>340</posX>
+				<posY>210</posY>
+				<width>480</width>
+				<label>#TVSeries.Episode.FilesizeValue    #TVSeries.Episode.VideoinfoValue</label>
+				<font>font14</font>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>      
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>340</posX>
+				<posY>245</posY>
+				<width>480</width>
+				<label>#TVSeries.Episode.DirectorKey #TVSeries.Episode.DirectorValue</label>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>      
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>340</posX>
+				<posY>280</posY>
+				<width>480</width>
+				<label>#TVSeries.Episode.WriterKey #TVSeries.Episode.WriterValue</label>
+				<textcolor>90ffffff</textcolor>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>      
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>340</posX>
+				<posY>315</posY>
+				<width>480</width>
+				<label>#TVSeries.Episode.ActorsKey #TVSeries.Episode.ActorsValue</label>
+				<textcolor>ffffffff</textcolor>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>      
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>340</posX>
+				<posY>350</posY>
+				<width>480</width>
+				<label>#TVSeries.Episode.GueststarKey #TVSeries.Episode.GueststarValue</label>
+				<textcolor>90ffffff</textcolor>
+				<font>font14</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-438</posX>
+				<posY>345</posY>
+				<width>1280</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+		</control>
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150" delay="100">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)+control.isvisible(1239)">conditional</animation>
+			<visible>control.isvisible(1239)+player.hasmedia</visible>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>415</posY>
+				<width>800</width>
+				<height>135</height>
+				<font>font16</font>
+				<seperator>: : :</seperator>
+				<label>#TVSeries.Description</label>
+			</control>
+		</control>
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150" delay="100">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)+control.isvisible(1239)">conditional</animation>
+			<visible>control.isvisible(1239)+!player.hasmedia</visible>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Description (Episode / Season / Series Lists)</description>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>415</posY>
+				<width>800</width>
+				<height>200</height>
+				<font>font16</font>
+				<seperator>: : :</seperator>
+				<label>#TVSeries.Description</label>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-438</posX>
+				<posY>584</posY>
+				<width>1280</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>image</type>
+				<description>Logos</description>
+				<id>66</id>
+				<posX>30</posX>
+				<posY>654</posY>
+				<width>800</width>
+				<height>50</height>
+				<texture>#TVSeries.Logos</texture>
+				<keepaspectratio>yes</keepaspectratio>
+			</control>
+		</control>
+
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150" delay="100">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-700,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-500,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)+control.isvisible(1239)">conditional</animation>
+			<visible>control.isvisible(1239)</visible>
+			<!-- Watched Icons for Episode View-->
+			<control>
+				<description>Episode Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>282</posX>
+				<posY>199</posY>
+				<width>24</width>
+				<height>24</height>
+				<texture>overlaywatched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>control.isvisible(1243)+control.isvisible(1244)</visible>
+				<animation effect="fade" delay="250" time="150">visible</animation>
+			</control>
+			<control>
+				<description>Episode Un-Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>282</posX>
+				<posY>199</posY>
+				<width>24</width>
+				<height>24</height>
+				<texture>overlayunwatched.png</texture>
+				<colordiffuse>#ColorAvailable</colordiffuse>
+				<visible>!control.isvisible(1243)+control.isvisible(1244)</visible>
+				<animation effect="fade" delay="250" time="150">visible</animation>
+			</control>
+			<control>
+				<description>Episode Not Available and Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>282</posX>
+				<posY>199</posY>
+				<width>24</width>
+				<height>24</height>
+				<texture>overlaywatched.png</texture>
+				<colordiffuse>#ColorUnavailable</colordiffuse>
+				<visible>control.isvisible(1243)+!control.isvisible(1244)</visible>
+				<animation effect="fade" delay="250" time="150">visible</animation>
+			</control>
+			<control>
+				<description>Episode Not Available and Un-Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>282</posX>
+				<posY>199</posY>
+				<width>24</width>
+				<height>24</height>
+				<texture>overlayunwatched.png</texture>
+				<colordiffuse>#ColorUnavailable</colordiffuse>
+				<visible>!control.isvisible(1243)+!control.isvisible(1244)</visible>
+				<animation effect="fade" time="250">WindowClose</animation>
+			</control>
+		</control>  
+
+	</controls>
+</window>

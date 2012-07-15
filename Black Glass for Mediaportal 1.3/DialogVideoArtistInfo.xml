@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>614</id>
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:#view</define>
+	<define>#header.background:hover_my videos.png</define>
+	<define>#useSelectedFanart:Yes</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.video.fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="[control.hasfocus(3)|control.hasfocus(4)]">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>850</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control> 
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#WorldWeather.TodayTemperature     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>15</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>97</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+			<control>
+				<description>Cover Art</description>
+				<type>image</type>
+				<id>21</id>
+				<posX>79</posX>
+				<posY>81</posY>
+				<width>380</width>
+				<height>538</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<zoom>yes</zoom>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#thumb</texture>
+				<visible>!control.isvisible(24)</visible>
+			</control>
+			<control>
+				<description>Actor Movie Image</description>
+				<type>image</type>
+				<id>25</id>
+				<posX>79</posX>
+				<posY>81</posY>
+				<width>380</width>
+				<height>538</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<zoom>yes</zoom>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#Actor.MovieImage</texture>
+				<visible>control.isvisible(24)</visible>
+			</control>
+
+			<control>
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>72</posY>
+				<width>437</width>
+				<height>556</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+			</control>
+
+
+			<control>
+				<description>Actor Name value</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>520</posX>
+				<posY>95</posY>
+				<label>#title</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>740</width>
+				<wrapString> : : : </wrapString>
+				<label>#Actor.Name</label>
+			</control>
+
+
+			<control>
+				<description>Date of Birth</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>520</posX>
+				<posY>160</posY>
+				<width>740</width>
+				<label>#Actor.DateOfBirth     #Actor.PlaceOfBirth</label>
+				<textcolor>90FFFFFF</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>!control.isvisible(24)</visible>
+			</control>
+			<control>
+				<description>Date of Death</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>520</posX>
+				<posY>195</posY>
+				<width>740</width>
+				<label>#Actor.DateOfDeath     #Actor.PlaceOfDeath</label>
+				<textcolor>90FFFFFF</textcolor>
+				<wrapString> : : : </wrapString>
+				<visible>!control.isvisible(24)</visible>
+			</control>
+
+
+
+			<control>
+				<description>Actors value</description>
+				<type>textboxscrollup</type>
+				<id>20</id>
+				<posX>520</posX>
+				<posY>245</posY>
+				<width>740</width>
+				<label>#Actor.Biography</label>
+				<textcolor>ffFFFFFF</textcolor>
+				<font>font16</font>
+				<height>445</height>
+				<seperator>: : :</seperator>
+				<onleft>3</onleft>
+				<onright>3</onright>
+			</control>
+
+
+
+
+			<control>
+				<description>Actors Movies List</description>
+				<type>listcontrol</type>
+				<id>24</id>
+				<posY>150</posY>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<spinPosY>2445</spinPosY>
+				<spinCanFocus>no</spinCanFocus>
+				<textvisible2>no</textvisible2>
+				<textvisible3>no</textvisible3>
+				<IconXOff>2010</IconXOff>
+				<textXOff>-30</textXOff>
+				<height>350</height>
+			</control>
+
+			<control>
+				<description>Movie Extra Details</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>520</posX>
+				<posY>440</posY>
+				<width>740</width>
+				<label>#Actor.MovieExtraDetails</label>
+				<font>font16</font>
+				<visible>control.isvisible(24)</visible>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Actor Movie Plot</description>
+				<type>textboxscrollup</type>
+				<id>26</id>
+				<posX>520</posX>
+				<posY>490</posY>
+				<width>740</width>
+				<height>205</height>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<font>font16</font>
+				<label>#Actor.MoviePlot</label>
+			</control>
+		</control>
+
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>480</posX>
+			<posY>0</posY>
+			<width>100</width>
+			<height>600</height>
+			<label/>
+			<onright>3</onright>
+			<onleft>3</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(3)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>3</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>385</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(3)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>button group</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>100</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<description>Biography</description>
+					<type>togglebutton</type>
+					<id>3</id>
+					<label>1011</label>
+					<onup>17</onup>
+					<ondown>4</ondown>
+				</control>
+				<control>
+					<description>Movies</description>
+					<type>togglebutton</type>
+					<id>4</id>
+					<label>342</label>
+					<onup>3</onup>
+					<ondown>3</ondown>
+				</control>
+			</control>
+		</control>
+
+	</controls>
+</window>

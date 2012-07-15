@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>47286</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:Rockstar</define>
+	<define>#usePlayFanart:Yes</define>
+	<define>#header.background:hover_rockstar.png</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.music.play.fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
+
+
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="191,0" condition="![control.hasfocus(200)|control.hasfocus(300)]">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>47</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>665</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<id>300</id>
+					<description>Playlist</description>
+					<type>playlistcontrol</type>
+					<onleft>2</onleft>
+					<visible>facade.playlist</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" condition="!control.hasfocus(50)">visible</animation>
+				</control>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<id>200</id>
+					<description>Track listing</description>
+					<type>listcontrol</type>
+					<onleft>2</onleft>
+					<visible>facade.list</visible>
+					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
+				</control>
+			</control>
+			
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="![control.hasfocus(200)|control.hasfocus(300)]">conditional</animation>
+			<control>
+				<type>fadelabel</type>
+				<width>850</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+
+			<control>
+				<id>10</id>
+				<type>image</type>
+				<posX>71</posX>
+				<posY>82</posY>
+				<width>312</width>
+				<height>312</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture flipY="true" diffuse="Thumb_Mask.png">albumnocover.png</texture>
+			</control>
+			<control>
+				<description>Cd Case</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>30</posX>
+				<posY>73</posY>
+				<width>360</width>
+				<height>327</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Track Name</description>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>425</posY>
+				<width>360</width>
+				<font>font22</font>
+				<wrapString> : : : </wrapString>
+				<label>#Rockstar.SelectedTrack.TrackName</label>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Album Name</description>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>475</posY>
+				<width>350</width>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+				<textcolor>90ffffff</textcolor>
+				<label>#Rockstar.SelectedTrack.AlbumName</label>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Artist Name</description>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>507</posY>
+				<width>360</width>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+				<label>#Rockstar.SelectedTrack.ArtistName</label>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Album Year</description>
+				<type>fadelabel</type>
+				<posX>30</posX>
+				<posY>537</posY>
+				<width>360</width>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+				<textcolor>90ffffff</textcolor>
+				<label>#Rockstar.SelectedTrack.AlbumYear</label>
+			</control>
+		</control>
+
+
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>[control.hasfocus(200)|control.hasfocus(300)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>385</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>![control.hasfocus(200)|control.hasfocus(300)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>button group</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>100</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<id>2</id>
+					<description>Search Music</description>
+					<type>button</type>
+					<onright>200</onright>
+					<ondown>3</ondown>
+					<label>Search Music</label>
+				</control>
+				<control>
+					<id>3</id>
+					<description>Default Playlist</description>
+					<type>button</type>
+					<onright>200</onright>
+					<onup>2</onup>
+					<ondown>4</ondown>
+					<label>Default Playlist</label>
+				</control>
+				<control>
+					<id>4</id>
+					<description>Playlists</description>
+					<type>button</type>
+					<onright>200</onright>
+					<onup>3</onup>
+					<ondown>20</ondown>
+					<label>Playlists</label>
+				</control>
+				<control>
+					<id>20</id>
+					<description>Popular Songs</description>
+					<type>button</type>
+					<onright>200</onright>
+					<onup>4</onup>
+					<ondown>32</ondown>
+					<label>Popular Songs</label>
+				</control>
+				<control>
+					<id>32</id>
+					<description>Shuffle on/off button</description>
+					<type>togglebutton</type>
+					<onright>200</onright>
+					<onup>20</onup>
+					<ondown>30</ondown>
+					<label>Shuffle</label>
+				</control>
+				<control>
+					<id>30</id>
+					<description>Repeat on/off button</description>
+					<type>togglebutton</type>
+					<onright>200</onright>
+					<onup>32</onup>
+					<label>Repeat</label>
+				</control>
+			</control>
+		</control>
+
+	</controls>
+</window>

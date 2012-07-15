@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window> 
+	<controls>
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(50)">conditional</animation>
+
+			<control>
+				<type>image</type>
+				<description>season poster</description>
+				<id>62</id>
+				<posX>62</posX> 
+				<posY>98</posY> 
+				<width>245</width> 
+				<height>348</height> 
+				<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.SeasonPoster</texture>
+				<visible>control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+
+			<control>
+				<type>image</type>
+				<description>series poster</description>
+				<id>61</id>
+				<posX>62</posX> 
+				<posY>98</posY> 
+				<width>245</width> 
+				<height>348</height> 
+				<texture flipY="true" diffuse="Thumb_Mask.png">#TVSeries.SeriesPoster</texture>
+				<visible>control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+
+			<control>
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>93</posY>
+				<width>283</width>
+				<height>360</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+
+			<control>
+				<type>imagelist</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>470</posY>
+				<width>302</width>
+				<height>40</height>
+				<textureWidth>22</textureWidth>
+				<textureHeight>22</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#TVSeries.Series.Rating</percentage>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+
+			<control>
+				<type>fadelabel</type>
+				<description>Current program title</description>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>498</posY>
+				<width>800</width>
+				<font>font22</font>
+				<label>#TVSeries.Title</label>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Subtitle value</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>30</posX>
+				<posY>545</posY>
+				<width>800</width>
+				<label>#TVSeries.Series.RuntimeMin     #TVSeries.Subtitle</label>
+				<textcolor>90FFFFFF</textcolor>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+			</control>
+			<control>
+				<description>Summary</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>585</posY>
+				<width>800</width>
+				<height>115</height>
+				<textcolor>ffFFFFFF</textcolor>
+				<font>font14</font>
+				<!-- <label>#TVSeries.Description</label> -->
+				<label>#TVSeries.Series.Summary</label>
+				<visible>!player.hasmedia+[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+				<seperator>: : :</seperator>
+			</control>
+		</control>
+	</controls>
+</window>
