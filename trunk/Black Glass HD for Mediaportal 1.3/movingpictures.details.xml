@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<window>
+	<controls>
+		<control>
+			<description>PLAY Button</description>
+			<type>button</type>
+			<id>6</id>
+			<label>-</label>
+			<onup>6</onup>
+			<ondown>6</ondown>
+			<onleft>66621</onleft>
+			<onright>66621</onright>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<posX>720</posX>
+			<posY>0</posY>
+			<width>1200</width>
+			<height>1080</height>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(6)+[!control.isvisible(50)]">conditional</animation>
+			<control>
+				<description>Cover Art</description>
+				<type>image</type>
+				<id>60</id>
+				<posX>118</posX>
+				<posY>121</posY>
+				<width>570</width>
+				<height>807</height>
+				<zoom>yes</zoom>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#MovingPictures.Coverart</texture>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="150">hidden</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>108</posY>
+				<width>655</width>
+				<height>834</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="150">hidden</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<description>Cover Art</description>
+				<type>image</type>
+				<id>60</id>
+				<posX>109</posX>
+				<posY>121</posY>
+				<width>498</width>
+				<height>703</height>
+				<zoom>yes</zoom>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>#MovingPictures.Coverart</texture>
+				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="150">hidden</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<description>Cover Art Glass Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>108</posY>
+				<width>573</width>
+				<height>729</height>
+				<texture>DVDCase.png</texture>
+				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="fade" time="150">hidden</animation>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<description>Watched Icon Background</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>633</posX>
+				<posY>183</posY>
+				<width>60</width>
+				<height>75</height>
+				<texture>overlaywubg.png</texture>
+				<colordiffuse>b0ffffff</colordiffuse>
+				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			</control>
+			<control>
+				<description>Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>642</posX>
+				<posY>192</posY>
+				<width>45</width>
+				<height>45</height>
+				<texture>overlaywatched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+control.isvisible(9)</visible>
+				<animation effect="fade" time="150" delay="200">visible</animation>
+				<animation effect="fade" time="50">hidden</animation>
+			</control>
+			<control>
+				<description>Un-Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>642</posX>
+				<posY>192</posY>
+				<width>45</width>
+				<height>45</height>
+				<texture>overlayunwatched.png</texture>
+				<colordiffuse>#ColorAvailable</colordiffuse>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+!control.isvisible(9)</visible>
+				<animation effect="fade" time="150" delay="200">visible</animation>
+				<animation effect="fade" time="50">hidden</animation>
+			</control>
+			<control>
+				<description>Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>561</posX>
+				<posY>178</posY>
+				<width>45</width>
+				<height>45</height>
+				<texture>overlaywatched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+control.isvisible(9)</visible>
+				<animation effect="fade" time="150" delay="200">visible</animation>
+				<animation effect="fade" time="50">hidden</animation>
+			</control>
+			<control>
+				<description>Un-Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>561</posX>
+				<posY>178</posY>
+				<width>45</width>
+				<height>45</height>
+				<texture>overlayunwatched.png</texture>
+				<colordiffuse>#ColorAvailable</colordiffuse>
+				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)+!control.isvisible(9)</visible>
+				<animation effect="fade" time="150" delay="200">visible</animation>
+				<animation effect="fade" time="50">hidden</animation>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(6)+[!control.isvisible(50)]">conditional</animation>
+			<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
+			<!--            :: MAIN DETAILS ::            -->
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>735</posX>
+				<posY>145</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>735</posX>
+				<posY>507</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>738</posX>
+				<posY>880</posY>
+				<width>1185</width>
+				<height>79</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<!-- Details Box -->
+			<control>
+				<description>Title label</description>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>780</posX>
+				<posY>142</posY>
+				<label>#MovingPictures.SelectedMovie.title</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>1125</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>IMDB Rating Value</description>
+				<type>imagelist</type>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>247</posY>
+				<width>172</width>
+				<height>19</height>
+				<textureWidth>40</textureWidth>
+				<textureHeight>40</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>10</imagesToDraw>
+				<percentage>#MovingPictures.SelectedMovie.score.rounded</percentage>
+			</control>
+			<control>
+				<description>Genres</description>
+				<type>fadelabel</type>
+				<label>#MovingPictures.SelectedMovie.genres</label>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>300</posY>
+				<width>1125</width>
+				<font>font16</font>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>year</description>
+				<type>fadelabel</type>
+				<label>#MovingPictures.SelectedMovie.year     #MovingPictures.SelectedMovie.runtime.localized.long     #MovingPictures.SelectedMovie.certification</label>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>352</posY>
+				<width>1125</width>
+				<font>font18</font>
+				<textcolor>90ffffff</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Directors</description>
+				<type>fadelabel</type>
+				<label>#MovingPictures.Translation.Director.Label: #MovingPictures.SelectedMovie.directors</label>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>412</posY>
+				<width>1125</width>
+				<font>font18</font>
+				<textcolor>ffFFFFFF</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>actors</description>
+				<type>textboxscrollup</type>
+				<label>#MovingPictures.Translation.Actors.Label: #MovingPictures.SelectedMovie.actors</label>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>469</posY>
+				<width>1125</width>
+				<font>font16</font>
+				<height>105</height>
+				<textcolor>90FFFFFF</textcolor>
+				<seperator>: : :</seperator>
+			</control>
+			<control>
+				<description>Summary</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>607</posY>
+				<width>1125</width>
+				<height>337</height>
+				<textcolor>ffFFFFFF</textcolor>
+				<font>font18</font>
+				<label>#MovingPictures.SelectedMovie.summary</label>
+				<seperator>: : :</seperator>
+			</control>
+			<!-- Media logos [Details View] -->
+			<control>
+				<description>Video Codec</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>780</posX>
+				<posY>982</posY>
+				<width>133</width>
+				<height>75</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+			</control>
+			<control>
+				<description>Video Resolution</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>915</posX>
+				<posY>982</posY>
+				<width>133</width>
+				<height>75</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+			</control>
+			<control>
+				<description>Video Aspect Ratio</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1050</posX>
+				<posY>982</posY>
+				<width>133</width>
+				<height>75</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+			</control>
+			<control>
+				<description>Audio Codec</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1185</posX>
+				<posY>982</posY>
+				<width>133</width>
+				<height>75</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+			</control>
+			<control>
+				<description>Audio Channels</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1320</posX>
+				<posY>982</posY>
+				<width>133</width>
+				<height>75</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+			</control>
+			<control>
+				<description>Video Format</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1455</posX>
+				<posY>982</posY>
+				<width>133</width>
+				<height>75</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+			</control>
+			<control>
+				<description>Subtitles</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1590</posX>
+				<posY>982</posY>
+				<width>133</width>
+				<height>75</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+			</control>
+			<control>
+				<description>Fps</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>1725</posX>
+				<posY>982</posY>
+				<width>133</width>
+				<height>75</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\empty.png</texture>
+			</control>
+			<control>
+				<description>Fps label</description>
+				<id>0</id>
+				<type>label</type>
+				<posX>1725</posX>
+				<posY>1014</posY>
+				<!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
+				<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
+				<font>font11</font>
+				<align>center</align>
+				<width>109</width>
+			</control>
+			<control>
+				<description>Fps label</description>
+				<id>0</id>
+				<type>label</type>
+				<posX>1725</posX>
+				<posY>1035</posY>
+				<label>fps</label>
+				<font>font7</font>
+				<align>center</align>
+				<width>109</width>
+			</control>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-579</posX>
+			<posY>4</posY>
+			<width>627</width>
+			<height>1071</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+control.hasfocus(6)</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>66621</defaultcontrol>
+			<onexit>2</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>150</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(6)</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>579</width>
+				<height>79</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66621</id>
+					<type>button</type>
+					<label>IMDb Movie Trailers</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:IMDb Movie Trailers|search:#(iif(neq(#MovingPictures.SelectedMovie.imdb_id,''),#MovingPictures.SelectedMovie.imdb_id,#MovingPictures.SelectedMovie.title))|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>17</onup>
+					<onright>6</onright>
+					<ondown>66622</ondown>
+				</control>
+				<control>
+					<description>Onlinevideos Trailers</description>
+					<id>66622</id>
+					<type>button</type>
+					<label>iTunes Movie Trailers</label>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:iTunes Movie Trailers|search:#MovingPictures.SelectedMovie.title|return:Locked</hyperlinkParameter>
+					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<onup>66621</onup>
+					<onright>6</onright>
+					<ondown>66625</ondown>
+				</control>
+				<control>
+					<description>Trailer Search (YouTube)</description>
+					<type>button</type>
+					<id>66625</id>
+					<label>YouTube</label>
+					<ondown>66623</ondown>
+					<onup>66622</onup>
+					<onright>6</onright>
+					<hyperlink>4755</hyperlink>
+					<hyperlinkParameter>site:YouTube|search:#MovingPictures.SelectedMovie.title|return:Locked</hyperlinkParameter>
+				</control>
+				<control>
+					<description>SubCentral</description>
+					<id>66623</id>
+					<type>button</type>
+					<label>Sub Central</label>
+					<hyperlink>84623</hyperlink>
+					<visible>plugin.isenabled(SubCentral)</visible>
+					<onup>66625</onup>
+					<onright>6</onright>
+					<ondown>66624</ondown>
+				</control>
+				<control>
+					<description>dlCentral</description>
+					<type>button</type>
+					<id>66624</id>
+					<label>Download Central</label>
+					<hyperlink>181966</hyperlink>
+					<ondown>97258</ondown>
+					<onup>66623</onup>
+					<onright>6</onright>
+					<visible>plugin.isenabled(dlCentral)</visible>
+				</control>
+				<control>
+					<description>Add to Trakt Movie/Show Watch List</description>
+					<type>button</type>
+					<id>97258</id>
+					<label>#Trakt.Translation.AddToWatchList.Label</label>
+					<onup>66624</onup>
+					<ondown>97261</ondown>
+					<onright>6</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Add to Custom List</description>
+					<type>button</type>
+					<id>97261</id>
+					<label>#Trakt.Translation.AddToList.Label</label>
+					<onup>97258</onup>
+					<ondown>97259</ondown>
+					<onright>6</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Rate</description>
+					<type>button</type>
+					<id>97259</id>
+					<label>Trakt #Trakt.Translation.Rate.Label</label>
+					<onup>97261</onup>
+					<ondown>97260</ondown>
+					<onright>6</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Shouts List</description>
+					<type>button</type>
+					<id>97260</id>
+					<label>Trakt #Trakt.Translation.Shouts.Label</label>
+					<onup>97259</onup>
+					<ondown>97262</ondown>
+					<onright>6</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+				<control>
+					<description>Trakt Related Movies</description>
+					<type>button</type>
+					<id>97262</id>
+					<label>#Trakt.Translation.RelatedMovies.Label</label>
+					<onup>97260</onup>
+					<ondown>66621</ondown>
+					<onright>6</onright>
+					<visible>plugin.isenabled(Trakt)</visible>
+				</control>
+			</control>
+		</control>
+		<!-- Dim background when movie starts -->
+		<!-- This is to provide feedback to the user something is happening when there are long pauses before playback -->
+		<control>
+			<description>Playing Animation</description>
+			<type>animation</type>
+			<id>0</id>
+			<posX>888</posX>
+			<posY>468</posY>
+			<width>144</width>
+			<height>144</height>
+			<textures>common.waiting.1.png;common.waiting.2.png;common.waiting.3.png;common.waiting.4.png;common.waiting.5.png;common.waiting.6.png;common.waiting.7.png;common.waiting.8.png</textures>
+			<Duration>0:0:01.5</Duration>
+			<keepaspectratio>yes</keepaspectratio>
+			<visible>control.isvisible(18)+!control.isvisible(50)+!control.isvisible(51)</visible>
+		</control>
+	</controls>
+</window>
