@@ -9,14 +9,13 @@
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
-			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false" condition="!player.hasmedia">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false" condition="!player.hasmedia">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)|control.hasfocus(97262)|control.hasfocus(97263)|control.hasfocus(97264)]">conditional</animation>
 			<control>
 				<description>Date</description>
 				<type>label</type>
@@ -28,7 +27,7 @@
 				<font>font11</font>
 				<visible>!plugin.isenabled(World Weather)</visible>
 				<textcolor>aaffffff</textcolor>
-			</control> 
+			</control>
 			<control>
 				<description>Date</description>
 				<type>label</type>
@@ -55,7 +54,7 @@
 			<control>
 				<type>fadelabel</type>
 				<width>850</width>
-				<wrapString> : : : </wrapString>
+				<wrapString>: : :</wrapString>
 				<id>0</id>
 				<posX>30</posX>
 				<posY>10</posY>
@@ -67,15 +66,15 @@
 			<control>
 				<description>REAL Current program title</description>
 				<type>fadelabel</type>
-				<id>13</id>
+				<id>131</id>
 				<posX>30</posX>
 				<posY>75</posY>
 				<width>360</width>
 				<font>font22</font>
 				<label>#TV.View.title</label>
 				<textcolor>FFFFFFFF</textcolor>
-				<wrapString> : : : </wrapString>
-			</control> 
+				<wrapString>: : :</wrapString>
+			</control>
 			<control>
 				<description>Current channel</description>
 				<type>fadelabel</type>
@@ -87,7 +86,7 @@
 				<label>#TV.View.channel</label>
 				<align>left</align>
 				<textcolor>90ffffff</textcolor>
-				<wrapString> : : : </wrapString>
+				<wrapString>: : :</wrapString>
 			</control>
 			<control>
 				<description>Current program time</description>
@@ -98,7 +97,7 @@
 				<width>360</width>
 				<label>#TV.View.start - #TV.View.stop</label>
 				<textcolor>ffffffff</textcolor>
-				<wrapString> : : : </wrapString>
+				<wrapString>: : :</wrapString>
 			</control>
 			<control>
 				<description>genre</description>
@@ -133,11 +132,11 @@
 				<onleft>2</onleft>
 				<onright>2</onright>
 				<action>18</action>
-				<textureFocus>tv_green_border.png</textureFocus>	
+				<textureFocus>tv_green_border.png</textureFocus>
 				<animation effect="fade" time="250" delay="150">WindowOpen</animation>
 				<animation effect="fade" time="250" delay="0">WindowClose</animation>
 				<animation effect="fade" time="250" delay="150">visible</animation>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]</visible>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)|control.hasfocus(97262)|control.hasfocus(97263)|control.hasfocus(97264)]</visible>
 			</control>
 			<control>
 				<description>TV background</description>
@@ -174,7 +173,7 @@
 					<posY>493</posY>
 					<width>763</width>
 					<label>#TV.View.Percentage</label>
-				</control>  
+				</control>
 				<control>
 					<description>Current program time</description>
 					<type>label</type>
@@ -240,10 +239,7 @@
 					<shadowColor>FF000000</shadowColor>
 				</control>
 			</control>
-
 		</control>
-		
-	
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -253,7 +249,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)|control.hasfocus(97262)|control.hasfocus(97263)|control.hasfocus(97264)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -262,10 +258,10 @@
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
-			<onexit>0</onexit>
-			<buttonX>0</buttonX>
+			<onexit>97262</onexit>
+			<buttonX>30</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>385</buttonwidth>
+			<buttonwidth>355</buttonwidth>
 			<buttonheight>720</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
@@ -295,25 +291,26 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>924</label><width>333</width>
+				<label>924</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
 			</control>
 			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>47</posY>
-				<width>385</width>
-				<height>53</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
-			<control>
 				<type>group</type>
 				<layout>StackLayout(0, Vertical, true)</layout>
 				<posX>0</posX>
-				<posY>100</posY>
+				<posY>47</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>47</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>bg_button_nofocus.png</texture>
+				</control>
 				<control>
 					<description>TVGuide</description>
 					<type>button</type>
@@ -322,7 +319,7 @@
 					<onup>17</onup>
 					<ondown>3</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>Search TVGuide</description>
@@ -332,7 +329,7 @@
 					<onup>2</onup>
 					<ondown>4</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>Recordings</description>
@@ -342,7 +339,7 @@
 					<onup>3</onup>
 					<ondown>5</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>Channel button</description>
@@ -352,7 +349,7 @@
 					<onup>4</onup>
 					<ondown>6</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>TV On/Off button</description>
@@ -362,7 +359,7 @@
 					<onup>5</onup>
 					<ondown>7</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>UpcomingPrograms</description>
@@ -372,7 +369,7 @@
 					<onup>6</onup>
 					<ondown>8</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>ActiveRecordings</description>
@@ -382,6 +379,7 @@
 					<onup>7</onup>
 					<ondown>9</ondown>
 					<onright>99</onright>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>Teletext</description>
@@ -391,7 +389,7 @@
 					<onup>8</onup>
 					<ondown>1313</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>TvWishList</description>
@@ -402,8 +400,17 @@
 					<onup>9</onup>
 					<ondown>2</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 					<visible>plugin.isenabled(TvWishListMP)</visible>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>600</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>arrow_menu_left.png</texture>
 				</control>
 				<!--<control>
         <description>Schedules</description>
@@ -416,6 +423,108 @@
 			</control>
 		</control>
 
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>97262</defaultcontrol>
+			<onexit>2</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>30</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(97262)|control.hasfocus(97263)|control.hasfocus(97264)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>924</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+
+
+
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>47</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>47</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>bg_button_nofocus.png</texture>
+				</control>
+				<control>
+					<description>Tv Settings</description>
+					<type>button</type>
+					<id>97262</id>
+					<onleft>2</onleft>
+					<onup>17</onup>
+					<ondown>97263</ondown>
+					<label>Client Settings</label>
+					<hyperlink>49857</hyperlink>
+				</control>
+				<control>
+					<description>Server Settings</description>
+					<type>button</type>
+					<id>97263</id>
+					<onleft>2</onleft>
+					<onup>97262</onup>
+					<ondown>97264</ondown>
+					<label>Server Settings</label>
+					<hyperlink>49855</hyperlink>
+				</control>
+				<control>
+					<description>Channel Management</description>
+					<type>button</type>
+					<id>97264</id>
+					<onleft>2</onleft>
+					<onup>97263</onup>
+					<ondown>97262</ondown>
+					<label>Channel Management</label>
+					<hyperlink>49856</hyperlink>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>600</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>arrow_menu_left.png</texture>
+				</control>
+			</control>
+
+		</control>
 		<control>
 			<description>DUMMY BUTTON</description>
 			<type>button</type>
@@ -431,7 +540,14 @@
 			<textureNoFocus>-</textureNoFocus>
 			<!-- <scrollWrapString/> -->
 		</control>
-		
+		<control>
+			<description>Dummy label to hold global settings for this skin!</description>
+			<type>label</type>
+			<id>420</id>
+			<label>#settings:logo-icon-size=84,84;guide_time=Center</label>
+			<visible>no</visible>
+		</control>
+
 		<!-- NOT USED -->
 
 		<control>
@@ -441,8 +557,7 @@
 			<posX>1460</posX>
 			<posY>529</posY>
 			<texture>tvguide_record_button.png</texture>
-			<visible>no</visible>			
+			<visible>no</visible>
 		</control>
-		
 	</controls>
 </window>
