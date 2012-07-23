@@ -141,7 +141,7 @@
 			<height>320</height>
 			<texture>gradient.png</texture>
 			<visible>[facadeview.filmstrip|facadeview.coverflow]+control.isvisible(50)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="250">visible</animation>
 			<animation effect="fade" time="150">WindowOpen</animation>
 			<animation effect="fade" time="150">WindowClose</animation>	
 		</control>
@@ -173,7 +173,7 @@
 				<height>53</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>facadeview.list+control.isvisible(50)</visible>
+				<visible>facadeview.list+control.isvisible(50)+[!string.equals(#mvCentral.Playlist.Count,)+!string.equals(#mvCentral.Playlist.Count,0)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 			<control>
@@ -184,18 +184,6 @@
 				<width>948</width>
 				<height>766</height>
 				<texture>bg_facade.png</texture>
-				<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>490</posX>
-				<posY>47</posY>
-				<width>790</width>
-				<height>53</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
 				<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
@@ -219,7 +207,7 @@
 				<height>53</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>facadeview.playlist+control.isvisible(50)</visible>
+				<visible>facadeview.playlist+control.isvisible(50)+[!string.equals(#mvCentral.Playlist.Count,)+!string.equals(#mvCentral.Playlist.Count,0)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 			<control>
@@ -259,7 +247,7 @@
 					<renderUnfocusText>yes</renderUnfocusText>
 					<imageFolder>-</imageFolder>
 					<imageFolderFocus>-</imageFolderFocus>
-					<thumbZoom>no</thumbZoom>
+					<thumbZoom>yes</thumbZoom>
 					<enableFocusZoom>no</enableFocusZoom>
 					<textXOff>2</textXOff>
 					<textYOff>2</textYOff>
