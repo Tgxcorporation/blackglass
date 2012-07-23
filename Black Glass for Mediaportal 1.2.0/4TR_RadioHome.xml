@@ -9,11 +9,10 @@
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
-			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false" condition="!player.hasmedia">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false" condition="!player.hasmedia">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]">conditional</animation>
@@ -28,7 +27,7 @@
 				<font>font11</font>
 				<visible>!plugin.isenabled(World Weather)</visible>
 				<textcolor>aaffffff</textcolor>
-			</control> 
+			</control>
 			<control>
 				<description>Date</description>
 				<type>label</type>
@@ -55,7 +54,7 @@
 			<control>
 				<type>fadelabel</type>
 				<width>850</width>
-				<wrapString> : : : </wrapString>
+				<wrapString>: : :</wrapString>
 				<id>0</id>
 				<posX>30</posX>
 				<posY>10</posY>
@@ -67,15 +66,15 @@
 			<control>
 				<description>REAL Current program title</description>
 				<type>fadelabel</type>
-				<id>13</id>
+				<id>131</id>
 				<posX>30</posX>
 				<posY>75</posY>
 				<width>360</width>
 				<font>font22</font>
 				<label>#Radio.View.title</label>
 				<textcolor>FFFFFFFF</textcolor>
-				<wrapString> : : : </wrapString>
-			</control> 
+				<wrapString>: : :</wrapString>
+			</control>
 			<control>
 				<description>Current channel</description>
 				<type>fadelabel</type>
@@ -87,7 +86,7 @@
 				<label>#Radio.View.channel</label>
 				<align>left</align>
 				<textcolor>90ffffff</textcolor>
-				<wrapString> : : : </wrapString>
+				<wrapString>: : :</wrapString>
 			</control>
 			<control>
 				<description>Current program time</description>
@@ -98,7 +97,7 @@
 				<width>360</width>
 				<label>#Radio.View.start - #Radio.View.stop</label>
 				<textcolor>ffffffff</textcolor>
-				<wrapString> : : : </wrapString>
+				<wrapString>: : :</wrapString>
 			</control>
 			<control>
 				<description>genre</description>
@@ -133,7 +132,7 @@
 				<onleft>2</onleft>
 				<onright>2</onright>
 				<action>18</action>
-				<textureFocus>tv_green_border.png</textureFocus>	
+				<textureFocus>tv_green_border.png</textureFocus>
 				<animation effect="fade" time="250" delay="150">WindowOpen</animation>
 				<animation effect="fade" time="250" delay="0">WindowClose</animation>
 				<animation effect="fade" time="250" delay="150">visible</animation>
@@ -174,7 +173,7 @@
 					<posY>493</posY>
 					<width>763</width>
 					<label>#Radio.View.Percentage</label>
-				</control>  
+				</control>
 				<control>
 					<description>Current program time</description>
 					<type>label</type>
@@ -240,10 +239,7 @@
 					<shadowColor>FF000000</shadowColor>
 				</control>
 			</control>
-
 		</control>
-
-
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -315,7 +311,6 @@
 				<layout>StackLayout(0, Vertical, true)</layout>
 				<posX>0</posX>
 				<posY>100</posY>
-
 				<control>
 					<description>TVGuide</description>
 					<type>button</type>
@@ -376,8 +371,6 @@
 				</control>
 			</control>
 		</control>
-
-
 		<control>
 			<description>DUMMY BUTTON</description>
 			<type>button</type>
@@ -393,9 +386,15 @@
 			<textureNoFocus>-</textureNoFocus>
 			<!-- <scrollWrapString/> -->
 		</control>
-		
+		<control>
+			<description>Dummy label to hold global settings for this skin!</description>
+			<type>label</type>
+			<id>420</id>
+			<label>#settings:logo-icon-size=84,84;guide_time=Center</label>
+			<visible>no</visible>
+		</control>
 		<!-- NOT USED -->
-
+		
 		<control>
 			<description>record pin</description>
 			<type>image</type>
@@ -403,9 +402,7 @@
 			<posX>1460</posX>
 			<posY>529</posY>
 			<texture>tvguide_record_button.png</texture>
-			<visible>no</visible>			
+			<visible>no</visible>
 		</control>
-
-	
 	</controls>
 </window>
