@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
 	<id>1</id>
@@ -6,7 +6,7 @@
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:605</define>
 	<define>#header.background:hover_my tv.png</define>
-	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<animation effect="fade" end="100" start="100" time="250">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
@@ -14,9 +14,9 @@
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="!player.hasmedia">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false" condition="!player.hasmedia">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]">conditional</animation>
+			<animation condition="!player.hasmedia" easing="out" effect="slide" reversible="false" start="1350,0" time="200" tween="circle">WindowOpen</animation>
+			<animation condition="!player.hasmedia" easing="out" effect="slide" end="1350,0" reversible="false" time="200" tween="circle">WindowClose</animation>
+			<animation condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)|control.hasfocus(97262)|control.hasfocus(97263)|control.hasfocus(97264)]" easing="in" effect="slide" end="291,0" time="200" tween="sine">conditional</animation>
 			<control>
 				<description>Date</description>
 				<type>label</type>
@@ -67,7 +67,7 @@
 			<control>
 				<description>REAL Current program title</description>
 				<type>fadelabel</type>
-				<id>13</id>
+				<id>131</id>
 				<posX>45</posX>
 				<posY>112</posY>
 				<width>540</width>
@@ -134,10 +134,10 @@
 				<onright>2</onright>
 				<action>18</action>
 				<textureFocus>tv_green_border.png</textureFocus>
-				<animation effect="fade" time="250" delay="150">WindowOpen</animation>
-				<animation effect="fade" time="250" delay="0">WindowClose</animation>
-				<animation effect="fade" time="250" delay="150">visible</animation>
-				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]</visible>
+				<animation delay="150" effect="fade" time="250">WindowOpen</animation>
+				<animation delay="0" effect="fade" time="250">WindowClose</animation>
+				<animation delay="150" effect="fade" time="250">visible</animation>
+				<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)|control.hasfocus(97262)|control.hasfocus(97263)|control.hasfocus(97264)]</visible>
 			</control>
 			<control>
 				<description>TV background</description>
@@ -149,14 +149,14 @@
 				<height>843</height>
 				<colordiffuse>ffffffff</colordiffuse>
 				<texture>TVCase.png</texture>
-				<animation effect="fade" time="250" delay="150">WindowOpen</animation>
-				<animation effect="fade" time="250" delay="0">WindowClose</animation>
+				<animation delay="150" effect="fade" time="250">WindowOpen</animation>
+				<animation delay="0" effect="fade" time="250">WindowClose</animation>
 			</control>
 			<control>
 				<type>group</type>
 				<dimColor>ffffffff</dimColor>
 				<visible>!player.hasmedia</visible>
-				<animation effect="fade" time="250" delay="0">visiblechange</animation>
+				<animation delay="0" effect="fade" time="250">visiblechange</animation>
 				<control>
 					<description>Progress background</description>
 					<type>image</type>
@@ -214,7 +214,7 @@
 					<height>150</height>
 					<keepaspectratio>yes</keepaspectratio>
 					<centered>yes</centered>
-					<texture flipY="true" diffuse="Thumb_Mask.png">#TV.View.thumb</texture>
+					<texture diffuse="Thumb_Mask.png" flipY="true">#TV.View.thumb</texture>
 				</control>
 				<control>
 					<description>background up</description>
@@ -250,7 +250,7 @@
 			<height>1071</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)|control.hasfocus(97262)|control.hasfocus(97263)|control.hasfocus(97264)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -259,10 +259,10 @@
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
-			<onexit>0</onexit>
-			<buttonX>0</buttonX>
+			<onexit>97262</onexit>
+			<buttonX>45</buttonX>
 			<buttonY>0</buttonY>
-			<buttonwidth>577</buttonwidth>
+			<buttonwidth>532</buttonwidth>
 			<buttonheight>1080</buttonheight>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
@@ -270,13 +270,13 @@
 			<height>1080</height>
 			<dimColor>ffffffff</dimColor>
 			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]</visible>
-			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<animation effect="fade" reversible="false" start="75" time="250">visible</animation>
+			<animation easing="out" effect="slide" reversible="false" start="-312,0" time="250" tween="circle">visible</animation>
+			<animation effect="fade" end="75" reversible="false" time="250">hidden</animation>
+			<animation easing="out" effect="slide" end="-312,0" reversible="false" time="250" tween="circle">hidden</animation>
+			<animation effect="slide" end="-600,0" reversible="false" time="150">WindowClose</animation>
+			<animation easing="out" effect="slide" reversible="false" start="-312,0" time="250" tween="circle">WindowOpen</animation>
+			<animation effect="fade" reversible="false" start="75" time="250">WindowOpen</animation>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -299,19 +299,19 @@
 				<textcolor>ffffffff</textcolor>
 			</control>
 			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>71</posY>
-				<width>579</width>
-				<height>79</height>
-				<texture>bg_button_nofocus.png</texture>
-			</control>
-			<control>
 				<type>group</type>
 				<layout>StackLayout(0, Vertical, true)</layout>
 				<posX>0</posX>
-				<posY>150</posY>
+				<posY>71</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>71</posY>
+					<width>579</width>
+					<height>79</height>
+					<texture>bg_button_nofocus.png</texture>
+				</control>
 				<control>
 					<description>TVGuide</description>
 					<type>button</type>
@@ -320,7 +320,7 @@
 					<onup>17</onup>
 					<ondown>3</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>Search TVGuide</description>
@@ -330,7 +330,7 @@
 					<onup>2</onup>
 					<ondown>4</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>Recordings</description>
@@ -340,7 +340,7 @@
 					<onup>3</onup>
 					<ondown>5</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>Channel button</description>
@@ -350,7 +350,7 @@
 					<onup>4</onup>
 					<ondown>6</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>TV On/Off button</description>
@@ -360,7 +360,7 @@
 					<onup>5</onup>
 					<ondown>7</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>UpcomingPrograms</description>
@@ -370,7 +370,7 @@
 					<onup>6</onup>
 					<ondown>8</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>ActiveRecordings</description>
@@ -380,6 +380,7 @@
 					<onup>7</onup>
 					<ondown>9</ondown>
 					<onright>99</onright>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>Teletext</description>
@@ -389,7 +390,7 @@
 					<onup>8</onup>
 					<ondown>1313</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 				</control>
 				<control>
 					<description>TvWishList</description>
@@ -400,8 +401,17 @@
 					<onup>9</onup>
 					<ondown>2</ondown>
 					<onright>99</onright>
-					<onleft>99</onleft>
+					<onleft>97262</onleft>
 					<visible>plugin.isenabled(TvWishListMP)</visible>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>900</posY>
+					<width>577</width>
+					<height>79</height>
+					<texture>arrow_menu_left.png</texture>
 				</control>
 				<!--<control>
         <description>Schedules</description>
@@ -411,6 +421,104 @@
         <onup>5</onup>
         <ondown>2</ondown>
       </control>-->
+			</control>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>97262</defaultcontrol>
+			<onexit>2</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>45</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(97262)|control.hasfocus(97263)|control.hasfocus(97264)]</visible>
+			<animation effect="fade" reversible="false" start="75" time="250">visible</animation>
+			<animation easing="out" effect="slide" reversible="false" start="-312,0" time="250" tween="circle">visible</animation>
+			<animation effect="fade" end="75" reversible="false" time="250">hidden</animation>
+			<animation easing="out" effect="slide" end="-312,0" reversible="false" time="250" tween="circle">hidden</animation>
+			<animation effect="slide" end="-600,0" reversible="false" time="150">WindowClose</animation>
+			<animation easing="out" effect="slide" reversible="false" start="-312,0" time="250" tween="circle">WindowOpen</animation>
+			<animation effect="fade" reversible="false" start="75" time="250">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>71</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>71</posY>
+					<width>579</width>
+					<height>79</height>
+					<texture>bg_button_nofocus.png</texture>
+				</control>
+				<control>
+					<description>Tv Settings</description>
+					<type>button</type>
+					<id>97262</id>
+					<onleft>2</onleft>
+					<onup>17</onup>
+					<ondown>97263</ondown>
+					<label>Client Settings</label>
+					<hyperlink>49857</hyperlink>
+				</control>
+				<control>
+					<description>Server Settings</description>
+					<type>button</type>
+					<id>97263</id>
+					<onleft>2</onleft>
+					<onup>97262</onup>
+					<ondown>97264</ondown>
+					<label>Server Settings</label>
+					<hyperlink>49855</hyperlink>
+				</control>
+				<control>
+					<description>Channel Management</description>
+					<type>button</type>
+					<id>97264</id>
+					<onleft>2</onleft>
+					<onup>97263</onup>
+					<ondown>97262</ondown>
+					<label>Channel Management</label>
+					<hyperlink>49856</hyperlink>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>900</posY>
+					<width>577</width>
+					<height>79</height>
+					<texture>arrow_menu_left.png</texture>
+				</control>
 			</control>
 		</control>
 		<control>
@@ -426,6 +534,13 @@
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
 			<!-- <scrollWrapString/> -->
+		</control>
+		<control>
+			<description>Dummy label to hold global settings for this skin!</description>
+			<type>label</type>
+			<id>420</id>
+			<label>#settings:logo-icon-size=84,84;guide_time=Center</label>
+			<visible>no</visible>
 		</control>
 		<!-- NOT USED -->
 		<control>
