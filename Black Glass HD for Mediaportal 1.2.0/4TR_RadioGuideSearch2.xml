@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--version="1.0" encoding="utf-8" standalone="yes"-->
 <window>
 	<id>49851</id>
 	<defaultcontrol>2</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<allowoverlay>player.hasmedia</allowoverlay>
 	<define>#header.label:724</define>
 	<define>#header.background:hover_my radio.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
@@ -31,10 +31,11 @@
 				<type>image</type>
 				<id>0</id>
 				<posX>735</posX>
-				<posY>71</posY>
+				<posY>70</posY>
 				<width>1185</width>
 				<height>79</height>
 				<texture>bg_facade_line_nofocus.png</texture>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
 				<colordiffuse>77ffffff</colordiffuse>
 			</control>
 			<control>
@@ -42,9 +43,21 @@
 				<type>label</type>
 				<id>0</id>
 				<posX>765</posX>
-				<posY>989</posY>
+				<posY>997</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<visible>![!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>997</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
 				<textcolor>60ffffff</textcolor>
 			</control>
 			<control>
@@ -137,6 +150,16 @@
 				<textcolor>90FFFFFF</textcolor>
 			</control>
 			<control>
+				<type>label</type>
+				<description>genre</description>
+				<id>17</id>
+				<posX>45</posX>
+				<posY>262</posY>
+				<width>555</width>
+				<label>#Radio.Search.Genre</label>
+				<textcolor>ffffff</textcolor>
+			</control>
+			<control>
 				<type>textboxscrollup</type>
 				<description>Description1</description>
 				<id>15</id>
@@ -165,16 +188,6 @@
 				<visible>!player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<type>label</type>
-				<description>genre</description>
-				<id>17</id>
-				<posX>45</posX>
-				<posY>262</posY>
-				<width>555</width>
-				<label>#Radio.Search.Genre</label>
-				<textcolor>ffffff</textcolor>
 			</control>
 		</control>
 		<control>
@@ -250,30 +263,51 @@
 				<posY>150</posY>
 				<control>
 					<type>button</type>
-					<description>Search by title</description>
+					<description>Search</description>
 					<id>2</id>
-					<onleft>2</onleft>
 					<onright>10</onright>
 					<onup>17</onup>
+					<ondown>6</ondown>
+					<label>137</label>
+				</control>
+				<control>
+					<type>button</type>
+					<id>6</id>
+					<onright>10</onright>
+					<onup>2</onup>
+					<ondown>7</ondown>
+					<label>Search method:</label>
+				</control>
+				<control>
+					<type>button</type>
+					<id>7</id>
+					<onright>10</onright>
+					<onup>6</onup>
+					<ondown>8</ondown>
+					<label>602</label>
+				</control>
+				<control>
+					<type>button</type>
+					<id>8</id>
+					<onright>10</onright>
+					<onup>7</onup>
 					<ondown>3</ondown>
-					<label>6032</label>
+					<label>174</label>
 				</control>
 				<control>
 					<type>button</type>
 					<id>3</id>
-					<onleft>2</onleft>
 					<onright>10</onright>
-					<onup>2</onup>
+					<onup>8</onup>
 					<ondown>4</ondown>
 					<label>192</label>
 				</control>
 				<control>
 					<type>sortbutton</type>
 					<id>4</id>
-					<onleft>3</onleft>
 					<onright>10</onright>
 					<onup>3</onup>
-					<ondown>99</ondown>
+					<ondown>2</ondown>
 					<label>620</label>
 				</control>
 			</control>
