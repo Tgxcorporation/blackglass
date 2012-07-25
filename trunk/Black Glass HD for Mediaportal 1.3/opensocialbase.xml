@@ -142,7 +142,7 @@
 				<height>79</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>facadeview.list+control.isvisible(50)</visible>
+				<visible>facadeview.list+control.isvisible(50)+[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
 			<control>
@@ -153,18 +153,6 @@
 				<width>1422</width>
 				<height>1149</height>
 				<texture>bg_facade.png</texture>
-				<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>735</posX>
-				<posY>71</posY>
-				<width>1185</width>
-				<height>79</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
 				<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
@@ -188,7 +176,7 @@
 				<height>79</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>facadeview.playlist+control.isvisible(50)</visible>
+				<visible>facadeview.playlist+control.isvisible(50)+[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
 			<control>
@@ -211,7 +199,7 @@
 				<height>79</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>facadeview.album+control.isvisible(50)</visible>
+				<visible>facadeview.album+control.isvisible(50)+[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
 			<control>
@@ -235,6 +223,8 @@
 					<id>50</id>
 					<textXOff2>1155</textXOff2>
 					<textYOff2>97</textYOff2>
+					<textcolor2>ffb0b0b0</textcolor2> 
+					<textcolor3>ffb0b0b0</textcolor3> 
 					<itemWidth>180</itemWidth>
 					<itemHeight>135</itemHeight>
 					<IconYOff>12</IconYOff>
@@ -255,20 +245,20 @@
 					<onleft>5</onleft>
 					<onright>5</onright>
 					<posX>750</posX>
-					<posY>165</posY>
+					<posY>142</posY>
 					<width>1222</width>
-					<height>900</height>
+					<height>825</height>
 					<scrollOffset>1</scrollOffset>
-					<itemWidth>147</itemWidth>
-					<itemHeight>129</itemHeight>
+					<itemWidth>145</itemWidth>
+					<itemHeight>135</itemHeight>
 					<textureWidth>124</textureWidth>
 					<textureHeight>94</textureHeight>
 					<thumbWidth>115</thumbWidth>
 					<thumbHeight>84</thumbHeight>
 					<thumbPosX>4</thumbPosX>
 					<thumbPosY>4</thumbPosY>
-					<itemWidthBig>292</itemWidthBig>
-					<itemHeightBig>261</itemHeightBig>
+					<itemWidthBig>287</itemWidthBig>
+					<itemHeightBig>271</itemHeightBig>
 					<thumbWidthBig>265</thumbWidthBig>
 					<thumbHeightBig>199</thumbHeightBig>
 					<textureWidthBig>283</textureWidthBig>
@@ -281,7 +271,7 @@
 					<renderUnfocusText>yes</renderUnfocusText>
 					<imageFolder>-</imageFolder>
 					<imageFolderFocus>-</imageFolderFocus>
-					<thumbZoom>no</thumbZoom>
+					<thumbZoom>yes</thumbZoom>
 					<enableFocusZoom>no</enableFocusZoom>
 					<textXOff>3</textXOff>
 					<textYOff>3</textYOff>
