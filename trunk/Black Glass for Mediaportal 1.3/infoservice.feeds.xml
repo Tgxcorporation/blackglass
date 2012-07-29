@@ -56,7 +56,20 @@
 				<height>53</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
+				<visible>[!string.equals(#infoservice.feed.itemcount,)+!string.equals(#infoservice.feed.itemcount,0)]</visible>
 			</control>
+			<control>
+				<type>label</type>
+				<description>Number of Files Label</description>
+				<posX>510</posX>
+				<posY>665</posY>
+				<label>#infoservice.feed.itemcount #infoservice.feed.itemtype</label>
+				<!-- <label>#infoservice.feed.itemcount #itemtype</label> -->
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+
 			<control>
 				<type>group</type>
 				<description>group element</description>
@@ -91,7 +104,7 @@
 				<texture>#infoservice.feed.img</texture>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
-				</control>
+			</control>
 			<control>
 				<description>Channel name label</description>
 				<type>fadelabel</type>
@@ -130,7 +143,7 @@
 				<centered>yes</centered>
 				<keepaspectratio>yes</keepaspectratio>
 				<zoom>no</zoom>
-				</control>
+			</control>
 			<control>
 				<description>Site Logo</description>
 				<type>image</type>
@@ -140,7 +153,7 @@
 				<width>195</width>
 				<height>150</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">OverlayCase.png</texture>
-				</control>
+			</control>
 
 			<control>
 				<description>Chosen Story description</description>
@@ -174,17 +187,7 @@
 				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 
-			<control>
-				<type>label</type>
-				<description>Number of Files Label</description>
-				<posX>510</posX>
-				<posY>665</posY>
-				<label>#infoservice.feed.itemcount #infoservice.feed.itemtype</label>
-				<!-- <label>#infoservice.feed.itemcount #itemtype</label> -->
-				<font>font16</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-			</control>
+
 		</control>
 
 

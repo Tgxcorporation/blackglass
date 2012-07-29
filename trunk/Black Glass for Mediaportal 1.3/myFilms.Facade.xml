@@ -17,12 +17,13 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
+			<dimColor>ffffffff</dimColor>
+			<visible>facadeview.list+[control.isvisible(50)]</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="400,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="191,0" condition="!control.hasfocus(50)">conditional</animation>
-			<dimColor>ffffffff</dimColor>
-
 			<control>
 				<description>Backdrop Overlay - ListView</description>
 				<type>image</type>
@@ -32,10 +33,7 @@
 				<width>948</width>
 				<height>766</height>
 				<texture>bg_facade.png</texture>
-				<visible>facadeview.list+[control.isvisible(50)]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="400,0">visible</animation>
 			</control>
-
 			<control>
 				<type>image</type>
 				<posX>897</posX>
@@ -44,10 +42,30 @@
 				<height>53</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>facadeview.list+control.isvisible(50)+[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="400,0">visible</animation>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
 			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>915</posX>
+				<posY>665</posY>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<label>#itemcount #(L(507))</label>
+			</control>
+		</control>
 
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<dimColor>ffffffff</dimColor>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+[control.isvisible(50)]</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="191,0" condition="!control.hasfocus(50)">conditional</animation>
 			<control>
 				<description>Backdrop Overlay - ListView</description>
 				<type>image</type>
@@ -57,9 +75,28 @@
 				<width>948</width>
 				<height>766</height>
 				<texture>bg_facade.png</texture>
-				<visible>[facadeview.smallicons|facadeview.largeicons]+[control.isvisible(50)]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 			</control>
+			<control>
+				<type>label</type>
+				<id>0</id>
+				<posX>510</posX>
+				<posY>665</posY>
+				<font>font16</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<label>#itemcount #(L(507))</label>
+			</control>
+		</control>
+
+
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="191,0" condition="!control.hasfocus(50)">conditional</animation>
+			<dimColor>ffffffff</dimColor>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -415,30 +452,7 @@
 				<label>-</label>
 				<visible>facadeview.album</visible>
 			</control>
-			<control>
-				<type>label</type>
-				<id>0</id>
-				<posX>915</posX>
-				<posY>665</posY>
-				<font>font16</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-				<label>#itemcount #itemtype</label>
-				<visible>facadeview.list</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="400,0">visible</animation>
-			</control>
-			<control>
-				<type>label</type>
-				<id>0</id>
-				<posX>510</posX>
-				<posY>665</posY>
-				<font>font16</font>
-				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-				<label>#itemcount #itemtype</label>
-				<visible>facadeview.smallicons|facadeview.largeicons</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
-			</control>
+
 		</control>
 	</controls>
 </window>
