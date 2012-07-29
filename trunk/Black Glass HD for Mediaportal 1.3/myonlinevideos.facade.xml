@@ -19,6 +19,8 @@
 			<description>group element</description>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
+			<visible>[facadeview.list]+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -31,8 +33,6 @@
 				<width>1422</width>
 				<height>1149</height>
 				<texture>bg_facade.png</texture>
-				<visible>[facadeview.smallicons|facadeview.largeicons|facadeview.list]+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
 			<control>
 				<type>image</type>
@@ -43,9 +43,84 @@
 				<height>79</height>
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>[facadeview.list]+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]+[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
 			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>string.equals(#itemcount,)</visible>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+![String.Equals(#OnlineVideos.state,details)]</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>687</posX>
+				<posY>72</posY>
+				<width>1422</width>
+				<height>1149</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>0 #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>string.equals(#itemcount,)</visible>
+			</control>
+			<control>
+				<description>Itemcount Itemtype</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>765</posX>
+				<posY>989</posY>
+				<label>#itemcount #(L(507))</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>!string.equals(#itemcount,)</visible>
+			</control>
+		</control>
+
+
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
@@ -106,7 +181,7 @@
 					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 				</control>
 			</control>
-<!-- 			<control>
+			<!-- 			<control>
 				<type>label</type>
 				<description>dummy listcontrol</description>
 				<id>745381</id>
@@ -127,18 +202,7 @@
 				<label>-</label>
 				<visible>facadeview.largeicons</visible>
 			</control> -->
-			<control>
-				<description>Itemcount Itemtype</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>765</posX>
-				<posY>989</posY>
-				<label>#itemcount #(L(507))</label>
-				<font>font16</font>
-				<textcolor>60ffffff</textcolor>
-				<visible>[facadeview.smallicons|facadeview.largeicons|facadeview.list]+control.isvisible(50)+!String.Equals(#OnlineVideos.state,details)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
-			</control>
+
 		</control>
 	</controls>
 </window>
