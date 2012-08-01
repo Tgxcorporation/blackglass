@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>3003</id>
+	<defaultcontrol>220</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#play.progressbar.percentage:#TV.View.Percentage</define>
+	<define>#play.progressbar.currentplaytime:#TV.View.start</define>
+	<define>#play.progressbar.currentremaining:#TV.View.stop</define>
+	<controls>
+		<control>
+			<description>background</description>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>487</posY>
+			<width>1920</width>
+			<height>538</height>
+			<texture>bg_dialog.png</texture>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+		</control>
+		<control>
+			<type>image</type>
+			<id>999101</id>
+			<posX>46</posX>
+			<posY>535</posY>
+			<width>1828</width>
+			<height>90</height>
+			<texture>bg_tvguide_header.png</texture>
+			<colordiffuse>ffffffff</colordiffuse>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+		</control>
+		<!-- <control>
+			<type>image</type>
+			<id>999102</id>
+			<posX>31</posX>
+			<posY>364</posY>
+			<width>1219</width>
+			<height>53</height>
+			<texture>bg_facade4_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control> -->
+		<control>
+			<type>image</type>
+			<id>999103</id>
+			<posX>181</posX>
+			<posY>625</posY>
+			<width>3</width>
+			<height>356</height>
+			<texture>bg_button_vertical.png</texture>
+			<colordiffuse>c0ffffff</colordiffuse>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+		</control>
+		<control>
+			<description>TV Logo</description>
+			<id>102</id>
+			<type>image</type>
+			<posX>213</posX>
+			<posY>655</posY>
+			<width>355</width>
+			<height>265</height>
+			<texture>#TV.View.thumb</texture>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<description>Thumb</description>
+			<type>image</type>
+			<id>103</id>
+			<posX>201</posX>
+			<posY>640</posY>
+			<width>381</width>
+			<height>325</height>
+			<texture>bg_tv_channel.png</texture>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<!-- <control>
+			<description>TV Progress Bar</description>
+			<type>tvprogress</type>
+			<id>101</id>
+			<posX>-30</posX>
+			<posY>684</posY>
+			<width>1320</width>
+			<height>36</height>
+			<toptexture>-</toptexture>
+			<TextureOffsetY>10</TextureOffsetY>
+			<bottomtexture>-</bottomtexture>
+			<texturetick>-</texturetick>
+			<lefttexture>-</lefttexture>
+			<midtexture>-</midtexture>
+			<righttexture>-</righttexture>
+			<logotexture>-</logotexture>
+			<fillbackgroundtexture>-</fillbackgroundtexture>
+			<fillbgxoff>17</fillbgxoff>
+			<fillbgyoff>12</fillbgyoff>
+			<filltexture1>osd_progress_mid.png</filltexture1>
+			<filltexture2>osd_progress_mid_red.png</filltexture2>
+			<filltexture3>osd_progress_mid_green.png</filltexture3>
+			<fillheight>36</fillheight>
+			<label>#TV.Record.percent1</label>
+			<label1>#TV.Record.percent2</label1>
+			<label2>#TV.Record.percent3</label2>
+			<font>font13</font>
+			<textcolor>FF000000</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control> -->
+		<control>
+			<description>Channel Name</description>
+			<type>textboxscrollup</type>
+			<id>104</id>
+			<width>1770</width>
+			<height>67</height>
+			<posX>60</posX>
+			<posY>544</posY>
+			<font>font24</font>
+			<label>#TV.View.channel</label>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+			<wrapString> : : : </wrapString>
+			<textalign>center</textalign>
+		</control>
+		<control>
+			<description>On tv NOW</description>
+			<id>36</id>
+			<type>textbox</type>
+			<width>1200</width>
+			<height>48</height>
+			<posX>600</posX>
+			<posY>633</posY>
+			<align>left</align>
+			<font>font18</font>
+			<textcolor>aaFFFFFF</textcolor>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<id>999104</id>
+			<posX>582</posX>
+			<posY>615</posY>
+			<width>1290</width>
+			<height>79</height>
+			<texture>bg_facade4_line_nofocus.png</texture>
+			<!-- <colordiffuse>77ffffff</colordiffuse> -->
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<description>Plot</description>
+			<type>textboxscrollup</type>
+			<id>38</id>
+			<posX>600</posX>
+			<posY>705</posY>
+			<width>1200</width>
+			<height>195</height>
+			<align>left</align>
+			<label>#TV.View.description</label>
+			<font>font16</font>
+			<seperator>: : :</seperator>
+			<textcolor>FFFFFFFF</textcolor>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<id>999105</id>
+			<posX>582</posX>
+			<posY>831</posY>
+			<width>1290</width>
+			<height>79</height>
+			<texture>bg_facade4_line_nofocus.png</texture>
+			<!-- <colordiffuse>77ffffff</colordiffuse> -->
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<control>
+			<description>On tv NEXT</description>
+			<id>37</id>
+			<type>textbox</type>
+			<width>1200</width>
+			<height>48</height>
+			<posX>600</posX>
+			<posY>918</posY>
+			<font>font18</font>
+			<textcolor>aaFFFFFF</textcolor>
+			<animation effect="fade" time="100">visiblechange</animation>
+			<animation effect="fade" time="100">windowopen</animation>
+			<!-- <animation effect="fade" time="100">windowclose</animation> -->
+			<visible>![control.isvisible(800)|control.isvisible(700)|control.isvisible(500)]</visible>
+		</control>
+		<!-- NOT USED -->
+		<control>
+			<description>rec logo</description>
+			<type>image</type>
+			<id>39</id>
+			<width>37</width>
+			<posX>2194</posX>
+			<posY>-8</posY>
+			<centered>yes</centered>
+			<texture>rec.png</texture>
+			<keepaspectratio>yes</keepaspectratio>
+		</control>
+		<control>
+			<description>Program Button Up</description>
+			<type>button</type>
+			<id>33</id>
+			<posX>-346</posX>
+			<posY>774</posY>
+			<width>52</width>
+			<height>37</height>
+			<textureFocus>arrow_round_left_focus.png</textureFocus>
+			<textureNoFocus>arrow_round_left_nofocus.png</textureNoFocus>
+			<label>-</label>
+			<onleft>214</onleft>
+			<onright>34</onright>
+			<onup>33</onup>
+			<ondown>32</ondown>
+			<visible>no</visible>
+		</control>
+		<control>
+			<description>Program Button Down</description>
+			<type>button</type>
+			<id>34</id>
+			<posX>-1013</posX>
+			<posY>774</posY>
+			<width>52</width>
+			<height>37</height>
+			<textureFocus>arrow_round_right_focus.png</textureFocus>
+			<textureNoFocus>arrow_round_right_nofocus.png</textureNoFocus>
+			<label>-</label>
+			<onleft>33</onleft>
+			<onright>34</onright>
+			<onup>34</onup>
+			<ondown>31</ondown>
+			<visible>no</visible>
+		</control>
+		<control>
+			<description>Channel Button Up</description>
+			<type>button</type>
+			<id>31</id>
+			<posX>-1102</posX>
+			<posY>975</posY>
+			<width>52</width>
+			<height>37</height>
+			<textureFocus>arrow_round_up_focus.png</textureFocus>
+			<textureNoFocus>arrow_round_up_nofocus.png</textureNoFocus>
+			<label>-</label>
+			<onleft>32</onleft>
+			<onright>31</onright>
+			<onup>34</onup>
+			<ondown>31</ondown>
+			<visible>no</visible>
+		</control>
+		<control>
+			<description>Channel Button Down</description>
+			<type>button</type>
+			<id>32</id>
+			<posX>-1013</posX>
+			<posY>975</posY>
+			<width>52</width>
+			<height>37</height>
+			<textureFocus>arrow_round_down_focus.png</textureFocus>
+			<textureNoFocus>arrow_round_down_nofocus.png</textureNoFocus>
+			<label>-</label>
+			<onleft>214</onleft>
+			<onright>31</onright>
+			<onup>33</onup>
+			<ondown>32</ondown>
+			<visible>no</visible>
+		</control>
+		<control>
+			<description>Current channel</description>
+			<type>label</type>
+			<id>35</id>
+			<posX>-1013</posX>
+			<posY>946</posY>
+			<width>240</width>
+			<label>-</label>
+			<align>left</align>
+			<font>font10</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<visible>no</visible>
+		</control>
+		<import>common.play.osd.xml</import>
+	</controls>
+</window>

@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>7977</id>
+  <defaultcontrol>5050</defaultcontrol>
+  <allowoverlay>player.hasmedia</allowoverlay>
+  <define>#header.label:World Weather</define>
+  <define>#header.background:hover_worldweather.png</define>
+  <animation effect="fade" time="250">WindowOpen</animation>
+  <animation effect="fade" time="250">WindowClose</animation>
+  <controls>
+    <import>common.window.xml</import>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>animations\weather\#WorldWeather.TodayIconNumber.jpg</texture>
+      <visible>plugin.isenabled(World Weather)</visible>
+      <animation effect="fade" time="250">visible</animation>
+    </control>
+    <import>common.window.time.xml</import>
+    <import>WorldWeatherNormalCondition.xml</import>
+    <import>WorldWeatherHourCondition.xml</import>
+    <import>WorldWeatherGraphicCondition.xml</import>
+    <import>WorldWeatherGeoClock.xml</import>
+    <import>WorldWeatherHolidays.xml</import>
+    <import>WorldWeatherImage.xml</import>
+    <import>WorldWeatherAstronomy.xml</import>
+    <!-- HIDDEN MENU -->
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>-579</posX>
+      <posY>4</posY>
+      <width>627</width>
+      <height>1071</height>
+      <texture>bg_left.png</texture>
+      <colorDiffuse>ffffffff</colorDiffuse>
+      <visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)|control.hasfocus(15)]</visible>
+      <animation effect="fade" time="50">WindowClose</animation>
+      <animation effect="fade" time="50">WindowOpen</animation>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>2</defaultcontrol>
+      <onexit>0</onexit>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>45</buttonwidth>
+      <buttonheight>1080</buttonheight>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <width>600</width>
+      <height>1080</height>
+      <dimColor>ffffffff</dimColor>
+      <visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(11)|control.hasfocus(12)|control.hasfocus(13)|control.hasfocus(14)|control.hasfocus(15)]</visible>
+      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>0</posY>
+        <width>627</width>
+        <height>1080</height>
+        <texture>bg_left.png</texture>
+        <colorDiffuse>ffffffff</colorDiffuse>
+      </control>
+      <control>
+        <id>0</id>
+        <type>label</type>
+        <posX>45</posX>
+        <posY>52</posY>
+        <label>#header.label</label>
+        <width>499</width>
+        <font>font24</font>
+        <align>left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>71</posY>
+        <width>579</width>
+        <height>79</height>
+        <texture>bg_button_nofocus.png</texture>
+      </control>
+      <control>
+        <type>group</type>
+        <layout>StackLayout(0, Vertical, true)</layout>
+        <posX>0</posX>
+        <posY>150</posY>
+        <control>
+          <description>Display</description>
+          <type>button</type>
+          <id>2</id>
+          <onup>17</onup>
+          <ondown>5</ondown>
+          <onright>5050</onright>
+          <label>-</label>
+        </control>
+        <control>
+          <description>View</description>
+          <type>button</type>
+          <id>5</id>
+          <onright>5050</onright>
+          <onup>2</onup>
+          <ondown>3</ondown>
+          <label>-</label>
+        </control>
+        <control>
+          <description>Location</description>
+          <type>button</type>
+          <id>3</id>
+          <onright>5050</onright>
+          <onup>5</onup>
+          <ondown>4</ondown>
+          <label>-</label>
+        </control>
+        <control>
+          <description>Browser Map</description>
+          <type>button</type>
+          <id>4</id>
+          <onup>3</onup>
+          <ondown>9</ondown>
+          <onright>5050</onright>
+          <label>-</label>
+        </control>
+        <control>
+          <description>Refresh</description>
+          <type>button</type>
+          <id>9</id>
+          <onright>5050</onright>
+          <ondown>10</ondown>
+          <onup>4</onup>
+          <label>-</label>
+        </control>
+        <control>
+          <description>Satellite image 0</description>
+          <type>button</type>
+          <id>10</id>
+          <onup>9</onup>
+          <ondown>11</ondown>
+          <label>#WorldWeather.ImageWeather0Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather0Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+        </control>
+        <control>
+          <description>Satellite image 1</description>
+          <type>button</type>
+          <id>11</id>
+          <label>#WorldWeather.ImageWeather1Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather1Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+          <onup>10</onup>
+          <ondown>12</ondown>
+        </control>
+        <control>
+          <description>Satellite image 2</description>
+          <type>button</type>
+          <id>12</id>
+          <onup>11</onup>
+          <ondown>13</ondown>
+          <label>#WorldWeather.ImageWeather2Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather2Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+        </control>
+        <control>
+          <description>Satellite image 3</description>
+          <type>button</type>
+          <id>13</id>
+          <onup>12</onup>
+          <ondown>14</ondown>
+          <label>#WorldWeather.ImageWeather3Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather3Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+        </control>
+        <control>
+          <description>Satellite image 4</description>
+          <type>button</type>
+          <id>14</id>
+          <onup>13</onup>
+          <ondown>15</ondown>
+          <label>#WorldWeather.ImageWeather4Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather4Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+        </control>
+        <control>
+          <description>Satellite image 5</description>
+          <type>button</type>
+          <id>15</id>
+          <onup>14</onup>
+          <ondown>2</ondown>
+          <label>#WorldWeather.ImageWeather5Description</label>
+          <visible>string.equals(#WorldWeather.View,Image)+string.equals(#WorldWeather.ImageWeather5Enabled,true)+string.equals(#WorldWeather.ImageView,Flat)</visible>
+        </control>
+      </control>
+    </control>
+    <control>
+      <description>DUMMY BUTTON</description>
+      <type>button</type>
+      <id>5050</id>
+      <posX>45</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <onright>50</onright>
+      <onleft>2</onleft>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <visible>!string.equals(#WorldWeather.View,Image)</visible>
+      <!-- <scrollWrapString/> -->
+    </control>
+  </controls>
+</window>
