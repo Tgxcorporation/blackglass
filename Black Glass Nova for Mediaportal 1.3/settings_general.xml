@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>705</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:128</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<define>#header.background:hover_settings.png</define>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>325</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Skin</description>
+					<type>button</type>
+					<id>10</id>
+					<posX>99</posX>
+					<posY>188</posY>
+					<label>166</label>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>theme</description>
+					<type>menubutton</type>
+					<id>15</id>
+					<mode>dialoglist</mode>
+					<dialogTitle>90</dialogTitle>
+					<valueTextInButton>yes</valueTextInButton>
+					<valuePrefixText>94</valuePrefixText>
+					<onclick>#(skin.settheme(#selectedlabel15,15))</onclick>
+					<binding>#skin.currenttheme</binding>
+					<subitems>
+						<subitem>#skin.themes</subitem>
+					</subitems>
+				</control>
+				<control>
+					<description>Language</description>
+					<type>button</type>
+					<id>11</id>
+					<posX>99</posX>
+					<posY>233</posY>
+					<label>248</label>
+				</control>
+				<control>
+					<description>Start in fullscreen mode</description>
+					<type>togglebutton</type>
+					<id>12</id>
+					<posX>99</posX>
+					<posY>278</posY>
+					<label>1047</label>
+				</control>
+				<control>
+					<description>Screensaver</description>
+					<type>togglebutton</type>
+					<id>13</id>
+					<posX>99</posX>
+					<posY>323</posY>
+					<label>360</label>
+				</control>
+				<control>
+					<description>Skip steps screen button</description>
+					<type>button</type>
+					<id>21</id>
+					<posX>99</posX>
+					<posY>368</posY>
+					<label>6024</label>
+					<hyperlink>708</hyperlink>
+					<ondown>99</ondown>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>Skin Preview</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>449</posX>
+			<posY>110</posY>
+			<width>800</width>
+			<height>494</height>
+			<texture>bg_dialog_big.png</texture>
+		</control>
+		<control>
+			<description>Skin Preview</description>
+			<type>image</type>
+			<id>20</id>
+			<posX>499</posX>
+			<posY>163</posY>
+			<width>700</width>
+			<height>394</height>
+			<texture />
+		</control>
+	</controls>
+</window>

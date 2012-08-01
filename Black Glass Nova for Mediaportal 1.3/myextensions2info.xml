@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>804</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:14001</define>
+	<define>#header.background:hover_extensions.png</define>
+	<animation effect="Fade" time="250">WindowOpen</animation>
+	<animation effect="Fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.basic.center.xml</import>
+
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>34</posX>
+			<posY>433</posY>
+			<width>262</width>
+			<height>262</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#MPE.Selected.Icon</texture>
+			<centered>yes</centered>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>26</posX> 
+			<posY>425</posY> 
+			<width>279</width> 
+			<height>280</height> 
+			<texture>OverlayCase.png</texture>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<posX>325</posX>
+			<posY>419</posY>
+			<width>930</width>
+			<font>font22</font>
+			<label>#MPE.Selected.Name</label>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<colordiffuse>77ffffff</colordiffuse>
+			<posX>305</posX>
+			<posY>430</posY>
+			<width>1035</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<posX>325</posX>
+			<posY>467</posY>
+			<width>450</width>
+			<label>#MPEI.Translation.Version.Label: #MPE.Selected.Version</label>
+			<font>font16</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<posX>800</posX>
+			<posY>467</posY>
+			<width>450</width>
+			<label>#MPEI.Translation.Author.Label: #MPE.Selected.Author</label>
+			<font>font16</font>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<colordiffuse>77ffffff</colordiffuse>
+			<posX>305</posX>
+			<posY>465</posY>
+			<width>1035</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<posX>325</posX>
+			<posY>502</posY>
+			<width>450</width>
+			<label>#MPEI.Translation.ReleaseDate.Label: #MPE.Selected.ReleaseDate</label>
+			<font>font16</font>
+			<textcolor>ffffffff</textcolor>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<posX>800</posX>
+			<posY>506</posY>
+			<width>450</width>
+			<label>#MPEI.Translation.Id.Label: #MPE.Selected.Id</label>
+			<font>font13</font>
+			<textcolor>ffffffff</textcolor>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<colordiffuse>77ffffff</colordiffuse>
+			<posX>305</posX>
+			<posY>500</posY>
+			<width>1035</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+		</control>
+
+		<control>
+			<type>textboxscrollup</type>
+			<posX>325</posX>
+			<posY>541</posY>
+			<width>930</width>
+			<height>164</height>
+			<seperator>: : :</seperator>
+			<font>font16</font>
+			<label>#MPE.Selected.Description</label>
+		</control>
+
+		<control>
+			<type>image</type>
+			<posX>34</posX>
+			<posY>433</posY>
+			<width>60</width>
+			<height>15</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>status_new.png</texture>
+			<visible>string.equals(#MPE.Selected.JustAded,true)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>96</posX>
+			<posY>433</posY>
+			<width>87</width>
+			<height>15</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>status_editorpick.png</texture>
+			<visible>string.equals(#MPE.Selected.DeveloperPick,true)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>184</posX>
+			<posY>433</posY>
+			<width>50</width>
+			<height>15</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<texture>status_popular.png</texture>
+			<visible>string.equals(#MPE.Selected.Popular,true)</visible>
+		</control>
+
+
+		<control>
+			<type>image</type>
+			<visible>string.equals(#MPE.Selected.haveupdate,true)</visible>
+			<posX>35</posX>
+			<posY>622</posY>
+			<width>68</width>
+			<height>72</height>
+			<texture>extension_update.png</texture>
+		</control>
+
+
+
+
+
+		<!-- HIDDEN MENU -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>		
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>8</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>		
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<id>8</id>
+					<description>ChangeLOg</description>
+					<type>button</type>
+					<onright>50</onright>
+					<label>#MPEI.Translation.ChangeLog.Label</label>
+				</control>
+				<control>
+					<id>2</id>
+					<description>Install</description>
+					<type>button</type>
+					<onright>50</onright>
+					<visible>!string.equals(#MPE.Selected.isinstalled,true)</visible>
+					<label>#MPEI.Translation.Install.Label</label>
+				</control>
+				<control>
+					<id>3</id>
+					<description>UnInstall</description>
+					<type>button</type>
+					<onright>50</onright>
+					<visible>string.equals(#MPE.Selected.isinstalled,true)</visible>
+					<label>#MPEI.Translation.Uninstall.Label</label>
+				</control>
+				<control>
+					<id>4</id>
+					<description>Update</description>
+					<type>button</type>
+					<onright>50</onright>
+					<visible>string.equals(#MPE.Selected.haveupdate,true)</visible>
+					<label>#MPEI.Translation.Update.Label</label>
+				</control>
+				<control>
+					<id>5</id>
+					<description>Disable</description>
+					<type>button</type>
+					<onright>50</onright>
+					<visible>string.equals(#MPE.Selected.IsEnabled,true)</visible>
+					<label>#MPEI.Translation.Disable.Label</label>
+				</control>
+				<control>
+					<id>6</id>
+					<description>Enable</description>
+					<type>button</type>
+					<onright>50</onright>
+					<visible>string.equals(#MPE.Selected.IsDisabled,true)</visible>
+					<label>#MPEI.Translation.Enable.Label</label>
+				</control>
+				<control>
+					<id>7</id>
+					<description>Settings</description>
+					<type>button</type>
+					<onright>50</onright>
+					<visible>string.equals(#MPE.Selected.HaveSettings,true)</visible>
+					<label>#MPEI.Translation.Settings.Label</label>
+				</control>		
+			</control>
+		</control>
+
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>480</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>8</onright>
+			<onleft>8</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+	</controls>
+</window>

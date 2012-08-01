@@ -1,0 +1,239 @@
+<window>
+	<id>04071975</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:Simon Says</define>
+	<define>#header.background:hover_my simon.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.time.xml</import>
+		
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>458</posX>
+			<posY>48</posY>
+			<width>948</width>
+			<height>766</height>
+			<texture>bg_facade.png</texture>
+		</control>
+
+		<control>
+			<description>LISTVIEW LEFT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-890</posX>
+			<posY>595</posY>
+			<width>1372</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Round</description>
+			<id>201</id>
+			<posX>30</posX>
+			<posY>637</posY>
+			<label>#Round</label>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>635</posY>
+			<width>449</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Player: / GameOver</description>
+			<id>203</id>
+			<posX>30</posX>
+			<posY>672</posY>
+			<label>#Player</label>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>670</posY>
+			<width>449</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+
+		<!-- MENU -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(6)]</visible>		
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(6)</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label><width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>New Game</description>
+					<type>button</type>
+					<id>2</id>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>3</ondown>
+				</control>
+				<control>
+					<type>button</type>
+					<description>Level</description>
+					<id>3</id>
+					<onleft>3</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>4</ondown>
+				</control>
+				<control>
+					<type>togglebutton</type>
+					<description>Sounds</description>
+					<id>4</id>
+					<onleft>4</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>6</ondown>
+				</control> 
+				<control>
+					<description>What is this?</description>
+					<type>button</type>
+					<id>6</id>
+					<onleft>6</onleft>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+
+		<control>
+			<description>Dummy button for hidden menu</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>400</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<scrollWrapString/>
+		</control>
+
+		<!-- *********************** Game *********************** -->
+		
+		<control>
+			<type>button</type>
+			<id>101</id>
+			<posX>590</posX>
+			<posY>110</posY>
+			<width>290</width>
+			<height>290</height>
+			<textureFocus>#Senso1</textureFocus>
+			<textureNoFocus>#Senso1</textureNoFocus>
+		</control>
+		<control>
+			<type>button</type>
+			<id>102</id>
+			<posX>880</posX>
+			<posY>110</posY>
+			<width>290</width>
+			<height>290</height>
+			<textureFocus>#Senso2</textureFocus>
+			<textureNoFocus>#Senso2</textureNoFocus>
+		</control>
+		<control>
+			<type>button</type>
+			<id>103</id>
+			<posX>590</posX>
+			<posY>400</posY>
+			<width>290</width>
+			<height>290</height>
+			<textureFocus>#Senso3</textureFocus>
+			<textureNoFocus>#Senso3</textureNoFocus>
+		</control>
+		<control>
+			<type>button</type>
+			<id>104</id>
+			<posX>880</posX>
+			<posY>400</posY>
+			<width>290</width>
+			<height>290</height>
+			<textureFocus>#Senso4</textureFocus>
+			<textureNoFocus>#Senso4</textureNoFocus>
+		</control>
+  </controls>
+</window>
