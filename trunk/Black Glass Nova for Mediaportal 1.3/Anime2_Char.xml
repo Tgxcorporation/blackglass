@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>6005</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:Characters</define>
+	<define>#header.background:hover_my anime.png</define>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<controls>
+
+		<!-- Dummies -->
+		<control>
+			<type>label</type>
+			<description>Dummy Label for main character poster having height  width</description>
+			<id>5681</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+			<!-- this will be true when the main character poster has a heigh greater than its width -->
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for main actor poster having height  width</description>
+			<id>5682</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+			<!-- this will be true when the main actor poster has a heigh greater than its width -->
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for secondary character poster having height  width</description>
+			<id>5683</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+			<!-- this will be true when the secondary character poster has a heigh greater than its width -->
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for series poster having height  width</description>
+			<id>5684</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+			<!-- this will be true when the series poster has a heigh greater than its width -->
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for main character exists</description>
+			<id>5691</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for main actor exists</description>
+			<id>5692</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for secondary character exists</description>
+			<id>5693</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+		</control>
+
+		<control>
+			<type>label</type>
+			<description>Dummy Label for series exists</description>
+			<id>5694</id>
+			<posX>-50</posX>
+			<posY>-50</posY>
+			<width>620</width>
+			<visible>false</visible>
+		</control>
+
+		<!-- ********************** BACKGROUNDS************************************** -->
+		<import>common.window.xml</import>
+		<import>common.window.accessories.xml</import>	
+		<control>
+			<description>Fanart Background #1</description>
+			<type>image</type>
+			<id>524</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<texture>#Anime2.Character.Fanart</texture>
+			<animation effect="fade" time="250">visible</animation>
+			<animation effect="fade" time="250" delay="250">hidden</animation>
+			<animation effect="fade" time="1">WindowClose</animation>	
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<import>common.window.time.xml</import>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>0</posY>
+			<width>1280</width>
+			<height>720</height>
+			<texture>black.png</texture>
+			<colordiffuse>90ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-634</posX>
+			<posY>48</posY>
+			<width>948</width>
+			<height>766</height>
+			<texture>bg_facade.png</texture>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>47</posY>
+			<width>282</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<control>
+				<description>composite control consisting of a list control and a thumbnail panel</description>
+				<type>facadeview</type>
+				<id>50</id>
+				<control>
+					<description>listcontrol</description>
+					<type>listcontrol</type>
+					<id>50</id>
+					<posX>0</posX>
+					<onleft>901</onleft>
+					<onright>151</onright>
+					<width>282</width>
+					<height>580</height>
+					<spinCanFocus>yes</spinCanFocus>
+					<spinPosX>190</spinPosX>
+					<textYOff>8</textYOff>
+					<textXOff>-40</textXOff>
+					<textXOff2>325</textXOff2>
+					<textXOff3>360</textXOff3>
+					<IconXOff>-330</IconXOff>
+					<IconYOff>7</IconYOff>
+				</control>
+			</control>
+		</control>
+
+
+
+		<!--  ************** CHARACTER LABELS *****************  -->
+
+
+		<control>
+			<description>Character Name</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>321</posX>
+			<posY>91</posY>
+			<textcolor>ffffffff</textcolor>
+			<font>font14</font>
+			<label>#Anime2.Character.Name</label>
+			<wrapString> : : : </wrapString>
+			<visible>Control.IsVisible(5691)</visible>
+		</control>
+
+		<control>
+			<type>image</type>
+			<description>char image</description>
+			<id>46</id>
+			<posX>320</posX>
+			<posY>120</posY>
+			<height>350</height>
+			<width>250</width>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#Anime2.Character.PosterMainChar</texture>
+			<visible>Control.IsVisible(5691)</visible>
+		</control>
+
+
+
+
+		<control>
+			<description>Actor Name</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>641</posX>
+			<posY>91</posY>
+			<textcolor>ffffffff</textcolor>
+			<font>font14</font>
+			<label>#Anime2.Actor.Name</label>
+			<wrapString> : : : </wrapString>
+			<visible>Control.IsVisible(5692)</visible>
+		</control>
+
+		<control>
+			<type>image</type>
+			<description>actor image</description>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>120</posY>
+			<height>350</height>
+			<width>250</width>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#Anime2.Character.PosterMainActor</texture>
+			<visible>Control.IsVisible(5692)</visible>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>300</posX>
+			<posY>470</posY>
+			<width>610</width>
+			<height>466</height>
+			<texture>bg_facade.png</texture>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>320</posX>
+			<posY>449</posY>
+			<width>569</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>group element</description>
+			<type>group</type>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>151</id>
+				<posX>320</posX>
+				<posY>502</posY>
+				<onleft>50</onleft>
+				<onright>901</onright>
+				<width>569</width>
+				<height>200</height>
+				<spinCanFocus>no</spinCanFocus>
+				<spinWidth>18</spinWidth>
+				<spinHeight>18</spinHeight>
+				<spinPosX>-50</spinPosX>
+				<spinPosY>-50</spinPosY>
+				<textXOff>-40</textXOff>
+				<textXOff2>325</textXOff2>
+				<textXOff3>360</textXOff3>
+				<IconXOff>-3330</IconXOff>
+				<IconYOff>7</IconYOff>
+				<textureHeight>51</textureHeight>
+				<textYOff>8</textYOff>
+			</control>
+		</control>
+
+		<!-- Also as Actor Name -->
+		<control>
+			<description>Actor Name</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1000</posX>
+			<posY>96</posY>
+			<textcolor>ffffffff</textcolor>
+			<font>font11</font>
+			<width>260</width>
+			<label>Also as #Anime2.Character.SeriesCharacter</label>
+			<visible>Control.IsVisible(5693)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<description>small char image</description>
+			<id>48</id>
+			<posX>1000</posX>
+			<posY>120</posY>
+			<height>250</height>
+			<width>180</width>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#Anime2.Character.PosterSecondChar</texture>
+			<visible>Control.IsVisible(5693)</visible>
+		</control>
+
+		<!-- Series Name -->
+		<control>
+			<description>Series Name</description>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>1000</posX>
+			<posY>396</posY>
+			<textcolor>ffffffff</textcolor>
+			<font>font11</font>
+			<width>260</width>
+			<label>in #Anime2.Character.SeriesName</label>
+			<visible>Control.IsVisible(5694)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<description>small series image</description>
+			<id>49</id>
+			<posX>1000</posX>
+			<posY>420</posY>
+			<height>250</height>
+			<width>180</width>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#Anime2.Character.PosterSeries</texture>
+			<visible>Control.IsVisible(5694)</visible>
+		</control>
+		<control>
+			<description>ANIDB Status</description>
+			<type>label</type>
+			<id>114</id>
+			<posX>950</posX>
+			<posY>680</posY>
+			<width>300</width>
+			<label>#Anime2.Character.Status</label>
+			<font>font10</font>
+			<align>Left</align>
+			<textcolor>ffffffff</textcolor>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(901)|control.hasfocus(902)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>901</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(901)|control.hasfocus(902)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Relations</description>
+					<type>button</type>
+					<id>901</id>
+					<label>Relations</label>
+					<onright>50</onright>
+					<onup>803</onup>
+					<ondown>902</ondown>
+				</control>
+				<control>
+					<description>Relations</description>
+					<type>button</type>
+					<id>902</id>
+					<label>Anime Info</label>
+					<onright>50</onright>
+					<onup>901</onup>
+					<ondown>801</ondown>
+				</control>
+			</control>
+		</control>
+
+		<import>Anime2_Notification.xml</import>
+	</controls>
+</window>

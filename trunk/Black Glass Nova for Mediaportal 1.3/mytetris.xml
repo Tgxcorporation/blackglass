@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>7776</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:Tetris</define>
+	<define>#header.background:hover_tetris.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>image</type>
+			<posX>458</posX>
+			<posY>48</posY>
+			<width>948</width>
+			<height>766</height>
+			<texture>bg_facade.png</texture>
+		</control>
+		<control>
+			<description>LISTVIEW LEFT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-890</posX>
+			<posY>525</posY>
+			<width>1372</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+
+		<control>
+			<description>Score: label</description>
+			<type>label</type>
+			<id>201</id>
+			<posX>30</posX>
+			<posY>567</posY>
+			<label>19005</label>
+		</control>
+		<control>
+			<description>Score</description>
+			<type>label</type>
+			<id>202</id>
+			<posX>430</posX>
+			<posY>567</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#tetris_score</label>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>565</posY>
+			<width>449</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>Level: label</description>
+			<type>label</type>
+			<id>203</id>
+			<posX>30</posX>
+			<posY>602</posY>
+			<label>19006</label>
+		</control>
+		<control>
+			<description>Level</description>
+			<type>label</type>
+			<id>204</id>
+			<posX>430</posX>
+			<posY>602</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#tetris_level</label>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>600</posY>
+			<width>449</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>Lines: label</description>
+			<type>label</type>
+			<id>205</id>
+			<posX>30</posX>
+			<posY>637</posY>
+			<label>19007</label>
+		</control>
+		<control>
+			<description>Lines</description>
+			<type>label</type>
+			<id>206</id>
+			<posX>430</posX>
+			<posY>637</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#tetris_lines</label>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>0</posX>
+			<posY>635</posY>
+			<width>449</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>Highscore: label</description>
+			<type>label</type>
+			<id>205</id>
+			<posX>30</posX>
+			<posY>672</posY>
+			<label>19008</label>
+		</control>
+		<control>
+			<description>Highscore</description>
+			<type>label</type>
+			<id>206</id>
+			<posX>430</posX>
+			<posY>672</posY>
+			<width>288</width>
+			<align>right</align>
+			<label>#tetris_highscore</label>
+		</control>
+
+		<control>
+			<description>Tetris control</description>
+			<type>tetris</type>
+			<id>10</id>
+			<posX>510</posX>
+			<posY>103</posY>
+			<width>750</width>
+			<height>600</height>
+			<font>font16</font>
+			<textcolor>ffffffff</textcolor>
+			<onback>2</onback>
+			<onleft>2</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<colordiffuse>30ffffff</colordiffuse>
+			<texture>tetris\background.png</texture>
+			<texturefocus>tetris\background_focus.png</texturefocus>
+			<textureLeft>tetris\guide.png</textureLeft>
+			<textureRight>tetris\guide.png</textureRight>
+			<nextblockx>580</nextblockx>
+			<nextblocky>208</nextblocky>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>control.hasfocus(10)</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>!control.hasfocus(10)</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label><width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>New Game</description>
+					<type>button</type>
+					<id>2</id>
+					<label>19002</label>
+					<onright>10</onright>
+					<onup>17</onup>
+					<ondown>4</ondown>
+					<onright>10</onright>
+				</control>
+				<control>
+					<description>Sounds</description>
+					<type>togglebutton</type>
+					<id>4</id>
+					<label>19004</label>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<onright>10</onright>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

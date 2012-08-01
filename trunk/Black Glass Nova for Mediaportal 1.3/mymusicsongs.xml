@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<window>
+	<id>501</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<autohidetopbar>yes</autohidetopbar>
+	<define>#header.label:2</define>
+	<define>#header.background:hover_my music.png</define>
+	<define>#useSelectedFanart:Yes</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.music.fanart.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.right.xml</import>
+		<import>common.facade.itemcount.xml</import>
+		<import>common.facade.music.xml</import>
+		<control>
+			<type>image</type>
+			<description>artist art image</description>
+			<id>500</id>
+			<posX>61</posX>
+			<posY>419</posY>
+			<width>275</width>
+			<height>276</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+			<visible>[facadeview.list|facadeview.album]+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250" reversible="false">visible</animation>
+		</control>
+		<control>
+			<description>Cd Case</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>25</posX>
+			<posY>410</posY>
+			<width>318</width>
+			<height>290</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+			<visible>[facadeview.list|facadeview.album]+control.hasfocus(50)+control.hasthumb(500)</visible>
+			<animation effect="fade" time="250">hidden</animation>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<!-- <control>
+			<type>label</type>
+			<description>Current program title</description>
+			<posX>30</posX>
+			<posY>460</posY>
+			<posY>460</posY>
+			<width>1240</width>
+			<font>font32</font>
+			<label>#selecteditem</label>
+			<textcolor>40ffffff</textcolor>
+			<align>left</align>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>Current program</description>
+			<posX>30</posX>
+			<posY>485</posY>
+			<width>350</width>
+			<label>#selecteditem2</label>
+			<textcolor>ffffffff</textcolor>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>  -->
+
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(5)|control.hasfocus(3)|control.hasfocus(12)|control.hasfocus(11)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(5)|control.hasfocus(3)|control.hasfocus(12)|control.hasfocus(11)|control.hasfocus(9)|control.hasfocus(10)|control.hasfocus(13)|control.hasfocus(14)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>View-As</description>
+					<type>menubutton</type>
+					<id>2</id>
+					<label/>
+					<onright>50</onright>
+					<onup>17</onup>
+					<ondown>5</ondown>
+					<mode>dialoglist</mode>
+					<dialogTitle>792</dialogTitle>
+					<valueTextInButton>yes</valueTextInButton>
+					<valuePrefixText>95</valuePrefixText>
+				</control>
+				<control>
+					<description>Switch View</description>
+					<type>menubutton</type>
+					<id>5</id>
+					<label/>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+					<mode>dialoglist</mode>
+					<dialogTitle>499</dialogTitle>
+					<valueTextInButton>yes</valueTextInButton>
+					<valuePrefixText>97</valuePrefixText>
+				</control>
+				<control>
+					<description>Sort</description>
+					<type>sortbutton</type>
+					<id>3</id>
+					<label>103</label>
+					<onright>50</onright>
+					<onup>5</onup>
+					<ondown>12</ondown>
+				</control>
+				<control>
+					<description>Play CD</description>
+					<type>button</type>
+					<id>12</id>
+					<label>890</label>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>11</ondown>
+				</control>
+				<control>
+					<description>Now playing</description>
+					<type>button</type>
+					<id>11</id>
+					<label>4540</label>
+					<hyperlink>510</hyperlink>
+					<onright>50</onright>
+					<onup>12</onup>
+					<ondown>9</ondown>
+				</control>
+				<control>
+					<description>Current Playlist</description>
+					<type>button</type>
+					<id>9</id>
+					<label>4555</label>
+					<action>33</action>
+					<onright>50</onright>
+					<onup>11</onup>
+					<ondown>10</ondown>
+				</control>
+				<control>
+					<description>My Playlists</description>
+					<type>button</type>
+					<id>10</id>
+					<label>983</label>
+					<onright>50</onright>
+					<onup>9</onup>
+					<ondown>13</ondown>
+				</control>
+				<control>
+					<description>My Lyrics</description>
+					<type>button</type>
+					<id>13</id>
+					<label>Lyrics</label>
+					<onright>50</onright>
+					<onup>10</onup>
+					<ondown>14</ondown>
+					<hyperlink>90478</hyperlink>
+					<visible>plugin.isenabled(My Lyrics)</visible>
+				</control>
+				<control>
+					<description>Global Search</description>
+					<type>button</type>
+					<id>14</id>
+					<label>Global Search</label>
+					<onright>50</onright>
+					<onup>13</onup>
+					<ondown>2</ondown>
+					<hyperlink>30885</hyperlink>
+					<visible>plugin.isenabled(Search music)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
