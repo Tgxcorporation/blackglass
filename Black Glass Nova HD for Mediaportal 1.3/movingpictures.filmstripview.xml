@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8"-->
+<!-- 
+This file should contain the list view
+-->
+<window>
+	<controls>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>-300</posX>
+			<posY>600</posY>
+			<width>2520</width>
+			<height>480</height>
+			<texture>gradient.png</texture>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+control.isvisible(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>textboxscrollup</type>
+			<description>Current program title</description>
+			<id>1</id>
+			<posX>57</posX>
+			<posY>919</posY>
+			<width>1830</width>
+			<font>font24</font>
+			<height>67</height>
+			<textalign>center</textalign>
+			<label>#MovingPictures.SelectedMovie.title</label>
+			<visible>[facadeview.filmstrip|facadeview.coverflow]+[control.hasfocus(50)]</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+	</controls>
+</window>

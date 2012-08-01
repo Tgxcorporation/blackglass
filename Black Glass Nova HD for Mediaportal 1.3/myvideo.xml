@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>6</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:3</define>
+	<define>#header.background:hover_my videos.png</define>
+	<define>#useSelectedFanart:Yes</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.video.fanart.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.right.xml</import>
+		<import>common.facade.itemcount.xml</import>
+		<import>common.facade.recordings.xml</import>
+		<control>
+			<type>image</type>
+			<description>artist art image</description>
+			<id>1000</id>
+			<posX>55</posX>
+			<posY>633</posY>
+			<width>627</width>
+			<height>351</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250" reversible="false">visible</animation>
+		</control>
+		<control>
+			<description>Case</description>
+			<type>image</type>
+			<posX>37</posX>
+			<posY>615</posY>
+			<width>661</width>
+			<height>435</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<texture flipY="true" diffuse="Thumb_Mask.png">VideoCase.png</texture>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+control.hasfocus(50)+control.hasthumb(1000)</visible>
+			<animation effect="fade" time="250">hidden</animation>
+			<animation effect="fade" time="250">visible</animation>
+		</control>
+		<!-- <control>
+			<type>label</type>
+			<description>Current program title</description>
+			<posX>30</posX>
+			<posY>320</posY>
+			<width>360</width>
+			<font>font22</font>
+			<label>#selecteditem</label>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Current program</description>
+			<posX>30</posX>
+			<posY>530</posY>
+			<posY>370</posY>
+			<label>#selecteditem2</label>
+			<textcolor>ffffffff</textcolor>
+			<visible>!facadeview.filmstrip+control.hasfocus(50)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control> -->
+		<import>myvideoHiddenMenu.xml</import>
+	</controls>
+</window>

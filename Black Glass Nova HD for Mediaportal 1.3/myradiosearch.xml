@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>8900</id>
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<disabletopbar>no</disabletopbar>
+	<define>#header.label:137</define>
+	<define>#header.background:hover_my radio.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<description>LISTVIEW LEFT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-1095</posX>
+			<posY>565</posY>
+			<width>2058</width>
+			<height>750</height>
+			<texture>bg_tvguide.png</texture>
+			<visible>control.isvisible(16)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<import>common.facade.background.basic.right.xml</import>
+		<import>common.facade.itemcount.basic.xml</import>
+
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>10</id>
+				<onleft>2</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<posX>959</posX>
+				<width>960</width>
+				<posY>645</posY>
+				<height>450</height>
+				<textureHeight>53</textureHeight>
+				<itemWidth>60</itemWidth>
+				<itemHeight>45</itemHeight>
+				<IconXOff>15</IconXOff>
+				<IconYOff>3</IconYOff>
+				<textXOff2>945</textXOff2>
+				<textYOff2>5</textYOff2>
+				<textXOff3>945</textXOff3>
+				<textYOff3>5</textYOff3>
+				<font>font14</font>
+				<font2>font14</font2>
+				<font3>font14</font3>
+				<textYOff>5</textYOff>
+				<spinWidth>45</spinWidth>
+				<spinHeight>45</spinHeight>
+				<spinPosX>1815</spinPosX>
+				<spinPosY>1030</spinPosY>
+				<PinIconXOff>937</PinIconXOff>
+				<PinIconYOff>4</PinIconYOff>
+			</control>
+			<control>
+				<description>scheduler recordings listcontrol</description>
+				<type>listcontrol</type>
+				<id>11</id>
+				<onleft>10</onleft>
+				<onright>2</onright>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<posX>959</posX>
+				<width>960</width>
+				<posY>645</posY>
+				<height>450</height>
+				<textureHeight>53</textureHeight>
+				<itemWidth>60</itemWidth>
+				<itemHeight>45</itemHeight>
+				<IconXOff>15</IconXOff>
+				<IconYOff>3</IconYOff>
+				<textXOff2>945</textXOff2>
+				<textYOff2>5</textYOff2>
+				<textXOff3>945</textXOff3>
+				<textYOff3>5</textYOff3>
+				<font>font14</font>
+				<font2>font14</font2>
+				<font3>font14</font3>
+				<textYOff>5</textYOff>
+				<spinWidth>45</spinWidth>
+				<spinHeight>45</spinHeight>
+				<spinPosX>1815</spinPosX>
+				<spinPosY>1030</spinPosY>
+				<PinIconXOff>937</PinIconXOff>
+				<PinIconYOff>4</PinIconYOff>
+			</control>
+		</control>
+		<control>
+			<description>REAL Current program title</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>45</posX>
+			<posY>630</posY>
+			<width>847</width>
+			<font>font20</font>
+			<label>#selecteditem</label>
+			<textcolor>FFFFFFFF</textcolor>
+			<visible>control.isvisible(16)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>645</posY>
+			<width>913</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(16)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Current program time</description>
+			<type>label</type>
+			<id>14</id>
+			<posX>45</posX>
+			<posY>702</posY>
+			<width>847</width>
+			<textcolor>90ffffff</textcolor>
+			<label>#Radio.Search.Time</label>
+			<visible>control.isvisible(16)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>697</posY>
+			<width>913</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(16)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Channel Image</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>45</posX>
+			<posY>753</posY>
+			<width>61</width>
+			<height>46</height>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture>#selectedthumb</texture>
+			<visible>control.isvisible(16)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Current channel</description>
+			<type>label</type>
+			<id>16</id>
+			<posX>135</posX>
+			<posY>754</posY>
+			<width>480</width>
+			<label>#Radio.Search.Channel</label>
+			<align>left</align>
+			<visible>control.isvisible(16)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>750</posY>
+			<width>913</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(16)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>genre</description>
+			<type>label</type>
+			<id>17</id>
+			<posX>45</posX>
+			<posY>807</posY>
+			<label>#Radio.Search.Genre</label>
+			<textcolor>90ffffff</textcolor>
+			<visible>control.isvisible(16)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>802</posY>
+			<width>913</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(16)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<description>Description1</description>
+			<type>textboxscrollup</type>
+			<id>15</id>
+			<posX>45</posX>
+			<posY>862</posY>
+			<width>847</width>
+			<height>199</height>
+			<label>#Radio.Search.Description</label>
+			<font>font16</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<visible>control.isvisible(16)</visible>
+			<seperator>: : :</seperator>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-579</posX>
+			<posY>4</posY>
+			<width>627</width>
+			<height>1071</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(20)|control.hasfocus(7)|control.hasfocus(19)|control.hasfocus(21)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>84</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>![control.hasfocus(10)|control.hasfocus(11)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>#header.label</label>
+				<width>500</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>579</width>
+				<height>79</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>150</posY>
+				<control>
+					<description>Sort by Name/Date/Channel</description>
+					<type>sortbutton</type>
+					<id>2</id>
+					<label>620</label>
+					<onup>17</onup>
+					<ondown>20</ondown>
+				</control>
+				<control>
+					<description>View by Title/Genre</description>
+					<type>button</type>
+					<id>20</id>
+					<label>1522</label>
+					<onup>2</onup>
+					<ondown>7</ondown>
+				</control>
+				<control>
+					<description>Starts with</description>
+					<type>selectbutton</type>
+					<id>7</id>
+					<label>872</label>
+					<onup>20</onup>
+					<ondown>19</ondown>
+				</control>
+				<control>
+					<description>Search</description>
+					<type>button</type>
+					<id>19</id>
+					<label>2051</label>
+					<onup>7</onup>
+					<ondown>21</ondown>
+				</control>
+				<control>
+					<description>Search Description</description>
+					<type>button</type>
+					<id>21</id>
+					<label>1523</label>
+					<onup>19</onup>
+					<ondown>2</ondown>
+				</control>
+			</control>
+		</control>
+		<!-- NOT USED -->
+		<control>
+			<description>Description1</description>
+			<type>textboxscrollup</type>
+			<id>15</id>
+			<posX>3693</posX>
+			<posY>862</posY>
+			<width>1146</width>
+			<height>127</height>
+			<label>#Radio.Search.Description</label>
+			<font>font13</font>
+			<textcolor>FFFFFFFF</textcolor>
+		</control>
+		<control>
+			<description>DUMMY Number of Files Label</description>
+			<type>label</type>
+			<id>12</id>
+			<posX>2205</posX>
+			<posY>805</posY>
+			<label>-</label>
+			<align>left</align>
+			<textcolor>FFFFFFFF</textcolor>
+		</control>
+		<control>
+			<description>DUMMY Current program title</description>
+			<type>fadelabel</type>
+			<id>13</id>
+			<posX>45</posX>
+			<posY>3000</posY>
+			<width>570</width>
+			<font>font22</font>
+			<label>#TV.Search.Title</label>
+			<textcolor>FFFFFFFF</textcolor>
+		</control>
+	</controls>
+</window>
