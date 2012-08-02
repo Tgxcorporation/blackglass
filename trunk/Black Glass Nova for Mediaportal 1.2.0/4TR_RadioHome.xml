@@ -2,6 +2,7 @@
 <window>
 	<id>30</id>
 	<defaultcontrol>2</defaultcontrol>
+	<rememberLastFocusedControl>yes</rememberLastFocusedControl>
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:666</define>
 	<define>#header.background:hover_my radio.png</define>
@@ -10,16 +11,8 @@
 	<controls>
 		<import>common.window.xml</import>
 		<import>common.window.time.xml</import>
-		<control>
-			<description>Backdrop Overlay</description>
-			<type>image</type>
-			<id>0</id>
-			<posX>-100</posX>
-			<posY>377</posY>
-			<width>1572</width>
-			<height>500</height>
-			<texture>bg_tvguide.png</texture>
-		</control>
+		<import>common.facade.background.basic.center.xml</import>
+
 		<control>
 			<description>video window</description>
 			<type>videowindow</type>
@@ -30,8 +23,94 @@
 			<height>233</height>
 			<onleft>2</onleft>
 			<onright>2</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
 			<action>18</action>
 			<textureFocus>tv_green_border.png</textureFocus>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250">visiblechange</animation>	
+			<visible>!player.hasmedia</visible>
+			<control>
+				<description>Progress background</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>846</posX>
+				<posY>646</posY>
+				<width>413</width>
+				<height>18</height>
+				<texture>osd_progress_background.png</texture>
+			</control>
+			<control>
+				<description>progress bar</description>
+				<type>progress</type>
+				<id>20</id>
+				<posX>834</posX>
+				<posY>638</posY>
+				<width>437</width>
+				<label>#Radio.View.Percentage</label>
+				<lefttexture>osd_progress_left_dummy_tvhome.png</lefttexture>
+				<midtexture>osd_progress_mid_tvhome.png</midtexture>
+				<righttexture>-</righttexture>
+			</control>
+			<control>
+				<description>Current program time</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>851</posX>
+				<posY>647</posY>
+				<width>360</width>
+				<label>#Radio.View.start</label>
+				<font>font9</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>Current program time</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1254</posX>
+				<posY>647</posY>
+				<width>360</width>
+				<label>#Radio.View.stop</label>
+				<font>font9</font>
+				<align>right</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>background up</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>846</posX>
+				<posY>432</posY>
+				<width>413</width>
+				<height>18</height>
+				<texture>osd_progress_background2.png</texture>
+			</control>
+			<control>
+				<description>Current program name</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>851</posX>
+				<posY>432</posY>
+				<width>403</width>
+				<label>#Radio.View.title</label>
+				<font>font9</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>Channel Image</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>985</posX>
+				<posY>497</posY>
+				<width>133</width>
+				<height>100</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture  flipY="true" diffuse="Thumb_Mask.png">#Radio.View.thumb</texture>
+			</control>
 		</control>
 		<control>
 			<description>TV background</description>
@@ -44,8 +123,9 @@
 			<colordiffuse>a0ffffff</colordiffuse>
 			<texture>TVCase.png</texture>
 		</control>
+
 		<control>
-			<description>Current program title</description>
+			<description>REAL Current program title</description>
 			<type>fadelabel</type>
 			<id>13</id>
 			<posX>810</posX>
@@ -53,9 +133,10 @@
 			<width>780</width>
 			<font>font22</font>
 			<label>#Radio.View.title</label>
+			<textcolor>FFFFFFFF</textcolor>
 			<align>right</align>
-			<textcolor>White</textcolor>
-		</control>
+			<wrapString> : : : </wrapString>
+		</control> 
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -67,20 +148,7 @@
 			<colordiffuse>77ffffff</colordiffuse>
 		</control> 
 		<control>
-			<description>Playing Channel</description>
-			<type>image</type>
-			<id>1</id>
-			<posX>985</posX>
-			<posY>497</posY>
-			<width>133</width>
-			<height>100</height>
-			<keepaspectratio>yes</keepaspectratio>
-			<centered>yes</centered>
-			<zoom>yes</zoom>
-			<texture flipY="true" diffuse="Thumb_Mask.png">#Radio.View.thumb</texture>
-		</control>
-		<control>
-			<description>Play info label</description>
+			<description>Current channel</description>
 			<type>fadelabel</type>
 			<id>1</id>
 			<posX>810</posX>
@@ -90,7 +158,9 @@
 			<label>#Radio.View.channel</label>
 			<align>right</align>
 			<textcolor>90ffffff</textcolor>
+			<wrapString> : : : </wrapString>
 		</control>
+
 		<control>
 			<type>image</type>
 			<id>0</id>
@@ -102,16 +172,17 @@
 			<colordiffuse>77ffffff</colordiffuse>
 		</control> 
 		<control>
-			<description>Play info label</description>
+			<description>Current program time</description>
 			<type>fadelabel</type>
 			<id>1</id>
 			<posX>810</posX>
 			<posY>532</posY>
 			<width>780</width>
 			<label>#Radio.View.start - #Radio.View.stop</label>
-			<align>right</align>
-			<font>font22</font>
 			<textcolor>ffffffff</textcolor>
+			<font>font22</font>
+			<align>right</align>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<type>image</type>
@@ -123,8 +194,15 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 		</control> 
-
-
+		<control>
+			<description>genre</description>
+			<type>label</type>
+			<id>17</id>
+			<posX>5030</posX>
+			<posY>205</posY>
+			<label>#Radio.Search.Genre</label>
+			<textcolor>90ffffff</textcolor>
+		</control>
 		<control>
 			<description>Description1</description>
 			<type>textboxscrollup</type>
@@ -134,85 +212,12 @@
 			<width>780</width>
 			<height>115</height>
 			<label>#Radio.View.description</label>
-			<font>font16</font>
-			<textcolor>White</textcolor>
+			<font>font18</font>
+			<textcolor>FFFFFFFF</textcolor>
 			<seperator>: : :</seperator>
 			<textalign>right</textalign>
 		</control>
-		<!--  <control>
-      <description>Progress background</description>
-      <type>image</type>
-      <id>1</id>
-      <posX>533</posX>
-      <posY>471</posY>
-      <width>622</width>
-      <height>30</height>
-      <texture>osd_progress_background.png</texture>
-      <animation effect="fade" time="250">WindowOpen</animation>
-      <animation effect="fade" time="250">WindowClose</animation>
-    </control>
-    <control>
-      <description>progress bar</description>
-      <type>progress</type>
-      <id>20</id>
-      <posX>527</posX>
-      <posY>472</posY>
-      <width>640</width>
-      <height>31</height>
-      <label>#Radio.View.Percentage</label>
-      <visible>yes</visible>
-      <animation effect="fade" time="250">WindowOpen</animation>
-      <animation effect="fade" time="250">WindowClose</animation>
-    </control>
-    <control>
-      <type>label</type>
-      <description>track progress label</description>
-      <id>0</id>
-      <posX>1155</posX>
-      <posY>531</posY>
-      <label>#currentplaytime</label>
-      <font>font14</font>
-      <align>left</align>
-      <textcolor>80ffffff</textcolor>
-      <animation effect="fade" time="250">WindowOpen</animation>
-    </control> -->
-		<!--     <control>
-      <description>rectangle</description>
-      <type>image</type>
-      <id>21</id>
-      <posX>85</posX>
-      <posY>420</posY>
-      <width>90</width>
-      <height>90</height>
-      <texture>tv_background.png</texture>
-      <colorkey>0</colorkey>
-      <colordiffuse>White</colordiffuse>
-      <animation effect="fade" time="250">WindowOpen</animation>
-      <animation effect="fade" time="250">WindowClose</animation>
-    </control> -->
 
-		<!--  <control>
-      <description>Channel label</description>
-      <type>label</type>
-      <id>13</id>
-      <posX>205</posX>
-      <posY>575</posY>
-      <label>602</label>
-      <font>font13</font>
-      <align>left</align>
-      <textcolor>FFB2D4F5</textcolor>
-      <animation effect="fade" time="250">WindowOpen</animation>
-      <animation effect="fade" time="250">WindowClose</animation>
-    </control> -->
-		<control>
-			<description>record pin</description>
-			<type>image</type>
-			<id>24</id>
-			<posX>1231</posX>
-			<posY>673</posY>
-			<texture>tvguide_record_button.png</texture>
-			<visible>no</visible>
-		</control>
 
 		<control>
 			<type>image</type>
@@ -223,7 +228,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -242,7 +247,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)]</visible>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -265,7 +270,8 @@
 				<type>label</type>
 				<posX>30</posX>
 				<posY>35</posY>
-				<label>#header.label</label><width>333</width>
+				<label>#header.label</label>
+				<width>333</width>
 				<font>font24</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
@@ -284,13 +290,12 @@
 				<layout>StackLayout(0, Vertical, true)</layout>
 				<posX>0</posX>
 				<posY>100</posY>
-
 				<control>
 					<description>TVGuide</description>
 					<type>button</type>
 					<id>2</id>
 					<label>TV Guide</label>
-					<onup>8</onup>
+					<onup>17</onup>
 					<ondown>3</ondown>
 				</control>
 				<control>
@@ -343,16 +348,40 @@
 					<onup>7</onup>
 					<ondown>2</ondown>
 				</control>
-				<!--<control>
-        <description>Schedules</description>
-        <type>button</type>
-        <id>6</id>
-        <label>Schedules</label>
-        <onup>5</onup>
-        <ondown>2</ondown>
-      </control>-->
-
 			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>51</id>
+			<posX>1180</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
+		<control>
+			<description>Dummy label to hold global settings for this skin!</description>
+			<type>label</type>
+			<id>420</id>
+			<label>#settings:logo-icon-size=84,84;guide_time=Center</label>
+			<visible>no</visible>
+		</control>
+		<!-- NOT USED -->
+
+		<control>
+			<description>record pin</description>
+			<type>image</type>
+			<id>24</id>
+			<posX>1460</posX>
+			<posY>529</posY>
+			<texture>tvguide_record_button.png</texture>
+			<visible>no</visible>
 		</control>
 	</controls>
 </window>
