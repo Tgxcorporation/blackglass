@@ -38,6 +38,7 @@
 			<height>472</height>
 			<texture>bg_tvguide.png</texture>
 		</control>
+
 		<control>
 			<description>TVGUIDE Panel</description>
 			<type>image</type>
@@ -54,10 +55,10 @@
 			<type>label</type>
 			<id>32</id>
 			<posX>26</posX>
-			<posY>399</posY>
+			<posY>405</posY>
 			<font>font18</font>
 			<align>left</align>
-			<textcolor>60FFFFFF</textcolor>
+			<textcolor>90FFFFFF</textcolor>
 			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
 			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
@@ -66,17 +67,18 @@
 			<type>image</type>
 			<id>33</id>
 			<posX>21</posX>
-			<posY>426</posY>
+			<posY>419</posY>
 			<width>70</width>
 			<height>44</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
-			<texture>DefaultMyradioBig.png</texture>
+			<texture>DefaultMyradio.png</texture>
 			<align>left</align>
 			<valign>top</valign>
 			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
 			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
+
 		<!-- Timeheader background must be dedfined before Timeheader label template -->
 		<!-- b/c Timeheader is on the background and will be rendered first -->
 		<control>
@@ -201,6 +203,66 @@
 			<posX>10</posX>
 			<posY>5</posY>
 		</control>
+		<control>
+			<description>TvGroup button</description>
+			<type>button</type>
+			<id>100</id>
+			<posX>21</posX>
+			<posY>129</posY>
+			<width>45</width>
+			<height>342</height>
+			<textureNoFocus>tvguide_button_group_nofocus.png</textureNoFocus>
+			<textureFocus>tvguide_button_group_focus.png</textureFocus>
+			<label/>
+			<onleft>60</onleft>
+			<onright>6</onright>
+			<onup>6</onup>
+			<ondown>6</ondown>
+		</control>
+		<control>
+			<description>TvGroup button label unfocus</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>28</posX>
+			<posY>460</posY>
+			<label>#Radio.Guide.ChangeGroup</label>
+			<textcolor>90FFFFFF</textcolor>
+			<visible>!control.hasfocus(100)</visible>
+			<animation effect="rotate" end="90" time="0" condition="!control.hasfocus(100)">conditional</animation>
+		</control>
+		<control>
+			<description>TvGroup button label focus</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>28</posX>
+			<posY>460</posY>
+			<label>#Radio.Guide.ChangeGroup</label>
+			<textcolor>ffFFFFFF</textcolor>
+			<visible>control.hasfocus(100)</visible>
+			<animation effect="rotate" end="90" time="0" condition="control.hasfocus(100)">conditional</animation>
+		</control>
+		<control>
+			<description>All Channels label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>28</posX>
+			<posY>460</posY>
+			<label>972</label>
+			<textcolor>90FFFFFF</textcolor>
+			<visible>!control.isvisible(100)+!control.isvisible(33)</visible>
+			<animation effect="rotate" end="90" time="0" condition="!control.isvisible(100)+!control.isvisible(33)">conditional</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>21</posX>
+			<posY>427</posY>
+			<height>43</height>
+			<width>45</width>
+			<texture>tvguide_button_light_middle.png</texture>
+			<visible>!control.isvisible(100)</visible>
+		</control>
+
 
 		<!-- <control>
 			<description>template for program running button</description>
@@ -250,46 +312,9 @@
 			<textureNonFocusedRight tileFill="no">tvguide_recButton_Focus_right.png</textureNonFocusedRight>
 			<textureIcon>-</textureIcon>
 		</control> -->
-		<!-- <control>
-			<description>TvGroup button</description>
-			<type>button</type>
-			<id>100</id>
-			<posX>22</posX>
-			<posY>128</posY>
-			<width>43</width>
-			<height>343</height>
-			<textureNoFocus>tvguide_button_group_nofocus.png</textureNoFocus>
-			<textureFocus>tvguide_button_group_focus.png</textureFocus>
-			<label></label>
-			<onleft>60</onleft>
-			<onright>6</onright>
-			<onup>6</onup>
-			<ondown>6</ondown>
-		</control>
-		<control>
-			<description>TvGroup button label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>28</posX>
-			<posY>460</posY>
-			<label>#Radio.Guide.ChangeGroup</label>
-			<textcolor>90FFFFFF</textcolor>
-			<align>left</align>
-			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
-		</control>
-		<control>
-			<description>TvGroup button label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>28</posX>
-			<posY>460</posY>
-			<label>#Radio.Guide.ChangeGroup</label>
-			<textcolor>ffFFFFFF</textcolor>
-			<align>left</align>
-			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
-			<animation effect="rotate" end="90" time="0">WindowClose</animation>
-			<visible>control.hasfocus(100)</visible>
-		</control> -->
+
+
+
 		<!-- INFO -->
 		<control>
 			<type>image</type>
@@ -317,6 +342,27 @@
 			<texture>bg_facade_line_nofocus.png</texture>
 			<colordiffuse>77ffffff</colordiffuse>
 		</control>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		<control>
 			<description>Current program title</description>
