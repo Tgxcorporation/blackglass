@@ -33,7 +33,6 @@
 		<import>common.window.time.xml</import>
 		<control>
 			<type>image</type>
-			<id>0</id>
 			<posX>-7</posX>
 			<posY>72</posY>
 			<width>1948</width>
@@ -56,10 +55,10 @@
 			<type>label</type>
 			<id>32</id>
 			<posX>40</posX>
-			<posY>595</posY>
+			<posY>607</posY>
 			<font>font18</font>
 			<align>left</align>
-			<textcolor>60FFFFFF</textcolor>
+			<textcolor>90FFFFFF</textcolor>
 			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
 			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
@@ -67,14 +66,16 @@
 			<description>Single Channel View Image</description>
 			<type>image</type>
 			<id>33</id>
-			<posX>13</posX>
-			<posY>620</posY>
+			<posX>32</posX>
+			<posY>625</posY>
 			<width>105</width>
-			<height>68</height>
+			<height>66</height>
 			<keepaspectratio>yes</keepaspectratio>
 			<zoom>no</zoom>
 			<centered>yes</centered>
-			<texture>DefaultMyradioBig.png</texture>
+			<texture>DefaultMyradio.png</texture>
+			<align>left</align>
+			<valign>top</valign>
 			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
 			<animation effect="rotate" end="90" time="0">WindowClose</animation>
 		</control>
@@ -202,6 +203,68 @@
 			<posX>15</posX>
 			<posY>7</posY>
 		</control>
+		<control>
+			<description>TvGroup button</description>
+			<type>button3part</type>
+			<id>100</id>
+			<posX>30</posX>
+			<posY>191</posY>
+			<width>68</width>
+			<height>510</height>
+			<textureFocusedLeft>tvguide_button_group_focus.png</textureFocusedLeft>
+			<textureNonFocusedLeft>tvguide_button_group_nofocus.png</textureNonFocusedLeft>
+			<textureFocusedMid>tvguide_button_group_focus.png</textureFocusedMid>
+			<textureNonFocusedMid>tvguide_button_group_nofocus.png</textureNonFocusedMid>
+			<textureFocusedRight>tvguide_button_group_focus.png</textureFocusedRight>
+			<textureNonFocusedRight>tvguide_button_group_nofocus.png</textureNonFocusedRight>
+			<onleft>60</onleft>
+			<onright>6</onright>
+			<onup>6</onup>
+			<ondown>6</ondown>
+		</control>
+		<control>
+			<description>TvGroup button label unfocus</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>42</posX>
+			<posY>690</posY>
+			<label>#Radio.Guide.ChangeGroup</label>
+			<textcolor>90FFFFFF</textcolor>
+			<visible>!control.hasfocus(100)</visible>
+			<animation effect="rotate" end="90" time="0" condition="!control.hasfocus(100)">conditional</animation>
+		</control>
+		<control>
+			<description>TvGroup button label focus</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>42</posX>
+			<posY>690</posY>
+			<label>#Radio.Guide.ChangeGroup</label>
+			<textcolor>ffFFFFFF</textcolor>
+			<visible>control.hasfocus(100)</visible>
+			<animation effect="rotate" end="90" time="0" condition="control.hasfocus(100)">conditional</animation>
+		</control>
+		<control>
+			<description>All Channels label</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>42</posX>
+			<posY>690</posY>
+			<label>972</label>
+			<textcolor>90FFFFFF</textcolor>
+			<visible>!control.isvisible(100)+!control.isvisible(33)</visible>
+			<animation effect="rotate" end="90" time="0" condition="!control.isvisible(100)+!control.isvisible(33)">conditional</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>31</posX>
+			<posY>637</posY>
+			<height>64</height>
+			<width>67</width>
+			<texture>tvguide_button_light_middle.png</texture>
+			<visible>!control.isvisible(100)</visible>
+		</control>
 		<!-- <control>
 			<description>template for program running button</description>
 			<type>button3part</type>
@@ -249,46 +312,6 @@
 			<textureFocusedRight tileFill="no">tvguide_recButton_Focus_right.png</textureFocusedRight>
 			<textureNonFocusedRight tileFill="no">tvguide_recButton_Focus_right.png</textureNonFocusedRight>
 			<textureIcon>-</textureIcon>
-		</control> -->
-		<!-- <control>
-			<description>TvGroup button</description>
-			<type>button</type>
-			<id>100</id>
-			<posX>22</posX>
-			<posY>128</posY>
-			<width>43</width>
-			<height>343</height>
-			<textureNoFocus>tvguide_button_group_nofocus.png</textureNoFocus>
-			<textureFocus>tvguide_button_group_focus.png</textureFocus>
-			<label></label>
-			<onleft>60</onleft>
-			<onright>6</onright>
-			<onup>6</onup>
-			<ondown>6</ondown>
-		</control>
-		<control>
-			<description>TvGroup button label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>28</posX>
-			<posY>460</posY>
-			<label>#Radio.Guide.ChangeGroup</label>
-			<textcolor>90FFFFFF</textcolor>
-			<align>left</align>
-			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
-		</control>
-		<control>
-			<description>TvGroup button label</description>
-			<type>label</type>
-			<id>0</id>
-			<posX>28</posX>
-			<posY>460</posY>
-			<label>#Radio.Guide.ChangeGroup</label>
-			<textcolor>ffFFFFFF</textcolor>
-			<align>left</align>
-			<animation effect="rotate" end="90" time="0">WindowOpen</animation>
-			<animation effect="rotate" end="90" time="0">WindowClose</animation>
-			<visible>control.hasfocus(100)</visible>
 		</control> -->
 		<!-- INFO -->
 		<control>
@@ -395,20 +418,20 @@
 		<!-- GRID -->
 		<control>
 			<type>image</type>
-			<posX>30</posX>
-			<posY>119</posY>
-			<width>1859</width>
-			<height>70</height>
+			<posX>31</posX>
+			<posY>115</posY>
+			<width>1855</width>
+			<height>75</height>
 			<texture>bg_tvguide_header.png</texture>
 			<colordiffuse>ffffffff</colordiffuse>
 		</control>
 		<control>
 			<id>0</id>
 			<type>image</type>
-			<posX>101</posX>
-			<posY>189</posY>
-			<width>3</width>
-			<height>511</height>
+			<posX>99</posX>
+			<posY>192</posY>
+			<width>4</width>
+			<height>514</height>
 			<texture>bg_button_vertical.png</texture>
 			<colordiffuse>ffffffff</colordiffuse>
 		</control>
@@ -416,9 +439,9 @@
 			<id>0</id>
 			<type>image</type>
 			<posX>508</posX>
-			<posY>189</posY>
-			<width>3</width>
-			<height>511</height>
+			<posY>192</posY>
+			<width>4</width>
+			<height>514</height>
 			<texture>bg_button_vertical.png</texture>
 			<colordiffuse>ffffffff</colordiffuse>
 		</control>
