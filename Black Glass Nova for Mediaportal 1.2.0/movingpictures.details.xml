@@ -264,7 +264,7 @@ This file should contain the details view
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+![control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)|control.hasfocus(97261)|control.hasfocus(97262)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+![control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97270)|control.hasfocus(97261)|control.hasfocus(97262)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -283,7 +283,7 @@ This file should contain the details view
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97260)|control.hasfocus(97261)|control.hasfocus(97262)]</visible>
+			<visible>!control.isvisible(50)+!control.isvisible(51)+[control.hasfocus(66621)|control.hasfocus(66622)|control.hasfocus(66623)|control.hasfocus(66624)|control.hasfocus(66625)|control.hasfocus(97258)|control.hasfocus(97259)|control.hasfocus(97270)|control.hasfocus(97261)|control.hasfocus(97262)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -375,57 +375,16 @@ This file should contain the details view
 					<id>66624</id>
 					<label>Download Central</label>
 					<hyperlink>181966</hyperlink>
-					<ondown>97258</ondown>
+					<ondown>97270</ondown>
 					<onup>66623</onup>
 					<onright>6</onright>
 					<visible>plugin.isenabled(dlCentral)</visible>
 				</control>
 				<control>
-					<description>Add to Trakt Movie/Show Watch List</description>
 					<type>button</type>
-					<id>97258</id>
-					<label>#Trakt.Translation.AddToWatchList.Label</label>
+					<id>97270</id>
+					<label>Trakt...</label>
 					<onup>66624</onup>
-					<ondown>97261</ondown>
-					<onright>6</onright>
-					<visible>plugin.isenabled(Trakt)</visible>
-				</control>
-				<control>
-					<description>Trakt Add to Custom List</description>
-					<type>button</type>
-					<id>97261</id>
-					<label>#Trakt.Translation.AddToList.Label</label>
-					<onup>97258</onup>
-					<ondown>97259</ondown>
-					<onright>6</onright>
-					<visible>plugin.isenabled(Trakt)</visible>
-				</control>
-				<control>
-					<description>Trakt Rate</description>
-					<type>button</type>
-					<id>97259</id>
-					<label>Trakt #Trakt.Translation.Rate.Label</label>
-					<onup>97261</onup>
-					<ondown>97260</ondown>
-					<onright>6</onright>
-					<visible>plugin.isenabled(Trakt)</visible>
-				</control>
-				<control>
-					<description>Trakt Shouts List</description>
-					<type>button</type>
-					<id>97260</id>
-					<label>Trakt #Trakt.Translation.Shouts.Label</label>
-					<onup>97259</onup>
-					<ondown>97262</ondown>
-					<onright>6</onright>
-					<visible>plugin.isenabled(Trakt)</visible>
-				</control>
-				<control>
-					<description>Trakt Related Movies</description>
-					<type>button</type>
-					<id>97262</id>
-					<label>#Trakt.Translation.RelatedMovies.Label</label>
-					<onup>97260</onup>
 					<ondown>66621</ondown>
 					<onright>6</onright>
 					<visible>plugin.isenabled(Trakt)</visible>
