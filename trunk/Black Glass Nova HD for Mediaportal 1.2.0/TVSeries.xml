@@ -717,31 +717,7 @@
 			<label>#TVSeries.Description</label>
 		</control>
 		<!-- *****************************************INFORMATION IN WIDE BANNER VIEW***************************************************************** -->
-		<!-- <control>
-			<type>fadelabel</type>
-			<description>Title (Wide Banners)</description>
-			<posX>30</posX>
-			<posY>490</posY>
-			<width>750</width>
-			<font>font28</font>
-			<align>left</align>
-			<label>#TVSeries.Title</label>
-			<visible>!facadeview.list+!control.isvisible(1242)</visible>
-		</control> 
 
-		<control>
-			<type>textboxscrollup</type>
-			<description>Description (Wide Banners)</description>
-			<id>632</id>
-			<posX>30</posX>
-			<posY>550</posY>
-			<width>790</width>
-			<height>155</height>
-			<textcolor>ffffffff</textcolor>
-			<font>font12</font>
-			<visible>!facadeview.list+control.isvisible(1237)+!control.isvisible(1242)</visible>
-			<label>#TVSeries.Description</label>
-		</control>-->
 		<control>
 			<type>textboxscrollup</type>
 			<description>Description (grouplist)</description>
@@ -1134,7 +1110,7 @@
 			<height>1071</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(97259)|control.hasfocus(97270)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -1153,7 +1129,7 @@
 			<width>637</width>
 			<height>1080</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.hasfocus(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
+			<visible>!control.hasfocus(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(97259)|control.hasfocus(97270)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -1203,11 +1179,11 @@
 					<label>Switch View</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<onup>21</onup>
+					<onup>17</onup>
 					<ondown>3</ondown>
 					<height>75</height>
 					<textYOff>10</textYOff>
-				</control> 
+				</control>
 				<control>
 					<description>Change Layout</description>
 					<type>button</type>
@@ -1232,7 +1208,7 @@
 					<onup>3</onup>
 					<height>75</height>
 					<textYOff>10</textYOff>
-				</control>	
+				</control>
 				<control>
 					<description>My Playlists</description>
 					<type>button</type>
@@ -1244,7 +1220,7 @@
 					<onup>20</onup>
 					<height>75</height>
 					<textYOff>10</textYOff>
-				</control>		  
+				</control>
 				<control>
 					<description>Options</description>
 					<type>button</type>
@@ -1290,52 +1266,22 @@
 					<label>Download Central</label>
 					<hyperlink>181966</hyperlink>
 					<onup>9111</onup>
-					<ondown>66614</ondown>
+					<ondown>97270</ondown>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<visible>plugin.isenabled(dlCentral)+control.isvisible(1239)</visible>
-					<height>75</height>
-					<textYOff>10</textYOff>
+					<height>112</height>
+					<textYOff>15</textYOff>
 				</control>
 				<control>
-					<description>Trakt</description>
 					<type>button</type>
-					<id>66614</id>
-					<label>Trakt</label>
-					<hyperlink>87258</hyperlink>
+					<id>97270</id>
+					<label>Trakt...</label>
 					<onup>66613</onup>
-					<ondown>97259</ondown>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<visible>plugin.isenabled(Trakt)</visible>
-					<height>75</height>
-					<textYOff>10</textYOff>
-				</control>
-				<control>
-					<description>Trakt Rate</description>
-					<type>button</type>
-					<id>97259</id>
-					<label>Trakt #Trakt.Translation.Rate.Label</label>
-					<onup>66614</onup>
-					<ondown>97260</ondown>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<visible>plugin.isenabled(Trakt)</visible>
-					<height>75</height>
-					<textYOff>10</textYOff>
-				</control>
-				<control>
-					<description>Trakt Shouts List</description>
-					<type>button</type>
-					<id>97260</id>
-					<label>Trakt #Trakt.Translation.Shouts.Label</label>
-					<onup>97259</onup>
 					<ondown>2</ondown>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<visible>plugin.isenabled(Trakt)</visible>
-					<height>75</height>
-					<textYOff>10</textYOff>
+					<visible>plugin.isenabled(Trakt)+control.isvisible(1239)</visible>
 				</control>
 			</control>
 			<control>
