@@ -1162,7 +1162,7 @@
 			<height>714</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(97270)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -1181,7 +1181,7 @@
 			<width>425</width>
 			<height>720</height>
 			<dimColor>ffffffff</dimColor>
-			<visible>!control.hasfocus(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(97259)|control.hasfocus(97260)]</visible>
+			<visible>!control.hasfocus(50)+[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(20)|control.hasfocus(9)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(66608)|control.hasfocus(10)|control.hasfocus(30)|control.hasfocus(9111)|control.hasfocus(66613)|control.hasfocus(66614)|control.hasfocus(97270)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
@@ -1318,52 +1318,22 @@
 					<label>Download Central</label>
 					<hyperlink>181966</hyperlink>
 					<onup>9111</onup>
-					<ondown>66614</ondown>
+					<ondown>97270</ondown>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<visible>plugin.isenabled(dlCentral)+control.isvisible(1239)</visible>
-					<height>50</height>
-					<textYOff>7</textYOff>
+					<height>75</height>
+					<textYOff>10</textYOff>
 				</control>
 				<control>
-					<description>Trakt</description>
 					<type>button</type>
-					<id>66614</id>
-					<label>Trakt</label>
-					<hyperlink>87258</hyperlink>
+					<id>97270</id>
+					<label>Trakt...</label>
 					<onup>66613</onup>
-					<ondown>97259</ondown>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<visible>plugin.isenabled(Trakt)</visible>
-					<height>50</height>
-					<textYOff>7</textYOff>
-				</control>
-				<control>
-					<description>Trakt Rate</description>
-					<type>button</type>
-					<id>97259</id>
-					<label>Trakt #Trakt.Translation.Rate.Label</label>
-					<onup>66614</onup>
-					<ondown>97260</ondown>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<visible>plugin.isenabled(Trakt)</visible>
-					<height>50</height>
-					<textYOff>7</textYOff>
-				</control>
-				<control>
-					<description>Trakt Shouts List</description>
-					<type>button</type>
-					<id>97260</id>
-					<label>Trakt #Trakt.Translation.Shouts.Label</label>
-					<onup>97259</onup>
 					<ondown>2</ondown>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<visible>plugin.isenabled(Trakt)</visible>
-					<height>50</height>
-					<textYOff>7</textYOff>
+					<visible>plugin.isenabled(Trakt)+control.isvisible(1239)</visible>
 				</control>
 			</control>
 
