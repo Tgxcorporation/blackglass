@@ -3,24 +3,20 @@
 <window>
 	<id>8765</id>
 	<defaultcontrol>3</defaultcontrol>
-
 	<allowoverlay>player.hasmedia</allowoverlay>
 	<define>#header.label:Media Slayer</define>
 	<define>#header.background:hover_mediaslayer.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
-
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-
-		<import>common.window.time.xml</import>
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(4)|control.hasfocus(3)|control.hasfocus(10)|control.hasfocus(19)|control.hasfocus(9)|control.hasfocus(14)|control.hasfocus(24)|control.hasfocus(18)]">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>1275</width>
@@ -32,6 +28,41 @@
 				<font>font28</font>
 				<align>left</align>
 				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>63</posY>
+				<label>#WorldWeather.TodayTemperature     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1887</posX>
+				<posY>22</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -56,19 +87,7 @@
 				<type>image</type>
 				<id>0</id>
 				<posX>735</posX>
-				<posY>328</posY>
-				<width>1185</width>
-				<height>79</height>
-				<texture>bg_facade_line_nofocus.png</texture>
-				<colordiffuse>77ffffff</colordiffuse>
-				<visible>control.isvisible(12)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<posX>735</posX>
-				<posY>448</posY>
+				<posY>327</posY>
 				<width>1185</width>
 				<height>79</height>
 				<texture>bg_facade_line_nofocus.png</texture>
@@ -78,8 +97,8 @@
 			</control>
 			<control>
 				<description>Heading</description>
-				<type>label</type>
-				<id>2</id>
+				<type>fadelabel</type>
+				<id>7</id>
 				<posX>780</posX>
 				<posY>144</posY>
 				<width>1066</width>
@@ -88,59 +107,17 @@
 				<textcolor>White</textcolor>
 			</control>
 			<control>
-				<description>Artist header</description>
-				<type>label</type>
-				<id>15</id>
-				<posX>780</posX>
-				<posY>422</posY>
-				<label>171</label>
-				<textcolor>90ffffff</textcolor>
-				<font>font14</font>
-				<width>150</width>
-			</control>
-			<control>
-				<description>Artist name</description>
-				<type>label</type>
-				<id>6</id>
-				<posX>969</posX>
-				<posY>422</posY>
-				<font>font16</font>
-				<width>900</width>
-			</control>
-			<control>
-				<description>Album header</description>
-				<type>label</type>
-				<id>16</id>
-				<posX>780</posX>
-				<posY>467</posY>
-				<label>170</label>
-				<textcolor>90ffffff</textcolor>
-				<font>font14</font>
-				<width>150</width>
-			</control>
-			<control>
-				<description>Album name</description>
-				<type>label</type>
-				<id>7</id>
-				<posX>969</posX>
-				<posY>467</posY>
-				<font>font16</font>
-				<width>900</width>
-			</control>
-			<control>
 				<description>textarea</description>
 				<type>textbox</type>
-				<id>25</id>
-				<posX>969</posX>
-				<posY>542</posY>
-				<width>900</width>
-				<height>520</height>
+				<id>26</id>
+				<posX>780</posX>
+				<posY>420</posY>
+				<width>1065</width>
+				<height>639</height>
 				<font>font14</font>
 				<spinPosX>1701</spinPosX>
 				<spinPosY>993</spinPosY>
 			</control>
-
-
 			<control>
 				<type>image</type>
 				<id>1</id>
@@ -167,14 +144,13 @@
 			</control>
 			<control>
 				<description>text label - STATUS</description>
-				<type>label</type>
+				<type>fadelabel</type>
 				<id>5</id>
 				<posX>780</posX>
 				<posY>260</posY>
 				<width>1080</width>
 				<font>font14</font>
 			</control>
-
 			<control>
 				<type>image</type>
 				<id>1</id>
@@ -201,7 +177,7 @@
 			</control>
 			<control>
 				<description>text label - TOTAL STATUS</description>
-				<type>label</type>
+				<type>fadelabel</type>
 				<id>13</id>
 				<posX>780</posX>
 				<posY>335</posY>
@@ -212,11 +188,12 @@
 				<description>Movie image background</description>
 				<type>image</type>
 				<id>23</id>
-				<posX>4545</posX>
+				<posX>45</posX>
 				<posY>109</posY>
 				<width>424</width>
 				<height>540</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+				<visible>control.hasthumb(22)</visible>
 			</control>
 			<control>
 				<description>Movie image</description>
@@ -231,28 +208,29 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 			</control>
-			<control>
+			<!-- <control>
 				<description>Movie image background</description>
 				<type>image</type>
 				<id>1</id>
-				<posX>45</posX>
-				<posY>109</posY>
-				<width>424</width>
-				<height>540</height>
+				<posX>30</posX> 
+				<posY>73</posY> 
+				<width>283</width> 
+				<height>360</height> 
 				<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 				<visible>control.isvisible(23)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
-			</control>
+			</control> -->
 			<control>
 				<description>Album Art background</description>
 				<type>image</type>
 				<id>21</id>
-				<posX>4545</posX>
+				<posX>45</posX>
 				<posY>109</posY>
 				<width>540</width>
 				<height>490</height>
 				<colordiffuse>ffffffff</colordiffuse>
 				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+				<visible>control.hasthumb(21)</visible>
 			</control>
 			<control>
 				<description>Album Art</description>
@@ -266,22 +244,22 @@
 				<centered>yes</centered>
 				<texture flipY="true" diffuse="Thumb_Mask.png">-</texture>
 			</control>
-			<control>
+			<!-- 			<control>
 				<description>Album Art background</description>
 				<type>image</type>
 				<id>1</id>
-				<posX>45</posX>
-				<posY>109</posY>
-				<width>540</width>
-				<height>490</height>
-				<colordiffuse>ffffffff</colordiffuse>
+				<posX>30</posX>
+				<posY>73</posY>
+				<width>360</width>
+				<height>327</height>
+				<colordiffuse>ffffffff</colordiffuse> 
 				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
 				<visible>control.isvisible(21)</visible>
-			</control>
+			</control> -->
 			<control>
 				<description>spin control</description>
 				<type>spincontrol</type>
-				<id>26</id>
+				<id>25</id>
 				<posX>502</posX>
 				<posY>675</posY>
 				<onup>26</onup>
@@ -300,8 +278,7 @@
 			<height>1071</height>
 			<texture>bg_left.png</texture>
 			<colorDiffuse>ffffffff</colorDiffuse>
-
-			<visible>control.hasfocus(50)</visible>
+			<visible>![control.hasfocus(4)|control.hasfocus(3)|control.hasfocus(10)|control.hasfocus(19)|control.hasfocus(9)|control.hasfocus(14)|control.hasfocus(24)|control.hasfocus(18)]</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
 			<animation effect="fade" time="250">visiblechange</animation>
@@ -320,8 +297,7 @@
 			<width>637</width>
 			<height>1080</height>
 			<dimColor>ffffffff</dimColor>
-
-			<visible>!control.hasfocus(50)</visible>
+			<visible>[control.hasfocus(4)|control.hasfocus(3)|control.hasfocus(10)|control.hasfocus(19)|control.hasfocus(9)|control.hasfocus(14)|control.hasfocus(24)|control.hasfocus(18)]</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
 			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
