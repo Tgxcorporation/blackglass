@@ -41,25 +41,11 @@
 			<visible>control.isvisible(12)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>	
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>490</posX>
-			<posY>298</posY>
-			<width>790</width>
-			<height>53</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-			<visible>control.isvisible(12)</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-
-
 
 		<control>
 			<description>Heading</description>
-			<type>label</type>
-			<id>2</id>
+			<type>fadelabel</type>
+			<id>7</id>
 			<posX>520</posX>
 			<posY>96</posY>
 			<width>711</width>
@@ -69,55 +55,13 @@
 			<textcolor>White</textcolor>
 		</control>
 		<control>
-			<description>Artist header</description>
-			<type>label</type>
-			<id>15</id>
-			<posX>520</posX>
-			<posY>281</posY>
-			<label>171</label>
-			<textcolor>90ffffff</textcolor>
-			<font>font14</font>
-			<width>100</width>
-		</control>
-		<control>
-			<description>Artist name</description>
-			<type>label</type>
-			<id>6</id>
-			<posX>646</posX>
-			<posY>281</posY>
-			<label/>
-			<font>font16</font>
-			<width>600</width>
-		</control>
-		<control>
-			<description>Album header</description>
-			<type>label</type>
-			<id>16</id>
-			<posX>520</posX>
-			<posY>311</posY>
-			<label>170</label>
-			<textcolor>90ffffff</textcolor>
-			<font>font14</font>
-			<width>100</width>
-		</control>
-		<control>
-			<description>Album name</description>
-			<type>label</type>
-			<id>7</id>
-			<posX>646</posX>
-			<posY>311</posY>
-			<label/>
-			<font>font16</font>
-			<width>600</width>
-		</control>
-		<control>
 			<description>textarea</description> 
 			<type>textbox</type> 
-			<id>25</id> 
-			<posX>646</posX>
-			<posY>361</posY>
-			<width>600</width>
-			<height>346</height>  
+			<id>26</id> 
+			<posX>520</posX>
+			<posY>280</posY>
+			<width>710</width>
+			<height>426</height>  
 			<font>font14</font>
 			<spinPosX>1134</spinPosX>
 			<spinPosY>662</spinPosY>
@@ -148,7 +92,7 @@
 		</control>
 		<control>
 			<description>text label - STATUS</description>
-			<type>label</type>
+			<type>fadelabel</type>
 			<id>5</id>
 			<posX>520</posX>
 			<posY>173</posY>
@@ -181,7 +125,7 @@
 		</control>
 		<control>
 			<description>text label - TOTAL STATUS</description>
-			<type>label</type>
+			<type>fadelabel</type>
 			<id>13</id>
 			<posX>520</posX>
 			<posY>223</posY>
@@ -194,18 +138,19 @@
 			<description>Movie image background</description>
 			<type>image</type>
 			<id>23</id>
-			<posX>3030</posX> 
+			<posX>30</posX> 
 			<posY>73</posY> 
 			<width>283</width> 
 			<height>360</height> 
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+			<visible>control.hasthumb(22)</visible>
 		</control>
 		<control>
 			<description>Movie image</description>
 			<type>image</type>
 			<id>22</id>
 			<posX>62</posX> 
-			<posY>299</posY> 
+			<posY>78</posY> 
 			<width>245</width> 
 			<height>348</height> 
 			<colordiffuse>ffffffff</colordiffuse>
@@ -213,7 +158,7 @@
 			<keepaspectratio>yes</keepaspectratio> 
 			<centered>yes</centered> 
 		</control>   
-		<control>
+		<!-- <control>
 			<description>Movie image background</description>
 			<type>image</type>
 			<id>1</id>
@@ -224,31 +169,32 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
 			<visible>control.isvisible(23)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
+		</control> -->
 		<control>
 			<description>Album Art background</description>
 			<type>image</type>
 			<id>21</id>
-			<posX>3030</posX>
+			<posX>30</posX>
 			<posY>73</posY>
 			<width>360</width>
 			<height>327</height>
 			<colordiffuse>ffffffff</colordiffuse> 
 			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+			<visible>control.hasthumb(21)</visible>
 		</control>
 		<control>
 			<description>Album Art</description>
 			<type>image</type>
 			<id>20</id>
 			<posX>71</posX>
-			<posY>336</posY>
+			<posY>82</posY>
 			<width>312</width>
 			<height>312</height>
 			<keepaspectratio>yes</keepaspectratio> 
 			<centered>yes</centered> 
 			<texture flipY="true" diffuse="Thumb_Mask.png">-</texture>
 		</control>
-		<control>
+		<!-- <control>
 			<description>Album Art background</description>
 			<type>image</type>
 			<id>1</id>
@@ -260,13 +206,13 @@
 			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
 			<visible>control.isvisible(21)</visible>
 			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
+		</control> -->
 		<control>
 			<description>spin control</description>
 			<type>spincontrol</type>
-			<id>26</id>
+			<id>25</id>
 			<posX>335</posX>
-			<posY>680</posY>
+			<posY>450</posY>
 			<onup>26</onup>
 			<ondown>26</ondown>
 			<onleft>3</onleft>
