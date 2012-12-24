@@ -1,23 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
-	<id>9006</id>
-	<defaultcontrol>50</defaultcontrol>
+	<id>1024</id>
+	<defaultcontrol>2</defaultcontrol>
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
-	<define>#header.label:109006</define>
+	<define>#header.label:101024</define>
 	<define>#header.background:hover_settings.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.time.xml</import>
-		<control>
-			<description>NO REMOTE OPTIONS</description>
-			<type>label</type>
-			<id>40</id>
-			<posX>1400</posX>
-			<label>9144</label>
-			<onup>17</onup>
-		</control>
+		<import>common.window.time.basic.xml</import>
 		<control>
 			<type>group</type>
 			<dimColor>ffffffff</dimColor>
@@ -61,29 +53,71 @@
 				<posX>0</posX>
 				<posY>100</posY>
 				<control>
-					<description>Disable Remote</description>
-					<type>togglebutton</type>
-					<id>50</id>
-					<label>9145</label>
-				</control>
-				<control>
-					<description>Disable Repeat</description>
-					<type>togglebutton</type>
-					<id>51</id>
-					<label>9146</label>
-				</control>
-				<control>
-					<description>Repeat Delay</description>
-					<type>selectbutton</type>
-					<id>52</id>
-					<label>9147</label>
-				</control>
-				<control>
-					<description>Remote Mapping</description>
+					<description>Region</description>
 					<type>button</type>
-					<id>53</id>
-					<label>9148</label>
+					<id>2</id>
+					<label>300218</label>
+					<onup>17</onup>
 				</control>
+				<control>
+					<description>AudioType</description>
+					<type>button</type>
+					<id>3</id>
+					<label>300219</label>
+				</control>
+				<control>
+					<description>Video</description>
+					<type>button</type>
+					<id>4</id>
+					<label>2134</label>
+				</control>
+				<control>
+					<description>Audio</description>
+					<type>button</type>
+					<id>5</id>
+					<label>2135</label>
+				</control>
+				<control>
+					<description>Subtitles On/Off</description>
+					<type>checkbutton</type>
+					<id>6</id>
+					<label>1196</label>
+					<ondown>7</ondown>
+				</control>	
+
+			</control>
+			<control>
+				<description>Parental age limit</description>
+				<type>label</type>
+				<id>102</id>
+				<posX>30</posX>
+				<posY>380</posY>
+				<width>385</width>
+				<label>300220</label>
+				<font>font16</font>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<description>Age limit value</description>
+				<type>spincontrol</type>
+				<id>7</id>
+				<posX>30</posX>
+				<posY>425</posY>
+				<onleft>7</onleft>
+				<onup>6</onup>
+				<ondown>2</ondown>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+				<buddycontrolid>102</buddycontrolid>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>413</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
 			</control>
 		</control>
 	</controls>
