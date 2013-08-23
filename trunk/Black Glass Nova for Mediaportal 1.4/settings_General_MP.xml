@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>1018</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:300080</define>
+	<define>#header.background:hover_settings.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="-193,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="-193,0" reversible="false">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>325</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Log</description>
+					<type>button</type>
+					<id>2</id>
+					<label>300090</label>
+					<onup>17</onup>
+				</control>
+				<control>
+					<description>Process priority</description>
+					<type>button</type>
+					<id>3</id>
+					<label>300091</label>
+				</control>
+				<control>
+					<description>Watchdog</description>
+					<type>checkbutton</type>
+					<id>4</id>
+					<label>300092</label>
+					<align>right</align>
+				</control>
+				<control>
+					<description>Autorestart</description>
+					<type>checkbutton</type>
+					<id>5</id>
+					<label>300093</label>
+					<onright>6</onright>
+					<align>right</align>
+					<font>font14</font>
+				</control>
+			</control>
+			<control>
+				<description>Seconds label</description>
+				<type>label</type>
+				<id>100</id>
+				<posX>30</posX>
+				<posY>325</posY>
+				<width>375</width>
+				<label>300094</label>
+				<font>font14</font>
+				<textcolor>60ffffff</textcolor>
+				<visible>control.isvisible(6)</visible>
+			</control>
+			<control>
+				<description>Seconds</description>
+				<type>spincontrol</type>
+				<id>6</id>
+				<posX>30</posX>
+				<posY>365</posY>
+				<onup>5</onup>
+				<onleft>5</onleft>
+				<ondown>99</ondown>
+				<align>left</align>
+				<font>font14</font>
+				<buddycontrolid>100</buddycontrolid>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>347</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+		</control>
+	</controls>
+</window>

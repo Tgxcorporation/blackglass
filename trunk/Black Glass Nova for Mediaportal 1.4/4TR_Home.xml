@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>1</id>
+	<defaultcontrol>2</defaultcontrol>
+	<rememberLastFocusedControl>yes</rememberLastFocusedControl>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:605</define>
+	<define>#header.background:hover_my tv2.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.basic.center.xml</import>
+		
+
+
+		<control>
+			<description>video window</description>
+			<type>videowindow</type>
+			<id>99</id>
+			<posX>846</posX>
+			<posY>431</posY>
+			<width>413</width>
+			<height>233</height>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<action>18</action>
+			<textureFocus>tv_green_border.png</textureFocus>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250">visiblechange</animation>	
+			<visible>!player.hasmedia</visible>
+			<control>
+				<description>Progress background</description>
+				<type>image</type>
+				<id>1</id>
+				<posX>846</posX>
+				<posY>646</posY>
+				<width>413</width>
+				<height>18</height>
+				<texture>osd_progress_background.png</texture>
+			</control>
+			<control>
+				<description>progress bar</description>
+				<type>progress</type>
+				<id>20</id>
+				<posX>834</posX>
+				<posY>638</posY>
+				<width>437</width>
+				<label>#TV.View.Percentage</label>
+				<lefttexture>osd_progress_left_dummy_tvhome.png</lefttexture>
+				<midtexture>osd_progress_mid_tvhome.png</midtexture>
+				<righttexture>-</righttexture>
+			</control>
+			<control>
+				<description>Current program time</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>851</posX>
+				<posY>647</posY>
+				<width>360</width>
+				<label>#TV.View.start</label>
+				<font>font9</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>Current program time</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>1254</posX>
+				<posY>647</posY>
+				<width>360</width>
+				<label>#TV.View.stop</label>
+				<font>font9</font>
+				<align>right</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>background up</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>846</posX>
+				<posY>432</posY>
+				<width>413</width>
+				<height>18</height>
+				<texture>osd_progress_background2.png</texture>
+			</control>
+			<control>
+				<description>Current program name</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>851</posX>
+				<posY>432</posY>
+				<width>403</width>
+				<label>#TV.View.title</label>
+				<font>font9</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<description>Channel Image</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>985</posX>
+				<posY>497</posY>
+				<width>133</width>
+				<height>100</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture  flipY="true" diffuse="Thumb_Mask.png">#TV.View.thumb</texture>
+			</control>
+		</control>
+		<control>
+			<description>TV background</description>
+			<type>image</type>
+			<id>1</id>
+			<posX>820</posX>
+			<posY>407</posY>
+			<width>464</width>
+			<height>315</height>
+			<colordiffuse>a0ffffff</colordiffuse>
+			<texture>TVCase.png</texture>
+		</control>
+
+		<control>
+			<description>REAL Current program title</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>810</posX>
+			<posY>422</posY>
+			<width>780</width>
+			<font>font22</font>
+			<label>#TV.View.title</label>
+			<textcolor>FFFFFFFF</textcolor>
+			<align>right</align>
+			<wrapString> : : : </wrapString>
+		</control> 
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>420</posY>
+			<width>833</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control> 
+		<control>
+			<description>Current channel</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>810</posX>
+			<posY>479</posY>
+			<width>780</width>
+			<font>font22</font>
+			<label>#TV.View.channel</label>
+			<align>right</align>
+			<textcolor>90ffffff</textcolor>
+			<wrapString> : : : </wrapString>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>473</posY>
+			<width>833</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control> 
+		<control>
+			<description>Current program time</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>810</posX>
+			<posY>532</posY>
+			<width>780</width>
+			<label>#TV.View.start - #TV.View.stop</label>
+			<textcolor>ffffffff</textcolor>
+			<font>font22</font>
+			<align>right</align>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>526</posY>
+			<width>833</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control> 
+		<control>
+			<description>genre</description>
+			<type>label</type>
+			<id>17</id>
+			<posX>5030</posX>
+			<posY>205</posY>
+			<label>#TV.Search.Genre</label>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Description1</description>
+			<type>textboxscrollup</type>
+			<id>15</id>
+			<posX>30</posX>
+			<posY>585</posY>
+			<width>780</width>
+			<height>115</height>
+			<label>#TV.View.description</label>
+			<font>font18</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<seperator>: : :</seperator>
+			<textalign>right</textalign>
+		</control>
+
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)|control.hasfocus(97262)|control.hasfocus(97263)|control.hasfocus(97264)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>97262</onexit>
+			<buttonX>30</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>355</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(7)|control.hasfocus(8)|control.hasfocus(9)|control.hasfocus(1313)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>47</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>47</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>bg_button_nofocus.png</texture>
+				</control>
+				<control>
+					<description>TVGuide</description>
+					<type>button</type>
+					<id>2</id>
+					<label>TV Guide</label>
+					<onup>17</onup>
+					<ondown>3</ondown>
+					<onright>99</onright>
+					<onleft>97262</onleft>
+				</control>
+				<control>
+					<description>Search TVGuide</description>
+					<type>button</type>
+					<id>3</id>
+					<label>Search</label>
+					<onup>2</onup>
+					<ondown>4</ondown>
+					<onright>99</onright>
+					<onleft>97262</onleft>
+				</control>
+				<control>
+					<description>Recordings</description>
+					<type>button</type>
+					<id>4</id>
+					<label>Recorded TV</label>
+					<onup>3</onup>
+					<ondown>5</ondown>
+					<onright>99</onright>
+					<onleft>97262</onleft>
+				</control>
+				<control>
+					<description>Channel button</description>
+					<type>button</type>
+					<id>5</id>
+					<label>602</label>
+					<onup>4</onup>
+					<ondown>6</ondown>
+					<onright>99</onright>
+					<onleft>97262</onleft>
+				</control>
+				<control>
+					<description>TV On/Off button</description>
+					<type>checkbutton</type>
+					<id>6</id>
+					<label>707</label>
+					<onup>5</onup>
+					<ondown>7</ondown>
+					<onright>99</onright>
+					<onleft>97262</onleft>
+				</control>
+				<control>
+					<description>UpcomingPrograms</description>
+					<type>button</type>
+					<id>7</id>
+					<label>Upcoming Programs</label>
+					<onup>6</onup>
+					<ondown>8</ondown>
+					<onright>99</onright>
+					<onleft>97262</onleft>
+				</control>
+				<control>
+					<description>ActiveRecordings</description>
+					<type>button</type>
+					<id>8</id>
+					<label>Active Recordings</label>
+					<onup>7</onup>
+					<ondown>9</ondown>
+					<onright>99</onright>
+					<onleft>97262</onleft>
+				</control>
+				<control>
+					<description>Teletext</description>
+					<type>button</type>
+					<id>9</id>
+					<label>Teletext</label>
+					<onup>8</onup>
+					<ondown>1313</ondown>
+					<onright>99</onright>
+					<onleft>97262</onleft>
+				</control>
+				<control>
+					<description>TvWishList</description>
+					<type>button</type>
+					<id>1313</id>
+					<label>TvWishList</label>
+					<hyperlink>70943672</hyperlink>
+					<onup>9</onup>
+					<ondown>2</ondown>
+					<onright>99</onright>
+					<onleft>97262</onleft>
+					<visible>plugin.isenabled(TvWishListMP)</visible>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>600</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>arrow_menu_left.png</texture>
+				</control>
+				<!--<control>
+        <description>Schedules</description>
+        <type>button</type>
+        <id>6</id>
+        <label>Schedules</label>
+        <onup>5</onup>
+        <ondown>2</ondown>
+      </control>-->
+			</control>
+		</control>
+
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>97262</defaultcontrol>
+			<onexit>2</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>30</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(97262)|control.hasfocus(97263)|control.hasfocus(97264)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+
+
+
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>47</posY>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>47</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>bg_button_nofocus.png</texture>
+				</control>
+				<control>
+					<description>Tv Settings</description>
+					<type>button</type>
+					<id>97262</id>
+					<onleft>2</onleft>
+					<onup>17</onup>
+					<ondown>97263</ondown>
+					<label>Client Settings</label>
+					<hyperlink>49857</hyperlink>
+				</control>
+				<control>
+					<description>Server Settings</description>
+					<type>button</type>
+					<id>97263</id>
+					<onleft>2</onleft>
+					<onup>97262</onup>
+					<ondown>97264</ondown>
+					<label>Server Settings</label>
+					<hyperlink>49855</hyperlink>
+				</control>
+				<control>
+					<description>Channel Management</description>
+					<type>button</type>
+					<id>97264</id>
+					<onleft>2</onleft>
+					<onup>97263</onup>
+					<ondown>97262</ondown>
+					<label>Channel Management</label>
+					<hyperlink>49856</hyperlink>
+				</control>
+				<control>
+					<type>image</type>
+					<id>0</id>
+					<posX>0</posX>
+					<posY>600</posY>
+					<width>385</width>
+					<height>53</height>
+					<texture>arrow_menu_left.png</texture>
+				</control>
+			</control>
+
+		</control>
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>51</id>
+			<posX>1180</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
+		<control>
+			<description>Dummy label to hold global settings for this skin!</description>
+			<type>label</type>
+			<id>420</id>
+			<label>#settings:logo-icon-size=84,84;guide_time=Center</label>
+			<visible>no</visible>
+		</control>
+
+		<!-- NOT USED -->
+		<control>
+			<description>record pin</description>
+			<type>image</type>
+			<id>24</id>
+			<posX>486</posX>
+			<posY>1644</posY>
+			<width>25</width>
+			<height>25</height>
+			<texture>tvguide_record_button.png</texture>
+			<visible>no</visible>
+		</control>
+	</controls>
+</window>

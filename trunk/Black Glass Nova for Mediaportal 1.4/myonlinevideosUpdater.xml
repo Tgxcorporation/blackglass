@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>4757</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:#OnlineVideos.HeaderLabel</define>
+	<define>#header.image:#OnlineVideos.HeaderImage</define>
+	<define>#header.background:hover_OnlineVideos.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+
+		<!-- *** WINDOW DEFAULTS *** -->
+
+		<import>common.window.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.basic.xml</import>
+		<import>common.facade.itemcount.basic.xml</import>
+
+		<control>
+			<type>group</type>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>50</id>
+				<scrollOffset>2</scrollOffset>
+				<onleft>505</onleft>
+				<posX>640</posX>
+				<width>640</width>
+				<posY>430</posY>
+				<height>300</height>
+				<textureHeight>35</textureHeight>
+				<itemWidth>40</itemWidth>
+				<itemHeight>30</itemHeight>
+				<IconXOff>10</IconXOff>
+				<IconYOff>2</IconYOff>
+				<textXOff2>365</textXOff2>
+				<textYOff2>2</textYOff2>
+				<textXOff3>385</textXOff3>
+				<textYOff3>4</textYOff3>
+				<font>font14</font>	
+				<font2>font14</font2>	
+				<font3>font14</font3>	
+				<textYOff>2</textYOff>
+				<spinWidth>30</spinWidth>
+				<spinHeight>30</spinHeight>
+				<spinPosX>1210</spinPosX>
+				<spinPosY>685</spinPosY>
+				<PinIconXOff>625</PinIconXOff> 
+				<PinIconYOff>2</PinIconYOff>
+			</control>
+		</control>
+
+		
+		
+		
+		
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>33</posX>
+			<posY>487</posY>
+			<width>273</width>
+			<height>204</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+			<centered>yes</centered>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>25</posX>
+			<posY>480</posY>
+			<width>290</width>
+			<height>219</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+		</control>
+
+
+
+		<control>
+			<type>fadelabel</type>
+			<description>Current title</description>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>418</posY>
+			<width>560</width>
+			<font>font22</font>
+			<label>#selecteditem</label>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>0</posX>
+			<posY>430</posY>
+			<width>609</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>Owner Label</description>
+			<type>fadelabel</type>
+			<id>501</id>
+			<posX>330</posX>
+			<posY>468</posY>
+			<width>265</width>
+			<label>#OnlineVideos.Translation.Creator.Label: #OnlineVideos.owner</label>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>315</posX>
+			<posY>465</posY>
+			<width>294</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>Description</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>330</posX>
+			<posY>503</posY>
+			<width>265</width>
+			<height>195</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<font>font16</font>
+			<label>#OnlineVideos.desc</label>
+			<textcolor>White</textcolor>
+			<seperator>: : :</seperator>
+		</control> 
+
+
+
+
+
+
+
+		<!-- *** HIDDEN MENU *** -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(502)|control.hasfocus(503)|control.hasfocus(504)|control.hasfocus(505)|control.hasfocus(506)|control.hasfocus(507)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>505</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(502)|control.hasfocus(503)|control.hasfocus(504)|control.hasfocus(505)|control.hasfocus(506)|control.hasfocus(507)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label><width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<type>button</type>
+					<description>full update button</description>
+					<id>505</id>
+					<onright>50</onright>
+					<onup>17</onup>          
+					<ondown>504</ondown>
+					<label>#OnlineVideos.Translation.FullUpdate.Label</label>
+					<visible allowhiddenfocus="true">!Control.HasFocus(50)</visible>
+				</control>         
+				<control>
+					<type>selectbutton</type>
+					<description>Order By</description>
+					<id>504</id>
+					<onright>50</onright>
+					<onup>505</onup>
+					<ondown>503</ondown>
+					<label>#OnlineVideos.Translation.SortOptions.Label</label>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>   
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button</description>
+					<id>503</id>
+					<onright>50</onright>
+					<onup>504</onup>
+					<ondown>506</ondown>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.State.Label</label>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>         
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button for Creator</description>
+					<id>506</id>
+					<onright>50</onright>
+					<onup>503</onup>
+					<ondown>507</ondown>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Creator.Label</label>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>         
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button for Language</description>
+					<id>507</id>
+					<onright>50</onright>
+					<onup>506</onup>
+					<ondown>502</ondown>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Language.Label</label>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>         
+				<control>
+					<type>button</type>
+					<description>refresh button</description>
+					<id>502</id>
+					<onright>50</onright>
+					<onup>507</onup>          
+					<ondown>505</ondown>
+					<label>#OnlineVideos.Translation.Refresh.Label</label>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>             
+			</control>    
+		</control> 
+	</controls>
+</window>
