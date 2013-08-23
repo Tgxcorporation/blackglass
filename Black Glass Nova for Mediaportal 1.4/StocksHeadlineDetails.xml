@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<control>
+				<description>LISTVIEW RIGHT Backdrop Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>614</posX>
+				<posY>377</posY>
+				<width>1372</width>
+				<height>500</height>
+				<texture>bg_tvguide.png</texture>
+				<visible>string.equals(#Stocks.Type,Headline)+string.equals(#Stocks.View,List)</visible>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>640</posX>
+				<posY>395</posY>
+				<width>640</width>
+				<height>35</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+				<visible>string.equals(#Stocks.Type,Headline)+string.equals(#Stocks.View,List)</visible>
+			</control> 
+
+			<!-- *** Headline Ticker *** -->
+			<!-- <control>
+				<description>Headline</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>180</posY>
+				<width>395</width>
+				<font>font22</font>
+				<label>#Stocks.HeadlineTicker</label>
+				<wrapString> : : : </wrapString>
+				<visible>string.equals(#Stocks.Type,Headline)+!string.equals(#Stocks.HeadlineTicker, )</visible>
+			</control> -->
+
+
+			<!-- *** Headline Item List *** -->
+			<control>
+				<type>group</type>
+				<control>
+					<description>listcontrol</description>
+					<type>listcontrol</type>
+					<id>100</id>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<scrollOffset>2</scrollOffset>
+					<posX>640</posX>
+					<width>640</width>
+					<posY>430</posY>
+					<height>300</height>
+					<textureHeight>35</textureHeight>
+					<IconXOff>18</IconXOff>
+					<IconYOff>10</IconYOff>
+					<itemWidth>16</itemWidth>
+					<itemHeight>16</itemHeight>
+					<textXOff>23</textXOff>
+					<textXOff2>630</textXOff2>
+					<textYOff2>2</textYOff2>
+					<textXOff3>630</textXOff3>
+					<textYOff3>2</textYOff3>
+					<font>font14</font>	
+					<font2>font14</font2>	
+					<font3>font14</font3>	
+					<textYOff>2</textYOff>
+					<spinWidth>30</spinWidth>
+					<spinHeight>30</spinHeight>
+					<spinPosX>1210</spinPosX>
+					<spinPosY>685</spinPosY>
+					<PinIconXOff>625</PinIconXOff> 
+					<PinIconYOff>2</PinIconYOff>
+					<visible>string.equals(#Stocks.Type,Headline)+string.equals(#Stocks.View,List)</visible>
+				</control>
+			</control>
+
+
+
+			<!-- *** Headline Item Properties *** -->
+			<control>
+				<description>LISTVIEW LEFT Backdrop Overlay</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>-730</posX>
+				<posY>377</posY>
+				<width>1372</width>
+				<height>500</height>
+				<texture>bg_tvguide.png</texture>
+				<visible>string.equals(#Stocks.Type,Headline)+string.equals(#Stocks.View,List)+!string.equals(#Stocks.HeadlineItemDescription,)</visible>
+			</control>
+			<control>
+				<description>Headline Item Description</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>430</posY>
+				<width>560</width>
+				<height>263</height>
+				<font>font14</font>
+				<label>#Stocks.HeadlineItemDescription</label>
+				<visible>string.equals(#Stocks.Type,Headline)+string.equals(#Stocks.View,List)+!string.equals(#Stocks.HeadlineItemDescription,)</visible>
+			</control>
+		</control>
+
+	</controls>
+</window>

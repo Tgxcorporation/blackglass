@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>614</id>
+	<defaultcontrol>3</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<define>#header.label:#view</define>
+	<define>#header.background:hover_my videos.png</define>
+	<define>#useSelectedFanart:Yes</define>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.video.fanart.xml</import>
+		<import>common.window.time.xml</import>
+		<import>common.facade.background.basic.center.xml</import>
+
+		<control>
+			<description>Cover Art</description>
+			<type>image</type>
+			<id>21</id>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<posX>46</posX> 
+			<posY>425</posY> 
+			<width>198</width> 
+			<height>280</height> 
+			<texture flipY="true" diffuse="Thumb_Mask.png">#thumb</texture>
+		</control>
+		<control>
+			<description>Cover Art Glass Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>20</posX>
+			<posY>420</posY>
+			<width>228</width>
+			<height>290</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+		</control>
+		<control>
+			<type>fadelabel</type>
+			<description>Current program title</description>
+			<id>1</id>
+			<posX>265</posX>
+			<posY>419</posY>
+			<width>995</width>
+			<font>font22</font>
+			<label>#Actor.Name</label>
+			<wrapString> : : : </wrapString>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>249</posX>
+			<posY>430</posY>
+			<width>1035</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>Date of Birth</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>265</posX>
+			<posY>467</posY>
+			<width>995</width>
+			<label>#Actor.DateOfBirth #Actor.PlaceOfBirth     #Actor.DateOfDeath #Actor.PlaceOfDeath</label>
+			<textcolor>90FFFFFF</textcolor>
+			<wrapString> : : : </wrapString>
+			<visible>!control.isvisible(24)</visible>
+		</control>
+
+		<control>
+			<description>Movie Extra Details</description>
+			<type>fadelabel</type>
+			<id>1</id>
+			<posX>265</posX>
+			<posY>467</posY>
+			<width>490</width>
+			<label>#Actor.MovieExtraDetails</label>
+			<font>font16</font>
+			<visible>control.isvisible(24)</visible>
+			<textcolor>90ffffff</textcolor>
+			<wrapString> : : : </wrapString>
+		</control>
+
+
+		<control>
+			<type>image</type>
+			<posX>249</posX>
+			<posY>465</posY>
+			<width>1035</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>!control.isvisible(24)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<posX>249</posX>
+			<posY>465</posY>
+			<width>520</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(24)</visible>
+		</control>
+		<control>
+			<description>Actors value</description>
+			<type>textboxscrollup</type>
+			<id>20</id>
+			<posX>265</posX>
+			<posY>504</posY>
+			<width>995</width>
+			<label>#Actor.Biography</label>
+			<textcolor>ffFFFFFF</textcolor>
+			<font>font14</font>
+			<height>205</height>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<seperator>: : :</seperator>
+		</control>
+
+		<!-- <control>
+			<description>Summary</description>
+			<type>textboxscrollup</type>
+			<id>0</id>
+			<posX>765</posX>
+			<posY>504</posY>
+			<width>490</width>
+			<height>205</height>
+			<textcolor>90FFFFFF</textcolor>
+			<font>font14</font>
+			<label>#Actor.Movies</label>
+			<seperator>: : :</seperator>
+		</control> -->
+
+		<control>
+			<description>Actors Movies List</description>
+			<type>listcontrol</type>
+			<id>24</id>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<posX>770</posX>
+			<width>510</width>
+			<posY>465</posY>
+			<height>250</height>
+			<textvisible2>no</textvisible2>
+			<textvisible3>no</textvisible3>
+			<IconXOff>2010</IconXOff>
+			<font>font14</font>
+			<font2>font14</font2>	
+			<font3>font14</font3>	
+			<spinWidth>30</spinWidth>
+			<spinHeight>30</spinHeight>
+			<spinPosX>1210</spinPosX>
+			<spinPosY>684</spinPosY>
+			<textXOff>-41</textXOff>
+			<textYOff>2</textYOff>
+			<textureHeight>35</textureHeight>
+			<!-- <scrollbarXOff>-17</scrollbarXOff>
+			<scrollbarwidth>9</scrollbarwidth> -->
+		</control>
+
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>769</posX>
+			<posY>465</posY>
+			<width>2</width>
+			<height>343</height>
+			<texture>bg_button_vertical.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>control.isvisible(24)</visible>
+		</control>
+
+		<control>
+			<description>Actor Movie Plot</description>
+			<type>textboxscrollup</type>
+			<id>26</id>
+			<posX>265</posX>
+			<posY>504</posY>
+			<width>490</width>
+			<height>205</height>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<font>font14</font>
+			<label>#Actor.MoviePlot</label>
+		</control>
+
+
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>480</posX>
+			<posY>0</posY>
+			<width>100</width>
+			<height>600</height>
+			<label/>
+			<onright>3</onright>
+			<onleft>3</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(3)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>3</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>385</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(3)|control.hasfocus(4)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label>
+				<width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>button group</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>100</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<description>Biography</description>
+					<type>checkbutton</type>
+					<id>3</id>
+					<label>1011</label>
+					<onup>17</onup>
+					<ondown>4</ondown>
+					<onright>24</onright>
+				</control>
+				<control>
+					<description>Movies</description>
+					<type>checkbutton</type>
+					<id>4</id>
+					<label>342</label>
+					<onup>3</onup>
+					<ondown>3</ondown><onright>24</onright>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

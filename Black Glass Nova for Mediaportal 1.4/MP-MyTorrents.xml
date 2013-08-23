@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>5678</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<disabletopbar>no</disabletopbar>
+	<define>#header.label:My Torrents</define>
+	<define>#header.background:hover_mytorrents.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.time.xml</import>
+		<!--  <import>mp-mytorrents.common.overlay.xml</import>  -->
+		<control>
+			<type>image</type>
+			<posX>458</posX>
+			<posY>48</posY>
+			<width>948</width>
+			<height>766</height>
+			<texture>bg_facade.png</texture>
+		</control>
+		<control>
+			<description>text label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>520</posX>
+			<posY>100</posY>
+			<label>Combined download speed</label>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control>
+		<control>
+			<description>text label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>520</posX>
+			<posY>130</posY>
+			<label>of all torrents is #MyTorrents.CombinedDownloadSpeed.</label>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control>
+		<control>
+			<description>text label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>520</posX>
+			<posY>190</posY>
+			<label>You are downloading #MyTorrents.Downloads.Count torrents</label>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control>
+
+		<control>
+			<description>text label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>520</posX>
+			<posY>220</posY>
+			<label>and seeding #MyTorrents.Uploads.Count torrents.</label>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control>
+
+		<control>
+			<description>text label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>520</posX>
+			<posY>280</posY>
+			<label>#MyTorrents.Ready.Count of the torrents are idle,</label>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control>
+		<control>
+			<description>text label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>520</posX>
+			<posY>310</posY>
+			<label>#MyTorrents.Unfinished.Count of them are not fully downloaded.</label>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control>
+
+		<control>
+			<description>text label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>520</posX>
+			<posY>370</posY>
+			<label>Average progress of the unfinished</label>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control>
+		<control>
+			<description>text label</description>
+			<type>label</type>
+			<id>1</id>
+			<posX>520</posX>
+			<posY>400</posY>
+			<label>torrents is #MyTorrents.AverageProgressOfUnfinished.</label>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+		</control>
+
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>![control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(4)|control.hasfocus(7)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>2</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(5)|control.hasfocus(6)|control.hasfocus(4)|control.hasfocus(7)]</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label><width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Try Me</description>
+					<type>button</type>
+					<id>2</id>
+					<posX>60</posX>
+					<posY>240</posY>
+					<label>Active torrents</label>
+					<onup>7</onup>
+					<ondown>3</ondown>
+					<onright>50</onright>
+				</control>
+
+				<control>
+					<description>Try Me</description>
+					<type>button</type>
+					<id>3</id>
+					<posX>60</posX>
+					<posY>290</posY>
+					<label>All torrents</label>
+					<onup>2</onup>
+					<ondown>4</ondown>
+					<onright>50</onright>
+				</control>
+
+				<control>
+					<description>Or Me</description>
+					<type>button</type>
+					<id>4</id>
+					<posX>60</posX>
+					<posY>340</posY>
+					<label>Search torrents</label>
+					<onup>3</onup>
+					<ondown>5</ondown>
+					<onright>50</onright>
+				</control>
+
+				<control>
+					<description>Or Me</description>
+					<type>button</type>
+					<id>5</id>
+					<posX>60</posX>
+					<posY>390</posY>
+					<label>Watchlist</label>
+					<onup>4</onup>
+					<ondown>6</ondown>
+					<onright>50</onright>
+				</control>
+
+				<control>
+					<description>Or Me</description>
+					<type>button</type>
+					<id>6</id>
+					<posX>60</posX>
+					<posY>440</posY>
+					<label>RSS</label>
+					<onup>5</onup>
+					<ondown>7</ondown>
+					<onright>50</onright>
+				</control>
+
+				<control>
+					<description>Or Me</description>
+					<type>button</type>
+					<id>7</id>
+					<posX>60</posX>
+					<posY>490</posY>
+					<label>Log</label>
+					<visible>false</visible>
+					<onup>6</onup>
+					<ondown>2</ondown>
+					<onright>50</onright>
+				</control>
+			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>50</id>
+			<posX>480</posX>
+			<posY>0</posY>
+			<width>800</width>
+			<height>720</height>
+			<label/>
+			<onright>2</onright>
+			<onleft>2</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
+		</control>
+	</controls>
+</window>
+

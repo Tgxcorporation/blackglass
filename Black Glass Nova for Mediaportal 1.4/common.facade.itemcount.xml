@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<controls>
+		<control>
+			<type>label</type>
+			<description>Number of Files Label</description>
+			<id>0</id>
+			<posX>650</posX>
+			<posY>687</posY>
+			<label>#itemcount #(L(507))</label>
+			<font>font12</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+!string.equals(#itemcount,)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>label</type>
+			<description>Number of Files Label</description>
+			<id>0</id>
+			<posX>650</posX>
+			<posY>687</posY>
+			<label>0 #(L(507))</label>
+			<font>font12</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<visible>[facadeview.list|facadeview.album|facadeview.playlist]+string.equals(#itemcount,)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+	</controls>
+</window>

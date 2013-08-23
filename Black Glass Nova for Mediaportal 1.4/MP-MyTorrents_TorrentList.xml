@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>5679</id>
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:All Torrents</define>
+	<define>#header.background:hover_mytorrents.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.time.xml</import>
+		<!-- <import>mp-mytorrents.common.overlay.xml</import> --> 
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>458</posX>
+			<posY>48</posY>
+			<width>948</width>
+			<height>766</height>
+			<texture>bg_facade.png</texture>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>490</posX>
+			<posY>47</posY>
+			<width>790</width>
+			<height>53</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+			<visible>[!string.equals(#MyTorrents.Count,)+!string.equals(#MyTorrents.Count,0)]</visible>
+		</control>
+		<control>
+			<description>Spin control Label</description>
+			<type>fadelabel</type>
+			<label>#MyTorrents.Count Torrents</label>
+			<id>0</id>
+			<posX>520</posX>
+			<posY>665</posY>
+			<font>font16</font>
+			<textcolor>60ffffff</textcolor>
+			<width>360</width>
+			<wrapString> : : : </wrapString>
+		</control>        
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<control>
+				<description>listcontrol</description>
+				<type>listcontrol</type>
+				<id>5</id>
+				<textXOff>-40</textXOff>
+				<onup>4</onup>
+				<ondown>4</ondown>
+				<onleft>4</onleft>
+				<onright>4</onright>
+			</control>    
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>-386</posX>
+			<posY>3</posY>
+			<width>418</width>
+			<height>714</height>
+			<texture>bg_left.png</texture>
+			<colorDiffuse>ffffffff</colorDiffuse>
+			<visible>!control.hasfocus(4)</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>4</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>56</buttonwidth>
+			<buttonheight>720</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>425</width>
+			<height>720</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>control.hasfocus(4)</visible>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-208,0" reversible="false">hidden</animation>
+			<animation effect="slide" time="150" end="-400,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-208,0" reversible="false">WindowOpen</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>418</width>
+				<height>720</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>ffffffff</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>30</posX>
+				<posY>35</posY>
+				<label>#header.label</label><width>333</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>47</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<type>group</type>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<posX>0</posX>
+				<posY>100</posY>
+				<control>
+					<description>Try Me</description>
+					<type>button</type>
+					<id>4</id>
+					<posX>60</posX>
+					<posY>637</posY>
+					<label>Back</label>
+					<onup>5</onup>
+					<ondown>5</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

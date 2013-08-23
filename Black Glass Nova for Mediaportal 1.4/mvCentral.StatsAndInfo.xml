@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>112013</id>
+	<defaultcontrol>14</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:mvCentral</define>
+	<define>#useSelectedFanart:Yes</define>
+	<define>#header.background:hover_mvcentral.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<import>common.window.music.fanart.xml</import>
+		<import>common.window.time.xml</import>
+		<control>
+			<description>LISTVIEW LEFT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>-730</posX>
+			<posY>377</posY>
+			<width>1372</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		<control>
+			<description>LISTVIEW RIGHT Backdrop Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>614</posX>
+			<posY>377</posY>
+			<width>1372</width>
+			<height>500</height>
+			<texture>bg_tvguide.png</texture>
+		</control>
+		
+		<control>
+			<type>fadelabel</type>
+			<id>0</id>
+			<posX>30</posX>
+			<posY>56</posY>
+			<font>font13</font>
+			<width>400</width>
+			<label>#mvCentral.Hierachy</label>
+			<wrapString> : : : </wrapString>
+		</control>
+
+		<control>
+			<description>Favorite Video</description>
+			<type>fadelabel</type>
+			<label>#mvCentral.Translation.MostPlayedVideo.Label</label>
+			<font>font12</font>
+			<id>0</id>
+			<posX>300</posX>
+			<posY>425</posY>
+			<width>400</width>
+			<textcolor>90ffffff</textcolor>
+		</control>
+		<control>
+			<description>Favorite Video</description>
+			<type>fadelabel</type>
+			<label>#mvCentral.MostPlayed</label>
+			<font>font16</font>
+			<id>0</id>
+			<posX>300</posX>
+			<posY>450</posY>
+			<width>400</width>
+			<textcolor>ffffffff</textcolor>
+		</control>
+		<control>
+			<description>Favorite Vid Image</description>
+			<type>image</type>
+			<id>18</id>
+			<posX>308</posX>
+			<posY>497</posY>
+			<width>261</width>
+			<height>195</height>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture flipY="true" diffuse="Thumb_Mask.png">-</texture>
+		</control>
+		<control>
+			<description>Cd Case</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>300</posX>
+			<posY>490</posY>
+			<width>278</width>
+			<height>210</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+		</control>
+
+		<control>
+			<description>Favorite Artist Static</description>
+			<id>0</id>
+			<type>label</type>
+			<label>#mvCentral.Translation.MostPlayedArtist.Label</label>
+			<font>font12</font>
+			<posX>30</posX>
+			<posY>425</posY>
+			<width>400</width>
+			<textcolor>90ffffff</textcolor>
+		</control>      
+		<control>
+			<description>Favorite Artist Static</description>
+			<id>1</id>
+			<type>label</type>
+			<label>#mvCentral.FavArtist</label>
+			<font>font16</font>
+			<posX>30</posX>
+			<posY>450</posY>
+			<width>400</width>
+			<textcolor>ffffffff</textcolor>
+		</control>      
+		<control>
+			<description>Favorite Artist</description>
+			<id>20</id>
+			<type>image</type>
+			<width>199</width>
+			<height>200</height>
+			<posX>56</posX>
+			<posY>496</posY>
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>yes</zoom>
+			<texture flipY="true" diffuse="Thumb_Mask.png">-</texture>
+		</control>
+		<control>
+			<description>Cd Case</description>
+			<type>image</type>
+			<posX>30</posX>
+			<posY>490</posY>
+			<width>230</width>
+			<height>210</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+		</control>
+
+
+		<control>
+			<description>Title label</description>
+			<id>0</id>
+			<type>fadelabel</type>
+			<posX>650</posX>
+			<posY>423</posY>
+			<label>#mvCentral.Translation.TopTenVideos.Label</label>
+			<font>font18</font>
+			<align>left</align>
+			<textcolor>ffffffff</textcolor>
+			<width>750</width>
+			<wrapString> : : : </wrapString>
+		</control>
+
+		<control>
+			<description>Itemcount Itemtype</description>
+			<type>label</type>
+			<id>16</id>
+			<posX>650</posX>
+			<posY>687</posY>
+			<font>font12</font>
+			<align>left</align>
+			<textcolor>60ffffff</textcolor>
+			<label>-</label>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>640</posX>
+			<posY>430</posY>
+			<width>640</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>640</posX>
+			<posY>465</posY>
+			<width>640</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>640</posX>
+			<posY>500</posY>
+			<width>640</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>640</posX>
+			<posY>535</posY>
+			<width>640</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>640</posX>
+			<posY>570</posY>
+			<width>640</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>640</posX>
+			<posY>605</posY>
+			<width>640</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>640</posX>
+			<posY>640</posY>
+			<width>640</width>
+			<height>35</height>
+			<texture>bg_facade_line_nofocus.png</texture>
+			<colordiffuse>77ffffff</colordiffuse>
+		</control>
+
+
+
+		<control>
+			<description>Top 10 Video - 1</description>
+			<type>fadelabel</type>
+			<id>30</id>
+			<posX>650</posX>
+			<posY>468</posY>
+			<width>600</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
+		</control>      
+		<control>
+			<description>Top 10 Video - 2</description>
+			<type>fadelabel</type>
+			<id>31</id>
+			<posX>650</posX>
+			<posY>503</posY>
+			<width>600</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
+		</control>      
+		<control>
+			<description>Top 10 Video - 3</description>
+			<type>fadelabel</type>
+			<id>32</id>
+			<posX>650</posX>
+			<posY>538</posY>
+			<width>600</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
+		</control>      
+		<control>
+			<description>Top 10 Video - 4</description>
+			<type>fadelabel</type>
+			<id>33</id>
+			<posX>650</posX>
+			<posY>573</posY>
+			<width>600</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
+		</control>      
+		<control>
+			<description>Top 10 Video - 5</description>
+			<type>fadelabel</type>
+			<id>34</id>
+			<posX>650</posX>
+			<posY>608</posY>
+			<width>600</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
+		</control>      
+		<control>
+			<description>Top 10 Video - 6</description>
+			<type>fadelabel</type>
+			<id>35</id>
+			<posX>650</posX>
+			<posY>643</posY>
+			<width>600</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
+		</control>      
+		<control>
+			<description>Top 10 Video - 7</description>
+			<type>fadelabel</type>
+			<id>36</id>
+			<posX>2650</posX>
+			<posY>673</posY>
+			<width>600</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
+		</control>      
+		<control>
+			<description>Top 10 Video - 8</description>
+			<type>fadelabel</type>
+			<id>37</id>
+			<posX>2650</posX>
+			<posY>468</posY>
+			<width>600</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
+		</control>      
+		<control>
+			<description>Top 10 Video - 9</description>
+			<type>fadelabel</type>
+			<id>38</id>
+			<posX>2650</posX>
+			<posY>468</posY>
+			<width>600</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
+		</control>      
+		<control>
+			<description>Top 10 Video - 10</description>
+			<type>fadelabel</type>
+			<id>39</id>
+			<posX>2650</posX>
+			<posY>468</posY>
+			<width>600</width>
+			<font>font14</font>
+			<textcolor>90ffffff</textcolor>
+			<label>-</label>
+		</control>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<control>
+			<description>Empty button</description>
+			<type>label</type>
+			<id>14</id>
+			<label>-</label>
+			<visible>false</visible>
+		</control>     
+
+	</controls>
+</window>
