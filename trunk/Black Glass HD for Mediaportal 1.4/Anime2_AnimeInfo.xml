@@ -1,0 +1,1154 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+  <id>6009</id>
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>control.isvisible(13371337)</allowoverlay>
+  <define>#header.label:Info</define>
+  <define>#header.background:hover_my anime.png</define>
+  <animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+  <controls>
+    <!-- ********************** DUMMY controlS FOR VISIBILITY ************************************** -->
+    <control>
+      <type>label</type>
+      <description>Dummy Label for info page</description>
+      <id>1500</id>
+      <posX>-112</posX>
+      <posY>-112</posY>
+      <width>930</width>
+      <textcolor>d4d2d2</textcolor>
+      <font>font14</font>
+      <visible>false</visible>
+      <!-- to make a control visible only when FANART is loaded do this: <visible>control.isvisible(1500)</visible> -->
+      <!-- to make a control invisible when FANART is loaded do this: <visible>!control.isvisible(1500)</visible> -->
+    </control>
+    <control>
+      <type>label</type>
+      <description>Dummy Label for statistics page</description>
+      <id>1501</id>
+      <posX>-112</posX>
+      <posY>-112</posY>
+      <width>930</width>
+      <textcolor>d4d2d2</textcolor>
+      <font>font14</font>
+      <visible>false</visible>
+      <!-- to make a control visible only when FANART is loaded do this: <visible>control.isvisible(1501)</visible> -->
+      <!-- to make a control invisible when FANART is loaded do this: <visible>!control.isvisible(1501)</visible> -->
+    </control>
+    <control>
+      <type>label</type>
+      <description>Dummy Label for poster</description>
+      <id>1502</id>
+      <posX>-112</posX>
+      <posY>-112</posY>
+      <width>930</width>
+      <textcolor>d4d2d2</textcolor>
+      <font>font14</font>
+      <visible>false</visible>
+      <!-- to make a control visible only when FANART is loaded do this: <visible>control.isvisible(1502)</visible> -->
+      <!-- to make a control invisible when FANART is loaded do this: <visible>!control.isvisible(1502)</visible> -->
+    </control>
+    <control>
+      <type>label</type>
+      <description>Dummy Label for groups page</description>
+      <id>1503</id>
+      <posX>-112</posX>
+      <posY>-112</posY>
+      <width>930</width>
+      <textcolor>d4d2d2</textcolor>
+      <font>font14</font>
+      <visible>false</visible>
+      <!-- to make a control visible only when FANART is loaded do this: <visible>control.isvisible(1501)</visible> -->
+      <!-- to make a control invisible when FANART is loaded do this: <visible>!control.isvisible(1501)</visible> -->
+    </control>
+    <import>common.window.background.xml</import>
+    <control>
+      <description>Fanart Background #1</description>
+      <type>image</type>
+      <id>524</id>
+      <posX>0</posX>
+      <posY>0</posY>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>#Anime2.AnimeInfo.Fanart</texture>
+      <animation effect="fade" time="250">visible</animation>
+      <animation effect="fade" time="250" delay="250">hidden</animation>
+      <animation effect="fade" time="1">WindowClose</animation>
+      <animation effect="fade" time="250">WindowOpen</animation>
+    </control>
+    <import>common.window.overlay.xml</import>
+    <import>common.window.time.xml</import>
+    <control>
+      <type>group</type>
+      <dimColor>ffffffff</dimColor>
+      <animation effect="fade" time="150">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+      <control>
+        <type>fadelabel</type>
+        <width>1275</width>
+        <wrapString> : : : </wrapString>
+        <id>0</id>
+        <posX>45</posX>
+        <posY>15</posY>
+        <label>#header.label</label>
+        <font>font28</font>
+        <align>left</align>
+        <textcolor>60ffffff</textcolor>
+      </control>
+      <control>
+        <description>details background</description>
+        <id>0</id>
+        <type>image</type>
+        <posX>687</posX>
+        <posY>72</posY>
+        <width>1422</width>
+        <height>1149</height>
+        <texture>bg_facade.png</texture>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>735</posX>
+        <posY>145</posY>
+        <width>1185</width>
+        <height>79</height>
+        <texture>bg_facade_line_nofocus.png</texture>
+        <colordiffuse>77ffffff</colordiffuse>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <type>fadelabel</type>
+        <description>Title</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>139</posY>
+        <width>1125</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font24</font>
+        <label>#Anime2.AnimeInfo.Title</label>
+        <align>left</align>
+        <wrapString> : : : </wrapString>
+      </control>
+      <!-- <control>
+	  <description>Default Poster</description>
+	  <type>image</type>
+	  <id>0</id>
+	  <posX>30</posX>
+	  <posY>120</posY>
+	  <width>270</width>
+	  <height>435</height>
+	  <texture>defaultposter.png</texture>
+	  <visible>control.isvisible(1502)</visible>
+	</control> -->
+      <control>
+        <description>Poster</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>96</posX>
+        <posY>121</posY>
+        <width>570</width>
+        <height>807</height>
+        <texture flipY="true" diffuse="Thumb_Mask.png">#Anime2.AnimeInfo.Poster</texture>
+        <visible>control.isvisible(1502)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <control>
+        <description>Poster frame</description>
+        <type>image</type>
+        <id>0</id>
+        <posX>22</posX>
+        <posY>108</posY>
+        <width>655</width>
+        <height>834</height>
+        <texture flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</texture>
+        <visible>control.isvisible(1502)</visible>
+        <animation effect="fade" time="250">visiblechange</animation>
+      </control>
+      <!--		Pages 	-->
+      <!--		Info page	-->
+      <control>
+        <type>label</type>
+        <description>Main Title</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>255</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Main Title</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Main Title Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>255</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.AnidbTitle</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Other Titles</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>285</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Other titles</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>fadelabel</type>
+        <description>Other Titles Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>285</posY>
+        <width>1005</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.OtherTitles</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+        <wrapString> : : : </wrapString>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Short Titles</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>315</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Short titles</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Short Titles Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>315</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.ShortTitles</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Anime Type</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>345</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Anime type</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Anime Type Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>345</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.Type</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Episode count</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>375</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Episodes/Specials/Other</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Episode count Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>375</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.EpisodeSpecials</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Year</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>405</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Year</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Year Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>405</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.Year</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Rating</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>435</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Rating (Votes) / Temp</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Rating Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>435</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.Rating</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Rating Value</description>
+        <id>0</id>
+        <posX>1200</posX>
+        <posY>435</posY>
+        <width>705</width>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.MyRating</label>
+        <align>left</align>
+        <textcolor>F7FE2E</textcolor>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Reviews</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>465</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Reviews</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Reviews Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>465</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.Reviews</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Relations</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>495</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Relations</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Relations Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>495</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.Relations</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Genre</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>525</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Genre</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>textbox</type>
+        <description>Genre Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>525</posY>
+        <width>705</width>
+        <height>105</height>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.Genre</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <spinPosX>4777</spinPosX>
+        <spinPosY>990</spinPosY>
+        <spinCanFocus>no</spinCanFocus>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Awards list</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>630</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Awards</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Awards Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>630</posY>
+        <width>705</width>
+        <height>120</height>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.Awards</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Character count</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>660</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Characters in AniDB</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Characters Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>660</posY>
+        <width>705</width>
+        <height>120</height>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.CharacterCount</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Is Restricted</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>690</posY>
+        <width>705</width>
+        <font>font11</font>
+        <label>R Rated</label>
+        <align>left</align>
+        <textcolor>90ffffff</textcolor>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Restricted Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>690</posY>
+        <width>705</width>
+        <height>120</height>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Info.Restricted</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>textboxscrollup</type>
+        <description>Description Value</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>825</posY>
+        <width>1125</width>
+        <height>225</height>
+        <textcolor>ffffffff</textcolor>
+        <font>font14</font>
+        <label>#Anime2.AnimeInfo.Info.Description</label>
+        <align>left</align>
+        <visible>control.isvisible(1500)</visible>
+        <seperator>: : :</seperator>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <!-- statistics -->
+      <control>
+        <type>label</type>
+        <description>Watched Count</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>255</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Watched</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Watched count Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>255</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Stats.WatchedCount</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Played count</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>285</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Played</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Played count Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>285</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Stats.PlayedCount</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Stopped count</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>315</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Stopped</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Stopped count Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>315</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Stats.StoppedCount</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Running Time</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>345</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Local running time</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Running Time Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>345</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Stats.RunningTime</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Time spent watching</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>375</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Watched for</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Time spent watching Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>375</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Stats.TimeSpentWatching</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Blinked count</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>405</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>You blinked</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Blinked count Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>405</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Stats.BlinkedCount</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Files count</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>435</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Local files</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>fadelabel</type>
+        <description>Files count Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>435</posY>
+        <width>1020</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Stats.FileCount</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Missing Episodes</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>465</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Missing episodes</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Missing Episodes Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>465</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Stats.MissingEpisodes</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Size count</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>495</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Total file size</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Size count Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>495</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Stats.AnimeFileSize</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Subtitle Languages</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>525</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Subtitle languages</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Subtitle Languages Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>525</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Stats.SubtitleLanguages</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Audio Languages</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>555</posY>
+        <width>705</width>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <label>Audio languages</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <description>Audio Languages Value</description>
+        <id>0</id>
+        <posX>1170</posX>
+        <posY>555</posY>
+        <width>705</width>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Stats.AudioLanguages</label>
+        <align>left</align>
+        <visible>control.isvisible(1501)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <!-- groups -->
+      <control>
+        <type>label</type>
+        <label>MY GROUPS</label>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>255</posY>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <visible>control.isvisible(1503)</visible>
+      </control>
+      <control>
+        <type>textboxscrollup</type>
+        <description>Description Value</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>285</posY>
+        <width>1125</width>
+        <height>165</height>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Groups.MyGroupsDescription</label>
+        <seperator>: : :</seperator>
+        <align>left</align>
+        <visible>control.isvisible(1503)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <type>label</type>
+        <id>0</id>
+        <label>OTHER GROUPS</label>
+        <posX>780</posX>
+        <posY>495</posY>
+        <textcolor>90ffffff</textcolor>
+        <font>font11</font>
+        <visible>control.isvisible(1503)</visible>
+      </control>
+      <control>
+        <type>textboxscrollup</type>
+        <description>Description Value</description>
+        <id>0</id>
+        <posX>780</posX>
+        <posY>525</posY>
+        <width>1125</width>
+        <height>495</height>
+        <textcolor>ffffffff</textcolor>
+        <font>font11</font>
+        <label>#Anime2.AnimeInfo.Groups.OtherGroupsDescription</label>
+        <seperator>: : :</seperator>
+        <align>left</align>
+        <visible>control.isvisible(1503)</visible>
+        <animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+        <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+      </control>
+      <control>
+        <description>ANIDB Status</description>
+        <type>label</type>
+        <id>114</id>
+        <posX>30</posX>
+        <posY>1027</posY>
+        <width>1350</width>
+        <label>#Anime2.AnimeInfo.Status</label>
+        <font>font11</font>
+        <align>Left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <description>Status</description>
+        <type>label</type>
+        <id>115</id>
+        <posX>675</posX>
+        <posY>1027</posY>
+        <width>1350</width>
+        <label>#Anime2.AnimeInfo.ResultStatus</label>
+        <font>font11</font>
+        <align>Right</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+    </control>
+    <control>
+      <type>image</type>
+      <id>0</id>
+      <posX>-579</posX>
+      <posY>4</posY>
+      <width>627</width>
+      <height>1071</height>
+      <texture>bg_left.png</texture>
+      <colorDiffuse>ffffffff</colorDiffuse>
+      <visible>control.hasfocus(50)</visible>
+      <animation effect="fade" time="50">WindowClose</animation>
+      <animation effect="fade" time="50">WindowOpen</animation>
+      <animation effect="fade" time="250">visiblechange</animation>
+    </control>
+    <control>
+      <type>actiongroup</type>
+      <description>action menu</description>
+      <defaultcontrol>801</defaultcontrol>
+      <onexit>0</onexit>
+      <buttonX>0</buttonX>
+      <buttonY>0</buttonY>
+      <buttonwidth>577</buttonwidth>
+      <buttonheight>1080</buttonheight>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+      <width>637</width>
+      <height>1080</height>
+      <dimColor>ffffffff</dimColor>
+      <visible>!control.hasfocus(50)</visible>
+      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
+      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>0</posY>
+        <width>627</width>
+        <height>1080</height>
+        <texture>bg_left.png</texture>
+        <colorDiffuse>ffffffff</colorDiffuse>
+      </control>
+      <control>
+        <id>0</id>
+        <type>label</type>
+        <posX>45</posX>
+        <posY>52</posY>
+        <label>924</label>
+        <width>499</width>
+        <font>font24</font>
+        <align>left</align>
+        <textcolor>ffffffff</textcolor>
+      </control>
+      <control>
+        <type>image</type>
+        <id>0</id>
+        <posX>0</posX>
+        <posY>71</posY>
+        <width>579</width>
+        <height>79</height>
+        <texture>bg_button_nofocus.png</texture>
+      </control>
+      <control>
+        <type>group</type>
+        <layout>StackLayout(0, Vertical, true)</layout>
+        <posX>0</posX>
+        <posY>150</posY>
+        <control>
+          <description>AniDB Info</description>
+          <type>button</type>
+          <id>801</id>
+          <label>Anime Info</label>
+          <onright>50</onright>
+          <ondown>802</ondown>
+          <onup>902</onup>
+        </control>
+        <control>
+          <description>Statistics</description>
+          <type>button</type>
+          <id>802</id>
+          <label>Statistics</label>
+          <onright>50</onright>
+          <onup>801</onup>
+          <ondown>803</ondown>
+        </control>
+        <control>
+          <description>Groups</description>
+          <type>button</type>
+          <id>803</id>
+          <label>Groups</label>
+          <onright>50</onright>
+          <onup>802</onup>
+          <ondown>901</ondown>
+        </control>
+        <control>
+          <type>image</type>
+          <posX>0</posX>
+          <posY>71</posY>
+          <width>579</width>
+          <height>79</height>
+          <texture>bg_button_nofocus.png</texture>
+        </control>
+        <control>
+          <description>Characters</description>
+          <type>button</type>
+          <id>901</id>
+          <label>Characters</label>
+          <onright>50</onright>
+          <onup>803</onup>
+          <ondown>902</ondown>
+        </control>
+        <control>
+          <description>Relations</description>
+          <type>button</type>
+          <id>902</id>
+          <label>Relations</label>
+          <onright>50</onright>
+          <onup>901</onup>
+          <ondown>801</ondown>
+        </control>
+      </control>
+    </control>
+    <control>
+      <description>DUMMY BUTTON</description>
+      <type>button</type>
+      <id>50</id>
+      <posX>720</posX>
+      <posY>0</posY>
+      <width>1200</width>
+      <height>1080</height>
+      <onright>801</onright>
+      <onleft>801</onleft>
+      <textureFocus>-</textureFocus>
+      <textureNoFocus>-</textureNoFocus>
+    </control>
+    <import>Anime2_Notification.xml</import>
+  </controls>
+</window>
