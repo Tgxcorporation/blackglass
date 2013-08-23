@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+    <id>557312</id>
+    <defaultcontrol>2</defaultcontrol>
+    <allowoverlay>control.isvisible(13371337)</allowoverlay>
+    <animation effect="Fade" end="100" start="100" time="250">WindowClose</animation>
+    <define>#header.label:File Explorer</define>
+    <define>#header.background:bg.jpg</define>
+    <define>#header.background:hover_file explorer.png</define>
+    <controls>
+        <import>common.window.background.xml</import>
+        <import>common.window.overlay.xml</import>
+        <import>common.window.time.basic.xml</import>
+        <control>
+            <type>group</type>
+            <dimColor>ffffffff</dimColor>
+            <animation effect="Fade" time="150">WindowClose</animation>
+            <animation effect="Slide" reversible="FALSE" start="900,0" time="200" tween="Circle">WindowOpen</animation>
+            <animation effect="Slide" end="900,0" reversible="FALSE" time="200" tween="Circle">WindowClose</animation>
+            <control>
+                <id>0</id>
+                <type>fadelabel</type>
+				<width>850</width>
+				<wrapString> : : : </wrapString>
+				<posX>30</posX>
+                <posY>10</posY>
+                <font>font28</font>
+                <textcolor>60ffffff</textcolor>
+                <align>LEFT</align>
+                <label>#header.label</label>
+            </control>
+            <control>
+                <id>0</id>
+                <type>image</type>
+                <posX>5</posX>
+                <posY>55</posY>
+                <width>1270</width>
+                <height>657</height>
+                <texture>bg_dialog_big.png</texture>
+            </control>
+            <control>
+                <id>4</id>
+                <description>dialog Heading</description>
+                <type>label</type>
+                <posX>55</posX>
+                <posY>95</posY>
+                <width>800</width>
+                <font>font22</font>
+                <textcolor>ffffffff</textcolor>
+                <label/>
+            </control>
+            <control>
+                <type>image</type>
+                <colordiffuse>77ffffff</colordiffuse>
+                <posX>35</posX>
+                <posY>87</posY>
+                <width>1210</width>
+                <height>53</height>
+                <texture>bg_facade_line_nofocus.png</texture>
+            </control>
+            <control>
+                <type>image</type>
+                <colordiffuse>77ffffff</colordiffuse>
+                <posX>35</posX>
+                <posY>582</posY>
+                <width>1210</width>
+                <height>53</height>
+                <texture>bg_facade_line_nofocus.png</texture>
+            </control>
+            <control>
+                <id>2</id>
+                <type>textbox</type>
+                <posX>55</posX>
+                <posY>150</posY>
+                <width>1182</width>
+                <height>520</height>
+                <textcolor>ffffffff</textcolor>
+                <spinPosX>1110</spinPosX>
+                <spinPosY>640</spinPosY>
+                <font>font13</font>
+            </control>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>2001</id>
+	<defaultcontrol>4</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<define>#header.label:#view</define>
+	<define>#header.background:hover_my music.png</define>
+	<define>#useSelectedFanart:Yes</define>
+	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
+	<controls>
+		<import>common.window.background.xml</import>
+		<import>common.window.music.fanart.xml</import>
+		<import>common.window.overlay.xml</import>
+		<import>common.window.time.basic.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+
+			<control>
+				<type>fadelabel</type>
+				<width>850</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+
+			<control>
+				<description>Refresh</description>
+				<type>button</type>
+				<id>6</id>
+				<onleft>6</onleft>
+				<onright>4</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<posX>343</posX>
+				<posY>226</posY>
+				<width>250</width>
+				<height>68</height>
+				<font>font16</font>
+				<textureFocus>bg_tab_button2_focus.png</textureFocus>
+				<textureNoFocus>bg_tab_button2_nofocus.png</textureNoFocus>
+				<label>184</label>
+				<textalign>CENTER</textalign>
+				<textXOff>20</textXOff>
+				<textYOff>-3</textYOff>
+				<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+				<animation effect="fade" time="250">WindowClose</animation>
+				<animation effect="rotate" end="90" time="0">WindowClose</animation>
+			</control>
+
+			<control>
+				<description>Tracks</description>
+				<type>button</type>
+				<id>5</id>
+				<onleft>5</onleft>
+				<onright>4</onright>
+				<onup>6</onup>
+				<ondown>6</ondown>
+				<posX>343</posX>
+				<posY>466</posY>
+				<width>250</width>
+				<height>68</height>
+				<font>font16</font>
+				<textureFocus>bg_tab_button2_focus.png</textureFocus>
+				<textureNoFocus>bg_tab_button2_nofocus.png</textureNoFocus>
+				<label>182</label>
+				<textalign>CENTER</textalign>
+				<textXOff>20</textXOff>
+				<textYOff>-3</textYOff>
+				<animation effect="rotate" end="90" time="0">WindowOpen</animation>
+				<animation effect="fade" time="250">WindowClose</animation>
+				<animation effect="rotate" end="90" time="0">WindowClose</animation>
+			</control>
+
+
+
+			<control>
+				<description>details background</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>97</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+			<control>
+				<type>image</type>
+				<description>artist art image</description>
+				<id>3</id>
+				<posX>71</posX>
+				<posY>82</posY>
+				<width>312</width>
+				<height>312</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture flipY="true" diffuse="Thumb_Mask.png">-</texture>
+			</control>
+			<control>
+				<description>Cd Case</description>
+				<id>0</id>
+				<type>image</type>
+				<posX>30</posX>
+				<posY>73</posY>
+				<width>360</width>
+				<height>327</height>
+				<colordiffuse>ffffffff</colordiffuse>
+				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+			</control>
+
+			<control>
+				<description>Album value</description>
+				<type>label</type>
+				<id>20</id>
+				<posX>520</posX>
+				<posY>95</posY>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>740</width>
+				<label>-</label>
+			</control>
+
+			<control>
+				<description>Artist value</description>
+				<type>label</type>
+				<id>21</id>
+				<posX>520</posX>
+				<posY>165</posY>
+				<width>740</width>
+				<label>-</label>
+				<textcolor>90FFFFFF</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Date of Release value</description>
+				<type>label</type>
+				<id>22</id>
+				<posX>520</posX>
+				<posY>200</posY>
+				<width>740</width>
+				<label>-</label>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
+			<control>
+				<description>Rating value</description>
+				<type>label</type>
+				<id>23</id>
+				<posX>520</posX>
+				<posY>235</posY>
+				<width>740</width>
+				<label>-</label>
+				<textcolor>90FFFFFF</textcolor>
+			</control>
+			<control>
+				<description>Genre value</description>
+				<type>label</type>
+				<id>24</id>
+				<posX>520</posX>
+				<posY>270</posY>
+				<width>740</width>
+				<label>-</label>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
+			<control>
+				<description>Tones value</description>
+				<type>fadelabel</type>
+				<id>25</id>
+				<posX>520</posX>
+				<posY>305</posY>
+				<width>740</width>
+				<label>-</label>
+				<textcolor>90FFFFFF</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<description>Styles value</description>
+				<type>fadelabel</type>
+				<id>26</id>
+				<posX>520</posX>
+				<posY>340</posY>
+				<width>740</width>
+				<label>-</label>
+				<textcolor>ffFFFFFF</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>336</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>textarea</description>
+				<type>textbox</type>
+				<id>4</id>
+				<posX>520</posX>
+				<posY>400</posY>
+				<width>710</width>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<font>font14</font>
+				<height>330</height>
+				<spinPosX>1120</spinPosX>
+				<spinPosY>670</spinPosY>
+			</control>
+
+
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<description>group element</description>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="191,0" condition="!control.hasfocus(50)">conditional</animation>
+			<dimColor>ffffffff</dimColor>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+			<control>
+				<type>textboxscrollup</type>
+				<description>Title (Filmstrip)</description>
+				<id>640</id>
+				<posX>38</posX>
+				<posY>615</posY>
+				<width>1220</width>
+				<textalign>center</textalign>
+				<font>font24</font>
+				<height>45</height>
+				<label>#MovingPictures.SelectedMovie.title</label>
+			</control>
+
+
+			<!-- Media logos [Filmstrip & Coverflow View] -->
+
+			<control>
+				<description>Video Codec</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>433</posX>
+				<posY>670</posY>
+				<width>89</width>
+				<height>34</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
+			</control>
+
+			<control>
+				<description>Video Resolution</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>488</posX>
+				<posY>670</posY>
+				<width>89</width>
+				<height>34</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
+			</control>
+
+			<control>
+				<description>Video Aspect Ratio</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>543</posX>
+				<posY>670</posY>
+				<width>89</width>
+				<height>34</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
+			</control>
+
+			<control>
+				<description>Audio Codec</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>598</posX>
+				<posY>670</posY>
+				<width>89</width>
+				<height>34</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
+			</control>
+
+			<control>
+				<description>Audio Channels</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>653</posX>
+				<posY>670</posY>
+				<width>89</width>
+				<height>34</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
+			</control>
+
+			<control>
+				<description>Video Format</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>708</posX>
+				<posY>670</posY>
+				<width>89</width>
+				<height>34</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
+			</control>
+
+			<control>
+				<description>Subtitles</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>763</posX>
+				<posY>670</posY>
+				<width>89</width>
+				<height>34</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
+			</control>
+			
+			<control>
+				<description>Fps</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>818</posX>
+				<posY>670</posY>
+				<width>89</width>
+				<height>34</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\empty.png</texture>
+			</control>
+			
+			<control>
+				<description>Fps label</description>
+				<id>0</id>
+				<type>label</type>
+				<posX>818</posX>
+				<posY>681</posY>
+				<!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
+				<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
+				<font>font8</font>
+				<align>center</align>
+				<width>50</width>
+			</control>
+			<control>
+				<description>Fps label</description>
+				<id>0</id>
+				<type>label</type>
+				<posX>818</posX>
+				<posY>694</posY>
+				<label>fps</label>
+				<font>font7</font>
+				<align>center</align>
+				<width>50</width>
+			</control>
+		</control>
+	</controls>
+</window>
