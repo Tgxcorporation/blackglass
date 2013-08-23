@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--version="1.0" encoding="utf-8" standalone="yes"-->
+<window>
+	<id>29053</id>
+	<defaultcontrol>10000</defaultcontrol>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:YouTube.fm</define>
+	<!-- <define>#useSelectedFanart:Yes</define> -->
+	<define>#header.background:hover_youtubefm.png</define>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<import>common.window.xml</import>
+		<!-- <import>common.window.music.play.fanart.xml</import> -->
+		<control>
+			<id>0</id>
+			<description>Fan Art</description>
+			<type>image</type>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<colordiffuse>ffffffff</colordiffuse>
+			<texture>#Youtube.fm.Info.Video.FanArt</texture>
+			<animation effect="fade" time="1">WindowClose</animation>
+			<animation effect="fade" time="250">WindowOpen</animation>
+		</control>
+		<import>common.window.time.xml</import>
+		<!-- Downloading Section [View Only if Downloading Now is In Process ] -->
+		<control>
+			<description>Downloading Progress Bar</description>
+			<type>progress</type>
+			<id>118</id>
+			<posX>0</posX>
+			<posY>1071</posY>
+			<width>1920</width>
+			<height>9</height>
+			<texturebg>osd_progress_background.png</texturebg>
+			<onlymidtexture>yes</onlymidtexture>
+			<midwidth>1280</midwidth>
+			<midheight>6</midheight>
+			<midoffsetX>0</midoffsetX>
+			<midoffsetY>0</midoffsetY>
+			<midtexture>osd_progress_mid.png</midtexture>
+			<label>#Youtube.fm.Download.Progress</label>
+			<visible>string.equals(#Youtube.fm.IsDownloading, true)</visible>
+			<animation effect="fade" delay="100" time="150">visible</animation>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>1462</posX>
+			<posY>526</posY>
+			<width>450</width>
+			<height>114</height>
+			<texture>bg_tab_button2_focus.png</texture>
+			<colordiffuse>d0ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>1500</posX>
+			<posY>555</posY>
+			<width>367</width>
+			<font>font14</font>
+			<label>#Youtube.fm.Translation.VideoInfo.Label</label>
+			<visible>!control.hasfocus(10001)</visible>
+		</control>
+		<control>
+			<type>label</type>
+			<id>0</id>
+			<posX>1500</posX>
+			<posY>555</posY>
+			<width>367</width>
+			<font>font14</font>
+			<label>#Youtube.fm.Translation.ArtistInfo.Label</label>
+			<visible>control.hasfocus(10001)</visible>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>1309</posX>
+			<posY>526</posY>
+			<width>96</width>
+			<height>90</height>
+			<texture>bg_minitab_button_focus.png</texture>
+			<colordiffuse>d0ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>button</type>
+			<id>10000</id>
+			<onleft>10001</onleft>
+			<onright>10001</onright>
+			<onup>10000</onup>
+			<ondown>10000</ondown>
+			<posX>1330</posX>
+			<posY>552</posY>
+			<width>45</width>
+			<height>45</height>
+			<textureFocus>check-box.png</textureFocus>
+			<textureNoFocus>check-boxNF.png</textureNoFocus>
+			<label>-</label>
+		</control>
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>1390</posX>
+			<posY>526</posY>
+			<width>96</width>
+			<height>90</height>
+			<texture>bg_minitab_button_focus.png</texture>
+			<colordiffuse>d0ffffff</colordiffuse>
+		</control>
+		<control>
+			<type>button</type>
+			<id>10001</id>
+			<onleft>10000</onleft>
+			<onright>10000</onright>
+			<onup>10001</onup>
+			<ondown>10001</ondown>
+			<posX>1410</posX>
+			<posY>552</posY>
+			<width>45</width>
+			<height>45</height>
+			<textureFocus>check-box.png</textureFocus>
+			<textureNoFocus>check-boxNF.png</textureNoFocus>
+			<label>-</label>
+		</control>
+
+		<import>common.facade.background.basic.center.xml</import>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>!control.hasfocus(10001)</visible>
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<posX>60</posX>
+				<posY>652</posY>
+				<width>513</width>
+				<height>382</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#Youtube.fm.Info.Video.Image</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>135</posY>
+				<posY>637</posY>
+				<width>540</width>
+				<height>409</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+			</control>
+			<control>
+				<description>Watched Icon Background</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>523</posX>
+				<posY>666</posY>
+				<width>48</width>
+				<height>60</height>
+				<colordiffuse>b0ffffff</colordiffuse>
+				<texture>overlaywubg.png</texture>
+			</control>
+			<control>
+				<description>Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>532</posX>
+				<posY>673</posY>
+				<width>36</width>
+				<height>36</height>
+				<texture>overlaywatched.png</texture>
+				<colordiffuse>#ColorPlayed</colordiffuse>
+				<visible>!string.equals(#Youtube.fm.Curent.Video.IsWatched, false )</visible>
+				<animation effect="fade" delay="100" time="150">visible</animation>
+			</control>
+			<control>
+				<description>Un-Watched Icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>532</posX>
+				<posY>673</posY>
+				<width>36</width>
+				<height>36</height>
+				<texture>overlayunwatched.png</texture>
+				<colordiffuse>#ColorAvailable</colordiffuse>
+				<visible>string.equals(#Youtube.fm.Curent.Video.IsWatched, false )</visible>
+				<animation effect="fade" delay="100" time="150">visible</animation>
+			</control>
+			<control>
+				<description>Title label</description>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>607</posX>
+				<posY>628</posY>
+				<width>1275</width>
+				<font>font22</font>
+				<label>#Youtube.fm.Info.Artist.Name - #Youtube.fm.Info.Video.Title</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>585</posX>
+				<posY>645</posY>
+				<width>1335</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<id>1</id>
+				<description>Star Rating Value</description>
+				<type>imagelist</type>
+				<posX>607</posX>
+				<posY>706</posY>
+				<width>172</width>
+				<height>19</height>
+				<textureWidth>33</textureWidth>
+				<textureHeight>33</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#Youtube.fm.Info.Video.Rating</percentage>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Autor Label</description>
+				<type>label</type>
+				<posX>810</posX>
+				<posY>702</posY>
+				<width>1080</width>
+				<textcolor>90ffffff</textcolor>
+				<label>#Youtube.fm.Info.Video.Duration     #Youtube.fm.Info.Video.PublishDate     by #Youtube.fm.Info.Video.Autor</label>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>585</posX>
+				<posY>697</posY>
+				<width>1335</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Autor Label</description>
+				<type>label</type>
+				<posX>607</posX>
+				<posY>754</posY>
+				<width>1275</width>
+				<textcolor>ffffffff</textcolor>
+				<label>#Youtube.fm.Info.Video.NumLike/#Youtube.fm.Translation.Like.Label     #Youtube.fm.Info.Video.NumDisLike/#Youtube.fm.Translation.Dislike.Label     #Youtube.fm.Info.Video.ViewCount/#Youtube.fm.Translation.ViewCount.Label</label>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>585</posX>
+				<posY>750</posY>
+				<width>1335</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<!-- 			<control>
+				<id>0</id>
+				<description>FavoriteCount Label</description>
+				<type>label</type>
+				<posX>520</posX>
+				<posY>325</posY>
+				<width>300</width>         
+				<font>font12</font>
+				<textcolor>90ffffff</textcolor>            
+				<label>#Youtube.fm.Translation.FavoriteCount.Label</label>
+			</control>
+			<control>
+				<id>0</id>
+				<description>FavoriteCount Value</description>
+				<type>label</type>
+				<posX>520</posX>
+				<posY>345</posY>
+				<width>300</width>         
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>            
+				<label>#Youtube.fm.Info.Video.FavoriteCount</label>
+			</control> -->
+			<control>
+				<description>Summary</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>607</posX>
+				<posY>810</posY>
+				<width>1275</width>
+				<height>151</height>
+				<textcolor>90FFFFFF</textcolor>
+				<font>font16</font>
+				<label>#Youtube.fm.Info.Video.Summary #Youtube.fm.Info.Video.Summary</label>
+				<seperator>: : :</seperator>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>585</posX>
+				<posY>915</posY>
+				<width>1335</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<description>Progress Bar Like/Dislike Percent</description>
+				<type>progress</type>
+				<id>20</id>
+				<posX>3735</posX>
+				<posY>904</posY>
+				<width>1185</width>
+				<height>53</height>
+				<texturebg>osd_progress_background.png</texturebg>
+				<label>#Youtube.fm.Info.Video.PercentLike</label>
+				<onlymidtexture>yes</onlymidtexture>
+				<midwidth>790</midwidth>
+				<midheight>35</midheight>
+				<midoffsetX>-</midoffsetX>
+				<midoffsetY>-</midoffsetY>
+				<midtexture>osd_progress_mid.png</midtexture>
+				<visible>yes</visible>
+			</control>
+			<control>
+				<description>HD Logo</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>607</posX>
+				<posY>982</posY>
+				<width>133</width>
+				<height>75</height>
+				<keepaspectratio>no</keepaspectratio>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\hd.png</texture>
+				<visible>[!string.equals(#Youtube.fm.Curent.Video.IsHD, false )]</visible>
+			</control>
+			<control>
+				<description>SD Logo</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>607</posX>
+				<posY>982</posY>
+				<width>133</width>
+				<height>75</height>
+				<keepaspectratio>no</keepaspectratio>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\sd.png</texture>
+				<visible>[string.equals(#Youtube.fm.Curent.Video.IsHD, false )]</visible>
+			</control>
+			<control>
+				<description>IsDownloaded Logo</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>742</posX>
+				<posY>982</posY>
+				<width>133</width>
+				<height>75</height>
+				<keepaspectratio>no</keepaspectratio>
+				<keepaspectratio>yes</keepaspectratio>
+				<texture>Logos\file.png</texture>
+				<visible>[!string.equals(#Youtube.fm.Curent.Video.IsDownloaded, false )]</visible>
+			</control>
+		</control>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<visible>control.hasfocus(10001)</visible>
+			<control>
+				<id>1</id>
+				<type>image</type>
+				<posX>60</posX>
+				<posY>652</posY>
+				<width>513</width>
+				<height>382</height>
+				<keepaspectratio>yes</keepaspectratio>
+				<centered>yes</centered>
+				<texture flipY="true" diffuse="Thumb_Mask.png">#Youtube.fm.Info.Artist.Image</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>1</id>
+				<posX>45</posX>
+				<posY>135</posY>
+				<posY>637</posY>
+				<width>540</width>
+				<height>409</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+			</control>
+			<control>
+				<description>Title label</description>
+				<id>0</id>
+				<type>fadelabel</type>
+				<posX>607</posX>
+				<posY>628</posY>
+				<width>1275</width>
+				<font>font22</font>
+				<label>#Youtube.fm.Info.Artist.Name</label>
+				<textcolor>ffffffff</textcolor>
+				<width>1125</width>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>585</posX>
+				<posY>645</posY>
+				<width>1335</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Artist Tags</description>
+				<type>fadelabel</type>
+				<posX>607</posX>
+				<posY>702</posY>
+				<width>1275</width>
+				<font>font14</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#Youtube.fm.Info.Artist.Tags</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>image</type>
+				<posX>585</posX>
+				<posY>697</posY>
+				<width>1335</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<description>Artist Bio</description>
+				<type>textboxscrollup</type>
+				<posX>607</posX>
+				<posY>762</posY>
+				<width>1275</width>
+				<height>295</height>
+				<textcolor>ffFFFFFF</textcolor>
+				<font>font16</font>
+				<label>#Youtube.fm.Info.Artist.Bio</label>
+				<seperator>: : :</seperator>
+			</control>
+		</control>
+		<control>
+			<description>Play Button/Hiden</description>
+			<type>button</type>
+			<id>35</id>
+			<posX>3382</posX>
+			<posY>502</posY>
+			<width>105</width>
+			<height>75</height>
+			<textureFocus>play_enabled.png</textureFocus>
+			<textureNoFocus>play_disabled.png</textureNoFocus>
+			<label>-</label>
+			<onup>17</onup>
+		</control>
+	</controls>
+</window>
