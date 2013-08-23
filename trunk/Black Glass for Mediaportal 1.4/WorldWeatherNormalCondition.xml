@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<controls>
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="193,0" condition="!control.hasfocus(5050)">conditional</animation>
+			<visible>string.equals(#WorldWeather.View,Condition)+string.equals(#WorldWeather.ConditionView,Normal)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">visible</animation>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>-75</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>127</posY>
+				<width>840</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+
+			<control>
+				<description>location label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>96</posY>
+				<width>750</width>
+				<font>font22</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<label>#WorldWeather.Location</label>
+			</control>
+			<control>
+				<description>update time label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>141</posY>
+				<label>#WorldWeather.Provider (#WorldWeather.TranslationCurrentCondition) + #WorldWeather.ForecastProvider (#WorldWeather.TranslationForecastCondition): #WorldWeather.RefreshDate #WorldWeather.RefreshTime</label>
+				<font>font13</font>
+				<textcolor>60ffffff</textcolor>
+				<align>left</align>
+				<width>750</width>
+			</control>
+
+
+			<control>
+				<description>current weather icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>95</posX>
+				<posY>200</posY>
+				<texture>#WorldWeather.TodayIconImage</texture>
+				<width>170</width>
+				<height>170</height>
+			</control>
+
+			<!-- Condition today -->
+			<control>
+				<description>Current Temp static label</description>
+				<type>label</type>
+				<width>200</width>
+				<id>0</id>
+				<posX>350</posX>
+				<posY>195</posY>
+				<label>#WorldWeather.TranslationTemperature</label>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>Current temp label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>195</posY>
+				<label>#WorldWeather.TodayTemperature</label>
+				<font>font14</font>
+				<textcolor>White</textcolor>
+			</control>
+			<control>
+				<description>Current Condition static label</description>
+				<type>label</type>
+				<width>200</width>
+				<id>0</id>
+				<posX>350</posX>
+				<posY>225</posY>
+				<label>#WorldWeather.TranslationCondition</label>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>Current Condition label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>225</posY>
+				<label>#WorldWeather.TodayCondition</label>
+				<font>font14</font>
+				<textcolor>White</textcolor>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>
+				<description>current wind static label</description>
+				<type>label</type>
+				<width>200</width>
+				<id>0</id>
+				<posX>350</posX>
+				<posY>255</posY>
+				<label>#WorldWeather.TranslationWind</label>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>current wind label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>255</posY>
+				<label>#WorldWeather.TodayWindDirection - #WorldWeather.TodayWindSpeed</label>
+				<font>font14</font>
+				<textcolor>White</textcolor>
+				<visible>string.equals(#WorldWeather.TodayWindDirectionDegree, )</visible>
+			</control>
+			<control>
+				<description>current wind label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>255</posY>
+				<label>#WorldWeather.TodayWindDirection (#WorldWeather.TodayWindDirectionDegree) - #WorldWeather.TodayWindSpeed</label>
+				<font>font14</font>
+				<textcolor>White</textcolor>
+				<visible>!string.equals(#WorldWeather.TodayWindDirectionDegree, )</visible>
+			</control>
+			<control>
+				<description>current humidity static label</description>
+				<type>label</type>
+				<width>200</width>
+				<id>0</id>
+				<posX>350</posX>
+				<posY>285</posY>
+				<label>#WorldWeather.TranslationHumidity</label>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>current humidity label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>285</posY>
+				<label>#WorldWeather.TodayHumidity, #WorldWeather.TodayPressure  #WorldWeather.TodayBarometricPressure</label>
+				<font>font14</font>
+				<textcolor>White</textcolor>
+				<visible>!string.equals(#WorldWeather.TodayPressure, )</visible>
+			</control>
+			<control>
+				<description>current humidity label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>285</posY>
+				<label>#WorldWeather.TodayHumidity</label>
+				<font>font14</font>
+				<textcolor>White</textcolor>
+				<visible>string.equals(#WorldWeather.TodayPressure, )</visible>
+			</control>
+			<control>
+				<description>sun rise static label</description>
+				<type>label</type>
+				<width>200</width>
+				<id>0</id>
+				<posX>350</posX>
+				<posY>315</posY>
+				<label>#WorldWeather.TranslationSunrise</label>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>sun rise label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>315</posY>
+				<label>#WorldWeather.LocationSunriseTime</label>
+				<font>font14</font>
+				<textcolor>white</textcolor>
+			</control>
+			<control>
+				<description>sun set static label</description>
+				<type>label</type>
+				<width>200</width>
+				<id>0</id>
+				<posX>350</posX>
+				<posY>345</posY>
+				<label>#WorldWeather.TranslationSunset</label>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>sun set label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>345</posY>
+				<label>#WorldWeather.LocationSunsetTime</label>
+				<font>font14</font>
+				<textcolor>white</textcolor>
+			</control>
+			<control>
+				<description>current moonphase static label</description>
+				<type>label</type>
+				<width>200</width>
+				<id>0</id>
+				<posX>350</posX>
+				<posY>375</posY>
+				<label>#WorldWeather.TranslationMoonPhase</label>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+			</control>
+			<control>
+				<description>current moonphase label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>375</posY>
+				<label>#WorldWeather.LocationMoonPhase</label>
+				<font>font14</font>
+				<textcolor>white</textcolor>
+			</control>
+
+
+
+			<control>
+				<description>Current Dew static label</description>
+				<type>label</type>
+				<width>200</width>
+				<id>0</id>
+				<posX>350</posX>
+				<posY>405</posY>
+				<label>#WorldWeather.TranslationDewPoint</label>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>!string.equals(#WorldWeather.TodayDewPoint, )</visible>
+			</control>
+			<control>
+				<description>Current Dew label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>405</posY>
+				<label>#WorldWeather.TodayDewPoint</label>
+				<font>font14</font>
+				<textcolor>White</textcolor>
+				<visible>!string.equals(#WorldWeather.TodayDewPoint, )</visible>
+			</control>
+			<control>
+				<description>Current Precipitation static label</description>
+				<type>label</type>
+				<width>200</width>
+				<id>0</id>
+				<posX>350</posX>
+				<posY>435</posY>
+				<label>#WorldWeather.TranslationPrecipitation</label>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>!string.equals(#WorldWeather.TodayPrecipitation, )</visible>
+			</control>
+			<control>
+				<description>Current Precipitation label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>435</posY>
+				<label>#WorldWeather.TodayPrecipitation</label>
+				<font>font14</font>
+				<textcolor>White</textcolor>
+				<visible>!string.equals(#WorldWeather.TodayPrecipitation, )</visible>
+			</control>
+			<control>
+				<description>Current Visibility static label</description>
+				<type>label</type>
+				<width>200</width>
+				<id>0</id>
+				<posX>350</posX>
+				<posY>465</posY>
+				<label>#WorldWeather.TranslationVisibility</label>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<visible>!string.equals(#WorldWeather.TodayVisibility, )</visible>
+			</control>
+			<control>
+				<description>Current Visibility label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>465</posY>
+				<label>#WorldWeather.TodayVisibility</label>
+				<font>font14</font>
+				<textcolor>White</textcolor>
+				<visible>!string.equals(#WorldWeather.TodayVisibility, )+string.equals(#WorldWeather.TodayCloudCoverage, )</visible>
+			</control>
+			<control>
+				<description>Current Visibility label</description>
+				<type>fadelabel</type>
+				<width>250</width>
+				<id>0</id>
+				<posX>570</posX>
+				<posY>465</posY>
+				<label>#WorldWeather.TodayVisibility  (#WorldWeather.TodayCloudCoverage #WorldWeather.TranslationCloudCoverage)</label>
+				<font>font14</font>
+				<textcolor>White</textcolor>
+				<visible>!string.equals(#WorldWeather.TodayVisibility, )+!string.equals(#WorldWeather.TodayCloudCoverage, )</visible>
+			</control>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>450</posY>
+				<width>840</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+			<control>
+				<description>Actual Weather Feed</description>
+				<type>textboxscrollup</type>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>520</posY>
+				<align>center</align>
+				<width>800</width>
+				<height>176</height>
+				<label>#WorldWeather.Feed</label>
+				<visible>[string.equals(#WorldWeather.ForecastProvider,Google)|string.equals(#WorldWeather.ForecastProvider,Yahoo)]</visible>
+				<font>font14</font>
+			</control>
+
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>862</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<!-- Day0 Forecast -->
+			<control>
+				<description>Day0 label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>105</posY>
+				<label>#WorldWeather.ForecastDay0Day</label>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+				<width>230</width>
+			</control>
+			<control>
+				<description>Day0 hi label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1135</posX>
+				<posY>137</posY>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#WorldWeather.ForecastDay0High</label>
+			</control>
+			<control>
+				<description>Day0 low label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>137</posY>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#WorldWeather.ForecastDay0Low</label>
+			</control>
+			<control>
+				<description>Day0 icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>920</posX>
+				<posY>100</posY>
+				<width>96</width>
+				<height>96</height>
+				<texture>#WorldWeather.ForecastDay0IconImage</texture>
+			</control>
+			<control>
+				<description>Day0 general weather label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>163</posY>
+				<font>font12</font>
+				<textcolor>ffffffff</textcolor>
+				<label>#WorldWeather.ForecastDay0Condition</label>
+				<width>230</width>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>895</posX>
+				<posY>168</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+			<!-- Day1 Forecast -->
+			<control>
+				<description>Day1 label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>230</posY>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+				<label>#WorldWeather.ForecastDay1Day</label>
+				<width>230</width>
+			</control>
+			<control>
+				<description>Day1 hi label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1135</posX>
+				<posY>262</posY>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#WorldWeather.ForecastDay1High</label>
+			</control>
+			<control>
+				<description>Day1 low label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>262</posY>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#WorldWeather.ForecastDay1Low</label>
+			</control>
+			<control>
+				<description>Day1 icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>920</posX>
+				<posY>225</posY>
+				<width>96</width>
+				<height>96</height>
+				<texture>#WorldWeather.ForecastDay1IconImage</texture>
+			</control>
+			<control>
+				<description>Day1 general weather label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>288</posY>
+				<font>font12</font>
+				<textcolor>ffffffff</textcolor>
+				<label>#WorldWeather.ForecastDay1Condition</label>
+				<width>230</width>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>895</posX>
+				<posY>293</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+
+			<!-- Day2 Forecast -->
+			<control>
+				<description>Day2 label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>355</posY>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+				<label>#WorldWeather.ForecastDay2Day</label>
+				<width>230</width>
+			</control>
+			<control>
+				<description>Day2 hi label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1135</posX>
+				<posY>387</posY>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#WorldWeather.ForecastDay2High</label>
+			</control>
+			<control>
+				<description>Day2 low label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>387</posY>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#WorldWeather.ForecastDay2Low</label>
+			</control>
+			<control>
+				<description>Day2 icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>920</posX>
+				<posY>350</posY>
+				<texture>-</texture>
+				<width>96</width>
+				<height>96</height>
+				<texture>#WorldWeather.ForecastDay2IconImage</texture>
+			</control>
+			<control>
+				<description>Day2 general weather label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>413</posY>
+				<font>font12</font>
+				<textcolor>ffffffff</textcolor>
+				<label>#WorldWeather.ForecastDay2Condition</label>
+				<width>230</width>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>895</posX>
+				<posY>418</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+			<!-- Day3 Forecast -->
+			<control>
+				<description>Day3 label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>480</posY>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+				<label>#WorldWeather.ForecastDay3Day</label>
+				<width>230</width>
+			</control>
+			<control>
+				<description>Day3 hi label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1135</posX>
+				<posY>512</posY>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#WorldWeather.ForecastDay3High</label>
+			</control>
+			<control>
+				<description>Day3 low label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>512</posY>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#WorldWeather.ForecastDay3Low</label>
+			</control>
+			<control>
+				<description>Day3 icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>920</posX>
+				<posY>475</posY>
+				<texture>-</texture>
+				<width>96</width>
+				<height>96</height>
+				<texture>#WorldWeather.ForecastDay3IconImage</texture>
+			</control>
+			<control>
+				<description>Day3 general weather label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>538</posY>
+				<font>font12</font>
+				<textcolor>ffffffff</textcolor>
+				<label>#WorldWeather.ForecastDay3Condition</label>
+				<width>230</width>
+				<wrapString> : : : </wrapString>
+			</control>
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>895</posX>
+				<posY>543</posY>
+				<width>385</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+			<control>
+				<description>day 4 label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>605</posY>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+				<label>#WorldWeather.ForecastDay4Day</label>
+				<width>230</width>
+			</control>
+			<control>
+				<description>day 4 Hi label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1135</posX>
+				<posY>637</posY>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#WorldWeather.ForecastDay4High</label>
+			</control>
+			<control>
+				<description>day 4 low label</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>637</posY>
+				<font>font13</font>
+				<textcolor>90ffffff</textcolor>
+				<label>#WorldWeather.ForecastDay4Low</label>
+			</control>
+			<control>
+				<description>day 4 icon</description>
+				<type>image</type>
+				<id>0</id>
+				<posX>920</posX>
+				<posY>600</posY>
+				<width>96</width>
+				<height>96</height>
+				<texture>#WorldWeather.ForecastDay4IconImage</texture>
+			</control>
+			<control>
+				<description>day 4 general weather label</description>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>1035</posX>
+				<posY>663</posY>
+				<label>#WorldWeather.ForecastDay4Condition</label>
+				<font>font12</font>
+				<textcolor>ffffffff</textcolor>
+				<width>230</width>
+				<wrapString> : : : </wrapString>
+			</control>
+		</control>
+	</controls>
+</window>

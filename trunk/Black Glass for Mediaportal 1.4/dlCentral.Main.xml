@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<controls>
+		<!-- 
+      This skin file is meant for all controls that should be visible for the user
+      when in the main view of the plugin. All controls should be tagged at a minimum
+      with "<visible>Control.isvisible(101)</visible>". 
+      -->
+
+		<control>
+			<type>group</type>
+			<dimColor>ffffffff</dimColor>
+			<visible>Control.isvisible(101)</visible>
+			<animation effect="fade" time="250">visiblechange</animation>
+			<animation effect="fade" time="150">WindowClose</animation>	
+			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>!plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control> 
+			<control>
+				<description>Date</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>42</posY>
+				<label>#WorldWeather.TodayTemperature     #date</label>
+				<align>right</align>
+				<font>font11</font>
+				<visible>plugin.isenabled(World Weather)</visible>
+				<textcolor>aaffffff</textcolor>
+			</control>
+			<control>
+				<description>Time</description>
+				<type>label</type>
+				<id>0</id>
+				<posX>1258</posX>
+				<posY>15</posY>
+				<label>#time</label>
+				<align>right</align>
+				<font>font16</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+			<control>
+				<type>fadelabel</type>
+				<width>850</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>30</posX>
+				<posY>10</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>60ffffff</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>458</posX>
+				<posY>48</posY>
+				<width>948</width>
+				<height>766</height>
+				<texture>bg_facade.png</texture>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>97</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+
+			<control>
+				<type>fadelabel</type>
+				<id>0</id>
+				<posX>520</posX>
+				<posY>95</posY>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>ffffffff</textcolor>
+				<width>750</width>
+				<label>#header.label</label>
+				<wrapString> : : : </wrapString>
+			</control>
+			<control>
+				<type>textbox</type>
+				<id>912</id>
+				<posX>520</posX>
+				<posY>163</posY>
+				<width>750</width>
+				<height>520</height>
+				<label>#dlCentral.About</label>
+				<font>font16</font>
+				<textcolor>90ffffff</textcolor>
+				<onup>912</onup>
+				<ondown>912</ondown>
+				<onleft>202</onleft>
+				<onright>50</onright>
+				<spinWidth>30</spinWidth>
+				<spinWidth>40</spinWidth>
+				<spinHeight>40</spinHeight>
+				<spinPosX>1135</spinPosX>
+				<spinPosY>660</spinPosY>
+				<spinAlign>Right</spinAlign>
+				<spinCanFocus>yes</spinCanFocus>
+			</control>
+
+
+
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>490</posX>
+				<posY>582</posY>
+				<width>790</width>
+				<height>53</height>
+				<texture>bg_facade_line_nofocus.png</texture>
+				<colordiffuse>77ffffff</colordiffuse>
+			</control>
+
+
+		</control>
+
+		<control>
+			<description>Dummy Button</description>
+			<type>button</type>
+			<id>500</id>
+			<label>-</label>
+			<onup>500</onup>
+			<ondown>500</ondown>
+			<onleft>202</onleft>
+			<onright>50</onright>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!--<visible>Control.isvisible(101)</visible>-->
+			<visible>no</visible>
+		</control>
+
+
+
+
+
+
+	</controls>
+</window>

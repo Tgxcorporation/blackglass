@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<window>
+	<id>35</id>
+	<defaultcontrol>107</defaultcontrol>
+	<allowoverlay>control.isvisible(13371337)</allowoverlay>
+	<disabletopbar>yes</disabletopbar>
+	<animation effect="fade" time="250" start="100" end="0">WindowClose</animation>
+	<!-- <animation effect="fade" time="150" start="0" end="100">WindowOpen</animation> -->
+	<rememberLastFocusedControl>yes</rememberLastFocusedControl>
+	<controls>
+
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<texture>basichome_bg.jpg</texture>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control>
+			<description>VideoWallpaper Overlay</description>
+			<type>image</type>
+			<id>0</id>
+			<texture>basichome_bg.jpg</texture>
+			<width>1281</width>
+			<height>720</height>
+			<visible>player.hasmedia</visible>
+			<animation effect="fade" time="150">visiblechange</animation>
+			<colordiffuse>a0ffffff</colordiffuse>
+		</control>
+		<control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<texture>basichome_side.png</texture>
+			<width>1280</width>
+			<height>720</height>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="250">WindowClose</animation>
+		</control>
+		<control>
+			<description>Date</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>134</posY>
+			<label>#date</label>
+			<align>center</align>
+			<font>font12</font>
+			<textcolor>aaffffff</textcolor>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<control>
+			<description>Time</description>
+			<type>label</type>
+			<id>0</id>
+			<posX>640</posX>
+			<posY>100</posY>
+			<label>#time</label>
+			<align>center</align>
+			<font>font22</font>
+			<textcolor>ffffffff</textcolor>
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+
+		<!-- UPPER BUTTONS -->
+		<control>
+			<type>image</type>
+			<id>0</id>
+			<posX>440</posX>
+			<posY>-361</posY>
+			<width>400</width>
+			<height>400</height>
+			<texture>bg_basichome_slide.png</texture>
+			<colorDiffuse>a0ffffff</colorDiffuse>
+			<visible>![control.hasfocus(16)|control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)|control.hasfocus(20)]</visible>
+			<animation effect="fade" time="50">WindowClose</animation>
+			<animation effect="fade" time="50">WindowOpen</animation>
+			<animation effect="fade" time="250">visiblechange</animation>
+		</control>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>18</defaultcontrol>
+			<onexit>103</onexit>
+			<buttonX>455</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>370</buttonwidth>
+			<buttonheight>70</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>200</width>
+			<height>60</height>
+			<dimColor>ffffffff</dimColor>
+			<visible>[control.hasfocus(16)|control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)|control.hasfocus(20)]</visible>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="0,-30" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="0,-30" reversible="false">hidden</animation>
+			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
+			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>440</posX>
+				<posY>-299</posY>
+				<width>400</width>
+				<height>400</height>
+				<texture>bg_basichome_slide.png</texture>
+				<colorDiffuse>d0ffffff</colorDiffuse>
+			</control>
+			<control>
+				<description>group element</description>
+				<type>group</type>
+				<control>
+					<description>shutdown button</description>
+					<type>button</type>
+					<id>16</id>
+					<posX>490</posX>
+					<posY>11</posY>
+					<width>40</width>
+					<height>40</height>
+					<textureFocus>button_shutdown_focus.png</textureFocus>
+					<textureNoFocus>button_shutdown_nofocus.png</textureNoFocus>
+					<label>1030</label>
+					<textXOff>3000</textXOff>
+					<action>99</action>
+					<onleft>20</onleft>
+					<onright>17</onright>
+					<onup>1111</onup>
+					<ondown>112</ondown>
+				</control>
+				<control>
+					<description>mute button</description>
+					<type>button</type>
+					<id>17</id>
+					<posX>545</posX>
+					<posY>2</posY>
+					<width>58</width>
+					<height>58</height>
+					<textureFocus>volume_mute.png</textureFocus>
+					<textureNoFocus>volume_mute_nf.png</textureNoFocus>
+					<label>200087</label>
+					<textXOff>3000</textXOff>
+					<action>9982</action>
+					<onleft>16</onleft>
+					<onright>18</onright>
+					<onup>1111</onup>
+					<ondown>112</ondown>
+				</control>
+				<control>
+					<description>home button</description>
+					<type>button</type>
+					<id>18</id>
+					<posX>620</posX>
+					<posY>11</posY>
+					<width>40</width>
+					<height>40</height>
+					<textureFocus>button_home_focus.png</textureFocus>
+					<textureNoFocus>button_home_nofocus.png</textureNoFocus>
+					<label>2143</label>
+					<textXOff>3000</textXOff>
+					<action>115</action>
+					<onleft>17</onleft>
+					<onright>19</onright>
+					<onup>1111</onup>
+					<ondown>112</ondown>
+				</control>
+				<control>
+					<description>VideoWallpaper button</description>
+					<type>button</type>
+					<id>19</id>
+					<posX>687</posX>
+					<posY>13</posY>
+					<width>36</width>
+					<height>36</height>
+					<textureFocus>button_fullscreen_focus.png</textureFocus>
+					<textureNoFocus>button_fullscreen_nofocus.png</textureNoFocus>
+					<label>Video Wallpaper</label>
+					<textXOff>3000</textXOff>
+					<action>101</action>
+					<onleft>18</onleft>
+					<onright>20</onright>
+					<onup>1111</onup>
+					<ondown>112</ondown>
+				</control>
+				<control>
+					<description>exit button</description>
+					<type>button</type>
+					<id>20</id>
+					<posX>750</posX>
+					<posY>11</posY>
+					<width>40</width>
+					<height>40</height>
+					<textureFocus>button_close_focus.png</textureFocus>
+					<textureNoFocus>button_close_nofocus.png</textureNoFocus>
+					<label>1030</label>
+					<textXOff>3000</textXOff>
+					<action>97</action>
+					<onleft>19</onleft>
+					<onright>16</onright>
+					<onup>1111</onup>
+					<ondown>112</ondown>
+				</control>
+			</control>
+		</control>
+
+		<control>		
+			<description>shutdown hover label</description>		
+			<type>label</type>		
+			<id>0</id>		
+			<posX>0</posX>
+			<posY>618</posY>
+			<width>1280</width>
+			<label>1030</label>		
+			<font>font40</font>
+			<align>center</align>
+			<visible>control.hasfocus(16)</visible>		
+			<animation effect="fade" time="150">VisibleChange</animation>		
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>		
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>		
+		</control>
+		<control>		
+			<description>mute hover label</description>		
+			<type>label</type>		
+			<id>0</id>		
+			<posX>0</posX>
+			<posY>618</posY>
+			<width>1280</width>
+			<label>200087</label>		
+			<font>font40</font>
+			<align>center</align>
+			<visible>control.hasfocus(17)</visible>		
+			<animation effect="fade" time="150">VisibleChange</animation>		
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>		
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>		
+		</control>
+		<control>		
+			<description>home hover label</description>		
+			<type>label</type>		
+			<id>0</id>		
+			<posX>0</posX>
+			<posY>618</posY>
+			<width>1280</width>
+			<label>2143</label>		
+			<font>font40</font>
+			<align>center</align>
+			<visible>control.hasfocus(18)</visible>		
+			<animation effect="fade" time="150">VisibleChange</animation>		
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>		
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>		
+		</control>
+		<control>		
+			<description>VideoWallpaper hover label</description>		
+			<type>label</type>		
+			<id>0</id>		
+			<posX>0</posX>
+			<posY>618</posY>
+			<width>1280</width>
+			<label>Video Wallpaper</label>		
+			<font>font40</font>
+			<align>center</align>
+			<visible>control.hasfocus(19)</visible>		
+			<animation effect="fade" time="150">VisibleChange</animation>		
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>		
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>		
+		</control>
+		<control>		
+			<description>exit hover label</description>		
+			<type>label</type>		
+			<id>0</id>		
+			<posX>0</posX>
+			<posY>618</posY>
+			<width>1280</width>
+			<label>4517</label>		
+			<font>font40</font>
+			<align>center</align>
+			<visible>control.hasfocus(20)</visible>		
+			<animation effect="fade" time="150">VisibleChange</animation>		
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>		
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>		
+		</control>
+
+		<!-- INFOSERVICE RSS FEED -->
+		<import>BasicHome_Infoservice.xml</import>
+
+		<!-- MAIN BUTTONS -->
+		<import>BasicHome_Buttons.xml</import>
+
+		<!-- FANART SCRAPER -->
+		<import>BasicHome_Fanart_Scraper.xml</import>	
+
+		<!-- OVERLAY -->
+		<import>minioverlay_dummy.xml</import>	
+
+		<control>
+			<description>New logo</description>
+			<type>image</type>
+			<id>0</id>
+			<posX>613</posX>
+			<posY>23</posY>
+			<width>57</width>
+			<height>43</height>
+			<texture>newlogo.png</texture>
+			<visible>![control.hasfocus(16)|control.hasfocus(17)|control.hasfocus(18)|control.hasfocus(19)|control.hasfocus(20)]</visible>
+			<animation effect="fade" time="150">VisibleChange</animation>		
+			<animation effect="fade" time="250" delay="250">WindowOpen</animation>
+			<animation effect="fade" time="250" delay="0">WindowClose</animation>
+		</control>
+		<!-- <control>
+			<description>BG</description>
+			<type>image</type>
+			<id>0</id>
+			<texture>bg.jpg</texture>
+			<width>1280</width>
+			<height>720</height>
+			<colordiffuse>ff999999</colordiffuse>
+			<animation effect="fade" time="250" start="100" end="0">WindowOpen</animation>
+			<animation effect="fade" time="250" start="0" end="100">WindowClose</animation>
+		</control> -->
+	</controls>
+</window>
