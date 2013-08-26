@@ -3,8 +3,7 @@
 <window>
 	<id>25</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-	<define>#header.label:#view</define>
+	<allowoverlay>player.hasmedia</allowoverlay><define>#header.label:#view</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_my videos.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
@@ -16,7 +15,7 @@
 		<import>myvideoTitle.facade.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -31,7 +30,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 			</control>
 			<control>
 				<description>Content locked</description>
@@ -63,7 +62,7 @@
 				<posY>132</posY>
 				<width>367</width>
 				<height>522</height>
-				<colordiffuse>ffffffff</colordiffuse>
+				<colordiffuse>#ColorMain</colordiffuse>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)</visible>
 				<keepaspectratio>yes</keepaspectratio>
@@ -152,7 +151,7 @@
 				<label>#strrating (#votes)</label>
 				<font>font11</font>
 				<align>left</align>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, False)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
@@ -255,7 +254,7 @@
 				<posX>45</posX>
 				<posY>790</posY>
 				<width>1125</width>
-				<textcolor>90FFFFFF</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<label>#genre</label>
 				<visible>facadeview.list+string.equals(#hideinfo, False)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -269,7 +268,7 @@
 				<posY>838</posY>
 				<width>1125</width>
 				<label>#year     #mpaarating     #videoruntime</label>
-				<textcolor>90FFFFFF</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideinfo, False)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
@@ -283,7 +282,7 @@
 				<width>1200</width>
 				<height>112</height>
 				<font>font12</font>
-				<textcolor>FFFFFFFF</textcolor>
+				<textcolor>#ColorMain</textcolor>
 				<label>#plot</label>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideinfo, False)</visible>
 				<seperator>: : :</seperator>
@@ -310,7 +309,7 @@
 				<posX>45</posX>
 				<posY>790</posY>
 				<width>600</width>
-				<textcolor>90FFFFFF</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<label>#genre</label>
 				<visible>[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, False)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -324,7 +323,7 @@
 				<posY>838</posY>
 				<width>600</width>
 				<label>#year     #mpaarating     #videoruntime</label>
-				<textcolor>90FFFFFF</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, False)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
@@ -338,7 +337,7 @@
 				<width>600</width>
 				<height>112</height>
 				<font>font12</font>
-				<textcolor>FFFFFFFF</textcolor>
+				<textcolor>#ColorMain</textcolor>
 				<label>#plot</label>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, False)</visible>
 				<seperator>: : :</seperator>
@@ -353,7 +352,7 @@
 				<posY>132</posY>
 				<width>367</width>
 				<height>522</height>
-				<colordiffuse>ffffffff</colordiffuse>
+				<colordiffuse>#ColorMain</colordiffuse>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)</visible>
 				<keepaspectratio>yes</keepaspectratio>
@@ -395,7 +394,7 @@
 				<width>1125</width>
 				<label>#Actor.DateOfBirth     #Actor.PlaceOfBirth</label>
 				<font>font16</font>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideActorinfo, False)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="facadeview.list+string.equals(#hideinfo, true)">conditional</animation>
 				<wrapString> : : : </wrapString>
@@ -409,7 +408,7 @@
 				<width>1125</width>
 				<label>#Actor.DateOfDeath     #Actor.PlaceOfDeath</label>
 				<font>font16</font>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideActorinfo, False)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="facadeview.list+string.equals(#hideinfo, true)">conditional</animation>
 				<wrapString> : : : </wrapString>
@@ -424,7 +423,7 @@
 				<height>225</height>
 				<label>#groupmovielist</label>
 				<font>font14</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorMain</textcolor>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideinfo, true)+string.equals(#hideActorinfo, False)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="facadeview.list+string.equals(#hideinfo, true)">conditional</animation>
 			</control>
@@ -451,7 +450,7 @@
 				<width>600</width>
 				<label>#Actor.DateOfBirth     #Actor.PlaceOfBirth</label>
 				<font>font16</font>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideActorinfo, False)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, true)">conditional</animation>
 				<wrapString> : : : </wrapString>
@@ -465,7 +464,7 @@
 				<width>600</width>
 				<label>#Actor.DateOfDeath     #Actor.PlaceOfDeath</label>
 				<font>font16</font>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideActorinfo, False)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, true)">conditional</animation>
 				<wrapString> : : : </wrapString>
@@ -480,7 +479,7 @@
 				<height>225</height>
 				<label>#groupmovielist</label>
 				<font>font14</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorMain</textcolor>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, true)+string.equals(#hideActorinfo, False)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, true)">conditional</animation>
 			</control>

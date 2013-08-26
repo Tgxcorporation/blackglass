@@ -3,9 +3,10 @@
 <window>
 	<id>2</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<allowoverlay>player.hasmedia</allowoverlay>
 	<define>#header.label:1</define>
 	<define>#header.background:hover_my pictures.png</define>
+	<define>#header.fanart:</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
@@ -14,11 +15,11 @@
 		<import>common.facade.pictures.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>1275</width>
@@ -29,9 +30,9 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<id>500</id>
 				<type>image</type>
 				<posX>60</posX>
@@ -42,9 +43,8 @@
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
 				<centered>yes</centered>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>1</id>
 				<posX>45</posX>
@@ -53,9 +53,8 @@
 				<height>414</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
@@ -65,10 +64,9 @@
 				<font>font22</font>
 				<label>#selecteditem</label>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current program</description>
 				<id>0</id>
@@ -76,12 +74,11 @@
 				<posY>645</posY>
 				<width>525</width>
 				<label>#selecteditem2</label>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>textboxscrollup</type>
 				<description>Selected item Label</description>
 				<id>0</id>
@@ -93,24 +90,9 @@
 				<textalign>center</textalign>
 				<label>#selecteditem</label>
 				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
-				<animation effect="fade" time="150">WindowClose</animation>
 			</control>
 		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-579</posX>
-			<posY>4</posY>
-			<width>627</width>
-			<height>1071</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>control.hasfocus(50)</visible>
-			<animation effect="fade" time="50">WindowClose</animation>
-			<animation effect="fade" time="50">WindowOpen</animation>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
+
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -124,15 +106,11 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>ffffffff</dimColor>
-			<visible>!control.hasfocus(50)</visible>
-			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -141,7 +119,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
+				<colorDiffuse>#ColorMain</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -152,7 +130,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorMain</textcolor>
 			</control>
 			<control>
 				<type>image</type>

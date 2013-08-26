@@ -3,8 +3,7 @@
 <window>
 	<id>880</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-	<define>#header.label:30000</define>
+	<allowoverlay>player.hasmedia</allowoverlay><define>#header.label:30000</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_musicvids.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
@@ -30,7 +29,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<visible>facadeview.list+control.isvisible(50)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -65,7 +64,7 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
 			<control>
@@ -76,7 +75,7 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
@@ -84,7 +83,7 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<visible>facadeview.playlist+control.isvisible(50)</visible>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -119,7 +118,7 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
 			<control>
@@ -130,7 +129,7 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
@@ -140,7 +139,7 @@
 			<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -171,7 +170,7 @@
 		</control>
 		<control>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -186,7 +185,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 			</control>
 			<control>
 				<description>Music Vids Hierachy</description>
@@ -196,7 +195,7 @@
 				<posY>18000</posY>
 				<label>#MusicVids.Hierachy</label>
 				<font>font14</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorMain</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -220,7 +219,7 @@
 				<posY>109</posY>
 				<width>540</width>
 				<height>490</height>
-				<colordiffuse>ffffffff</colordiffuse>
+				<colordiffuse>#ColorMain</colordiffuse>
 				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
 				<visible>!control.isvisible(99)</visible>
 				<animation effect="fade" time="250">visiblechange</animation>
@@ -244,7 +243,7 @@
 				<posY>727</posY>
 				<width>525</width>
 				<label>#MusicVids.ArtistName</label>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
 			<control>
@@ -255,7 +254,7 @@
 				<posY>795</posY>
 				<width>577</width>
 				<height>262</height>
-				<colordiffuse>ffffffff</colordiffuse>
+				<colordiffuse>#ColorMain</colordiffuse>
 				<font>font14</font>
 				<label>#MusicVids.ArtistBio</label>
 				<visible>!player.hasmedia</visible>
@@ -302,7 +301,7 @@
 			<width>627</width>
 			<height>1071</height>
 			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
+			<colorDiffuse>#ColorMain</colorDiffuse>
 			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
@@ -321,7 +320,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<visible>!control.hasfocus(50)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
@@ -338,7 +337,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
+				<colorDiffuse>#ColorMain</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -349,7 +348,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorMain</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -453,7 +452,7 @@
 				<posY>690</posY>
 				<width>382</width>
 				<align>left</align>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 			</control>
 			<control>
 				<description>Favorite Vid label</description>
@@ -495,7 +494,7 @@
 				<posY>795</posY>
 				<width>198</width>
 				<height>180</height>
-				<colordiffuse>ffffffff</colordiffuse>
+				<colordiffuse>#ColorMain</colordiffuse>
 				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
 			</control>
 			<control>
@@ -508,7 +507,7 @@
 				<posY>982</posY>
 				<width>382</width>
 				<align>left</align>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 			</control>
 			<control>
 				<description>Favorite Artist</description>

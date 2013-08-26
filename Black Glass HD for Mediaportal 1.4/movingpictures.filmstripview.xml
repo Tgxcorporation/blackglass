@@ -4,15 +4,13 @@
 	<controls>
 		<control>
 			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
 			<description>group element</description>
 			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
-			<dimColor>ffffffff</dimColor>
-			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">visible</animation>
-			<control>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimationMovingPictures">
 				<type>textboxscrollup</type>
 				<description>Title (Filmstrip)</description>
 				<id>640</id>
@@ -23,118 +21,21 @@
 				<font>font24</font>
 				<height>67</height>
 				<label>#MovingPictures.SelectedMovie.title</label>
+				<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]</visible>
 			</control>
-			<!-- Media logos [Filmstrip & Coverflow View] -->
-			<control>
-				<description>Video Codec</description>
-				<type>image</type>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>textboxscrollup</type>
+				<description>Title (Filmstrip)</description>
 				<id>0</id>
-				<posX>650</posX>
-				<posY>1005</posY>
-				<width>133</width>
-				<height>51</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.videocodec.png</texture>
-			</control>
-			<control>
-				<description>Video Resolution</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>732</posX>
-				<posY>1005</posY>
-				<width>133</width>
-				<height>51</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.videoresolution.png</texture>
-			</control>
-			<control>
-				<description>Video Aspect Ratio</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>815</posX>
-				<posY>1005</posY>
-				<width>133</width>
-				<height>51</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.videoaspectratio.png</texture>
-			</control>
-			<control>
-				<description>Audio Codec</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>897</posX>
-				<posY>1005</posY>
-				<width>133</width>
-				<height>51</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.audiocodec.png</texture>
-			</control>
-			<control>
-				<description>Audio Channels</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>980</posX>
-				<posY>1005</posY>
-				<width>133</width>
-				<height>51</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
-			</control>
-			<control>
-				<description>Video Format</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1062</posX>
-				<posY>1005</posY>
-				<width>133</width>
-				<height>51</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
-			</control>
-			<control>
-				<description>Subtitles</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1145</posX>
-				<posY>1005</posY>
-				<width>133</width>
-				<height>51</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\#MovingPictures.LocalMedia.Subtitles.png</texture>
-			</control>
-			<control>
-				<description>Fps</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>1227</posX>
-				<posY>1005</posY>
-				<width>133</width>
-				<height>51</height>
-				<keepaspectratio>yes</keepaspectratio>
-				<texture>Logos\empty.png</texture>
-			</control>
-			<control>
-				<description>Fps label</description>
-				<id>0</id>
-				<type>label</type>
-				<posX>1227</posX>
-				<posY>1021</posY>
-				<!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
-				<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
-				<font>font8</font>
-				<align>center</align>
-				<width>75</width>
-			</control>
-			<control>
-				<description>Fps label</description>
-				<id>0</id>
-				<type>label</type>
-				<posX>1227</posX>
-				<posY>1041</posY>
-				<label>fps</label>
-				<font>font7</font>
-				<align>center</align>
-				<width>75</width>
+				<posX>57</posX>
+				<posY>1000</posY>
+				<width>1830</width>
+				<textalign>center</textalign>
+				<font>font16</font>
+				<height>67</height>
+				<label>#MovingPictures.SelectedMovie.runtime.localized.long     #MovingPictures.SelectedMovie.genres</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]</visible>
 			</control>
 		</control>
 	</controls>

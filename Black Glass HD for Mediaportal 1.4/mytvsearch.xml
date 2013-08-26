@@ -4,9 +4,9 @@
 	<id>604</id>
 	<defaultcontrol>10</defaultcontrol>
 	<allowoverlay>player.hasmedia</allowoverlay>
-	<disabletopbar>no</disabletopbar>
 	<define>#header.label:100747</define>
 	<define>#header.background:hover_my tv.png</define>
+	<define>#header.fanart:</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
@@ -14,12 +14,12 @@
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="![control.hasfocus(11)|control.hasfocus(10)]">conditional</animation>
-			<control>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="![control.hasfocus(11)|control.hasfocus(10)]+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>687</posX>
@@ -28,7 +28,7 @@
 				<height>1149</height>
 				<texture>bg_facade.png</texture>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>735</posX>
@@ -42,31 +42,30 @@
 			<control>
 				<description>group element</description>
 				<type>group</type>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<description>listcontrol</description>
 					<type>listcontrol</type>
 					<id>10</id>
 					<onleft>2</onleft>
-					<onright>10</onright>
+					<onright>505050</onright>
 					<onup>10</onup>
 					<ondown>10</ondown>
-					<textcolor>FFFFFFFF</textcolor>
 				</control>
 			</control>
 			<control>
 				<description>group element</description>
 				<type>group</type>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<description>scheduler recordings listcontrol</description>
 					<type>listcontrol</type>
 					<id>11</id>
 					<onleft>10</onleft>
-					<onright>2</onright>
+					<onright>505050</onright>
 					<onup>11</onup>
 					<ondown>11</ondown>
 				</control>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Itemcount Itemtype</description>
 				<type>label</type>
 				<id>0</id>
@@ -74,10 +73,10 @@
 				<posY>989</posY>
 				<label>0 #(L(507))</label>
 				<font>font16</font>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Itemcount Itemtype</description>
 				<type>label</type>
 				<id>0</id>
@@ -85,17 +84,17 @@
 				<posY>989</posY>
 				<label>#itemcount #(L(507))</label>
 				<font>font16</font>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
 		<control>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="![control.hasfocus(11)|control.hasfocus(10)]">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="![control.hasfocus(11)|control.hasfocus(10)]+!control.hasfocus(505050)">conditional</animation>
 			<control>
 				<description>Date</description>
 				<type>label</type>
@@ -129,7 +128,7 @@
 				<label>#time</label>
 				<align>right</align>
 				<font>font16</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorMain</textcolor>
 			</control>
 			<control>
 				<type>fadelabel</type>
@@ -141,9 +140,9 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>REAL Current program title</description>
 				<type>fadelabel</type>
 				<id>1</id>
@@ -152,19 +151,19 @@
 				<width>540</width>
 				<font>font22</font>
 				<label>#selecteditem</label>
-				<textcolor>FFFFFFFF</textcolor>
+				<textcolor>#ColorMain</textcolor>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>genre</description>
 				<type>label</type>
 				<id>17</id>
 				<posX>45</posX>
 				<posY>172</posY>
 				<label>#TV.Search.Genre</label>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Current channel</description>
 				<type>label</type>
 				<id>16</id>
@@ -174,18 +173,18 @@
 				<font>font22</font>
 				<label>#TV.Search.Channel</label>
 				<align>left</align>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorMain</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Current program time</description>
 				<type>label</type>
 				<id>14</id>
 				<posX>45</posX>
 				<posY>304</posY>
 				<label>#TV.Search.Time</label>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Description1</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
@@ -195,12 +194,11 @@
 				<height>489</height>
 				<label>#TV.Search.Description</label>
 				<font>font16</font>
-				<textcolor>FFFFFFFF</textcolor>
+				<textcolor>#ColorMain</textcolor>
 				<visible>player.hasmedia</visible>
 				<seperator>: : :</seperator>
-				<animation effect="fade" time="150">visiblechange</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Description1</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
@@ -210,25 +208,10 @@
 				<height>678</height>
 				<label>#TV.Search.Description</label>
 				<font>font16</font>
-				<textcolor>FFFFFFFF</textcolor>
+				<textcolor>#ColorMain</textcolor>
 				<visible>!player.hasmedia</visible>
 				<seperator>: : :</seperator>
-				<animation effect="fade" time="150">visiblechange</animation>
 			</control>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-579</posX>
-			<posY>4</posY>
-			<width>627</width>
-			<height>1071</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>[control.hasfocus(10)|control.hasfocus(11)]</visible>
-			<animation effect="fade" time="50">WindowClose</animation>
-			<animation effect="fade" time="50">WindowOpen</animation>
-			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
 		<control>
 			<type>actiongroup</type>
@@ -243,13 +226,11 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>ffffffff</dimColor>
-			<visible>![control.hasfocus(10)|control.hasfocus(11)]</visible>
-			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="![control.hasfocus(10)|control.hasfocus(11)]+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="[control.hasfocus(10)|control.hasfocus(11)]|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -258,7 +239,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
+				<colorDiffuse>#ColorMain</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -269,7 +250,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorMain</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -326,6 +307,22 @@
 				</control>
 			</control>
 		</control>
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>2850</posX>
+			<posY>120</posY>
+			<width>35</width>
+			<height>820</height>
+			<!-- <onright>50</onright> -->
+			<!-- <onleft>50</onleft> -->
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+		</control>
+
 		<!-- NOT USED -->
 		<control>
 			<description>Description1</description>
@@ -337,7 +334,7 @@
 			<height>495</height>
 			<label>#TV.Search.Description</label>
 			<font>font16</font>
-			<textcolor>FFFFFFFF</textcolor>
+			<textcolor>#ColorMain</textcolor>
 			<seperator>: : :</seperator>
 		</control>
 		<control>
@@ -348,7 +345,7 @@
 			<posY>805</posY>
 			<label>#itemcount #(L(507))</label>
 			<align>left</align>
-			<textcolor>FFFFFFFF</textcolor>
+			<textcolor>#ColorMain</textcolor>
 		</control>
 		<control>
 			<description>DUMMY Current program title</description>
@@ -359,7 +356,7 @@
 			<width>570</width>
 			<font>font22</font>
 			<label>#TV.Search.Title</label>
-			<textcolor>FFFFFFFF</textcolor>
+			<textcolor>#ColorMain</textcolor>
 		</control>
 	</controls>
 </window>

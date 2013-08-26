@@ -10,7 +10,7 @@
 			<width>2520</width>
 			<height>480</height>
 			<texture>gradient.png</texture>
-			<visible>[facadeview.coverflow|facadeview.filmstrip]</visible>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+!control.hasfocus(505050)</visible>
 			<animation effect="fade" time="250">visible</animation>
 			<animation effect="fade" time="150">WindowOpen</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -18,12 +18,12 @@
 		<control>
 			<type>group</type>
 			<description>group element</description>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(9811)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
-			<control>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<posX>687</posX>
 				<posY>72</posY>
@@ -31,9 +31,8 @@
 				<height>1149</height>
 				<texture>bg_facade.png</texture>
 				<visible>[facadeview.list]+[control.isvisible(1240)]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Backdrop Overlay - ListView</description>
 				<type>image</type>
 				<id>0</id>
@@ -43,9 +42,8 @@
 				<height>1149</height>
 				<texture>bg_facade.png</texture>
 				<visible>[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>1345</posX>
@@ -55,9 +53,8 @@
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
 				<visible>[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<posX>1345</posX>
 				<posY>871</posY>
@@ -66,22 +63,20 @@
 				<texture>bg_facade_line_nofocus.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
 				<visible>[facadeview.largeicons]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			</control>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
 				<id>50</id>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<type>listcontrol</type>
 					<subtype>album</subtype>
 					<id>50</id>
 					<onleft>2</onleft>
-					<onright>2</onright>
-					<visible>[control.isvisible(745381)+[control.isvisible(1239)]+control.isvisible(50)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+					<onright>505050</onright>
+					<visible>[control.isvisible(1239)]+control.isvisible(50)</visible>
 				</control>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<description>graphical thumbpanel (series and/or seasons if set)</description>
 					<type>thumbnailpanel</type>
 					<id>50</id>
@@ -91,17 +86,17 @@
 					<height>855</height>
 					<!-- up/down buttons & page # -->
 					<onleft>2</onleft>
-					<onright>2</onright>
+					<onright>505050</onright>
 					<!-- Textures -->
 					<imageFolder>-</imageFolder>
 					<!-- Text -->
 					<font>font16</font>
 					<selectedColor>00ffffff</selectedColor>
-					<textcolor>ffffffff</textcolor>
-					<colordiffuse>ffffffff</colordiffuse>
+					<textcolor>#ColorMain</textcolor>
+					<colordiffuse>#ColorMain</colordiffuse>
 					<remoteColor>FF868686</remoteColor>
 					<!-- watched color -->
-					<downloadColor>FFFFFFFF</downloadColor>
+					<downloadColor>#ColorMain</downloadColor>
 					<!-- not watched color (normal) -->
 					<textcolor>FFC14E4A</textcolor>
 					<!-- local file not present color -->
@@ -133,28 +128,25 @@
 					<spinPosX>1777</spinPosX>
 					<spinPosY>983</spinPosY>
 					<spinAlign>Right</spinAlign>
-					<spinColor>60ffffff</spinColor>
+					<spinColor>#ColorUnfocused</spinColor>
 					<textureUp>arrow_round_up_nofocus.png</textureUp>
 					<textureDown>arrow_round_down_nofocus.png</textureDown>
 					<textureUpFocus>arrow_round_up_focus.png</textureUpFocus>
 					<textureDownFocus>arrow_round_down_focus.png</textureDownFocus>
 					<spinCanFocus>yes</spinCanFocus>
-					<visible>[control.isvisible(745382)|control.isvisible(745383)]+control.isvisible(50)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+					<visible>control.isvisible(50)</visible>
 					<scrollbarXOff>200</scrollbarXOff>
 				</control>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<description>Filmstrip view</description>
 					<type>filmstrip</type>
 					<id>50</id>
-					<ondown>2</ondown>
+					<ondown>505050</ondown>
 					<onup>2</onup>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<spinPosY>-50</spinPosY>
-					<spinPosX>-50</spinPosX>
 					<posX>30</posX>
-					<posY>547</posY>
+					<posY>502</posY>
 					<width>1905</width>
 					<height>334</height>
 					<spinCanFocus>no</spinCanFocus>
@@ -170,7 +162,7 @@
 					<frame>-</frame>
 					<frameFocus>-</frameFocus>
 					<showFolder>yes</showFolder>
-					<imageFolder flipY="true" diffuse="Thumb_Mask.png">DVDCase.png</imageFolder>
+					<imageFolder>DVDCase.png</imageFolder>
 					<imageFolderFocus>DVDCase.png</imageFolderFocus>
 					<thumbs flipY="true" diffuse="Thumb_Mask.png" />
 					<showBackGround>no</showBackGround>
@@ -179,14 +171,11 @@
 					<InfoImage>-</InfoImage>
 					<thumbAnimation effect="slide" end="0,-33" time="200">focus</thumbAnimation>
 					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
-					<scrollOffset>3</scrollOffset>
-					<visible>[control.isvisible(745384)]+[control.isvisible(1237)|control.isvisible(1238)]+control.isvisible(50)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
-					<animation effect="fade" time="250">visible</animation>
+					<visible>[control.isvisible(1237)|control.isvisible(1238)]+control.isvisible(50)</visible>
 					<scrollOffset>3</scrollOffset>
 					<scrollbarYOff>376</scrollbarYOff>
 				</control>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<description>Text List</description>
 					<type>listcontrol</type>
 					<id>50</id>
@@ -194,7 +183,7 @@
 					<width>574</width>
 					<height>885</height>
 					<onleft>2</onleft>
-					<onright>2</onright>
+					<onright>505050</onright>
 					<textXOff>-60</textXOff>
 					<textYOff>3</textYOff>
 					<textXOff2>0</textXOff2>
@@ -205,11 +194,11 @@
 					<IconYOff>61</IconYOff>
 					<playedColor>#ColorPlayed</playedColor>
 					<!-- watched -->
-					<downloadColor>ffffffff</downloadColor>
+					<downloadColor>#ColorMain</downloadColor>
 					<!-- (normal) -->
 					<remoteColor>#ColorOffline</remoteColor>
 					<!-- file not present color -->
-					<textcolor>ffffffff</textcolor>
+					<textcolor>#ColorMain</textcolor>
 					<!-- not watched (normal) -->
 					<textcolor2>ffb0b0b0</textcolor2>
 					<textcolor3>ffb0b0b0</textcolor3>
@@ -218,20 +207,19 @@
 					<textureFocus>bg_facade3_line_focus.png</textureFocus>
 					<textureNoFocus>bg_facade3_line_nofocus.png</textureNoFocus>
 					<textureHeight>88</textureHeight>
-					<visible>[control.isvisible(745381)]+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|control.isvisible(1240)]+control.isvisible(50)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
+					<visible>[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1239)|control.isvisible(1240)]+control.isvisible(50)</visible>
 				</control>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<description>Cover Flow view</description>
 					<type>coverflow</type>
-					<colordiffuse>ffffffff</colordiffuse>
-					<dimColor>90ffffff</dimColor>
+					<colordiffuse>#ColorMain</colordiffuse>
+					<dimColor>#ColorAlternate</dimColor>
 					<id>50</id>
-					<posX>30</posX>
-					<posY>549</posY>
+					<posX>45</posX>
+					<posY>492</posY>
 					<width>1905</width>
 					<height>1080</height>
-					<ondown>2</ondown>
+					<ondown>505050</ondown>
 					<onup>2</onup>
 					<onleft>50</onleft>
 					<onright>50</onright>
@@ -243,7 +231,7 @@
 					<sideGap>75</sideGap>
 					<sideDepth>375</sideDepth>
 					<offsetY>0</offsetY>
-					<selectedOffsetY>-60</selectedOffsetY>
+					<selectedOffsetY>-40</selectedOffsetY>
 					<speed>8</speed>
 					<showFrame>yes</showFrame>
 					<frame>DVDCase_coverflow.png</frame>
@@ -253,17 +241,13 @@
 					<spinSpeed>8</spinSpeed>
 					<font1>font14</font1>
 					<font2>font11</font2>
-					<label1/>
-					<label2/>
 					<label1YOff>607</label1YOff>
 					<label2YOff>645</label2YOff>
 					<pageSize>5</pageSize>
-					<scrollbarYOff>374</scrollbarYOff>
+					<scrollbarYOff>386</scrollbarYOff>
 					<keepaspectratio>no</keepaspectratio>
 					<cards flipY="yes" diffuse="Thumb_Mask.png" mask="DVDCase_coverflow_mask.png"/>
-					<visible>[control.isvisible(745385)]+[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1240)]+control.isvisible(50)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
-					<animation effect="fade" time="250">visible</animation>
+					<visible>[control.isvisible(1237)|control.isvisible(1238)|control.isvisible(1240)]+control.isvisible(50)</visible>
 					<subitems>
 						<subitem>
 							<![CDATA[
@@ -286,7 +270,7 @@
 									<width>225</width>
 									<label>#TVSeries.Title</label>
 									<font>font13</font>
-									<textcolor>FFFFFFFF</textcolor>
+									<textcolor>#ColorMain</textcolor>
 									<wrapString> : : : </wrapString>
 									<shadowAngle>45</shadowAngle>
 									<shadowDistance>2</shadowDistance>
@@ -327,7 +311,7 @@
 									<width>247</width>
 									<label>#TVSeries.Subtitle</label>
 									<font>font11</font>
-									<textcolor>ffFFFFFF</textcolor>
+									<textcolor>#ColorMain</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								<control>
@@ -338,7 +322,7 @@
 									<width>247</width>
 									<label>#TVSeries.Series.RuntimeMin</label>
 									<font>font11</font>
-									<textcolor>90FFFFFF</textcolor>
+									<textcolor>#ColorAlternate</textcolor>
 									<wrapString> : : : </wrapString>
 								</control>
 								<control>
@@ -351,7 +335,7 @@
 									<label>#TVSeries.Series.Summary</label>
 									<font>font9</font>
 									<lineSpacing>2</lineSpacing>
-									<textcolor>FFFFFFFF</textcolor>
+									<textcolor>#ColorMain</textcolor>
 								</control>
 							</controls>
 							]]>
@@ -359,57 +343,9 @@
 					</subitems>
 				</control>
 			</control>
-			<control>
-				<type>label</type>
-				<description>dummy listcontrol</description>
-				<id>745381</id>
-				<label>-</label>
-				<visible>facadeview.list</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy smallicons</description>
-				<id>745382</id>
-				<label>-</label>
-				<visible>facadeview.smallicons</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy largeicons</description>
-				<id>745383</id>
-				<label>-</label>
-				<visible>facadeview.largeicons</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy filmstrip</description>
-				<id>745384</id>
-				<label>-</label>
-				<visible>facadeview.filmstrip</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy coverflow</description>
-				<id>745385</id>
-				<label>-</label>
-				<visible>facadeview.coverflow</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy playlist</description>
-				<id>745386</id>
-				<label>-</label>
-				<visible>facadeview.playlist</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy album</description>
-				<id>745387</id>
-				<label>-</label>
-				<visible>facadeview.album</visible>
-			</control>
+
 			<!-- MEDIA COUNTS -->
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<type>label</type>
 				<description>Number of Files Label</description>
 				<id>0</id>
@@ -418,11 +354,10 @@
 				<label>#TVSeries.FilteredEpisodeCount #TVSeries.Translation.Episodes.Label</label>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 				<visible>control.isvisible(1239)+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="100">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<type>label</type>
 				<description>Number of Files Label</description>
 				<id>0</id>
@@ -431,11 +366,10 @@
 				<label>#TVSeries.Series.EpisodeCount #TVSeries.Translation.Episodes.Label</label>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 				<visible>control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="100">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<type>label</type>
 				<description>Number of Files Label</description>
 				<id>0</id>
@@ -444,11 +378,10 @@
 				<label>#TVSeries.SeriesCount #TVSeries.Translation.Series_Plural.Label</label>
 				<font>font16</font>
 				<align>left</align>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 				<visible>control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
-				<animation effect="fade" time="250" delay="100">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Group Count</description>
 				<type>label</type>
 				<label>#TVSeries.GroupCount #TVSeries.Translation.Groups.Label</label>
@@ -456,10 +389,24 @@
 				<posX>1372</posX>
 				<posY>989</posY>
 				<font>font16</font>
-				<textcolor>60FFFFFF</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 				<visible>control.isvisible(1240)</visible>
-				<animation effect="fade" time="250" delay="100">visible</animation>
 			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>2850</posX>
+			<posY>120</posY>
+			<width>35</width>
+			<height>820</height>
+			<onright>50</onright>
+			<onleft>50</onleft>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
 		</control>
 	</controls>
 </window>

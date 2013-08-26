@@ -3,8 +3,7 @@
 <window>
 	<id>801</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-	<define>#header.label:14001</define>
+	<allowoverlay>player.hasmedia</allowoverlay><define>#header.label:14001</define>
 	<define>#header.background:hover_extensions.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
@@ -14,7 +13,7 @@
 		<import>common.facade.pictures.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -29,7 +28,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 			</control>
 			<control>
 				<id>600</id>
@@ -156,7 +155,7 @@
 			<width>627</width>
 			<height>1071</height>
 			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
+			<colorDiffuse>#ColorMain</colorDiffuse>
 			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
@@ -175,7 +174,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<visible>!control.hasfocus(50)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
@@ -192,7 +191,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
+				<colorDiffuse>#ColorMain</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -203,7 +202,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorMain</textcolor>
 			</control>
 			<control>
 				<type>image</type>

@@ -3,20 +3,6 @@
 <window>
 	<controls>
 		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-579</posX>
-			<posY>4</posY>
-			<width>627</width>
-			<height>1071</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>control.hasfocus(50)</visible>
-			<animation effect="fade" time="50">WindowClose</animation>
-			<animation effect="fade" time="50">WindowOpen</animation>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
-		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
 			<defaultcontrol>2</defaultcontrol>
@@ -29,15 +15,12 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>ffffffff</dimColor>
-			<visible>!control.hasfocus(50)</visible>
-			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false" condition="window.isvisible(9811)">conditional</animation>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -46,7 +29,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
+				<colorDiffuse>#ColorMain</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -57,7 +40,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorMain</textcolor>
 			</control>
 			<control>
 				<type>image</type>
@@ -170,6 +153,18 @@
 				</control>
 			</control>
 			<control>
+				<type>label</type>
+				<description>cur_view</description>
+				<id>77</id>
+				<font>font12</font>
+				<posX>45</posX>
+				<posY>980</posY>
+				<wrapString> : : : </wrapString>
+				<width>510</width>
+				<label>#TVSeries.SimpleCurrentView</label>
+				<visible>!control.isvisible(1239)</visible>
+			</control>
+			<control>
 				<id>0</id>
 				<description>Last Online Update Value</description>
 				<label>#TVSeries.Translation.LastOnlineUpdate.Label: #TVSeries.LastOnlineUpdate</label>
@@ -179,6 +174,7 @@
 				<posY>1020</posY>
 				<wrapString> : : : </wrapString>
 				<width>510</width>
+				<textcolor>#ColorAlternate</textcolor>
 				<visible>![control.isvisible(1239)]</visible>
 			</control>
 		</control>
