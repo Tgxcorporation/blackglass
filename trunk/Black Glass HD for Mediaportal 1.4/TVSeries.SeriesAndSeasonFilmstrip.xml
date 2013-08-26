@@ -3,22 +3,40 @@
 <window>
 	<controls>
 		<control>
-			<type>textboxscrollup</type>
-			<description>Selected item Label</description>
-			<id>0</id>
-			<posX>57</posX>
-			<posY>976</posY>
-			<width>1830</width>
-			<font>font24</font>
-			<height>67</height>
-			<textalign>center</textalign>
-			<label>#TVSeries.Title</label>
-			<visible>[facadeview.filmstrip|facadeview.coverflow]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
-			<animation effect="fade" time="250">visible</animation>
+			<type>group</type>
+			<dimColor>#ColorMain</dimColor>
+			<description>group element</description>
 			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(9811)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="573,0" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
+				<type>textboxscrollup</type>
+				<description>Title (Filmstrip)</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>922</posY>
+				<width>1830</width>
+				<textalign>center</textalign>
+				<font>font24</font>
+				<height>67</height>
+				<label>#TVSeries.Title</label>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>textboxscrollup</type>
+				<description>Title (Filmstrip)</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>1000</posY>
+				<width>1830</width>
+				<textalign>center</textalign>
+				<font>font16</font>
+				<height>67</height>
+				<label>#TVSeries.Series.RuntimeMin     #TVSeries.Subtitle</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]+[control.isvisible(1237)|control.isvisible(1238)]</visible>
+			</control>
 		</control>
 	</controls>
 </window>

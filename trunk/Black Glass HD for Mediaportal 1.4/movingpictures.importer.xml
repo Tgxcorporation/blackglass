@@ -40,35 +40,35 @@
 			<animation effect="fade" time="250">WindowOpen</animation>
 		</control>
 		<import>common.window.overlay.xml</import>
-		<import>common.window.time.xml</import>
+		<import>common.window.time.basic.xml</import>
 		<control>
 			<description>group element</description>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>	
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
 			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control>
 				<type>image</type>
 				<id>1</id>
 				<posX>60</posX>
-				<posY>52</posY>
+				<posY>72</posY>
 				<width>1800</width>
-				<height>993</height>
+				<height>973</height>
 				<texture>bg_dialog_big.png</texture>
 			</control>
-
-			<control>
-				<description>Select text label</description>
-				<type>label</type>
-				<id>0</id>
-				<posX>147</posX>
-				<posY>130</posY>
-				<width>1500</width>
-				<font>font24</font>
-				<label>#header.label</label>
-			</control>
-
 
 			<control>
 				<description>all files label</description>
@@ -76,11 +76,11 @@
 				<id>0</id>
 				<label>#MovingPictures.Translation.AllFiles.Label</label>
 				<posX>147</posX>
-				<posY>198</posY>
-				<font>font13</font>
+				<posY>145</posY>
+				<font>font22</font>
 				<width>1350</width>
 				<visible>string.equals(#MovingPictures.Importer.ListMode.Flag,ALL)</visible>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<animation effect="fade" time="100">Visible</animation>
 			</control>
 
@@ -90,11 +90,11 @@
 				<id>0</id>
 				<label>#MovingPictures.Translation.FilesNeedingAttention.Label</label>
 				<posX>147</posX>
-				<posY>198</posY>
-				<font>font13</font>
+				<posY>145</posY>
+				<font>font22</font>
 				<width>1350</width>
 				<visible>string.equals(#MovingPictures.Importer.ListMode.Flag,PENDING)</visible>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<animation effect="fade" time="100">Visible</animation>
 			</control>
 			<control>
@@ -103,18 +103,18 @@
 				<id>0</id>
 				<label>#MovingPictures.Translation.CompletedFiles.Label</label>
 				<posX>147</posX>
-				<posY>198</posY>
-				<font>font13</font>
+				<posY>145</posY>
+				<font>font22</font>
 				<width>1350</width>
 				<visible>string.equals(#MovingPictures.Importer.ListMode.Flag,COMPLETED)</visible>
-				<textcolor>90ffffff</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<animation effect="fade" time="100">Visible</animation>
 			</control>
 
 			<control>
 				<type>image</type>
 				<posX>102</posX>
-				<posY>178</posY>
+				<posY>148</posY>
 				<width>1716</width>
 				<height>79</height>
 				<texture>bg_facade_line_nofocus.png</texture>
@@ -127,9 +127,9 @@
 				<type>listcontrol</type>
 				<id>310</id>
 				<posX>102</posX>
-				<posY>258</posY>
+				<posY>228</posY>
 				<width>1716</width>
-				<height>680</height>
+				<height>710</height>
 				<textYOff>12</textYOff>
 				<textXOff>-45</textXOff>
 				<textXOff3>4500</textXOff3>

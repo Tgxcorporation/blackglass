@@ -1,22 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!--version="1.0" encoding="utf-8"-->
 <!--            :: HIDDEN MENU ::            -->
 <window>
 	<controls>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-579</posX>
-			<posY>4</posY>
-			<width>627</width>
-			<height>1071</height>
-			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
-			<visible>control.isvisible(50)+!control.isvisible(51)+control.hasfocus(50)</visible>
-			<animation effect="fade" time="50">WindowClose</animation>
-			<animation effect="fade" time="50">WindowOpen</animation>
-			<animation effect="fade" time="250">visiblechange</animation>
-		</control>
+		
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
@@ -30,15 +16,13 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>ffffffff</dimColor>
-			<visible>control.isvisible(50)+!control.isvisible(51)+!control.hasfocus(50)</visible>
-			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-			<animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
+			<dimColor>#ColorMain</dimColor>
+			<visible>control.isvisible(50)+!control.isvisible(51)</visible>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false">visible</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
 			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-			<animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false" condition="window.isvisible(96742)">conditional</animation>
 			<control>
 				<type>image</type>
 				<id>0</id>
@@ -138,6 +122,65 @@
 					<visible>plugin.isenabled(Trakt)</visible>
 				</control>
 			</control>
+			<control>
+				<description>Parental controls Lock Indicator</description>
+				<type>image</type>
+				<id>16</id>
+				<posX>12</posX>
+				<posY>1025</posY>
+				<width>20</width>
+				<height>20</height>
+				<texture>lock2.png</texture>
+			</control>
+			<control>
+				<description>Current Category</description>
+				<type>label</type>
+				<id>9916</id>
+				<font>font11</font>
+				<posX>45</posX>
+				<posY>1020</posY>
+				<wrapString> : : : </wrapString>
+				<width>510</width>
+				<label>#MovingPictures.CurrentNode.name</label>
+				<visible>!control.isvisible(16)+!control.isvisible(17)</visible>
+			</control>
+			<control>
+				<description>Current Category / Filter</description>
+				<type>label</type>
+				<id>9917</id>
+				<font>font11</font>
+				<posX>45</posX>
+				<posY>1020</posY>
+				<wrapString> : : : </wrapString>
+				<width>510</width>
+				<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
+				<visible>!control.isvisible(16)+control.isvisible(17)</visible>
+			</control>
+			<control>
+				<description>Current Category</description>
+				<type>label</type>
+				<id>9918</id>
+				<font>font11</font>
+				<posX>45</posX>
+				<posY>1020</posY>
+				<wrapString> : : : </wrapString>
+				<width>510</width>
+				<label>#MovingPictures.CurrentNode.name</label>
+				<visible>control.isvisible(16)+!control.isvisible(17)</visible>
+			</control>
+			<control>
+				<description>Current Category / Filter</description>
+				<type>label</type>
+				<id>9919</id>
+				<font>font11</font>
+				<posX>45</posX>
+				<posY>1020</posY>
+				<wrapString> : : : </wrapString>
+				<width>510</width>
+				<label>#MovingPictures.CurrentNode.name / #MovingPictures.Filter.Name</label>
+				<visible>control.isvisible(16)+control.isvisible(17)</visible>
+			</control>
+
 		</control>
 	</controls>
 </window>

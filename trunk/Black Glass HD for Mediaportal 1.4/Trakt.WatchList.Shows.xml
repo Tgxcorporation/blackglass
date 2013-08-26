@@ -3,8 +3,7 @@
 <window>
 	<id>87268</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
-	<define>#Fanart.1:#Trakt.WatchListShows.Fanart.1</define>
+	<allowoverlay>player.hasmedia</allowoverlay><define>#Fanart.1:#Trakt.WatchListShows.Fanart.1</define>
 	<define>#Fanart.2:#Trakt.WatchListShows.Fanart.2</define>
 	<define>#header.label:#Trakt.Translation.WatchListShows.Label | #Trakt.WatchList.CurrentUser</define>
 	<define>#header.background:hover_trakt.png</define>
@@ -17,7 +16,7 @@
 		<import>common.facade.video.xml</import>
 		<control>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
@@ -32,7 +31,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>60ffffff</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 			</control>
 			<control>
 				<description>fanart list</description>
@@ -42,7 +41,7 @@
 				<posY>132</posY>
 				<width>367</width>
 				<height>522</height>
-				<colordiffuse>ffffffff</colordiffuse>
+				<colordiffuse>#ColorMain</colordiffuse>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
 				<keepaspectratio>no</keepaspectratio>
@@ -83,7 +82,7 @@
 				<wrapString> : : : </wrapString>
 				<posX>45</posX>
 				<posY>750</posY>
-				<textcolor>90FFFFFF</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<font>font13</font>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -109,7 +108,7 @@
 				<posY>825</posY>
 				<width>630</width>
 				<label>#Trakt.Show.Year     #Trakt.Show.Certification     #Trakt.Show.Runtime mins</label>
-				<textcolor>90FFFFFF</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<visible>!string.equals(#Trakt.Show.Runtime,)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+!string.equals(#runtime,0)+!string.equals(#year,1900)</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
@@ -125,7 +124,7 @@
 				<height>186</height>
 				<label>#Trakt.Show.Overview</label>
 				<font>font12</font>
-				<textcolor>FFFFFFFF</textcolor>
+				<textcolor>#ColorMain</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist] + !player.hasmedia</visible>
 				<seperator>: : :</seperator>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
@@ -154,7 +153,7 @@
 			<width>627</width>
 			<height>1071</height>
 			<texture>bg_left.png</texture>
-			<colorDiffuse>ffffffff</colorDiffuse>
+			<colorDiffuse>#ColorMain</colorDiffuse>
 			<visible>control.hasfocus(50)</visible>
 			<animation effect="fade" time="50">WindowClose</animation>
 			<animation effect="fade" time="50">WindowOpen</animation>
@@ -173,7 +172,7 @@
 			<textureNoFocus>-</textureNoFocus>
 			<width>637</width>
 			<height>1080</height>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<visible>!control.hasfocus(50)</visible>
 			<animation effect="fade" time="250" start="75" reversible="false">visible</animation>
 			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
@@ -190,7 +189,7 @@
 				<width>627</width>
 				<height>1080</height>
 				<texture>bg_left.png</texture>
-				<colorDiffuse>ffffffff</colorDiffuse>
+				<colorDiffuse>#ColorMain</colorDiffuse>
 			</control>
 			<control>
 				<id>0</id>
@@ -201,7 +200,7 @@
 				<width>499</width>
 				<font>font24</font>
 				<align>left</align>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>#ColorMain</textcolor>
 			</control>
 			<control>
 				<type>image</type>

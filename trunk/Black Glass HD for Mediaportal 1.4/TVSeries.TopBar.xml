@@ -3,11 +3,11 @@
 	<controls>
 		<control>
 			<type>group</type>
-			<dimColor>ffffffff</dimColor>
+			<dimColor>#ColorMain</dimColor>
 			<animation effect="fade" time="150">WindowClose</animation>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false" condition="window.isvisible(9811)">conditional</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>1275</width>
@@ -18,18 +18,7 @@
 				<label>#header.label</label>
 				<font>font28</font>
 				<align>left</align>
-				<textcolor>60ffffff</textcolor>
-			</control>
-			<control>
-				<type>label</type>
-				<description>cur_view</description>
-				<id>77</id>
-				<posX>45</posX>
-				<posY>81</posY>
-				<font>font14</font>
-				<label>#TVSeries.SimpleCurrentView</label>
-				<visible>!control.isvisible(1239)</visible>
-				<animation effect="fade" time="150" delay="0">visible</animation>
+				<textcolor>#ColorUnfocused</textcolor>
 			</control>
 		</control>
 	</controls>
