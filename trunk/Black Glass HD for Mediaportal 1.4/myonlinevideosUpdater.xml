@@ -3,9 +3,11 @@
 <window>
 	<id>4757</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia</allowoverlay><define>#header.label:#OnlineVideos.HeaderLabel</define>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:#OnlineVideos.HeaderLabel</define>
 	<define>#header.image:#OnlineVideos.HeaderImage</define>
 	<define>#header.background:hover_OnlineVideos.png</define>
+	<define>#header.fanart:</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<!-- *** WINDOW DEFAULTS *** -->
@@ -19,8 +21,8 @@
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
-			<control>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>687</posX>
@@ -29,7 +31,7 @@
 				<height>1149</height>
 				<texture>bg_facade.png</texture>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>735</posX>
@@ -43,12 +45,13 @@
 			<control>
 				<description>group element</description>
 				<type>group</type>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<description>listcontrol</description>
 					<type>listcontrol</type>
 					<id>50</id>
 					<scrollOffset>2</scrollOffset>
-					<onleft>505</onleft>
+					<onleft>508</onleft>
+					<onright>505050</onright>
 					<textYOff>13</textYOff>
 					<textXOff>15</textXOff>
 					<textXOff2>712</textXOff2>
@@ -57,7 +60,7 @@
 					<textYOff3>16</textYOff3>
 				</control>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Itemcount Itemtype</description>
 				<type>label</type>
 				<id>0</id>
@@ -68,7 +71,7 @@
 				<textcolor>#ColorUnfocused</textcolor>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Itemcount Itemtype</description>
 				<type>label</type>
 				<id>0</id>
@@ -86,7 +89,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>1275</width>
@@ -99,7 +102,7 @@
 				<align>left</align>
 				<textcolor>#ColorUnfocused</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<id>0</id>
 				<type>image</type>
 				<posX>60</posX>
@@ -110,7 +113,7 @@
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
 				<centered>yes</centered>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>45</posX>
@@ -119,7 +122,7 @@
 				<height>409</height>
 				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current title</description>
 				<id>0</id>
@@ -130,7 +133,7 @@
 				<label>#selecteditem</label>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Owner Label</description>
 				<type>label</type>
 				<id>501</id>
@@ -140,7 +143,7 @@
 				<label>#OnlineVideos.Translation.Creator.Label: #OnlineVideos.owner</label>
 				<textcolor>#ColorAlternate</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Description</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
@@ -154,9 +157,8 @@
 				<textcolor>White</textcolor>
 				<seperator>: : :</seperator>
 				<visible>player.hasmedia</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="-600,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Description</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
@@ -170,14 +172,13 @@
 				<textcolor>White</textcolor>
 				<seperator>: : :</seperator>
 				<visible>!player.hasmedia</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="-600,0">visible</animation>
 			</control>
 		</control>
 		<!-- *** HIDDEN MENU *** -->
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
-			<defaultcontrol>505</defaultcontrol>
+			<defaultcontrol>508</defaultcontrol>
 			<onexit>0</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
@@ -229,59 +230,62 @@
 				<posY>150</posY>
 				<control>
 					<type>button</type>
-					<description>full update button</description>
-					<id>505</id>
+					<description>automatic update button</description>
+					<id>508</id>
 					<onright>50</onright>
-					<onup>17</onup>
-					<ondown>504</ondown>
-					<label>#OnlineVideos.Translation.FullUpdate.Label</label>
+					<onup>17</onup>          
+					<ondown>503</ondown>
+					<label>#OnlineVideos.Translation.AutomaticUpdate.Label</label>
+				</control>     
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button</description>
+					<id>503</id>
+					<onright>50</onright>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.State.Label</label>
 				</control>
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button for Creator</description>
+					<id>506</id>
+					<onright>50</onright>
+					<onup>503</onup>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Creator.Label</label>
+				</control>
+				<control>
+					<type>selectbutton</type>          
+					<description>filter button for Language</description>
+					<id>507</id>
+					<onright>50</onright>
+					<onup>506</onup>
+					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Language.Label</label>
+				</control>      
 				<control>
 					<type>selectbutton</type>
 					<description>Order By</description>
 					<id>504</id>
 					<onright>50</onright>
-					<onup>505</onup>
-					<ondown>503</ondown>
-					<label>#OnlineVideos.Translation.SortOptions.Label</label>
-				</control>
-				<control>
-					<type>selectbutton</type>
-					<description>filter button</description>
-					<id>503</id>
-					<onright>50</onright>
-					<onup>504</onup>
-					<ondown>506</ondown>
-					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.State.Label</label>
-				</control>
-				<control>
-					<type>selectbutton</type>
-					<description>filter button for Creator</description>
-					<id>506</id>
-					<onright>50</onright>
-					<onup>503</onup>
-					<ondown>507</ondown>
-					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Creator.Label</label>
-				</control>
-				<control>
-					<type>selectbutton</type>
-					<description>filter button for Language</description>
-					<id>507</id>
-					<onright>50</onright>
-					<onup>506</onup>
-					<ondown>502</ondown>
-					<label>#OnlineVideos.Translation.Filter.Label: #OnlineVideos.Translation.Language.Label</label>
-				</control>
-				<control>
-					<type>button</type>
-					<description>refresh button</description>
-					<id>502</id>
-					<onright>50</onright>
 					<onup>507</onup>
-					<ondown>505</ondown>
-					<label>#OnlineVideos.Translation.Refresh.Label</label>
-				</control>
+					<ondown>508</ondown>
+					<label>#OnlineVideos.Translation.SortOptions.Label</label>
+				</control>   
+
 			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>2850</posX>
+			<posY>120</posY>
+			<width>35</width>
+			<height>820</height>
+			<onright>50</onright>
+			<onleft>50</onleft>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
 		</control>
 	</controls>
 </window>
