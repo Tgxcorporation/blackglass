@@ -4,120 +4,102 @@
 This file should contain the hidden menu
 -->
 <window>
-  <controls>
-    <control>
-      <type>image</type>
-      <id>0</id>
-      <posX>-579</posX>
-      <posY>4</posY>
-      <width>627</width>
-      <height>1071</height>
-      <texture>bg_left.png</texture>
-      <colorDiffuse>#ColorMain</colorDiffuse>
-      <visible>control.hasfocus(50)</visible>
-      <animation effect="fade" time="50">WindowClose</animation>
-      <animation effect="fade" time="50">WindowOpen</animation>
-      <animation effect="fade" time="250">visiblechange</animation>
-    </control>
-    <control>
-      <type>actiongroup</type>
-      <description>action menu</description>
-      <defaultcontrol>202</defaultcontrol>
-      <onexit>0</onexit>
-      <buttonX>0</buttonX>
-      <buttonY>0</buttonY>
-      <buttonwidth>577</buttonwidth>
-      <buttonheight>1080</buttonheight>
-      <textureFocus>-</textureFocus>
-      <textureNoFocus>-</textureNoFocus>
-      <width>637</width>
-      <height>1080</height>
-      <dimColor>#ColorMain</dimColor>
-      <visible>!control.hasfocus(50)</visible>
-      <animation effect="fade" time="250" start="75" reversible="false">visible</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">visible</animation>
-      <animation effect="fade" time="250" end="75" reversible="false">hidden</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" end="-312,0" reversible="false">hidden</animation>
-      <animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
-      <animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
-      <animation effect="fade" time="250" start="75" reversible="false">WindowOpen</animation>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>0</posY>
-        <width>627</width>
-        <height>1080</height>
-        <texture>bg_left.png</texture>
-        <colorDiffuse>#ColorMain</colorDiffuse>
-      </control>
-      <control>
-        <id>0</id>
-        <type>label</type>
-        <posX>45</posX>
-        <posY>52</posY>
-        <label>924</label>
-        <width>499</width>
-        <font>font24</font>
-        <align>left</align>
-        <textcolor>#ColorMain</textcolor>
-      </control>
-      <control>
-        <type>image</type>
-        <id>0</id>
-        <posX>0</posX>
-        <posY>71</posY>
-        <width>579</width>
-        <height>79</height>
-        <texture>bg_button_nofocus.png</texture>
-      </control>
-      <control>
-        <description>button group</description>
-        <type>group</type>
-        <posX>0</posX>
-        <posY>150</posY>
-        <layout>StackLayout(0, Vertical, true)</layout>
-        <control>
-          <description>Cancel Button</description>
-          <type>button</type>
-          <id>202</id>
-          <label>Cancel</label>
-          <onup>201</onup>
-          <ondown>203</ondown>
-          <onright>50</onright>
-          <onleft>202</onleft>
-        </control>
-        <control>
-          <description>Sort</description>
-          <type>sortbutton</type>
-          <id>203</id>
-          <label>Sort</label>
-          <onup>202</onup>
-          <ondown>204</ondown>
-          <onright>50</onright>
-          <onleft>203</onleft>
-        </control>
-        <control>
-          <description>Status</description>
-          <type>button</type>
-          <id>204</id>
-          <label>Status</label>
-          <onup>203</onup>
-          <ondown>205</ondown>
-          <onright>50</onright>
-          <onleft>203</onleft>
-        </control>
-        <control>
-          <description>About</description>
-          <type>button</type>
-          <id>205</id>
-          <label>About</label>
-          <onup>204</onup>
-          <ondown>2</ondown>
-          <onright>50</onright>
-          <onleft>205</onleft>
-        </control>
-      </control>
-    </control>
-  </controls>
+	<controls>
+		<control>
+			<type>actiongroup</type>
+			<description>action menu</description>
+			<defaultcontrol>202</defaultcontrol>
+			<onexit>0</onexit>
+			<buttonX>0</buttonX>
+			<buttonY>0</buttonY>
+			<buttonwidth>577</buttonwidth>
+			<buttonheight>1080</buttonheight>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<width>637</width>
+			<height>1080</height>
+			<dimColor>#ColorMain</dimColor>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-289,0" reversible="false" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" end="-289,0" reversible="false" condition="control.hasfocus(50)|control.hasfocus(505050)">conditional</animation>
+			<animation effect="slide" time="150" end="-600,0" reversible="false">WindowClose</animation>
+			<animation effect="slide" tween="circle" easing="out" time="250" start="-312,0" reversible="false">WindowOpen</animation>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>0</posY>
+				<width>627</width>
+				<height>1080</height>
+				<texture>bg_left.png</texture>
+				<colorDiffuse>#ColorMain</colorDiffuse>
+			</control>
+			<control>
+				<id>0</id>
+				<type>label</type>
+				<posX>45</posX>
+				<posY>52</posY>
+				<label>924</label>
+				<width>499</width>
+				<font>font24</font>
+				<align>left</align>
+				<textcolor>#ColorMain</textcolor>
+			</control>
+			<control>
+				<type>image</type>
+				<id>0</id>
+				<posX>0</posX>
+				<posY>71</posY>
+				<width>579</width>
+				<height>79</height>
+				<texture>bg_button_nofocus.png</texture>
+			</control>
+			<control>
+				<description>button group</description>
+				<type>group</type>
+				<posX>0</posX>
+				<posY>150</posY>
+				<layout>StackLayout(0, Vertical, true)</layout>
+				<control>
+					<description>Cancel Button</description>
+					<type>button</type>
+					<id>202</id>
+					<label>Cancel</label>
+					<onup>201</onup>
+					<ondown>203</ondown>
+					<onright>50</onright>
+					<onleft>202</onleft>
+				</control>
+				<control>
+					<description>Sort</description>
+					<type>sortbutton</type>
+					<id>203</id>
+					<label>Sort</label>
+					<onup>202</onup>
+					<ondown>204</ondown>
+					<onright>50</onright>
+					<onleft>203</onleft>
+				</control>
+				<control>
+					<description>Status</description>
+					<type>button</type>
+					<id>204</id>
+					<label>Status</label>
+					<onup>203</onup>
+					<ondown>205</ondown>
+					<onright>50</onright>
+					<onleft>203</onleft>
+				</control>
+				<control>
+					<description>About</description>
+					<type>button</type>
+					<id>205</id>
+					<label>About</label>
+					<onup>204</onup>
+					<ondown>2</ondown>
+					<onright>50</onright>
+					<onleft>205</onleft>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>
