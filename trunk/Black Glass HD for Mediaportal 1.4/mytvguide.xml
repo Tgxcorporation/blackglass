@@ -231,7 +231,6 @@
 			<label>#TV.Guide.ChangeGroup</label>
 			<textcolor>#ColorUnfocused</textcolor>
 			<visible>!control.hasfocus(100)</visible>
-			<!-- <animation effect="rotate" end="90" time="0" condition="!control.hasfocus(100)">conditional</animation> -->
 		</control>
 		<control>
 			<description>TvGroup button label focus</description>
@@ -243,7 +242,6 @@
 			<label>#TV.Guide.ChangeGroup</label>
 			<textcolor>#ColorMain</textcolor>
 			<visible>control.hasfocus(100)</visible>
-			<!-- <animation effect="rotate" end="90" time="0" condition="control.hasfocus(100)">conditional</animation> -->
 		</control>
 		<control>
 			<description>All Channels label</description>
@@ -303,36 +301,11 @@
 			<textureNonFocusedRight tileFill="no">tvguide_recButton_Focus_right.png</textureNonFocusedRight>
 			<textureIcon>-</textureIcon>
 		</control> -->
+
+
+
 		<!-- INFO -->
-		<!-- <control>
-			<type>image</type>
-			<id>0</id>
-			<posX>-7</posX>
-			<posY>735</posY>
-			<width>1948</width>
-			<height>697</height>
-			<texture>bg_tvguide.png</texture>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>432</posX>
-			<posY>774</posY>
-			<width>1455</width>
-			<height>79</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control>
-		<control>
-			<type>image</type>
-			<id>0</id>
-			<posX>432</posX>
-			<posY>822</posY>
-			<width>1455</width>
-			<height>79</height>
-			<texture>bg_facade_line_nofocus.png</texture>
-			<colordiffuse>77ffffff</colordiffuse>
-		</control> -->
+
 		<control>
 			<description>TV preview window</description>
 			<type>videowindow</type>
@@ -364,6 +337,7 @@
 			<font>font22</font>
 			<!-- <label>#TV.Guide.Title</label> -->
 			<label>#TV.Guide.CompositeTitle</label>
+			<wrapString> : : : </wrapString>
 		</control>
 		<control>
 			<description>Current program time</description>
@@ -371,6 +345,7 @@
 			<id>14</id>
 			<posX>45</posX>
 			<posY>547</posY>
+			<width>570</width>
 			<font>font16</font>
 			<textcolor>#ColorAlternate</textcolor>
 			<label>#TV.Guide.Time      #TV.Guide.Genre</label>
@@ -433,16 +408,19 @@
 			<!-- <colordiffuse>77ffffff</colordiffuse> -->
 		</control>
 
-		<!-- <control>
+		<control>
 			<id>0</id>
 			<type>image</type>
-			<posX>733</posX>
-			<posY>119</posY>
-			<width>1859</width>
-			<height>70</height>
-			<texture>bg_tvguide_header.png</texture>
+			<posX>207</posX>
+			<posY>183</posY>
+			<width>199</width>
+			<height>150</height>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#TV.Guide.thumb</texture>
 			<colordiffuse>#ColorMain</colordiffuse>
-		</control> -->
+			<keepaspectratio>yes</keepaspectratio>
+			<centered>yes</centered>
+			<zoom>no</zoom>
+		</control>
 		<control>
 			<id>0</id>
 			<type>image</type>
