@@ -100,6 +100,26 @@
 				<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
 			</control>
 			<control Style="FanartDisplayAnimation">
+				<type>imagelist</type>
+				<id>101</id>
+				<posX>45</posX>
+				<posY>526</posY>
+				<width>453</width>
+				<height>60</height>
+				<textureWidth>33</textureWidth>
+				<textureHeight>33</textureHeight>
+				<subitems>
+					<subitem>star_nofocus.png</subitem>
+					<subitem>star_focus.png</subitem>
+				</subitems>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<imagesToDraw>5</imagesToDraw>
+				<percentage>#OnlineVideos.Details.Rating</percentage>
+				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]+string.equals(#OnlineVideos.selectedSiteUtil, YouTube) + !string.contains(#selecteditem, ..)</visible>
+			</control>
+
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
