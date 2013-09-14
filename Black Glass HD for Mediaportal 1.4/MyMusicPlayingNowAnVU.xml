@@ -7,6 +7,7 @@
 	<define>#header.label:4540</define>
 	<define>#usePlayFanart:Yes</define>
 	<define>#header.background:hover_my music.png</define>
+	<define>#header.fanart:#Play.Current.Artist</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
@@ -18,7 +19,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)|control.hasfocus(30)|control.hasfocus(31)]">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)|control.hasfocus(30)|control.hasfocus(31)]+!control.hasfocus(505050)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>1275</width>
@@ -66,7 +67,7 @@
 				<font>font16</font>
 				<textcolor>#ColorMain</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<description>album art image</description>
 				<id>0</id>
@@ -79,7 +80,7 @@
 				<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Current.Thumb</texture>
 				<zoom>yes</zoom>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<description>nowplaying shine</description>
 				<id>0</id>
@@ -109,7 +110,7 @@
 				<texture>VU aus.png</texture>
 				<visible>!Player.playing</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>999</id>
 				<posX>615</posX>
@@ -119,9 +120,8 @@
 				<imagepath>Animations\AnVu</imagepath>
 				<texture>#VUMeterL</texture>
 				<visible>Player.HasAudio + Player.playing</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>855</posX>
@@ -130,9 +130,8 @@
 				<height>150</height>
 				<texture>VU aus.png</texture>
 				<visible>!Player.playing</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>998</id>
 				<posX>855</posX>
@@ -142,9 +141,8 @@
 				<imagepath>Animations\AnVu</imagepath>
 				<texture>#VUMeterR</texture>
 				<visible>Player.HasAudio + Player.playing</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<type>imagelist</type>
 				<id>1337</id>
 				<posX>45</posX>
@@ -162,9 +160,8 @@
 				<imagesToDraw>5</imagesToDraw>
 				<percentage>#Play.Current.Rating</percentage>
 				<visible>player.hasmedia</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Artist label</description>
 				<id>0</id>
@@ -176,7 +173,7 @@
 				<font>font24</font>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>album label</description>
 				<id>0</id>
@@ -201,7 +198,7 @@
 			<font>font12</font>
 			<textcolor>#ColorAlternate</textcolor>
 		</control> -->
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>track label</description>
 				<id>0</id>
@@ -213,7 +210,7 @@
 				<font>font12</font>
 				<textcolor>#ColorAlternate</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Title label</description>
 				<id>0</id>
@@ -225,7 +222,7 @@
 				<font>font18</font>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>year label</description>
 				<id>0</id>
@@ -237,7 +234,7 @@
 				<align>left</align>
 				<textcolor>#ColorAlternate</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>label</type>
 				<description>up next label</description>
 				<!-- <id>20</id> -->
@@ -248,10 +245,9 @@
 				<font>font12</font>
 				<align>left</align>
 				<textcolor>80ffffff</textcolor>
-				<visible>player.hasmedia+control.hastext(121)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
+				<visible>player.hasmedia</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>next track label</description>
 				<id>121</id>
@@ -264,7 +260,7 @@
 				<font>font12</font>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>next artist label</description>
 				<id>123</id>
@@ -277,7 +273,7 @@
 				<font>font12</font>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>music logo</description>
 				<type>image</type>
 				<id>600</id>
@@ -289,7 +285,7 @@
 				<centered>yes</centered>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#Play.Next.Thumb</texture>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>music rectangle</description>
 				<type>image</type>
 				<id>0</id>
@@ -300,10 +296,9 @@
 				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
 				<centered>yes</centered>
 				<visible>player.hasmedia+control.hastext(121)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 		</control>
-		<control>
+		<control Style="FanartDisplayAnimation">
 			<description>Progress background</description>
 			<type>image</type>
 			<id>117</id>
@@ -313,9 +308,8 @@
 			<height>54</height>
 			<texture>osd_progress_background.png</texture>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-		<control>
+		<control Style="FanartDisplayAnimation">
 			<type>progress</type>
 			<description>track progress</description>
 			<id>118</id>
@@ -327,46 +321,44 @@
 			<animation effect="fade" time="250">visiblechange</animation>
 			<label>#percentage</label>
 		</control>
-		<control>
+		<control Style="FanartDisplayAnimation">
 			<description>pause image</description>
 			<id>0</id>
 			<type>image</type>
-			<posX>847</posX>
-			<posY>1027</posY>
-			<width>223</width>
-			<height>52</height>
+			<posX>861</posX>
+			<posY>1030</posY>
+			<width>197</width>
+			<height>46</height>
 			<visible>player.paused</visible>
 			<texture>video_paused.png</texture>
 			<animation effect="fade" time="250">visiblechange</animation>
 		</control>
-		<control>
+		<control Style="FanartDisplayAnimation">
 			<type>label</type>
 			<description>track progress label</description>
 			<id>0</id>
-			<posX>30</posX>
-			<posY>1030</posY>
+			<posX>20</posX>
+			<posY>1034</posY>
 			<label>#currentplaytime</label>
 			<align>left</align>
-			<font>font16</font>
+			<font>font14</font>
 			<textcolor>#ColorMain</textcolor>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
 			<shadowAngle>315</shadowAngle>
 			<shadowDistance>1</shadowDistance>
 			<shadowColor>FF000000</shadowColor>
 		</control>
-		<control>
+		<control Style="FanartDisplayAnimation">
 			<type>label</type>
 			<description>track duration label</description>
 			<id>0</id>
-			<posX>1905</posX>
-			<posY>1030</posY>
+			<posX>1900</posX>
+			<posY>1034</posY>
 			<label>#currentremaining</label>
 			<align>right</align>
-			<font>font16</font>
+			<font>font14</font>
 			<textcolor>#ColorMain</textcolor>
 			<visible>player.hasmedia</visible>
-			<animation effect="fade" time="250">visiblechange</animation>
 			<shadowAngle>315</shadowAngle>
 			<shadowDistance>1</shadowDistance>
 			<shadowColor>FF000000</shadowColor>
@@ -495,8 +487,8 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">hidden</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)|control.hasfocus(30)|control.hasfocus(31)]">conditional</animation>
-			<control>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="[control.hasfocus(2)|control.hasfocus(3)|control.hasfocus(4)|control.hasfocus(1958)|control.hasfocus(30)|control.hasfocus(31)]+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>1011</posX>
@@ -506,9 +498,8 @@
 				<texture>bg_facade.png</texture>
 				<colorDiffuse>#ColorMain</colorDiffuse>
 				<visible>control.isvisible(29)|control.isvisible(28)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>1050</posX>
@@ -518,9 +509,8 @@
 				<texture>bg_facade_line_nofocus_top.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
 				<visible>control.isvisible(29)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>1050</posX>
@@ -530,16 +520,15 @@
 				<texture>bg_facade_line_nofocus_top.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
 				<visible>control.isvisible(28)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
 			<control>
 				<type>group</type>
 				<description>group element</description>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<type>listcontrol</type>
 					<description>list of best album tracks</description>
 					<id>166</id>
-					<onright>2</onright>
+					<onright>505050</onright>
 					<onleft>2</onleft>
 					<onup>155</onup>
 					<ondown>155</ondown>
@@ -548,7 +537,7 @@
 					<width>870</width>
 					<height>360</height>
 					<textYOff>12</textYOff>
-					<textXOff>-60</textXOff>
+					<textXOff>-70</textXOff>
 					<IconXOff>1</IconXOff>
 					<spinColor>-</spinColor>
 					<image>-</image>
@@ -556,17 +545,16 @@
 					<textureDown>-</textureDown>
 					<textureUpFocus>-</textureUpFocus>
 					<textureDownFocus>-</textureDownFocus>
-					<animation effect="fade" time="250">visiblechange</animation>
 				</control>
 			</control>
 			<control>
 				<type>group</type>
 				<description>group element</description>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<type>listcontrol</type>
 					<description>list of best tag tracks</description>
 					<id>155</id>
-					<onright>2</onright>
+					<onright>505050</onright>
 					<onleft>2</onleft>
 					<onup>166</onup>
 					<ondown>166</ondown>
@@ -575,7 +563,7 @@
 					<width>870</width>
 					<height>360</height>
 					<textYOff>12</textYOff>
-					<textXOff>-60</textXOff>
+					<textXOff>-70</textXOff>
 					<IconXOff>1</IconXOff>
 					<spinColor>-</spinColor>
 					<image>-</image>
@@ -583,10 +571,9 @@
 					<textureDown>-</textureDown>
 					<textureUpFocus>-</textureUpFocus>
 					<textureDownFocus>-</textureDownFocus>
-					<animation effect="fade" time="250">visiblechange</animation>
 				</control>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>unknown rating1</description>
 				<type>imagelist</type>
 				<id>77</id>
@@ -606,7 +593,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>unknown rating2</description>
 				<type>imagelist</type>
 				<id>78</id>
@@ -626,7 +613,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>unknown rating3</description>
 				<type>imagelist</type>
 				<id>79</id>
@@ -646,7 +633,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>existent rating1</description>
 				<type>imagelist</type>
 				<id>80</id>
@@ -666,7 +653,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>existent rating2</description>
 				<type>imagelist</type>
 				<id>81</id>
@@ -686,7 +673,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>existent rating3</description>
 				<type>imagelist</type>
 				<id>82</id>
@@ -706,7 +693,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>known rating1</description>
 				<type>imagelist</type>
 				<id>83</id>
@@ -726,7 +713,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>known rating2</description>
 				<type>imagelist</type>
 				<id>84</id>
@@ -746,7 +733,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>known rating3</description>
 				<type>imagelist</type>
 				<id>85</id>
@@ -766,7 +753,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>famous rating1</description>
 				<type>imagelist</type>
 				<id>87</id>
@@ -786,7 +773,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack1</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>famous rating2</description>
 				<type>imagelist</type>
 				<id>88</id>
@@ -806,7 +793,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack2</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>famous rating3</description>
 				<type>imagelist</type>
 				<id>89</id>
@@ -826,7 +813,7 @@
 				<percentage>#Lastfm.Rating.AlbumTrack3</percentage>
 				<visible>no</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>best album tracks label</description>
 				<id>0</id>
@@ -836,9 +823,8 @@
 				<label>33030</label>
 				<font>font22</font>
 				<visible>control.isvisible(29)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>best tag tracks label</description>
 				<id>0</id>
@@ -848,8 +834,22 @@
 				<label>Top tracks for tag</label>
 				<font>font22</font>
 				<visible>control.isvisible(28)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>2850</posX>
+			<posY>120</posY>
+			<width>35</width>
+			<height>820</height>
+			<onright>166</onright>
+			<onleft>166</onleft>
+			<ondown>166</ondown>
+			<onup>166</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
 		</control>
 		<control>
 			<type>fadelabel</type>
