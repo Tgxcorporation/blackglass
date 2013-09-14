@@ -3,9 +3,11 @@
 <window>
 	<id>500</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia</allowoverlay><define>#header.label:136</define>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:136</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_my music.png</define>
+	<define>#header.fanart:</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
@@ -19,7 +21,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>1275</width>
@@ -32,7 +34,7 @@
 				<align>left</align>
 				<textcolor>#ColorUnfocused</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<description>artist art image</description>
 				<id>1000</id>
@@ -44,9 +46,8 @@
 				<centered>yes</centered>
 				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<id>0</id>
 				<description>Cd Case</description>
 				<type>image</type>
@@ -57,9 +58,8 @@
 				<colordiffuse>#ColorMain</colordiffuse>
 				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<id>0</id>
 				<type>fadelabel</type>
 				<description>Current program title</description>
@@ -69,10 +69,9 @@
 				<font>font22</font>
 				<label>#selecteditem</label>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<id>0</id>
 				<type>fadelabel</type>
 				<description>Current program</description>
@@ -80,12 +79,11 @@
 				<posY>727</posY>
 				<width>525</width>
 				<label>#selecteditem2</label>
-				<textcolor>#ColorMain</textcolor>
+				<textcolor>#ColorAlternate</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>textboxscrollup</type>
 				<description>Selected item Label</description>
 				<id>0</id>
@@ -97,8 +95,6 @@
 				<textalign>center</textalign>
 				<label>#selecteditem</label>
 				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
-				<animation effect="fade" time="150">WindowClose</animation>
 			</control>
 		</control>
 		<control>
