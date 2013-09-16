@@ -57,14 +57,14 @@
 				<type>image</type>
 				<description>artist art image</description>
 				<id>0</id>
-				<posX>106</posX>
-				<posY>183</posY>
-				<width>468</width>
-				<height>468</height>
+				<posX>45</posX>
+				<posY>169</posY>
+				<width>490</width>
+				<height>490</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<zoom>yes</zoom>
-				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<texture flipY="true" diffuse="Thumb_Mask.png" mask="CDCase_coverflow_mask.png">#selectedthumb</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[string.equals(#mvCentral.ArtistView,true)|string.equals(#mvCentral.GenreView,true)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
@@ -74,10 +74,10 @@
 				<id>0</id>
 				<posX>45</posX>
 				<posY>169</posY>
-				<width>540</width>
+				<width>490</width>
 				<height>490</height>
 				<colordiffuse>#ColorMain</colordiffuse>
-				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase_coverflow.png</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[string.equals(#mvCentral.ArtistView,true)|string.equals(#mvCentral.GenreView,true)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
@@ -127,14 +127,14 @@
 				<type>image</type>
 				<description>artist art image</description>
 				<id>0</id>
-				<posX>106</posX>
-				<posY>183</posY>
-				<width>468</width>
-				<height>468</height>
+				<posX>45</posX>
+				<posY>169</posY>
+				<width>490</width>
+				<height>490</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<zoom>yes</zoom>
-				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<texture flipY="true" diffuse="Thumb_Mask.png" mask="CDCase_coverflow_mask.png">#selectedthumb</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[string.equals(#mvCentral.AlbumView,true)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
@@ -144,10 +144,10 @@
 				<id>0</id>
 				<posX>45</posX>
 				<posY>169</posY>
-				<width>540</width>
+				<width>490</width>
 				<height>490</height>
 				<colordiffuse>#ColorMain</colordiffuse>
-				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase.png</texture>
+				<texture flipY="true" diffuse="Thumb_Mask.png">CDCase_coverflow.png</texture>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+[string.equals(#mvCentral.AlbumView,true)]</visible>
 				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
@@ -448,27 +448,27 @@
 					<height>825</height>
 					<scrollOffset>1</scrollOffset>
 					<onleft>2</onleft>
-					<onright>2</onright>
-					<itemWidth>164</itemWidth>
-					<itemHeight>203</itemHeight>
-					<textureWidth>156</textureWidth>
-					<textureHeight>142</textureHeight>
-					<thumbWidth>133</thumbWidth>
-					<thumbHeight>135</thumbHeight>
-					<thumbPosX>18</thumbPosX>
-					<thumbPosY>4</thumbPosY>
-					<itemWidthBig>386</itemWidthBig>
-					<itemHeightBig>407</itemHeightBig>
-					<thumbWidthBig>324</thumbWidthBig>
-					<thumbHeightBig>324</thumbHeightBig>
-					<textureWidthBig>372</textureWidthBig>
-					<textureHeightBig>339</textureHeightBig>
-					<thumbPosXBig>42</thumbPosXBig>
-					<thumbPosYBig>10</thumbPosYBig>
+					<onright>505050</onright>
+					<itemWidth>165</itemWidth>
+					<itemHeight>163</itemHeight>
+					<textureWidth>144</textureWidth>
+					<textureHeight>144</textureHeight>
+					<thumbWidth>144</thumbWidth>
+					<thumbHeight>144</thumbHeight>
+					<thumbPosX>0</thumbPosX>
+					<thumbPosY>0</thumbPosY>
+					<itemWidthBig>289</itemWidthBig>
+					<itemHeightBig>272</itemHeightBig>
+					<thumbWidthBig>255</thumbWidthBig>
+					<thumbHeightBig>255</thumbHeightBig>
+					<textureWidthBig>255</textureWidthBig>
+					<textureHeightBig>255</textureHeightBig>
+					<thumbPosXBig>0</thumbPosXBig>
+					<thumbPosYBig>0</thumbPosYBig>
 					<unfocusedAlpha>120</unfocusedAlpha>
 					<hideUnfocusTexture>no</hideUnfocusTexture>
-					<renderFocusText>yes</renderFocusText>
-					<renderUnfocusText>yes</renderUnfocusText>
+					<renderFocusText>no</renderFocusText>
+					<renderUnfocusText>no</renderUnfocusText>
 					<imageFolder>-</imageFolder>
 					<imageFolderFocus>-</imageFolderFocus>
 					<thumbZoom>yes</thumbZoom>
@@ -477,9 +477,10 @@
 					<textYOff>3</textYOff>
 					<spinCanFocus>no</spinCanFocus>
 					<showFrame>yes</showFrame>
-					<frameNoFocus>CDCase.png</frameNoFocus>
-					<frameFocus>CDCase.png</frameFocus>
-					<keepaspectratio>yes</keepaspectratio>
+					<textureMask>CDCase_coverflow_mask.png</textureMask>
+					<frameNoFocus>CDCase_coverflow.png</frameNoFocus>
+					<frameFocus>CDCase_coverflow.png</frameFocus>
+					<keepaspectratio>no</keepaspectratio>
 					<centered>yes</centered>
 					<zoom>yes</zoom>
 					<visible>control.isvisible(745382)|control.isvisible(745383)</visible>
@@ -490,35 +491,34 @@
 					<type>filmstrip</type>
 					<dimColor>#ColorAlternate</dimColor>
 					<id>50</id>
-					<ondown>2</ondown>
+					<ondown>505050</ondown>
 					<onup>2</onup>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<posX>30</posX>
 					<posY>547</posY>
-					<width>1905</width>
+					<width>1915</width>
 					<height>328</height>
-					<thumbWidth>312</thumbWidth>
-					<thumbHeight>312</thumbHeight>
-					<thumbPosX>40</thumbPosX>
-					<thumbPosY>9</thumbPosY>
-					<itemWidth>379</itemWidth>
+					<thumbWidth>328</thumbWidth>
+					<thumbHeight>328</thumbHeight>
+					<thumbPosX>0</thumbPosX>
+					<thumbPosY>0</thumbPosY>
+					<itemWidth>383</itemWidth>
 					<itemHeight>328</itemHeight>
-					<textureWidth>360</textureWidth>
+					<textureWidth>328</textureWidth>
 					<textureHeight>328</textureHeight>
 					<showFrame>no</showFrame>
 					<frame>-</frame>
 					<frameFocus>-</frameFocus>
 					<showFolder>yes</showFolder>
-					<imageFolder>CDCase.png</imageFolder>
-					<imageFolderFocus>CDCase.png</imageFolderFocus>
-					<thumbs flipY="true" diffuse="Thumb_Mask.png" />
+					<imageFolder>CDCase_coverflow.png</imageFolder>
+					<imageFolderFocus>CDCase_coverflow.png</imageFolderFocus>
+					<textureMask>CDCase_coverflow_mask.png</textureMask>
+					<thumbs flipY="true" diffuse="Thumb_Mask.png" mask="CDCase_coverflow_mask.png"/>
 					<showBackGround>no</showBackGround>
 					<background>-</background>
 					<showInfoImage>no</showInfoImage>
 					<InfoImage>-</InfoImage>
-					<thumbAnimation effect="slide" end="0,-30" time="200">focus</thumbAnimation>
-					<thumbAnimation effect="zoom" start="100,100" end="120,120" time="200">focus</thumbAnimation>
 					<scrollOffset>3</scrollOffset>
 					<scrollbarYOff>375</scrollbarYOff>
 					<visible>control.isvisible(745384)</visible>
@@ -528,13 +528,14 @@
 					<description>Cover Flow view</description>
 					<type>coverflow</type>
 					<colordiffuse>#ColorMain</colordiffuse>
+					<colordiffuse>#ColorMain</colordiffuse>
 					<dimColor>#ColorAlternate</dimColor>
 					<id>50</id>
 					<posX>30</posX>
 					<posY>563</posY>
 					<width>1905</width>
 					<height>1080</height>
-					<ondown>2</ondown>
+					<ondown>505050</ondown>
 					<onup>2</onup>
 					<onleft>50</onleft>
 					<onright>50</onright>
@@ -546,7 +547,7 @@
 					<sideGap>75</sideGap>
 					<sideDepth>375</sideDepth>
 					<offsetY>0</offsetY>
-					<selectedOffsetY>-60</selectedOffsetY>
+					<selectedOffsetY>-40</selectedOffsetY>
 					<speed>8</speed>
 					<showFrame>yes</showFrame>
 					<frame>CDCase_coverflow.png</frame>
@@ -556,8 +557,8 @@
 					<spinSpeed>8</spinSpeed>
 					<font1>font14</font1>
 					<font2>font11</font2>
-					<label1YOff>1465</label1YOff>
-					<label2YOff>1502</label2YOff>
+					<label1YOff>465</label1YOff>
+					<label2YOff>502</label2YOff>
 					<pageSize>5</pageSize>
 					<scrollbarYOff>361</scrollbarYOff>
 					<cards flipY="yes" diffuse="Thumb_Mask.png" mask="CDCase_coverflow_mask.png"/>
