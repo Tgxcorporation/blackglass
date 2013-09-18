@@ -133,12 +133,12 @@
 			</control>
 			<control Style="FanartDisplayAnimation">
 				<description>Length</description>
-				<type>label</type>
-				<id>501</id>
+				<type>fadelabel</type>
+				<id>0</id>
 				<posX>45</posX>
 				<posY>625</posY>
-				<width>577</width>
-				<label>#selecteditem2</label>
+				<width>630</width>
+				<label>#(switch(eq(#OnlineVideos.length,''),'#OnlineVideos.aired',neq(#OnlineVideos.length,''),'#OnlineVideos.length     #OnlineVideos.aired'))</label>
 				<textcolor>#ColorAlternate</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
 			</control>
