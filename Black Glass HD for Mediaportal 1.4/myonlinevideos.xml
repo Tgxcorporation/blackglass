@@ -58,23 +58,24 @@
 			<control Style="FanartDisplayAnimationWatched">
 				<id>500</id>
 				<type>image</type>
-				<posX>60</posX>
-				<posY>116</posY>
-				<width>513</width>
-				<height>382</height>
+				<posX>45</posX>
+				<posY>109</posY>
+				<width>551</width>
+				<height>414</height>
 				<keepaspectratio>yes</keepaspectratio>
-				<texture flipY="true" diffuse="Thumb_Mask.png">#selectedthumb</texture>
+				<texture flipY="true" diffuse="Thumb_Mask.png" mask="PictureCase_coverflow_mask.png">#selectedthumb</texture>
 				<visible>!string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)+!string.equals(#OnlineVideos.selectedSiteUtil, IMDb)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
 				<centered>yes</centered>
+				<zoom>no</zoom>
 			</control>
 			<control Style="FanartDisplayAnimationWatched">
 				<type>image</type>
 				<id>0</id>
 				<posX>45</posX>
-				<posY>105</posY>
-				<width>540</width>
-				<height>409</height>
-				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase.png</texture>
+				<posY>109</posY>
+				<width>551</width>
+				<height>414</height>
+				<texture flipY="true" diffuse="Thumb_Mask.png">PictureCase_coverflow.png</texture>
 				<visible>!string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)+!string.equals(#OnlineVideos.selectedSiteUtil, IMDb)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
 			</control>
 			<control Style="FanartDisplayAnimationWatched">
@@ -103,7 +104,7 @@
 				<type>imagelist</type>
 				<id>101</id>
 				<posX>45</posX>
-				<posY>526</posY>
+				<posY>556</posY>
 				<width>453</width>
 				<height>60</height>
 				<textureWidth>33</textureWidth>
@@ -124,7 +125,7 @@
 				<description>Current program title</description>
 				<id>0</id>
 				<posX>45</posX>
-				<posY>562</posY>
+				<posY>612</posY>
 				<width>577</width>
 				<font>font22</font>
 				<label>#selecteditem</label>
@@ -136,7 +137,7 @@
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>45</posX>
-				<posY>625</posY>
+				<posY>675</posY>
 				<width>630</width>
 				<label>#(switch(eq(#OnlineVideos.length,''),'#OnlineVideos.aired',neq(#OnlineVideos.length,''),'#OnlineVideos.length     #OnlineVideos.aired'))</label>
 				<textcolor>#ColorAlternate</textcolor>
@@ -147,24 +148,9 @@
 				<type>textboxscrollup</type>
 				<id>0</id>
 				<posX>45</posX>
-				<posY>675</posY>
+				<posY>725</posY>
 				<width>532</width>
-				<height>147</height>
-				<colordiffuse>#ColorMain</colordiffuse>
-				<font>font16</font>
-				<label>#OnlineVideos.desc</label>
-				<textcolor>#ColorMain</textcolor>
-				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]+player.hasmedia</visible>
-				<seperator>: : :</seperator>
-			</control>
-			<control Style="FanartDisplayAnimation">
-				<description>Description</description>
-				<type>textboxscrollup</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>675</posY>
-				<width>532</width>
-				<height>343</height>
+				<height>303</height>
 				<colordiffuse>#ColorMain</colordiffuse>
 				<font>font16</font>
 				<label>#OnlineVideos.desc</label>
