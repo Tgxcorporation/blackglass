@@ -280,23 +280,34 @@
 		<control>
 			<id>0</id>
 			<type>image</type>
-			<posX>198</posX>
-			<posY>843</posY>
+			<posX>50</posX>
+			<posY>790</posY>
+			<width>426</width>
+			<height>239</height>
+			<texture>black.png</texture>
+			<colordiffuse>60ffffff</colordiffuse>
+		</control>
+		<control>
+			<id>0</id>
+			<type>image</type>
+			<posX>197</posX>
+			<posY>859</posY>
 			<width>132</width>
 			<height>100</height>
-			<texture>#TV.Guide.thumb</texture>
+			<texture flipY="true" diffuse="Thumb_Mask.png">#TV.Guide.thumb</texture>
 			<keepaspectratio>yes</keepaspectratio>
 			<centered>yes</centered>
 			<zoom>no</zoom>
 		</control>
+
 		<control>
 			<description>TV preview window</description>
 			<type>videowindow</type>
 			<id>99</id>
-			<posX>60</posX>
-			<posY>779</posY>
-			<width>409</width>
-			<height>229</height>
+			<posX>50</posX>
+			<posY>790</posY>
+			<width>426</width>
+			<height>239</height>
 			<action>18</action>
 			<textureFocus>-</textureFocus>
 			<visible>Player.HasVideo</visible>
@@ -304,10 +315,10 @@
 		<control>
 			<type>image</type>
 			<id>0</id>
-			<posX>48</posX>
+			<posX>28</posX>
 			<posY>768</posY>
-			<width>432</width>
-			<height>284</height>
+			<width>470</width>
+			<height>283</height>
 			<texture>VideoCase.png</texture>
 		</control>
 
@@ -406,72 +417,7 @@
 			<texture>bg_button_vertical.png</texture>
 			<colordiffuse>#ColorMain</colordiffuse>
 		</control>
-		<!-- NOT USED -->
-		<control>
-			<description>Template for genre key color</description>
-			<type>image</type>
-			<id>110</id>
-			<posX>3120</posX>
-			<posY>783</posY>
-			<width>48</width>
-			<height>27</height>
-			<texture overlay="tvguide_button_middle_colorize_overlay.png">tvguide_button_middle_colorize.png</texture>
-			<visible>skin.hassetting(#skin.tvguide.showgenrekey) + skin.hassetting(#skin.tvguide.usecolorsforgenre)</visible>
-		</control>
-		<control>
-			<description>Template for genre key name</description>
-			<type>fadelabel</type>
-			<id>111</id>
-			<posY>1780</posY>
-			<width>255</width>
-			<scrollStartDelaySec>10000</scrollStartDelaySec>
-			<textcolor>FF6aa5cb</textcolor>
-			<font>font10</font>
-			<visible>skin.hassetting(#skin.tvguide.showgenrekey) + skin.hassetting(#skin.tvguide.usecolorsforgenre)</visible>
-		</control>
-		<control>
-			<description>Current program genre</description>
-			<type>label</type>
-			<id>27</id>
-			<posX>3345</posX>
-			<posY>855</posY>
-			<width>900</width>
-			<font>font16</font>
-			<align>left</align>
-			<textcolor>#ColorAlternate</textcolor>
-			<label>#TV.Guide.Genre</label>
-		</control>
-		<control>
-			<description>TV background</description>
-			<type>image</type>
-			<id>98</id>
-			<posX>117</posX>
-			<posY>3829</posY>
-			<width>328</width>
-			<height>186</height>
-			<texture>Picture_cover.png</texture>
-			<visible>Player.HasVideo</visible>
-		</control>
-		<control>
-			<description>Guide Group Label</description>
-			<type>label</type>
-			<id>11</id>
-			<posX>3145</posX>
-			<posY>22</posY>
-			<width>2532</width>
-			<font>font14</font>
-			<align>left</align>
-			<label>#TV.Guide.Group</label>
-		</control>
-		<control>
-			<description>record pin</description>
-			<type>image</type>
-			<id>31</id>
-			<posX>-1220</posX>
-			<posY>712</posY>
-			<texture>tvguide_record_button.png</texture>
-			<visible>no</visible>
-		</control>
+
 
 
 		<control>
@@ -565,6 +511,74 @@
 			<iconOffsetX>30</iconOffsetX>
 			<iconOffsetY>0</iconOffsetY>
 			<iconInlineLabel1>no</iconInlineLabel1>
+		</control>
+
+
+		<!-- NOT USED -->
+		<control>
+			<description>Template for genre key color</description>
+			<type>image</type>
+			<id>110</id>
+			<posX>3120</posX>
+			<posY>783</posY>
+			<width>48</width>
+			<height>27</height>
+			<texture overlay="tvguide_button_middle_colorize_overlay.png">tvguide_button_middle_colorize.png</texture>
+			<visible>skin.hassetting(#skin.tvguide.showgenrekey) + skin.hassetting(#skin.tvguide.usecolorsforgenre)</visible>
+		</control>
+		<control>
+			<description>Template for genre key name</description>
+			<type>fadelabel</type>
+			<id>111</id>
+			<posY>1780</posY>
+			<width>255</width>
+			<scrollStartDelaySec>10000</scrollStartDelaySec>
+			<textcolor>FF6aa5cb</textcolor>
+			<font>font10</font>
+			<visible>skin.hassetting(#skin.tvguide.showgenrekey) + skin.hassetting(#skin.tvguide.usecolorsforgenre)</visible>
+		</control>
+		<control>
+			<description>Current program genre</description>
+			<type>label</type>
+			<id>27</id>
+			<posX>3345</posX>
+			<posY>855</posY>
+			<width>900</width>
+			<font>font16</font>
+			<align>left</align>
+			<textcolor>#ColorAlternate</textcolor>
+			<label>#TV.Guide.Genre</label>
+		</control>
+		<control>
+			<description>TV background</description>
+			<type>image</type>
+			<id>98</id>
+			<posX>117</posX>
+			<posY>3829</posY>
+			<width>328</width>
+			<height>186</height>
+			<texture>Picture_cover.png</texture>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<control>
+			<description>Guide Group Label</description>
+			<type>label</type>
+			<id>11</id>
+			<posX>3145</posX>
+			<posY>22</posY>
+			<width>2532</width>
+			<font>font14</font>
+			<align>left</align>
+			<label>#TV.Guide.Group</label>
+		</control>
+		<control>
+			<description>record pin</description>
+			<type>image</type>
+			<id>31</id>
+			<posX>-1220</posX>
+			<posY>712</posY>
+			<texture>tvguide_record_button.png</texture>
+			<visible>no</visible>
 		</control>
 	</controls>
 </window>
