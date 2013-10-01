@@ -79,14 +79,26 @@
 				<visible>!string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)+!string.equals(#OnlineVideos.selectedSiteUtil, IMDb)+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
 			</control>
 			<control Style="FanartDisplayAnimationWatched">
+				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>115</posY>
+				<width>270</width>
+				<height>390</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+				<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
 				<id>0</id>
 				<type>image</type>
 				<posX>45</posX>
-				<posY>105</posY>
-				<width>290</width>
-				<height>410</height>
+				<posY>115</posY>
+				<width>270</width>
+				<height>390</height>
 				<keepaspectratio>no</keepaspectratio>
-				<texture mask="DVDCase_coverflow_mask.png">#selectedthumb</texture>
+				<texture>#selectedthumb</texture>
 				<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
 				<centered>yes</centered>
 			</control>
@@ -97,7 +109,7 @@
 				<posY>94</posY>
 				<width>312</width>
 				<height>432</height>
-				<texture>DVDCase_coverflow.png</texture>
+				<texture>DVDCase.png</texture>
 				<visible>[string.equals(#OnlineVideos.selectedSiteUtil, ITMovieTrailers)|string.equals(#OnlineVideos.selectedSiteUtil, IMDb)]+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+![String.Equals(#OnlineVideos.state,details)]</visible>
 			</control>
 			<control Style="FanartDisplayAnimation">
