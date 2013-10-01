@@ -11,12 +11,24 @@
 			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<control Style="FanartDisplayAnimationWatched">
 				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>61</posX>
+				<posY>121</posY>
+				<width>356</width>
+				<height>514</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
+			</control>
+			<control Style="FanartDisplayAnimationWatched">
+				<type>image</type>
 				<description>season poster</description>
 				<id>62</id>
-				<posX>93</posX>
-				<posY>115</posY>
-				<width>367</width>
-				<height>522</height>
+				<posX>61</posX>
+				<posY>121</posY>
+				<width>356</width>
+				<height>514</height>
 				<texture>#TVSeries.SeasonPoster</texture>
 				<visible>control.isvisible(1238)+[facadeview.largeicons|facadeview.list]</visible>
 			</control>
@@ -24,29 +36,29 @@
 				<type>image</type>
 				<description>series poster</description>
 				<id>61</id>
-				<posX>45</posX>
-				<posY>113</posY>
-				<width>380</width>
-				<height>538</height>
-				<texture mask="DVDCase_coverflow_mask.png">#TVSeries.SeriesPoster</texture>
+				<posX>61</posX>
+				<posY>121</posY>
+				<width>356</width>
+				<height>514</height>
+				<texture>#TVSeries.SeriesPoster</texture>
 				<visible>control.isvisible(1237)+[facadeview.largeicons|facadeview.list]</visible>
 			</control>
 			<control Style="FanartDisplayAnimationWatched">
 				<description>Cover Art Glass Overlay</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>30</posX>
-				<posY>98</posY>
+				<posX>34</posX>
+				<posY>94</posY>
 				<width>410</width>
 				<height>568</height>
-				<texture>DVDCase_coverflow.png</texture>
+				<texture>DVDCase.png</texture>
 				<visible>[control.isvisible(1237)|control.isvisible(1238)]+[facadeview.largeicons|facadeview.list]</visible>
 			</control>
 			<control Style="FanartDisplayAnimationWatched">
 				<type>imagelist</type>
 				<id>1</id>
 				<posX>45</posX>
-				<posY>690</posY>
+				<posY>685</posY>
 				<width>453</width>
 				<height>60</height>
 				<textureWidth>33</textureWidth>
@@ -66,7 +78,7 @@
 				<type>label</type>
 				<id>1</id>
 				<posX>390</posX>
-				<posY>690</posY>
+				<posY>685</posY>
 				<width>380</width>
 				<label>(#(string.format('{0:f1}', cflt(#TVSeries.Series.Rating))))</label>
 				<textcolor>#ColorUnfocused</textcolor>

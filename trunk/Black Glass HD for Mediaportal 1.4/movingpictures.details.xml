@@ -58,16 +58,28 @@
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
 			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(6)+!control.isvisible(50)+!control.hasfocus(505050)+!control.hasfocus(90001)">conditional</animation>
 			<control Style="FanartDisplayAnimationMovingPicturesDetailsWatched">
+				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>66</posX>
+				<posY>134</posY>
+				<width>611</width>
+				<height>883</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPicturesDetailsWatched">
 				<description>Cover Art</description>
 				<type>image</type>
 				<id>60</id>
-				<posX>45</posX>
-				<posY>113</posY>
-				<width>654</width>
-				<height>925</height>
+				<posX>66</posX>
+				<posY>134</posY>
+				<width>611</width>
+				<height>883</height>
 				<zoom>yes</zoom>
 				<keepaspectratio>yes</keepaspectratio>
-				<texture mask="DVDCase_coverflow_mask.png">#MovingPictures.Coverart</texture>
+				<texture>#MovingPictures.Coverart</texture>
 				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetailsWatched">
@@ -78,20 +90,32 @@
 				<posY>87</posY>
 				<width>705</width>
 				<height>977</height>
-				<texture>DVDCase_coverflow.png</texture>
+				<texture>DVDCase.png</texture>
 				<visible>!player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
+			</control>
+			<control Style="FanartDisplayAnimationMovingPicturesDetailsWatched">
+				<type>image</type>
+				<description>Current program channel</description>
+				<id>0</id>
+				<posX>62</posX>
+				<posY>130</posY>
+				<width>480</width>
+				<height>693</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetailsWatched">
 				<description>Cover Art</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>45</posX>
-				<posY>113</posY>
-				<width>514</width>
-				<height>727</height>
+				<posX>62</posX>
+				<posY>130</posY>
+				<width>480</width>
+				<height>693</height>
 				<zoom>yes</zoom>
 				<keepaspectratio>yes</keepaspectratio>
-				<texture mask="DVDCase_coverflow_mask.png">#MovingPictures.Coverart</texture>
+				<texture>#MovingPictures.Coverart</texture>
 				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
 			</control>
 			<control Style="FanartDisplayAnimationMovingPicturesDetailsWatched">
@@ -102,7 +126,7 @@
 				<posY>93</posY>
 				<width>554</width>
 				<height>767</height>
-				<texture>DVDCase_coverflow.png</texture>
+				<texture>DVDCase.png</texture>
 				<visible>player.hasmedia+!control.isvisible(50)+!control.isvisible(51)</visible>
 			</control>
 			<!-- <control Style="FanartDisplayAnimationMovingPicturesDetailsWatched">
@@ -397,7 +421,7 @@
 				<texture>Logos\#MovingPictures.LocalMedia.audiochannels.png</texture>
 				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
 			</control>
-			<control Style="FanartDisplayAnimationMovingPicturesDetails">
+			<!-- <control Style="FanartDisplayAnimationMovingPicturesDetails">
 				<description>Video Format</description>
 				<type>image</type>
 				<id>0</id>
@@ -408,12 +432,12 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>Logos\#MovingPictures.LocalMedia.videoformat.png</texture>
 				<visible>!control.isvisible(50)+!control.isvisible(51)</visible>
-			</control>
+			</control> -->
 			<control Style="FanartDisplayAnimationMovingPicturesDetails">
 				<description>Subtitles</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>1590</posX>
+				<posX>1455</posX>
 				<posY>982</posY>
 				<width>133</width>
 				<height>75</height>
@@ -425,7 +449,7 @@
 				<description>Fps</description>
 				<type>image</type>
 				<id>0</id>
-				<posX>1725</posX>
+				<posX>1590</posX>
 				<posY>982</posY>
 				<width>133</width>
 				<height>75</height>
@@ -437,7 +461,7 @@
 				<description>Fps label</description>
 				<id>0</id>
 				<type>label</type>
-				<posX>1725</posX>
+				<posX>1590</posX>
 				<posY>1014</posY>
 				<!-- <label>#(string.format('{0:f2}', #MovingPictures.LocalMedia.videoframerate))</label> -->
 				<label>#(iif(eq(#MovingPictures.LocalMedia.videoframerate,'25'), '25.000', #MovingPictures.LocalMedia.videoframerate))</label>
@@ -450,7 +474,7 @@
 				<description>Fps label</description>
 				<id>0</id>
 				<type>label</type>
-				<posX>1725</posX>
+				<posX>1590</posX>
 				<posY>1035</posY>
 				<label>fps</label>
 				<font>font7</font>
