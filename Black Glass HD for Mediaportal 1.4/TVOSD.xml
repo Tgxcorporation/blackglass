@@ -23,15 +23,14 @@
 
 		<control>
 			<description>On tv NOW</description>
-			<id>36</id>
-			<type>textbox</type>
+			<id>0</id>
+			<type>fadelabel</type>
 			<posX>310</posX>
 			<posY>549</posY>
 			<width>1100</width>
-			<height>67</height>
-			<align>left</align>
 			<font>font22</font>
 			<textcolor>#ColorMain</textcolor>
+			<label>#TV.View.title</label>
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 		<control>
@@ -68,6 +67,18 @@
 			<animation effect="fade" time="100">windowopen</animation>
 		</control>
 		<control>
+			<description>On tv NEXT</description>
+			<id>37</id>
+			<type>textbox</type>
+			<posX>310</posX>
+			<posY>628</posY>
+			<width>940</width>
+			<height>48</height>
+			<font>font18</font>
+			<textcolor>#ColorAlternate</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
 			<description>Channel Name</description>
 			<type>fadelabel</type>
 			<id>104</id>
@@ -79,6 +90,7 @@
 			<font>font18</font>
 			<label>#TV.View.channel</label>
 			<textcolor>#ColorAlternate</textcolor>
+			<visible>!control.hastext(37)</visible>
 			<animation effect="fade" time="100">windowopen</animation>
 			<!-- <wrapString> : : : </wrapString> -->
 		</control>
@@ -95,12 +107,11 @@
 		<control>
 			<description>Plot</description>
 			<type>textboxscrollup</type>
-			<id>38</id>
+			<id>0</id>
 			<posX>310</posX>
 			<posY>695</posY>
 			<width>950</width>
 			<height>245</height>
-			<align>left</align>
 			<label>#TV.View.description</label>
 			<font>font16</font>
 			<seperator>: : :</seperator>
@@ -133,6 +144,34 @@
 		</control>
 
 		<!-- NOT USED -->
+		<control>
+			<description>Plot</description>
+			<type>textboxscrollup</type>
+			<id>38</id>
+			<posX>3310</posX>
+			<posY>695</posY>
+			<width>950</width>
+			<height>245</height>
+			<align>left</align>
+			<label>#TV.View.description</label>
+			<font>font16</font>
+			<seperator>: : :</seperator>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
+		<control>
+			<description>On tv NOW</description>
+			<id>36</id>
+			<type>textbox</type>
+			<posX>3310</posX>
+			<posY>549</posY>
+			<width>1100</width>
+			<height>67</height>
+			<align>left</align>
+			<font>font22</font>
+			<textcolor>#ColorMain</textcolor>
+			<animation effect="fade" time="100">windowopen</animation>
+		</control>
 		<control>
 			<description>On tv NEXT</description>
 			<id>37</id>
