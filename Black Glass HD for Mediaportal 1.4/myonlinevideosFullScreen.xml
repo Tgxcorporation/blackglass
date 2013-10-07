@@ -9,7 +9,7 @@
 	<define>#play.progressbar.currentremaining:#currentremaining</define>
 	<controls>
 		<import>common.play.fullscreen.xml</import>
-		
+
 		<!-- these elements need condition visibility for OSD IS VISIBLE -->
 		<control>
 			<description>background up</description>
@@ -21,7 +21,7 @@
 			<height>54</height>
 			<texture>osd_progress_background2.png</texture>
 			<animation effect="fade" time="100">visiblechange</animation>
-			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 		</control>
 		<control>
 			<description>Movie Name</description>
@@ -36,7 +36,7 @@
 			<textcolor>#ColorMain</textcolor>
 			<align>left</align>
 			<animation effect="fade" time="100">visiblechange</animation>
-			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<wrapString> : : : </wrapString>
 			<shadowAngle>45</shadowAngle>
 			<shadowDistance>1</shadowDistance>
@@ -52,7 +52,7 @@
 			<font>font14</font>
 			<textcolor>#ColorMain</textcolor>
 			<align>right</align>
-			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 			<shadowAngle>45</shadowAngle>
 			<shadowDistance>1</shadowDistance>
@@ -67,7 +67,7 @@
 			<width>36</width>
 			<height>36</height>
 			<texture>time.png</texture>
-			<visible>[player.rewinding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)|player.forwarding|window.ispauseosdvisible]+!window.isosdvisible</visible>
+			<visible>window.isosdvisible|window.ispauseosdvisible|player.rewinding|player.forwarding|control.isvisible(10)|control.isvisible(11)|control.isvisible(12)</visible>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
 		<control>
@@ -312,10 +312,10 @@
 			<colordiffuse>#ColorMain</colordiffuse>
 			<animation effect="fade" time="100">visiblechange</animation>
 		</control>
-		
+
 		<import>common.play.fullscreen.volume.xml</import>
-		
-		
+
+
 		<!-- NOT USED -->
 		<control>
 			<type>image</type>
