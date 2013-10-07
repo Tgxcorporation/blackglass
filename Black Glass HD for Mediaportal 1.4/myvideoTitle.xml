@@ -7,6 +7,7 @@
 	<define>#header.label:#view</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_my videos.png</define>
+	<define>#header.fanart:#title</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
@@ -20,7 +21,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>1275</width>
@@ -33,17 +34,6 @@
 				<align>left</align>
 				<textcolor>#ColorUnfocused</textcolor>
 			</control>
-			<control>
-				<description>Content locked</description>
-				<type>image</type>
-				<id>0</id>
-				<posX>0</posX>
-				<posY>1013</posY>
-				<width>45</width>
-				<height>45</height>
-				<texture>lock2.png</texture>
-				<visible>string.equals(#MyVideos.PinLocked, True)</visible>
-			</control>
 			<!-- <control>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -55,7 +45,7 @@
 				<wrapString> : : : </wrapString>
 			</control> -->
 			<!-- MOVIE -->
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<description>Current program channel</description>
 				<id>0</id>
@@ -66,9 +56,8 @@
 				<texture>black.png</texture>
 				<colordiffuse>60ffffff</colordiffuse>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>fanart list</description>
 				<type>image</type>
 				<id>500</id>
@@ -82,9 +71,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 				<zoom>yes</zoom>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Highlight item</description>
 				<type>image</type>
 				<id>0</id>
@@ -94,7 +82,6 @@
 				<height>568</height>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, false)</visible>
 				<texture>DVDCase.png</texture>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
 			<!-- <control>
 				<description>Watched Icon Background</description>
@@ -135,11 +122,11 @@
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#iswatched,no)+string.equals(#hideinfo, False)</visible>
 				<animation effect="fade" delay="250" time="150">visible</animation>
 			</control> -->
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>imagelist</type>
 				<id>0</id>
 				<posX>45</posX>
-				<posY>684</posY>
+				<posY>685</posY>
 				<width>453</width>
 				<height>60</height>
 				<textureWidth>33</textureWidth>
@@ -153,23 +140,21 @@
 				<imagesToDraw>10</imagesToDraw>
 				<percentage>#rating</percentage>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Text Rating/Votes Value</description>
 				<type>label</type>
 				<id>0</id>
-				<posX>405</posX>
-				<posY>688</posY>
-				<width>285</width>
-				<label>#strrating (#votes)</label>
-				<font>font11</font>
+				<posX>390</posX>
+				<posY>685</posY>
+				<width>380</width>
+				<label>#strrating</label>
+				<font>font12</font>
 				<align>left</align>
-				<textcolor>#ColorAlternate</textcolor>
+				<textcolor>#ColorUnfocused</textcolor>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<!-- <control Style="FanartDisplayAnimation">
 				<description>Video Codec</description>
 				<type>image</type>
 				<id>0</id>
@@ -180,9 +165,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\#VideoCodec.png</texture>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Video Resolution</description>
 				<type>image</type>
 				<id>0</id>
@@ -193,9 +177,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\#VideoResolution.png</texture>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Video Aspect Ratio</description>
 				<type>image</type>
 				<id>0</id>
@@ -206,9 +189,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\#AspectRatio.png</texture>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Audio Codec</description>
 				<type>image</type>
 				<id>0</id>
@@ -219,9 +201,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\#AudioCodec.png</texture>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Audio Channels</description>
 				<type>image</type>
 				<id>0</id>
@@ -232,9 +213,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\#AudioChannels.png</texture>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Subtitles</description>
 				<type>image</type>
 				<id>0</id>
@@ -245,120 +225,87 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\subtitles.png</texture>
 				<visible>string.equals(#HasSubtitles, True)+!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, False)">conditional</animation>
-			</control>
+			</control> -->
 			<!-- MOVIE list -->
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
 				<posX>45</posX>
-				<posY>727</posY>
-				<width>1125</width>
+				<posY>747</posY>
+				<width>1200</width>
 				<font>font22</font>
 				<label>#title</label>
 				<visible>facadeview.list+string.equals(#hideinfo, false)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Genre value</description>
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>45</posX>
-				<posY>790</posY>
-				<width>1125</width>
+				<posY>817</posY>
+				<width>1200</width>
 				<textcolor>#ColorAlternate</textcolor>
-				<label>#genre</label>
+				<label>#videoruntime     #genre</label>
 				<visible>facadeview.list+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
-				<description>Runtime value</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>838</posY>
-				<width>1125</width>
-				<label>#year     #mpaarating     #videoruntime</label>
-				<textcolor>#ColorAlternate</textcolor>
-				<visible>!player.hasmedia+facadeview.list+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
-				<wrapString> : : : </wrapString>
-			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Plot value</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
 				<posX>45</posX>
-				<posY>889</posY>
+				<posY>877</posY>
 				<width>1200</width>
-				<height>112</height>
-				<font>font12</font>
+				<height>172</height>
+				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
 				<label>#plot</label>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideinfo, False)</visible>
 				<seperator>: : :</seperator>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
 			<!-- MOVIE thumbs -->
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
 				<posX>45</posX>
-				<posY>727</posY>
-				<width>600</width>
+				<posY>747</posY>
+				<width>630</width>
 				<font>font22</font>
 				<label>#title</label>
 				<visible>[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, false)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Genre value</description>
 				<type>fadelabel</type>
 				<id>0</id>
 				<posX>45</posX>
-				<posY>790</posY>
-				<width>600</width>
+				<posY>817</posY>
+				<width>630</width>
 				<textcolor>#ColorAlternate</textcolor>
-				<label>#genre</label>
+				<label>#videoruntime     #genre</label>
 				<visible>[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
-				<description>Runtime value</description>
-				<type>fadelabel</type>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>838</posY>
-				<width>600</width>
-				<label>#year     #mpaarating     #videoruntime</label>
-				<textcolor>#ColorAlternate</textcolor>
-				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
-				<wrapString> : : : </wrapString>
-			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Plot value</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
 				<posX>45</posX>
-				<posY>889</posY>
-				<width>600</width>
-				<height>112</height>
-				<font>font12</font>
+				<posY>877</posY>
+				<width>630</width>
+				<height>172</height>
+				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
 				<label>#plot</label>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, False)</visible>
 				<seperator>: : :</seperator>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
 			<!-- ACTORS -->
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<description>Current program channel</description>
 				<id>0</id>
@@ -369,9 +316,8 @@
 				<texture>black.png</texture>
 				<colordiffuse>60ffffff</colordiffuse>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, true)">conditional</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>fanart list</description>
 				<type>image</type>
 				<id>501</id>
@@ -384,9 +330,8 @@
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)</visible>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, true)">conditional</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Highlight item</description>
 				<type>image</type>
 				<id>0</id>
@@ -396,10 +341,9 @@
 				<height>568</height>
 				<visible>[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideActorinfo, False)</visible>
 				<texture>DVDCase.png</texture>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="!player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]+string.equals(#hideinfo, true)">conditional</animation>
 			</control>
 			<!-- ACTORS list -->
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
@@ -409,10 +353,9 @@
 				<font>font22</font>
 				<label>#title</label>
 				<visible>facadeview.list+string.equals(#hideActorinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="facadeview.list+string.equals(#hideinfo, true)">conditional</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Date of Birth Value</description>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -423,10 +366,9 @@
 				<font>font16</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideActorinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="facadeview.list+string.equals(#hideinfo, true)">conditional</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Date of Death Value</description>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -437,10 +379,9 @@
 				<font>font16</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideActorinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="facadeview.list+string.equals(#hideinfo, true)">conditional</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Actors Movies value</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
@@ -452,10 +393,9 @@
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
 				<visible>!player.hasmedia+facadeview.list+string.equals(#hideinfo, true)+string.equals(#hideActorinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="facadeview.list+string.equals(#hideinfo, true)">conditional</animation>
 			</control>
 			<!-- ACTORS thumbs -->
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>0</id>
@@ -465,10 +405,9 @@
 				<font>font22</font>
 				<label>#title</label>
 				<visible>[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideActorinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, true)">conditional</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Date of Birth Value</description>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -479,10 +418,9 @@
 				<font>font16</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideActorinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, true)">conditional</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Date of Death Value</description>
 				<type>fadelabel</type>
 				<id>0</id>
@@ -493,10 +431,9 @@
 				<font>font16</font>
 				<textcolor>#ColorAlternate</textcolor>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideActorinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, true)">conditional</animation>
 				<wrapString> : : : </wrapString>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationWatched">
 				<description>Actors Movies value</description>
 				<type>textboxscrollup</type>
 				<id>0</id>
@@ -508,10 +445,9 @@
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
 				<visible>!player.hasmedia+[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, true)+string.equals(#hideActorinfo, False)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="[facadeview.smallicons|facadeview.largeicons]+string.equals(#hideinfo, true)">conditional</animation>
 			</control>
 			<!-- FILMSTRIP / COVERFLOW -->
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>textboxscrollup</type>
 				<description>Selected item Label</description>
 				<id>0</id>
@@ -523,10 +459,22 @@
 				<textalign>center</textalign>
 				<label>#selecteditem</label>
 				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
-				<animation effect="fade" time="150">WindowClose</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimationMovingPictures">
+				<type>textboxscrollup</type>
+				<description>Title (Filmstrip)</description>
+				<id>0</id>
+				<posX>57</posX>
+				<posY>1000</posY>
+				<width>1830</width>
+				<textalign>center</textalign>
+				<font>font16</font>
+				<height>67</height>
+				<label>#videoruntime     #genre</label>
+				<textcolor>#ColorAlternate</textcolor>
+				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
+			</control>
+			<!-- <control Style="FanartDisplayAnimation">
 				<description>Video Codec</description>
 				<type>image</type>
 				<id>0</id>
@@ -537,9 +485,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\#VideoCodec.png</texture>
 				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Video Resolution</description>
 				<type>image</type>
 				<id>0</id>
@@ -550,9 +497,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\#VideoResolution.png</texture>
 				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Video Aspect Ratio</description>
 				<type>image</type>
 				<id>0</id>
@@ -563,9 +509,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\#AspectRatio.png</texture>
 				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Audio Codec</description>
 				<type>image</type>
 				<id>0</id>
@@ -576,9 +521,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\#AudioCodec.png</texture>
 				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Audio Channels</description>
 				<type>image</type>
 				<id>0</id>
@@ -589,9 +533,8 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\#AudioChannels.png</texture>
 				<visible>[facadeview.filmstrip|facadeview.coverflow]</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Subtitles</description>
 				<type>image</type>
 				<id>0</id>
@@ -602,8 +545,7 @@
 				<keepaspectratio>yes</keepaspectratio>
 				<texture>logos\subtitles.png</texture>
 				<visible>[facadeview.filmstrip|facadeview.coverflow]+string.equals(#HasSubtitles, True)</visible>
-				<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="[facadeview.filmstrip|facadeview.coverflow]">conditional</animation>
-			</control>
+			</control> -->
 		</control>
 		<control>
 			<description>Dummy control for #lastupdate visibility in myvideoHiddenMenu.xml</description>

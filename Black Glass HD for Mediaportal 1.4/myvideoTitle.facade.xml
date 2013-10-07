@@ -10,7 +10,7 @@
 			<width>2520</width>
 			<height>480</height>
 			<texture>gradient.png</texture>
-			<visible>[facadeview.coverflow|facadeview.filmstrip]+control.isvisible(50)</visible>
+			<visible>[facadeview.filmstrip|facadeview.coverflow]+control.isvisible(50)+!control.hasfocus(505050)</visible>
 			<animation effect="fade" time="250">visible</animation>
 			<animation effect="fade" time="150">WindowOpen</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
@@ -19,13 +19,11 @@
 			<type>group</type>
 			<description>group element</description>
 			<dimColor>#ColorMain</dimColor>
-			<visible>facadeview.list+[control.isvisible(50)]</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
-			<control>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
 				<description>Backdrop Overlay - ListView</description>
 				<type>image</type>
 				<id>0</id>
@@ -34,8 +32,9 @@
 				<width>1422</width>
 				<height>1149</height>
 				<texture>bg_facade.png</texture>
+				<visible>facadeview.list+[control.isvisible(50)]</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<posX>1345</posX>
 				<posY>71</posY>
@@ -43,9 +42,9 @@
 				<height>79</height>
 				<texture>bg_facade_line_nofocus_top.png</texture>
 				<colordiffuse>77ffffff</colordiffuse>
-				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]</visible>
+				<visible>[!string.equals(#itemcount,)+!string.equals(#itemcount,0)]+facadeview.list+[control.isvisible(50)]</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>label</type>
 				<id>0</id>
 				<posX>1372</posX>
@@ -54,9 +53,9 @@
 				<align>left</align>
 				<textcolor>#ColorUnfocused</textcolor>
 				<label>0 #(L(507))</label>
-				<visible>string.equals(#itemcount,)</visible>
+				<visible>string.equals(#itemcount,)+facadeview.list+[control.isvisible(50)]</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>label</type>
 				<id>0</id>
 				<posX>1372</posX>
@@ -65,7 +64,7 @@
 				<align>left</align>
 				<textcolor>#ColorUnfocused</textcolor>
 				<label>#itemcount #(L(507))</label>
-				<visible>!string.equals(#itemcount,)</visible>
+				<visible>!string.equals(#itemcount,)+facadeview.list+[control.isvisible(50)]</visible>
 			</control>
 		</control>
 
@@ -73,13 +72,11 @@
 			<type>group</type>
 			<description>group element</description>
 			<dimColor>#ColorMain</dimColor>
-			<visible>[facadeview.smallicons|facadeview.largeicons]+[control.isvisible(50)]</visible>
-			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
-			<control>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
+			<control Style="FanartDisplayAnimation">
 				<description>Backdrop Overlay - ListView</description>
 				<type>image</type>
 				<id>0</id>
@@ -88,8 +85,9 @@
 				<width>1422</width>
 				<height>1149</height>
 				<texture>bg_facade.png</texture>
+				<visible>[facadeview.smallicons|facadeview.largeicons]+[control.isvisible(50)]</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>label</type>
 				<id>0</id>
 				<posX>1372</posX>
@@ -98,18 +96,18 @@
 				<align>left</align>
 				<textcolor>#ColorUnfocused</textcolor>
 				<label>0 #(L(507))</label>
-				<visible>string.equals(#itemcount,)</visible>
+				<visible>string.equals(#itemcount,)+[facadeview.smallicons|facadeview.largeicons]+[control.isvisible(50)]</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>label</type>
 				<id>0</id>
 				<posX>765</posX>
-				<posY>989˘</posY>
+				<posY>989</posY>
 				<font>font16</font>
 				<align>left</align>
 				<textcolor>#ColorUnfocused</textcolor>
 				<label>#itemcount #(L(507))</label>
-				<visible>!string.equals(#itemcount,)</visible>
+				<visible>!string.equals(#itemcount,)+[facadeview.smallicons|facadeview.largeicons]+[control.isvisible(50)]</visible>
 			</control>
 		</control>
 
@@ -120,12 +118,12 @@
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="900,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="900,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="288,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<control>
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
 				<id>50</id>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<type>listcontrol</type>
 					<description>listcontrol</description>
 					<id>50</id>
@@ -133,12 +131,12 @@
 					<width>574</width>
 					<height>885</height>
 					<onleft>2</onleft>
-					<onright>2</onright>
-					<textXOff>-60</textXOff>
+					<onright>505050</onright>
+					<textXOff>-75</textXOff>
 					<textYOff>3</textYOff>
 					<textXOff2>0</textXOff2>
 					<textYOff2>49</textYOff2>
-					<textXOff3>30</textXOff3>
+					<textXOff3>730</textXOff3>
 					<textYOff3>49</textYOff3>
 					<IconXOff>1947</IconXOff>
 					<IconYOff>61</IconYOff>
@@ -149,15 +147,13 @@
 					<textureHeight>88</textureHeight>
 					<textcolor2>#ColorSub</textcolor2>
 					<textcolor3>#ColorSub</textcolor3>
-					<visible>control.isvisible(745381)+control.isvisible(50)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="600,0">visible</animation>
 				</control>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<description>Thumbnail Panel</description>
 					<type>thumbnailpanel</type>
 					<id>50</id>
 					<onleft>2</onleft>
-					<onright>2</onright>
+					<onright>505050</onright>
 					<posX>750</posX>
 					<posY>142</posY>
 					<width>1222</width>
@@ -194,15 +190,13 @@
 					<!-- <textureMask>DVDCase_coverflow_mask.png</textureMask> -->
 					<frameNoFocus>DVDCase_nofocus.png</frameNoFocus>
 					<frameFocus>DVDCase.png</frameFocus>
-					<visible>[control.isvisible(745382)|control.isvisible(745383)]+control.isvisible(50)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="900,0">visible</animation>
 				</control>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<description>Filmstrip view</description>
 					<type>filmstrip</type>
 					<id>50</id>
 					<dimColor>#ColorAlternate</dimColor>
-					<ondown>2</ondown>
+					<ondown>505050</ondown>
 					<onup>2</onup>
 					<onleft>50</onleft>
 					<onright>50</onright>
@@ -233,10 +227,8 @@
 					<InfoImage>-</InfoImage>
 					<scrollOffset>3</scrollOffset>
 					<scrollbarYOff>396</scrollbarYOff>
-					<visible>control.isvisible(745384)+control.isvisible(50)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 				</control>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<description>Cover Flow view</description>
 					<type>coverflow</type>
 					<colordiffuse>#ColorMain</colordiffuse>
@@ -276,8 +268,6 @@
 					<cards mask="DVDCase_coverflow_mask.png"/>
 					<camera xpos="0" ypos="80">yes</camera>
 					<keepaspectratio>no</keepaspectratio>
-					<visible>control.isvisible(745385)+control.isvisible(50)</visible>
-					<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0">visible</animation>
 					<subitems>
 						<subitem>
 							<![CDATA[
@@ -423,56 +413,23 @@
 					</subitems>
 				</control>
 			</control>
-			<control>
-				<type>label</type>
-				<description>dummy listcontrol</description>
-				<id>745381</id>
-				<label>-</label>
-				<visible>facadeview.list</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy smallicons</description>
-				<id>745382</id>
-				<label>-</label>
-				<visible>facadeview.smallicons</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy largeicons</description>
-				<id>745383</id>
-				<label>-</label>
-				<visible>facadeview.largeicons</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy filmstrip</description>
-				<id>745384</id>
-				<label>-</label>
-				<visible>facadeview.filmstrip</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy coverflow</description>
-				<id>745385</id>
-				<label>-</label>
-				<visible>facadeview.coverflow</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy playlist</description>
-				<id>745386</id>
-				<label>-</label>
-				<visible>facadeview.playlist</visible>
-			</control>
-			<control>
-				<type>label</type>
-				<description>dummy album</description>
-				<id>745387</id>
-				<label>-</label>
-				<visible>facadeview.album</visible>
-			</control>
 
+
+		</control>
+		<control>
+			<description>DUMMY BUTTON FOR FANART</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>2850</posX>
+			<posY>120</posY>
+			<width>35</width>
+			<height>820</height>
+			<onright>50</onright>
+			<onleft>50</onleft>
+			<ondown>50</ondown>
+			<onup>50</onup>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
 		</control>
 	</controls>
 </window>
