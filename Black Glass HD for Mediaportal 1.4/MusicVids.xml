@@ -3,7 +3,8 @@
 <window>
 	<id>880</id>
 	<defaultcontrol>50</defaultcontrol>
-	<allowoverlay>player.hasmedia</allowoverlay><define>#header.label:30000</define>
+	<allowoverlay>player.hasmedia</allowoverlay>
+	<define>#header.label:30000</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_musicvids.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
@@ -133,10 +134,10 @@
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
 		</control>
-	
-			
-			
-			<control>
+
+
+
+		<control>
 			<description>group element</description>
 			<type>group</type>
 			<dimColor>#ColorMain</dimColor>
@@ -166,7 +167,7 @@
 					<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" condition="!control.hasfocus(50)">visible</animation>
 				</control>
 			</control>
-			
+
 		</control>
 		<control>
 			<type>group</type>
@@ -197,33 +198,45 @@
 				<font>font14</font>
 				<textcolor>#ColorMain</textcolor>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
-				<description>artist art image</description>
+				<description>Empty</description>
+				<id>0</id>
+				<posX>59</posX>
+				<posY>121</posY>
+				<width>466</width>
+				<height>466</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+				<visible>!control.isvisible(99)</visible>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<description>album art image</description>
 				<id>13</id>
-				<posX>45</posX>
-				<posY>409</posY>
-				<width>490</width>
-				<height>490</height>
+				<posX>59</posX>
+				<posY>121</posY>
+				<width>466</width>
+				<height>466</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
-				<texture mask="CDCase_coverflow_mask.png">#MusicVids.ArtistImg</texture>
+				<texture>#MusicVids.ArtistImg</texture>
+				<zoom>yes</zoom>
 				<visible>!control.isvisible(99)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
-			<control>
-				<description>Cd Case</description>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
+				<description>nowplaying shine</description>
 				<id>0</id>
-				<posX>45</posX>
-				<posY>109</posY>
-				<width>490</width>
-				<height>490</height>
-				<colordiffuse>#ColorMain</colordiffuse>
-				<texture>CDCase_coverflow.png</texture>
+				<posX>32</posX>
+				<posY>94</posY>
+				<width>520</width>
+				<height>520</height>
+				<texture>CDCase.png</texture>
 				<visible>!control.isvisible(99)</visible>
-				<animation effect="fade" time="250">visiblechange</animation>
 			</control>
+
+
 			<control>
 				<type>fadelabel</type>
 				<description>Current program title</description>
@@ -455,15 +468,28 @@
 				<height>79</height>
 				<texture>bg_button_nofocus_top.png</texture>
 			</control>
+
+
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<description>Empty</description>
+				<id>0</id>
+				<posX>55</posX>
+				<posY>805</posY>
+				<width>160</width>
+				<height>160</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+			</control>
 			<control>
 				<description>Favorite Artist</description>
 				<type>image</type>
 				<id>20</id>
-				<posX>45</posX>
-				<posY>795</posY>
-				<width>180</width>
-				<height>180</height>
-				<texture mask="CDCase_coverflow_mask.png">#MusicVids.FavArtistThumb</texture>
+				<posX>55</posX>
+				<posY>805</posY>
+				<width>160</width>
+				<height>160</height>
+				<texture>#MusicVids.FavArtistThumb</texture>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
 			</control>
@@ -476,7 +502,7 @@
 				<width>180</width>
 				<height>180</height>
 				<colordiffuse>#ColorMain</colordiffuse>
-				<texture>CDCase_coverflow.png</texture>
+				<texture>CDCase.png</texture>
 			</control>
 			<control>
 				<description>Favorite Artist Static</description>
