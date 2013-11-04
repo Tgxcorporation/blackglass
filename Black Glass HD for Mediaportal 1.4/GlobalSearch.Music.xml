@@ -3,9 +3,11 @@
 <window>
 	<id>30885</id>
 	<defaultcontrol>2</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:Global Search</define>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#header.label:Global Search</define>
 	<define>#useSelectedFanart:Yes</define>
 	<define>#header.background:hover_search music.png</define>
+	<define>#header.fanart:</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
@@ -19,8 +21,20 @@
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<control>
+				<type>fadelabel</type>
+				<width>1275</width>
+				<wrapString> : : : </wrapString>
+				<id>0</id>
+				<posX>45</posX>
+				<posY>15</posY>
+				<label>#header.label</label>
+				<font>font28</font>
+				<align>left</align>
+				<textcolor>#ColorUnfocused</textcolor>
+			</control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>687</posX>
@@ -29,7 +43,7 @@
 				<height>1149</height>
 				<texture>bg_facade.png</texture>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
 				<id>0</id>
 				<posX>735</posX>
@@ -43,16 +57,16 @@
 				<description>composite control consisting of a list control and a thumbnail panel</description>
 				<type>facadeview</type>
 				<id>50</id>
-				<control>
+				<control Style="FanartDisplayAnimation">
 					<description>listcontrol</description>
 					<type>listcontrol</type>
 					<id>50</id>
 					<onleft>2</onleft>
-					<onright>2</onright>
+					<onright>505050</onright>
 					<scrollOffset>2</scrollOffset>
 				</control>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Itemcount Itemtype</description>
 				<type>label</type>
 				<id>0</id>
@@ -63,7 +77,7 @@
 				<textcolor>#ColorUnfocused</textcolor>
 				<visible>string.equals(#itemcount,)</visible>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Itemcount Itemtype</description>
 				<type>label</type>
 				<id>0</id>
@@ -74,43 +88,43 @@
 				<textcolor>#ColorUnfocused</textcolor>
 				<visible>!string.equals(#itemcount,)</visible>
 			</control>
-			<control>
-				<type>fadelabel</type>
-				<width>1275</width>
-				<wrapString> : : : </wrapString>
-				<id>0</id>
-				<posX>45</posX>
-				<posY>15</posY>
-				<label>#header.label</label>
-				<font>font28</font>
-				<align>left</align>
-				<textcolor>#ColorUnfocused</textcolor>
-			</control>
-			<control>
+
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
-				<description>artist art image</description>
+				<description>Empty</description>
+				<id>0</id>
+				<posX>59</posX>
+				<posY>121</posY>
+				<width>466</width>
+				<height>466</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<description>album art image</description>
 				<id>1</id>
-				<posX>45</posX>
-				<posY>109</posY>
-				<width>468</width>
-				<height>468</height>
+				<posX>59</posX>
+				<posY>121</posY>
+				<width>466</width>
+				<height>466</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
+				<texture>#selectedthumb</texture>
 				<zoom>yes</zoom>
-				<texture mask="CDCase_coverflow_mask.png">#selectedthumb</texture>
 			</control>
-			<control>
-				<description>Cd Case</description>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
-				<id>1</id>
-				<posX>45</posX>
-				<posY>109</posY>
-				<width>468</width>
-				<height>468</height>
-				<colordiffuse>#ColorMain</colordiffuse>
-				<texture>CDCase_coverflow.png</texture>
+				<description>nowplaying shine</description>
+				<id>0</id>
+				<posX>32</posX>
+				<posY>94</posY>
+				<width>520</width>
+				<height>520</height>
+				<texture>CDCase.png</texture>
 			</control>
-			<control>
+
+			<control Style="FanartDisplayAnimation">
 				<type>fadelabel</type>
 				<description>Current program title</description>
 				<id>1</id>
@@ -258,6 +272,20 @@
 					<onup>8</onup>
 				</control>
 			</control>
+		</control>
+		<control>
+			<description>DUMMY BUTTON</description>
+			<type>button</type>
+			<id>505050</id>
+			<posX>720</posX>
+			<posY>0</posY>
+			<width>1200</width>
+			<height>1080</height>
+			<onright>50</onright>
+			<onleft>50</onleft>
+			<textureFocus>-</textureFocus>
+			<textureNoFocus>-</textureNoFocus>
+			<!-- <scrollWrapString/> -->
 		</control>
 	</controls>
 </window>

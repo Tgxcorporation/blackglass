@@ -3,7 +3,8 @@
 <window>
 	<id>47286</id>
 	<defaultcontrol>2</defaultcontrol>
-	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><define>#header.label:Rockstar</define>
+	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay>
+	<define>#header.label:Rockstar</define>
 	<define>#usePlayFanart:Yes</define>
 	<define>#header.background:hover_rockstar.png</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
@@ -105,28 +106,42 @@
 				<align>left</align>
 				<textcolor>#ColorUnfocused</textcolor>
 			</control>
-			<control>
-				<id>10</id>
+			<control Style="FanartDisplayAnimation">
 				<type>image</type>
-				<posX>45</posX>
-				<posY>169</posY>
-				<width>490</width>
-				<height>490</height>
+				<description>Empty</description>
+				<id>0</id>
+				<posX>59</posX>
+				<posY>121</posY>
+				<width>466</width>
+				<height>466</height>
+				<texture>black.png</texture>
+				<colordiffuse>60ffffff</colordiffuse>
+			</control>
+			<control Style="FanartDisplayAnimation">
+				<type>image</type>
+				<description>artist art image</description>
+				<id>10</id>
+				<posX>59</posX>
+				<posY>121</posY>
+				<width>466</width>
+				<height>466</height>
 				<keepaspectratio>yes</keepaspectratio>
 				<centered>yes</centered>
-				<texture mask="CDCase_coverflow_mask.png">albumnocover.png</texture>
+				<texture>albumnocover.png</texture>
 			</control>
-			<control>
+			<control Style="FanartDisplayAnimation">
 				<description>Cd Case</description>
 				<id>0</id>
 				<type>image</type>
-				<posX>45</posX>
-				<posY>169</posY>
-				<width>490</width>
-				<height>490</height>
+				<posX>32</posX>
+				<posY>94</posY>
+				<width>520</width>
+				<height>520</height>
 				<colordiffuse>#ColorMain</colordiffuse>
-				<texture>CDCase_coverflow.png</texture>
+				<texture>CDCase.png</texture>
 			</control>
+
+
 			<control>
 				<id>0</id>
 				<description>Track Name</description>
