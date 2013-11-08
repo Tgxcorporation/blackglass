@@ -14,7 +14,7 @@
 			<height>514</height>
 			<texture>black.png</texture>
 			<colordiffuse>60ffffff</colordiffuse>
-			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowser">
 			<description>MediaBrowser.Image.Default</description>
@@ -28,7 +28,7 @@
 			<centered>no</centered>
 			<zoom>no</zoom>
 			<texture>#MediaBrowser.Image.Default</texture>
-			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowser">
 			<description>Cover Art Glass Overlay</description>
@@ -39,7 +39,7 @@
 			<width>410</width>
 			<height>568</height>
 			<texture>DVDCase.png</texture>
-			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowser">
 			<type>imagelist</type>
@@ -57,8 +57,8 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<imagesToDraw>10</imagesToDraw>
-			<percentage>#MediaBrowser.Selected.CommunityRating.Localized</percentage>
-			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+!string.equals(#MediaBrowser.Selected.CommunityRating.Localized,)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<percentage>#MediaBrowser.Current.CommunityRating.Localized</percentage>
+			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowser">
 			<description>Subtitle value</description>
@@ -67,10 +67,10 @@
 			<posX>390</posX>
 			<posY>685</posY>
 			<width>380</width>
-			<label>(#MediaBrowser.Selected.CommunityRating.Localized)</label>
+			<label>(#MediaBrowser.Current.CommunityRating.Localized)</label>
 			<textcolor>#ColorUnfocused</textcolor>
 			<font>font12</font>
-			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+!string.equals(#MediaBrowser.Selected.CommunityRating.Localized,)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<visible>[facadeview.list|facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 		</control>
 		
 		<!-- LIST -->
@@ -82,9 +82,9 @@
 			<posY>747</posY>
 			<width>1200</width>
 			<font>font22</font>
-			<label>#MediaBrowser.Selected.Name</label>
+			<label>#MediaBrowser.Current.Name     #MediaBrowser.Selected.Name</label>
 			<wrapString> : : : </wrapString>
-			<visible>facadeview.list+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<visible>facadeview.list+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowser">
 			<description>Genre value</description>
@@ -93,10 +93,10 @@
 			<posX>45</posX>
 			<posY>817</posY>
 			<width>1200</width>
-			<label>#(math.round(cflt(#MediaBrowser.Selected.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Selected.Genres.List</label>
+			<label>#(math.round(cflt(#MediaBrowser.Current.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Current.Genres.List</label>
 			<textcolor>#ColorAlternate</textcolor>
 			<wrapString> : : : </wrapString>
-			<visible>facadeview.list+control.isvisible(50)+!string.equals(#MediaBrowser.Selected.Runtime.TotalMinutes.Localized,0)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<visible>facadeview.list+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowser">
 			<description>Summary</description>
@@ -108,8 +108,8 @@
 			<height>172</height>
 			<font>font14</font>
 			<textcolor>#ColorMain</textcolor>
-			<label>#MediaBrowser.Selected.Overview</label>
-			<visible>facadeview.list+control.isvisible(50)+!player.hasmedia+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<label>#MediaBrowser.Current.Overview</label>
+			<visible>facadeview.list+control.isvisible(50)+!player.hasmedia+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 			<seperator>: : :</seperator>
 		</control>
 		
@@ -122,9 +122,9 @@
 			<posY>747</posY>
 			<width>630</width>
 			<font>font22</font>
-			<label>#MediaBrowser.Selected.Name</label>
+			<label>#MediaBrowser.Current.Name     #MediaBrowser.Selected.Name</label>
 			<wrapString> : : : </wrapString>
-			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowser">
 			<description>Genre value</description>
@@ -133,10 +133,10 @@
 			<posX>45</posX>
 			<posY>817</posY>
 			<width>630</width>
-			<label>#(math.round(cflt(#MediaBrowser.Selected.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Selected.Genres.List</label>
+			<label>#(math.round(cflt(#MediaBrowser.Current.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Current.Genres.List</label>
 			<textcolor>#ColorAlternate</textcolor>
 			<wrapString> : : : </wrapString>
-			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowser">
 			<description>Summary</description>
@@ -148,11 +148,11 @@
 			<height>172</height>
 			<font>font14</font>
 			<textcolor>#ColorMain</textcolor>
-			<label>#MediaBrowser.Selected.Overview</label>
-			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+!player.hasmedia+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<label>#MediaBrowser.Current.Overview</label>
+			<visible>[facadeview.smallicons|facadeview.largeicons]+control.isvisible(50)+!player.hasmedia+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 			<seperator>: : :</seperator>
 		</control>
-		
+				
 		<!-- COVERFLOW/FILMSTRIP -->
 		<control Style="FanartDisplayAnimationMediaBrowser">
 			<type>textboxscrollup</type>
@@ -164,8 +164,8 @@
 			<textalign>center</textalign>
 			<font>font24</font>
 			<height>67</height>
-			<label>#MediaBrowser.Selected.Name</label>
-			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<label>#MediaBrowser.Current.Name     #MediaBrowser.Selected.Name</label>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 		</control>
 		<control Style="FanartDisplayAnimationMediaBrowser">
 			<type>textboxscrollup</type>
@@ -177,9 +177,9 @@
 			<textalign>center</textalign>
 			<font>font16</font>
 			<height>67</height>
-			<label>#(math.round(cflt(#MediaBrowser.Selected.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Selected.Genres.List</label>
+			<label>#(math.round(cflt(#MediaBrowser.Current.Runtime.TotalMinutes.Localized))) min     #MediaBrowser.Current.Genres.List</label>
 			<textcolor>#ColorAlternate</textcolor>
-			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]+[string.equals(#MediaBrowser.Selected.Type,Movie)]</visible>
+			<visible>[facadeview.coverflow|facadeview.filmstrip]+[control.isvisible(50)]+[string.equals(#MediaBrowser.Selected.Type,Season)]</visible>
 		</control>
 
 	</controls>
