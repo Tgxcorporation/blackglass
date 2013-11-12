@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
 	<id>1007</id>
-	<defaultcontrol>9</defaultcontrol>
+	<defaultcontrol>2</defaultcontrol>
 	<allowoverlay>control.isvisible(13371337)</allowoverlay>
 	<define>#header.label:101007</define>
 	<define>#header.background:hover_settings.png</define>
@@ -54,7 +54,7 @@
 				<type>group</type>
 				<posX>145</posX>
 				<posY>229</posY>
-				<layout>StackLayout(0, Vertical, true)</layout>
+				<layout>StackLayout(0, Vertical, false)</layout>
 				<!--Control-->
 				<control>
 					<description>Master volume</description>
@@ -63,7 +63,7 @@
 					<onleft>10</onleft>
 					<onright>10</onright>
 					<onup>17</onup>
-					<ondown>2</ondown>
+					<ondown>3</ondown>
 					<align>right</align>
 					<label>300112</label>
 					<width>1629</width>
@@ -82,13 +82,13 @@
 				</control>
 				<!--Scale-->
 				<control>
-				<type>image</type>
-				<id>0</id>
-				<width>1629</width>
-				<height>79</height>
-				<texture>bg_button_nofocus_top.png</texture>
-			</control>
-			
+					<type>image</type>
+					<id>0</id>
+					<width>1629</width>
+					<height>79</height>
+					<texture>bg_button_nofocus_top.png</texture>
+				</control>
+
 				<control>
 					<description>WinXP</description>
 					<type>checkbutton</type>
@@ -97,8 +97,8 @@
 					<posY>442</posY>
 					<onleft>10</onleft>
 					<onright>10</onright>
-					<onup>2</onup>
-					<ondown>4</ondown>
+					<onup>3</onup>
+					<ondown>5</ondown>
 					<align>right</align>
 					<label>300115</label>
 					<width>1629</width>
@@ -111,8 +111,8 @@
 					<posY>525</posY>
 					<onleft>10</onleft>
 					<onright>10</onright>
-					<onup>2</onup>
-					<ondown>4</ondown>
+					<onup>4</onup>
+					<ondown>6</ondown>
 					<align>right</align>
 					<label>300116</label>
 					<width>1629</width>
@@ -125,8 +125,8 @@
 					<posY>592</posY>
 					<onleft>10</onleft>
 					<onright>10</onright>
-					<onup>2</onup>
-					<ondown>4</ondown>
+					<onup>5</onup>
+					<ondown>7</ondown>
 					<align>right</align>
 					<label>300117</label>
 					<width>1629</width>
@@ -139,8 +139,8 @@
 					<posY>675</posY>
 					<onleft>10</onleft>
 					<onright>10</onright>
-					<onup>2</onup>
-					<ondown>4</ondown>
+					<onup>6</onup>
+					<ondown>8</ondown>
 					<align>right</align>
 					<label>300118</label>
 					<width>1629</width>
@@ -153,30 +153,19 @@
 					<posY>742</posY>
 					<onleft>10</onleft>
 					<onright>10</onright>
-					<onup>2</onup>
-					<ondown>4</ondown>
+					<onup>7</onup>
+					<ondown>9</ondown>
 					<align>right</align>
 					<label>993</label>
 					<width>1629</width>
 				</control>
 				<control>
-					<description>Custom values label</description>
-					<type>fadelabel</type>
-					<id>1</id>
-					<posX>900</posX>
-					<posY>765</posY>
+					<type>image</type>
+					<id>0</id>
 					<width>1629</width>
-					<font>font10</font>
-					<label>#customScalevalues</label>
-					<visible>control.hasfocus(8)</visible>
+					<height>79</height>
+					<texture>bg_button_nofocus_top.png</texture>
 				</control>
-			<control>
-				<type>image</type>
-				<id>0</id>
-				<width>1629</width>
-				<height>79</height>
-				<texture>bg_button_nofocus_top.png</texture>
-			</control>
 				<control>
 					<description>OSD button</description>
 					<type>checkbutton</type>
@@ -185,33 +174,46 @@
 					<posY>885</posY>
 					<onleft>10</onleft>
 					<onright>10</onright>
-					<onup>2</onup>
-					<ondown>4</ondown>
+					<onup>8</onup>
+					<ondown>2</ondown>
 					<align>right</align>
 					<label>300119</label>
 					<width>1629</width>
 				</control>
 			</control>
-				<control>
-					<description>Scale label</description>
-					<type>label</type>
-					<id>1</id>
-					<posX>175</posX>
-					<posY>420</posY>
-					<width>1629</width>
-					<label>300114</label>
-					<font>font12</font>
-				</control>
-				<control>
-					<description>OSD label</description>
-					<type>label</type>
-					<id>1</id>
-					<posX>175</posX>
-					<posY>897</posY>
-					<width>600</width>
-					<label>478</label>
-					<font>font12</font>
-				</control>
+			<control>
+				<description>Scale label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>175</posX>
+				<posY>420</posY>
+				<width>1629</width>
+				<label>300114</label>
+				<font>font12</font>
+			</control>
+			<control>
+				<description>OSD label</description>
+				<type>label</type>
+				<id>1</id>
+				<posX>175</posX>
+				<posY>897</posY>
+				<width>600</width>
+				<label>478</label>
+				<font>font12</font>
+			</control>
+			<control>
+				<description>Custom values label</description>
+				<type>fadelabel</type>
+				<id>1</id>
+				<posX>1680</posX>
+				<posY>810</posY>
+				<width>800</width>
+				<font>font10</font>
+				<align>right</align>
+				<label>#customScalevalues</label>
+				<visible>control.hasfocus(8)</visible>
+			</control>
+
 		</control>
 	</controls>
 </window>
