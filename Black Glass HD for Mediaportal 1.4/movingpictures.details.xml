@@ -9,7 +9,7 @@
 			<label>-</label>
 			<onup>6</onup>
 			<ondown>6</ondown>
-			<onleft>66621</onleft>
+			<onleft>11899</onleft>
 			<onright>90001</onright>
 			<textureFocus>-</textureFocus>
 			<textureNoFocus>-</textureNoFocus>
@@ -732,7 +732,7 @@
 		<control>
 			<type>actiongroup</type>
 			<description>action menu</description>
-			<defaultcontrol>66621</defaultcontrol>
+			<defaultcontrol>11899</defaultcontrol>
 			<onexit>2</onexit>
 			<buttonX>0</buttonX>
 			<buttonY>0</buttonY>
@@ -782,39 +782,14 @@
 				<posX>0</posX>
 				<posY>150</posY>
 				<control>
-					<description>Onlinevideos Trailers</description>
-					<id>66621</id>
+					<description>Trailer Button</description>
 					<type>button</type>
-					<label>IMDb Movie Trailers</label>
-					<hyperlink>4755</hyperlink>
-					<hyperlinkParameter>site:IMDb Movie Trailers|search:#(iif(neq(#MovingPictures.SelectedMovie.imdb_id,''),#MovingPictures.SelectedMovie.imdb_id,#MovingPictures.SelectedMovie.title))|return:Locked</hyperlinkParameter>
-					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
+					<id>11899</id>
+					<label>#Trailers.Translation.Trailers.Label...</label>
 					<onup>17</onup>
-					<onright>6</onright>
-					<ondown>66622</ondown>
-				</control>
-				<control>
-					<description>Onlinevideos Trailers</description>
-					<id>66622</id>
-					<type>button</type>
-					<label>iTunes Movie Trailers</label>
-					<hyperlink>4755</hyperlink>
-					<hyperlinkParameter>site:iTunes Movie Trailers|search:#MovingPictures.SelectedMovie.title|return:Locked</hyperlinkParameter>
-					<!-- <visible>plugin.isenabled(Online Videos)</visible> -->
-					<onup>66621</onup>
-					<onright>6</onright>
-					<ondown>66625</ondown>
-				</control>
-				<control>
-					<description>Trailer Search (YouTube)</description>
-					<type>button</type>
-					<id>66625</id>
-					<label>YouTube</label>
 					<ondown>66623</ondown>
-					<onup>66622</onup>
 					<onright>6</onright>
-					<hyperlink>4755</hyperlink>
-					<hyperlinkParameter>site:YouTube|search:#MovingPictures.SelectedMovie.title|return:Locked</hyperlinkParameter>
+					<visible>plugin.isenabled(Trailers)</visible>
 				</control>
 				<control>
 					<description>SubCentral</description>
@@ -823,7 +798,7 @@
 					<label>Sub Central</label>
 					<hyperlink>84623</hyperlink>
 					<visible>plugin.isenabled(SubCentral)</visible>
-					<onup>66625</onup>
+					<onup>11899</onup>
 					<onright>6</onright>
 					<ondown>66624</ondown>
 				</control>
