@@ -6,10 +6,12 @@
 	<allowoverlay>player.hasmedia+[facadeview.smallicons|facadeview.list|facadeview.largeicons|facadeview.album|facadeview.playlist]</allowoverlay><disabletopbar>false</disabletopbar>
 	<define>#header.label:Browse the Web - Favorites</define>
 	<define>#header.background:hover_BrowseTheWeb.png</define>
+	<define>#header.fanart:</define>
 	<animation effect="fade" time="250" start="100" end="100">WindowClose</animation>
 	<controls>
 		<import>common.window.background.xml</import>
 		<import>common.window.overlay.xml</import>
+		<import>common.window.time.xml</import>
 		<import>common.facade.video.xml</import>
 		<control>
 			<type>group</type>
@@ -17,7 +19,7 @@
 			<animation effect="fade" time="150">WindowClose</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" start="1350,0" reversible="false">WindowOpen</animation>
 			<animation effect="slide" tween="circle" easing="out" time="200" end="1350,0" reversible="false">WindowClose</animation>
-			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)">conditional</animation>
+			<animation effect="slide" tween="sine" easing="in" time="200" end="291,0" condition="!control.hasfocus(50)+!control.hasfocus(505050)">conditional</animation>
 			<control>
 				<type>fadelabel</type>
 				<width>1275</width>
